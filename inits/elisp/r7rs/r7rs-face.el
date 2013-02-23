@@ -1,0 +1,40 @@
+;; faces
+
+(defmacro* r7rs:make-face (face fore)
+  `(progn
+     (make-face ,face)
+     (set-face-foreground ,face  ,fore)))
+
+
+(defun r7rs:add-faces ()
+  (dolist (p '((r7rs:font-lock-scheme-syntax-face "#F92672")
+               (r7rs:font-lock-scheme-function-face "#66D9EF")
+               (r7rs:font-lock-scheme-string-face "#f24f47")
+               (r7rs:font-lock-scheme-character-face "#fee1a2")
+               (r7rs:font-lock-scheme-number-face "#b5ae5b")
+               (r7rs:font-lock-scheme-boolean-face "#ffbe5c")
+               (r7rs:font-lock-scheme-delimiter-face "#ababab")
+               (r7rs:font-lock-scheme-constant-face "#e9c3b9")
+               (r7rs:font-lock-scheme-comment-face "#ababab")
+               (r7rs:font-lock-scheme-multicomment-face "#ababab")
+               (r7rs:font-lock-scheme-error-face "#ababab")
+               (r7rs:font-lock-scheme-module-macro-face "#9399ab")
+               (r7rs:font-lock-scheme-module-syntax-face "#93c9ab")
+               (r7rs:font-lock-scheme-module-function-face "#3b5993")
+               (r7rs:font-lock-scheme-module-procedure-face "#3b9993")
+               (r7rs:font-lock-scheme-module-method-face "#c3b9a9")
+               (r7rs:font-lock-scheme-module-charset-face "#9bc993")
+               (r7rs:font-lock-scheme-module-class-face "#ebc893")
+               (r7rs:font-lock-scheme-module-parameter-face "#e999b3")
+               (r7rs:font-lock-scheme-module-name-face "#6a93cc")
+               (r7rs:font-lock-scheme-regexp-face "#7ea978")
+               (r7rs:font-lock-scheme-srfi62-comment-face "#ababab")
+               (r7rs:font-lock-scheme-sharpbang-face "#ababab")
+               (r7rs:font-lock-scheme-include-face "#ababab")
+               (r7rs:font-lock-scheme-interpolation-face "#ababab")
+               ))
+    (message "making face %s" p)
+    (r7rs:make-face (car p) (cadr p))))
+
+
+(provide 'r7rs-face)
