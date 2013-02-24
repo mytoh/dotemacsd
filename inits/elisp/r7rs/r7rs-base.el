@@ -4,7 +4,7 @@
 (defun r7rs:add-base ()
 
   (r7rs:add-keywords
-   'r7rs:font-lock-scheme-syntax-face
+   'r7rs:syntax-face
    '((1 . define)
      (1 . define-record-type)
      (1 . define-syntax)
@@ -28,7 +28,7 @@
 
 
   (r7rs:add-keywords
-   'r7rs:font-lock-scheme-function-face
+   'r7rs:function-face
    '((1 . *)
      (1 . +)
      (1 . ...)

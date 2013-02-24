@@ -2,7 +2,7 @@
 
 (defun r7rs:add-cxr ()
   (r7rs:add-keywords
-   'r7rs:font-lock-scheme-function-face
+   'r7rs:function-face
    '((1 . caaar)
      (1 . caadr)
      (1 . cadar)

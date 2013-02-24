@@ -3,7 +3,7 @@
 
 (defun r7rs:add-fundamental ()
   (r7rs:add-keywords
-   'r7rs:font-lock-scheme-syntax-face
+   'r7rs:syntax-face
    '((2 . library)
      (2 . define-library)
      (0 . export)

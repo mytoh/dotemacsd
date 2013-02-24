@@ -13,7 +13,7 @@
       helm-ff-lynx-style-map nil
       helm-idle-delay             0.01
       helm-input-idle-delay       0.01
-      helm-candidate-number-limit 10000)
+      helm-candidate-number-limit nil)
      (helm-mode 1))
 
 ;; helm-themes

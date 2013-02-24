@@ -31,18 +31,18 @@
 
                           ;; ,@
                           (,(rx ",@")
-                           0 'r7rs:font-lock-scheme-string-face)
+                           0 'r7rs:string-face)
                           ;; #`
                           (,(rx (submatch "#`\"")
                                 (submatch (one-or-more any))
                                 (submatch  "\""))
-                           (1 'r7rs:font-lock-scheme-regexp-face)
-                           (2 'r7rs:font-lock-scheme-regexp-face)
-                           (3 'r7rs:font-lock-scheme-regexp-face)
+                           (1 'r7rs:regexp-face)
+                           (2 'r7rs:regexp-face)
+                           (3 'r7rs:regexp-face)
                            )
                           ;; #t #f
                           (,(rx (or  "#t" "#f"))
-                           0 'r7rs:font-lock-scheme-boolean-face)
+                           0 'r7rs:boolean-face)
 
                           ;; *some-variable*
                           (,(rx "*"
@@ -50,28 +50,39 @@
                                  (one-or-more
                                   any))
                                 "*")
-                           0 'r7rs:font-lock-scheme-constant-face)
+                           0 'r7rs:constant-face)
 
                           ;; keyword symbol
                           (,(rx (one-or-more (not (syntax word)))
                                 ":" (one-or-more (or (syntax word)
                                                      (syntax symbol))))
-                           0 'r7rs:font-lock-scheme-constant-face)
+                           0 'r7rs:constant-face)
 
                           ;; symbol
                           (,(rx (one-or-more (not (syntax word)))
                                 "'" (one-or-more (or (syntax word)
                                                      (syntax symbol))))
-                           0 'r7rs:font-lock-scheme-string-face)
+                           0 'r7rs:string-face)
+
+                          ;; library name
+                          (,(rx (syntax open-parenthesis) (or "library" "define-library")
+                                (one-or-more (in " \t\n"))
+                                (syntax open-parenthesis)
+                                (submatch (one-or-more (or (syntax word)
+                                                           (syntax symbol)
+                                                           (in " \t\n")))))
+                           1 'r7rs:library-name-face)
                           ))
 
 
 (require 'r7rs-fundamental)
+
 (require 'r7rs-base)
 (require 'r7rs-char)
 (require 'r7rs-cxr)
 (require 'r7rs-file)
 (require 'r7rs-face)
+(require 'r7rs-process-context)
 
 
 

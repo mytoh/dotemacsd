@@ -1,7 +1,7 @@
 
 (defun r7rs:add-char ()
   (r7rs:add-keywords
-   'r7rs:font-lock-scheme-function-face
+   'r7rs:function-face
    '((1 . char-alphabetic?  )
      (1 . char-ci<?         )
      (1 . char-ci>=?        )

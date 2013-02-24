@@ -2,7 +2,7 @@
 
 (defun r7rs:add-file ()
   (r7rs:add-keywords
-   'r7rs:font-lock-scheme-function-face
+   'r7rs:function-face
    '((1 . call-with-input-file)
      (1 . call-with-output-file)
      (1 . delete-file)
