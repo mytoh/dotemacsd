@@ -1,4 +1,22 @@
 
+(defun minun:scheme-add-keywords (face-name keyword-rules)
+  (lexical-let* ((keyword-list (mapcar #'(lambda (x)
+                                           (symbol-name (cdr x)))
+                                       keyword-rules))
+                 (keyword-regexp (concat "(\\("
+                                         (regexp-opt keyword-list)
+                                         "\\)[ \n]")))
+    (my-log "adding keywords for face "
+            (propertize (symbol-name face-name) 'face 'font-lock-variable-name-face)
+            " on scheme mode")
+    (font-lock-add-keywords 'scheme-mode
+                            `((,keyword-regexp 1 ',face-name))))
+  (mapc #'(lambda (x)
+            (put (cdr x)
+                 'scheme-indent-function
+                 (car x)))
+        keyword-rules))
+
 
 (setq process-coding-system-alist
       (cons '("mosh" utf-8 . utf-8) process-coding-system-alist))
@@ -24,6 +42,7 @@
 (defun minun:scheme-mode-hook ()
   (define-key my-original-map (kbd "C-s") 'minun:scheme-other-window)
   (local-set-key (kbd "C-m") 'newline-and-indent)
+  (define-key scheme-mode-map (kbd "C-m") 'newline-and-indent)
   (dolist (f '(minun:lisp-cleanup
                whitespace-cleanup
                my-before-save-hook))
@@ -62,11 +81,11 @@
   (minun:add-scheme-mode e))
 
 ;; personal syntax
-;; (minun:scheme-add-keywords
-;;  'minun:font-lock-scheme-syntax-face
-;;  '((1 . define-case)
-;;    (1 . match)
-;;    (1 . match-short-command)))
+(minun:scheme-add-keywords
+ 'font-lock-builtin-face
+ '((1 . define-case)
+   (1 . match)
+   (1 . match-short-command)))
 
 
 

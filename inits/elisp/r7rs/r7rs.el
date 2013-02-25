@@ -92,7 +92,8 @@
   (r7rs:add-base)
   (r7rs:add-char)
   (r7rs:add-cxr)
-  (r7rs:add-file))
+  (r7rs:add-file)
+  (r7rs:add-process-context))
 
 (define-minor-mode r7rs-mode
   :init-value nil

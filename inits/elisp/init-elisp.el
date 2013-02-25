@@ -3,5 +3,6 @@
 
 (require 'flatline)
 (require 'r7rs)
+(require 'srfi)
 
 (provide 'init-elisp)

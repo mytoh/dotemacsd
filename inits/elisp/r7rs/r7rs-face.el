@@ -18,7 +18,7 @@
                (r7rs:comment-face "#ababab")
                (r7rs:multicomment-face "#ababab")
                (r7rs:error-face "#ababab")
-               (r7rs:library-name-face "#b34aae")
+               (r7rs:library-name-face "#b34a4e")
                (r7rs:module-macro-face "#9399ab")
                (r7rs:module-syntax-face "#93c9ab")
                (r7rs:module-function-face "#3b5993")
