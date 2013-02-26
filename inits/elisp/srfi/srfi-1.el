@@ -2,8 +2,7 @@
 (defun srfi:add-srfi-1 ()
   (srfi:add-keywords
    'font-lock-builtin-face
-   '(
-     (1 . remove)
+   '((1 . remove)
      (1 . partition)
      (1 . member)
      (1 . map)

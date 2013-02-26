@@ -24,6 +24,7 @@
      (1 . unless)
      (1 . do)
      (1 . guard)
+     (0 . begin)
      ))
 
 
@@ -46,7 +47,6 @@
      (1 . assoc)
      (1 . assq)
      (1 . assv)
-     (1 . begin)
      (1 . binary-port?)
      (1 . boolean=?)
      (1 . boolean?)
