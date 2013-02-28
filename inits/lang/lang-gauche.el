@@ -1,4 +1,4 @@
- ;;; -*- coding: utf-8; lexical-binding: t -*-
+ ;;; -*- coding: utf-8 -*-
 ;; http://practical-scheme.net/wiliki/wiliki.cgi?Gauche%3aEditingWithEmacs
 ;;  gauche
 (setq process-coding-system-alist
@@ -4211,8 +4211,8 @@
                                  (syntax open-parenthesis) "export" (one-or-more (in " \t\n"))
                                  (submatch
                                   (one-or-more (or (syntax word)
-                                                    (syntax symbol)
-                                                    (in " \t\n"))))))
+                                                   (syntax symbol)
+                                                   (in " \t\n"))))))
                            1  'font-lock-variable-name-face)
                           ;; (export some-function)
                           ;; (,(rx (and

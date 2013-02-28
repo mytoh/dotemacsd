@@ -84,6 +84,7 @@
 (minun:scheme-add-keywords
  'font-lock-builtin-face
  '((1 . define-case)
+   (1 . define-match)
    (1 . match)
    (1 . match-short-command)))
 

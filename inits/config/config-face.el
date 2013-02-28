@@ -1,4 +1,4 @@
- ;;; -*- coding: utf-8; lexical-binding: t -*-
+ ;;; -*- coding: utf-8 -*-
 ;;; faces
 (progn
 
@@ -13,6 +13,10 @@
         nil t))
 
   (cond ((eq window-system nil) nil)
+        ((font-existsp "Droid Sans")
+         (set-face-attribute 'default nil :height 100 :font "Droid Sans"))
+        ((font-existsp "Source Code Pro")
+         (set-face-attribute 'default nil :height 80 :font "Source Code Pro"))
         ((font-existsp "DejaVu Sans Mono")
          (set-face-attribute 'default nil :height 80 :font "DejaVu Sans Mono"))
         ((font-existsp "ProFont")

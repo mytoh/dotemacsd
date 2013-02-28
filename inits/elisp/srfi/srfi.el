@@ -19,14 +19,19 @@
 
 (require 'srfi-1)
 (require 'srfi-13)
+(require 'srfi-39)
+(require 'srfi-48)
 
 (defun srfi:mode-start ()
   (srfi:add-srfi-1)
-  (srfi:add-srfi-13))
+  (srfi:add-srfi-13)
+  (srfi:add-srfi-39)
+  (srfi:add-srfi-48))
 
+;;;###autoload
 (define-minor-mode srfi-mode
   :init-value nil
-  :lighter "srfi"
+  :lighter " srfi"
   :group 'languages
   (if srfi-mode
       (srfi:mode-start)))

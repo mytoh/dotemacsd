@@ -1,4 +1,4 @@
- ;;; -*- coding: utf-8; lexical-binding: t -*-
+ ;;; -*- coding: utf-8 -*-
 (when (string-equal system-type "berkeley-unix")
   (lexical-let ((my-paths `(,(expand-file-name "~/local/bin"))))
     (dolist (dir my-paths)

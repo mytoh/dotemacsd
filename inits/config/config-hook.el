@@ -1,11 +1,11 @@
- ;;; -*- coding: utf-8; lexical-binding: t -*-
+ ;;; -*- coding: utf-8 -*-
 
 (defun my-after-init-hook ()
                                         ;(setq debug-on-error t))
   (add-hook 'after-init-hook 'my-after-init-hook))
 
 (defun my-after-save-hook ()
-  (if (string-match (rx (or "config" "package" "init" "lang") "-" (* anything) "el" eol)  
+  (if (string-match (rx (or "config" "package" "init" "lang") "-" (* anything) "el" eol)
                     (buffer-file-name))
       (save-excursion
         (byte-compile-file (buffer-file-name)))))

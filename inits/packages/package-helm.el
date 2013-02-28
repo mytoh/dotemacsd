@@ -14,7 +14,8 @@
       helm-idle-delay             0.01
       helm-input-idle-delay       0.01
       helm-candidate-number-limit nil)
-     (helm-mode 1))
+     (helm-mode 1)
+     (setq recentf-max-saved-items 1000))
 
 ;; helm-themes
 (req 'helm-themes)

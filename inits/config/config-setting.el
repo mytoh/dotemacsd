@@ -1,4 +1,4 @@
-;;; -*- coding: utf-8; lexical-binding: t -*-
+;;; -*- coding: utf-8 -*-
 ;; personal initialize
 
 ;; user elisps
@@ -36,7 +36,7 @@
 (setq mouse-avoidance-mode 'banish)
 
 ;; show info on mode-line
-;;(enable-option display-time-24hr-format )
+;;(enable-option display-time-24hr-format)
 (enable-option display-time-day-and-date)
 (display-time)
 (line-number-mode 1)
@@ -60,7 +60,7 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 ;; delete whole line with C-k once
-(enable-option kill-whole-line )
+(enable-option kill-whole-line)
 ;; enable rectangular mode
 (cua-mode 1)
 (setq cua-enable-cua-keys -1)
@@ -73,7 +73,7 @@
 ;; show function name
 (which-function-mode 1)
 ;; enable lexical binding
-(enable-option lexical-binding )
+(enable-option lexical-binding)
 ;; save buffer history
 (savehist-mode 1)
 (setq history-length 100)
@@ -89,7 +89,7 @@
 
 ;; backup and autosave
 ;; disable backup
-(enable-option backup-inhibited )
+(enable-option backup-inhibited)
 ;; disable autosave
 (setq auto-save-default nil)
 ;; delete auto save file when exit
@@ -122,6 +122,9 @@
 ;; also reload dired, and quiet
 (enable-option global-auto-revert-non-file-buffers)
 (setq auto-revert-verbose nil)
+
+;; display buffer end
+(setq indicate-empty-lines 1)
 
 ;; asni colors
 (setq ansi-color-names-vector  ["#121212" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "#efefff"])

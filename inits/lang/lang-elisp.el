@@ -1,4 +1,4 @@
- ;;; -*- coding: utf-8; lexical-binding: t -*-
+ ;;; -*- coding: utf-8  -*-
 
 (add-to-list 'auto-mode-alist '("\\.emacs-w3m\\'" .  emacs-lisp-mode))
 

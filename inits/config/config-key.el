@@ -1,16 +1,16 @@
-;;; -*- coding: utf-8; lexical-binding: t -*-
+;;; -*- coding: utf-8 -*-
 
 ;; make prefix key
 (define-prefix-command 'my-original-map)
 (global-set-key (kbd "C-q") 'my-original-map)
 (define-key my-original-map (kbd "C-q") 'quoted-insert)
 
-;; no split 
+;; no split
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
 
 ;; indent
 (define-key lisp-interaction-mode-map (kbd "C-m") 'newline-and-indent)
-(define-key emacs-lisp-mode-map  (kbd "C-m") 'newline-and-indent)
+(define-key emacs-lisp-mode-map (kbd "C-m") 'newline-and-indent)
 
 ;; help
 (global-set-key (kbd "C-?") 'help-command)

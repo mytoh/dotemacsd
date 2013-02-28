@@ -72,6 +72,20 @@
                                                            (syntax symbol)
                                                            (in " \t\n")))))
                            1 'r7rs:library-name-face)
+
+                          ;; character literal #\x
+                          (,(rx "#" "\\" (one-or-more (or (syntax word)
+                                                          (syntax symbol))))
+                           0 'r7rs:character-face)
+
+                          ;; named let
+                          (,(rx (syntax open-parenthesis) "let"
+                                (one-or-more space)
+                                (submatch (one-or-more (or (syntax word)
+                                                           (syntax symbol))))
+                                (* space)
+                                (syntax open-parenthesis))
+                           1 'r7rs:constant-face)
                           ))
 
 
@@ -83,6 +97,15 @@
 (require 'r7rs-file)
 (require 'r7rs-face)
 (require 'r7rs-process-context)
+(require 'r7rs-eval)
+(require 'r7rs-lazy)
+(require 'r7rs-load)
+(require 'r7rs-read)
+(require 'r7rs-repl)
+(require 'r7rs-time)
+(require 'r7rs-write)
+(require 'r7rs-complex)
+(require 'r7rs-inexact)
 
 
 
@@ -93,11 +116,21 @@
   (r7rs:add-char)
   (r7rs:add-cxr)
   (r7rs:add-file)
-  (r7rs:add-process-context))
+  (r7rs:add-process-context)
+  (r7rs:add-eval)
+  (r7rs:add-lazy)
+  (r7rs:add-load)
+  (r7rs:add-read)
+  (r7rs:add-repl)
+  (r7rs:add-time)
+  (r7rs:add-write)
+  (r7rs:add-inexact)
+  (r7rs:add-complex))
 
+;;;###autoload
 (define-minor-mode r7rs-mode
   :init-value nil
-  :lighter "r7rs"
+  :lighter " r7rs"
   :group 'languages
   (if r7rs-mode
       (r7rs:mode-start)))

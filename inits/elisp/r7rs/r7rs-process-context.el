@@ -1,4 +1,4 @@
- ;;; -*- coding: utf-8; lexical-binding: t -*-
+ ;;; -*- coding: utf-8 -*-
 
 
 (defun r7rs:add-process-context ()
