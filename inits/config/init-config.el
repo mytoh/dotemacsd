@@ -1,6 +1,7 @@
 
 (defvar init-configs
-  '(config-setting
+  '(
+    config-setting
     config-key
     config-hook
     config-face
