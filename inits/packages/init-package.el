@@ -51,10 +51,11 @@
         bookmark+
         cursor-chg
         deferred
+        highlight-symbol
+        ;; dired
+        image-dired+
         dired+
         dired-single
-        highlight-symbol
-        image-dired+
         ;; helm
         helm
         helm-git
@@ -66,7 +67,9 @@
         helm-ls-git
         helm-migemo
         helm-cmd-t
-        ;; icicles
+        helm-projectile
+        projectile
+        project-persist
         magit
         rainbow-mode
         scheme-complete
@@ -96,6 +99,7 @@
         pretty-symbols-mode
         hackernews
         twittering-mode
+        highlight-indentation
         ;; themes
         molokai-theme
         monokai-theme
@@ -117,17 +121,20 @@
 
 (defvar init-packages
   '(
-    ;; don't load this
-    ;; package-rainbow-mode
+    ;; this may cause problem
+    package-rainbow-mode
 
     package-dired+
     package-image-dired+
+    ;; package-dired-single
     package-expand-region
     package-rainbow-delimiters
     package-auto-complete
     package-tabbar
     package-smartparens
     package-helm
+    package-projectile
+    package-project-persist
     package-emms
     package-cursor-chg
     package-suomalainen-kalenteri
@@ -144,6 +151,8 @@
     package-pretty-symbols-mode
     package-flymake
     package-twittering-mode
+    package-highlight-indentation
+    package-org
     ))
 
 (mapc #'require init-packages)

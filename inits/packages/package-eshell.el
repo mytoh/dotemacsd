@@ -1,11 +1,28 @@
 
 ;; eshell
 (setq eshell-cmpl-ignore-case t)
-(setq eshell-ask-to-save-history 'always)
-(setq eshell-cmpl-cycle-completions t)
 (setq eshell-cmpl-cycle-cutoff-length 5)
 (setq eshell-hist-ignoredups t)
 (setq eshell-scroll-show-maximum-output t)
+
+(setq eshell-cmpl-cycle-completions nil
+      eshell-save-history-on-exit t
+      eshell-cmpl-dir-ignore "\\`\\(\\.\\.?\\|CVS\\|\\.svn\\|\\.git\\)/\\'")
+
+(eval-after-load 'esh-opt
+  '(progn
+     (require 'em-cmpl)
+     (require 'em-prompt)
+     (require 'em-term)
+     (setenv "PAGER""cat")
+     (add-hook 'eshell-mode-hook
+               '(lambda () (define-key eshell-mode-map (kbd "C-a") 'eshell-bol)))
+     (add-to-list 'eshell-visual-commands "ssh")
+     (add-to-list 'eshell-visual-commands "tail")
+     (add-to-list 'eshell-command-completions-alist
+                  '("gunzip" "gz\\'"))
+     (add-to-list 'eshell-command-completions-alist
+                  '("tar" "\\(\\.tar|\\.tgz\\|\\.tar\\.gz\\)\\'"))          ))
 
 ;; start eshell
 (define-key global-map (kbd "C-z") 'eshell)
@@ -16,12 +33,6 @@
   (define-key eshell-mode-map (kbd "C-n") 'eshell-next-matching-input-from-input))
 (add-hook 'eshell-mode-hook
           'my-eshell-hook-keybindings)
-
-;; em-smart
-(require 'em-smart)
-(setq eshell-where-to-jump 'begin)
-(setq eshell-review-quick-commands nil)
-(setq eshell-smart-space-goes-to-end t)
 
 
 ;; start eshell
@@ -53,7 +64,7 @@
          '(0 . 0))))
 
 (add-hook 'eshell-mode-hook
-          'my-eshell-hook-disable-hl-line)
+          #'my-eshell-hook-disable-hl-line)
 
 ;; alias
 (defun my-eshell-hook-add-aliases ()
@@ -71,7 +82,7 @@
                   ( "ff" "find-file  $1"))
                 eshell-command-aliases-list)))
 (add-hook 'eshell-mode-hook
-          'my-eshell-hook-add-aliases)
+          #'my-eshell-hook-add-aliases)
 
 
 (provide 'package-eshell)
