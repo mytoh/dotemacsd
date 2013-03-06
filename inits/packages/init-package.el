@@ -82,6 +82,7 @@
         haskell-mode
         flex-autopair
         yasnippet
+        yasnippet-bundle
         w3m
         paredit
         smartparens
@@ -100,6 +101,7 @@
         hackernews
         twittering-mode
         highlight-indentation
+        coffee-mode
         ;; themes
         molokai-theme
         monokai-theme
@@ -109,6 +111,7 @@
         solarized-theme
         ujelly-theme
         birds-of-paradise-plus-theme
+        soothe-theme
         ))
 
 (package-refresh-contents)
@@ -153,6 +156,7 @@
     package-twittering-mode
     package-highlight-indentation
     package-org
+    package-coffee-mode
     ))
 
 (mapc #'require init-packages)

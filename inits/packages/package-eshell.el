@@ -22,10 +22,21 @@
      (add-to-list 'eshell-command-completions-alist
                   '("gunzip" "gz\\'"))
      (add-to-list 'eshell-command-completions-alist
-                  '("tar" "\\(\\.tar|\\.tgz\\|\\.tar\\.gz\\)\\'"))          ))
+                  '("tar" "\\(\\.tar|\\.tgz\\|\\.tar\\.gz\\)\\'"))))
 
-;; start eshell
-(define-key global-map (kbd "C-z") 'eshell)
+;; switch to eshell or restore previous windows
+;; http://irreal.org/blog/?p=1742
+(defun my-eshell-switch ()
+  "Bring up a full-screen eshell or restore previous config."
+  (interactive)
+  (if (string= "eshell-mode" major-mode)
+      (jump-to-register :eshell-fullscreen)
+    (progn
+      (window-configuration-to-register :eshell-fullscreen)
+      (eshell)
+      (delete-other-windows))))
+;; (define-key global-map (kbd "C-z") 'eshell)
+(define-key global-map (kbd "C-z") 'my-eshell-switch)
 
 ;; eshell keybind
 (defun my-eshell-hook-keybindings ()

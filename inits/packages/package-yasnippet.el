@@ -1,7 +1,5 @@
 
 ;; yasnippet
-(req 'yasnippet
-     (yas-global-mode t)
-     (yas-load-directory "~/.emacs.d/snippets"))
+(req 'yasnippet-bundle)
 
 (provide 'package-yasnippet)
