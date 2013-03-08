@@ -83,8 +83,10 @@
 
 ;; navi2ch
 (req 'navi2ch
-     ;; use mona font
-     (setq navi2ch-mona-enable 1))
+     (setq navi2ch-mona-enable 1)
+     (setq navi2ch-ack-when-exit -1)
+     (setq navi2ch-message-user-name ""))
+
 
 ;; helm-ag
 (req 'helm-ag
