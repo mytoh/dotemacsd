@@ -14,13 +14,13 @@
                       (cons "" nil))))
      ;; face
      (set-face-attribute 'tabbar-default nil
-                         :background "gray40")
+                         :background "gray20")
      (set-face-attribute 'tabbar-selected nil
                          :foreground "#b34d48"
-                         :background "#1b1d1e"
+                         :background "#343f44"
                          :box nil)
      (set-face-attribute 'tabbar-unselected nil
-                         :foreground "white"
+                         :foreground "#497b9c"
                          :background "gray19"
                          :box '(:line-width 1 :color "gray14" :style nil))
      (set-face-attribute 'tabbar-button nil

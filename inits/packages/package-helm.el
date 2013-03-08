@@ -47,6 +47,9 @@
      (set-face-attribute 'helm-ff-directory nil
                          :foreground "#bbebfb" :background nil))
 
+;; ag
+(req 'helm-ag)
+
 ;; cmd-t
 ;; (req 'helm-cmd-t
 ;;      (global-set-key (kbd "M-t") 'helm-cmd-t))

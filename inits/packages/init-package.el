@@ -68,6 +68,7 @@
         helm-migemo
         helm-cmd-t
         helm-projectile
+        helm-ag
         projectile
         project-persist
         magit

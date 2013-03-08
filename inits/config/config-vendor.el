@@ -16,7 +16,6 @@
     ("highlight-cl" "emacsmirror/highlight-cl")
     ("eldoc-extension" "emacsmirror/eldoc-extension")
     ("navi2ch" "naota/navi2ch")
-    ("helm-ag" "syohex/emacs-helm-ag")
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")
     ))
 
@@ -87,9 +86,5 @@
      (setq navi2ch-ack-when-exit -1)
      (setq navi2ch-message-user-name ""))
 
-
-;; helm-ag
-(req 'helm-ag
-     )
 
 (provide 'config-vendor)
