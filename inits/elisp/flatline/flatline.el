@@ -142,8 +142,7 @@
    (flatline:space "  ")
    ;; nyan
    (flatline:nyan-mode)))
-(setq-default mode-line-format
-              (flatline:mode-line-format))
+
 
 
 ;; faces
@@ -253,6 +252,22 @@
   '((t (:foreground "gray60" :background "gray20")))
   "flatline space face"
   :group 'flatline-face)
+
+
+
+(defun flatline:mode-start ()
+  (setq-default mode-line-format
+                (flatline:mode-line-format)))
+
+
+;;;###autoload
+(define-minor-mode flatline-mode
+  :init-value nil
+  :lighter " fln"
+  :group 'modeline
+  (if flatline-mode
+      (flatline:mode-start)))
+
 
 (provide 'flatline)
 

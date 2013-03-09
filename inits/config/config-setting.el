@@ -59,7 +59,7 @@
 ;; smooth scrolling
 ;; (setq redisplay-dont-pause 1
 ;;       scroll-margin 1
-;;       scroll-step 1
+;;       scroll-step 4
 ;;       scroll-conservatively 35
 ;;       scroll-preserve-screen-position 1)
 
