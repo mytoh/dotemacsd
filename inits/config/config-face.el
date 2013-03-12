@@ -5,6 +5,9 @@
   ;; colour theme
   (load-theme 'molokai t)
 
+  ;; cursor shape
+  (add-to-list 'default-frame-alist '(cursor-type . hbar))
+  (set-cursor-color "#e3a378")
 
   ;; font
   (defun font-existsp (font)

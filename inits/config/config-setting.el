@@ -7,6 +7,7 @@
 ;;disable startup message
 (enable-option inhibit-startup-screen)
 
+
 ;;; parens
 (setq show-paren-delay 0
       show-parne-style 'parenthesis)
@@ -145,7 +146,7 @@
 (setq indicate-empty-lines 1)
 
 ;; asni colors
-(setq ansi-color-names-vector  ["#121212" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "#efefff"])
+(setq ansi-color-names-vector  ["#121212" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "#efcfaf"])
 (setq ansi-color-for-comint-mode 'filter)
 
 

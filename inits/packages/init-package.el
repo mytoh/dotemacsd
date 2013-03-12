@@ -56,19 +56,6 @@
         image-dired+
         dired+
         dired-single
-        ;; helm
-        helm
-        helm-git
-        helm-themes
-        helm-c-moccur
-        helm-c-yasnippet
-        helm-descbinds
-        helm-gist
-        helm-ls-git
-        helm-migemo
-        helm-cmd-t
-        helm-projectile
-        helm-ag
         projectile
         project-persist
         magit
@@ -85,7 +72,6 @@
         yasnippet
         yasnippet-bundle
         w3m
-        paredit
         smartparens
         ack-and-a-half
         powerline
@@ -103,6 +89,19 @@
         twittering-mode
         highlight-indentation
         coffee-mode
+        ;; helm
+        helm
+        helm-git
+        helm-themes
+        helm-c-moccur
+        helm-c-yasnippet
+        helm-descbinds
+        helm-gist
+        helm-ls-git
+        helm-migemo
+        helm-cmd-t
+        helm-projectile
+        helm-ag
         ;; themes
         molokai-theme
         monokai-theme
@@ -140,7 +139,7 @@
     package-projectile
     package-project-persist
     package-emms
-    package-cursor-chg
+    ;; package-cursor-chg
     package-suomalainen-kalenteri
     package-isearch+
     package-info+

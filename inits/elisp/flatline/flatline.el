@@ -260,10 +260,8 @@
                 (flatline:mode-line-format)))
 
 
-;;;###autoload
 (define-minor-mode flatline-mode
   :init-value nil
-  :lighter " fln"
   :group 'modeline
   (if flatline-mode
       (flatline:mode-start)))
