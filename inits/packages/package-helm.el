@@ -7,6 +7,7 @@
      (global-set-key (kbd "C-x C-f") 'helm-find-files)
      (global-set-key (kbd "M-y") 'helm-show-kill-ring)
      (global-set-key (kbd "C-M-z") 'helm-resume)
+     (global-set-key (kbd "C-x b") 'helm-buffers-list)
      (define-key helm-map (kbd "C-M-n") 'helm-next-source)
      (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
      (setq
