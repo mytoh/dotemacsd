@@ -1,4 +1,7 @@
 
+(eval-when-compile
+  (require 'cl-lib))
+
 
 (defun r7rs:add-keywords (face-name keyword-rules)
   (lexical-let* ((keyword-list (mapcar #'(lambda (x)

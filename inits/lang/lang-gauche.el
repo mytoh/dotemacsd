@@ -31,7 +31,7 @@
   (local-set-key (kbd "C-n") 'comint-next-line))
 (add-hook 'inferior-scheme-mode-hook 'my-inferior-scheme-mode-hook)
 
-(defmacro* my-scheme-make-face (face fore)
+(cl-defmacro my-scheme-make-face (face fore)
   `(progn
      (make-face ,face)
      (set-face-foreground ,face  ,fore)))
@@ -71,7 +71,7 @@
 
 ;; function from http://emacswiki.org/emacs/AddKeywords
 (defun my-gauche-add-keywords (face-name keyword-rules)
-  (let* ((keyword-list (mapcar #'(lambda (x)
+  (lexical-let* ((keyword-list (mapcar #'(lambda (x)
                                    (symbol-name (cdr x)))
                                keyword-rules))
          (keyword-regexp (concat "(\\("

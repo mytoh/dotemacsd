@@ -1,7 +1,7 @@
  ;;; -*- coding: utf-8 -*-
 
 (when (string-equal system-type "darwin")
-  (lexical-let ((my-paths `(,(expand-file-name "~/local/homebrew/bin"))))
+  (let ((my-paths `(,(expand-file-name "~/local/homebrew/bin"))))
     (dolist (dir my-paths)
       ;; sakito.jp/emacs/emacsshell.html
       (when (and (file-exists-p dir) (not (member dir exec-path)))

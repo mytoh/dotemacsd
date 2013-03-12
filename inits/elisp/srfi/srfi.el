@@ -1,3 +1,8 @@
+
+(eval-when-compile
+  (require 'cl-lib))
+
+
 (defun srfi:add-keywords (face-name keyword-rules)
   (lexical-let* ((keyword-list (mapcar #'(lambda (x)
                                            (symbol-name (cdr x)))

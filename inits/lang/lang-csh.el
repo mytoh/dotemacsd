@@ -1,6 +1,6 @@
 
 (defun my-csh-add-keywords (face-name keyword-rules)
-  (let* ((keyword-list (mapcar #'(lambda (x)
+  (lexical-let* ((keyword-list (mapcar #'(lambda (x)
                                    (symbol-name (cdr x)))
                                keyword-rules))
          (keyword-regexp (concat "(\\("

@@ -49,7 +49,7 @@
 ;; start eshell
 (add-hook 'after-init-hook
           #'(lambda ()
-              (lexical-let ((default-directory (getenv "HOME")))
+              (let ((default-directory (getenv "HOME")))
                 (command-execute 'eshell)
                 (bury-buffer))))
 

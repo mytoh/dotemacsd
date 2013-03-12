@@ -3,13 +3,13 @@
 
 ;;; internal functions
 
-(defmacro* %url-is-git-p (url)
+(cl-defmacro %url-is-git-p (url)
   `(cond ((or (string-match (rx "git://") ,url)
               (string-match  (rx ".git" (zero-or-one "/") line-end) ,url))
           t)
          (t nil)))
 
-(defmacro* %url-is-github-p (url)
+(cl-defmacro %url-is-github-p (url)
   `(cond ((string-match
            (rx   line-start
                  (one-or-more (or (syntax symbol) (syntax word)))
@@ -24,9 +24,9 @@
 
 ;;; utilily functions
 
-(defmacro* my-vendor-update-packages (path)
+(cl-defmacro my-vendor-update-packages (path)
   `(when (file-exists-p ,path)
-     (lexical-let ((paths (directory-files ,path t "[^\.]")))
+     (let ((paths (directory-files ,path t "[^\.]")))
        (labels ( (directory-is-git-p (p)
                                      (if (directory-files p nil "\.git$") t nil)))
          (mapcar* #'(lambda (d)
@@ -39,7 +39,7 @@
                   paths)))))
 
 
-(defmacro* my-vendor-install-packages (packages)
+(cl-defmacro my-vendor-install-packages (packages)
   `(dolist (p ,packages)
      (if (not (file-exists-p *user-emacs-vendor-directory*))
          (make-directory *user-emacs-vendor-directory*))

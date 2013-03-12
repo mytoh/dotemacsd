@@ -4,6 +4,9 @@
 
 ;;; http://amitp.blogspot.jp/2011/08/emacs-custom-mode-line.html
 
+(eval-when-compile
+  (require 'cl-lib))
+
 (defgroup flatline nil
   "Faces used in the mode line."
   :group 'mode-line)
@@ -45,7 +48,7 @@
 (defun flatline:eol-desc ()
   (lexical-let* ((eol (coding-system-eol-type buffer-file-coding-system))
                  (mnemonic (coding-system-eol-type-mnemonic buffer-file-coding-system))
-                 (desc (assoc eol mode-line-eol-desc-cache)))
+                 (desc (cl-assoc eol mode-line-eol-desc-cache)))
     (if (and desc (eq (cadr desc) mnemonic))
         (cddr desc)
       (if desc (setq mode-line-eol-desc-cache nil)) ;Flush the cache if stale.
