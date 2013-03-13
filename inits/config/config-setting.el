@@ -145,9 +145,6 @@
 ;; display buffer end
 (setq indicate-empty-lines 1)
 
-;; asni colors
-(setq ansi-color-names-vector  ["#121212" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "#efcfaf"])
-(setq ansi-color-for-comint-mode 'filter)
 
 
 (provide 'config-setting)

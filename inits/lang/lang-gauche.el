@@ -26,7 +26,7 @@
   (add-hook 'before-save-hook 'my-before-save-hook nil t))
 (add-hook 'scheme-mode-hook 'my-scheme-mode-hook)
 
-(defun* my-inferior-scheme-mode-hook ()
+(cl-defun my-inferior-scheme-mode-hook ()
   (local-set-key (kbd "C-p") 'comint-previous-input)
   (local-set-key (kbd "C-n") 'comint-next-line))
 (add-hook 'inferior-scheme-mode-hook 'my-inferior-scheme-mode-hook)
@@ -72,11 +72,11 @@
 ;; function from http://emacswiki.org/emacs/AddKeywords
 (defun my-gauche-add-keywords (face-name keyword-rules)
   (lexical-let* ((keyword-list (mapcar #'(lambda (x)
-                                   (symbol-name (cdr x)))
-                               keyword-rules))
-         (keyword-regexp (concat "(\\("
-                                 (regexp-opt keyword-list)
-                                 "\\)[ \n]")))
+                                           (symbol-name (cdr x)))
+                                       keyword-rules))
+                 (keyword-regexp (concat "(\\("
+                                         (regexp-opt keyword-list)
+                                         "\\)[ \n]")))
     (font-lock-add-keywords 'scheme-mode
                             `((,keyword-regexp 1 ',face-name))))
   (mapc #'(lambda (x)

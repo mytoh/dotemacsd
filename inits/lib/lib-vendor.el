@@ -5,7 +5,7 @@
 
 (cl-defmacro %url-is-git-p (url)
   `(cond ((or (string-match (rx "git://") ,url)
-              (string-match  (rx ".git" (zero-or-one "/") line-end) ,url))
+              (string-match (rx ".git" (zero-or-one "/") line-end) ,url))
           t)
          (t nil)))
 
@@ -27,16 +27,17 @@
 (cl-defmacro my-vendor-update-packages (path)
   `(when (file-exists-p ,path)
      (let ((paths (directory-files ,path t "[^\.]")))
-       (labels ( (directory-is-git-p (p)
-                                     (if (directory-files p nil "\.git$") t nil)))
-         (mapcar* #'(lambda (d)
-                      (when (directory-is-git-p d)
-                        (progn
-                          (cd-absolute d)
-                          (message "updating vendor plugin %s" d)
-                          (shell-command "git pull")
-                          (cd user-emacs-directory))))
-                  paths)))))
+       (cl-labels ((directory-is-git-p (p)
+                                       (if (directory-files p nil "\.git$") t nil)))
+         (cl-mapcar* #'(lambda (d)
+                         (when (directory-is-git-p d)
+                           (progn
+                             (cd-absolute d)
+                             (message "updating vendor plugin %s" d)
+                             (shell-command "git pull")
+                             (cd user-emacs-directory)
+                             (byte-recompile-directory (concat *user-emacs-vendor-directory* d)))))
+                     paths)))))
 
 
 (cl-defmacro my-vendor-install-packages (packages)
@@ -51,9 +52,9 @@
                              *user-emacs-vendor-directory*)
               (byte-recompile-directory (concat *user-emacs-vendor-directory* (car p))))
              ((%url-is-github-p (cadr p))
-              (cd-absolute *user-emacs-vendor-directory* )
+              (cd-absolute *user-emacs-vendor-directory*)
               (message "installing %s from github " (car p))
-              (shell-command  (concat "git clone git://github.com/" (cadr p) " " (car p)) )
+              (shell-command (concat "git clone git://github.com/" (cadr p) " " (car p)))
               (byte-recompile-directory (concat *user-emacs-vendor-directory* (car p))))
              (cd user-emacs-directory)))))
 

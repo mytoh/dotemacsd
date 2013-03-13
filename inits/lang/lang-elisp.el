@@ -25,7 +25,12 @@
    (1 . if)
    (1 . lambda)
    (1 . add-to-list)
-   (1 . dolist)))
+   (1 . dolist)
+   (1 . cl-mapcar)
+   (1 . cl-reduce)
+   (1 . cl-remove-if)
+   (1 . cl-cadddr)
+   ))
 
 (my-elisp-add-keywords
  'font-lock-keyword-face
@@ -35,6 +40,8 @@
    (1 . req)
    (2 . cl-defmacro)
    (1 . cl-declare)
+   (1 . cl-labels)
+   (1 . cl-defun)
    ))
 
 (font-lock-add-keywords

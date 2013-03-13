@@ -89,6 +89,7 @@
         twittering-mode
         highlight-indentation
         coffee-mode
+        auto-highlight-symbol
         ;; helm
         helm
         helm-git
@@ -157,6 +158,7 @@
     package-highlight-indentation
     package-org
     package-coffee-mode
+    package-auto-highlight-symbol
     ))
 
 (mapc #'require init-packages)

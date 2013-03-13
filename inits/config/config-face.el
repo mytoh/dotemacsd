@@ -9,6 +9,16 @@
   (add-to-list 'default-frame-alist '(cursor-type . hbar))
   (set-cursor-color "#e3a378")
 
+  ;; terminal colors
+  (set-face-attribute 'term-color-red nil :foreground "#d55e00")
+  (set-face-attribute 'term-color-green nil :foreground "#009e73" )
+  (set-face-attribute 'term-color-yellow nil :foreground "#f8ec59" )
+  (set-face-attribute 'term-color-blue nil :foreground "#0072b2" )
+  (set-face-attribute 'term-color-magenta nil :foreground "#cc79a7" )
+  (set-face-attribute 'term-color-cyan nil :foreground  "#56b4e9")
+  (set-face-attribute 'term-color-white nil :foreground  "#efcfaf")
+  (set-face-attribute 'term-color-black nil :foreground  "#121212")
+
   ;; font
   (defun font-existsp (font)
     "Check to see if the named FONT is available"

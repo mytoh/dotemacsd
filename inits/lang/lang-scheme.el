@@ -49,7 +49,7 @@
     (add-hook 'before-save-hook f nil t)))
 (add-hook 'scheme-mode-hook 'minun:scheme-mode-hook)
 
-(defun* minun:inferior-scheme-mode-hook ()
+(cl-defun minun:inferior-scheme-mode-hook ()
   (local-set-key (kbd "C-p") 'comint-previous-input)
   (local-set-key (kbd "C-n") 'comint-next-line))
 (add-hook 'inferior-scheme-mode-hook 'minun:inferior-scheme-mode-hook)

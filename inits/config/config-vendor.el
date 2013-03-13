@@ -10,12 +10,12 @@
     ("nyan-mode" "TeMPOraL/nyan-mode")
     ("highlight-sexp" "daimrod/highlight-sexp")
     ("emux-el" "m2ym/emux-el")
-    ("auto-highlight-symbol-mode" "mitsuo-saito/auto-highlight-symbol-mode")
     ("helm-delicious" "emacs-helm/helm-delicious")
     ("seijiseikana-el" "moriyamahiroshi/seijiseikana-el")
     ("highlight-cl" "emacsmirror/highlight-cl")
     ("eldoc-extension" "emacsmirror/eldoc-extension")
     ("navi2ch" "naota/navi2ch")
+    ("flatline-el" "mytoh/flatline-el")
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")
     ))
 
@@ -55,9 +55,6 @@
 ;;   (setq hl-sexp-foreground-color nil)
 ;;   (setq hl-sexp-background-color "#1a1a1a"))
 
-;; auto-highlight-symbol-mode
-(req 'auto-highlight-symbol
-     (global-auto-highlight-symbol-mode t))
 
 ;; highlight-cl
 (req 'highlight-cl
@@ -85,6 +82,10 @@
      (setq navi2ch-mona-enable 1)
      (setq navi2ch-ack-when-exit -1)
      (setq navi2ch-message-user-name ""))
+
+;; flatline
+(req 'flatline
+     (flatline-mode 1))
 
 
 (provide 'config-vendor)

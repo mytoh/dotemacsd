@@ -1,6 +1,6 @@
 
 
-(req 'erc-join)
+(req 'erc)
 ;;(erc-autojoin-mode 1)
 
 ;;(erc :server "irc.freenode.net" :port 6667 :nick "teask")

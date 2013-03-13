@@ -65,7 +65,7 @@
 
 ;;http://www.reddit.com/r/emacs/comments/umb24/expandfilename_is_good_for_path_concat_too/
 (cl-defun concat-path (&rest parts)
-  (reduce (lambda (a b) (expand-file-name b a)) parts))
+  (cl-reduce (lambda (a b) (expand-file-name b a)) parts))
 
 (defun my-before-save-hook ()
   (save-excursion
