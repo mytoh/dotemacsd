@@ -1,7 +1,7 @@
- ;;; -*- coding: utf-8 -*-
+;;;; -*- coding: utf-8 -*-
 
 (defun my-after-init-hook ()
-                                        ;(setq debug-on-error t))
+  ;; (setq debug-on-error t))
   (add-hook 'after-init-hook 'my-after-init-hook))
 
 (defun my-after-save-hook ()
@@ -13,7 +13,7 @@
 ;;      'my-after-save-hook)
 
 
-;; notify reverting
+;;; notify reverting
 (require 'notifications)
 (defun my-after-revert-hook ()
   (notifications-notify :title (format "Revert %s" (buffer-file-name))

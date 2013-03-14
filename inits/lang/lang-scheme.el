@@ -1,11 +1,11 @@
 
 (defun minun:scheme-add-keywords (face-name keyword-rules)
-  (lexical-let* ((keyword-list (mapcar #'(lambda (x)
-                                           (symbol-name (cdr x)))
-                                       keyword-rules))
-                 (keyword-regexp (concat "(\\("
-                                         (regexp-opt keyword-list)
-                                         "\\)[ \n]")))
+  (let* ((keyword-list (mapcar #'(lambda (x)
+                                   (symbol-name (cdr x)))
+                               keyword-rules))
+         (keyword-regexp (concat "(\\("
+                                 (regexp-opt keyword-list)
+                                 "\\)[ \n]")))
     (my-log "adding keywords for face "
             (propertize (symbol-name face-name) 'face 'font-lock-variable-name-face)
             " on scheme mode")
@@ -31,7 +31,7 @@
   "run scheme on other window"
   (interactive)
   (split-window-horizontally 90)
-  (lexical-let ((buf-name (buffer-name (current-buffer))))
+  (let ((buf-name (buffer-name (current-buffer))))
     (switch-to-buffer-other-window
      (get-buffer-create "*scheme*"))
     (run-scheme scheme-program-name)

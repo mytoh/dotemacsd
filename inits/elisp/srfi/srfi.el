@@ -4,12 +4,12 @@
 
 
 (defun srfi:add-keywords (face-name keyword-rules)
-  (lexical-let* ((keyword-list (mapcar #'(lambda (x)
-                                           (symbol-name (cdr x)))
-                                       keyword-rules))
-                 (keyword-regexp (concat "(\\("
-                                         (regexp-opt keyword-list)
-                                         "\\)[ \n]")))
+  (let* ((keyword-list (mapcar #'(lambda (x)
+                                   (symbol-name (cdr x)))
+                               keyword-rules))
+         (keyword-regexp (concat "(\\("
+                                 (regexp-opt keyword-list)
+                                 "\\)[ \n]")))
     (my-log "adding keywords for face "
             (propertize (symbol-name face-name) 'face 'font-lock-variable-name-face)
             " on scheme mode")

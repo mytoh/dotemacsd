@@ -87,7 +87,7 @@
 (which-function-mode 1)
 
 ;; enable lexical binding
-(enable-option lexical-binding)
+;;(enable-option lexical-binding)
 
 ;; save buffer history
 (savehist-mode 1)

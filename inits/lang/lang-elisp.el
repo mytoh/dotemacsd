@@ -3,12 +3,12 @@
 (add-to-list 'auto-mode-alist '("\\.emacs-w3m\\'" .  emacs-lisp-mode))
 
 (defun my-elisp-add-keywords (face-name keyword-rules)
-  (lexical-let* ((keyword-list (mapcar #'(lambda (x)
-                                           (symbol-name (cdr x)))
-                                       keyword-rules))
-                 (keyword-regexp (concat "(\\("
-                                         (regexp-opt keyword-list)
-                                         "\\)[ \n]")))
+  (let* ((keyword-list (mapcar #'(lambda (x)
+                                   (symbol-name (cdr x)))
+                               keyword-rules))
+         (keyword-regexp (concat "(\\("
+                                 (regexp-opt keyword-list)
+                                 "\\)[ \n]")))
     (font-lock-add-keywords  'emacs-lisp-mode
                              `((,keyword-regexp 1 ',face-name))))
   (mapc #'(lambda (x)
