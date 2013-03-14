@@ -55,7 +55,7 @@
 (transient-mark-mode 1)
 
 ;; highlight current line
-(enable-option global-hl-line-mode)
+;;(enable-option global-hl-line-mode)
 
 ;; smooth scrolling
 ;; (setq redisplay-dont-pause 1

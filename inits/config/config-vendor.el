@@ -21,8 +21,8 @@
 
 
 ;; install packages
-(my-vendor-install-packages
- (*my-vendor-packages*))
+;; (my-vendor-install-packages
+;;  (*my-vendor-packages*))
 
 
 ;; update plugins
@@ -35,17 +35,17 @@
 ;; (nyan-mode t)
 
 
-(req 'emux
-     ;; prefix C-c
-     ;; "C-n" ' emux:term-next
-     ;; "SPC" 'emux:term-next
-     ;; "C-p"  'emux:term-previous
-     ;; "C-t"   'emux:term-new
-     ;; "A"      'emux:term-rename
-     ;; "k"      'emux:term-kill
-     ;; "d"      'emux:term-cd
-     ;; "~"     'emux:term-sync
-     )
+;;(req 'emux
+;; prefix C-c
+;; "C-n" ' emux:term-next
+;; "SPC" 'emux:term-next
+;; "C-p"  'emux:term-previous
+;; "C-t"   'emux:term-new
+;; "A"      'emux:term-rename
+;; "k"      'emux:term-kill
+;; "d"      'emux:term-cd
+;; "~"     'emux:term-sync
+;;     )
 
 ;; highlight-sexp
 ;; (req 'highlight-sexp
