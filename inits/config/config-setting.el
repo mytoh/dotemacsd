@@ -32,7 +32,8 @@
            (server-start))))
 
 ;; use space instead of tab
-(setq-default tab-width 4 indent-tabs-mode nil)
+(setq-default tab-width 4
+              indent-tabs-mode nil)
 (setq indent-line-function 'indent-relative-maybe)
 
 ;; mouse
@@ -85,9 +86,10 @@
 
 ;; show function name
 (which-function-mode 1)
+(set-face-attribute 'which-func nil :foreground "#4f7b8a")
 
 ;; enable lexical binding
-;;(enable-option lexical-binding)
+(enable-option lexical-binding)
 
 ;; save buffer history
 (savehist-mode 1)
@@ -140,10 +142,10 @@
 
 ;; also reload dired, and quiet
 (enable-option global-auto-revert-non-file-buffers)
-(setq auto-revert-verbose nil)
+(disable-option auto-revert-verbose)
 
 ;; display buffer end
-(setq indicate-empty-lines 1)
+(enable-option indicate-empty-lines)
 
 
 

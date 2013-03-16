@@ -5,8 +5,9 @@
   )
 
 (cl-defmacro my-log (&rest messages)
-  `(message (concat (propertize ">> " 'face 'font-lock-doc-face)
-                    ,@messages)))
+  `(progn
+     (message (concat (propertize ">> " 'face 'font-lock-doc-face)
+                      ,@messages) " ...")))
 
 ;; http://e-arrows.sakura.ne.jp/2010/03/macros-in-emacs-el.html
 (cl-defmacro req (lib &rest body)

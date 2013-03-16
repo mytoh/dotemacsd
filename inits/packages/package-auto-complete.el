@@ -15,7 +15,7 @@
                          :background "#393939")
 
      (req 'ac-ja)
-
+     (add-to-list 'ac-modes 'eshell-mode)
      ;; elisp mode
      (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
 

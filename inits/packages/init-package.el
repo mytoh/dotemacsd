@@ -36,7 +36,7 @@
      (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                               ("melpa" . "http://melpa.milkbox.net/packages/")
                               ("ELPA" . "http://tromey.com/elpa/")
-                              ("marmalade" . "http://marmalade-repo.org/packages/")
+                              ;; ("marmalade" . "http://marmalade-repo.org/packages/")
                               ))
      (package-initialize))
 
@@ -90,6 +90,8 @@
         highlight-indentation
         coffee-mode
         auto-highlight-symbol
+        multiple-cursors
+        guide-key
         ;; helm
         helm
         helm-git
@@ -128,6 +130,8 @@
     ;; this may cause problem
     package-rainbow-mode
 
+    package-multiple-cursors
+    package-guide-key
     package-dired+
     package-image-dired+
     ;; package-dired-single

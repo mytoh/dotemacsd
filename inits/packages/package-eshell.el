@@ -1,31 +1,9 @@
 
 ;; eshell
-(setq eshell-cmpl-ignore-case t)
-(setq eshell-cmpl-cycle-cutoff-length 5)
-(setq eshell-hist-ignoredups t)
-(setq eshell-scroll-show-maximum-output t)
 
-(setq eshell-cmpl-cycle-completions nil
-      eshell-save-history-on-exit t
-      eshell-cmpl-dir-ignore "\\`\\(\\.\\.?\\|CVS\\|\\.svn\\|\\.git\\)/\\'")
 
-(eval-after-load 'esh-opt
-  '(progn
-     (require 'em-cmpl)
-     (require 'em-prompt)
-     (require 'em-term)
-     (setenv "PAGER""cat")
-     (add-hook 'eshell-mode-hook
-               '(lambda () (define-key eshell-mode-map (kbd "C-a") 'eshell-bol)))
-     (add-to-list 'eshell-visual-commands "ssh")
-     (add-to-list 'eshell-visual-commands "tail")
-     (add-to-list 'eshell-command-completions-alist
-                  '("gunzip" "gz\\'"))
-     (add-to-list 'eshell-command-completions-alist
-                  '("tar" "\\(\\.tar|\\.tgz\\|\\.tar\\.gz\\)\\'"))))
-
-;; switch to eshell or restore previous windows
-;; http://irreal.org/blog/?p=1742
+;;; switch to eshell or restore previous windows
+;;; http://irreal.org/blog/?p=1742
 (defun my-eshell-switch ()
   "Bring up a full-screen eshell or restore previous config."
   (interactive)
@@ -35,49 +13,56 @@
       (window-configuration-to-register :eshell-fullscreen)
       (eshell)
       (delete-other-windows))))
-;; (define-key global-map (kbd "C-z") 'eshell)
 (define-key global-map (kbd "C-z") 'my-eshell-switch)
 
-;; eshell keybind
+;;; eshell keybind
 (defun my-eshell-hook-keybindings ()
   (define-key eshell-mode-map (kbd "C-p") 'eshell-previous-matching-input-from-input)
-  (define-key eshell-mode-map (kbd "C-n") 'eshell-next-matching-input-from-input))
+  (define-key eshell-mode-map (kbd "C-n") 'eshell-next-matching-input-from-input)
+  (define-key eshell-mode-map (kbd "C-a") 'eshell-bol))
 (add-hook 'eshell-mode-hook
           'my-eshell-hook-keybindings)
 
 
-;; start eshell
-(add-hook 'after-init-hook
-          #'(lambda ()
-              (let ((default-directory (getenv "HOME")))
-                (command-execute 'eshell)
-                (bury-buffer))))
+;;; start eshell
+;; (add-hook 'after-init-hook
+;;           #'(lambda ()
+;;               (let ((default-directory (getenv "HOME")))
+;;                 (command-execute 'eshell)
+;;                 (bury-buffer))))
 
-;; load prompt settings
-(require 'package-eshell-prompt)
 
-;; helm
+;;; disable hl-line
+;; (defun my-eshell-hook-disable-hl-line ()
+;;   (set (make-local-variable 'hl-line-range-function)
+;;        (lambda ()
+;;          '(0 . 0))))
+
+;; (add-hook 'eshell-mode-hook
+;;           #'my-eshell-hook-disable-hl-line)
+
+
+;;; http://nishikawasasaki.hatenablog.com/entry/2012/09/12/233116
+;;; auto-complete
+;;; require 'auto-complete in package-auto-complete
+(require 'pcomplete)
+(defun my-ac-eshell-mode ()
+  (ac-define-source pcomplete
+    '((candidates . pcomplete-completions)))
+  (setq ac-sources
+        '(ac-source-pcomplete
+          ac-source-filename
+          ac-source-files-in-current-dir
+          ac-source-words-in-buffer
+          ac-source-dictionary)))
 (add-hook 'eshell-mode-hook
           #'(lambda ()
-              (define-key eshell-mode-map
-                (kbd "M-p")
-                'helm-eshell-history)
-              ;; (define-key eshell-mode-map
-              ;;   [remap pcomplete]
-              ;;   'helm-esh-pcomplete)
+              (my-ac-eshell-mode)
+              ;; (define-key eshell-mode-map [(tab)] 'auto-complete)
+              ;; (define-key eshell-mode-map (kbd "C-i") 'auto-complete)
               ))
 
-
-;; disable hl-line
-(defun my-eshell-hook-disable-hl-line ()
-  (set (make-local-variable 'hl-line-range-function)
-       (lambda ()
-         '(0 . 0))))
-
-(add-hook 'eshell-mode-hook
-          #'my-eshell-hook-disable-hl-line)
-
-;; alias
+;;; alias
 (defun my-eshell-hook-add-aliases ()
   (setq eshell-command-aliases-list
         (append '(( "ag" "ag --nopager")
@@ -94,6 +79,23 @@
                 eshell-command-aliases-list)))
 (add-hook 'eshell-mode-hook
           #'my-eshell-hook-add-aliases)
+
+;;; helm history
+(add-hook 'eshell-mode-hook
+          #'(lambda ()
+              (define-key eshell-mode-map
+                (kbd "M-p")
+                'helm-eshell-history)))
+
+;;; helm complete
+(add-hook 'eshell-mode-hook
+          #'(lambda ()
+              (define-key eshell-mode-map
+                (kbd "M-n")
+                'helm-esh-pcomplete)))
+
+;; load prompt settings
+(require 'package-eshell-prompt)
 
 
 (provide 'package-eshell)
