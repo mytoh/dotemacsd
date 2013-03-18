@@ -36,7 +36,7 @@
      (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                               ("melpa" . "http://melpa.milkbox.net/packages/")
                               ("ELPA" . "http://tromey.com/elpa/")
-                              ;; ("marmalade" . "http://marmalade-repo.org/packages/")
+                              ("marmalade" . "http://marmalade-repo.org/packages/")
                               ))
      (package-initialize))
 
@@ -92,6 +92,8 @@
         auto-highlight-symbol
         multiple-cursors
         guide-key
+        google-translate
+        circe
         ;; helm
         helm
         helm-git
@@ -117,11 +119,11 @@
         soothe-theme
         ))
 
-(package-refresh-contents)
+;; (package-refresh-contents)
 (dolist (p *my-package-list*)
   (unless (package-installed-p p)
     (package-install p)
-    (message "install %s"  p)))
+    (message "installing %s"  p)))
 
 
 
@@ -130,6 +132,8 @@
     ;; this may cause problem
     package-rainbow-mode
 
+    package-circe
+    package-google-translate
     package-multiple-cursors
     package-guide-key
     package-dired+
