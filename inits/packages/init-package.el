@@ -94,6 +94,7 @@
         guide-key
         google-translate
         circe
+        tumblesocks
         ;; helm
         helm
         helm-git
@@ -132,6 +133,7 @@
     ;; this may cause problem
     package-rainbow-mode
 
+    package-tumblesocks
     package-circe
     package-google-translate
     package-multiple-cursors

@@ -21,8 +21,8 @@
 
 
 ;; install packages
-;; (my-vendor-install-packages
-;;  (*my-vendor-packages*))
+(my-vendor-install-packages
+ (*my-vendor-packages*))
 
 
 ;; update plugins
