@@ -95,6 +95,8 @@
         google-translate
         circe
         tumblesocks
+        undo-tree
+        direx
         ;; helm
         helm
         helm-git
@@ -118,6 +120,7 @@
         ujelly-theme
         birds-of-paradise-plus-theme
         soothe-theme
+        subatomic-theme
         ))
 
 ;; (package-refresh-contents)
@@ -169,6 +172,8 @@
     package-org
     package-coffee-mode
     package-auto-highlight-symbol
+    package-undo-tree
+    package-direx
     ))
 
 (mapc #'require init-packages)
@@ -178,9 +183,9 @@
 ;; (req 'egg
 ;;     (setq egg-auto-update nil))
 
-;; ;; redo+
+;; redo+
 ;; (req 'redo+
-;;     (global-set-key (kbd "C-_") 'redo))
+;;      (global-set-key (kbd "C-_") 'redo))
 
 
 ;;; hackernews

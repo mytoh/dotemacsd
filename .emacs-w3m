@@ -9,19 +9,22 @@
 (setq w3m-use-cookies t)
 ;; don't delete favicon cache
 (setq w3m-favicon-cache-expire-wait nil)
-;; enable display image
-;;(auto-image-file-mode t)
-(setq w3m-default-display-inline-images t)
-;; change bookmark encoding
-(setq w3m-bookmark-file-coding-system 'utf-8)
 ;; set icon directory
-;; (setq w3m-icon-directory "~/.emacs.d/icons")
+(setq w3m-icon-directory "~/.emacs.d/icons")
+;; show favicon in mode-line
+(setq w3m-show-graphic-icons-in-mode-line t)
+
+
+;;; disable
 ;; use favicon
 ;; (setq w3m-use-favicon t)
-;; show favicon in mode-line
-;; (setq w3m-show-graphic-icons-in-mode-line t)
+;; enable display image
+;; (auto-image-file-mode t)
+;; (setq w3m-default-display-inline-images t)
+
 
 (setq w3m-coding-system 'utf-8
+      w3m-bookmark-file-coding-system 'utf-8
       w3m-file-coding-system 'utf-8
       w3m-file-name-coding-system 'utf-8
       w3m-input-coding-system 'utf-8
