@@ -61,12 +61,13 @@
 (defvar ac-source-scheme
   '((candidates
      (lambda ()
-       (my-req 'scheme-complete)
+       (req 'scheme-complete)
        (all-completions ac-target (car (scheme-current-env))))))
   "Source for scheme keywords.")
 (add-hook 'scheme-mode-hook
-          (lambda ()
-            (add-to-list 'ac-sources 'ac-source-scheme)))
+          #'(lambda ()
+              (make-local-variable 'ac-sources)
+              (add-to-list 'ac-sources 'ac-source-scheme)))
 
 ;; scheme mode recognition
 (defun minun:add-scheme-mode (ext)

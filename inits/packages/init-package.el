@@ -97,6 +97,7 @@
         tumblesocks
         undo-tree
         direx
+        org-bullets
         ;; helm
         helm
         helm-git
@@ -174,6 +175,7 @@
     package-auto-highlight-symbol
     package-undo-tree
     package-direx
+    package-org-bullets
     ))
 
 (mapc #'require init-packages)

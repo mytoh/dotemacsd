@@ -19,6 +19,7 @@
      ;; elisp mode
      (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
 
+
      ;; c mode
      ;; (req 'auto-complete-clang
      ;;      (defun my-ac-c-mode-setup ()
