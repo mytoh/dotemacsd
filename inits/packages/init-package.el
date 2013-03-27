@@ -98,6 +98,8 @@
         undo-tree
         direx
         org-bullets
+        carton
+        pallet
         ;; helm
         helm
         helm-git

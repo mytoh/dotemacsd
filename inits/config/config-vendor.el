@@ -14,6 +14,7 @@
     ("seijiseikana-el" "moriyamahiroshi/seijiseikana-el")
     ("highlight-cl" "emacsmirror/highlight-cl")
     ("eldoc-extension" "emacsmirror/eldoc-extension")
+    ("mew" "emacsmirror/mew")
     ("navi2ch" "naota/navi2ch")
     ("flatline-el" "mytoh/flatline-el")
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")

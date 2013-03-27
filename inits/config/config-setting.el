@@ -123,7 +123,7 @@
 ;; save more recent files
 (setq recentf-max-saved-items 1000)
 ;; recentf exclude
-(setq recentf-exclude `(,(rx  ".el.gz" string-end)))
+(setq recentf-exclude `(,(rx  ".el.gz" string-end) "archive-contents$"))
 
 ;; undo
 (setq undo-limit 100000)
