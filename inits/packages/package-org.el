@@ -5,7 +5,7 @@
   "Face used for the line delimiting the begin of source blocks.")
 
 (defface org-block-background
-  '((t (:foreground "#1e3c2b" :background "#bbccea")))
+  '((t (:background "#2b2948")))
   "Face used for the source block background")
 
 (defface org-block-end-line
@@ -16,6 +16,9 @@
           (lambda ()
             (setq org-src-fontify-natively 1)
             (org-babel-do-load-languages 'org-babel-load-languages
-                                         '((emacs-lisp . t) (sh . t) (scheme . t)))))
+                                         '((emacs-lisp . t)
+                                           (sh . t)
+                                           (scheme . t)
+                                           (lisp . t)))))
 
 (provide 'package-org)

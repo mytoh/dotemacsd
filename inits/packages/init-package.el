@@ -178,6 +178,7 @@
     package-undo-tree
     package-direx
     package-org-bullets
+    package-magit
     ))
 
 (mapc #'require init-packages)

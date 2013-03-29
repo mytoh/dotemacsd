@@ -147,6 +147,8 @@
 ;; display buffer end
 (enable-option indicate-empty-lines)
 
+;; electric indent
+(enable-option electric-layout-mode)
 
 
 (provide 'config-setting)
