@@ -18,7 +18,7 @@
                (r7rs:comment-face "#ababab")
                (r7rs:multicomment-face "#ababab")
                (r7rs:error-face "#ababab")
-               (r7rs:library-name-face "#b34a4e")
+               (r7rs:library-name-face "#e95a9e")
                (r7rs:module-macro-face "#9399ab")
                (r7rs:module-syntax-face "#93c9ab")
                (r7rs:module-function-face "#3b5993")
@@ -32,8 +32,7 @@
                (r7rs:srfi62-comment-face "#ababab")
                (r7rs:sharpbang-face "#ababab")
                (r7rs:include-face "#ababab")
-               (r7rs:interpolation-face "#ababab")
-               ))
+               (r7rs:interpolation-face "#ababab")))
     (message "making face %s" p)
     (r7rs:make-face (car p) (cadr p))))
 

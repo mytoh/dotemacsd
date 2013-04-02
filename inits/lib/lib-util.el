@@ -99,4 +99,14 @@ emacs load path"
                  (not (equal f ".")))
         (add-to-list 'load-path name)))))
 
+;; kill other buffers
+(defun kill-other-buffers ()
+  "kill all buffers but the current on.
+Don't mess with special buffers."
+  (interactive)
+  (dolist (buffer (buffer-list))
+    (unless (or (eql buffer (current-buffer))
+                (not (buffer-file-name buffer)))
+      (kill-buffer buffer))))
+
 (provide 'lib-util)

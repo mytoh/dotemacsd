@@ -100,6 +100,7 @@
         org-bullets
         carton
         pallet
+        page-break-lines
         ;; helm
         helm
         helm-git
@@ -179,6 +180,7 @@
     package-direx
     package-org-bullets
     package-magit
+    package-page-break-lines
     ))
 
 (mapc #'require init-packages)
