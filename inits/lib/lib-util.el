@@ -1,8 +1,7 @@
 ;;; -*- coding: utf-8 -*-
 
 (eval-when-compile
-  (require 'cl-lib)
-  )
+  (require 'cl-lib))
 
 (cl-defmacro my-log (&rest messages)
   `(progn
@@ -21,6 +20,7 @@
      (my-log "loaded " (propertize (symbol-name ,lib)
                                    'face 'font-lock-keyword-face)))
     (t (message "%s not loaded" (symbol-name ,lib)))))
+
 
 (cl-defmacro add-hook-fn (name &rest body)
   "(add-hook-fn 'php-mode-hook
@@ -50,7 +50,6 @@
   `(progn
      (set-face-foreground ,face ,fore)
      (set-face-background ,face ,back)))
-
 
 
 (cl-defmacro enable-option (option)

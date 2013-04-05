@@ -74,7 +74,7 @@
         w3m
         smartparens
         ack-and-a-half
-        powerline
+        ;; powerline
         popwin
         ghc
         emms
@@ -101,6 +101,9 @@
         carton
         pallet
         page-break-lines
+        flycheck
+        org
+        org-magit
         ;; helm
         helm
         helm-git
@@ -181,7 +184,9 @@
     package-org-bullets
     package-magit
     package-page-break-lines
+    package-flycheck
     ))
+
 
 (mapc #'require init-packages)
 
@@ -197,7 +202,6 @@
 
 ;;; hackernews
 (req 'hackernews)
-
 
 ;; multi-term
 ;;(req 'multi-term)
