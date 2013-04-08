@@ -1,5 +1,6 @@
  ;;; -*- coding: utf-8 -*-
 
+
 ;; plugin directory
 (setq *user-emacs-vendor-directory* (expand-file-name (concat user-emacs-directory (file-name-as-directory "vendor"))))
 
@@ -17,6 +18,7 @@
     ("mew" "emacsmirror/mew")
     ("navi2ch" "naota/navi2ch")
     ("flatline-el" "mytoh/flatline-el")
+    ("visual-regexp" "benma/visual-regexp.el")
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")
     ))
 
@@ -27,7 +29,7 @@
 
 
 ;; update plugins
-;;(my-vendor-update-packages *user-emacs-vendor-directory*)
+;; (my-vendor-update-packages *user-emacs-vendor-directory*)
 
 ;; add to load-path
 (add-subdirs-to-load-path *user-emacs-vendor-directory*)

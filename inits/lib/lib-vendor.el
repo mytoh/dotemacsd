@@ -1,5 +1,6 @@
 
-
+(eval-when-compile
+  (require 'cl))
 
 ;;; internal functions
 
@@ -29,34 +30,33 @@
      (let ((paths (directory-files ,path t "[^\.]")))
        (cl-labels ((directory-is-git-p (p)
                                        (if (directory-files p nil "\.git$") t nil)))
-         (cl-mapcar* #'(lambda (d)
-                         (when (directory-is-git-p d)
-                           (progn
-                             (cd-absolute d)
-                             (message "updating vendor plugin %s" d)
-                             (shell-command "git pull")
-                             (cd user-emacs-directory)
-                             (byte-recompile-directory (concat *user-emacs-vendor-directory* d)))))
-                     paths)))))
+         (cl-mapcar #'(lambda (d)
+                        (when (directory-is-git-p d)
+                          (progn
+                            (cd-absolute d)
+                            (message "updating vendor plugin %s .." d)
+                            (shell-command "git pull")
+                            (cd-absolute user-emacs-directory)
+                            (byte-recompile-directory (concat *user-emacs-vendor-director* d)))))
+                    paths)))))
 
 
 (cl-defmacro my-vendor-install-packages (packages)
   `(dolist (p ,packages)
      (if (not (file-exists-p *user-emacs-vendor-directory*))
          (make-directory *user-emacs-vendor-directory*))
-     (unless (file-exists-p (concat *user-emacs-vendor-directory* (car p)))
+     (unless (file-exists-p (concat-path *user-emacs-vendor-directory* (car p)))
        (cond ((%url-is-git-p (cadr p))
               (cd-absolute *user-emacs-vendor-directory* )
               (message "installing plugin " (car p))
               (shell-command (concat  "git clone " (cadr p) " " (car p))
                              *user-emacs-vendor-directory*)
-              (byte-recompile-directory (concat *user-emacs-vendor-directory* (car p))))
+              (byte-recompile-directory (concat-path *user-emacs-vendor-directory* (car p))))
              ((%url-is-github-p (cadr p))
               (cd-absolute *user-emacs-vendor-directory*)
               (message "installing %s from github " (car p))
               (shell-command (concat "git clone git://github.com/" (cadr p) " " (car p)))
-              (byte-recompile-directory (concat *user-emacs-vendor-directory* (car p))))
-             (cd user-emacs-directory)))))
+              (byte-recompile-directory (concat-path *user-emacs-vendor-directory* (car p))))))))
 
 
 (provide 'lib-vendor)

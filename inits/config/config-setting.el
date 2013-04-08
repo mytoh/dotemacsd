@@ -58,6 +58,12 @@
 ;; highlight current line
 ;;(enable-option global-hl-line-mode)
 
+;; display keys
+(setq echo-keystrokes 0.1)
+
+;; disable dialog box
+(setq use-dialog-box nil)
+
 ;; smooth scrolling
 ;; (setq redisplay-dont-pause 1
 ;;       scroll-margin 1

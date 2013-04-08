@@ -3,7 +3,7 @@
 (progn
 
   ;; colour theme
-  (load-theme 'solarized-dark t)
+  (load-theme 'molokai t)
 
   ;; cursor shape
   (add-to-list 'default-frame-alist '(cursor-type . hbar))

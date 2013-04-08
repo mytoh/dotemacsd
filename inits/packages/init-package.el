@@ -105,6 +105,7 @@
         org-magit
         pretty-mode
         pretty-mode-plus
+        unicode-progress-reporter
         ;; helm
         helm
         helm-git
@@ -187,6 +188,7 @@
     package-flycheck
     package-pretty-mode
     package-pretty-mode-plus
+    package-unicode-progress-reporter
     ))
 
 
