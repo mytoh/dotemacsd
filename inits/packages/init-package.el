@@ -84,7 +84,6 @@
         minimap
         ag
         eshell-manual
-        pretty-symbols-mode
         hackernews
         twittering-mode
         highlight-indentation
@@ -104,6 +103,8 @@
         flycheck
         org
         org-magit
+        pretty-mode
+        pretty-mode-plus
         ;; helm
         helm
         helm-git
@@ -172,7 +173,6 @@
     package-ghc
     package-ag
     package-yasnippet
-    package-pretty-symbols-mode
     package-flymake
     package-twittering-mode
     package-highlight-indentation
@@ -185,6 +185,8 @@
     package-magit
     package-page-break-lines
     package-flycheck
+    package-pretty-mode
+    package-pretty-mode-plus
     ))
 
 

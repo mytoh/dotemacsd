@@ -3,7 +3,7 @@
 (progn
 
   ;; colour theme
-  (load-theme 'molokai t)
+  (load-theme 'solarized-dark t)
 
   ;; cursor shape
   (add-to-list 'default-frame-alist '(cursor-type . hbar))
@@ -27,6 +27,8 @@
 
   (defun set-normal-font ()
     (cond ((eq window-system nil) nil)
+          ((font-existsp "Ricty")
+           (set-face-attribute 'default nil :height 90 :font "Ricty"))
           ((font-existsp "Droid Sans")
            (set-face-attribute 'default nil :height 100 :font "Droid Sans"))
           ((font-existsp "Source Code Pro")
@@ -46,19 +48,17 @@
           ((font-existsp "Hiragino Mincho Pro")
            (set-fontset-font nil 'japanese-jisx0208
                              (font-spec :family "Hiragino Mincho Pro")))
+          ((font-existsp "IPAGothic")
+           (set-fontset-font nil 'japanese-jisx0208
+                             '("IPAGothic" . "unicode-bmp")))
           ((font-existsp "Sazanami Gothic")
            (set-fontset-font nil 'japanese-jisx0208
                              (font-spec :family "Sazanami Gothic")))))
 
   (set-japanese-fontset-font)
 
-  ;;(set-frame-font "-artwiz-lime-medium-r-normal--10-*-75-75-m-50-iso10646-1")
-  ;; (set-fontset-font (frame-parameter nil 'font)
-  ;;                   'japanese-jisx0208
-  ;;                   '("IPAGothic" . "unicode-bmp"))))
-
-  ;;   ;; transparent
-  ;;   ;; http://www.emacswiki.org/emacs/TransparentEmacs
+  ;; ;; transparent
+  ;; ;; http://www.emacswiki.org/emacs/TransparentEmacs
   ;; (set-frame-parameter (selected-frame) 'alpha '(85 50))
   ;; (add-to-list 'default-frame-alist '(alpha 85 50))
 
