@@ -41,7 +41,6 @@
      (package-initialize))
 
 
-
 ;; install packages
 (setq *my-package-list*
       '(rainbow-delimiters
@@ -73,6 +72,8 @@
         yasnippet-bundle
         w3m
         smartparens
+        dash
+        ht
         ack-and-a-half
         ;; powerline
         popwin
@@ -106,6 +107,10 @@
         pretty-mode
         pretty-mode-plus
         unicode-progress-reporter
+        clippy
+        electric-case
+        paredit
+        visual-regexp
         ;; helm
         helm
         helm-git
@@ -189,6 +194,8 @@
     package-pretty-mode
     package-pretty-mode-plus
     package-unicode-progress-reporter
+    package-electric-case
+    package-visual-regexp
     ))
 
 

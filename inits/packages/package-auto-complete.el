@@ -4,7 +4,7 @@
      (global-auto-complete-mode 1)
      (setq ac-dwim 1)
      (setq ac-delay 0.1)
-     (setq ac-auto-show-menu 0.2)
+     (setq ac-auto-show-menu 0.1)
      (setq ac-use-menu-map 1)
      (setq ac-use-fuzzy 1)
 

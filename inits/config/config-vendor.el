@@ -18,14 +18,17 @@
     ("mew" "emacsmirror/mew")
     ("navi2ch" "naota/navi2ch")
     ("flatline-el" "mytoh/flatline-el")
-    ("visual-regexp" "benma/visual-regexp.el")
+    ("outshine" "tj64/outshine")
+    ("outorg" "tj64/outorg")
+    ("navi" "tj64/navi")
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")
     ))
 
 
 ;; install packages
 (my-vendor-install-packages
- (*my-vendor-packages*))
+ (*my-vendor-packages*)
+ *user-emacs-vendor-directory*)
 
 
 ;; update plugins
