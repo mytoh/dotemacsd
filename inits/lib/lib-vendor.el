@@ -46,7 +46,6 @@
 
 (defun my-vendor-install-packages (packages path)
   (mapc #'(lambda (p)
-            (message (car p))
             (if (not (file-exists-p path))
                 (make-directory path))
             (unless (file-exists-p (concat-path path (car p)))
