@@ -6,7 +6,7 @@
      (setq ac-delay 0.1)
      (setq ac-auto-show-menu 0.1)
      (setq ac-use-menu-map 1)
-     (setq ac-use-fuzzy 1)
+     ;; (setq ac-use-fuzzy 1)
 
      (set-face-attribute 'ac-selection-face nil
                          :background "#ab4223")

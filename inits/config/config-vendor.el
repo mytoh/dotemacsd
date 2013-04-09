@@ -21,6 +21,8 @@
     ("outshine" "tj64/outshine")
     ("outorg" "tj64/outorg")
     ("navi" "tj64/navi")
+    ("outline-magic" "tj64/outline-magic")
+    ("outxxtra" "tj64/outxxtra")
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")
     ))
 
@@ -92,6 +94,17 @@
 ;; flatline
 (req 'flatline
      (flatline-mode 1))
+
+;; navi
+(req 'navi-mode)
+
+;; outorg
+(req 'outorg)
+
+;; outshine
+(req 'outshine
+     (add-hook 'outline-minor-mode-hook 'outshine-hook-function))
+
 
 
 (provide 'config-vendor)
