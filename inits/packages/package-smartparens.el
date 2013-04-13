@@ -59,7 +59,14 @@
        (sp-local-pair "(" nil :bind "M-("))
 
 
-     (define-key emacs-lisp-mode-map (kbd ")") 'sp-up-sexp))
+     (define-key emacs-lisp-mode-map (kbd ")") 'sp-up-sexp)
+
+
+     ;; (set-face-attribute 'sp-pair-overlay-face nil
+     ;;                     :background "#fdf6e3"
+     ;;                     :foreground "#073642")
+
+     )
 
 
 (provide 'package-smartparens)

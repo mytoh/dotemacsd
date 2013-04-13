@@ -74,7 +74,7 @@
                                 (submatch (one-or-more (or (syntax word)
                                                            (syntax symbol)
                                                            (in " \t\n")))))
-                           1 'r7rs:library-name-face)
+                           0 'r7rs:library-name-face)
 
                           ;; character literal #\x
                           (,(rx "#" "\\" (one-or-more (or (syntax word)

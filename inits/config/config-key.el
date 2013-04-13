@@ -24,5 +24,13 @@
     (backward-kill-word 1)))
 (global-set-key (kbd "C-w") 'kill-region-or-backward-kill-word)
 
+;; kill whole line
+(defun smart-kill-whole-line (&optional arg)
+  "A simple wrapper around `kill-whole-line' that respects indentation"
+  (interactive "P")
+  (kill-whole-line arg)
+  (back-to-indentation))
+(global-set-key [remap kill-whole-line] 'smart-kill-whole-line)
+
 
 (provide 'config-key)

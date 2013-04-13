@@ -157,4 +157,7 @@
 (enable-option electric-layout-mode)
 
 
+;; save minibuffer history
+(savehist-mode 1)
+
 (provide 'config-setting)

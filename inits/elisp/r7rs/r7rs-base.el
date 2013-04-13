@@ -16,7 +16,7 @@
      (1 . letrec)
      (1 . letrec-syntax)
      (1 . if)
-     (1 . cond)
+     (0 . cond)
      (1 . cond-expand)
      (1 . syntax-rules)
      (1 . case)

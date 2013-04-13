@@ -22,14 +22,20 @@
 (when (fboundp 'terminal-init-bobcat)
   (terminal-init-bobcat))
 
+;; outlining everywhere
+(require 'allout)
+(allout-init t)
+
+
 (require 'package-eshell)
 (require 'package-eldoc)
-;; (require 'package-whitespace)
+(require 'package-whitespace)
 ;; (require 'package-erc)
 
 ;;;
-;;; melpa or marmalade
+;;; package from repositories
 ;;;
+
 ;; package.el
 (req 'package
      ;; load MELPA
@@ -88,7 +94,6 @@
         hackernews
         twittering-mode
         highlight-indentation
-        coffee-mode
         auto-highlight-symbol
         multiple-cursors
         guide-key
@@ -131,7 +136,6 @@
         tron-theme
         qsimpleq-theme
         solarized-theme
-        ujelly-theme
         birds-of-paradise-plus-theme
         soothe-theme
         subatomic-theme

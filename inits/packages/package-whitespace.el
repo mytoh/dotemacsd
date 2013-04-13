@@ -14,6 +14,16 @@
                          tab-mark
                          space-before-tab  ; タブの前にあるスペースを対象とする。
                          space-after-tab)) ; タブの後にあるスペースを対象とする。
+
+(require 'whitespace)
+
+(setq whitespace-display-mappings
+      '(
+        (newline-mark 10 [60 10]) ; newlne, <
+        (tab-mark 9 [187 9] [92 9]) ; tab, Â»
+        ))
+
+
 ;; デフォルトで視覚化を有効にする。
 (global-whitespace-mode 1)
 
