@@ -1,5 +1,5 @@
 
-(lazyload (tramp) "tramp"
-          (setq (tramp-default-method "ssh")))
+(req 'tramp
+     (setq tramp-default-method "ssh"))
 
 (provide 'package-tramp)
