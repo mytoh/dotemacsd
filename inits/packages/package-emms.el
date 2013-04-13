@@ -23,7 +23,9 @@
                           ".stm" ".stx" ".ult" ".apun" ".xm" ".mod" ".MOD"))
             "mikmod" "-q" "-p" "1" "-X")
           (add-to-list 'emms-player-list 'emms-player-mikmod))
+
      )
+
 
 
 (provide 'package-emms)
