@@ -116,6 +116,7 @@
         electric-case
         paredit
         visual-regexp
+        litable
         ;; helm
         helm
         helm-git
@@ -200,6 +201,7 @@
     package-unicode-progress-reporter
     package-electric-case
     package-visual-regexp
+    package-litable
 
     ))
 
