@@ -10,11 +10,14 @@
      (global-set-key (kbd "C-x b") 'helm-buffers-list)
      (define-key helm-map (kbd "C-M-n") 'helm-next-source)
      (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
+     (define-key helm-c-read-file-map (kbd "C-h") 'delete-backward-char)
+     (define-key helm-c-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
      (setq
       helm-ff-lynx-style-map nil
       helm-idle-delay             0.01
       helm-input-idle-delay       0.01
-      helm-candidate-number-limit nil)
+      helm-candidate-number-limit nil
+      helm-ff-auto-update-initial-value nil)
      (helm-mode 1)
      (setq recentf-max-saved-items 1000))
 
