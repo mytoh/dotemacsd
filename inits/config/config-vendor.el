@@ -28,9 +28,9 @@
 
 
 ;; install packages
-(my-vendor-install-packages
- (*my-vendor-packages*)
- *user-emacs-vendor-directory*)
+;; (my-vendor-install-packages
+;;  (*my-vendor-packages*)
+;;  *user-emacs-vendor-directory*)
 
 
 ;; update plugins
@@ -103,7 +103,22 @@
 
 ;; outshine
 (req 'outshine
-     (add-hook 'outline-minor-mode-hook 'outshine-hook-function))
+     (add-hook 'outline-minor-mode-hook 'outshine-hook-function)
+
+     (add-hook 'org-mode-hook
+               (lambda ()
+                 (req 'outline-mode-easy-bindings
+                      (org-defkey org-mode-map
+                                  (kbd "M-<left>") 'outline-hide-more)
+                      (org-defkey org-mode-map
+                                  (kbd "M-<right>") 'outline-show-more)
+                      (org-defkey org-mode-map
+                                  (kbd "M-<up>") 'outline-previous-visible-heading)
+                      (org-defkey org-mode-map
+                                  (kbd "M-<down>") 'outline-next-visible-heading)
+                      )) 'append)
+     (add-hook 'emacs-lisp-mode-hook 'outline-minor-mode)
+     (add-hook 'scheme-mode-hook 'outline-minor-mode))
 
 
 

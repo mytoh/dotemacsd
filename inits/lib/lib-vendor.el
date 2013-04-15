@@ -28,7 +28,7 @@
 (unless (boundp '*user-emacs-vendor-directory)
   (setq *user-emacs-vendor-directory* (expand-file-name (concat-path user-emacs-directory (file-name-as-directory "vendor")))))
 
-(cl-defmacro my-vendor-update-packages (path)
+(defmacro my-vendor-update-packages (path)
   `(when (file-exists-p ,path)
      (let ((paths (directory-files ,path t "[^\.]")))
        (cl-labels ((directory-is-git-p (p)
@@ -40,7 +40,7 @@
                             (message "updating vendor plugin %s .." d)
                             (shell-command "git pull")
                             (cd-absolute user-emacs-directory)
-                            (byte-recompile-directory (concat *user-emacs-vendor-director* d)))))
+                            (byte-recompile-directory d))))
                     paths)))))
 
 
