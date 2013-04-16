@@ -1,22 +1,23 @@
- ;;; -*- coding: utf-8 -*-
+;; * initialize
 
+;; ** libs
 (add-to-list 'load-path (concat user-emacs-directory "inits/lib"))
 (eval-when-compile (require 'init-lib))
 (add-subdirs-to-load-path (concat user-emacs-directory "inits"))
 
-;; packages
+;; ** packages
 (require 'init-package)
 
-;; config
+;; ** config
 (require 'init-config)
 
-;; system
+;; ** system
 (require 'init-system)
 
-;; lang
+;; ** lang
 (require 'init-lang)
 
-;; elisp
+;; ** elisp
 (require 'init-elisp)
 
 (provide 'init-load)

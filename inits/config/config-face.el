@@ -1,8 +1,7 @@
- ;;; -*- coding: utf-8 -*-
-;;; faces
+;; * faces
 (progn
 
-  ;; colour theme
+  ;; ** colour-theme
   (load-theme 'molokai t)
 
   ;; cursor shape

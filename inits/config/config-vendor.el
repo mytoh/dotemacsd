@@ -34,7 +34,7 @@
 
 
 ;; update plugins
-;; (my-vendor-update-packages *user-emacs-vendor-directory*)
+(my-vendor-update-packages *user-emacs-vendor-directory*)
 
 ;; add to load-path
 (add-subdirs-to-load-path *user-emacs-vendor-directory*)
