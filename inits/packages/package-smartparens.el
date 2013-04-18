@@ -59,8 +59,6 @@
        (sp-local-pair "(" nil :bind "M-("))
 
 
-     (define-key emacs-lisp-mode-map (kbd ")") 'sp-up-sexp)
-
 
      ;; (set-face-attribute 'sp-pair-overlay-face nil
      ;;                     :background "#fdf6e3"

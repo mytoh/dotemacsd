@@ -5,4 +5,6 @@
 (require 'r7rs)
 (require 'srfi)
 
+(require 'pretty-scheme)
+
 (provide 'init-elisp)
