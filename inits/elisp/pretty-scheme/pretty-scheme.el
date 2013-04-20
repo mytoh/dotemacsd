@@ -1,4 +1,4 @@
-(defun pretty-scheme-add-keywords (mode keywords)
+(defun pretty-scheme-add-function-keywords (mode keywords)
   "Add pretty character KEYWORDS to MODE
 
 MODE should be a symbol, the major mode command name, such as
@@ -16,11 +16,16 @@ relevant buffer(s)."
                                                ,(cdr kw))))))
                 keywords)))
 
-(pretty-scheme-add-keywords 'scheme-mode
-                            '(("not" . ?¬)
-                              ("and" . ?∧)
-                              ("or" . ?∨)
-                              ("member" . ?∋)
-                              ("loop". ?∞)))
+(pretty-scheme-add-function-keywords
+ 'scheme-mode
+ '(("not" . "¬")
+   ("and" . "∧")
+   ("or" . "∨")
+   ("member" . "∋")
+   ("loop". "∞")
+   ("*" . "✕")
+   ("+" . "＋")
+   ("/" . "÷")
+   ("write" . "✏")))
 
 (provide 'pretty-scheme)
