@@ -2,9 +2,10 @@
 (add-subdirs-to-load-path (concat user-emacs-directory "inits/elisp"))
 
 
-(require 'r7rs)
-(require 'srfi)
+(req 'r7rs)
+(req 'srfi)
 
-(require 'pretty-scheme)
+(req 'pretty-scheme
+     (add-hook 'scheme-mode-hook 'turn-on-pretty-scheme-mode))
 
 (provide 'init-elisp)

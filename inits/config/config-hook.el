@@ -37,4 +37,11 @@
                 line-end)
           "kuva")))
 
+;; CamelCase awere editing
+;; enable just in ruby-mode
+(add-hook 'ruby-mode-hook 'subword-mode)
+;; enable for all programming modes
+(add-hook 'prog-mode-hook 'subword-mode)
+
+
 (provide 'config-hook)

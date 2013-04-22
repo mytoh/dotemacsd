@@ -1,6 +1,6 @@
 
 (req 'pretty-mode
-     (global-pretty-mode 1)
+     ;; (global-pretty-mode 1)
      ;; (pretty-add-keywords 'scheme-mode
      ;;                      '(("not" . ?¬)))
      )

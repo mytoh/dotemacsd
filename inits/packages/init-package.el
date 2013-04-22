@@ -64,6 +64,7 @@
         projectile
         project-persist
         magit
+        magit-commit-training-wheels
         rainbow-mode
         scheme-complete
         expand-region
@@ -87,6 +88,7 @@
         emms
         color-moccur
         git-gutter
+        git-gutter-fringe
         nyan-mode
         minimap
         ag
@@ -102,8 +104,8 @@
         tumblesocks
         undo-tree
         direx
-        org-bullets
         carton
+        org-bullets
         pallet
         page-break-lines
         flycheck
@@ -117,6 +119,7 @@
         paredit
         visual-regexp
         litable
+        stripe-buffer
         ;; helm
         helm
         helm-git
@@ -181,6 +184,7 @@
     package-popwin
     package-w3m
     package-git-gutter
+    package-git-gutter-fringe
     package-ghc
     package-ag
     package-yasnippet
@@ -202,7 +206,8 @@
     package-electric-case
     package-visual-regexp
     package-litable
-
+    package-stripe-buffer
+    package-magit-commit-training-wheels
     ))
 
 

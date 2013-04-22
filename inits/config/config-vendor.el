@@ -23,6 +23,7 @@
     ("navi" "tj64/navi")
     ("outline-magic" "tj64/outline-magic")
     ("outxxtra" "tj64/outxxtra")
+    ("mentor" "skangas/mentor")
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")
     ))
 
@@ -34,7 +35,7 @@
 
 
 ;; update plugins
-(my-vendor-update-packages *user-emacs-vendor-directory*)
+;; (my-vendor-update-packages *user-emacs-vendor-directory*)
 
 ;; add to load-path
 (add-subdirs-to-load-path *user-emacs-vendor-directory*)
@@ -120,6 +121,9 @@
      (add-hook 'emacs-lisp-mode-hook 'outline-minor-mode)
      (add-hook 'scheme-mode-hook 'outline-minor-mode))
 
+;; mentor
+(req 'mentor
+     (setq mentor-rtorrent-url "scgi://localhost:5000"))
 
 
 (provide 'config-vendor)

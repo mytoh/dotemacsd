@@ -1,3 +1,5 @@
+
+
 (defun pretty-scheme-add-function-keywords (mode keywords)
   "Add pretty character KEYWORDS to MODE
 
@@ -7,25 +9,30 @@ buffer. KEYWORDS should be a list where each element has the
 form (REGEXP . CHAR). REGEXP will be replaced with CHAR in the
 relevant buffer(s)."
   (font-lock-add-keywords
-   mode (mapcar (lambda (kw) `(,(concat "(\\("
+   mode
+   (mapcar (lambda (kw) `(,(concat "(\\("
                                    (car kw)
                                    "\\)[) \n]")
                           (0 (prog1 nil
                                (compose-region (match-beginning 1)
                                                (match-end 1)
                                                ,(cdr kw))))))
-                keywords)))
+           keywords)))
 
-(pretty-scheme-add-function-keywords
- 'scheme-mode
- '(("not" . "¬")
-   ("and" . "∧")
-   ("or" . "∨")
-   ("member" . "∋")
-   ("loop". "∞")
-   ("*" . "✕")
-   ("+" . "＋")
-   ("/" . "÷")
-   ("write" . "✏")))
+(defun pretty-scheme-function-keywords ()
+  '(("not" . "¬")
+    ("and" . "∧")
+    ("or" . "∨")
+    ("member" . "∋")
+    ("loop". "∞")
+    ("*" . "✕")
+    ("+" . "＋")
+    ("/" . "÷")
+    ("write" . "✏")))
+
+(defun turn-on-pretty-scheme-mode ()
+  (pretty-scheme-add-function-keywords
+   'scheme-mode
+   (pretty-scheme-function-keywords)))
 
 (provide 'pretty-scheme)
