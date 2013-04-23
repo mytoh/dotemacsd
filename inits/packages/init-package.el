@@ -143,6 +143,8 @@
         birds-of-paradise-plus-theme
         soothe-theme
         subatomic-theme
+        grandshell-theme
+        occidental-theme
         ))
 
 ;; (package-refresh-contents)

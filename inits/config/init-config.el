@@ -1,12 +1,11 @@
 
 (defvar init-configs
-  '(
-    config-setting
+  '( config-setting
     config-key
     config-hook
-    config-face
     config-vendor
     config-path
+    config-face
     ))
 
 (mapc #'require init-configs)

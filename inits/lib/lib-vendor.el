@@ -37,10 +37,11 @@
                         (when (directory-is-git-p d)
                           (progn
                             (cd-absolute d)
-                            (message "updating vendor plugin %s .." d)
+                            (message "updating vendor plugin %s.." d)
                             (shell-command "git pull")
                             (cd-absolute user-emacs-directory)
-                            (byte-recompile-directory d))))
+                            (byte-recompile-directory d)
+                            (message "updating vendor plugin %s..done" d))))
                     paths)))))
 
 

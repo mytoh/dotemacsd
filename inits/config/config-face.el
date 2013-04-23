@@ -2,7 +2,7 @@
 (progn
 
   ;; ** colour-theme
-  (load-theme 'molokai t)
+  (load-theme 'monokai t)
 
   ;; cursor shape
   (add-to-list 'default-frame-alist '(cursor-type . hbar))

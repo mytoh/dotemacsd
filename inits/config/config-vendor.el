@@ -1,6 +1,5 @@
  ;;; -*- coding: utf-8 -*-
 
-
 ;; plugin directory
 (setq *user-emacs-vendor-directory* (expand-file-name (concat user-emacs-directory (file-name-as-directory "vendor"))))
 
@@ -24,6 +23,8 @@
     ("outline-magic" "tj64/outline-magic")
     ("outxxtra" "tj64/outxxtra")
     ("mentor" "skangas/mentor")
+    ("hyperplane-theme" "sabof/hyperplane-theme")
+    ("zone-matrix" "ober/zone-matrix")
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")
     ))
 
@@ -112,12 +113,12 @@
                       (org-defkey org-mode-map
                                   (kbd "M-<left>") 'outline-hide-more)
                       (org-defkey org-mode-map
-                                  (kbd "M-<right>") 'outline-show-more)
+                                  p (kbd "M-<right>") 'outline-show-more)
                       (org-defkey org-mode-map
                                   (kbd "M-<up>") 'outline-previous-visible-heading)
                       (org-defkey org-mode-map
-                                  (kbd "M-<down>") 'outline-next-visible-heading)
-                      )) 'append)
+                                  (kbd "M-<down>") 'outline-next-visible-heading)))
+               'append)
      (add-hook 'emacs-lisp-mode-hook 'outline-minor-mode)
      (add-hook 'scheme-mode-hook 'outline-minor-mode))
 
@@ -125,5 +126,13 @@
 (req 'mentor
      (setq mentor-rtorrent-url "scgi://localhost:5000"))
 
+;; hyperplane theme
+(add-to-list 'custom-theme-load-path
+             (expand-file-name (concat-path user-emacs-directory
+                                            "vendor"
+                                            "hyperplane-theme")))
+
+;; zone matrix
+(req 'zone-settings)
 
 (provide 'config-vendor)

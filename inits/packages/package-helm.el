@@ -16,8 +16,9 @@
       helm-ff-lynx-style-map nil
       helm-idle-delay             0.01
       helm-input-idle-delay       0.01
-      helm-candidate-number-limit nil
-      helm-ff-auto-update-initial-value nil)
+      helm-candidate-number-limit nil)
+     ;; disable auto completion
+     ;; (setq helm-ff-auto-update-initial-value nil)
      (helm-mode 1)
      (setq recentf-max-saved-items 1000))
 
