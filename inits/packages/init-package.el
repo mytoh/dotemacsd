@@ -120,6 +120,7 @@
         visual-regexp
         litable
         stripe-buffer
+        ace-jump-mode
         ;; helm
         helm
         helm-git
@@ -210,6 +211,7 @@
     package-litable
     package-stripe-buffer
     package-magit-commit-training-wheels
+    package-ace-jump-mode
     ))
 
 

@@ -13,7 +13,7 @@
 (define-key emacs-lisp-mode-map (kbd "C-m") 'newline-and-indent)
 
 ;; help
-(global-set-key (kbd "C-?") 'help-command)
+(global-set-key (kbd "C-x C-h") 'help-command)
 
 ;; smart kill word
 ;; http://d.hatena.ne.jp/kiwanami/20091222/1261504543
