@@ -121,6 +121,7 @@
         litable
         stripe-buffer
         ace-jump-mode
+        auto-complete-clang-async
         ;; helm
         helm
         helm-git

@@ -25,6 +25,7 @@
     ("mentor" "skangas/mentor")
     ("hyperplane-theme" "sabof/hyperplane-theme")
     ("zone-matrix" "ober/zone-matrix")
+    ("emacs-highlight-unique-symbol" "hitode909/emacs-highlight-unique-symbol")
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")
     ))
 
@@ -36,7 +37,7 @@
 
 
 ;; update plugins
-(my-vendor-update-packages *user-emacs-vendor-directory*)
+;; (my-vendor-update-packages *user-emacs-vendor-directory*)
 
 ;; add to load-path
 (add-subdirs-to-load-path *user-emacs-vendor-directory*)
@@ -131,6 +132,10 @@
              (expand-file-name (concat-path user-emacs-directory
                                             "vendor"
                                             "hyperplane-theme")))
+
+;; highlight unique symbol
+(req 'highlight-unique-symbol
+     (highlight-unique-symbol t))
 
 ;; zone matrix
 ;; (req 'zone-settings)
