@@ -167,6 +167,7 @@
     package-google-translate
     package-multiple-cursors
     package-guide-key
+    package-dired
     package-dired+
     package-image-dired+
     ;; package-dired-single
