@@ -149,11 +149,15 @@
         occidental-theme
         ))
 
-;; (package-refresh-contents)
-(dolist (p *my-package-list*)
-  (unless (package-installed-p p)
-    (package-install p)
-    (message "installing %s"  p)))
+(defun my-package-update ()
+  (package-refresh-contents)
+  (dolist (p *my-package-list*)
+    (unless (package-installed-p p)
+      (message "install %s" p)
+      (package-install p)
+      (message "installing %s"  p))))
+
+(my-package-update)
 
 
 
