@@ -28,6 +28,10 @@
 (unless (boundp '*user-emacs-vendor-directory)
   (setq *user-emacs-vendor-directory* (expand-file-name (concat-path user-emacs-directory (file-name-as-directory "vendor")))))
 
+(defun my-vendor-initialize ()
+  (unless (file-exists-p *user-emacs-vendor-directory*)
+    (make-directory *user-emacs-vendor-directory*)))
+
 (defmacro my-vendor-update-packages (path)
   `(when (file-exists-p ,path)
      (let ((paths (directory-files ,path t "[^\.]")))
