@@ -1,5 +1,9 @@
 
 (req 'dired
+
+     ;; dired-find-alternate-file の有効化
+     (put 'dired-find-alternate-file 'disabled nil)
+
      ;; ファイルなら別バッファで、ディレクトリなら同じバッファで開く
      (defun dired-open-in-accordance-with-situation ()
        (interactive)
@@ -12,8 +16,6 @@
               (dired-find-file))))
 
 
-     ;; dired-find-alternate-file の有効化
-     (put 'dired-find-alternate-file 'disabled nil)
      ;; RET 標準の dired-find-file では dired バッファが複数作られるので
      ;; dired-find-alternate-file を代わりに使う
      (define-key dired-mode-map (kbd "C-m") 'dired-open-in-accordance-with-situation)

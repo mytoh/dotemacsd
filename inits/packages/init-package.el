@@ -39,11 +39,11 @@
 ;; package.el
 (req 'package
      ;; load MELPA
-     (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                              ("melpa" . "http://melpa.milkbox.net/packages/")
-                              ("ELPA" . "http://tromey.com/elpa/")
-                              ("marmalade" . "http://marmalade-repo.org/packages/")
-                              ))
+     (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+     (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
+     (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+     (add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa/") t)
+     (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
      (package-initialize))
 
 
@@ -105,12 +105,13 @@
         undo-tree
         direx
         carton
-        org-bullets
         pallet
         page-break-lines
         flycheck
         org
-        org-magit
+        ;;        org-magit
+        org-plus-contrib
+        org-bullets
         pretty-mode
         pretty-mode-plus
         unicode-progress-reporter
@@ -150,7 +151,8 @@
         ))
 
 (defun my-package-update ()
-  (package-refresh-contents)
+  (unless package-archive-contents
+    (package-refresh-contents))
   (dolist (p *my-package-list*)
     (unless (package-installed-p p)
       (message "install %s" p)
@@ -200,13 +202,14 @@
     package-flymake
     package-twittering-mode
     package-highlight-indentation
-    package-org
     package-coffee-mode
     package-auto-highlight-symbol
     package-undo-tree
     package-direx
+    package-org
     package-org-bullets
     package-magit
+    ;; package-magit-commit-training-wheels
     package-page-break-lines
     package-flycheck
     package-pretty-mode
@@ -216,7 +219,6 @@
     package-visual-regexp
     package-litable
     package-stripe-buffer
-    package-magit-commit-training-wheels
     package-ace-jump-mode
     ))
 
