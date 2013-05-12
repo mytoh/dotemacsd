@@ -33,9 +33,9 @@
 (my-vendor-initialize)
 
 ;; install packages
-(my-vendor-install-packages
- (*my-vendor-packages*)
- *user-emacs-vendor-directory*)
+;; (my-vendor-install-packages
+;;  (*my-vendor-packages*)
+;;  *user-emacs-vendor-directory*)
 
 
 ;; update plugins

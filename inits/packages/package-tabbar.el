@@ -14,18 +14,22 @@
                       (cons "" nil))))
      ;; face
      (set-face-attribute 'tabbar-default nil
-                         :background "#14141f")
+                         :background (face-background 'default)
+                         )
+
      (set-face-attribute 'tabbar-selected nil
-                         :foreground "#ebeb7c"
-                         :background "#c36d68"
+                         :foreground "#c36d68"
+                         :background (face-background 'default)
                          :box nil)
      (set-face-attribute 'tabbar-unselected nil
                          :foreground "#b0efa0"
-                         :background "gray30"
+                         :background (face-background 'default)
                          :box '(:line-width 1 :color "gray14" :style nil))
      (set-face-attribute 'tabbar-button nil
+                         :background (face-background 'default)
                          :box '(:line-width 1 :color "gray14" :style nil))
      (set-face-attribute 'tabbar-separator nil
+                         :background (face-background 'default)
                          :height 60)
      ;; firefox keybind
      (global-set-key [(control tab)] 'tabbar-forward-tab)
