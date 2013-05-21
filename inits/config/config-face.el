@@ -2,7 +2,7 @@
 (progn
 
   ;; ** colour-theme
-  (load-theme 'molokai t)
+  (load-theme 'solarized-dark t)
 
   ;; cursor shape
   (add-to-list 'default-frame-alist '(cursor-type . hbar))
@@ -29,7 +29,7 @@
           ((font-existsp "Ricty")
            (set-face-attribute 'default nil :height 90 :font "Ricty"))
           ((font-existsp "Droid Sans")
-           (set-face-attribute 'default nil :height 100 :font "Droid Sans"))
+           (set-face-attribute 'default nil :height 90 :font "Droid Sans"))
           ((font-existsp "Source Code Pro")
            (set-face-attribute 'default nil :height 80 :font "Source Code Pro"))
           ((font-existsp "DejaVu Sans Mono")
