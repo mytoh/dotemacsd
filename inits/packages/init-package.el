@@ -108,10 +108,13 @@
         pallet
         page-break-lines
         flycheck
+
+        ;; org
         org
         ;;        org-magit
         org-plus-contrib
         org-bullets
+
         pretty-mode
         pretty-mode-plus
         unicode-progress-reporter
@@ -123,6 +126,7 @@
         stripe-buffer
         ace-jump-mode
         auto-complete-clang-async
+        lua-mode
         ;; helm
         helm
         helm-git
@@ -209,6 +213,7 @@
     package-org
     package-org-bullets
     package-magit
+    package-lua-mode
     ;; package-magit-commit-training-wheels
     package-page-break-lines
     package-flycheck
