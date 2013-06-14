@@ -12,7 +12,7 @@ relevant buffer(s)."
    mode
    (mapcar (lambda (kw) `(,(concat "(\\("
                                    (car kw)
-                                   "\\)[) \n]")
+                                   "\\)[) \t\n]")
                           (0 (prog1 nil
                                (compose-region (match-beginning 1)
                                                (match-end 1)
