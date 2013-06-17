@@ -127,6 +127,7 @@
         ace-jump-mode
         auto-complete-clang-async
         lua-mode
+        mentor
         ;; helm
         helm
         helm-git
@@ -198,8 +199,8 @@
     package-ack-and-a-half
     package-popwin
     package-w3m
-    package-git-gutter
-    package-git-gutter-fringe
+    ;; package-git-gutter
+    ;; package-git-gutter-fringe
     package-ghc
     package-ag
     package-yasnippet
@@ -207,7 +208,7 @@
     package-twittering-mode
     package-highlight-indentation
     package-coffee-mode
-    package-auto-highlight-symbol
+    ;; package-auto-highlight-symbol
     package-undo-tree
     package-direx
     package-org
@@ -225,6 +226,7 @@
     package-litable
     package-stripe-buffer
     package-ace-jump-mode
+    package-mentor
     ))
 
 

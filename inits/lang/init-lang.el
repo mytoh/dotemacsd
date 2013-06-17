@@ -9,6 +9,7 @@
     lang-common-lisp
     lang-csh
     kernel-mode
+    lang-shell
     ))
 
 (mapc #'require init-langs)

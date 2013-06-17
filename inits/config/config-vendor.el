@@ -22,7 +22,6 @@
     ("navi" "tj64/navi")
     ("outline-magic" "tj64/outline-magic")
     ("outxxtra" "tj64/outxxtra")
-    ("mentor" "skangas/mentor")
     ("hyperplane-theme" "sabof/hyperplane-theme")
     ("zone-matrix" "ober/zone-matrix")
     ("emacs-highlight-unique-symbol" "hitode909/emacs-highlight-unique-symbol")
@@ -125,9 +124,6 @@
      (add-hook 'emacs-lisp-mode-hook 'outline-minor-mode)
      (add-hook 'scheme-mode-hook 'outline-minor-mode))
 
-;; mentor
-(req 'mentor
-     (setq mentor-rtorrent-url "scgi://localhost:5000"))
 
 ;; hyperplane theme
 (add-to-list 'custom-theme-load-path
@@ -136,8 +132,8 @@
                                             "hyperplane-theme")))
 
 ;; highlight unique symbol
-(req 'highlight-unique-symbol
-     (highlight-unique-symbol t))
+;;(req 'highlight-unique-symbol
+;;     (highlight-unique-symbol t))
 
 ;; zone matrix
 ;; (req 'zone-settings)
