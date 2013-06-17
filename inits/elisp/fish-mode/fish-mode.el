@@ -66,10 +66,11 @@
                                "fish_update_completions"
                                "vared"
                                "fishd"
+                               "."
                                ))
-(setq fish:regexp-functions (concat "[ \t\n]?"
-                                    (regexp-opt fish:keyword-functions 'words)
-                                    "[ \t\n]"))
+(setq fish:regexp-functions (concat "[ \t]?"
+                                    (regexp-opt fish:keyword-functions t)
+                                    "[ \t]+"))
 
 (setq fish:keyword-expressions '("if"
                                  "else"
@@ -82,9 +83,9 @@
                                  "in"
                                  "end"))
 (setq fish:regexp-expressions (concat
-                               "[ \t\n]?"
-                               (regexp-opt fish:keyword-expressions 'words)
-                               "[ \t\n]"))
+                               "[ \t]?"
+                               (regexp-opt fish:keyword-expressions t)
+                               "[ \t\n]+"))
 
 (setq fish:regexp-function-name
       (rx "function" (one-or-more (in " \t\n"))
@@ -105,10 +106,12 @@
 
 
 (setq fish:regexp-variable
-      (rx (: "$" (submatch (one-or-more
-                            (and (not (any "/"))
-                                 (or word
-                                     (syntax symbol))))))))
+      (rx "$" (submatch
+               (one-or-more
+                (or alpha
+                    alnum
+                    (in "_"))))))
+
 
 (setq fish:regexp-variable-definition
       (rx (: "set" (one-or-more (in " \t\n"))
@@ -118,11 +121,13 @@
              (submatch (one-or-more (or word
                                         (syntax symbol)))))))
 
+
 (setq fish:regexp-comment
       (rx (: (zero-or-more space)
              "#"
-             (zero-or-more space)
-             (zero-or-more (not (any "#"))))))
+             (zero-or-more (not (any "\n")))
+             (in "\n"))))
+
 
 ;; font-lock
 (setq fish:font-lock-keywords
@@ -131,9 +136,8 @@
         (,fish:regexp-variable (1 font-lock-variable-name-face))
         (,fish:regexp-variable-definition (1 font-lock-variable-name-face))
         (,fish:regexp-comment . font-lock-comment-face)
-        (,fish:regexp-expressions . font-lock-keyword-face)
-        (,fish:regexp-functions . font-lock-builtin-face)))
-
+        (,fish:regexp-expressions (1 font-lock-keyword-face))
+        (,fish:regexp-functions (1 font-lock-builtin-face))))
 
 (define-derived-mode fish-mode nil "fish"
   ;; font lock
