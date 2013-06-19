@@ -16,7 +16,6 @@
     ("eldoc-extension" "emacsmirror/eldoc-extension")
     ("mew" "emacsmirror/mew")
     ("navi2ch" "naota/navi2ch")
-    ("flatline-el" "mytoh/flatline-el")
     ("outshine" "tj64/outshine")
     ("outorg" "tj64/outorg")
     ("navi" "tj64/navi")
@@ -25,6 +24,8 @@
     ("hyperplane-theme" "sabof/hyperplane-theme")
     ("zone-matrix" "ober/zone-matrix")
     ("emacs-highlight-unique-symbol" "hitode909/emacs-highlight-unique-symbol")
+    ("flatline-el" "mytoh/flatline-el")
+    ("fish-mode" "mytoh/fish-mode")
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")
     ))
 
@@ -38,7 +39,7 @@
 
 
 ;; update plugins
-;; (my-vendor-update-packages *user-emacs-vendor-directory*)
+(my-vendor-update-packages *user-emacs-vendor-directory*)
 
 ;; add to load-path
 (add-subdirs-to-load-path *user-emacs-vendor-directory*)
@@ -130,6 +131,9 @@
              (expand-file-name (concat-path user-emacs-directory
                                             "vendor"
                                             "hyperplane-theme")))
+
+;; fish-mode
+(req 'fish-mode)
 
 ;; highlight unique symbol
 ;;(req 'highlight-unique-symbol

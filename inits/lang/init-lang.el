@@ -10,6 +10,7 @@
     lang-csh
     kernel-mode
     lang-shell
+    lang-cpp
     ))
 
 (mapc #'require init-langs)

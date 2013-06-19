@@ -159,5 +159,8 @@
 ;; save minibuffer history
 (savehist-mode 1)
 
+;; add newline to end of file
+(enable-option require-final-newline)
+
 
 (provide 'config-setting)
