@@ -11,6 +11,7 @@
     kernel-mode
     lang-shell
     lang-cpp
+    lang-c
     ))
 
 (mapc #'require init-langs)
