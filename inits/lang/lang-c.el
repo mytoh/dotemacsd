@@ -10,7 +10,7 @@
           #'(lambda ()
               (define-key c-mode-base-map (kbd "RET") 'newline-and-indent)))
 
-(defun my-indent-buffer ()
+(defun my-c-indent-buffer ()
   "milkypostman/dotemacs/defun.el"
   (interactive)
   (delete-trailing-whitespace)
@@ -18,7 +18,7 @@
 
 (add-hook 'c-mode-common-hook
           #'(lambda ()
-              (add-hook 'before-save-hook 'my-indent-buffer nil t)))
+              (add-hook 'before-save-hook 'my-c-indent-buffer nil t)))
 
 
 (provide 'lang-c)

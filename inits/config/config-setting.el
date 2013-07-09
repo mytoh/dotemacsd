@@ -160,7 +160,7 @@
 (savehist-mode 1)
 
 ;; add newline to end of file
-(enable-option require-final-newline)
+;; (enable-option require-final-newline)
 
 
 (provide 'config-setting)
