@@ -34,10 +34,10 @@
 ;; use space instead of tab
 (setq-default tab-width 4
               indent-tabs-mode nil)
-(setq indent-line-function 'indent-relative-maybe)
+(set-option indent-line-function 'indent-relative-maybe)
 
 ;; mouse
-(setq mouse-avoidance-mode 'banish)
+(set-option mouse-avoidance-mode 'banish)
 
 ;; show info on mode-line
 (enable-option display-time-24hr-format)
@@ -59,10 +59,10 @@
 ;;(enable-option global-hl-line-mode)
 
 ;; display keys
-(setq echo-keystrokes 0.1)
+(set-option echo-keystrokes 0.1)
 
 ;; disable dialog box
-(setq use-dialog-box nil)
+(set-option use-dialog-box nil)
 
 ;; smooth scrolling
 ;; (setq redisplay-dont-pause 1
@@ -81,7 +81,7 @@
 
 ;; enable rectangular mode
 (cua-mode 1)
-(setq cua-enable-cua-keys -1)
+(disable-option cua-enable-cua-keys)
 
 ;;; ignore case
 (enable-option completion-ignore-case)
@@ -99,14 +99,14 @@
 
 ;; save buffer history
 (savehist-mode 1)
-(setq history-length 100)
+(set-option history-length 100)
 
 ;; disable bell
-(setq ring-bell-function 'ignore)
+(set-option ring-bell-function 'ignore)
 (enable-option visible-bell)
 
 ;; no warnings when compile
-(setq byte-compile-warnings '(not cl-functions))
+(set-option byte-compile-warnings '(not cl-functions))
 
 ;; dont split verticaly
 (disable-option split-height-threshold)
@@ -127,21 +127,23 @@
 ;;       `((".*" . ,temporary-file-directory)))
 
 ;; save more recent files
-(setq recentf-max-saved-items 1000)
+(set-option recentf-max-saved-items 1000)
 ;; recentf exclude
-(setq recentf-exclude `(,(rx  ".el.gz" string-end) "archive-contents$"))
+(set-option recentf-exclude `(,(rx  ".el.gz" string-end) "archive-contents$"))
+;; don't record symbolic link file name
+(enable-option find-file-visit-truename)
 
 ;; undo
-(setq undo-limit 100000)
-(setq undo-string-limit 1300000)
+(set-option undo-limit 100000)
+(set-option undo-string-limit 1300000)
 
 ;; reload buffer
 (global-auto-revert-mode 1)
-(setq auto-revert-interval 5)
+(set-option auto-revert-interval 5)
 (enable-option auto-revert-check-vc-info)
 
 ;; confirmation when visit new file or buffer
-(setq confirm-nonexistent-file-or-buffer nil)
+(set-option confirm-nonexistent-file-or-buffer nil)
 
 ;; open archived files
 (auto-compression-mode 1)

@@ -24,19 +24,6 @@
                         :timeout -1))
 (add-hook 'after-revert-hook 'my-after-revert-hook)
 
-
-;; dired
-(add-hook 'dired-load-hook
-          #'(lambda () (load "dired-x")))
-(setq dired-guess-shell-alist-user
-      `(( ,(rx  "."
-                (or "jpg"
-                    "png"
-                    "bmp"
-                    "gif")
-                line-end)
-          "kuva")))
-
 ;; CamelCase awere editing
 ;; enable just in ruby-mode
 (add-hook 'ruby-mode-hook 'subword-mode)

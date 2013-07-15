@@ -51,6 +51,10 @@
      (set-face-foreground ,face ,fore)
      (set-face-background ,face ,back)))
 
+(cl-defmacro set-option (option value)
+  `(progn
+     (message ">> set %s" ,(symbol-name option))
+     (setq ,option ,value)))
 
 (cl-defmacro enable-option (option)
   `(progn

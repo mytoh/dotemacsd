@@ -13,15 +13,14 @@
      (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
      (define-key helm-c-read-file-map (kbd "C-h") 'delete-backward-char)
      (define-key helm-c-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
-     (setq
-      helm-ff-lynx-style-map nil
-      helm-idle-delay             0.01
-      helm-input-idle-delay       0.01
-      helm-candidate-number-limit nil)
+     (set-option helm-candidate-number-limit nil)
+     (set-option helm-idle-delay             0.01)
+     (set-option helm-input-idle-delay       0.01)
+     (set-option helm-ff-lynx-style-map nil)
      ;; disable auto completion
      ;; (setq helm-ff-auto-update-initial-value nil)
      (helm-mode 1)
-     (setq recentf-max-saved-items 1000))
+     (set-option recentf-max-saved-items 1000))
 
 ;; helm-themes
 (req 'helm-themes)

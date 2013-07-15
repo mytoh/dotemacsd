@@ -20,14 +20,6 @@
      (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
 
 
-     ;; c mode
-     ;; (req 'auto-complete-clang
-     ;;      (defun my-ac-c-mode-setup ()
-     ;;        (setq ac-sources (append '(ac-source-clang as-source-yasnippet) as-sources)))
-     ;;      (add-hook 'c-mode-hook
-     ;;                #'(lambda ()
-     ;;                    (my-ac-c-mode-setup))))
-
      )
 
 
