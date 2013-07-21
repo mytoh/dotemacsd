@@ -50,7 +50,7 @@
 ;; install packages
 (setq *my-package-list*
       '(rainbow-delimiters
-        auto-complete
+        ;; auto-complete
         ac-ja
         ac-slime
         bookmark+
@@ -108,6 +108,8 @@
         pallet
         page-break-lines
         flycheck
+        fiplr
+        fuzzy
 
         ;; org
         org
@@ -184,7 +186,7 @@
     ;; package-dired-single
     package-expand-region
     package-rainbow-delimiters
-    package-auto-complete
+    ;; package-auto-complete
     package-tabbar
     package-smartparens
     package-helm
@@ -227,6 +229,7 @@
     package-stripe-buffer
     package-ace-jump-mode
     package-mentor
+    package-fiplr
     ))
 
 

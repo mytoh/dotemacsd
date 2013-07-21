@@ -26,6 +26,7 @@
     ("emacs-highlight-unique-symbol" "hitode909/emacs-highlight-unique-symbol")
     ("flatline-el" "mytoh/flatline-el")
     ("fish-mode" "mytoh/fish-mode")
+    ("auto-complete" "auto-complete/auto-complete")
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")
     ))
 
@@ -141,5 +142,31 @@
 
 ;; zone matrix
 ;; (req 'zone-settings)
+
+(req 'auto-complete-config
+     (ac-config-default)
+     (global-auto-complete-mode 1)
+
+     (enable-option ac-dwim)
+     (setq ac-auto-start 2)
+     (setq ac-delay 0.05)
+     (setq ac-quick-help-delay 0.5)
+     (setq ac-auto-show-menu 0.05)
+     (setq ac-ignore-case nil)
+     (setq ac-use-menu-map 1)
+     (setq ac-use-comphist t)
+     (enable-option ac-use-fuzzy)
+
+     (set-face-attribute 'ac-selection-face nil
+                         :background "#ab4223")
+     (set-face-attribute 'ac-candidate-face nil
+                         :foreground "#dfdfe1"
+                         :background "#393939")
+
+     (req 'ac-ja)
+     (add-to-list 'ac-modes 'eshell-mode)
+     ;; elisp mode
+     (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
+     )
 
 (provide 'config-vendor)

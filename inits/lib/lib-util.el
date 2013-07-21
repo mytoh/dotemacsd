@@ -53,7 +53,8 @@
 
 (cl-defmacro set-option (option value)
   `(progn
-     (message ">> set %s" ,(symbol-name option))
+     (my-log "set " ,(propertize (symbol-name option)
+                                 'face 'font-lock-variable-name-face))
      (setq ,option ,value)))
 
 (cl-defmacro enable-option (option)

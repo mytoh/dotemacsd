@@ -32,6 +32,17 @@
      (set-option find-ls-option '("-print0 | xargs -0 ls -ld" . "-ld")))
 
 
+;; add [dired] to dired buffer
+;; [[http://qiita.com/kbkbkbkb1/items/13585a5711d62e9800ef]]
+(defun my-dired-append-buffer-name-hint ()
+  "Append a auxiliary string to a name of dired buffer."
+  (when (eq major-mode 'dired-mode)
+    (let* ((dir (expand-file-name list-buffers-directory))
+           (drive (if (and (eq 'system-type 'window-nt) ;; add drive letter on Windows
+                           (string-match "^\\([a-zA-Z]:\\)" dir))
+                      (match-string 1 dir) "")))
+      (rename-buffer (concat (buffer-name) " [" drive "dired]") t))))
+(add-hook 'dired-mode-hook 'my-dired-append-buffer-name-hint)
 
 ;; dired
 (add-hook 'dired-load-hook
