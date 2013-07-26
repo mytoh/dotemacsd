@@ -56,7 +56,7 @@
 (transient-mark-mode 1)
 
 ;; highlight current line
-;;(enable-option global-hl-line-mode)
+(enable-option global-hl-line-mode)
 
 ;; display keys
 (set-option echo-keystrokes 0.1)

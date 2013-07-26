@@ -18,6 +18,11 @@
              (t
               (dired-find-file))))
 
+     (setq ls-lisp-use-insert-directory-program nil)
+     (require 'ls-lisp)
+     (setq ls-lisp-dirs-first t)
+
+
 
      ;; RET 標準の dired-find-file では dired バッファが複数作られるので
      ;; dired-find-alternate-file を代わりに使う
@@ -28,8 +33,8 @@
      (define-key dired-mode-map (kbd "<left>") 'dired-up-directory)
      (define-key dired-mode-map (kbd "<right>") 'dired-open-in-accordance-with-situation))
 
-(req 'find-dired
-     (set-option find-ls-option '("-print0 | xargs -0 ls -ld" . "-ld")))
+;; (req 'find-dired
+;;      (set-option find-ls-option '("-print0 | xargs -0 ls -ld" . "-ld")))
 
 
 ;; add [dired] to dired buffer
@@ -42,7 +47,7 @@
                            (string-match "^\\([a-zA-Z]:\\)" dir))
                       (match-string 1 dir) "")))
       (rename-buffer (concat (buffer-name) " [" drive "dired]") t))))
-(add-hook 'dired-mode-hook 'my-dired-append-buffer-name-hint)
+;; (add-hook 'dired-mode-hook 'my-dired-append-buffer-name-hint)
 
 ;; dired
 (add-hook 'dired-load-hook

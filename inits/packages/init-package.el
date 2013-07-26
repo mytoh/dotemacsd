@@ -110,6 +110,8 @@
         flycheck
         fiplr
         fuzzy
+        melpa-upstream-visit
+        melpa
 
         ;; org
         org
@@ -181,7 +183,7 @@
     package-multiple-cursors
     package-guide-key
     package-dired
-    package-dired+
+    ;; package-dired+
     package-image-dired+
     ;; package-dired-single
     package-expand-region
@@ -230,6 +232,7 @@
     package-ace-jump-mode
     package-mentor
     package-fiplr
+    package-melpa-upstream-visit
     ))
 
 
