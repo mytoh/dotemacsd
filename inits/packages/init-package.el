@@ -112,6 +112,7 @@
         fuzzy
         melpa-upstream-visit
         melpa
+        quickrun
 
         ;; org
         org
@@ -132,6 +133,7 @@
         auto-complete-clang-async
         lua-mode
         mentor
+        color-theme-approximate
         ;; helm
         helm
         helm-git
@@ -233,6 +235,8 @@
     package-mentor
     package-fiplr
     package-melpa-upstream-visit
+    package-color-theme-approximate
+    package-quickrun
     ))
 
 

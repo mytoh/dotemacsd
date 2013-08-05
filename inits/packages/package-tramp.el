@@ -1,5 +1,8 @@
 
 (req 'tramp
-     (setq tramp-default-method "ssh"))
+     (setq tramp-default-method "ssh")
 
-(provide 'package-tramp)
+     ;; C-x C-f /sudo:root@host[#port]:/path/to/file
+     (setq tramp-default-proxies-alist
+           '((".*" "\\`root\\'" "/ssh:%h:")))
+     (provide 'package-tramp)
