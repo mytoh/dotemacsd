@@ -25,11 +25,10 @@
 (prefer-coding-system 'utf-8-unix)
 
 ;; start server
-(if window-system
-    (req 'server
-         (enable-option server-use-tcp)
-         (unless (server-running-p)
-           (server-start))))
+(req 'server
+     (enable-option server-use-tcp)
+     (unless (server-running-p)
+       (server-start)))
 
 ;; use space instead of tab
 (setq-default tab-width 4

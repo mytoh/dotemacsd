@@ -27,6 +27,7 @@
     ("flatline-el" "mytoh/flatline-el")
     ("fish-mode" "mytoh/fish-mode")
     ("auto-complete" "auto-complete/auto-complete")
+    ("cask" "rejeep/cask.el")
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")
     ))
 
@@ -34,9 +35,9 @@
 (my-vendor-initialize)
 
 ;; install packages
-;; (my-vendor-install-packages
-;;  (*my-vendor-packages*)
-;;  *user-emacs-vendor-directory*)
+(my-vendor-install-packages
+ (*my-vendor-packages*)
+ *user-emacs-vendor-directory*)
 
 
 ;; update plugins

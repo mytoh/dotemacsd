@@ -50,7 +50,7 @@
 ;; install packages
 (setq *my-package-list*
       '(rainbow-delimiters
-        ;; auto-complete
+        auto-complete
         ac-ja
         ac-slime
         bookmark+
@@ -104,8 +104,7 @@
         tumblesocks
         undo-tree
         direx
-        carton
-        pallet
+        ;; pallet
         page-break-lines
         flycheck
         fiplr
@@ -113,6 +112,7 @@
         melpa-upstream-visit
         melpa
         quickrun
+        sudo-ext
 
         ;; org
         org
@@ -130,7 +130,7 @@
         litable
         stripe-buffer
         ace-jump-mode
-        auto-complete-clang-async
+        ;; auto-complete-clang-async
         lua-mode
         mentor
         color-theme-approximate
@@ -190,7 +190,7 @@
     ;; package-dired-single
     package-expand-region
     package-rainbow-delimiters
-    ;; package-auto-complete
+    package-auto-complete
     package-tabbar
     package-smartparens
     package-helm
@@ -237,6 +237,7 @@
     package-melpa-upstream-visit
     package-color-theme-approximate
     package-quickrun
+    package-sudo-ext
     ))
 
 
