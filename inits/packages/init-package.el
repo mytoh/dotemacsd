@@ -113,10 +113,11 @@
         melpa
         quickrun
         sudo-ext
+        vala-mode
 
         ;; org
         org
-        ;;        org-magit
+        ;; org-magit
         org-plus-contrib
         org-bullets
 
@@ -134,6 +135,7 @@
         lua-mode
         mentor
         color-theme-approximate
+        cask
         ;; helm
         helm
         helm-git
@@ -147,6 +149,7 @@
         helm-cmd-t
         helm-projectile
         helm-ag
+        helm-delicious
         ;; themes
         molokai-theme
         monokai-theme
@@ -194,6 +197,7 @@
     package-tabbar
     package-smartparens
     package-helm
+    package-helm-delicious
     package-projectile
     package-project-persist
     package-emms
@@ -221,6 +225,7 @@
     package-org-bullets
     package-magit
     package-lua-mode
+    package-vala-mode
     ;; package-magit-commit-training-wheels
     package-page-break-lines
     package-flycheck

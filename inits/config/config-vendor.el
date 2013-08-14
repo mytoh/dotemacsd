@@ -10,7 +10,6 @@
     ("nyan-mode" "TeMPOraL/nyan-mode")
     ("highlight-sexp" "daimrod/highlight-sexp")
     ("emux-el" "m2ym/emux-el")
-    ("helm-delicious" "emacs-helm/helm-delicious")
     ("seijiseikana-el" "moriyamahiroshi/seijiseikana-el")
     ("highlight-cl" "emacsmirror/highlight-cl")
     ("eldoc-extension" "emacsmirror/eldoc-extension")
@@ -27,7 +26,6 @@
     ("flatline-el" "mytoh/flatline-el")
     ("fish-mode" "mytoh/fish-mode")
     ("auto-complete" "auto-complete/auto-complete")
-    ("cask" "rejeep/cask.el")
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")
     ))
 
@@ -79,12 +77,6 @@
 ;; stumpwm
 (req 'stumpwm-mode)
 
-;; helm-delicious
-(req 'helm-delicious
-     (req 'auth-source
-          (if (file-exists-p "~/.authinfo.gpg")
-              (setq auth-sources '((:source "~/.authinfo.gpg" :host t :protocol t)))
-            (setq auth-sources '((:source "~/.authinfo" :host t :protocol t))))))
 
 ;; seijiseikana
 (req 'seijiseikana)
