@@ -3,6 +3,7 @@
 (defun add-shell-mode (ext)
   (add-to-list 'auto-mode-alist `(,(concat "\\." ext "\\'") . sh-mode)))
 (add-shell-mode "subr")
+(add-shell-mode "mksh")
 
 (defun my-shell-indent-buffer ()
   (interactive)
