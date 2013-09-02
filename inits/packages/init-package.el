@@ -228,7 +228,7 @@
     package-vala-mode
     ;; package-magit-commit-training-wheels
     package-page-break-lines
-    package-flycheck
+    ;; package-flycheck
     package-pretty-mode
     package-pretty-mode-plus
     package-unicode-progress-reporter

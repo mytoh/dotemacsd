@@ -39,7 +39,7 @@
 (req 'helm-misc)
 
 ;; migemo
-(req 'helm-migemo)
+;; (req 'helm-migemo)
 
 ;; descbinds
 (req 'helm-descbinds
