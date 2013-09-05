@@ -136,6 +136,8 @@
         mentor
         color-theme-approximate
         cask
+        js3
+
         ;; helm
         helm
         helm-git
@@ -150,6 +152,9 @@
         helm-projectile
         helm-ag
         helm-delicious
+        helm-helm-commands
+        helm-orgcard
+
         ;; themes
         molokai-theme
         monokai-theme
@@ -196,8 +201,6 @@
     package-auto-complete
     package-tabbar
     package-smartparens
-    package-helm
-    package-helm-delicious
     package-projectile
     package-project-persist
     package-emms
@@ -243,6 +246,14 @@
     package-color-theme-approximate
     package-quickrun
     package-sudo-ext
+    package-js3
+
+    ;; helm
+    package-helm
+    package-helm-delicious
+    package-helm-helm-commands
+    package-helm-orgcard
+
     ))
 
 

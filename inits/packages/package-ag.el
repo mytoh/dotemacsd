@@ -1,4 +1,4 @@
 
-(require 'ag)
+(req 'ag)
 
 (provide 'package-ag)
