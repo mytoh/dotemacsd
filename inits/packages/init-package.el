@@ -136,7 +136,7 @@
         mentor
         color-theme-approximate
         cask
-        js3
+        js3-mode
 
         ;; helm
         helm
