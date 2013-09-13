@@ -13,7 +13,9 @@
       (window-configuration-to-register :eshell-fullscreen)
       (eshell)
       (delete-other-windows))))
-(define-key global-map (kbd "C-z") 'my-eshell-switch)
+
+;;; use shell-pop instead
+;; (define-key global-map (kbd "C-z") 'my-eshell-switch)
 
 ;;; eshell keybind
 (defun my-eshell-hook-keybindings ()

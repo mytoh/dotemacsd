@@ -114,6 +114,7 @@
         quickrun
         sudo-ext
         vala-mode
+        shell-pop
 
         ;; org
         org
@@ -247,6 +248,7 @@
     package-quickrun
     package-sudo-ext
     package-js3
+    ;; package-shell-pop
 
     ;; helm
     package-helm
