@@ -44,6 +44,7 @@
      (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
      (add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa/") t)
      (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
+     (add-to-list 'package-archives '("SC" . "http://joseito.republika.pl/sunrise-commander/") t)
      (package-initialize))
 
 
@@ -156,19 +157,26 @@
         helm-helm-commands
         helm-orgcard
 
-        ;; themes
-        molokai-theme
-        monokai-theme
-        late-night-theme
-        tron-theme
-        qsimpleq-theme
-        solarized-theme
-        birds-of-paradise-plus-theme
-        soothe-theme
-        subatomic-theme
-        grandshell-theme
-        occidental-theme
         ))
+
+(defvar *my-package-list-colour-themes*
+  '(;; themes
+    molokai-theme
+    monokai-theme
+    late-night-theme
+    tron-theme
+    qsimpleq-theme
+    solarized-theme
+    birds-of-paradise-plus-theme
+    soothe-theme
+    subatomic-theme
+    grandshell-theme
+    occidental-theme
+    soft-charcoal-theme
+    waher-theme
+    ))
+
+(append-to-list *my-package-list* *my-package-list-colour-themes*)
 
 (defun my-package-update ()
   (unless package-archive-contents
@@ -226,7 +234,7 @@
     package-undo-tree
     package-direx
     package-org
-    package-org-bullets
+    ;; package-org-bullets
     package-magit
     package-lua-mode
     package-vala-mode

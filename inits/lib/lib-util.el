@@ -40,7 +40,7 @@
 ;;                 '("/usr/bin" "/bin"
 ;;                   "/usr/sbin" "/sbin"))
 (cl-defmacro append-to-list (to lst)
-  `(setq ,to (append ,lst ,to)))
+  `(setq ,to (append ,to ,lst)))
 
 (cl-defmacro my-add-to-load-path (path)
   `(when (file-exists-p ,path)
