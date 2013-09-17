@@ -25,6 +25,7 @@
     ("emacs-highlight-unique-symbol" "hitode909/emacs-highlight-unique-symbol")
     ("flatline-el" "mytoh/flatline-el")
     ("fish-mode" "mytoh/fish-mode")
+    ("helm-ypv" "mytoh/helm-ypv")
     ("auto-complete" "auto-complete/auto-complete")
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")
     ))
@@ -161,5 +162,7 @@
      ;; elisp mode
      (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
      )
+
+(req 'helm-ypv)
 
 (provide 'config-vendor)

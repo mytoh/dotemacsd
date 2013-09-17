@@ -75,7 +75,6 @@
         info+
         redo+
         haskell-mode
-        flex-autopair
         yasnippet
         yasnippet-bundle
         w3m
@@ -116,6 +115,7 @@
         sudo-ext
         vala-mode
         shell-pop
+        sunrise-commander
 
         ;; org
         org
