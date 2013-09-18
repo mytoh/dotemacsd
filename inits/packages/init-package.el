@@ -122,6 +122,8 @@
         ;; org-magit
         org-plus-contrib
         org-bullets
+        outorg
+        outshine
 
         pretty-mode
         pretty-mode-plus
@@ -235,6 +237,8 @@
     package-direx
     package-org
     ;; package-org-bullets
+    package-outorg
+    package-outshine
     package-magit
     package-lua-mode
     package-vala-mode
