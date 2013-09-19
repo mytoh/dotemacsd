@@ -1,10 +1,10 @@
 ;;;; -*- coding: utf-8 -*-
 
-(defun my-after-init-hook ()
+(cl-defun my-after-init-hook ()
   ;; (setq debug-on-error t))
   (add-hook 'after-init-hook 'my-after-init-hook))
 
-(defun my-after-save-hook ()
+(cl-defun my-after-save-hook ()
   (if (string-match (rx (or "config" "package" "init" "lang") "-" (* anything) "el" eol)
                     (buffer-file-name))
       (save-excursion
@@ -15,7 +15,7 @@
 
 ;;; notify reverting
 (require 'notifications)
-(defun my-after-revert-hook ()
+(cl-defun my-after-revert-hook ()
   (notifications-notify :title (format "Revert %s" (buffer-file-name))
                         :body "Check it out"
                         :urgency 'low

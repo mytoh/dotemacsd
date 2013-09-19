@@ -19,12 +19,12 @@
   ;; (set-face-attribute 'term-color-black nil :foreground  "#121212")
 
   ;; font
-  (defun font-existsp (font)
+  (cl-defun font-existsp (font)
     "Check to see if the named FONT is available"
     (if (null (x-list-fonts font))
         nil t))
 
-  (defun set-normal-font ()
+  (cl-defun set-normal-font ()
     (cond ((eq window-system nil) nil)
           ((font-existsp "Ricty")
            (set-face-attribute 'default nil :height 90 :font "Ricty"))
@@ -42,7 +42,7 @@
            (set-face-attribute 'default nil :height 80 :font "Neep"))))
   (set-normal-font)
 
-  (defun set-japanese-fontset-font ()
+  (cl-defun set-japanese-fontset-font ()
     (cond ((eq window-system nil) nil)
           ((font-existsp "Hiragino Mincho Pro")
            (set-fontset-font nil 'japanese-jisx0208

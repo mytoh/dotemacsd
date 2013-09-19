@@ -17,7 +17,7 @@
 
 ;; smart kill word
 ;; http://d.hatena.ne.jp/kiwanami/20091222/1261504543
-(defun kill-region-or-backward-kill-word ()
+(cl-defun kill-region-or-backward-kill-word ()
   (interactive)
   (if (region-active-p)
       (kill-region (point) (mark))
@@ -25,7 +25,7 @@
 (global-set-key (kbd "C-w") 'kill-region-or-backward-kill-word)
 
 ;; kill whole line
-(defun smart-kill-whole-line (&optional arg)
+(cl-defun smart-kill-whole-line (&optional arg)
   "A simple wrapper around `kill-whole-line' that respects indentation"
   (interactive "P")
   (kill-whole-line arg)

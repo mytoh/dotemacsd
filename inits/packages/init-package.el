@@ -1,6 +1,5 @@
  ;;; -*- coding: utf-8 -*-
 
-
 ;;;
 ;;; builtins
 ;;;
@@ -124,7 +123,9 @@
         org-bullets
         outorg
         outshine
+        outline-magic
 
+        navi-mode
         pretty-mode
         pretty-mode-plus
         unicode-progress-reporter
@@ -177,13 +178,12 @@
     soft-charcoal-theme
     waher-theme
     ))
-
 (append-to-list *my-package-list* *my-package-list-colour-themes*)
 
-(defun my-package-update ()
+(cl-defun my-package-update ()
   (unless package-archive-contents
     (package-refresh-contents))
-  (dolist (p *my-package-list*)
+  (cl-dolist (p *my-package-list*)
     (unless (package-installed-p p)
       (message "install %s" p)
       (package-install p)
@@ -260,6 +260,7 @@
     package-quickrun
     package-sudo-ext
     package-js3
+    package-navi-mode
     ;; package-shell-pop
 
     ;; helm

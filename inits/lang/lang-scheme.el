@@ -1,21 +1,21 @@
 
-(defun minun:scheme-add-keywords (face-name keyword-rules)
-  (let* ((keyword-list (mapcar #'(lambda (x)
-                                   (symbol-name (cdr x)))
-                               keyword-rules))
-         (keyword-regexp (concat "(\\("
-                                 (regexp-opt keyword-list)
-                                 "\\)[ \n]")))
+(cl-defun minun:scheme-add-keywords (face-name keyword-rules)
+  (cl-letf* ((keyword-list (mapcar #'(lambda (x)
+                                       (symbol-name (cdr x)))
+                                   keyword-rules))
+             (keyword-regexp (concat "(\\("
+                                     (regexp-opt keyword-list)
+                                     "\\)[ \n]")))
     (my-log "adding keywords for face "
             (propertize (symbol-name face-name) 'face 'font-lock-variable-name-face)
             " on scheme mode")
     (font-lock-add-keywords 'scheme-mode
                             `((,keyword-regexp 1 ',face-name))))
-  (mapc #'(lambda (x)
-            (put (cdr x)
-                 'scheme-indent-function
-                 (car x)))
-        keyword-rules))
+  (cl-mapc #'(lambda (x)
+               (put (cdr x)
+                    'scheme-indent-function
+                    (car x)))
+           keyword-rules))
 
 
 (setq process-coding-system-alist
@@ -27,11 +27,11 @@
 
 
 
-(defun minun:scheme-other-window ()
+(cl-defun minun:scheme-other-window ()
   "run scheme on other window"
   (interactive)
   (split-window-horizontally 90)
-  (let ((buf-name (buffer-name (current-buffer))))
+  (cl-letf ((buf-name (buffer-name (current-buffer))))
     (switch-to-buffer-other-window
      (get-buffer-create "*scheme*"))
     (run-scheme scheme-program-name)
@@ -39,13 +39,13 @@
      (get-buffer-create buf-name))))
 
 
-(defun minun:scheme-mode-hook ()
+(cl-defun minun:scheme-mode-hook ()
   (define-key my-original-map (kbd "C-s") 'minun:scheme-other-window)
   (local-set-key (kbd "C-m") 'newline-and-indent)
   (define-key scheme-mode-map (kbd "C-m") 'newline-and-indent)
-  (dolist (f '(minun:lisp-cleanup
-               whitespace-cleanup
-               my-before-save-hook))
+  (cl-dolist (f '(minun:lisp-cleanup
+                  whitespace-cleanup
+                  my-before-save-hook))
     (add-hook 'before-save-hook f nil t)))
 (add-hook 'scheme-mode-hook 'minun:scheme-mode-hook)
 
@@ -70,15 +70,15 @@
               (add-to-list 'ac-sources 'ac-source-scheme)))
 
 ;; scheme mode recognition
-(defun minun:add-scheme-mode (ext)
+(cl-defun minun:add-scheme-mode (ext)
   (add-to-list 'auto-mode-alist `(,(concat "\\." ext "\\'") . scheme-mode)))
 
-(dolist (e '("leh"
-             "lehspec"
-             "sps"
-             "sls"
-             "sld"
-             "ss"))
+(cl-dolist (e '("leh"
+                "lehspec"
+                "sps"
+                "sls"
+                "sld"
+                "ss"))
   (minun:add-scheme-mode e))
 
 ;; personal syntax

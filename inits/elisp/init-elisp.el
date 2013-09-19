@@ -5,8 +5,6 @@
 (req 'r7rs)
 (req 'srfi)
 
-
-
 ;; (req 'pretty-scheme
 ;;      (add-hook 'scheme-mode-hook 'turn-on-pretty-scheme-mode))
 

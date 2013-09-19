@@ -1,7 +1,7 @@
 ;;; -*- coding: utf-8 -*-
 
-(eval-when-compile
-  (require 'cl-lib))
+;; (eval-when-compile
+;;   (require 'cl-lib))
 
 (cl-defmacro my-log (&rest messages)
   `(progn
@@ -72,7 +72,7 @@
 (cl-defun concat-path (&rest parts)
   (cl-reduce (lambda (a b) (expand-file-name b a)) parts))
 
-(defun my-before-save-hook ()
+(cl-defun my-before-save-hook ()
   (save-excursion
     (goto-char (point-min))
     (delete-trailing-whitespace)
@@ -86,36 +86,36 @@
       (replace-match  "((" nil nil))
     (indent-region (point-min) (point-max))))
 
-(defun my-indent-buffer ()
+(cl-defun my-indent-buffer ()
   "milkypostman/dotemacs/defun.el"
   (interactive)
   (delete-trailing-whitespace)
   (indent-region (point-min) (point-max)))
 
 ;; prelude/init.el
-(defun add-subdirs-to-load-path (parent-dir)
+(cl-defun add-subdirs-to-load-path (parent-dir)
   "add all first level `parent-dir' subdirs to the
 emacs load path"
-  (dolist (f (directory-files parent-dir))
-    (let ((name (expand-file-name f parent-dir)))
+  (cl-dolist (f (directory-files parent-dir))
+    (cl-letf ((name (expand-file-name f parent-dir)))
       (when (and (file-directory-p name)
                  (not (equal f ".."))
                  (not (equal f ".")))
         (add-to-list 'load-path name)))))
 
 ;; kill other buffers
-(defun kill-other-buffers ()
+(cl-defun kill-other-buffers ()
   "kill all buffers but the current on.
 Don't mess with special buffers."
   (interactive)
-  (dolist (buffer (buffer-list))
+  (cl-dolist (buffer (buffer-list))
     (unless (or (eql buffer (current-buffer))
                 (not (buffer-file-name buffer)))
       (kill-buffer buffer))))
 
 
 ;; edit file as root
-(defun sudo-edit (&optional arg)
+(cl-defun sudo-edit (&optional arg)
   "Edit currently visited file as root.
 
 With a prefix ARG prompt for a file to visit.

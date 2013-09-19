@@ -2,20 +2,20 @@
 
 (add-to-list 'auto-mode-alist '("\\.emacs-w3m\\'" .  emacs-lisp-mode))
 
-(defun my-elisp-add-keywords (face-name keyword-rules)
-  (let* ((keyword-list (mapcar #'(lambda (x)
-                                   (symbol-name (cdr x)))
-                               keyword-rules))
-         (keyword-regexp (concat "(\\("
-                                 (regexp-opt keyword-list)
-                                 "\\)[ \n]")))
+(cl-defun my-elisp-add-keywords (face-name keyword-rules)
+  (cl-letf* ((keyword-list (cl-mapcar #'(lambda (x)
+                                          (symbol-name (cdr x)))
+                                      keyword-rules))
+             (keyword-regexp (concat "(\\("
+                                     (regexp-opt keyword-list)
+                                     "\\)[ \n]")))
     (font-lock-add-keywords  'emacs-lisp-mode
                              `((,keyword-regexp 1 ',face-name))))
-  (mapc #'(lambda (x)
-            (put (cdr x)
-                 'scheme-indent-function
-                 (car x)))
-        keyword-rules))
+  (cl-mapc #'(lambda (x)
+               (put (cdr x)
+                    'scheme-indent-function
+                    (car x)))
+           keyword-rules))
 
 
 (my-elisp-add-keywords
@@ -54,7 +54,7 @@
 
 
 
-(defun my-elisp-buffer-enable-reindent ()
+(cl-defun my-elisp-buffer-enable-reindent ()
   (add-hook 'before-save-hook 'minun:lisp-cleanup nil t)
   (add-hook 'before-save-hook 'my-indent-buffer nil t))
 

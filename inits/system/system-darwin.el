@@ -1,12 +1,12 @@
  ;;; -*- coding: utf-8 -*-
 
 (when (string-equal system-type "darwin")
-  (let ((my-paths `(,(expand-file-name "~/local/homebrew/bin"))))
-    (dolist (dir my-paths)
+  (cl-letf ((my-paths `(,(expand-file-name "~/local/homebrew/bin"))))
+    (cl-dolist (dir my-paths)
       ;; sakito.jp/emacs/emacsshell.html
       (when (and (file-exists-p dir) (not (member dir exec-path)))
         (setenv "PATH" (concat dir ":" (getenv "PATH")))
-        (dolist (p dir)
+        (cl-dolist (p dir)
           (add-to-list 'exec-path p)))))
   (define-key global-map (kbd "<s-return>") 'darwin-toggle-fullscreen)
   ;; command to meta
@@ -16,7 +16,7 @@
   ;; function to hyper
   (setq ns-function-modifier 'hyper))
 
-(defun darwin-toggle-fullscreen ()
+(cl-defun darwin-toggle-fullscreen ()
   "Toggle full scree on darwin"
   (interactive)
   (set-frame-parameter

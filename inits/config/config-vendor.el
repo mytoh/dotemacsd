@@ -1,11 +1,11 @@
  ;;; -*- coding: utf-8 -*-
 
-;; plugin directory
+;;; plugin directory
 (setq *user-emacs-vendor-directory* (expand-file-name (concat user-emacs-directory (file-name-as-directory "vendor"))))
 
 ;;; plugins under vendor directory
 ;; github repositories
-(defun *my-vendor-packages* ()
+(cl-defun *my-vendor-packages* ()
   '(("emacs-powerline" "jonathanchu/emacs-powerline")
     ("nyan-mode" "TeMPOraL/nyan-mode")
     ("highlight-sexp" "daimrod/highlight-sexp")
@@ -15,8 +15,6 @@
     ("eldoc-extension" "emacsmirror/eldoc-extension")
     ("mew" "emacsmirror/mew")
     ("navi2ch" "naota/navi2ch")
-    ("navi" "tj64/navi")
-    ("outline-magic" "tj64/outline-magic")
     ("outxxtra" "tj64/outxxtra")
     ("hyperplane-theme" "sabof/hyperplane-theme")
     ("zone-matrix" "ober/zone-matrix")
@@ -76,7 +74,6 @@
 ;; stumpwm
 (req 'stumpwm-mode)
 
-
 ;; seijiseikana
 (req 'seijiseikana)
 
@@ -92,9 +89,6 @@
 ;; flatline
 (req 'flatline
      (flatline-mode 1))
-
-;; navi
-(req 'navi-mode)
 
 
 ;; hyperplane theme
