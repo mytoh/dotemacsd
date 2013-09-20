@@ -142,6 +142,7 @@
         color-theme-approximate
         cask
         js3-mode
+        cl-lib-highlight
 
         ;; helm
         helm
@@ -261,6 +262,7 @@
     package-sudo-ext
     package-js3
     package-navi-mode
+    package-cl-lib-highlight
     ;; package-shell-pop
 
     ;; helm

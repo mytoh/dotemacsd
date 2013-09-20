@@ -25,11 +25,9 @@
    (1 . if)
    (1 . lambda)
    (1 . add-to-list)
-   (1 . dolist)
-   (1 . cl-mapcar)
-   (1 . cl-reduce)
-   (1 . cl-remove-if)
-   (1 . cl-cadddr)
+   (1 . font-lock-add-keywords)
+   (1 . submatch)
+   (1 . or)
    ))
 
 (my-elisp-add-keywords
@@ -37,19 +35,15 @@
  '((1 . define-key)
    (1 . provide)
    (1 . require)
-   (1 . req)
-   (2 . cl-defmacro)
-   (1 . cl-declare)
-   (1 . cl-labels)
-   (1 . cl-defun)
-   ))
+   (1 . req)))
 
 (font-lock-add-keywords
  'emacs-lisp-mode
- `(("'\\([0-9a-zA-Z-]*\\)" (1 'font-lock-variable-name-face))
-   (,(rx (* space) (syntax open-parenthesis) (* space) "cl-defmacro"
-         (one-or-more space)
-         (submatch (+ (syntax word))))
+ `((,(rx (* space) (syntax open-parenthesis) (* space)
+         (or "cl-defun" "cl-defmacro")
+         (+ space)
+         (submatch (+ (or (syntax word)
+                          (syntax symbol)))))
     (1 'font-lock-function-name-face))))
 
 

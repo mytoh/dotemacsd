@@ -11,7 +11,6 @@
     ("highlight-sexp" "daimrod/highlight-sexp")
     ("emux-el" "m2ym/emux-el")
     ("seijiseikana-el" "moriyamahiroshi/seijiseikana-el")
-    ("highlight-cl" "emacsmirror/highlight-cl")
     ("eldoc-extension" "emacsmirror/eldoc-extension")
     ("mew" "emacsmirror/mew")
     ("navi2ch" "naota/navi2ch")
@@ -65,11 +64,6 @@
 ;;   (setq hl-sexp-foreground-color nil)
 ;;   (setq hl-sexp-background-color "#1a1a1a"))
 
-
-;; highlight-cl
-(req 'highlight-cl
-     (add-hook 'emacs-lisp-mode-hook 'highlight-cl-add-font-lock-keywords)
-     (add-hook 'lisp-interaction-mode-hook 'highlight-cl-add-font-lock-keywords))
 
 ;; stumpwm
 (req 'stumpwm-mode)
