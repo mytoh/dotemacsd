@@ -143,23 +143,7 @@
         cask
         js3-mode
         cl-lib-highlight
-
-        ;; helm
-        helm
-        helm-git
-        helm-themes
-        helm-c-moccur
-        helm-c-yasnippet
-        helm-descbinds
-        helm-gist
-        helm-ls-git
-        helm-migemo
-        helm-cmd-t
-        helm-projectile
-        helm-ag
-        helm-delicious
-        helm-helm-commands
-        helm-orgcard
+        anzu
 
         ))
 
@@ -180,6 +164,26 @@
     waher-theme
     ))
 (append-to-list *my-package-list* *my-package-list-colour-themes*)
+
+(defvar *my-package-list-helm*
+  '(helm
+    helm-git
+    helm-themes
+    helm-c-moccur
+    helm-c-yasnippet
+    helm-descbinds
+    helm-gist
+    helm-ls-git
+    helm-migemo
+    helm-cmd-t
+    helm-projectile
+    helm-ag
+    helm-delicious
+    helm-helm-commands
+    helm-orgcard
+    ))
+(append-to-list *my-package-list* *my-package-list-helm*)
+
 
 (cl-defun my-package-update ()
   (unless package-archive-contents
