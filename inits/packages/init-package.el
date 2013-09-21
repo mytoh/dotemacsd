@@ -144,7 +144,6 @@
         js3-mode
         cl-lib-highlight
         anzu
-
         ))
 
 (defvar *my-package-list-colour-themes*
@@ -267,6 +266,7 @@
     package-js3
     package-navi-mode
     package-cl-lib-highlight
+    package-anzu
     ;; package-shell-pop
 
     ;; helm
