@@ -10,7 +10,7 @@
 (add-subdirs-to-load-path (concat user-emacs-directory "inits"))
 
 ;; ** packages
-(require 'init-package)
+(require 'init-paketti)
 
 ;; ** config
 (require 'init-config)
