@@ -4,7 +4,7 @@
 
 ;;; switch to eshell or restore previous windows
 ;;; http://irreal.org/blog/?p=1742
-(defun my-eshell-switch ()
+(cl-defun my-eshell-switch ()
   "Bring up a full-screen eshell or restore previous config."
   (interactive)
   (if (string= "eshell-mode" major-mode)
@@ -18,7 +18,7 @@
 ;; (define-key global-map (kbd "C-z") 'my-eshell-switch)
 
 ;;; eshell keybind
-(defun my-eshell-hook-keybindings ()
+(cl-defun my-eshell-hook-keybindings ()
   (define-key eshell-mode-map (kbd "C-p") 'eshell-previous-matching-input-from-input)
   (define-key eshell-mode-map (kbd "C-n") 'eshell-next-matching-input-from-input)
   (define-key eshell-mode-map (kbd "C-a") 'eshell-bol))
@@ -35,7 +35,7 @@
 
 
 ;;; disable hl-line
-;; (defun my-eshell-hook-disable-hl-line ()
+;; (cl-defun my-eshell-hook-disable-hl-line ()
 ;;   (set (make-local-variable 'hl-line-range-function)
 ;;        (lambda ()
 ;;          '(0 . 0))))
@@ -48,7 +48,7 @@
 ;;; auto-complete
 ;;; require 'auto-complete in paketti-auto-complete
 (require 'pcomplete)
-(defun my-ac-eshell-mode ()
+(cl-defun my-ac-eshell-mode ()
   (ac-define-source pcomplete
     '((candidates . pcomplete-completions)))
   (setq ac-sources
@@ -65,7 +65,7 @@
               ))
 
 ;;; alias
-(defun my-eshell-hook-add-aliases ()
+(cl-defun my-eshell-hook-add-aliases ()
   (setq eshell-command-aliases-list
         (append '(( "ag" "ag --nopager")
                   ( "," "napa $*")

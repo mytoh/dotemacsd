@@ -1,5 +1,5 @@
 
-(defun r7rs:add-read ()
+(cl-defun r7rs:add-read ()
   (r7rs:add-keywords
    'r7rs:function-face
    '((1 . read))))

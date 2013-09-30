@@ -1,6 +1,6 @@
 
 
-(defun r7rs:add-file ()
+(cl-defun r7rs:add-file ()
   (r7rs:add-keywords
    'r7rs:function-face
    '((1 . call-with-input-file)

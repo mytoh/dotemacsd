@@ -1,5 +1,5 @@
 
-(defun r7rs:add-write ()
+(cl-defun r7rs:add-write ()
   (r7rs:add-keywords
    'r7rs:function-face
    '((1 . display)

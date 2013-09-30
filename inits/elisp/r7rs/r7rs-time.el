@@ -1,5 +1,5 @@
 
-(defun r7rs:add-time ()
+(cl-defun r7rs:add-time ()
   (r7rs:add-keywords
    'r7rs:function-face
    '((1 . current-jiffy)

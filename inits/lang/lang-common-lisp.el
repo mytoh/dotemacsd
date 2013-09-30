@@ -1,5 +1,5 @@
 
-(defun my-cl-buffer-enable-reindent ()
+(cl-defun my-cl-buffer-enable-reindent ()
   (interactive)
   (add-hook 'before-save-hook 'my-indent-buffer nil t))
 

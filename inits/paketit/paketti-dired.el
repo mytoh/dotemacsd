@@ -8,7 +8,7 @@
      (put 'dired-find-alternate-file 'disabled nil)
 
      ;; ファイルなら別バッファで、ディレクトリなら同じバッファで開く
-     (defun dired-open-in-accordance-with-situation ()
+     (cl-defun dired-open-in-accordance-with-situation ()
        (interactive)
        (cond ((string-match "\\(?:\\.\\.?\\)"
                             (format "%s" (thing-at-point 'filename)))
@@ -39,7 +39,7 @@
 
 ;; add [dired] to dired buffer
 ;; [[http://qiita.com/kbkbkbkb1/items/13585a5711d62e9800ef]]
-(defun my-dired-append-buffer-name-hint ()
+(cl-defun my-dired-append-buffer-name-hint ()
   "Append a auxiliary string to a name of dired buffer."
   (when (eq major-mode 'dired-mode)
     (let* ((dir (expand-file-name list-buffers-directory))

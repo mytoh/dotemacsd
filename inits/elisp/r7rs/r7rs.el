@@ -3,7 +3,7 @@
   (require 'cl-lib))
 
 
-(defun r7rs:add-keywords (face-name keyword-rules)
+(cl-defun r7rs:add-keywords (face-name keyword-rules)
   (let* ((keyword-list (mapcar #'(lambda (x)
                                    (symbol-name (cdr x)))
                                keyword-rules))
@@ -112,7 +112,7 @@
 
 
 
-(defun r7rs:mode-start ()
+(cl-defun r7rs:mode-start ()
   (r7rs:add-faces)
   (r7rs:add-fundamental)
   (r7rs:add-base)

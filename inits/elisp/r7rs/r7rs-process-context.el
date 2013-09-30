@@ -1,7 +1,7 @@
  ;;; -*- coding: utf-8 -*-
 
 
-(defun r7rs:add-process-context ()
+(cl-defun r7rs:add-process-context ()
   (r7rs:add-keywords
    'r7rs:syntax-face
    '((1 . command-line)

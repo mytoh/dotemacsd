@@ -1,11 +1,11 @@
 
 ;; shell mode recognition
-(defun add-shell-mode (ext)
+(cl-defun add-shell-mode (ext)
   (add-to-list 'auto-mode-alist `(,(concat "\\." ext "\\'") . sh-mode)))
 (add-shell-mode "subr")
 (add-shell-mode "mksh")
 
-(defun my-shell-indent-buffer ()
+(cl-defun my-shell-indent-buffer ()
   (interactive)
   (delete-trailing-whitespace)
   (indent-region (point-min) (point-max)))

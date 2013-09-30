@@ -1,5 +1,5 @@
 
-(defun r7rs:add-char ()
+(cl-defun r7rs:add-char ()
   (r7rs:add-keywords
    'r7rs:function-face
    '((1 . char-alphabetic?  )

@@ -1,5 +1,5 @@
 
-(defun srfi:add-srfi-1 ()
+(cl-defun srfi:add-srfi-1 ()
   (srfi:add-keywords
    'font-lock-builtin-face
    '((1 . remove)

@@ -1,5 +1,5 @@
 
-(defun r7rs:add-inexact ()
+(cl-defun r7rs:add-inexact ()
   (r7rs:add-keywords
    'r7rs:function-face
    '((1 . acos)

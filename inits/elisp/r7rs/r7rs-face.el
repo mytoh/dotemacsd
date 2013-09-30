@@ -1,12 +1,12 @@
 ;; faces
 
-(defmacro* r7rs:make-face (face fore)
+(cl-defmacro r7rs:make-face (face fore)
   `(progn
      (make-face ,face)
      (set-face-foreground ,face  ,fore)))
 
 
-(defun r7rs:add-faces ()
+(cl-defun r7rs:add-faces ()
   (dolist (p '((r7rs:syntax-face "#F92672")
                (r7rs:function-face "#66D9EF")
                (r7rs:string-face "#f24f47")

@@ -1,6 +1,6 @@
 
 
-(defun r7rs:add-cxr ()
+(cl-defun r7rs:add-cxr ()
   (r7rs:add-keywords
    'r7rs:function-face
    '((1 . caaar)

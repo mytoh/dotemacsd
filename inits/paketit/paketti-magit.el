@@ -1,11 +1,11 @@
 
-(defun my-magit-highlights ()
+(cl-defun my-magit-highlights ()
   (set-face-attribute 'magit-diff-add nil :foreground "#40ff40" :background nil)
   (set-face-attribute 'magit-diff-del nil :foreground "#ff4040" :background nil)
   (set-face-attribute 'magit-item-highlight   nil :foreground "#202020" :background nil)
   (set-face-attribute 'magit-diff-file-header nil :foreground "#4040ff" :background nil))
 
-(defun my-magit-setup ()
+(cl-defun my-magit-setup ()
   (eval-after-load "magit"
     #'(my-magit-highlights))
 

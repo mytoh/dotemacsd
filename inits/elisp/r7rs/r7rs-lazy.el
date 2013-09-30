@@ -1,5 +1,5 @@
 
-(defun r7rs:add-lazy ()
+(cl-defun r7rs:add-lazy ()
   (r7rs:add-keywords
    'r7rs:function-face
    '((1 . delay)

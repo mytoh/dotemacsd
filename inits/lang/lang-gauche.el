@@ -9,7 +9,7 @@
 
 
                                         ; http://valvallow.blogspot.jp/2011/03/emacs-scheme-gauche.html
-(defun my-scheme-other-window ()
+(cl-defun my-scheme-other-window ()
   "run scheme on other window"
   (interactive)
   (split-window-horizontally 90)
@@ -20,7 +20,7 @@
     (switch-to-buffer-other-window
      (get-buffer-create buf-name))))
 
-(defun my-scheme-mode-hook ()
+(cl-defun my-scheme-mode-hook ()
   (define-key my-original-map (kbd "C-s") 'my-scheme-other-window)
   (local-set-key (kbd "C-m") 'newline-and-indent)
   (add-hook 'before-save-hook 'my-before-save-hook nil t))
@@ -70,7 +70,7 @@
 
 
 ;; function from http://emacswiki.org/emacs/AddKeywords
-(defun my-gauche-add-keywords (face-name keyword-rules)
+(cl-defun my-gauche-add-keywords (face-name keyword-rules)
   (let* ((keyword-list (mapcar #'(lambda (x)
                                    (symbol-name (cdr x)))
                                keyword-rules))

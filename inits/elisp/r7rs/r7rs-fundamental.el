@@ -1,7 +1,7 @@
  ;;; -*- coding: utf-8 -*-
 
 
-(defun r7rs:add-fundamental ()
+(cl-defun r7rs:add-fundamental ()
   (r7rs:add-keywords
    'r7rs:syntax-face
    '((2 . library)

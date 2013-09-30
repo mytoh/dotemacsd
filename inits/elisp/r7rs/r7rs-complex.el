@@ -1,5 +1,5 @@
 
-(defun r7rs:add-complex ()
+(cl-defun r7rs:add-complex ()
   (r7rs:add-keywords
    'r7rs:function-face
    '((1 . angle)

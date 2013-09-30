@@ -14,7 +14,7 @@
           t t nil nil))
   (add-hook 'kernel-mode-hook 'turn-on-font-lock))
 
-(defun add-kernel-mode (name)
+(cl-defun add-kernel-mode (name)
   (add-to-list 'auto-mode-alist `(,(concat "\\" name "\\'") . kernel-mode)))
 
 (dolist (e '("MYKERNEL"

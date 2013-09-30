@@ -4,12 +4,12 @@
   "Turn on pseudo-structural editing of Lisp code."
   t)
 ;; http://whattheemacsd.com/setup-paredit.el-02.html
-(defun paredit--is-at-start-of-sexp ()
+(cl-defun paredit--is-at-start-of-sexp ()
   (and (looking-at "(\\|\\[")
        (not (nth 3 (syntax-ppss)))      ; inside string
        (not (nth 4 (syntax-ppss)))))    ; inside comment
 
-(defun paredit-duplicate-closest-sexp ()
+(cl-defun paredit-duplicate-closest-sexp ()
   (interactive)
   ;; skips to start of current sexp
   (while (not (paredit--is-at-start-of-sexp))
@@ -28,7 +28,7 @@
   (yank)
   (exchange-point-and-mark))
 
-(defun paredit-wrap-round-from-behind ()
+(cl-defun paredit-wrap-round-from-behind ()
   (interactive)
   (forward-sexp -1)
   (paredit-wrap-round)

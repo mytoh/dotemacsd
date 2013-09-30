@@ -26,12 +26,12 @@
 
   (cl-defun set-normal-font ()
     (cond ((eq window-system nil) nil)
-          ((font-existsp "Ricty")
-           (set-face-attribute 'default nil :height 90 :font "Ricty"))
           ((font-existsp "Droid Sans")
            (set-face-attribute 'default nil :height 90 :font "Droid Sans"))
           ((font-existsp "Source Code Pro")
-           (set-face-attribute 'default nil :height 80 :font "Source Code Pro"))
+           (set-face-attribute 'default nil :height 90 :font "Source Code Pro"))
+          ((font-existsp "Ricty")
+           (set-face-attribute 'default nil :height 90 :font "Ricty"))
           ((font-existsp "DejaVu Sans Mono")
            (set-face-attribute 'default nil :height 80 :font "DejaVu Sans Mono"))
           ((font-existsp "ProFont")
@@ -54,7 +54,7 @@
            (set-fontset-font nil 'japanese-jisx0208
                              (font-spec :family "Sazanami Gothic")))))
 
-  (set-japanese-fontset-font)
+  ;; (set-japanese-fontset-font)
 
   ;; ;; transparent
   ;; ;; http://www.emacswiki.org/emacs/TransparentEmacs

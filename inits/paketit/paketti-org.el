@@ -22,7 +22,7 @@
                                            (lisp . t)))))
 
 
-(defun my-org-add-before-save-hook
+(cl-defun my-org-add-before-save-hook
   ;; add-hook hook function &optional append local
   (add-hook 'before-save-hook 'org-indent-indent-buffer nil t))
 

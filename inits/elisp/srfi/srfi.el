@@ -3,7 +3,7 @@
   (require 'cl-lib))
 
 
-(defun srfi:add-keywords (face-name keyword-rules)
+(cl-defun srfi:add-keywords (face-name keyword-rules)
   (let* ((keyword-list (mapcar #'(lambda (x)
                                    (symbol-name (cdr x)))
                                keyword-rules))
@@ -28,7 +28,7 @@
 (require 'srfi-39)
 (require 'srfi-48)
 
-(defun srfi:mode-start ()
+(cl-defun srfi:mode-start ()
   (srfi:add-srfi-1)
   (srfi:add-srfi-13)
   (srfi:add-srfi-37)

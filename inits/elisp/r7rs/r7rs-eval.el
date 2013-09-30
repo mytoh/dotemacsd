@@ -1,5 +1,5 @@
 
-(defun r7rs:add-eval ()
+(cl-defun r7rs:add-eval ()
   (r7rs:add-keywords
    'r7rs:syntax-face
    '((1 . eval)

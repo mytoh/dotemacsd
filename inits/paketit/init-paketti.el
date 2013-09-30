@@ -73,14 +73,12 @@
         isearch+
         info+
         redo+
-        haskell-mode
         yasnippet
         yasnippet-bundle
         w3m
         smartparens
         dash
         ht
-        ack-and-a-half
         ;; powerline
         popwin
         ghc
@@ -112,7 +110,6 @@
         melpa
         quickrun
         sudo-ext
-        vala-mode
         shell-pop
         sunrise-commander
 
@@ -128,16 +125,25 @@
         stripe-buffer
         ace-jump-mode
         ;; auto-complete-clang-async
-        lua-mode
         mentor
         color-theme-approximate
         cask
-        js3-mode
         cl-lib-highlight
         anzu
-        coffee-mode
         whitespace-cleanup-mode
+        yascroll
+        list-packages-ext
         ))
+
+(defvar *my-paketti-list-prog-modes*
+  '(stumpwm-mode
+    coffee-mode
+    lua-mode
+    haskell-mode
+    js3-mode
+    vala-mode
+    ))
+(append-to-list *my-paketti-list* *my-paketti-list-prog-modes* )
 
 (defvar *my-paketti-list-colour-themes*
   '(;; themes
@@ -184,6 +190,8 @@
     outorg
     outshine
     outline-magic
+    orglink
+    orglue
     ))
 (append-to-list *my-paketti-list* *my-paketti-list-org*)
 
@@ -202,7 +210,7 @@
 
 
 
-(defvar init-pakettit
+(defvar init-paketit
   '(
     ;; this may cause problem
     paketti-rainbow-mode
@@ -229,7 +237,6 @@
     paketti-isearch+
     paketti-info+
     paketti-haskell-mode
-    paketti-ack-and-a-half
     paketti-popwin
     paketti-w3m
     ;; paketti-git-gutter
@@ -244,10 +251,6 @@
     ;; paketti-auto-highlight-symbol
     paketti-undo-tree
     paketti-direx
-    paketti-org
-    ;; paketti-org-bullets
-    paketti-outorg
-    paketti-outshine
     paketti-magit
     paketti-lua-mode
     paketti-vala-mode
@@ -272,18 +275,34 @@
     paketti-navi-mode
     paketti-cl-lib-highlight
     paketti-anzu
+    paketti-yascroll
+    paketti-list-packages-ext
+    paketti-stumpwm-mode
     ;; paketti-shell-pop
+    ))
 
-    ;; helm
+(defvar *my-paketit-list-helm*
+  '(      ;; helm
     paketti-helm
     paketti-helm-delicious
     paketti-helm-helm-commands
     paketti-helm-orgcard
-
     ))
+(append-to-list init-paketit *my-paketit-list-helm*)
+
+(defvar *my-paketit-list-org*
+  '(paketti-org
+    ;; paketti-org-bullets
+    paketti-outorg
+    paketti-outshine
+    paketti-orglink
+    ))
+(append-to-list init-paketit *my-paketit-list-org*)
 
 
-(mapc #'require init-pakettit)
+
+
+(mapc #'require init-paketit)
 
 
 ;; ;; egg

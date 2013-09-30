@@ -10,7 +10,7 @@
           #'(lambda ()
               (define-key c-mode-base-map (kbd "RET") 'newline-and-indent)))
 
-(defun my-c-indent-buffer ()
+(cl-defun my-c-indent-buffer ()
   "milkypostman/dotemacs/defun.el"
   (interactive)
   (delete-trailing-whitespace)

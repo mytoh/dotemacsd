@@ -10,9 +10,9 @@
 
 
 ;; prompt
-(defun my-eshell-propertize (s f)
+(cl-defun my-eshell-propertize (s f)
   (propertize s 'face f))
-(defun my-eshell-prompt-function ()
+(cl-defun my-eshell-prompt-function ()
   (concat
    (my-eshell-propertize (abbreviate-file-name (eshell/pwd)) 'my-eshell-pwd-face)
    "\n"

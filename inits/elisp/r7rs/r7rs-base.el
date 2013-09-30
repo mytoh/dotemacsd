@@ -1,7 +1,7 @@
 
 ;; r7rs base
 
-(defun r7rs:add-base ()
+(cl-defun r7rs:add-base ()
 
   (r7rs:add-keywords
    'r7rs:syntax-face

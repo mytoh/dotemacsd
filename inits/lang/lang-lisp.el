@@ -1,5 +1,5 @@
 
-(defun minun:lisp-cleanup ()
+(cl-defun minun:lisp-cleanup ()
   (interactive)
   (save-excursion
     ;; "))" -> "))"

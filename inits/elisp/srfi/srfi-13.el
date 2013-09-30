@@ -1,5 +1,5 @@
 
-(defun srfi:add-srfi-13 ()
+(cl-defun srfi:add-srfi-13 ()
   (srfi:add-keywords
    'font-lock-builtin-face
    '((1 . list->string)

@@ -40,7 +40,7 @@
 
 
      ;; from wiki/Tips-and-tricks
-     (defun my-sp-wrap-with-paren (&optional arg)
+     (cl-defun my-sp-wrap-with-paren (&optional arg)
        (interactive "p")
        (sp-select-next-thing-exchange arg)
        (execute-kbd-macro (kbd "(")))

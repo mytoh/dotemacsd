@@ -65,9 +65,6 @@
 ;;   (setq hl-sexp-background-color "#1a1a1a"))
 
 
-;; stumpwm
-(req 'stumpwm-mode)
-
 ;; seijiseikana
 (req 'seijiseikana)
 
