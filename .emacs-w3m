@@ -6,7 +6,7 @@
 ;; home page
 (setq w3m-home-page "http://google.com")
 ;; enable cookies to login site , hatena
-;; (setq w3m-use-cookies t)
+(setq w3m-use-cookies t)
 ;; don't delete favicon cache
 (setq w3m-favicon-cache-expire-wait nil)
 ;; set icon directory

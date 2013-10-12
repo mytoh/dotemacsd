@@ -38,13 +38,14 @@
        (cl-labels ((directory-is-git-p (p)
                                        (if (directory-files p nil "\.git$") t nil)))
          (cl-mapcar #'(lambda (d)
-                        (when (directory-is-git-p d)
+                        (when (and (directory-is-git-p d)
+                                   (not (file-symlink-p d)))
                           (progn
                             (cd-absolute d)
                             (message "updating vendor plugin %s.." d)
                             (shell-command "git pull")
                             (cd-absolute user-emacs-directory)
-                            (byte-recompile-directory d)
+                            (byte-recompile-directory d 0)
                             (message "updating vendor plugin %s..done" d))))
                     paths)))))
 
@@ -59,12 +60,12 @@
                         (message "installing plugin " (car p))
                         (shell-command (concat  "git clone " (cadr p) " " (car p))
                                        path)
-                        (byte-recompile-directory (concat-path path (car p))))
+                        (byte-recompile-directory (concat-path path (car p)) 0))
                        ((%url-is-github-p (cadr p))
                         (cd-absolute path)
                         (message "installing %s from github " (car p))
                         (shell-command (concat "git clone git://github.com/" (cadr p) " " (car p)))
-                        (byte-recompile-directory (concat-path path (car p)))))))
+                        (byte-recompile-directory (concat-path path (car p)) 0)))))
            packages))
 
 

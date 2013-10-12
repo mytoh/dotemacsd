@@ -1,5 +1,5 @@
 ;;; -*- coding: utf-8 -*-
-;;;; personal initialize
+;;; personal initialize
 
 ;;;; user elisps
 (my-add-to-load-path (concat user-emacs-directory "elisp"))
@@ -48,7 +48,7 @@
 ;;;; change yes-no to y-n
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;;;; show imagesnabnab
+;;;; show images
 (auto-image-file-mode 1)
 
 ;;;; highlight region
@@ -113,7 +113,8 @@
 
 ;;;; backup and autosave
 ;; disable backup
-(enable-option backup-inhibited)
+;; (enable-option backup-inhibited)
+(setq make-backup-files nil)
 
 ;;;; disable autosave
 (disable-option auto-save-default)

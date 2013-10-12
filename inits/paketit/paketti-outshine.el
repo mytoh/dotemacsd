@@ -14,6 +14,7 @@
                       (org-defkey org-mode-map
                                   (kbd "M-<down>") 'outline-next-visible-heading)))
                'append)
+     (defvar outline-minor-mode-prefix "\M-#")
      (add-hook 'emacs-lisp-mode-hook 'outline-minor-mode)
      (add-hook 'scheme-mode-hook 'outline-minor-mode))
 

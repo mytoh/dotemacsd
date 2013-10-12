@@ -104,9 +104,9 @@
 
      (enable-option ac-dwim)
      (setq ac-auto-start 2)
-     (setq ac-delay 0.05)
-     (setq ac-quick-help-delay 0.5)
-     (setq ac-auto-show-menu 0.05)
+     ;; (setq ac-delay 0.05)
+     ;; (setq ac-quick-help-delay 0.5)
+     ;; (setq ac-auto-show-menu 0.05)
      (setq ac-ignore-case nil)
      (setq ac-use-menu-map 1)
      (setq ac-use-comphist t)

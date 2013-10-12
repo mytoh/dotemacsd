@@ -17,6 +17,7 @@
      (set-option helm-idle-delay             0.01)
      (set-option helm-input-idle-delay       0.01)
      (set-option helm-ff-lynx-style-map nil)
+     (disable-option helm-ff-transformer-show-only-basename)
      ;; disable auto completion
      ;; (setq helm-ff-auto-update-initial-value nil)
      (helm-mode 1)

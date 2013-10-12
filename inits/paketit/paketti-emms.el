@@ -1,5 +1,7 @@
 ;; emms
 (req 'emms-setup
+     (req 'emms-info-libtag
+          (setq emms-info-functions '(emms-info-libtag)))
      (emms-devel)
      (emms-default-players)
      ;; mode-line
@@ -10,7 +12,7 @@
            emms-mode-line-icon-color "blue")
      ;; playing time
      (emms-playing-time 1)
-     (setq emms-source-file-default-directory "~/local/var/musiikki")
+     (setq emms-source-file-default-directory "~/local/musiikki")
      (setq emms-repeat-playlist t)
      (setq emms-info-asynchronously t)
      (setq emms-info-auto-update t)

@@ -7,7 +7,6 @@
     lang-elisp
     lang-scheme
     lang-common-lisp
-    lang-csh
     kernel-mode
     lang-shell
     lang-cpp

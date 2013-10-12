@@ -1,7 +1,7 @@
  ;;; -*- coding: utf-8 -*-
 
 ;;;
-;;; builtins
+;;; ** builtins
 ;;;
 
 ;; save curosr position
@@ -32,7 +32,7 @@
 ;; (require 'paketti-erc)
 
 ;;;
-;;; package from repositories
+;;; ** package repositories
 ;;;
 
 ;; package.el
@@ -46,6 +46,8 @@
      (add-to-list 'package-archives '("SC" . "http://joseito.republika.pl/sunrise-commander/") t)
      (package-initialize))
 
+
+;;; ** package list
 
 ;; install packages
 (setq *my-paketti-list*
@@ -84,8 +86,9 @@
         ghc
         emms
         color-moccur
-        git-gutter
-        git-gutter-fringe
+        git-gutter+
+        ;; git-gutter
+        ;; git-gutter-fringe
         nyan-mode
         minimap
         ag
@@ -113,10 +116,8 @@
         shell-pop
         sunrise-commander
 
-        navi-mode
         pretty-mode
         pretty-mode-plus
-        unicode-progress-reporter
         clippy
         electric-case
         paredit
@@ -132,7 +133,7 @@
         anzu
         whitespace-cleanup-mode
         yascroll
-        list-packages-ext
+        charmap
         ))
 
 (defvar *my-paketti-list-prog-modes*
@@ -159,6 +160,7 @@
     grandshell-theme
     occidental-theme
     soft-charcoal-theme
+    alect-themes
     waher-theme
     ))
 (append-to-list *my-paketti-list* *my-paketti-list-colour-themes*)
@@ -189,7 +191,7 @@
     org-bullets
     outorg
     outshine
-    outline-magic
+    navi-mode
     orglink
     orglue
     ))
@@ -239,6 +241,7 @@
     paketti-haskell-mode
     paketti-popwin
     paketti-w3m
+    paketti-git-gutter+
     ;; paketti-git-gutter
     ;; paketti-git-gutter-fringe
     paketti-ghc
@@ -259,7 +262,6 @@
     ;; paketti-flycheck
     paketti-pretty-mode
     paketti-pretty-mode-plus
-    paketti-unicode-progress-reporter
     paketti-electric-case
     paketti-visual-regexp
     paketti-litable
@@ -272,13 +274,14 @@
     paketti-quickrun
     paketti-sudo-ext
     paketti-js3
-    paketti-navi-mode
     paketti-cl-lib-highlight
     paketti-anzu
     paketti-yascroll
-    paketti-list-packages-ext
     paketti-stumpwm-mode
+    paketti-migemo
+    paketti-charmap
     ;; paketti-shell-pop
+
     ))
 
 (defvar *my-paketit-list-helm*
@@ -295,11 +298,10 @@
     ;; paketti-org-bullets
     paketti-outorg
     paketti-outshine
+    paketti-navi-mode
     paketti-orglink
     ))
 (append-to-list init-paketit *my-paketit-list-org*)
-
-
 
 
 (mapc #'require init-paketit)
@@ -319,6 +321,5 @@
 
 ;; multi-term
 ;;(req 'multi-term)
-
 
 (provide 'init-paketti)

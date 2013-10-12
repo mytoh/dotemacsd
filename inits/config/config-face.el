@@ -2,7 +2,8 @@
 (progn
 
   ;; ** colour-theme
-  (load-theme 'molokai t)
+  (if (not (eq (window-system) nil))
+  (load-theme 'molokai t)  )
 
   ;; cursor shape
   (add-to-list 'default-frame-alist '(cursor-type . hbar))
@@ -26,8 +27,10 @@
 
   (cl-defun set-normal-font ()
     (cond ((eq window-system nil) nil)
-          ((font-existsp "Droid Sans")
-           (set-face-attribute 'default nil :height 90 :font "Droid Sans"))
+          ((font-existsp "Inconsolata")
+           (set-face-attribute 'default nil :height 90 :font "Inconsolata"))
+          ((font-existsp "Droid Sans Mono")
+           (set-face-attribute 'default nil :height 80 :font "Droid Sans Mono"))
           ((font-existsp "Source Code Pro")
            (set-face-attribute 'default nil :height 90 :font "Source Code Pro"))
           ((font-existsp "Ricty")
@@ -41,6 +44,7 @@
           ((font-existsp "Neep")
            (set-face-attribute 'default nil :height 80 :font "Neep"))))
   (set-normal-font)
+
 
   (cl-defun set-japanese-fontset-font ()
     (cond ((eq window-system nil) nil)
