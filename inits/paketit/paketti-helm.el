@@ -26,10 +26,6 @@
 ;; helm-themes
 (req 'helm-themes)
 
-;; helm-c-moccur
-(req 'color-moccur
-     (req 'helm-c-moccur))
-
 ;; helm-c-yasnippet
 (req 'helm-c-yasnippet)
 
@@ -54,7 +50,8 @@
                          :foreground "#bbebfb" :background nil))
 
 ;; ag
-(req 'helm-ag)
+(req 'helm-ag
+     (setq helm-ag-source-type 'file-line))
 
 ;; cmd-t
 ;; (req 'helm-cmd-t

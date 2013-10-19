@@ -55,7 +55,18 @@
 (transient-mark-mode 1)
 
 ;;;; highlight current line
-(enable-option global-hl-line-mode)
+(defface hlline-face
+  '((((class color)
+      (background dark))
+     (:background "dark slate gray"))
+    (((class color)
+      (background light))
+     (:background "#b8fbb9"))
+    (t
+     ()))
+  "*Face used by hl-line.")
+(setq hl-lineface 'hlline-face)
+(global-hl-line-mode)
 
 ;;;; display keys
 (set-option echo-keystrokes 0.1)
@@ -112,22 +123,16 @@
 (disable-option split-width-threshold)
 
 ;;;; backup and autosave
-;; disable backup
-;; (enable-option backup-inhibited)
-(setq make-backup-files nil)
-
-;;;; disable autosave
-(disable-option auto-save-default)
-;;;; delete auto save file when exit
-(enable-option delete-auto-save-files)
-
-;; (setq auto-save-file-name-transforms
-;;       `((".*" ,temporary-file-directory t)))
-;; (setq backup-directory-alist
-;;       `((".*" . ,temporary-file-directory)))
+(defvar backup-directory (expand-file-name (concat user-emacs-directory "backups")))
+(defvar autosave-directory (expand-file-name (concat user-emacs-directory "autosaves")))
+(setq backup-directory-alist
+      `((".*" . ,backup-directory)))
+(setq auto-save-list-file-prefix autosave-directory)
+(setq auto-save-file-name-transforms
+      `((".*" ,autosave-directory t)))
 
 ;; save more recent files
-(set-option recentf-max-saved-items 1000)
+(set-option recentf-max-saved-items 10000)
 ;;;; recentf exclude
 (set-option recentf-exclude `(,(rx  ".el.gz" string-end) "archive-contents$"))
 ;;;; don't record symbolic link file name

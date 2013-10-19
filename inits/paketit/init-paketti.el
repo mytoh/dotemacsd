@@ -91,7 +91,6 @@
         ;; git-gutter-fringe
         nyan-mode
         minimap
-        ag
         eshell-manual
         hackernews
         twittering-mode
@@ -134,7 +133,9 @@
         whitespace-cleanup-mode
         yascroll
         charmap
-        ))
+        project-explorer
+        highlight-unique-symbol
+        exec-path-from-shell))
 
 (defvar *my-paketti-list-prog-modes*
   '(stumpwm-mode
@@ -162,14 +163,15 @@
     soft-charcoal-theme
     alect-themes
     waher-theme
-    ))
+    clues-theme
+    ample-theme
+    ample-zen-theme))
 (append-to-list *my-paketti-list* *my-paketti-list-colour-themes*)
 
 (defvar *my-paketti-list-helm*
   '(helm
     helm-git
     helm-themes
-    helm-c-moccur
     helm-c-yasnippet
     helm-descbinds
     helm-gist
@@ -220,13 +222,13 @@
     paketti-tumblesocks
     paketti-circe
     paketti-google-translate
-    paketti-multiple-cursors
     paketti-guide-key
     paketti-dired
     ;; paketti-dired+
     paketti-image-dired+
     ;; paketti-dired-single
     paketti-expand-region
+    paketti-multiple-cursors
     paketti-rainbow-delimiters
     paketti-auto-complete
     paketti-tabbar
@@ -245,7 +247,6 @@
     ;; paketti-git-gutter
     ;; paketti-git-gutter-fringe
     paketti-ghc
-    paketti-ag
     paketti-yasnippet
     paketti-flymake
     paketti-twittering-mode
@@ -278,8 +279,11 @@
     paketti-anzu
     paketti-yascroll
     paketti-stumpwm-mode
-    paketti-migemo
+    ;; paketti-migemo
     paketti-charmap
+    paketti-minimap
+    paketti-highlight-unique-symbol
+    ;; paketti-exec-path-from-shell
     ;; paketti-shell-pop
 
     ))

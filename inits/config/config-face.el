@@ -2,8 +2,11 @@
 (progn
 
   ;; ** colour-theme
-  (if (not (eq (window-system) nil))
-  (load-theme 'molokai t)  )
+  (setq solarized-termcolors 256)
+  (if (window-system)
+      (load-theme 'solarized-dark t))
+    
+
 
   ;; cursor shape
   (add-to-list 'default-frame-alist '(cursor-type . hbar))

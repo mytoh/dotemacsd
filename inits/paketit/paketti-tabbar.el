@@ -3,7 +3,7 @@
      ;; http://d.hatena.ne.jp/alfad/20100425/1272208744
      ;; http://idita.blog11.fc2.com/blog-entry-810.html
      (setq tabbar-cycle-scope 'tabs)
-     (setq tabbar-use-images 1)
+     (setq tabbar-use-images nil)
      (tabbar-mode t)
      ;; disbale buttons no left side
      (dolist (btn '(tabbar-home-button
