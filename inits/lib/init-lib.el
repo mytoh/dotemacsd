@@ -1,5 +1,5 @@
 
 (require 'lib-util)
-(require 'lib-vendor)
+(require 'vendle)
 
 (provide 'init-lib)

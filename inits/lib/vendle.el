@@ -1,6 +1,6 @@
 
-;; (eval-when-compile
-;;   (require 'cl-lib))
+(eval-when-compile
+  (require 'cl-lib))
 
 ;;; internal functions
 
@@ -25,14 +25,14 @@
 
 ;;; utilily functions
 
-(unless (boundp '*user-emacs-vendor-directory)
-  (setq *user-emacs-vendor-directory* (expand-file-name (concat-path user-emacs-directory (file-name-as-directory "vendor")))))
+(unless (boundp '*user-emacs-vendle-directory)
+  (setq *user-emacs-vendle-directory* (expand-file-name (concat-path user-emacs-directory (file-name-as-directory "vendle")))))
 
-(cl-defun my-vendor-initialize ()
-  (unless (file-exists-p *user-emacs-vendor-directory*)
-    (make-directory *user-emacs-vendor-directory*)))
+(cl-defun vendle-initialize ()
+  (unless (file-exists-p *user-emacs-vendle-directory*)
+    (make-directory *user-emacs-vendle-directory*)))
 
-(cl-defmacro my-vendor-update-packages (path)
+(cl-defmacro vendle-update-packages (path)
   `(when (file-exists-p ,path)
      (cl-letf ((paths (directory-files ,path t "[^\.]")))
        (cl-labels ((directory-is-git-p (p)
@@ -42,15 +42,15 @@
                                    (not (file-symlink-p d)))
                           (progn
                             (cd-absolute d)
-                            (message "updating vendor plugin %s.." d)
+                            (message "updating vendle package %s.." d)
                             (shell-command "git pull")
                             (cd-absolute user-emacs-directory)
                             (byte-recompile-directory d 0)
-                            (message "updating vendor plugin %s..done" d))))
+                            (message "updating vendle package %s..done" d))))
                     paths)))))
 
 
-(cl-defun my-vendor-install-packages (packages path)
+(cl-defun vendle-install-packages (packages path)
   (cl-mapc #'(lambda (p)
                (if (not (file-exists-p path))
                    (make-directory path))
@@ -69,4 +69,4 @@
            packages))
 
 
-(provide 'lib-vendor)
+(provide 'vendle)

@@ -1,11 +1,11 @@
  ;;; -*- coding: utf-8 -*-
 
 ;;; plugin directory
-(setq *user-emacs-vendor-directory* (expand-file-name (concat user-emacs-directory (file-name-as-directory "vendor"))))
+(setq *user-emacs-vendle-directory* (expand-file-name (concat user-emacs-directory (file-name-as-directory "vendle"))))
 
-;;; plugins under vendor directory
+;;; plugins under vendle directory
 ;; github repositories
-(cl-defun *my-vendor-packages* ()
+(cl-defun *my-vendle-packages* ()
   '(("emacs-powerline" "jonathanchu/emacs-powerline")
     ("nyan-mode" "TeMPOraL/nyan-mode")
     ("highlight-sexp" "daimrod/highlight-sexp")
@@ -17,7 +17,6 @@
     ("outxxtra" "tj64/outxxtra")
     ("hyperplane-theme" "sabof/hyperplane-theme")
     ("zone-matrix" "ober/zone-matrix")
-    ("emacs-highlight-unique-symbol" "hitode909/emacs-highlight-unique-symbol")
     ("flatline-el" "mytoh/flatline-el")
     ("fish-mode" "mytoh/fish-mode")
     ("helm-ypv" "mytoh/helm-ypv")
@@ -25,20 +24,20 @@
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")
     ))
 
-;; initialize vendor
-(my-vendor-initialize)
+;; initialize vendle
+(vendle-initialize)
 
 ;; install packages
-(my-vendor-install-packages
- (*my-vendor-packages*)
- *user-emacs-vendor-directory*)
+(vendle-install-packages
+ (*my-vendle-packages*)
+ *user-emacs-vendle-directory*)
 
 
 ;; update plugins
-;; (my-vendor-update-packages *user-emacs-vendor-directory*)
+;; (vendle-update-packages *user-emacs-vendle-directory*)
 
 ;; add to load-path
-(add-subdirs-to-load-path *user-emacs-vendor-directory*)
+(add-subdirs-to-load-path *user-emacs-vendle-directory*)
 
 
 ;; (nyan-mode t)
@@ -85,15 +84,11 @@
 ;; hyperplane theme
 (add-to-list 'custom-theme-load-path
              (expand-file-name (concat-path user-emacs-directory
-                                            "vendor"
+                                            "vendle"
                                             "hyperplane-theme")))
 
 ;; fish-mode
 (req 'fish-mode)
-
-;; highlight unique symbol
-;;(req 'highlight-unique-symbol
-;;     (highlight-unique-symbol t))
 
 ;; zone matrix
 ;; (req 'zone-settings)
@@ -126,4 +121,4 @@
 
 (req 'helm-ypv)
 
-(provide 'config-vendor)
+(provide 'config-vendle)
