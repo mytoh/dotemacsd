@@ -4,8 +4,12 @@
      ;; optins for ls
      ;; (set-option dired-listing-switches "-L")
 
+     ;; diredを2つのウィンドウで開いている時に、デフォルトの移動orコピー先をもう一方のdiredで開いているディレクトリにする
+     (setq dired-dwim-target t)
+
      ;; dired-find-alternate-file の有効化
      (put 'dired-find-alternate-file 'disabled nil)
+
 
      ;; ファイルなら別バッファで、ディレクトリなら同じバッファで開く
      (cl-defun dired-open-in-accordance-with-situation ()
