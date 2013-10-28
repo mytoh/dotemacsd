@@ -28,11 +28,11 @@
 (unless (boundp '*user-emacs-vendle-directory)
   (setq *user-emacs-vendle-directory* (expand-file-name (concat-path user-emacs-directory (file-name-as-directory "vendle")))))
 
-(cl-defun vendle-initialize ()
+(cl-defun vendle:initialize ()
   (unless (file-exists-p *user-emacs-vendle-directory*)
     (make-directory *user-emacs-vendle-directory*)))
 
-(cl-defmacro vendle-update-packages (path)
+(cl-defmacro vendle:update-packages (path)
   `(when (file-exists-p ,path)
      (cl-letf ((paths (directory-files ,path t "[^\.]")))
        (cl-labels ((directory-is-git-p (p)
@@ -50,7 +50,7 @@
                     paths)))))
 
 
-(cl-defun vendle-install-packages (packages path)
+(cl-defun vendle:install-packages (packages path)
   (cl-mapc #'(lambda (p)
                (if (not (file-exists-p path))
                    (make-directory path))

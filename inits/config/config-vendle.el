@@ -25,16 +25,16 @@
     ))
 
 ;; initialize vendle
-(vendle-initialize)
+(vendle:initialize)
 
 ;; install packages
-(vendle-install-packages
+(vendle:install-packages
  (*my-vendle-packages*)
  *user-emacs-vendle-directory*)
 
 
 ;; update plugins
-;; (vendle-update-packages *user-emacs-vendle-directory*)
+;; (vendle:update-packages *user-emacs-vendle-directory*)
 
 ;; add to load-path
 (add-subdirs-to-load-path *user-emacs-vendle-directory*)
