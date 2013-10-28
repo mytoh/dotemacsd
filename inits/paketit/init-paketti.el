@@ -77,6 +77,7 @@
         redo+
         yasnippet
         yasnippet-bundle
+        mew
         w3m
         smartparens
         dash
@@ -135,7 +136,9 @@
         charmap
         project-explorer
         highlight-unique-symbol
-        exec-path-from-shell))
+        exec-path-from-shell
+        auto-auto-indent
+        all-ext))
 
 (defvar *my-paketti-list-prog-modes*
   '(stumpwm-mode
@@ -283,6 +286,9 @@
     paketti-charmap
     paketti-minimap
     paketti-highlight-unique-symbol
+    paketti-project-explorer
+    paketti-auto-auto-indent
+    paketti-all-ext
     ;; paketti-exec-path-from-shell
     ;; paketti-shell-pop
 
