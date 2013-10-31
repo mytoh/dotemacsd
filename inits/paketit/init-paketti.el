@@ -138,6 +138,8 @@
         highlight-unique-symbol
         exec-path-from-shell
         auto-auto-indent
+        perspective
+        workgroups2
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
@@ -147,6 +149,8 @@
     haskell-mode
     js3-mode
     vala-mode
+    conkeror-minor-mode
+    csharp-mode
     ))
 (append-to-list *my-paketti-list* *my-paketti-list-prog-modes* )
 
@@ -227,9 +231,7 @@
     paketti-google-translate
     paketti-guide-key
     paketti-dired
-    ;; paketti-dired+
     paketti-image-dired+
-    ;; paketti-dired-single
     paketti-expand-region
     paketti-multiple-cursors
     paketti-rainbow-delimiters
@@ -239,7 +241,6 @@
     paketti-projectile
     paketti-project-persist
     paketti-emms
-    ;; paketti-cursor-chg
     paketti-suomalainen-kalenteri
     paketti-isearch+
     paketti-info+
@@ -247,23 +248,18 @@
     paketti-popwin
     paketti-w3m
     paketti-git-gutter+
-    ;; paketti-git-gutter
-    ;; paketti-git-gutter-fringe
     paketti-ghc
     paketti-yasnippet
     paketti-flymake
     paketti-twittering-mode
     paketti-highlight-indentation
     paketti-coffee-mode
-    ;; paketti-auto-highlight-symbol
     paketti-undo-tree
     paketti-direx
     paketti-magit
     paketti-lua-mode
     paketti-vala-mode
-    ;; paketti-magit-commit-training-wheels
     paketti-page-break-lines
-    ;; paketti-flycheck
     paketti-pretty-mode
     paketti-pretty-mode-plus
     paketti-electric-case
@@ -282,20 +278,31 @@
     paketti-anzu
     paketti-yascroll
     paketti-stumpwm-mode
-    ;; paketti-migemo
     paketti-charmap
     paketti-minimap
     paketti-highlight-unique-symbol
     paketti-project-explorer
     paketti-auto-auto-indent
     paketti-all-ext
+    paketti-auto-highlight-symbol
+    paketti-conkeror-minor-mode
+    paketti-csharp-mode
+    ;; paketti-workgroups2
+    ;; paketti-perspective
     ;; paketti-exec-path-from-shell
     ;; paketti-shell-pop
-
+    ;; paketti-git-gutter
+    ;; paketti-dired+
+    ;; paketti-dired-single
+    ;; paketti-cursor-chg
+    ;; paketti-git-gutter-fringe
+    ;; paketti-magit-commit-training-wheels
+    ;; paketti-flycheck
+    ;; paketti-migemo
     ))
 
 (defvar *my-paketit-list-helm*
-  '(      ;; helm
+  '(;; helm
     paketti-helm
     paketti-helm-delicious
     paketti-helm-helm-commands
