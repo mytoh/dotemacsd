@@ -16,6 +16,11 @@
 ;;;; don't ask to leave secure page
 (setq w3m-confirm-leaving-secure-page nil)
 
+;;;; download directory
+(let ((dir (expand-file-name "~/local/latukset")))
+  (when (file-directory-p dir)
+    (setq w3m-default-save-directory dir)))
+
 
 ;;;; use favicon
 (setq w3m-use-favicon t)
