@@ -32,9 +32,9 @@
      (set-face-attribute 'tabbar-separator nil
                          :background (face-background 'default)
                          :height 60)
-     ;; firefox keybind
-     (global-set-key (kbd "M-]") 'tabbar-forward)  ; 次のタブ
+
      (global-set-key (kbd "M-[") 'tabbar-backward) ; 前のタブ
+     (global-set-key (kbd "M-]") 'tabbar-forward)  ; 次のタブ
      )
 
 (provide 'paketti-tabbar)

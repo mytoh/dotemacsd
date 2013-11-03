@@ -25,5 +25,4 @@
 
      )
 
-
 (provide 'paketti-auto-complete)

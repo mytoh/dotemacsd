@@ -20,7 +20,7 @@
     ("flatline-el" "mytoh/flatline-el")
     ("fish-mode" "mytoh/fish-mode")
     ("helm-ypv" "mytoh/helm-ypv")
-    ("auto-complete" "auto-complete/auto-complete")
+    ("helm-dictionary" "emacs-helm/helm-dictionary")
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")
     ))
 
@@ -83,9 +83,7 @@
 
 ;; hyperplane theme
 (add-to-list 'custom-theme-load-path
-             (expand-file-name (concat-path user-emacs-directory
-                                            "vendle"
-                                            "hyperplane-theme")))
+             (expand-file-name "hyperplane-theme" *user-emacs-vendle-directory*))
 
 ;; fish-mode
 (req 'fish-mode)
@@ -93,31 +91,11 @@
 ;; zone matrix
 ;; (req 'zone-settings)
 
-(req 'auto-complete-config
-     (ac-config-default)
-     (global-auto-complete-mode 1)
 
-     (enable-option ac-dwim)
-     (setq ac-auto-start 2)
-     ;; (setq ac-delay 0.05)
-     ;; (setq ac-quick-help-delay 0.5)
-     ;; (setq ac-auto-show-menu 0.05)
-     (setq ac-ignore-case nil)
-     (setq ac-use-menu-map 1)
-     (setq ac-use-comphist t)
-     (enable-option ac-use-fuzzy)
 
-     (set-face-attribute 'ac-selection-face nil
-                         :background "#ab4223")
-     (set-face-attribute 'ac-candidate-face nil
-                         :foreground "#dfdfe1"
-                         :background "#393939")
-
-     (req 'ac-ja)
-     (add-to-list 'ac-modes 'eshell-mode)
-     ;; elisp mode
-     (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
-     )
+(req 'helm-dictionary
+     (setq helm-dictionary-database (expand-file-name "dict/en-fi.ding"
+                                                      user-emacs-directory)))
 
 (req 'helm-ypv)
 

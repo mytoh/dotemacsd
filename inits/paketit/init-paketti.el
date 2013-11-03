@@ -140,6 +140,8 @@
         auto-auto-indent
         perspective
         workgroups2
+        smartscan
+        multi-term
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
@@ -287,6 +289,8 @@
     paketti-auto-highlight-symbol
     paketti-conkeror-minor-mode
     paketti-csharp-mode
+    paketti-smartscan
+    paketti-multi-term
     ;; paketti-workgroups2
     ;; paketti-perspective
     ;; paketti-exec-path-from-shell
@@ -335,8 +339,5 @@
 
 ;;; hackernews
 (req 'hackernews)
-
-;; multi-term
-;;(req 'multi-term)
 
 (provide 'init-paketti)

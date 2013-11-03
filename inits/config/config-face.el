@@ -75,7 +75,8 @@
             (r10 "-misc-fixed-medium-r-normal--10-90-75-75-c-50-jisx0201.1976-0")
             (r10b "-misc-fixed-bold-r-normal--10-90-75-75-c-50-jisx0201.1976-0")
             (r10i "-misc-fixed-medium-i-normal--10-90-75-75-c-50-jisx0201.1976-0")
-            (r10bi "-misc-fixed-bold-i-normal--10-90-75-75-c-50-jisx0201.1976-0"))
+            (r10bi "-misc-fixed-bold-i-normal--10-90-75-75-c-50-jisx0201.1976-0")
+            (mplus-fxd "-mplus-fxd-normal-normal-normal-*-10-*-*-*-c-60-iso10646-1"))
     (create-fontset-from-fontset-spec
      "-misc-fixed-medium-r-normal--10-*-*-*-*-*-fontset-k10")
 
@@ -91,6 +92,10 @@
     (set-fontset-font  "fontset-k10"
                        'katakana-jisx0201
                        r10)
+
+    (set-fontset-font "fontset-k10"
+                      'han
+                      mplus-fxd)
 
     (set-default-font "fontset-k10")
     ))
