@@ -127,7 +127,6 @@
         ace-jump-mode
         ;; auto-complete-clang-async
         mentor
-        color-theme-approximate
         cask
         cl-lib-highlight
         anzu
@@ -276,7 +275,6 @@
     paketti-mentor
     paketti-fiplr
     paketti-melpa-upstream-visit
-    paketti-color-theme-approximate
     paketti-quickrun
     paketti-sudo-ext
     paketti-js3
