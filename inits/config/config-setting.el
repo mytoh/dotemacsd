@@ -22,7 +22,8 @@
 (enable-option vc-follow-symlinks)
 
 ;;;; encodings
-(prefer-coding-system 'utf-8-unix)
+(set-language-environment  'utf-8)
+(prefer-coding-system 'utf-8)
 
 ;;;; start server
 (req 'server
@@ -123,8 +124,8 @@
 (disable-option split-width-threshold)
 
 ;;;; backup and autosave
-(defvar backup-directory (expand-file-name (concat user-emacs-directory "backups")))
-(defvar autosave-directory (expand-file-name (concat user-emacs-directory "autosaves")))
+(defvar backup-directory (expand-file-name "backups" user-emacs-directory))
+(defvar autosave-directory (expand-file-name "autosaves" user-emacs-directory))
 (setq backup-directory-alist
       `((".*" . ,backup-directory)))
 (setq auto-save-list-file-prefix autosave-directory)
