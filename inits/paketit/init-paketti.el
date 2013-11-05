@@ -142,6 +142,7 @@
         workgroups2
         smartscan
         multi-term
+        free-keys
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
@@ -158,6 +159,7 @@
 
 (defvar *my-paketti-list-colour-themes*
   '(;; themes
+    assemblage-theme
     molokai-theme
     monokai-theme
     late-night-theme
@@ -174,6 +176,8 @@
     waher-theme
     clues-theme
     ample-theme
+    ir-black-theme
+    purple-haze-theme
     ample-zen-theme))
 (append-to-list *my-paketti-list* *my-paketti-list-colour-themes*)
 
@@ -290,11 +294,11 @@
     paketti-conkeror-minor-mode
     paketti-csharp-mode
     paketti-smartscan
-    paketti-multi-term
+    ;; paketti-multi-term
     ;; paketti-workgroups2
     ;; paketti-perspective
     ;; paketti-exec-path-from-shell
-    ;; paketti-shell-pop
+    paketti-shell-pop
     ;; paketti-git-gutter
     ;; paketti-dired+
     ;; paketti-dired-single
