@@ -20,6 +20,7 @@
     ("flatline-el" "mytoh/flatline-el")
     ("fish-mode" "mytoh/fish-mode")
     ("helm-ypv" "mytoh/helm-ypv")
+    ("company-scheme" "mytoh/company-scheme")
     ("helm-dictionary" "emacs-helm/helm-dictionary")
     ;; ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk")
     ))
@@ -97,6 +98,16 @@
      (setq helm-dictionary-database (expand-file-name "dict/en-fi.ding"
                                                       user-emacs-directory)))
 
-(req 'helm-ypv)
+(req 'helm-ypv
+     (setq helm-ypv-local-address "peca:7144")
+     ;; (add-to-list 'helm-ypv-yp-urls '(dan1 "dandan626.web.fc2.com"))
+     ;; (add-to-list 'helm-ypv-yp-urls '(dan2 "www27.atpages.jp/dandan626"))
+
+     (mytoh:define-global-key (kbd "y") #'helm-ypv)
+     )
+
+
+(req 'company-scheme
+     (add-to-list 'company-backends #'company-scheme))
 
 (provide 'config-vendle)
