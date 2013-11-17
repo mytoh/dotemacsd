@@ -32,7 +32,7 @@
 ;; (require 'paketti-erc)
 
 ;;;
-;;; ** package repositories
+;;; package repositories
 ;;;
 
 ;; package.el
@@ -47,7 +47,7 @@
      (package-initialize))
 
 
-;;; ** package list
+;;; package list
 
 ;; install packages
 (setq *my-paketti-list*
@@ -142,6 +142,8 @@
         smartscan
         multi-term
         free-keys
+        zone-matrix
+        company
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
@@ -159,6 +161,8 @@
 (defvar *my-paketti-list-colour-themes*
   '(;; themes
     assemblage-theme
+    anti-zenburn-theme
+    busybee-theme
     molokai-theme
     monokai-theme
     late-night-theme
@@ -177,6 +181,7 @@
     ample-theme
     ir-black-theme
     purple-haze-theme
+    flatland-theme
     ample-zen-theme))
 (append-to-list *my-paketti-list* *my-paketti-list-colour-themes*)
 
@@ -195,6 +200,8 @@
     helm-delicious
     helm-helm-commands
     helm-orgcard
+    helm-swoop
+    helm-company
     ))
 (append-to-list *my-paketti-list* *my-paketti-list-helm*)
 
@@ -240,7 +247,8 @@
     paketti-expand-region
     paketti-multiple-cursors
     paketti-rainbow-delimiters
-    paketti-auto-complete
+    ;; paketti-auto-complete
+    paketti-company-mode
     paketti-tabbar
     paketti-smartparens
     paketti-projectile
@@ -292,6 +300,7 @@
     paketti-conkeror-minor-mode
     paketti-csharp-mode
     paketti-smartscan
+    ;; paketti-zone-matrix
     ;; paketti-multi-term
     ;; paketti-workgroups2
     ;; paketti-perspective
@@ -313,6 +322,8 @@
     paketti-helm-delicious
     paketti-helm-helm-commands
     paketti-helm-orgcard
+    paketti-helm-swoop
+    paketti-helm-company
     ))
 (append-to-list init-paketit *my-paketit-list-helm*)
 
@@ -325,7 +336,6 @@
     paketti-orglink
     ))
 (append-to-list init-paketit *my-paketit-list-org*)
-
 
 (mapc #'require init-paketit)
 

@@ -2,8 +2,9 @@
 (req 'smartparens
      (req 'smartparens-config)
 
-
      (smartparens-global-mode t)
+
+     ;; (smartparens-global-strict-mode t)
 
      ;; highlights matching pairs
      (show-smartparens-global-mode t)
@@ -46,23 +47,28 @@
        (execute-kbd-macro (kbd "(")))
      (define-key sp-keymap (kbd "M-(") 'my-sp-wrap-with-paren)
 
+
      ;; lisp modes
-     (sp-with-modes '(emacs-lisp-mode
-                      inferior-emacs-lisp-mode
-                      lisp-interaction-mode
-                      scheme-mode
-                      lisp-mode
-                      eshell-mode
-                      slime-repl-mode
-                      clojure-mode
-                      common-lisp-mode)
+     (defvar my-lisp-modes
+       '(emacs-lisp-mode
+         inferior-emacs-lisp-mode
+         lisp-interaction-mode
+         scheme-mode
+         lisp-mode
+         eshell-mode
+         slime-repl-mode
+         clojure-mode
+         common-lisp-mode))
+     (sp-with-modes my-lisp-modes
        (sp-local-pair "(" nil :bind "M-("))
 
-
+     ;; (add-hook 'emacs-lisp-mode #'turn-on-smartparens-strict-mode)
+     ;; (add-hook 'scheme-mode #'smartparens-strict-mode)
 
      ;; (set-face-attribute 'sp-pair-overlay-face nil
      ;;                     :background "#fdf6e3"
      ;;                     :foreground "#073642")
+
 
      )
 

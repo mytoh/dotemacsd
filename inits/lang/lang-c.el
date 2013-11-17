@@ -1,10 +1,11 @@
 
 (add-hook 'c-mode-common-hook
           #'(lambda ()
-              (c-set-style "bsd")
+              ;; (c-set-style "bsd")
               (setq
-               c-basic-offset 4
-               indent-tabs-mode nil)))
+               ;; c-basic-offset 4
+               indent-tabs-mode nil)
+              ))
 
 (add-hook 'c-mode-common-hook
           #'(lambda ()

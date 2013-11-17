@@ -4,9 +4,9 @@
      (ac-config-default)
      (global-auto-complete-mode 1)
      (enable-option ac-dwim)
+     (setq ac-use-menu-map 1)
      ;; (setq ac-delay 0.1)
      ;; (setq ac-auto-show-menu 0.1)
-     ;; (setq ac-use-menu-map 1)
      ;; (enable-option ac-use-fuzzy)
 
      (set-face-attribute 'ac-selection-face nil

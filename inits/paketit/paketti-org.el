@@ -13,18 +13,18 @@
   "Face used for the line delimiting the end of source blocks")
 
 (add-hook 'org-mode-hook
-          (lambda ()
-            (setq org-src-fontify-natively 1)
-            (org-babel-do-load-languages 'org-babel-load-languages
-                                         '((emacs-lisp . t)
-                                           (sh . t)
-                                           (scheme . t)
-                                           (lisp . t)))))
+          #'(lambda ()
+              (setq org-src-fontify-natively 1)
+              (org-babel-do-load-languages 'org-babel-load-languages
+                                           '((emacs-lisp . t)
+                                             (sh . t)
+                                             (scheme . t)
+                                             (lisp . t)))))
 
 
 (cl-defun my-org-add-before-save-hook
-  ;; add-hook hook function &optional append local
-  (add-hook 'before-save-hook 'org-indent-indent-buffer nil t))
+    ;; add-hook hook function &optional append local
+    (add-hook 'before-save-hook 'org-indent-indent-buffer nil t))
 
 (add-hook 'org-mode-hook #'my-org-add-before-save-hook)
 

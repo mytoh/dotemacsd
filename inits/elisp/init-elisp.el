@@ -27,6 +27,8 @@
     (font-lock-add-keywords 'shell-script-mode
                             `((,keyword-regexp 1 ',face-name)))))
 
+(req 'ninja-mode)
+
 
 
 ;; (req 'pretty-scheme
