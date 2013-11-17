@@ -33,4 +33,15 @@
 (global-set-key [remap kill-whole-line] 'smart-kill-whole-line)
 
 
+;;; my global map
+(defun mytoh:define-global-key (key func)
+  (cl-letf* ((prefix (kbd "C-c e"))
+             (keymap (concat prefix key)))
+    (define-key global-map keymap func)))
+
+
+(mytoh:define-global-key (kbd "p") #'package-list-packages)
+
+
+
 (provide 'config-key)
