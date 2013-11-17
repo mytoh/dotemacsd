@@ -1,8 +1,14 @@
 ;; * faces
+
 ;; ** colour-theme
-(setq solarized-termcolors 256)
-(if (window-system)
-    (load-theme 'solarized-dark t))
+(add-to-list 'custom-theme-load-path "~/.emacs.d/inits/themes" )
+(cond ((window-system)
+       (load-theme 'solarized-dark t))
+      (t
+       (setq solarized-degrade t)
+       (setq solarized-termcolors 256)
+       (load-theme 'monokai t)
+       ))
 
 
 
