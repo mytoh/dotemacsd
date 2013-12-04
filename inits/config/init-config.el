@@ -3,7 +3,6 @@
   '(config-setting
     config-key
     config-hook
-    config-vendle
     config-path
     config-face
     ))
