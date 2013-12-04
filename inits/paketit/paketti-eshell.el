@@ -47,22 +47,22 @@
 ;;; http://nishikawasasaki.hatenablog.com/entry/2012/09/12/233116
 ;;; auto-complete
 ;;; require 'auto-complete in paketti-auto-complete
-(require 'pcomplete)
+;; (require 'pcomplete)
 (cl-defun my-ac-eshell-mode ()
   (ac-define-source pcomplete
-    '((candidates . pcomplete-completions)))
+                    '((candidates . pcomplete-completions)))
   (setq ac-sources
         '(ac-source-pcomplete
           ac-source-filename
           ac-source-files-in-current-dir
           ac-source-words-in-buffer
           ac-source-dictionary)))
-(add-hook 'eshell-mode-hook
-          #'(lambda ()
-              (my-ac-eshell-mode)
-              ;; (define-key eshell-mode-map [(tab)] 'auto-complete)
-              ;; (define-key eshell-mode-map (kbd "C-i") 'auto-complete)
-              ))
+;; (add-hook 'eshell-mode-hook
+;;           #'(lambda ()
+;;               (my-ac-eshell-mode)
+;;               ;; (define-key eshell-mode-map [(tab)] 'auto-complete)
+;;               ;; (define-key eshell-mode-map (kbd "C-i") 'auto-complete)
+;;               ))
 
 ;;; alias
 (cl-defun my-eshell-hook-add-aliases ()
@@ -90,11 +90,12 @@
                 'helm-eshell-history)))
 
 ;;; helm complete
-(add-hook 'eshell-mode-hook
-          #'(lambda ()
-              (define-key eshell-mode-map
-                (kbd "M-n")
-                'helm-esh-pcomplete)))
+(req 'helm-eshell
+     (add-hook 'eshell-mode-hook
+               #'(lambda ()
+                   (define-key eshell-mode-map (kbd "C-i") 'helm-esh-pcomplete))))
+
+
 
 ;; load prompt settings
 (require 'paketti-eshell-prompt)

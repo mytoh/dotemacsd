@@ -5,10 +5,15 @@
      (global-set-key (kbd "C-c h") 'helm-mini)
      (global-set-key (kbd "M-x") 'helm-M-x)
      (global-set-key (kbd "C-c C-m") 'helm-M-x)
-     (global-set-key (kbd "C-x C-f") 'helm-find-files)
+
      (global-set-key (kbd "M-y") 'helm-show-kill-ring)
      (global-set-key (kbd "C-M-z") 'helm-resume)
+     (define-key global-map [remap find-file] 'helm-find-files)
+     (define-key global-map [remap occur] 'helm-occur)
      (global-set-key (kbd "C-x b") 'helm-buffers-list)
+     (define-key global-map [remap list-buffers] 'helm-buffers-list)
+
+
      (define-key helm-map (kbd "C-M-n") 'helm-next-source)
      (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
      (define-key helm-c-read-file-map (kbd "C-h") 'delete-backward-char)

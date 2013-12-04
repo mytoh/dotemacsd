@@ -1,6 +1,6 @@
 
 
-(defface my-eshell-pwd-face 
+(defface my-eshell-pwd-face
   '((t (:foreground "#93b8bb")))
   "eshell prompt current directory face")
 
@@ -19,16 +19,16 @@
    (my-eshell-propertize "λ" 'my-eshell-char-face)
    " "))
 
-;; remove highlight 
+;; remove highlight
 (setq eshell-highlight-prompt nil)
 
-(setq eshell-prompt-function 'my-eshell-prompt-function
-      eshell-prompt-regexp (concat "^"
-                                   "\\("
-                                   "[^\n]+"
-                                   "\\|"
-                                   "λ "
-                                   "\\)"))
+;; (setq eshell-prompt-function 'my-eshell-prompt-function
+;;       eshell-prompt-regexp (concat "^"
+;;                                    "\\("
+;;                                    "[^\n]+"
+;;                                    "\\|"
+;;                                    "λ "
+;;                                    "\\)"))
 
 
 (provide 'paketti-eshell-prompt)
