@@ -24,6 +24,8 @@
 ;;;; encodings
 (set-language-environment  'utf-8)
 (prefer-coding-system 'utf-8)
+(setq coding-system-for-read 'utf-8)
+(setq coding-system-for-write 'utf-8)
 
 ;;;; start server
 (req 'server
@@ -135,7 +137,8 @@
 ;; save more recent files
 (set-option recentf-max-saved-items 10000)
 ;;;; recentf exclude
-(set-option recentf-exclude `(,(rx  ".el.gz" string-end) "archive-contents$"))
+(defvar my-recentf-exclude `(,(rx  ".el.gz" string-end) "archive-contents$" "-autoloads.el$"))
+(set-option recentf-exclude my-recentf-exclude)
 ;;;; don't record symbolic link file name
 (enable-option find-file-visit-truename)
 
