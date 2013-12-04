@@ -64,10 +64,10 @@
        (req 'scheme-complete)
        (all-completions ac-target (car (scheme-current-env))))))
   "Source for scheme keywords.")
-(add-hook 'scheme-mode-hook
-          #'(lambda ()
-              (make-local-variable 'ac-sources)
-              (add-to-list 'ac-sources 'ac-source-scheme)))
+;; (add-hook 'scheme-mode-hook
+;;           #'(lambda ()
+;;               (make-local-variable 'ac-sources)
+;;               (add-to-list 'ac-sources 'ac-source-scheme)))
 
 ;; scheme mode recognition
 (cl-defun minun:add-scheme-mode (ext)
