@@ -1,8 +1,8 @@
 ;; * initialize
 
 ;; ** cl-lib
-(eval-when-compile 
-(require 'cl-lib))
+(eval-when-compile
+  (require 'cl-lib))
 
 ;; ** libs
 (add-to-list 'load-path (concat user-emacs-directory "inits/lib"))
@@ -23,5 +23,6 @@
 
 ;; ** elisp
 (require 'init-elisp)
+
 
 (provide 'init-load)

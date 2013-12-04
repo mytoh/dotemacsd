@@ -41,7 +41,7 @@
      (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
      (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
      (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-     (add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa/") t)
+     ;; (add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa/") t)
      (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
      (add-to-list 'package-archives '("SC" . "http://joseito.republika.pl/sunrise-commander/") t)
      (package-initialize))
@@ -144,6 +144,7 @@
         free-keys
         zone-matrix
         company
+        volatile-highlights
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
@@ -182,7 +183,23 @@
     ir-black-theme
     purple-haze-theme
     flatland-theme
-    ample-zen-theme))
+    deep-thought-theme
+    espresso-theme
+    gandalf-theme
+    gruber-darker-theme
+    inkpot-theme
+    ample-zen-theme
+    tronesque-theme
+    underwater-theme
+    base16-theme
+    tangotango-theme
+    calmer-forest-theme
+    jujube-theme
+    moe-theme
+    naquadah-theme
+    noctilux-theme
+    obsidian-theme
+    leuven-theme))
 (append-to-list *my-paketti-list* *my-paketti-list-colour-themes*)
 
 (defvar *my-paketti-list-helm*
@@ -202,12 +219,13 @@
     helm-orgcard
     helm-swoop
     helm-company
+    helm-dictionary
     ))
 (append-to-list *my-paketti-list* *my-paketti-list-helm*)
 
 (defvar *my-paketti-list-org*
   '(org
-    ;; org-magit
+    org-magit
     org-plus-contrib
     org-bullets
     outorg
@@ -324,11 +342,13 @@
     paketti-helm-orgcard
     paketti-helm-swoop
     paketti-helm-company
+    paketti-helm-dictionary
     ))
 (append-to-list init-paketit *my-paketit-list-helm*)
 
 (defvar *my-paketit-list-org*
   '(paketti-org
+    ;; paketti-org-plus-contrib
     ;; paketti-org-bullets
     paketti-outorg
     paketti-outshine
