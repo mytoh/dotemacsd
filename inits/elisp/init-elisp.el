@@ -18,12 +18,12 @@
      (add-to-list 'auto-mode-alist '("\\.tcshrc\\'" . csh-mode)))
 
 (cl-defun my-csh-add-keywords (face-name keyword-rules)
-  (let* ((keyword-list (mapcar #'(lambda (x)
-                                   (symbol-name (cdr x)))
-                               keyword-rules))
-         (keyword-regexp (concat "(\\("
-                                 (regexp-opt keyword-list)
-                                 "\\)[ \n]")))
+  (cl-letf* ((keyword-list (mapcar #'(lambda (x)
+                                       (symbol-name (cdr x)))
+                                   keyword-rules))
+             (keyword-regexp (concat "(\\("
+                                     (regexp-opt keyword-list)
+                                     "\\)[ \n]")))
     (font-lock-add-keywords 'shell-script-mode
                             `((,keyword-regexp 1 ',face-name)))))
 
@@ -36,28 +36,29 @@
      ;; initialize vendle
      (vendle:initialize)
 
-     (vendle:register '("emacs-powerline" "jonathanchu/emacs-powerline"))
-     (vendle:register '("nyan-mode" "TeMPOraL/nyan-mode"))
-     (vendle:register '("highlight-sexp" "daimrod/highlight-sexp"))
-     (vendle:register '("emux-el" "m2ym/emux-el"))
-     (vendle:register '("seijiseikana-el" "moriyamahiroshi/seijiseikana-el"))
+     (vendle:register "jonathanchu/emacs-powerline")
+     (vendle:register "TeMPOraL/nyan-mode")
+     (vendle:register "daimrod/highlight-sexp")
+     (vendle:register "m2ym/emux-el")
+     (vendle:register "moriyamahiroshi/seijiseikana-el")
 
-     (vendle:register '("eldoc-extension" "emacsmirror/eldoc-extension"))
-     (vendle:register '("mew" "emacsmirror/mew"))
-     (vendle:register '("navi2ch" "naota/navi2ch"))
-     (vendle:register '("outxxtra" "tj64/outxxtra"))
-     (vendle:register '("hyperplane-theme" "sabof/hyperplane-theme"))
-     (vendle:register '("zone-matrix" "ober/zone-matrix"))
-     (vendle:register '("flatline-el" "mytoh/flatline-el"))
-     (vendle:register '("fish-mode" "mytoh/fish-mode"))
-     (vendle:register '("helm-ypv" "mytoh/helm-ypv"))
-     (vendle:register '("company-scheme" "mytoh/company-scheme"))
+     (vendle:register "emacsmirror/eldoc-extension")
+     (vendle:register "emacsmirror/mew")
+     (vendle:register "naota/navi2ch")
+     (vendle:register "tj64/outxxtra")
+     (vendle:register "sabof/hyperplane-theme")
+     (vendle:register "ober/zone-matrix")
+     (vendle:register "mytoh/flatline-el")
+     (vendle:register "mytoh/fish-mode")
+     (vendle:register "mytoh/helm-ypv")
+     (vendle:register "mytoh/company-scheme")
+     (vendle:register "chrisdone/structured-haskell-mode"
+                      '(:path "elisp"))
      ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
 
      ;; install packages
      (vendle:install-packages
-      *vendle-package-list*
       *user-emacs-vendle-directory*)
 
      ;; update plugins
@@ -116,7 +117,6 @@
      ;; (req 'zone-settings)
 
 
-
      (req 'helm-ypv
           (setq helm-ypv-local-address "peca:7144")
           (add-to-list 'helm-ypv-yp-urls '(dan1 "dandan626.web.fc2.com"))
@@ -130,6 +130,8 @@
        '(req 'company-scheme
              (add-to-list 'company-backends 'company-scheme)))
 
+     (req 'shm
+          (add-hook 'haskell-mode-hook 'structured-haskell-mode))
      )
 
 

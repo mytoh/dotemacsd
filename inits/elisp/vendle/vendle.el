@@ -4,13 +4,13 @@
 
 ;;; internal functions
 
-(cl-defun vendle:source-git-p (url)
-  (cond ((or (string-match (rx "git://") url)
-             (string-match (rx ".git" (zero-or-one "/") line-end) url))
+(cl-defun vendle:source-git-p (source)
+  (cond ((or (string-match (rx "git://") source)
+             (string-match (rx ".git" (zero-or-one "/") line-end) source))
          t)
         (t nil)))
 
-(cl-defun vendle:source-github-p (url)
+(cl-defun vendle:source-github-p (source)
   (cond ((string-match
           (rx   line-start
                 (one-or-more (or (syntax symbol) (syntax word)))
@@ -18,7 +18,7 @@
                 (one-or-more (or (syntax symbol)
                                  (syntax word)))
                 line-end)
-          url)
+          source)
          t)
         (t nil)))
 
@@ -27,23 +27,32 @@
   (if (file-directory-p (expand-file-name ".git" p))
       t nil))
 
-
 ;;; utilily functions
 
+(cl-defun vendle:concat-path (&rest parts)
+  (cl-reduce #'(lambda (a b) (expand-file-name b a)) parts))
+
 ;;;; initialize
+
 (unless (boundp '*user-emacs-vendle-directory)
-  (defvar *user-emacs-vendle-directory* (expand-file-name (concat-path user-emacs-directory (file-name-as-directory "vendle")))))
+  (defvar *user-emacs-vendle-directory* (expand-file-name (vendle:concat-path user-emacs-directory (file-name-as-directory "vendle")))))
+
+(defvar *vendle-package-list* '())
 
 (cl-defun vendle:initialize ()
+  (setq *vendle-package-list* nil)
   (unless (file-exists-p *user-emacs-vendle-directory*)
     (make-directory *user-emacs-vendle-directory*)))
+
 
 ;;;; update
 
 (cl-defun vendle:update-packages (path)
   (when (file-exists-p path)
-    (cl-letf ((paths (directory-files path t "[^\.]")))
-      (cl-mapcar
+    (cl-letf ((paths (cl-mapcar
+                      #'(lambda (p) (vendle:concat-path path (vendle:package-name p)))
+                      *vendle-package-list*)))
+      (cl-mapc
        #'vendle:update-package
        paths))))
 
@@ -58,57 +67,77 @@
       (byte-recompile-directory path 0)
       (message "updating vendle package %s..done" path))))
 
-
 ;;;; install
 
-(cl-defun vendle:install-packages (packages path)
+(cl-defun vendle:install-packages (path)
   (cl-mapc
    (lambda (package)
      (vendle:install-package package path))
-   packages))
+   *vendle-package-list*))
 
 (cl-defun vendle:install-package (package path)
   (if (not (file-exists-p path))
       (make-directory path))
-  (unless (file-exists-p (concat-path path (car package)))
-    (cond ((vendle:source-git-p (cadr package))
-           (vendle:install-package-git package path))
-          ((vendle:source-github-p (cadr package))
-           (vendle:install-package-github package path)))))
+  (unless (file-exists-p (vendle:concat-path path (vendle:package-path package)))
+    (cond ((cl-equalp 'git (vendle:package-type package))
+           (vendle:install-package-git package path)))))
 
 (cl-defun vendle:install-package-git (package path)
   (cd-absolute path)
-  (message "installing plugin " (car package))
-  (shell-command (concat  "git clone " (cadr package) " " (car package))
+  (message "installing plugin %s" (vendle:package-name package))
+  (shell-command (concat  "git clone " (vendle:package-url package) " "
+                          (vendle:package-name package))
                  path)
-  (byte-recompile-directory (concat-path path (car package)) 0))
+  (byte-recompile-directory (vendle:concat-path path (vendle:package-path package)) 0))
 
-(cl-defun vendle:install-package-github (package path)
-  (cd-absolute path)
-  (message "installing %s from github " (car package))
-  (shell-command (concat "git clone git://github.com/" (cadr package) " " (car package)))
-  (byte-recompile-directory (concat-path path (car package)) 0))
-
-
-(defvar *vendle-package-list* '())
 
 ;;;; register
-(cl-defun vendle:register (source)
-  (cond ((vendle:source-git-p (cadr source))
-         (vendle:register-git source))
-        ((vendle:source-github-p (cadr source))
-         (vendle:register-github source))))
+(cl-defun vendle:register (source &optional info)
+  (cl-letf* ((package (vendle:make-package source info)))
+    (add-to-list 'load-path
+                 (expand-file-name (vendle:package-path package) *user-emacs-vendle-directory*))
+    (add-to-list '*vendle-package-list* package)))
 
-(cl-defun vendle:register-git (source)
-  (add-to-list 'load-path
-               (expand-file-name (car source) *user-emacs-vendle-directory*))
-  (add-to-list '*vendle-package-list* source))
+;;;; package
 
-(cl-defun vendle:register-github (source)
-  (add-to-list 'load-path
-               (expand-file-name (car source) *user-emacs-vendle-directory*))
+(cl-defstruct vendle:package
+  type name url path)
 
-  (add-to-list '*vendle-package-list* source))
+(cl-defun vendle:make-package (source info)
+  (cond ((vendle:source-github-p source)
+         (vendle:make-package-github source info))))
+
+(cl-defun vendle:make-package-github (source info)
+  (make-vendle:package :type 'git
+                       :name (vendle:make-package-name source info)
+                       :path (vendle:make-package-path source info)
+                       :url (cl-concatenate 'string "git://github.com/" source)))
+
+(cl-defun vendle:make-package-name (source info)
+  (cond ((vendle:source-github-p source)
+         (vendle:make-package-name-github source info))))
+
+(cl-defun vendle:make-package-name-github (source info)
+  (if info
+      (let ((name (cl-getf info :name)))
+        (if name
+            name
+          (cadr (split-string source "/"))))
+    (cadr (split-string source "/"))))
+
+(cl-defun vendle:make-package-path (source info)
+  (cond ((vendle:source-github-p source)
+         (vendle:make-package-path-github source info))))
+
+(cl-defun vendle:make-package-path-github (source info)
+  (if info
+      (let ((path (cl-getf info :path))
+            (name (vendle:make-package-name source info)))
+        (if path
+            (cl-concatenate 'string
+                            name  "/"  path)
+          name))
+    (vendle:make-package-name source info)))
 
 ;;; provide
 (provide 'vendle)
