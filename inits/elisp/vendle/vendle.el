@@ -11,16 +11,36 @@
         (t nil)))
 
 (cl-defun vendle:source-github-p (source)
-  (cond ((string-match
-          (rx   line-start
-                (one-or-more (or (syntax symbol) (syntax word)))
-                "/"
-                (one-or-more (or (syntax symbol)
-                                 (syntax word)))
-                line-end)
-          source)
+  (cond ((string-match (rx "github:" (submatch (+ (or (syntax word) (syntax symbol)))
+                                               "/"
+                                               (+ (or (syntax word) (syntax symbol)))))
+                       source)
+         t)
+        ((string-match (rx   line-start
+                             (one-or-more (or (syntax symbol) (syntax word)))
+                             "/"
+                             (one-or-more (or (syntax symbol)
+                                              (syntax word)))
+                             line-end)
+                       source)
          t)
         (t nil)))
+
+(cl-defun vendle:source-format-github (source)
+  (cond
+   ((string-match (rx "github:" (submatch (+ (or (syntax word) (syntax symbol)))
+                                          "/"
+                                          (+ (or (syntax word) (syntax symbol)))))
+                  source)
+    (match-string-no-properties 1 source))
+   ((string-match (rx   line-start
+                        (one-or-more (or (syntax symbol) (syntax word)))
+                        "/"
+                        (one-or-more (or (syntax symbol)
+                                         (syntax word)))
+                        line-end)
+                  source)
+    (match-string-no-properties 0 source))))
 
 
 (cl-defun vendle:directory-git-p (p)
@@ -105,7 +125,7 @@
 
 (cl-defun vendle:make-package (source info)
   (cond ((vendle:source-github-p source)
-         (vendle:make-package-github source info))))
+         (vendle:make-package-github (vendle:source-format-github source) info))))
 
 (cl-defun vendle:make-package-github (source info)
   (make-vendle:package :type 'git
@@ -115,7 +135,7 @@
 
 (cl-defun vendle:make-package-name (source info)
   (cond ((vendle:source-github-p source)
-         (vendle:make-package-name-github source info))))
+         (vendle:make-package-name-github (vendle:source-format-github source) info))))
 
 (cl-defun vendle:make-package-name-github (source info)
   (if info
@@ -127,7 +147,7 @@
 
 (cl-defun vendle:make-package-path (source info)
   (cond ((vendle:source-github-p source)
-         (vendle:make-package-path-github source info))))
+         (vendle:make-package-path-github (vendle:source-format-github source) info))))
 
 (cl-defun vendle:make-package-path-github (source info)
   (if info
