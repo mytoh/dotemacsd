@@ -7,8 +7,8 @@
       (t
        (setq solarized-degrade t)
        (setq solarized-termcolors 256)
-       (load-theme 'monokai t)
-       ))
+       (defvar monokai-add-font-lock-keywords t)
+       (load-theme 'ujelly t)))
 
 
 
@@ -34,6 +34,8 @@
 
 (cl-defun set-normal-font ()
   (cond ((eq window-system nil) nil)
+        ((font-existsp "CosmicSansNeueMono")
+         (set-face-attribute 'default nil :height 80 :font "CosmicSansNeueMono"))
         ((font-existsp "Inconsolata")
          (set-face-attribute 'default nil :height 90 :font "Inconsolata"))
         ((font-existsp "Droid Sans Mono")
@@ -53,6 +55,10 @@
 
 
 
+;;; いろはにほへと　ちりぬるを
+;;; わかよたれそ　　つねならむ
+;;; うゐのおくやま　けふこえて
+;;; あさきゆめみし　ゑひもせす
 (cl-defun set-japanese-fontset-font ()
   (cond ((eq window-system nil) nil)
         ((font-existsp "Hiragino Mincho Pro")
@@ -66,8 +72,6 @@
                            (font-spec :family "Sazanami Gothic")))))
 
 
-;; (set-normal-font)
-;; (set-japanese-fontset-font)
 
 (cl-defun set-bitmap-font ()
   (cl-letf ((k10  "-misc-fixed-medium-r-normal--10-90-75-75-c-100-jisx0208.1983-0")
@@ -106,7 +110,11 @@
     (set-default-font "fontset-k10")
     ))
 
-(set-bitmap-font)
+;; (set-bitmap-font)
+
+(set-normal-font)
+;; (set-japanese-fontset-font)
+
 
 ;; ;; transparent
 ;; ;; http://www.emacswiki.org/emacs/TransparentEmacs

@@ -1,4 +1,4 @@
-;;; -*- coding: utf-8 -*-
+;; -*- coding: utf-8 -*-
 ;;; personal initialize
 
 ;;;; user elisps
@@ -9,9 +9,14 @@
 
 
 ;;;; parens
-(setq show-paren-delay 0
-      show-parne-style 'parenthesis)
-(show-paren-mode)
+(show-paren-mode 1)
+(setq show-paren-delay 0)
+(setq show-paren-style 'expression)
+(set-face-attribute 'show-paren-match-face nil
+                    :background "#252529"
+                    :underline nil)
+
+
 
 ;;;; syntax highlight
 (global-font-lock-mode 1)
@@ -139,6 +144,7 @@
 ;;;; recentf exclude
 (defvar my-recentf-exclude `(,(rx  ".el.gz" string-end) "archive-contents$" "-autoloads.el$"))
 (set-option recentf-exclude my-recentf-exclude)
+(set-option recentf-auto-cleanup 10)
 ;;;; don't record symbolic link file name
 (enable-option find-file-visit-truename)
 
