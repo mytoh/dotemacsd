@@ -45,6 +45,9 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(eval-when-compile
+  (require 'cl-lib))
+
 
 (defconst csh-mode-version "1.2"
   "*Version number of this version of csh-mode")
@@ -246,7 +249,7 @@ insert a tab.")
   (setq csh-mode-map (make-sparse-keymap))
   ;;(define-key csh-mode-map "\177"    'backward-delete-char-untabify)
   (define-key csh-mode-map "\C-c\t"  'csh-completion-init-and-pickup)
-  (define-key csh-mode-map "\C-j"    'reindent-then-newline-and-indent)
+  (define-key csh-mode-map (kbd "C-j")    'reindent-then-newline-and-indent)
   (define-key csh-mode-map "\e\t"    'csh-complete-symbol)
   (define-key csh-mode-map "\n"      'reindent-then-newline-and-indent)
   (define-key csh-mode-map '[return] 'reindent-then-newline-and-indent)
@@ -291,17 +294,17 @@ insert a tab.")
 ;;
 ;; ------------------------------------------------------------------> Functions
 ;;
-(defun csh-current-line ()
+(cl-defun csh-current-line ()              ;
   "Return the vertical position of point in the buffer.
 Top line is 1."
   (+ (count-lines (point-min) (point))
      (if (= (current-column) 0) 1 0)))
 
-(defun csh-get-compound-level
-  (begin-re end-re anchor-point &optional balance-list)
+(cl-defun csh-get-compound-level
+    (begin-re end-re anchor-point &optional balance-list)
   "Determine how much to indent this structure. Return a list (level line)
 of the matching compound command or nil if no match found."
-  (let*
+  (cl-letf*
       ;; Locate the next compound begin keyword bounded by point-min
       ((match-point (if (re-search-backward begin-re (point-min) t)
                         (match-beginning 0) 0))
@@ -335,11 +338,11 @@ of the matching compound command or nil if no match found."
                  nest-list))
               (t nil))))))
 
-(defun csh-get-nest-level ()
+(cl-defun csh-get-nest-level ()
   "Return a 2 element list (nest-level nest-line) describing where the
 current line should nest."
-  (let ((case-fold-search)
-        (level))
+  (cl-letf ((case-fold-search)
+            (level))
     (save-excursion
       (forward-line -1)
       (while (and (not (bobp))
@@ -357,20 +360,20 @@ current line should nest."
           (cons (current-indentation) (csh-current-line))
         level))))
 
-(defun csh-get-nester-column (nest-line)
+(cl-defun csh-get-nester-column (nest-line)
   "Return the column to indent to with respect to nest-line taking
 into consideration keywords and other nesting constructs."
   (save-excursion
-    (let ((fence-post)
-          (case-fold-search)
-          (start-line (csh-current-line)))
+    (cl-letf ((fence-post)
+              (case-fold-search)
+              (start-line (csh-current-line)))
       ;;
       ;; Handle case item indentation constructs for this line
       (cond ((looking-at csh-case-item-re)
              ;; This line is a case item...
              (save-excursion
                (goto-line nest-line)
-               (let ((fence-post (save-excursion (end-of-line) (point))))
+               (cl-letf ((fence-post (save-excursion (end-of-line) (point))))
                  (cond ((re-search-forward csh-switch-re fence-post t)
                         ;; If this is the first case under the switch, indent.
                         (goto-char (match-beginning 0))
@@ -451,11 +454,11 @@ into consideration keywords and other nesting constructs."
                   ;; nester.
                   (t (current-indentation))))))))))
 
-(defun csh-indent-command ()
+(cl-defun csh-indent-command ()
   "Indent current line relative to containing block and allow for
 csh-tab-always-indent customization"
   (interactive)
-  (let (case-fold-search)
+  (cl-letf (case-fold-search)
     (cond ((save-excursion
              (skip-chars-backward " \t")
              (bolp))
@@ -465,18 +468,18 @@ csh-tab-always-indent customization"
              (csh-indent-line)))
           (t (insert-tab)))))
 
-(defun csh-indent-line ()
+(cl-defun csh-indent-line ()
   "Indent current line as far as it should go according
 to the syntax/context"
   (interactive)
-  (let (case-fold-search)
+  (cl-letf (case-fold-search)
     (save-excursion
       (beginning-of-line)
       (if (bobp)
           nil
         ;;
         ;; Align this line to current nesting level
-        (let*
+        (cl-letf*
             ((level-list (csh-get-nest-level)) ; Where to nest against
              ;;           (last-line-level (car level-list))
              (this-line-level (current-indentation))
@@ -487,27 +490,27 @@ to the syntax/context"
           (if (eq nester-column this-line-level)
               nil
             (beginning-of-line)
-            (let ((beg (point)))
+            (cl-letf ((beg (point)))
               (back-to-indentation)
               (delete-region beg (point)))
             (indent-to nester-column)))))
     ;; Position point on this line
-    (let* ((this-line-level (current-indentation))
-           (this-bol (save-excursion
-                       (beginning-of-line)
-                       (point)))
-           (this-point (- (point) this-bol)))
+    (cl-letf* ((this-line-level (current-indentation))
+               (this-bol (save-excursion
+                           (beginning-of-line)
+                           (point)))
+               (this-point (- (point) this-bol)))
       (cond ((> this-line-level this-point);; point in initial white space
              (back-to-indentation))
             (t nil)))))
 
-(defun csh-indent-region (start end)
+(cl-defun csh-indent-region (start end)
   "From start to end, indent each line."
   ;; The algorithm is just moving through the region line by line with
   ;; the match noise turned off.  Only modifies nonempty lines.
   (save-excursion
-    (let (csh-match-and-tell
-          (endmark (copy-marker end)))
+    (cl-letf (csh-match-and-tell
+              (endmark (copy-marker end)))
 
       (goto-char start)
       (beginning-of-line)
@@ -519,7 +522,7 @@ to the syntax/context"
         (setq start (point)))
       (set-marker endmark nil))))
 
-(defun csh-line-to-string ()
+(cl-defun csh-line-to-string ()
   "From point, construct a string from all characters on
 current line"
   (skip-chars-forward " \t") ;; skip tabs as well as spaces
@@ -528,27 +531,27 @@ current line"
                       (end-of-line 1)
                       (point))))
 
-(defun csh-looking-at-label ()
+(cl-defun csh-looking-at-label ()
   "Return true if current line is a label (not the default: case label)."
   (and
    (looking-at csh-label-re)
    (not (looking-at "^\\s *default:"))))
 
-(defun csh-match-indent-level (begin-re end-re)
+(cl-defun csh-match-indent-level (begin-re end-re)
   "Match the compound command and indent. Return nil on no match,
 indentation to use for this line otherwise."
   (interactive)
-  (let* ((case-fold-search)
-         (nest-list
-          (save-excursion
-            (csh-get-compound-level begin-re end-re (point)))))
+  (cl-letf* ((case-fold-search)
+             (nest-list
+              (save-excursion
+                (csh-get-compound-level begin-re end-re (point)))))
     (if (null nest-list)
         (progn
           (if csh-match-and-tell
               (message "No matching compound command"))
           nil
-          (let* ((nest-level (car nest-list))
-                 (match-line (cdr nest-list)))
+          (cl-letf* ((nest-level (car nest-list))
+                     (match-line (cdr nest-list)))
             (if csh-match-and-tell
                 (save-excursion
                   (goto-line match-line)
@@ -556,13 +559,13 @@ indentation to use for this line otherwise."
             nest-level ;;Propagate a hit.
             )))))
 
-(defun csh-match-structure-and-reindent ()
+(cl-defun csh-match-structure-and-reindent ()
   "If the current line matches one of the indenting keywords
 or one of the control structure ending keywords then reindent. Also
 if csh-match-and-tell is non-nil the matching structure will echo in
 the minibuffer"
   (interactive)
-  (let (case-fold-search)
+  (cl-letf (case-fold-search)
     (save-excursion
       (beginning-of-line)
       (cond ((looking-at csh-else-re)
@@ -707,66 +710,64 @@ Installation:
 ;;
 ;; add a completion with a given type to the list
 ;;
-(defun csh-addto-alist (completion type)
+(cl-defun csh-addto-alist (completion type)
   (setq csh-completion-list
         (append csh-completion-list
                 (list (cons completion type)))))
 
-(defun csh-bol-point ()
+(cl-defun csh-bol-point ()
   (save-excursion
     (beginning-of-line)
     (point)))
 
-(defun csh-complete-symbol ()
+(cl-defun csh-complete-symbol ()
   "Perform completion."
   (interactive)
-  (let* ((case-fold-search)
-         (end (point))
-         (beg (unwind-protect
-                  (save-excursion
-                    (backward-sexp 1)
-                    (while (= (char-syntax (following-char)) ?\')
-                      (forward-char 1))
-                    (point))))
-         (pattern (buffer-substring beg end))
-         (predicate
-          ;;
-          ;; ` or $(mark a function
-          ;;
-          (save-excursion
-            (goto-char beg)
-            (if (or
-                 (save-excursion
-                   (backward-char 1)
-                   (looking-at "`"))
-                 (save-excursion
-                   (backward-char 2)
-                   (looking-at "\\$(")))
-                (function (lambda (sym)
-                            (equal (cdr sym) csh-completion-type-function)))
+  (cl-letf* ((case-fold-search)
+             (end (point))
+             (beg (unwind-protect
+                      (save-excursion
+                        (backward-sexp 1)
+                        (while (= (char-syntax (following-char)) ?\')
+                          (forward-char 1))
+                        (point))))
+             (pattern (buffer-substring beg end))
+             (predicate
               ;;
-              ;; a $, ${ or ${# mark a variable
+              ;; ` or $(mark a function
               ;;
-              (if (or
-                   (save-excursion
-                     (backward-char 1)
-                     (looking-at "\\$"))
-                   (save-excursion
-                     (backward-char 2)
-                     (looking-at "\\${"))
-                   (save-excursion
-                     (backward-char 3)
-                     (looking-at "\\${#")))
-                  (function (lambda (sym)
-                              (equal (cdr sym)
-                                     csh-completion-type-var)))
-                ;;
-                ;; don't know. use 'em all
-                ;;
-                (function (lambda (sym) t))))))
-         ;;
-         (completion (try-completion pattern csh-completion-list predicate)))
-    ;;
+              (save-excursion
+                (goto-char beg)
+                (if (or
+                     (save-excursion
+                       (backward-char 1)
+                       (looking-at "`"))
+                     (save-excursion
+                       (backward-char 2)
+                       (looking-at "\\$(")))
+                    (function (lambda (sym)
+                                (equal (cdr sym) csh-completion-type-function)))
+                  ;;
+                  ;; a $, ${ or ${# mark a variable
+                  ;;
+                  (if (or
+                       (save-excursion
+                         (backward-char 1)
+                         (looking-at "\\$"))
+                       (save-excursion
+                         (backward-char 2)
+                         (looking-at "\\${"))
+                       (save-excursion
+                         (backward-char 3)
+                         (looking-at "\\${#")))
+                      (function (lambda (sym)
+                                  (equal (cdr sym)
+                                         csh-completion-type-var)))
+                    ;;
+                    ;; don't know. use 'em all
+                    ;;
+                    (function (lambda (sym) t))))))
+             (completion (try-completion pattern csh-completion-list predicate)))
     (cond ((eq completion t))
           ;;
           ;; oops, what is this ?
@@ -784,8 +785,8 @@ Installation:
           ;; use this instead of a seperate buffer (usual)
           ;;
           (t
-           (let ((list (all-completions pattern csh-completion-list predicate))
-                 (string ""))
+           (cl-letf ((list (all-completions pattern csh-completion-list predicate))
+                     (string ""))
              (while list
                (progn
                  (setq string (concat string (format "%s " (car list))))
@@ -795,16 +796,16 @@ Installation:
 ;;
 ;; init the list and pickup all
 ;;
-(defun csh-completion-init-and-pickup ()
+(cl-defun csh-completion-init-and-pickup ()
   (interactive)
-  (let (case-fold-search)
+  (cl-letf (case-fold-search)
     (csh-completion-list-init)
     (csh-pickup-all)))
 
 ;;
 ;; init the list
 ;;
-(defun csh-completion-list-init ()
+(cl-defun csh-completion-list-init ()
   (interactive)
   (setq csh-completion-list
         (list
@@ -818,20 +819,20 @@ Installation:
          (cons "if"  csh-completion-type-misc)
          (cons "while"  csh-completion-type-misc))))
 
-(defun csh-eol-point ()
+(cl-defun csh-eol-point ()
   (save-excursion
     (end-of-line)
     (point)))
 
-(defun csh-pickup-all ()
+(cl-defun csh-pickup-all ()
   "Pickup all completions in buffer."
   (interactive)
   (csh-pickup-completion-driver (point-min) (point-max) t))
 
-(defun csh-pickup-completion (regexp type match pmin pmax)
+(cl-defun csh-pickup-completion (regexp type match pmin pmax)
   "Pickup completion in region and addit to the list, if not already
 there."
-  (let ((i 0) kw obj)
+  (cl-letf ((i 0) kw obj)
     (save-excursion
       (goto-char pmin)
       (while (and
@@ -850,26 +851,26 @@ there."
                 (csh-addto-alist kw type))))))
     i))
 
-(defun csh-pickup-completion-driver (pmin pmax message)
+(cl-defun csh-pickup-completion-driver (pmin pmax message)
   "Driver routine for csh-pickup-completion."
   (if message
       (message "pickup completion..."))
-  (let* ((i1 (csh-pickup-completion  csh-completion-regexp-var
-                                     csh-completion-type-var
-                                     csh-completion-match-var
-                                     pmin pmax))
-         (i2 (csh-pickup-completion  csh-completion-regexp-var2
-                                     csh-completion-type-var
-                                     csh-completion-match-var2
-                                     pmin pmax))
-         (i3 (csh-pickup-completion  csh-completion-regexp-function
-                                     csh-completion-type-function
-                                     csh-completion-match-function
-                                     pmin pmax)))
+  (cl-letf* ((i1 (csh-pickup-completion  csh-completion-regexp-var
+                                         csh-completion-type-var
+                                         csh-completion-match-var
+                                         pmin pmax))
+             (i2 (csh-pickup-completion  csh-completion-regexp-var2
+                                         csh-completion-type-var
+                                         csh-completion-match-var2
+                                         pmin pmax))
+             (i3 (csh-pickup-completion  csh-completion-regexp-function
+                                         csh-completion-type-function
+                                         csh-completion-match-function
+                                         pmin pmax)))
     (if message
         (message "pickup %d variables and %d functions." (+ i1 i2) i3))))
 
-(defun csh-pickup-this-line ()
+(cl-defun csh-pickup-this-line ()
   "Pickup all completions in current line."
   (interactive)
   (csh-pickup-completion-driver (csh-bol-point) (csh-eol-point) nil))
