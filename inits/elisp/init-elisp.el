@@ -31,10 +31,9 @@
 
 (req 'vendle
 ;;; plugin directory
-     (setq *user-emacs-vendle-directory* (expand-file-name (concat user-emacs-directory (file-name-as-directory "vendle"))))
 
      ;; initialize vendle
-     (vendle:initialize)
+     (vendle:initialize (expand-file-name (concat user-emacs-directory (file-name-as-directory "vendle"))))
 
      (vendle:register "jonathanchu/emacs-powerline")
      (vendle:register "TeMPOraL/nyan-mode")
@@ -50,19 +49,20 @@
      (vendle:register "ober/zone-matrix")
      (vendle:register "mytoh/flatline-el")
      (vendle:register "mytoh/fish-mode")
-     (vendle:register "mytoh/helm-ypv")
-     (vendle:register "mytoh/company-scheme")
-     (vendle:register "chrisdone/structured-haskell-mode"
+
+     (vendle:register "github:chrisdone/structured-haskell-mode"
                       '(:path "elisp"))
+
+     (vendle:register-local "~/local/projektit/helm-ypv")
+     (vendle:register-local "~/local/projektit/company-scheme")
      ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
 
      ;; install packages
-     (vendle:install-packages
-      *user-emacs-vendle-directory*)
+     (vendle:install-packages)
 
      ;; update plugins
-     ;; (vendle:update-packages *user-emacs-vendle-directory*)
+     ;; (vendle:update-packages)
 
 
      ;; (nyan-mode t)
@@ -118,7 +118,7 @@
 
 
      (req 'helm-ypv
-          (setq helm-ypv-local-address "peca:7144")
+          (setq helm-ypv-local-address "peca.vankila:7144")
           (add-to-list 'helm-ypv-yp-urls '(dan1 "dandan626.web.fc2.com"))
           (add-to-list 'helm-ypv-yp-urls '(dan2 "www27.atpages.jp/dandan626"))
 
