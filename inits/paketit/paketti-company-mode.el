@@ -1,5 +1,4 @@
 
-
 (req 'company
 
      (define-key company-active-map (kbd "C-n") 'company-select-next)
@@ -20,7 +19,13 @@
      (set-face-attribute 'company-tooltip-common-selection nil
                          :foreground "LightSkyBlue")
 
+     (add-hook 'company-mode-hook
+               #'(lambda ()
+                   (setq company-lighter " 会社")))
+
      (add-hook 'after-init-hook #'global-company-mode)
      )
+
+
 
 (provide 'paketti-company-mode)

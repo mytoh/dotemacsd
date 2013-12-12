@@ -145,6 +145,8 @@
         zone-matrix
         company
         volatile-highlights
+        recentf-ext
+        unicode-fonts
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
@@ -199,6 +201,12 @@
     naquadah-theme
     noctilux-theme
     obsidian-theme
+    soft-morning-theme
+    soft-stone-theme
+    subatomic256-theme
+    toxi-theme
+    ujelly-theme
+    zen-and-art-theme
     leuven-theme))
 (append-to-list *my-paketti-list* *my-paketti-list-colour-themes*)
 
@@ -220,6 +228,7 @@
     helm-swoop
     helm-company
     helm-dictionary
+    helm-ag-r
     ))
 (append-to-list *my-paketti-list* *my-paketti-list-helm*)
 
@@ -275,11 +284,11 @@
     paketti-suomalainen-kalenteri
     paketti-isearch+
     paketti-info+
-    paketti-haskell-mode
+    ;; paketti-ghc
+    ;; paketti-haskell-mode
     paketti-popwin
     paketti-w3m
     paketti-git-gutter+
-    paketti-ghc
     paketti-yasnippet
     paketti-flymake
     paketti-twittering-mode
@@ -306,7 +315,7 @@
     paketti-js3
     paketti-cl-lib-highlight
     paketti-anzu
-    paketti-yascroll
+    ;; paketti-yascroll
     paketti-stumpwm-mode
     paketti-charmap
     paketti-minimap
@@ -318,6 +327,10 @@
     paketti-conkeror-minor-mode
     paketti-csharp-mode
     paketti-smartscan
+    paketti-volatile-highlights
+    paketti-helm-ag-r
+    paketti-recentf-ext
+    paketti-unicode-fonts
     ;; paketti-zone-matrix
     ;; paketti-multi-term
     ;; paketti-workgroups2

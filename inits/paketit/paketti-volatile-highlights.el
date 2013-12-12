@@ -1,6 +1,6 @@
 
+;; * volatile-highlights
 (req 'volatile-highlights
-
      (volatile-highlights-mode t))
-
-(provide 'volatile-highlights)
+;; * provide
+(provide 'paketti-volatile-highlights)

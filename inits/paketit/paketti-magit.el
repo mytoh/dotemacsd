@@ -5,12 +5,12 @@
   (set-face-attribute 'magit-item-highlight   nil :foreground "#202020" :background nil)
   (set-face-attribute 'magit-diff-file-header nil :foreground "#4040ff" :background nil))
 
+(eval-after-load "magit"
+  #'(my-magit-highlights))
+
 (cl-defun my-magit-setup ()
-  (eval-after-load "magit"
-    #'(my-magit-highlights))
-
   (setq magit-diff-refine-hunk 'all)
-
+  (setq magit-repo-dirs '("~/local/projektit"))
   ;; auto fill
   (add-hook 'magit-log-edit-mode-hook
             #'(lambda ()

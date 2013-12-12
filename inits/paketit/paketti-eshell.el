@@ -29,7 +29,7 @@
 ;;; start eshell
 ;; (add-hook 'after-init-hook
 ;;           #'(lambda ()
-;;               (let ((default-directory (getenv "HOME")))
+;;               (cl-letf ((default-directory (getenv "HOME")))
 ;;                 (command-execute 'eshell)
 ;;                 (bury-buffer))))
 
