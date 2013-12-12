@@ -120,6 +120,21 @@
                  (vendle:package-path package))
     (add-to-list '*vendle-package-list* package)))
 
+;;;; clean
+(cl-defun vendle:clean ()
+  (cl-letf ((paths (cl-remove-if
+                    #'(lambda (d)
+                        (if (cl-member-if
+                             #'(lambda (p)
+                                 (and (not (cl-equalp 'local (vendle:package-type p)))
+                                      (cl-equalp d (expand-file-name (vendle:package-name p)
+                                                                     *user-emacs-vendle-directory*))))
+                             *vendle-package-list*)
+                            t nil))
+                    (directory-files *user-emacs-vendle-directory* t (rx (not (any ".")))))))
+    (cl-mapc #'(lambda (p) (delete-directory p t))
+             paths)))
+
 ;;;; package
 
 (cl-defstruct vendle:package
