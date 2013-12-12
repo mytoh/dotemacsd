@@ -54,13 +54,12 @@
 
 ;;;; initialize
 
-(unless (boundp '*user-emacs-vendle-directory)
-  (defvar *user-emacs-vendle-directory* (expand-file-name (vendle:concat-path user-emacs-directory (file-name-as-directory "vendle")))))
-
+(defvar *user-emacs-vendle-directory* "")
 (defvar *vendle-package-list* '())
 
-(cl-defun vendle:initialize ()
+(cl-defun vendle:initialize (path)
   (setq *vendle-package-list* nil)
+  (setq *user-emacs-vendle-directory* path)
   (unless (file-exists-p *user-emacs-vendle-directory*)
     (make-directory *user-emacs-vendle-directory*)))
 
@@ -115,7 +114,14 @@
 (cl-defun vendle:register (source &optional info)
   (cl-letf* ((package (vendle:make-package source info)))
     (add-to-list 'load-path
-                 (expand-file-name (vendle:package-path package) *user-emacs-vendle-directory*))
+                 (vendle:package-path package))
+    (add-to-list '*vendle-package-list* package)))
+
+(cl-defun vendle:register-local (source &optional info)
+  (cl-letf* ((path (expand-file-name source))
+             (package (vendle:make-package-local path info)))
+    (add-to-list 'load-path
+                 (vendle:package-path package))
     (add-to-list '*vendle-package-list* package)))
 
 ;;;; package
@@ -133,6 +139,12 @@
                        :path (vendle:make-package-path source info)
                        :url (cl-concatenate 'string "git://github.com/" source)))
 
+(cl-defun vendle:make-package-local (source info)
+  (make-vendle:package :type 'local
+                       :name (vendle:make-package-name-local source info)
+                       :path source
+                       :url (vendle:make-package-url-local source info)))
+
 (cl-defun vendle:make-package-name (source info)
   (cond ((vendle:source-github-p source)
          (vendle:make-package-name-github (vendle:source-format-github source) info))))
@@ -145,19 +157,36 @@
           (cadr (split-string source "/"))))
     (cadr (split-string source "/"))))
 
+(cl-defun vendle:make-package-name-local (source info)
+  (if info
+      (let ((name (cl-getf info :name)))
+        (if name
+            name
+          (file-name-nondirectory source)))
+    (file-name-nondirectory source)))
+
 (cl-defun vendle:make-package-path (source info)
   (cond ((vendle:source-github-p source)
          (vendle:make-package-path-github (vendle:source-format-github source) info))))
 
 (cl-defun vendle:make-package-path-github (source info)
+  (let ((path (if info
+                  (let ((path (cl-getf info :path))
+                        (name (vendle:make-package-name source info)))
+                    (if path
+                        (cl-concatenate 'string
+                                        name  "/"  path)
+                      name))
+                (vendle:make-package-name source info))))
+    (expand-file-name path *user-emacs-vendle-directory*)))
+
+(cl-defun vendle:make-package-url-local (source info)
   (if info
-      (let ((path (cl-getf info :path))
-            (name (vendle:make-package-name source info)))
-        (if path
-            (cl-concatenate 'string
-                            name  "/"  path)
-          name))
-    (vendle:make-package-name source info)))
+      (let ((url (cl-getf info :url)))
+        (if url
+            url
+          nil))
+    nil))
 
 ;;; provide
 (provide 'vendle)
