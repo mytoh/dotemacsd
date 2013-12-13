@@ -57,11 +57,15 @@
 (defvar *user-emacs-vendle-directory* "")
 (defvar *vendle-package-list* '())
 
-(cl-defun vendle:initialize (path)
+(cl-defun vendle:initialize (&optional path)
   (setq *vendle-package-list* nil)
-  (setq *user-emacs-vendle-directory* path)
+  (if path
+      (setq *user-emacs-vendle-directory* path)
+    (setq *user-emacs-vendle-directory*
+          (expand-file-name (file-name-as-directory "vendle") user-emacs-directory)))
   (unless (file-exists-p *user-emacs-vendle-directory*)
-    (make-directory *user-emacs-vendle-directory*)))
+    (make-directory *user-emacs-vendle-directory*))
+  *user-emacs-vendle-directory*)
 
 
 ;;;; update
@@ -121,7 +125,7 @@
     (add-to-list '*vendle-package-list* package)))
 
 ;;;; clean
-(cl-defun vendle:clean ()
+(cl-defun vendle:clean-packages ()
   (cl-letf ((paths (cl-remove-if
                     #'(lambda (d)
                         (if (cl-member-if
@@ -131,7 +135,7 @@
                                                                      *user-emacs-vendle-directory*))))
                              *vendle-package-list*)
                             t nil))
-                    (directory-files *user-emacs-vendle-directory* t (rx (not (any ".")))))))
+                    (directory-files *user-emacs-vendle-directory*  'absolute (rx (not (any ".")))))))
     (cl-mapc #'(lambda (p) (delete-directory p t))
              paths)))
 
@@ -198,6 +202,19 @@
             url
           nil))
     nil))
+
+;; commands
+(cl-defun vendle-install ()
+  (interactive)
+  (vendle:install-packages))
+
+(cl-defun vendle-update ()
+  (interactive)
+  (vendle:update-packages))
+
+(cl-defun vendle-clean ()
+  (interactive)
+  (vendle:clean-packages))
 
 ;;; provide
 (provide 'vendle)
