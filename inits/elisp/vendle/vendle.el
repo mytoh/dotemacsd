@@ -1,4 +1,4 @@
-
+;;; requirements
 (eval-when-compile
   (require 'cl-lib))
 
@@ -77,7 +77,7 @@
      *vendle-package-list*)))
 
 (cl-defun vendle:update-package (package)
-  (cl-letf ((path (vendle:package-path package)))
+  (cl-letf ((path (vendle:concat-path *user-emacs-vendle-directory* (vendle:package-name package))))
     (when (and (cl-equalp 'git (vendle:package-type package))
                (not (file-symlink-p path)))
       (progn
@@ -86,7 +86,7 @@
         (shell-command "git pull")
         (cd-absolute user-emacs-directory)
         (byte-recompile-directory path 0)
-        (message "updating vendle package %s..done" path)))))
+        (message "updating vendle package %s.. done" path)))))
 
 ;;;; install
 
@@ -105,7 +105,7 @@
 (cl-defun vendle:install-package-git (package)
   (message "installing plugin %s" (vendle:package-name package))
   (shell-command (concat  "git clone " (vendle:package-url package) " "
-                          (vendle:package-path package))
+                          (vendle:concat-path *user-emacs-vendle-directory* (vendle:package-name package)))
                  *user-emacs-vendle-directory*)
   (byte-recompile-directory (vendle:package-path package)  0))
 
@@ -205,6 +205,7 @@
 
 ;; commands
 (cl-defun vendle-install ()
+  "Install packages using `vendle:install-packages'"
   (interactive)
   (vendle:install-packages))
 
