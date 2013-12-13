@@ -44,7 +44,8 @@
      ;; (add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa/") t)
      (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
      (add-to-list 'package-archives '("SC" . "http://joseito.republika.pl/sunrise-commander/") t)
-     (package-initialize))
+     (package-initialize)
+     )
 
 
 ;;; package list
@@ -76,7 +77,6 @@
         info+
         redo+
         yasnippet
-        yasnippet-bundle
         mew
         w3m
         smartparens
@@ -101,7 +101,7 @@
         guide-key
         google-translate
         circe
-        tumblesocks
+        ;; tumblesocks
         undo-tree
         direx
         ;; pallet
@@ -109,8 +109,8 @@
         flycheck
         fiplr
         fuzzy
-        melpa-upstream-visit
-        melpa
+        ;; melpa-upstream-visit
+        ;; melpa
         quickrun
         sudo-ext
         shell-pop
@@ -119,7 +119,7 @@
         pretty-mode
         pretty-mode-plus
         clippy
-        electric-case
+        ;; electric-case
         paredit
         visual-regexp
         litable
@@ -164,6 +164,7 @@
 (defvar *my-paketti-list-colour-themes*
   '(;; themes
     assemblage-theme
+    dakrone-theme
     anti-zenburn-theme
     busybee-theme
     molokai-theme
@@ -265,7 +266,7 @@
     ;; this may cause problem
     paketti-rainbow-mode
 
-    paketti-tumblesocks
+    ;; paketti-tumblesocks
     paketti-circe
     paketti-google-translate
     paketti-guide-key
@@ -288,6 +289,7 @@
     ;; paketti-haskell-mode
     paketti-popwin
     paketti-w3m
+    paketti-eww
     paketti-git-gutter+
     paketti-yasnippet
     paketti-flymake
@@ -302,14 +304,14 @@
     paketti-page-break-lines
     paketti-pretty-mode
     paketti-pretty-mode-plus
-    paketti-electric-case
+    ;; paketti-electric-case
     paketti-visual-regexp
     paketti-litable
     paketti-stripe-buffer
     paketti-ace-jump-mode
     paketti-mentor
     paketti-fiplr
-    paketti-melpa-upstream-visit
+    ;; paketti-melpa-upstream-visit
     paketti-quickrun
     paketti-sudo-ext
     paketti-js3
