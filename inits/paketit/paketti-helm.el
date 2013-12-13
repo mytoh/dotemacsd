@@ -13,7 +13,6 @@
      (global-set-key (kbd "C-x b") 'helm-buffers-list)
      (define-key global-map [remap list-buffers] 'helm-buffers-list)
 
-
      (define-key helm-map (kbd "C-M-n") 'helm-next-source)
      (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
      (define-key helm-c-read-file-map (kbd "C-h") 'delete-backward-char)
@@ -49,6 +48,7 @@
 
 ;; faces
 (req 'helm-files
+     (set-option helm-ff-auto-update-initial-value t)
      (set-face-attribute 'helm-ff-file nil
                          :foreground "white" :background nil)
      (set-face-attribute 'helm-ff-directory nil
