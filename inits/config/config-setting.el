@@ -179,5 +179,10 @@
 ;;;; add newline to end of file
 ;; (enable-option require-final-newline)
 
+;;;; Sort list-colors-display by Hue
+(set-option list-colors-sort 'hsv)
+
+;;;; image-mode
+(set-option image-transform-resize 'fit-height)
 
 (provide 'config-setting)

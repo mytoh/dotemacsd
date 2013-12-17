@@ -22,7 +22,7 @@
                         :x 1100
                         :y 100
                         :timeout -1))
-(add-hook 'after-revert-hook 'my-after-revert-hook)
+;; (add-hook 'after-revert-hook 'my-after-revert-hook)
 
 ;; CamelCase awere editing
 ;; enable just in ruby-mode

@@ -96,10 +96,10 @@
      (req 'eldoc-extension)
 
      ;; navi2ch
-     (req 'navi2ch
-          (setq navi2ch-mona-enable 1)
-          (setq navi2ch-ack-when-exit -1)
-          (setq navi2ch-message-user-name ""))
+     ;; (req 'navi2ch
+     ;;      (setq navi2ch-mona-enable 1)
+     ;;      (setq navi2ch-ack-when-exit -1)
+     ;;      (setq navi2ch-message-user-name ""))
 
      ;; flatline
      (req 'flatline
@@ -126,9 +126,9 @@
           )
 
 
-     (eval-after-load 'company
-       '(req 'company-scheme
-             (add-to-list 'company-backends 'company-scheme)))
+     (with-eval-after-load 'company
+       (req 'company-scheme
+            (add-to-list 'company-backends 'company-scheme)))
 
      (req 'shm
           (add-hook 'haskell-mode-hook 'structured-haskell-mode))

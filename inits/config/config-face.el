@@ -1,6 +1,9 @@
-;; * faces
 
-;; ** colour-theme
+;;; faces
+
+
+
+;;;; colour-theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/inits/themes" )
 (cond ((window-system)
        (load-theme 'solarized-dark t))
@@ -11,12 +14,11 @@
        (load-theme 'ujelly t)))
 
 
-
-;; ** cursor shape
+;;;; cursor shape
 (add-to-list 'default-frame-alist '(cursor-type . hbar))
-(set-cursor-color "#00ff00")
+(set-cursor-color (mytoh:colour-hsl-to-hex 137 65 50))
 
-;; ** terminal colors
+;;;; terminal colors
 ;; (set-face-attribute 'term-color-red nil :foreground "#d55e00")
 ;; (set-face-attribute 'term-color-green nil :foreground "#009e73" )
 ;; (set-face-attribute 'term-color-yellow nil :foreground "#f8ec59" )
@@ -26,7 +28,7 @@
 ;; (set-face-attribute 'term-color-white nil :foreground  "#efcfaf")
 ;; (set-face-attribute 'term-color-black nil :foreground  "#121212")
 
-;; ** font
+;;;; font
 (cl-defun font-existsp (font)
   "Check to see if the named FONT is available"
   (if (null (x-list-fonts font))
@@ -120,5 +122,6 @@
 ;; ;; http://www.emacswiki.org/emacs/TransparentEmacs
 ;; (set-frame-parameter (selected-frame) 'alpha '(85 50))
 ;; (add-to-list 'default-frame-alist '(alpha 85 50))
+
 
 (provide 'config-face)

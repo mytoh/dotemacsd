@@ -6,15 +6,15 @@
 
 
      (set-face-attribute 'company-tooltip-selection nil
-                         :background "#ab4223")
+                         :background (mytoh:colour-hsl-to-hex 19 60 50))
 
      (set-face-attribute 'company-tooltip nil
                          :foreground "#dfdfe1"
-                         :background "#393939"
-                         )
+                         :background "#393939")
 
      (set-face-attribute 'company-tooltip-common nil
-                         :foreground "LightSkyBlue")
+                         :foreground (mytoh:colour-hsl-to-hex 170 70 70))
+
 
      (set-face-attribute 'company-tooltip-common-selection nil
                          :foreground "LightSkyBlue")

@@ -35,6 +35,7 @@
 
 ;;; my global map
 (defun mytoh:define-global-key (key func)
+  "define personal key mappings"
   (cl-letf* ((prefix (kbd "C-c e"))
              (keymap (concat prefix key)))
     (define-key global-map keymap func)))

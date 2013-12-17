@@ -127,5 +127,11 @@ buffer is not visiting a file."
                          (ido-read-file-name "Find file(as root): ")))
     (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
 
+;;; colour util
+(cl-defun mytoh:colour-hsl-to-hex (h s l)
+  (let ((colour (color-hsl-to-rgb (/ h 360.0) (/ s 100.0) (/ l 100.0))))
+    (color-rgb-to-hex (car colour)
+                      (cadr colour)
+                      (caddr colour))))
 
 (provide 'lib-util)

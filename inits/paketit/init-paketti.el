@@ -67,7 +67,6 @@
         projectile
         project-persist
         magit
-        magit-commit-training-wheels
         rainbow-mode
         scheme-complete
         expand-region
@@ -344,7 +343,6 @@
     ;; paketti-dired-single
     ;; paketti-cursor-chg
     ;; paketti-git-gutter-fringe
-    ;; paketti-magit-commit-training-wheels
     ;; paketti-flycheck
     ;; paketti-migemo
     ))
