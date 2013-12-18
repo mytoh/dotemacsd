@@ -25,7 +25,17 @@
      ;; disable auto completion
      ;; (setq helm-ff-auto-update-initial-value nil)
      (helm-mode 1)
-     (set-option recentf-max-saved-items 1000))
+     (set-option recentf-max-saved-items 1000)
+
+
+     (cl-defun helm-start ()
+       (interactive)
+       (helm :sources '(helm-source-recentf
+                        helm-source-bookmarks)
+             :candidate-number-limit 10))
+     (define-key global-map (kbd "C-c e h") #'helm-start)
+     (add-hook 'after-init-hook #'helm-start)
+     )
 
 ;; helm-themes
 (req 'helm-themes)
