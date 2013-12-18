@@ -1,10 +1,19 @@
 
 ;; eshell
 
+(eval-when-compile
+  (require 'cl-lib)
+  (require 'esh-mode)
+  (require 'eshell))
+
+(require 'esh-util)
+
+;;; prefer lisp function
+(enable-option eshell-prefer-lisp-functions)
 
 ;;; switch to eshell or restore previous windows
 ;;; http://irreal.org/blog/?p=1742
-(cl-defun my-eshell-switch ()
+(cl-defun mytoh:eshell-switch ()
   "Bring up a full-screen eshell or restore previous config."
   (interactive)
   (if (string= "eshell-mode" major-mode)
@@ -15,7 +24,7 @@
       (delete-other-windows))))
 
 ;;; use shell-pop instead
-;; (define-key global-map (kbd "C-z") 'my-eshell-switch)
+(define-key global-map (kbd "C-c e s") 'mytoh:eshell-switch)
 
 ;;; eshell keybind
 (cl-defun my-eshell-hook-keybindings ()
@@ -42,27 +51,6 @@
 
 ;; (add-hook 'eshell-mode-hook
 ;;           #'my-eshell-hook-disable-hl-line)
-
-
-;;; http://nishikawasasaki.hatenablog.com/entry/2012/09/12/233116
-;;; auto-complete
-;;; require 'auto-complete in paketti-auto-complete
-;; (require 'pcomplete)
-(cl-defun my-ac-eshell-mode ()
-  (ac-define-source pcomplete
-                    '((candidates . pcomplete-completions)))
-  (setq ac-sources
-        '(ac-source-pcomplete
-          ac-source-filename
-          ac-source-files-in-current-dir
-          ac-source-words-in-buffer
-          ac-source-dictionary)))
-;; (add-hook 'eshell-mode-hook
-;;           #'(lambda ()
-;;               (my-ac-eshell-mode)
-;;               ;; (define-key eshell-mode-map [(tab)] 'auto-complete)
-;;               ;; (define-key eshell-mode-map (kbd "C-i") 'auto-complete)
-;;               ))
 
 ;;; alias
 (cl-defun my-eshell-hook-add-aliases ()
