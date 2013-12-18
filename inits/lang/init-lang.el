@@ -1,6 +1,6 @@
 
 
-(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+;; (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
 (defvar init-langs
   '(lang-lisp

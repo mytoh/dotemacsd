@@ -1,10 +1,8 @@
 
 (add-subdirs-to-load-path (concat user-emacs-directory "inits/elisp"))
 
-
 (req 'r7rs)
 (req 'srfi)
-
 
 (req 'csh-mode
      (setq csh-mode-hook
@@ -30,7 +28,6 @@
 (req 'ninja-mode)
 
 (req 'vendle
-;;; plugin directory
 
      ;; initialize vendle
      (vendle:initialize (expand-file-name (concat user-emacs-directory (file-name-as-directory "vendle"))))
@@ -118,7 +115,7 @@
 
 
      (req 'helm-ypv
-          (setq helm-ypv-local-address "peca.vankila:7144")
+          (setq helm-ypv-local-address "localhost:7144")
           (add-to-list 'helm-ypv-yp-urls '(dan1 "dandan626.web.fc2.com"))
           (add-to-list 'helm-ypv-yp-urls '(dan2 "www27.atpages.jp/dandan626"))
 

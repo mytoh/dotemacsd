@@ -162,6 +162,10 @@
 
 (defvar *my-paketti-list-colour-themes*
   '(;; themes
+    mustang-theme
+    nzenburn-theme
+    phoenix-dark-pink-theme
+    phoenix-dark-mono-theme
     assemblage-theme
     dakrone-theme
     anti-zenburn-theme

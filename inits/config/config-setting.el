@@ -29,8 +29,8 @@
 ;;;; encodings
 (set-language-environment  'utf-8)
 (prefer-coding-system 'utf-8)
-(setq coding-system-for-read 'utf-8)
-(setq coding-system-for-write 'utf-8)
+(set-option coding-system-for-read 'utf-8)
+(set-option coding-system-for-write 'utf-8)
 
 ;;;; start server
 (req 'server
@@ -73,7 +73,7 @@
     (t
      ()))
   "*Face used by hl-line.")
-(setq hl-lineface 'hlline-face)
+(set-option hl-lineface 'hlline-face)
 (global-hl-line-mode)
 
 ;;;; display keys
@@ -133,11 +133,11 @@
 ;;;; backup and autosave
 (defvar backup-directory (expand-file-name "backups" user-emacs-directory))
 (defvar autosave-directory (expand-file-name "autosaves" user-emacs-directory))
-(setq backup-directory-alist
-      `((".*" . ,backup-directory)))
-(setq auto-save-list-file-prefix autosave-directory)
-(setq auto-save-file-name-transforms
-      `((".*" ,autosave-directory t)))
+(set-option backup-directory-alist
+            `((".*" . ,backup-directory)))
+(set-option auto-save-list-file-prefix autosave-directory)
+(set-option auto-save-file-name-transforms
+            `((".*" ,autosave-directory t)))
 
 ;; save more recent files
 (set-option recentf-max-saved-items 10000)

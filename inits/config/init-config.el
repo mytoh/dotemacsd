@@ -5,6 +5,7 @@
     config-hook
     config-path
     config-face
+    config-clipboard
     ))
 
 (mapc #'require init-configs)

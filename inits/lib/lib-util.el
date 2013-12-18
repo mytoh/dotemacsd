@@ -40,7 +40,7 @@
 ;;                 '("/usr/bin" "/bin"
 ;;                   "/usr/sbin" "/sbin"))
 (cl-defmacro append-to-list (to lst)
-  `(setq ,to (append ,to ,lst)))
+  `(cl-psetq ,to (append ,to ,lst)))
 
 (cl-defmacro my-add-to-load-path (path)
   `(when (file-exists-p ,path)
@@ -55,18 +55,18 @@
   `(progn
      (my-log "set " ,(propertize (symbol-name option)
                                  'face 'font-lock-variable-name-face))
-     (setq ,option ,value)))
+     (cl-psetq ,option ,value)))
 
 (cl-defmacro enable-option (option)
   `(progn
      (my-log "enable " ,(propertize (symbol-name option)
                                     'face 'font-lock-variable-name-face))
-     (setq ,option 1)))
+     (cl-psetq ,option 1)))
 
 (cl-defmacro disable-option (option)
   `(progn
      (message ">> disable %s" ,(symbol-name option))
-     (setq ,option -1)))
+     (cl-psetq ,option -1)))
 
 ;;http://www.reddit.com/r/emacs/comments/umb24/expandfilename_is_good_for_path_concat_too/
 (cl-defun concat-path (&rest parts)
