@@ -30,11 +30,25 @@
 
      (cl-defun helm-start ()
        (interactive)
-       (helm :sources '(helm-source-recentf
-                        helm-source-bookmarks)
-             :candidate-number-limit 10))
+       (let ((helm-ff-transformer-show-only-basename nil))
+         (helm :sources '(helm-source-recentf
+                          helm-source-bookmarks
+                          helm-source-file-cache
+                          helm-source-locate)
+               :buffer "*helm start*"
+               :prompt "Start: "
+               :candidate-number-limit 10)))
+
+     (cl-defun mytoh:startup ()
+       (let ((current-window
+              (frame-selected-window (selected-frame))))
+         (if (and current-window
+                  (window-live-p current-window))
+             (helm-start))))
+
      (define-key global-map (kbd "C-c e h") #'helm-start)
-     (add-hook 'after-init-hook #'helm-start)
+
+     ;; (add-hook 'after-init-hook #'mytoh:startup)
      )
 
 ;; helm-themes

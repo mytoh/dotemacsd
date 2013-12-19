@@ -5,7 +5,7 @@
      (setq browse-url-browser-function 'eww-browse-url)
      (add-hook 'after-init-hook
                #'(lambda ()
-                   (mytoh:define-global-key (kbd "w") 'eww))))
+                   (mytoh:define-global-key (kbd "w") #'eww))))
 
 ;; (replace-string "\221" "`" nil (point-min) (point-max))  ; opening single quote
 ;; (replace-string "\222" "'" nil (point-min) (point-max))  ; closing single quote

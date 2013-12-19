@@ -30,6 +30,8 @@
 (cl-defun my-eshell-hook-keybindings ()
   (define-key eshell-mode-map (kbd "C-p") 'eshell-previous-matching-input-from-input)
   (define-key eshell-mode-map (kbd "C-n") 'eshell-next-matching-input-from-input)
+  (define-key eshell-mode-mop (kbd "M-p") 'previous-line)
+  (define-key eshell-mode-mop (kbd "M-n") 'next-line)
   (define-key eshell-mode-map (kbd "C-a") 'eshell-bol))
 (add-hook 'eshell-mode-hook
           'my-eshell-hook-keybindings)
