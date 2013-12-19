@@ -146,6 +146,8 @@
         volatile-highlights
         recentf-ext
         unicode-fonts
+        writeroom-mode
+        writegood-mode
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
@@ -336,6 +338,7 @@
     paketti-helm-ag-r
     paketti-recentf-ext
     paketti-unicode-fonts
+    paketti-writegood-mode
     ;; paketti-zone-matrix
     ;; paketti-multi-term
     ;; paketti-workgroups2
