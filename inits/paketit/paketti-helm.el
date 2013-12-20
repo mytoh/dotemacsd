@@ -27,6 +27,7 @@
      (helm-mode 1)
      (set-option recentf-max-saved-items 1000)
 
+     (set-option helm-external-programs-associations '(("jpg" . "kuva.sh")))
 
      (cl-defun helm-start ()
        (interactive)
@@ -47,6 +48,7 @@
              (helm-start))))
 
      (define-key global-map (kbd "C-c e h") #'helm-start)
+
 
      ;; (add-hook 'after-init-hook #'mytoh:startup)
      )
