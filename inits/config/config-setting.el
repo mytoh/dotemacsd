@@ -10,8 +10,8 @@
 
 ;;;; parens
 (show-paren-mode 1)
-(setq show-paren-delay 0)
-(setq show-paren-style 'expression)
+(set-option show-paren-delay 0)
+(set-option show-paren-style 'expression)
 (set-face-attribute 'show-paren-match-face nil
                     :background "#252529"
                     :underline nil)
