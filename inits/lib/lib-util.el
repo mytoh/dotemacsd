@@ -1,7 +1,7 @@
-;;; -*- coding: utf-8 -*-
+;;; lib-util.el  -*- lexical-binding: t -*-
 
-;; (eval-when-compile
-;;   (require 'cl-lib))
+(eval-when-compile
+  (require 'cl-lib))
 
 (cl-defmacro my-log (&rest messages)
   `(progn

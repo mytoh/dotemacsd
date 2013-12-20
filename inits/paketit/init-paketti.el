@@ -1,8 +1,6 @@
  ;;; -*- coding: utf-8 -*-
 
-;;;
-;;; ** builtins
-;;;
+;;; builtins
 
 ;; save curosr position
 (req 'saveplace
@@ -29,11 +27,10 @@
 (require 'paketti-eshell)
 (require 'paketti-eldoc)
 (require 'paketti-whitespace)
+(require 'paketti-autoinsert)
 ;; (require 'paketti-erc)
 
-;;;
 ;;; package repositories
-;;;
 
 ;; package.el
 (req 'package
@@ -42,8 +39,7 @@
      (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
      (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
      (add-to-list 'package-archives '("SC" . "http://joseito.republika.pl/sunrise-commander/") t)
-     (package-initialize)
-     )
+     (package-initialize))
 
 
 ;;; package list
@@ -162,6 +158,7 @@
 
 (defvar *my-paketti-list-colour-themes*
   '(;; themes
+    afternoon-theme
     sublime-themes
     subatomic-enhanced-theme
     tango-2-theme
@@ -356,6 +353,7 @@
     ;; paketti-flycheck
     ;; paketti-migemo
     ))
+
 
 (defvar *my-paketit-list-helm*
   '(;; helm

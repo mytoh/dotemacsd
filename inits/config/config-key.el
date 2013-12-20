@@ -1,5 +1,4 @@
-;;; -*- coding: utf-8 -*-
-
+;;; config-key.el  -*- lexical-binding: t -*-
 ;; make prefix key
 (define-prefix-command 'my-original-map)
 (global-set-key (kbd "C-q") 'my-original-map)

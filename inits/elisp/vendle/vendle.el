@@ -1,3 +1,5 @@
+;;; vendle.el -*- lexical-binding: t -*-
+
 ;;; requirements
 (eval-when-compile
   (require 'cl-lib))

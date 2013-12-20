@@ -1,5 +1,4 @@
-;; -*- coding: utf-8 -*-
-;;; personal initialize
+;;; config-setting.el -*- lexical-binding: t -*-
 
 ;;;; user elisps
 (my-add-to-load-path (concat user-emacs-directory "elisp"))
@@ -111,9 +110,6 @@
 ;;;; show function name
 (which-function-mode 1)
 (set-face-attribute 'which-func nil :foreground "#4f7b8a")
-
-;;;; enable lexical binding
-(enable-option lexical-binding)
 
 ;;;; save buffer history
 (savehist-mode 1)

@@ -1,28 +1,28 @@
-;; * initialize
-
-;; ** cl-lib
+;;; init-load.el  -*- lexical-binding: t -*-
+;;;; initialize
+;;;;; cl-lib
 (eval-when-compile
   (require 'cl-lib))
 
-;; ** libs
+;;;;; libs
 (add-to-list 'load-path (concat user-emacs-directory "inits/lib"))
 (eval-when-compile (require 'init-lib))
 (add-subdirs-to-load-path (concat user-emacs-directory "inits"))
 
-;; ** packages
+;;;;; packages
 (require 'init-paketti)
 
-;; ** config
+;;;;; config
 (require 'init-config)
 
-;; ** system
+;;;;; system
 (require 'init-system)
 
-;; ** lang
+;;;;; lang
 (require 'init-lang)
 
-;; ** elisp
+;;;;; elisp
 (require 'init-elisp)
 
-
+;;;; provide
 (provide 'init-load)

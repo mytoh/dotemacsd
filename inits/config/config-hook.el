@@ -1,4 +1,4 @@
-;;;; -*- coding: utf-8 -*-
+;;; config-hook.el  -*- lexical-binding: t -*-
 
 (cl-defun my-after-init-hook ()
   ;; (setq debug-on-error t))

@@ -1,7 +1,5 @@
-
+;;; config-face.el  -*- lexical-binding: t -*-
 ;;; faces
-
-
 
 ;;;; colour-theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/inits/themes" )
@@ -11,7 +9,7 @@
        (setq solarized-degrade t)
        (setq solarized-termcolors 256)
        (defvar monokai-add-font-lock-keywords t)
-       (load-theme 'ujelly t)))
+       (load-theme 'moe-dark t)))
 
 
 ;;;; cursor shape

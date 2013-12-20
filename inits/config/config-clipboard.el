@@ -1,4 +1,4 @@
-
+;;; config-clipboard.el  -*- lexical-binding: t -*-
 ;; [[http://d.hatena.ne.jp/l1o0/20100429/1272557315]]
 
 (cl-defun mytoh:cut-function (text &optional rest)

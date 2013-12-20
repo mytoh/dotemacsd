@@ -1,4 +1,4 @@
-
+;;; init-config.el  -*- lexical-binding: t -*-
 (defvar init-configs
   '(config-setting
     config-key

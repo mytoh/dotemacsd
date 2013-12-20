@@ -1,4 +1,4 @@
-
+;;; config-path.el  -*- lexical-binding: t -*-
 ;;; shellenv.el
 ;;; (setenv "PATH" "path:path")
 ;; (cl-letf ((shellenv (expand-file-name "~/.emacs.d/shellenv.el")))
