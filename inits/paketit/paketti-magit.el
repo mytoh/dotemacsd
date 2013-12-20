@@ -10,7 +10,7 @@
 
 (cl-defun my-magit-setup ()
   (setq magit-diff-refine-hunk 'all)
-  (setq magit-repo-dirs '("~/local/projektit"))
+  (setq magit-repo-dirs '("~/huone/projektit"))
   ;; auto fill
   (add-hook 'magit-log-edit-mode-hook
             #'(lambda ()

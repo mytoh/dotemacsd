@@ -50,8 +50,8 @@
      (vendle:register "github:chrisdone/structured-haskell-mode"
                       '(:path "elisp"))
 
-     (vendle:register-local "~/local/projektit/helm-ypv")
-     (vendle:register-local "~/local/projektit/company-scheme")
+     (vendle:register-local "~/huone/projektit/helm-ypv")
+     (vendle:register-local "~/huone/projektit/company-scheme")
      ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
 
