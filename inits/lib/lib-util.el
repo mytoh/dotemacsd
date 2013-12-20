@@ -129,9 +129,8 @@ buffer is not visiting a file."
 
 ;;; colour util
 (cl-defun mytoh:colour-hsl-to-hex (h s l)
-  (let ((colour (color-hsl-to-rgb (/ h 360.0) (/ s 100.0) (/ l 100.0))))
-    (color-rgb-to-hex (car colour)
-                      (cadr colour)
-                      (caddr colour))))
+  (cl-destructuring-bind (r g b)
+      (color-hsl-to-rgb (/ h 360.0) (/ s 100.0) (/ l 100.0))
+    (color-rgb-to-hex r g b)))
 
 (provide 'lib-util)
