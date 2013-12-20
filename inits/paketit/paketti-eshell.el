@@ -30,9 +30,8 @@
 (cl-defun my-eshell-hook-keybindings ()
   (define-key eshell-mode-map (kbd "C-p") 'eshell-previous-matching-input-from-input)
   (define-key eshell-mode-map (kbd "C-n") 'eshell-next-matching-input-from-input)
-  (define-key eshell-mode-mop (kbd "M-p") 'previous-line)
-  (define-key eshell-mode-mop (kbd "M-n") 'next-line)
-  (define-key eshell-mode-map (kbd "C-a") 'eshell-bol))
+  ;; (define-key eshell-mode-map (kbd "C-a") 'eshell-bol)
+  )
 (add-hook 'eshell-mode-hook
           'my-eshell-hook-keybindings)
 
@@ -80,12 +79,17 @@
                 'helm-eshell-history)))
 
 ;;; helm complete
-(req 'helm-eshell
-     (add-hook 'eshell-mode-hook
-               #'(lambda ()
-                   (define-key eshell-mode-map (kbd "C-i") 'helm-esh-pcomplete))))
+(add-hook 'eshell-mode-hook
+          #'(lambda ()
+              (define-key eshell-mode-map
+                [remap eshell-pcomplete]
+                'helm-esh-pcomplete)))
 
-
+;;; start eshell after startup
+(add-hook 'emacs-startup-hook #'(lambda ()
+                                  (let ((default-directory (getenv "HOME")))
+                                    (command-execute 'eshell)
+                                    (bury-buffer))))
 
 ;; load prompt settings
 (require 'paketti-eshell-prompt)
