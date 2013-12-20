@@ -164,6 +164,11 @@
 
 (defvar *my-paketti-list-colour-themes*
   '(;; themes
+    sublime-themes
+    subatomic-enhanced-theme
+    tango-2-theme
+    twilight-theme
+    zenburn-theme
     mustang-theme
     nzenburn-theme
     phoenix-dark-pink-theme
