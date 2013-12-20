@@ -1,0 +1,10 @@
+## alias
+(cl-defun eshell/img (file)
+  (propertize "Image" 'display
+              (create-image (expand-file-name file))))
+
+
+## helm              
+(define-key eshell-mode-map
+                (kbd "M-h")
+                'helm-eshell-history)

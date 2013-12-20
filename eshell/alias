@@ -1,11 +1,11 @@
+alias test {properties "Image" {quote display} {create-image $1}}
 alias ag ag --nopager
 alias , napa $*
-alias kuva pikkukivi kuva $*
 alias yotsuba pikkukivi yotsuba $*
-alias futaba piki futaba $*
+alias futaba pikkukivi futaba $*
 alias df df -h
 alias tk talikko $*
 alias la ls -a
 alias ll ls -l
-alias d dired $1
-alias ff find-file  $1
+alias ff find-file $1
+alias d 'dired-other-window ${pwd}'

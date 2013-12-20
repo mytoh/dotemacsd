@@ -53,23 +53,6 @@
 ;; (add-hook 'eshell-mode-hook
 ;;           #'my-eshell-hook-disable-hl-line)
 
-;;; alias
-(cl-defun my-eshell-hook-add-aliases ()
-  (setq eshell-command-aliases-list
-        (append '(( "ag" "ag --nopager")
-                  ( "," "napa $*")
-                  ( "kuva" "pikkukivi kuva $*")
-                  ( "yotsuba" "pikkukivi yotsuba $*")
-                  ( "futaba" "piki futaba $*")
-                  ( "df" "df -h")
-                  ( "tk" "talikko $*")
-                  ( "la" "ls -a")
-                  ( "ll" "ls -l")
-                  ( "d" "dired $1")
-                  ( "ff" "find-file  $1"))
-                eshell-command-aliases-list)))
-(add-hook 'eshell-mode-hook
-          #'my-eshell-hook-add-aliases)
 
 ;;; helm history
 (add-hook 'eshell-mode-hook
