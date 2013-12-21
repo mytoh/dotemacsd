@@ -1,5 +1,5 @@
 
-(req 'helm-swoop
+(pak 'helm-swoop
 
      ;; ;; Change the keybinds to whatever you like :)
      (global-set-key (kbd "M-i") 'helm-swoop)
