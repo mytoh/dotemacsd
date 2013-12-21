@@ -4,7 +4,7 @@
               (create-image (expand-file-name file))))
 
 
-## helm              
+## helm
 (define-key eshell-mode-map
                 (kbd "M-h")
                 #'helm-eshell-history)
@@ -13,4 +13,12 @@
 (define-key eshell-mode-map
                 [remap eshell-pcomplete]
                 'helm-esh-pcomplete)
-                
+
+
+(add-to-list 'eshell-visual-commands "ssh")
+(add-to-list 'eshell-visual-commands "tail")
+(add-to-list 'eshell-command-completions-alist
+             `("unarchive.sh" . ,(concat (regexp-opt '(".tar" ".tgz" ".tar.gz" ".txz" ".tar.xz" ".cbz" ".cbr" ".cbx"
+                                                       ".rar"))
+                                         "\\'")))
+(add-to-list 'eshell-output-filter-functions 'eshell-handle-ansi-color)
