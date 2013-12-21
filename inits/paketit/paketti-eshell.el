@@ -29,26 +29,6 @@
 
 (define-key global-map (kbd "C-c e s") 'mytoh:eshell-switch)
 
-;;; eshell keybind
-(cl-defun my-eshell-hook-keybindings ()
-  (define-key eshell-mode-map (kbd "C-p") 'eshell-previous-matching-input-from-input)
-  (define-key eshell-mode-map (kbd "C-n") 'eshell-next-matching-input-from-input)
-  ;; (define-key eshell-mode-map (kbd "C-a") 'eshell-bol)
-  )
-;; (add-hook 'eshell-mode-hook
-;;           'my-eshell-hook-keybindings)
-
-
-;;; disable hl-line
-;; (cl-defun my-eshell-hook-disable-hl-line ()
-;;   (set (make-local-variable 'hl-line-range-function)
-;;        (lambda ()
-;;          '(0 . 0))))
-
-;; (add-hook 'eshell-mode-hook
-;;           #'my-eshell-hook-disable-hl-line)
-
-
 
 ;;; start eshell after startup
 (add-hook 'emacs-startup-hook #'(lambda ()

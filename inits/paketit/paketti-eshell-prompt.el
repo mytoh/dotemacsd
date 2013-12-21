@@ -8,7 +8,6 @@
   '((t (:foreground "#2b4c7b")))
   "eshell prompt prompt character face")
 
-
 ;; prompt
 (cl-defun my-eshell-propertize (s f)
   (propertize s 'face f))
