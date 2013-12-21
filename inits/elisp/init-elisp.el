@@ -114,10 +114,16 @@
      ;; (req 'zone-settings)
 
 
-     (req 'helm-ypv
+     (pak 'helm-ypv
+
+          (autoload #'helm-ypv "helm-ypv")
+          (autoload #'helm-ypv-bookmarks "helm-ypv")
+          (autoload #'helm-ypv-channels "helm-ypv")
           (setq helm-ypv-local-address "localhost:7144")
-          (add-to-list 'helm-ypv-yp-urls '(dan1 "dandan626.web.fc2.com"))
-          (add-to-list 'helm-ypv-yp-urls '(dan2 "www27.atpages.jp/dandan626"))
+
+          (with-eval-after-load 'helm-ypv
+            (add-to-list 'helm-ypv-yp-urls '(dan1 "dandan626.web.fc2.com"))
+            (add-to-list 'helm-ypv-yp-urls '(dan2 "www27.atpages.jp/dandan626")))
 
           (mytoh:define-global-key (kbd "y") #'helm-ypv)
           )
@@ -128,7 +134,7 @@
             (add-to-list 'company-backends 'company-scheme)))
 
      (req 'shm
-          (add-hook 'haskell-mode-hook 'structured-haskell-mode))
+          (add-hook 'haskell-mode-hook #'structured-haskell-mode))
      )
 
 
