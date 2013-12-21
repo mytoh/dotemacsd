@@ -21,6 +21,14 @@
                                    'face 'font-lock-keyword-face)))
     (t (message "%s not loaded" (symbol-name ,lib)))))
 
+(cl-defmacro pak (package &rest body)
+  "execute body when package is installed"
+  `(cond
+    ((package-installed-p ,package)
+     (my-log "found package " (propertize (symbol-name ,package)
+                                          'face 'font-lock-variable-name-face))
+     ,@body)
+    (t (message "%s not found" (symbol-name ,package)))))
 
 (cl-defmacro add-hook-fn (name &rest body)
   "(add-hook-fn 'php-mode-hook
