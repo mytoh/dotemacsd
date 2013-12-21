@@ -93,6 +93,9 @@
 ;; (req 'helm-C-x-b
 ;;      (global-set-key [remap switch-to-buffer] 'helm-C-x-b))
 
+;; helm-ls-git
+(pak 'helm-ls-git
+     (define-key global-map (kbd "C-c e f") #'helm-ls-git-ls))
 
 
 (provide 'paketti-helm)
