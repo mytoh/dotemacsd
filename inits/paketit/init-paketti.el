@@ -142,6 +142,7 @@
         unicode-fonts
         writeroom-mode
         writegood-mode
+        nyan-prompt
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
