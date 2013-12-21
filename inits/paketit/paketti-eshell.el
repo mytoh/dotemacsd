@@ -8,6 +8,10 @@
 
 (require 'esh-util)
 
+;;; modules
+(add-to-list 'eshell-modules-list 'eshell-rebind)
+(add-to-list 'eshell-modules-list 'eshell-xtra)
+
 ;;; prefer lisp function
 (enable-option eshell-prefer-lisp-functions)
 
@@ -23,7 +27,6 @@
       (eshell)
       (delete-other-windows))))
 
-;;; use shell-pop instead
 (define-key global-map (kbd "C-c e s") 'mytoh:eshell-switch)
 
 ;;; eshell keybind
@@ -32,16 +35,8 @@
   (define-key eshell-mode-map (kbd "C-n") 'eshell-next-matching-input-from-input)
   ;; (define-key eshell-mode-map (kbd "C-a") 'eshell-bol)
   )
-(add-hook 'eshell-mode-hook
-          'my-eshell-hook-keybindings)
-
-
-;;; start eshell
-;; (add-hook 'after-init-hook
-;;           #'(lambda ()
-;;               (cl-letf ((default-directory (getenv "HOME")))
-;;                 (command-execute 'eshell)
-;;                 (bury-buffer))))
+;; (add-hook 'eshell-mode-hook
+;;           'my-eshell-hook-keybindings)
 
 
 ;;; disable hl-line
@@ -54,19 +49,6 @@
 ;;           #'my-eshell-hook-disable-hl-line)
 
 
-;;; helm history
-(add-hook 'eshell-mode-hook
-          #'(lambda ()
-              (define-key eshell-mode-map
-                (kbd "M-p")
-                'helm-eshell-history)))
-
-;;; helm complete
-(add-hook 'eshell-mode-hook
-          #'(lambda ()
-              (define-key eshell-mode-map
-                [remap eshell-pcomplete]
-                'helm-esh-pcomplete)))
 
 ;;; start eshell after startup
 (add-hook 'emacs-startup-hook #'(lambda ()
