@@ -181,4 +181,10 @@
 ;;;; image-mode
 (set-option image-transform-resize 'fit-height)
 
+;;;; ediff
+;; コントロール用のバッファを同一フレーム内に表示
+(set-option ediff-window-setup-function #'ediff-setup-windows-plain)
+;; diffのバッファを上下ではなく左右に並べる
+(set-option ediff-split-window-function #'split-window-horizontally)
+
 (provide 'config-setting)
