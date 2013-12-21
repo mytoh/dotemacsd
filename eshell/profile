@@ -7,4 +7,10 @@
 ## helm              
 (define-key eshell-mode-map
                 (kbd "M-h")
-                'helm-eshell-history)
+                #'helm-eshell-history)
+
+## helm complete
+(define-key eshell-mode-map
+                [remap eshell-pcomplete]
+                'helm-esh-pcomplete)
+                
