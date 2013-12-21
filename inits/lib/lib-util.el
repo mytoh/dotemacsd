@@ -24,7 +24,8 @@
 (cl-defmacro pak (package &rest body)
   "execute body when package is installed"
   `(cond
-    ((package-installed-p ,package)
+    ((or (package-installed-p ,package)
+         (locate-library (symbol-name ,package)))
      (my-log "found package " (propertize (symbol-name ,package)
                                           'face 'font-lock-variable-name-face))
      ,@body)
