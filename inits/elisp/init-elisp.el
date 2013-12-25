@@ -27,6 +27,8 @@
 
 (req 'ninja-mode)
 
+(req 'eshell-script)
+
 (req 'vendle
 
      ;; initialize vendle
@@ -37,7 +39,7 @@
      (vendle:register "daimrod/highlight-sexp")
      (vendle:register "m2ym/emux-el")
      (vendle:register "moriyamahiroshi/seijiseikana-el")
-
+     (vendle:register "kenoss/debug-print")
      (vendle:register "emacsmirror/eldoc-extension")
      (vendle:register "emacsmirror/mew")
      (vendle:register "naota/navi2ch")
@@ -46,9 +48,6 @@
      (vendle:register "ober/zone-matrix")
      (vendle:register "mytoh/flatline-el")
      (vendle:register "mytoh/fish-mode")
-
-     (vendle:register "github:chrisdone/structured-haskell-mode"
-                      '(:path "elisp"))
 
      (vendle:register-local "~/huone/projektit/helm-ypv")
      (vendle:register-local "~/huone/projektit/company-scheme")
@@ -115,7 +114,6 @@
 
 
      (pak 'helm-ypv
-
           (autoload #'helm-ypv "helm-ypv")
           (autoload #'helm-ypv-bookmarks "helm-ypv")
           (autoload #'helm-ypv-channels "helm-ypv")
@@ -125,16 +123,17 @@
             (add-to-list 'helm-ypv-yp-urls '(dan1 "dandan626.web.fc2.com"))
             (add-to-list 'helm-ypv-yp-urls '(dan2 "www27.atpages.jp/dandan626")))
 
-          (mytoh:define-global-key (kbd "y") #'helm-ypv)
-          )
+          (mytoh:define-global-key (kbd "y") #'helm-ypv))
 
 
      (with-eval-after-load 'company
        (req 'company-scheme
             (add-to-list 'company-backends 'company-scheme)))
 
-     (req 'shm
-          (add-hook 'haskell-mode-hook #'structured-haskell-mode))
+     (req 'debug-print
+          (debug-print-init)
+          (define-key global-map (kbd "C-x C-e") #'debug-print-eval-last-sexp))
+
      )
 
 
