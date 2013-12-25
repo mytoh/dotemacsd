@@ -1,3 +1,6 @@
+;;; lang-scheme.el -*- coding: utf-8; lexical-binding: t -*-
+;;;; keymap
+(define-key emacs-lisp-mode-map (kbd "C-m") 'newline-and-indent)
 
 (cl-defun minun:scheme-add-keywords (face-name keyword-rules)
   (cl-letf* ((keyword-list (mapcar #'(lambda (x)
@@ -17,15 +20,11 @@
                     (car x)))
            keyword-rules))
 
-
 (setq process-coding-system-alist
       (cons '("mosh" utf-8 . utf-8) process-coding-system-alist))
 (setq scheme-program-name "mosh")
 (autoload 'scheme-mode "cmuscheme" "Major mode for Scheme." t)
 (autoload 'run-scheme  "cmuscheme" "Run an inferior Scheme process." t)
-
-
-
 
 (cl-defun minun:scheme-other-window ()
   "run scheme on other window"

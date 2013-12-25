@@ -1,11 +1,12 @@
-alias pam rm -rf $*
-alias ag ag --nopager
-alias , napa $*
-alias yotsuba pikkukivi yotsuba $*
-alias futaba pikkukivi futaba $*
-alias tk talikko $*
-alias la ls -a
-alias ll ls -l
-alias ff find-file $1
-alias d dired-other-window ${pwd}
+alias img propertize "Image" (quote display) ${create-image ${expand-file-name $1}}
 alias k killall -9 $*
+alias d dired-other-window ${pwd}
+alias ff find-file $1
+alias ll ls -l
+alias la ls -a
+alias tk talikko $*
+alias futaba pikkukivi futaba $*
+alias yotsuba pikkukivi yotsuba $*
+alias , napa $*
+alias ag ag --nopager
+alias pam rm -rf $*

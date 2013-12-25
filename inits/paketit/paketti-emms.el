@@ -2,7 +2,10 @@
 (req 'emms-setup
      (when (executable-find "emms-print-metadata")
        (req 'emms-info-libtag
-            (setq emms-info-functions '(emms-info-libtag))))
+            (add-to-list 'emms-info-functions 'emms-info-libtag)))
+     (when (executable-find "mediainfo")
+       (req 'emms-info-mediainfo
+            (add-to-list 'emms-info-functions 'emms-info-mediainfo)))
      (emms-devel)
      (emms-default-players)
      ;; mode-line
@@ -27,13 +30,22 @@
                           ".stm" ".stx" ".ult" ".apun" ".xm" ".mod" ".MOD"))
             "mikmod" "-q" "-p" "1" "-X")
           (add-to-list 'emms-player-list 'emms-player-mikmod)
-
           ;; sox
           (define-emms-simple-player sox
             '(file)
             (regexp-opt '(".flac$" ".mp3" ".ogg"))
             "play" "--volume" "0.2")
-          (add-to-list 'emms-player-list 'emms-player-sox))
+          (add-to-list 'emms-player-list 'emms-player-sox)
+
+          ;; mpv
+          (define-emms-simple-player mpv
+            '(file)
+            (concat (regexp-opt '(".mkv" ".wmv" ".mp4" ".flv" ".swf"))
+                    "\\'")
+            "mpv" "--framedrop=yes" "--softvol" "--really-quiet "  "--use-filename-title" )
+          (add-to-list 'emms-player-list 'emms-player-mpv)
+          )
+
 
      (req 'emms-info)
 

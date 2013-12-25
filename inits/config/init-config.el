@@ -6,6 +6,7 @@
     config-path
     config-face
     config-clipboard
+    config-font
     ))
 
 (mapc #'require init-configs)

@@ -5,8 +5,7 @@
   (require 'cl-lib))
 
 ;;;;; libs
-(add-to-list 'load-path (concat user-emacs-directory "inits/lib"))
-(eval-when-compile (require 'init-lib))
+(eval-when-compile (require 'init-lib "lib/init-lib"))
 (add-subdirs-to-load-path (concat user-emacs-directory "inits"))
 
 ;;;;; packages

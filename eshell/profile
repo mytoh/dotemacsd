@@ -1,25 +1,72 @@
-## alias
-(cl-defun eshell/img (file)
-  (propertize "Image" 'display
-              (create-image (expand-file-name file))))
+## -*- mode: eshell-script-mode; commend-start: "#" -*-
 
+(or (getenv "CDPATH")
+    (setenv "CDPATH"
+            (cl-reduce
+             #'(lambda (a b)
+                 (cl-concatenate 'string
+                                 (expand-file-name a) ":" (expand-file-name b)))
+             '("~/huone" "~"  "/usr/local"))))
+
+(setenv "PAGER" "cat")
+
+## 補完時に大文字小文字を区別しない
+(setq eshell-cmpl-ignore-case t)
+## 確認なしでヒストリ保存
+(setq eshell-ask-to-save-history (quote always))
+## 補完時にサイクルする
+(setq eshell-cmpl-cycle-completions t)
+## 補完候補がこの数値以下だとサイクルせずに候補表示
+(setq eshell-cmpl-cycle-cutoff-length 5)
+## 履歴で重複を無視する
+(setq eshell-hist-ignoredups t)
+
+## scroll to the bottom
+(setq eshell-scroll-to-bottom-on-output t)
+(setq eshell-scroll-show-maximum-output t)
+
+## history
+(setq eshell-history-size 10000)
+
+## run ls after cd
+(setq eshell-list-files-after-cd t)
 
 ## helm
 (define-key eshell-mode-map
-                (kbd "M-h")
-                #'helm-eshell-history)
+  (kbd "M-h")
+  #'helm-eshell-history)
 
 ## helm complete
 (define-key eshell-mode-map
-                [remap eshell-pcomplete]
-                'helm-esh-pcomplete)
+  [remap eshell-pcomplete]
+  'helm-esh-pcomplete)
 
-(define-key eshell-mode-map (kbd "C-r") #'eshell-previous-matching-input-from-input)
+(define-key eshell-mode-map (kbd "C-p") #'eshell-previous-matching-input-from-input)
+(define-key eshell-mode-map (kbd "C-n") #'eshell-next-matching-input-from-input)
+# (define-key eshell-mode-map (kbd "C-r") #'eshell-previous-matching-input-from-input)
 
 (add-to-list 'eshell-visual-commands "ssh")
 (add-to-list 'eshell-visual-commands "tail")
 (add-to-list 'eshell-command-completions-alist
              `("unarchive.sh" . ,(concat (regexp-opt '(".tar" ".tgz" ".tar.gz" ".txz" ".tar.xz" ".cbz" ".cbr" ".cbx"
-                                                       ".rar"))
+                                                       ".rar" ".zip"))
                                          "\\'")))
+
 (add-to-list 'eshell-output-filter-functions 'eshell-handle-ansi-color)
+(add-to-list 'eshell-output-filter-functions 'eshell-truncate-buffer)
+(add-to-list 'eshell-output-filter-functions 'eshell-postoutput-scroll-to-bottom)
+
+
+(defun pcomplete/sudo ()
+  (let ((prec (pcomplete-arg 'last -1)))
+    (cond ((string= "sudo" prec)
+           (while (pcomplete-here*
+                   (funcall pcomplete-command-completion-function)
+                   (pcomplete-arg 'last) t))))))
+
+(defun pcomplete/please ()
+  (let ((prec (pcomplete-arg 'last -1)))
+    (cond ((string= "please" prec)
+           (while (pcomplete-here*
+                   (funcall pcomplete-command-completion-function)
+                   (pcomplete-arg 'last) t))))))

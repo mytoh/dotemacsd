@@ -15,6 +15,7 @@
    (quote
     ("a99e7c91236b2aba4cd374080c73f390c55173c5a1b4ac662eeb3172b60a9814" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(fci-rule-color "#073642")
+
  '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
  '(highlight-tail-colors
    (quote
@@ -27,6 +28,7 @@
      ("#93115C" . 85)
      ("#073642" . 100))))
  '(magit-diff-use-overlays nil)
+ '(safe-local-variable-values (quote ((commend-start . "#"))))
  '(syslog-debug-face
    (quote
     ((t :background unspecified :foreground "#2aa198" :weight bold))))

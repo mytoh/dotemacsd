@@ -1,4 +1,4 @@
- ;;; -*- coding: utf-8 -*-
+;;; paketti-eshell.el -*- coding: utf-8; lexical-binding: t -*-
 
 ;;; builtins
 
@@ -12,7 +12,7 @@
 
 ;; uniquify
 (req 'uniquify
-     (setq uniquify-buffer-name-style 'post-forward-angle-brackets))
+     (set-option uniquify-buffer-name-style 'post-forward-angle-brackets))
 
 ;; term/bobcat
 (load "term/bobcat")
@@ -23,7 +23,7 @@
 (require 'allout)
 (allout-init t)
 
-
+(require 'paketti-newsticker)
 (require 'paketti-eshell)
 (require 'paketti-eldoc)
 (require 'paketti-whitespace)
@@ -79,6 +79,7 @@
         popwin
         ghc
         emms
+        emms-info-mediainfo
         color-moccur
         git-gutter+
         ;; git-gutter
@@ -204,6 +205,7 @@
     tangotango-theme
     calmer-forest-theme
     jujube-theme
+    bubbleberry-theme
     moe-theme
     naquadah-theme
     noctilux-theme

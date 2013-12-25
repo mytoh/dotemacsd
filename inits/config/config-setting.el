@@ -57,6 +57,12 @@
 
 ;;;; show images
 (auto-image-file-mode 1)
+(enable-option image-animate-loop)
+(add-hook 'image-mode-hook
+          #'(lambda ()
+              (cl-letf ((image (image-get-display-property)))
+                (if (image-multi-frame-p image)
+                    (image-toggle-animation)))))
 
 ;;;; highlight region
 (transient-mark-mode 1)
@@ -150,18 +156,17 @@
 
 ;;;; reload buffer
 (global-auto-revert-mode 1)
-(set-option auto-revert-interval 5)
+;; (set-option auto-revert-interval 5)
 (enable-option auto-revert-check-vc-info)
+(enable-option global-auto-revert-non-file-buffers)
+(disable-option auto-revert-verbose)
+(set-option revert-without-query '(".*\\.scm\\'" ".*\\.el\\'" ".*\\.tcsh\\'"))
 
 ;;;; confirmation when visit new file or buffer
 (set-option confirm-nonexistent-file-or-buffer nil)
 
 ;;;; open archived files
 (auto-compression-mode 1)
-
-;;;; also reload dired, and quiet
-(enable-option global-auto-revert-non-file-buffers)
-(disable-option auto-revert-verbose)
 
 ;;;; display buffer end
 (enable-option indicate-empty-lines)
@@ -179,7 +184,7 @@
 (set-option list-colors-sort 'hsv)
 
 ;;;; image-mode
-(set-option image-transform-resize 'fit-height)
+;; (set-option image-transform-resize 'fit-height)
 
 ;;;; ediff
 ;; コントロール用のバッファを同一フレーム内に表示

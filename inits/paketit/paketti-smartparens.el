@@ -33,7 +33,7 @@
      (define-key sp-keymap (kbd "M-S")         'sp-split-sexp) ;; misc
 
      ;; added
-     (define-key sp-keymap (kbd "M-f")   'sp-forward-symbol)
+     (define-key sp-keymap (kbd "M-f")   'sp-forward-whitespace)
      (define-key sp-keymap (kbd "M-b")   'sp-backward-symbol)
      (define-key sp-keymap (kbd "C-M-k") 'sp-kill-sexp)
      (define-key sp-keymap (kbd "C-]")   'sp-select-next-thing-exchange)

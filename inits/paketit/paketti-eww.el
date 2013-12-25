@@ -1,3 +1,4 @@
+;;; paketti-eww.el -*- lexical-binding: t -*-
 
 (req 'eww
      (setq eww-download-path "~/huone/lataukset")

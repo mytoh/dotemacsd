@@ -1,4 +1,4 @@
-
+;;; paketti-eshell.el -*- lexical-binding: t -*-
 ;; eshell
 
 (eval-when-compile
@@ -27,7 +27,7 @@
       (eshell)
       (delete-other-windows))))
 
-(define-key global-map (kbd "C-c e s") 'mytoh:eshell-switch)
+(mytoh:define-global-key (kbd "s") 'mytoh:eshell-switch)
 
 
 ;;; start eshell after startup

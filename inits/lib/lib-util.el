@@ -142,4 +142,26 @@ buffer is not visiting a file."
       (color-hsl-to-rgb (/ h 360.0) (/ s 100.0) (/ l 100.0))
     (color-rgb-to-hex r g b)))
 
+;;; my global map
+(defun mytoh:define-global-key (key func)
+  "define personal key mappings"
+  (cl-letf* ((prefix (kbd "C-c e"))
+             (keymap (concat prefix key)))
+    (define-key global-map keymap func)))
+
+;; smart kill word
+;; http://d.hatena.ne.jp/kiwanami/20091222/1261504543
+(cl-defun kill-region-or-backward-kill-word ()
+  (interactive)
+  (if (region-active-p)
+      (kill-region (point) (mark))
+    (backward-kill-word 1)))
+
+;; kill whole line
+(cl-defun smart-kill-whole-line (&optional arg)
+  "A simple wrapper around `kill-whole-line' that respects indentation"
+  (interactive "P")
+  (kill-whole-line arg)
+  (back-to-indentation))
+
 (provide 'lib-util)

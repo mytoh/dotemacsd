@@ -1,4 +1,4 @@
- ;;; -*- coding: utf-8  -*-
+;;; lang-elisp.el -*- lexical-binding: t -*-
 
 (add-to-list 'auto-mode-alist '("\\.emacs-w3m\\'" .  emacs-lisp-mode))
 
@@ -27,8 +27,7 @@
    (1 . add-to-list)
    (1 . font-lock-add-keywords)
    (1 . submatch)
-   (1 . or)
-   ))
+   (1 . or)))
 
 (my-elisp-add-keywords
  'font-lock-keyword-face
@@ -54,5 +53,8 @@
 
 (add-hook 'emacs-lisp-mode-hook 'my-elisp-buffer-enable-reindent)
 (add-hook 'emacs-lisp-mode-hook 'checkdoc-minor-mode)
+
+;;;; keymap
+(define-key emacs-lisp-mode-map (kbd "C-m") 'newline-and-indent)
 
 (provide 'lang-elisp)
