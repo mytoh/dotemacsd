@@ -1,11 +1,10 @@
-## -*- mode: eshell-script-mode; commend-start: "#" -*-
 
 (or (getenv "CDPATH")
     (setenv "CDPATH"
             (cl-reduce
-             #'(lambda (a b)
-                 (cl-concatenate 'string
-                                 (expand-file-name a) ":" (expand-file-name b)))
+             '(lambda (a b)
+                (cl-concatenate 'string
+                                (expand-file-name a) ":" (expand-file-name b)))
              '("~/huone" "~"  "/usr/local"))))
 
 (setenv "PAGER" "cat")
@@ -33,17 +32,16 @@
 
 ## helm
 (define-key eshell-mode-map
-  (kbd "M-h")
-  #'helm-eshell-history)
+  (kbd "M-h") 'helm-eshell-history)
 
 ## helm complete
 (define-key eshell-mode-map
   [remap eshell-pcomplete]
   'helm-esh-pcomplete)
 
-(define-key eshell-mode-map (kbd "C-p") #'eshell-previous-matching-input-from-input)
-(define-key eshell-mode-map (kbd "C-n") #'eshell-next-matching-input-from-input)
-# (define-key eshell-mode-map (kbd "C-r") #'eshell-previous-matching-input-from-input)
+(define-key eshell-mode-map (kbd "C-p") 'eshell-previous-matching-input-from-input)
+(define-key eshell-mode-map (kbd "C-n") 'eshell-next-matching-input-from-input)
+                                        # (define-key eshell-mode-map (kbd "C-r") #'eshell-previous-matching-input-from-input)
 
 (add-to-list 'eshell-visual-commands "ssh")
 (add-to-list 'eshell-visual-commands "tail")
