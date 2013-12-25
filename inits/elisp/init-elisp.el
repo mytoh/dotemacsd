@@ -27,7 +27,8 @@
 
 (req 'ninja-mode)
 
-(req 'eshell-script)
+(req 'eshell-script
+     (add-to-list 'auto-mode-alist '("\\.esh\\'" . eshell-script-mode)))
 
 (req 'vendle
 
