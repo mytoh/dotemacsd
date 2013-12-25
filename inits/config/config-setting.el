@@ -142,7 +142,7 @@
             `((".*" ,autosave-directory t)))
 
 ;; save more recent files
-(set-option recentf-max-saved-items 10000)
+(set-option recentf-max-saved-items nil)
 ;;;; recentf exclude
 (defvar my-recentf-exclude `(,(rx  ".el.gz" string-end) "archive-contents$" "-autoloads.el$"))
 (set-option recentf-exclude my-recentf-exclude)
