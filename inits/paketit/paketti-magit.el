@@ -17,6 +17,8 @@
                 (set (make-local-variable 'fill-column) 72)
                 (turn-on-auto-fill))))
 
+(mytoh:define-global-key (kbd "g") #'magit-status)
+
 (req 'magit
      (my-magit-setup))
 
