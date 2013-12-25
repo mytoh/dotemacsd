@@ -30,6 +30,7 @@
                    ("png" . "kuva.sh")
                    ("gif" . "kuva.sh")
                    ("mov" . "mpv")
+                   ("flv" . "mpv")
                    ("mkv" . "mpv")
                    ("mp4" . "mpv")
                    ("wmv" . "mpv")))
