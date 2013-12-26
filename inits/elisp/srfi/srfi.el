@@ -4,18 +4,18 @@
 
 
 (cl-defun srfi:add-keywords (face-name keyword-rules)
-  (cl-let* ((keyword-list (cl-mapcar #'(lambda (x)
-                                         (symbol-name (cdr x)))
-                                     keyword-rules))
-            (keyword-regexp (cl-concatenate 'string
-                                            "(\\("
-                                            (regexp-opt keyword-list)
-                                            "\\)[ \n]")))
-           (my-log "adding keywords for face "
-                   (propertize (symbol-name face-name) 'face 'font-lock-variable-name-face)
-                   " on scheme mode")
-           (font-lock-add-keywords 'scheme-mode
-                                   `((,keyword-regexp 1 ',face-name))))
+  (cl-letf* ((keyword-list (cl-mapcar #'(lambda (x)
+                                          (symbol-name (cdr x)))
+                                      keyword-rules))
+             (keyword-regexp (cl-concatenate 'string
+                                             "(\\("
+                                             (regexp-opt keyword-list)
+                                             "\\)[ \n]")))
+    (my-log "adding keywords for face "
+            (propertize (symbol-name face-name) 'face 'font-lock-variable-name-face)
+            " on scheme mode")
+    (font-lock-add-keywords 'scheme-mode
+                            `((,keyword-regexp 1 ',face-name))))
   (cl-mapc #'(lambda (x)
                (put (cdr x)
                     'scheme-indent-function
