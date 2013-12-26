@@ -3,7 +3,7 @@
 
 (cl-defun r7rs:add-process-context ()
   (r7rs:add-keywords
-   'r7rs:syntax-face
+   'r7rs:face-syntax
    '((1 . command-line)
      (1 . emergency-exit)
      (1 . exit)

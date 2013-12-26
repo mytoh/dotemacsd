@@ -34,18 +34,18 @@
 
                           ;; ,@
                           (,(rx ",@")
-                           0 'r7rs:string-face)
+                           0 'r7rs:face-string)
                           ;; #`
                           (,(rx (submatch "#`\"")
                                 (submatch (one-or-more any))
                                 (submatch  "\""))
-                           (1 'r7rs:regexp-face)
-                           (2 'r7rs:regexp-face)
-                           (3 'r7rs:regexp-face)
+                           (1 'r7rs:face-regexp)
+                           (2 'r7rs:face-regexp)
+                           (3 'r7rs:face-regexp)
                            )
                           ;; #t #f
                           (,(rx (or  "#t" "#f"))
-                           0 'r7rs:boolean-face)
+                           0 'r7rs:face-boolean)
 
                           ;; *some-variable*
                           (,(rx "*"
@@ -53,19 +53,19 @@
                                  (one-or-more
                                   any))
                                 "*")
-                           0 'r7rs:constant-face)
+                           0 'r7rs:face-constant)
 
                           ;; keyword symbol
                           (,(rx (one-or-more (not (syntax word)))
                                 ":" (one-or-more (or (syntax word)
                                                      (syntax symbol))))
-                           0 'r7rs:constant-face)
+                           0 'r7rs:face-constant)
 
                           ;; symbol
                           (,(rx (one-or-more (not (syntax word)))
                                 "'" (one-or-more (or (syntax word)
                                                      (syntax symbol))))
-                           0 'r7rs:string-face)
+                           0 'r7rs:face-string)
 
                           ;; library name
                           (,(rx (syntax open-parenthesis) (or "library" "define-library")
@@ -74,12 +74,12 @@
                                 (submatch (one-or-more (or (syntax word)
                                                            (syntax symbol)
                                                            (in " \t\n")))))
-                           0 'r7rs:library-name-face)
+                           0 'r7rs:face-library-name)
 
                           ;; character literal #\x
                           (,(rx "#" "\\" (one-or-more (or (syntax word)
                                                           (syntax symbol))))
-                           0 'r7rs:character-face)
+                           0 'r7rs:face-character)
 
                           ;; named let
                           (,(rx (syntax open-parenthesis) "let"
@@ -88,7 +88,7 @@
                                                            (syntax symbol))))
                                 (* space)
                                 (syntax open-parenthesis))
-                           1 'r7rs:constant-face)
+                           1 'r7rs:face-constant)
                           ))
 
 
@@ -112,23 +112,23 @@
 
 
 
-(cl-defun r7rs:mode-start ()
-  (r7rs:add-faces)
-  (r7rs:add-fundamental)
-  (r7rs:add-base)
-  (r7rs:add-char)
-  (r7rs:add-cxr)
-  (r7rs:add-file)
-  (r7rs:add-process-context)
-  (r7rs:add-eval)
-  (r7rs:add-lazy)
-  (r7rs:add-load)
-  (r7rs:add-read)
-  (r7rs:add-repl)
-  (r7rs:add-time)
-  (r7rs:add-write)
-  (r7rs:add-inexact)
-  (r7rs:add-complex))
+p(cl-defun r7rs:mode-start ()
+   (r7rs:add-faces)
+   (r7rs:add-fundamental)
+   (r7rs:add-base)
+   (r7rs:add-char)
+   (r7rs:add-cxr)
+   (r7rs:add-file)
+   (r7rs:add-process-context)
+   (r7rs:add-eval)
+   (r7rs:add-lazy)
+   (r7rs:add-load)
+   (r7rs:add-read)
+   (r7rs:add-repl)
+   (r7rs:add-time)
+   (r7rs:add-write)
+   (r7rs:add-inexact)
+   (r7rs:add-complex))
 
 ;;;###autoload
 (define-minor-mode r7rs-mode

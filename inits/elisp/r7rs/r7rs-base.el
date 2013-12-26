@@ -4,7 +4,7 @@
 (cl-defun r7rs:add-base ()
 
   (r7rs:add-keywords
-   'r7rs:syntax-face
+   'r7rs:face-syntax
    '((1 . define)
      (1 . define-record-type)
      (1 . define-syntax)
@@ -29,7 +29,7 @@
 
 
   (r7rs:add-keywords
-   'r7rs:function-face
+   'r7rs:face-function
    '((1 . *)
      (1 . +)
      (1 . ...)

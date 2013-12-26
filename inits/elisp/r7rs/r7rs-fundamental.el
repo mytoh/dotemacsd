@@ -3,7 +3,7 @@
 
 (cl-defun r7rs:add-fundamental ()
   (r7rs:add-keywords
-   'r7rs:syntax-face
+   'r7rs:face-syntax
    '((2 . library)
      (2 . define-library)
      (0 . export)

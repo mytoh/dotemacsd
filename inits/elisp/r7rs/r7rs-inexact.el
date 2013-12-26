@@ -1,7 +1,7 @@
 
 (cl-defun r7rs:add-inexact ()
   (r7rs:add-keywords
-   'r7rs:function-face
+   'r7rs:face-function
    '((1 . acos)
      (1 . atan)
      (1 . exp)

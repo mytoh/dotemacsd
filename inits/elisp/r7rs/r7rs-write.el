@@ -1,7 +1,7 @@
 
 (cl-defun r7rs:add-write ()
   (r7rs:add-keywords
-   'r7rs:function-face
+   'r7rs:face-function
    '((1 . display)
      (1 . write-shared)
      (1 . write)
