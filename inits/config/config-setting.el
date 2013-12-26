@@ -141,9 +141,9 @@
 (set-option auto-save-file-name-transforms
             `((".*" ,autosave-directory t)))
 
+;;;; recentf
 ;; save more recent files
 (set-option recentf-max-saved-items nil)
-;;;; recentf exclude
 (defvar my-recentf-exclude `(,(rx  ".el.gz" string-end) "archive-contents$" "-autoloads.el$"))
 (set-option recentf-exclude my-recentf-exclude)
 (set-option recentf-auto-cleanup 10)

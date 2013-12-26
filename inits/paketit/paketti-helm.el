@@ -9,7 +9,7 @@
      (global-set-key (kbd "C-M-z") #'helm-resume)
      (define-key global-map [remap find-file] #'helm-find-files)
      (define-key global-map [remap occur] #'helm-occur)
-     (define-key global-map [remap buffer-menu] #'helm-buffers-list)
+     (define-key global-map (kbd "C-x b") #'helm-buffers-list)
      (define-key global-map [remap list-buffers] #'helm-buffers-list)
 
      (define-key helm-map (kbd "C-M-n") #'helm-next-source)
@@ -26,6 +26,7 @@
      ;; (setq helm-ff-auto-update-initial-value nil)
      (set-option helm-external-programs-associations
                  '(("cbz" . "mcomix")
+                   ("cbr" . "mcomix")
                    ("jpg" . "kuva.sh")
                    ("png" . "kuva.sh")
                    ("gif" . "kuva.sh")
@@ -61,7 +62,7 @@
      )
 
 ;; helm-themes
-(req 'helm-themes)
+;; (req 'helm-themes)
 
 ;; helm-c-yasnippet
 (req 'helm-c-yasnippet)

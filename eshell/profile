@@ -1,3 +1,4 @@
+## -*- mode: eshell-script -*-
 
 (or (getenv "CDPATH")
     (setenv "CDPATH"
@@ -36,12 +37,11 @@
 
 ## helm complete
 (define-key eshell-mode-map
-  [remap eshell-pcomplete]
-  'helm-esh-pcomplete)
+  [remap eshell-pcomplete]  'helm-esh-pcomplete)
 
 (define-key eshell-mode-map (kbd "C-p") 'eshell-previous-matching-input-from-input)
 (define-key eshell-mode-map (kbd "C-n") 'eshell-next-matching-input-from-input)
-                                        # (define-key eshell-mode-map (kbd "C-r") #'eshell-previous-matching-input-from-input)
+# (define-key eshell-mode-map (kbd "C-r") #'eshell-previous-matching-input-from-input)
 
 (add-to-list 'eshell-visual-commands "ssh")
 (add-to-list 'eshell-visual-commands "tail")

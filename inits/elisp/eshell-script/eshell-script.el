@@ -3,7 +3,7 @@
 
 (defvar eshell-script-mode-syntax-table
   (let ((table (copy-syntax-table emacs-lisp-mode-syntax-table)))
-    (modify-syntax-entry ?\# "<" table)
+    (modify-syntax-entry ?\# "<." table)
     (modify-syntax-entry ?\n ">#" table)
     table)
   "Syntax table used in `eshell-script-mode'.")
@@ -11,8 +11,8 @@
 (define-derived-mode eshell-script-mode emacs-lisp-mode "Esh"
   "Major mode for editing eshell scripts."
   (setq-local comment-start "# ")
-  (setq-local comment-start-skip "#+[\t ]*")
-  )
+  (setq-local comment-end   "\n")
+  (setq-local comment-start-skipe "#[^']+*"))
 
 (provide 'eshell-script)
 
