@@ -160,6 +160,7 @@
 
 (defvar *my-paketti-list-colour-themes*
   '(;; themes
+    gruvbox-theme
     afternoon-theme
     sublime-themes
     subatomic-enhanced-theme
