@@ -6,21 +6,25 @@
      (when (executable-find "mediainfo")
        (req 'emms-info-mediainfo
             (add-to-list 'emms-info-functions 'emms-info-mediainfo)))
+     (when (executable-find "metaflac")
+       (req 'emms-info-metaflac
+            (add-to-list 'emms-info-functions 'emms-info-metaflac)))
      (emms-devel)
      (emms-default-players)
      ;; mode-line
-     (emms-mode-line 1)
+     (emms-mode-line +1)
+     (req 'emms-mode-line-icon)
      (setq emms-show-format "NP: %s")
      (setq emms-mode-line-icon-before-format "("
            emms-mode-line-format "%s)"
            emms-mode-line-icon-color "blue")
      ;; playing time
-     (emms-playing-time 1)
-     (setq emms-source-file-default-directory "~/huone/musiikki")
-     (setq emms-repeat-playlist t)
-     (setq emms-info-asynchronously t)
-     (setq emms-info-auto-update t)
-     (setq emms-lastfm-server "http://turtle.libre.fm/")
+     (emms-playing-time +1)
+     (set-option emms-source-file-default-directory "~/huone/musiikki")
+     (enable-option emms-repeat-playlist)
+     (enable-option emms-info-asynchronously)
+     (enable-option emms-info-auto-update)
+     (set-option emms-lastfm-server "http://turtle.libre.fm/")
      (req 'emms-player-simple
 
           ;; mikmod
@@ -60,7 +64,7 @@
           (define-emms-simple-player mpv
             '(file)
             (emms-player-simple-regexp "mkv" "wmv" "mp4" "flv" "swf")
-            "mpv" "--framedrop=yes" "--softvol=auto" "--really-quiet" )
+            "mpv" "--framedrop=yes" "--softvol=auto" "--really-quiet")
           (add-to-list 'emms-player-list #'emms-player-mpv))
 
      (defcustom emms-volume-mixer-control "vol"
@@ -90,13 +94,19 @@ controls, run `mixer' in a shell."
      (req 'emms-info)
 
      ;;;; keymap
-     (global-set-key (kbd "C-c m P") #'emms-pause)
-     (global-set-key (kbd "C-c m s") #'emms-stop)
-     (global-set-key (kbd "C-c m p") #'emms-previous)
-     (global-set-key (kbd "C-c m n") #'emms-next)
-     (global-set-key (kbd "C-c m b") #'emms-smart-browse)
-     (global-set-key (kbd "C-c m +") #'emms-volume-raise)
-     (global-set-key (kbd "C-c m -") #'emms-volume-lower)
+     (define-prefix-command 'my-emms-map)
+     (global-set-key (kbd "C-c m") 'my-emms-map)
+     (defun mytoh:define-emms-key (key func)
+       "define personal key mappings"
+       (define-key my-emms-map key func))
+     (mytoh:define-emms-key (kbd "P") #'emms-pause)
+     (mytoh:define-emms-key (kbd "s") #'emms-stop)
+     (mytoh:define-emms-key (kbd "p") #'emms-previous)
+     (mytoh:define-emms-key (kbd "n") #'emms-next)
+     (mytoh:define-emms-key (kbd "b") #'emms-smart-browse)
+     (mytoh:define-emms-key (kbd "a f") #'emms-add-file)
+     (mytoh:define-emms-key (kbd "+") #'emms-volume-raise)
+     (mytoh:define-emms-key (kbd "-") #'emms-volume-lower)
 
      )
 
