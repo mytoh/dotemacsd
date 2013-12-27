@@ -143,11 +143,11 @@ buffer is not visiting a file."
     (color-rgb-to-hex r g b)))
 
 ;;; my global map
+(define-prefix-command 'my-global-map)
+(global-set-key (kbd "C-c e") 'my-global-map)
 (defun mytoh:define-global-key (key func)
   "define personal key mappings"
-  (cl-letf* ((prefix (kbd "C-c e"))
-             (keymap (concat prefix key)))
-    (define-key global-map keymap func)))
+  (define-key my-global-map key func))
 
 ;; smart kill word
 ;; http://d.hatena.ne.jp/kiwanami/20091222/1261504543
