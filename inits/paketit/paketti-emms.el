@@ -22,30 +22,46 @@
      (setq emms-info-auto-update t)
      (setq emms-lastfm-server "http://turtle.libre.fm/")
      (req 'emms-player-simple
+
           ;; mikmod
           (define-emms-simple-player mikmod '(file)
-            (regexp-opt '(".669" ".AMF" ".DSM" ".FAR" ".GDM" ".IT" ".IMF"
-                          ".MED" ".MTM" ".OKT" ".S3M" ".STM" ".STX" ".ULT"
-                          ".APUN" ".XM" ".MOD" ".amf" ".dsm" ".far" ".gdm"
-                          ".it" ".imf" ".mod" ".med" ".mtm" ".okt" ".s3m"
-                          ".stm" ".stx" ".ult" ".apun" ".xm" ".mod" ".MOD"))
+            (emms-player-simple-regexp
+             "669" "AMF" "DSM" "FAR" "GDM" "IT" "IMF"
+             "MED" "MTM" "OKT" "S3M" "STM" "STX" "ULT"
+             "APUN" "XM" "MOD" "amf" "dsm" "far" "gdm"
+             "it" "imf" "mod" "med" "mtm" "okt" "s3m"
+             "stm" "stx" "ult" "apun" "xm" "mod" "MOD")
             "mikmod" "-q" "-p" "1" "-X")
-          (add-to-list 'emms-player-list 'emms-player-mikmod)
+          (add-to-list 'emms-player-list #'emms-player-mikmod)
+
           ;; sox
           (define-emms-simple-player sox
             '(file)
-            (regexp-opt '(".flac$" ".mp3" ".ogg"))
+            (emms-player-simple-regexp "flac" "mp3" "ogg")
             "play" "--volume" "0.2")
-          (add-to-list 'emms-player-list 'emms-player-sox)
+          (add-to-list 'emms-player-list #'emms-player-sox)
+
+          ;; mplayer2
+          (define-emms-simple-player mplayer2 '(file url)
+            (concat "\\`\\(http\\|mms\\)://\\|"
+                    (emms-player-simple-regexp
+                     "ogg" "mp3" "wav" "mpg" "mpeg" "wmv" "wma"
+                     "mov" "avi" "divx" "ogm" "ogv" "asf" "mkv"
+                     "rm" "rmvb" "mp4" "flac" "vob" "m4a" "ape"))
+            "mplayer" "--slave" "--really-quiet")
+          (add-to-list 'emms-player-list #'emms-player-mplayer2)
+
+          (define-emms-simple-player mplayer2-playlist '(streamlist)
+            "\\`http://"
+            "mplayer" "--slave"  "--really-quiet" )
+          (add-to-list 'emms-player-list #'emms-player-mplayer2-playlist)
 
           ;; mpv
           (define-emms-simple-player mpv
             '(file)
-            (concat (regexp-opt '(".mkv" ".wmv" ".mp4" ".flv" ".swf"))
-                    "\\'")
+            (emms-player-simple-regexp "mkv" "wmv" "mp4" "flv" "swf")
             "mpv" "--framedrop=yes" "--softvol=auto" "--really-quiet" )
-          (add-to-list 'emms-player-list 'emms-player-mpv)
-          )
+          (add-to-list 'emms-player-list #'emms-player-mpv))
 
      (defcustom emms-volume-mixer-control "vol"
        "The control to change the volume with.
