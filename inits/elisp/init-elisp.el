@@ -47,9 +47,10 @@
      (vendle:register "tj64/outxxtra")
      (vendle:register "sabof/hyperplane-theme")
      (vendle:register "ober/zone-matrix")
-     (vendle:register "mytoh/flatline-el")
      (vendle:register "mytoh/fish-mode")
+     (vendle:register "thierryvolpiatto/emacs-bmk-ext")
 
+     (vendle:register-local "~/huone/projektit/flatline-el")
      (vendle:register-local "~/huone/projektit/helm-ypv")
      (vendle:register-local "~/huone/projektit/company-scheme")
      ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
