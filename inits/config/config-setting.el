@@ -175,6 +175,7 @@
 (enable-option electric-layout-mode)
 
 ;;;; save minibuffer history
+(set-option savehist-additional-variables '(kill-ring mark-ring global-mark-ring search-ring regexp-search-ring extended-command-history))
 (savehist-mode 1)
 
 ;;;; add newline to end of file
