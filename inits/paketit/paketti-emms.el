@@ -66,7 +66,7 @@ controls, run `mixer' in a shell."
                                        (format "%s%d"
                                                (if (< amount 0) "-" "+")
                                                (abs amount))))
-                    (if (re-search-backward "\\[\\([0-9]+\\)\\]" nil t)
+                    (if (re-search-backward "to \\([0-9]+\\):[0-9]+." nil t)
                         (match-string 1))))))
 
      (set-option emms-volume-change-function #'emms-volume-mixer-change)
@@ -78,6 +78,7 @@ controls, run `mixer' in a shell."
      (global-set-key (kbd "C-c m s") #'emms-stop)
      (global-set-key (kbd "C-c m p") #'emms-previous)
      (global-set-key (kbd "C-c m n") #'emms-next)
+     (global-set-key (kbd "C-c m b") #'emms-smart-browse)
      (global-set-key (kbd "C-c m +") #'emms-volume-raise)
      (global-set-key (kbd "C-c m -") #'emms-volume-lower)
 
