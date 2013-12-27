@@ -18,9 +18,10 @@
      (define-key helm-c-read-file-map (kbd "TAB") #'helm-execute-persistent-action)
 
      (set-option helm-candidate-number-limit nil)
-     (set-option helm-idle-delay             0.01)
-     (set-option helm-input-idle-delay       0.01)
+     (set-option helm-idle-delay             0.1)
+     (set-option helm-input-idle-delay       0.1)
      (set-option helm-ff-lynx-style-map nil)
+     (enable-option helm-M-x-always-save-history)
      (disable-option helm-ff-transformer-show-only-basename)
      ;; disable auto completion
      ;; (setq helm-ff-auto-update-initial-value nil)
@@ -37,26 +38,33 @@
                    ("wmv" . "mpv")))
      (enable-option helm-bookmark-show-location)
 
+     (defvar mytoh:helm-start-sources
+       (if (locate-library "bookmark-extensions")
+           '(helm-source-bookmark-files&dirs
+             helm-source-recentf)
+         '(helm-source-pp-bookmarks
+           helm-source-recentf)))
      (cl-defun helm-start ()
        "personal helm command : [\\[helm-start]]"
        (interactive)
-       (let ((helm-ff-transformer-show-only-basename nil))
-         (helm :sources '(helm-source-bookmarks
-                          helm-source-recentf)
+       (cl-letf ((helm-ff-transformer-show-only-basename nil))
+         (helm :sources mytoh:helm-start-sources
                :buffer "*helm start*"
                :prompt "Start: "
                :candidate-number-limit 10)))
 
-     (cl-defun mytoh:startup ()
-       (let ((current-window
-              (frame-selected-window (selected-frame))))
-         (if (and current-window
-                  (window-live-p current-window))
-             (helm-start))))
-
      (mytoh:define-global-key (kbd "h") #'helm-start)
 
-     ;; (add-hook 'after-init-hook #'mytoh:startup)
+     ;; (window-valid-p)
+     ;; (window-live-p)
+     (cl-defun mytoh:startup ()
+       (cl-letf ((current-window
+                  (frame-selected-window (selected-frame))))
+         (if (and current-window
+                  (window-valid-p current-window))
+             (helm-start))))
+
+     (add-hook 'after-init-hook #'mytoh:startup)
 
      (helm-mode 1)
      )
@@ -80,14 +88,6 @@
 (req 'helm-descbinds
      (helm-descbinds-install))
 
-;; faces
-(req 'helm-files
-     (set-option helm-ff-auto-update-initial-value t)
-     (set-face-attribute 'helm-ff-file nil
-                         :foreground "white" :background nil)
-     (set-face-attribute 'helm-ff-directory nil
-                         :foreground "#bbebfb" :background nil))
-
 ;; ag
 (req 'helm-ag
      (setq helm-ag-source-type 'file-line))
@@ -100,7 +100,7 @@
 
 ;; helm-ls-git
 (pak 'helm-ls-git
-     (define-key global-map (kbd "C-c e f") #'helm-ls-git-ls))
+     (mytoh:define-global-key (kbd "f") #'helm-ls-git-ls))
 
 
 (provide 'paketti-helm)
