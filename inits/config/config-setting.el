@@ -193,4 +193,19 @@
 ;; diffのバッファを上下ではなく左右に並べる
 (set-option ediff-split-window-function #'split-window-horizontally)
 
+
+;;;; scratch
+(set-option initial-scratch-message
+            ";;　　　＿_
+;;　　　｀ヽ,　｀ヽ
+;;　　　　,.' -─-ヽ.
+;;　　＜i　!ﾚﾊﾊﾊ)）＞
+;;　　　 ﾙ(ﾘ_ﾟ -ﾟﾉ!
+;;　　　　 / /wk|Ｏ―☆ ()(())((()))(((())))((((()))))(((((())))))
+;;.　　　 / / !_i_〉l
+;;　　　く_/_,ﾙﾉノ")
+
+;;;; loda newer file, .el or .elc
+(enable-option load-prefer-newer)
+
 (provide 'config-setting)
