@@ -1,7 +1,6 @@
 
 (req 'anzu
-     (put 'anzu-mode-lighter 'risky-local-variable t)
-     (setq anzu-mode-lighter (propertize " 杏" 'face 'anzu-mode-line))
+     (setq anzu-mode-lighter "")
      (global-anzu-mode +1)
      (global-set-key (kbd "M-%") 'anzu-query-replace)
      (global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp)
@@ -11,5 +10,3 @@
      )
 
 (provide 'paketti-anzu)
-(when (require 'anzu nil t)
-  )
