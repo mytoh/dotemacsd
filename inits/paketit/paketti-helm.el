@@ -32,39 +32,13 @@
                    ("png" . "kuva.sh")
                    ("gif" . "kuva.sh")
                    ("mov" . "mpv")
+                   ("swf" . "mpv")
                    ("flv" . "mpv")
+                   ("avi" . "mpv")
                    ("mkv" . "mpv")
                    ("mp4" . "mpv")
                    ("wmv" . "mpv")))
      (enable-option helm-bookmark-show-location)
-
-     (defvar mytoh:helm-start-sources
-       (if (locate-library "bookmark-extensions")
-           '(helm-source-bookmark-files&dirs
-             helm-source-recentf)
-         '(helm-source-pp-bookmarks
-           helm-source-recentf)))
-     (cl-defun helm-start ()
-       "personal helm command : [\\[helm-start]]"
-       (interactive)
-       (cl-letf ((helm-ff-transformer-show-only-basename nil))
-         (helm :sources mytoh:helm-start-sources
-               :buffer "*helm start*"
-               :prompt "Start: "
-               :candidate-number-limit 10)))
-
-     (mytoh:define-global-key (kbd "h") #'helm-start)
-
-     ;; (window-valid-p)
-     ;; (window-live-p)
-     (cl-defun mytoh:startup ()
-       (cl-letf ((current-window
-                  (frame-selected-window (selected-frame))))
-         (if (and current-window
-                  (window-valid-p current-window))
-             (helm-start))))
-
-     (add-hook 'after-init-hook #'mytoh:startup)
 
      (helm-mode 1)
      )
@@ -101,6 +75,7 @@
 ;; helm-ls-git
 (pak 'helm-ls-git
      (mytoh:define-global-key (kbd "f") #'helm-ls-git-ls))
+
 
 
 (provide 'paketti-helm)
