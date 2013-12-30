@@ -47,11 +47,12 @@
 
           ;; mplayer2
           (define-emms-simple-player mplayer2 '(file url)
-            (concat "\\`\\(http\\|mms\\)://\\|"
-                    (emms-player-simple-regexp
-                     "ogg" "mp3" "wav" "mpg" "mpeg" "wmv" "wma"
-                     "mov" "avi" "divx" "ogm" "ogv" "asf" "mkv"
-                     "rm" "rmvb" "mp4" "flac" "vob" "m4a" "ape"))
+            (cl-concatenate 'string
+                            "\\`\\(http\\|mms\\)://\\|"
+                            (emms-player-simple-regexp
+                             "ogg" "mp3" "wav" "mpg" "mpeg" "wmv" "wma"
+                             "mov" "avi" "divx" "ogm" "ogv" "asf" "mkv"
+                             "rm" "rmvb" "mp4" "flac" "vob" "m4a" "ape"))
             "mplayer" "--slave" "--really-quiet")
           (add-to-list 'emms-player-list #'emms-player-mplayer2)
 
