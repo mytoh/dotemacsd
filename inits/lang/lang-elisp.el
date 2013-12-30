@@ -27,6 +27,9 @@
    (1 . add-to-list)
    (1 . font-lock-add-keywords)
    (1 . submatch)
+   (1 . set-option)
+   (1 . enable-option)
+   (1 . disable-option)
    (1 . or)))
 
 (my-elisp-add-keywords
@@ -34,7 +37,9 @@
  '((1 . define-key)
    (1 . provide)
    (1 . require)
-   (1 . req)))
+   (1 . req)
+   (1 . define-emms-simple-player)
+   (1 . pak)))
 
 (font-lock-add-keywords
  'emacs-lisp-mode
