@@ -30,6 +30,9 @@
 (req 'eshell-script
      (add-to-list 'auto-mode-alist '("\\.esh\\'" . eshell-script-mode)))
 
+(req 'helm-alku
+     (mytoh:define-global-key (kbd "h") #'helm-alku))
+
 (req 'vendle
 
      ;; initialize vendle
