@@ -145,9 +145,11 @@ buffer is not visiting a file."
 ;;; my global map
 (define-prefix-command 'my-global-map)
 (global-set-key (kbd "C-c e") 'my-global-map)
-(defun mytoh:define-global-key (key func)
-  "define personal key mappings"
-  (define-key my-global-map key func))
+(cl-defmacro mytoh:define-global-key (key func)
+  "define personal global key mappings"
+  `(progn
+     (define-key my-global-map ,key ,func)
+     (message "bind %s to %s" ,key (symbol-name ,func))))
 
 ;; smart kill word
 ;; http://d.hatena.ne.jp/kiwanami/20091222/1261504543
