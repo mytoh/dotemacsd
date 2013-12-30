@@ -40,6 +40,13 @@
                    ("wmv" . "mpv")))
      (enable-option helm-bookmark-show-location)
 
+     (set-face-attribute  'helm-bookmark-directory nil
+                          :foreground "#97cfe0"
+                          :background "#4f4f37")
+
+     (set-face-attribute 'helm-source-header nil
+                         :background "#324262")
+
      (helm-mode 1)
      )
 

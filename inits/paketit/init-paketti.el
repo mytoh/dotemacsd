@@ -199,6 +199,7 @@
     gandalf-theme
     gruber-darker-theme
     inkpot-theme
+    spacegray-theme
     ample-zen-theme
     tronesque-theme
     underwater-theme

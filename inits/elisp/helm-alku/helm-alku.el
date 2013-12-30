@@ -26,7 +26,7 @@
     (helm :sources helm-alku-sources
           :buffer "*helm start*"
           :prompt "Start: "
-          :candidate-number-limit 10)))
+          :candidate-number-limit 20)))
 
 ;;; provide
 (provide 'helm-alku)

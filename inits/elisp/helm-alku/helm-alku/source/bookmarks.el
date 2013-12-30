@@ -120,10 +120,7 @@ Use it for non--interactive calls of `helm-find-files'."
           :prompt "Find Files or Url: "
           :buffer "*Helm Start Find Files*")))
 
-(cl-defun helm-alku-face-bookmark-set ()
-  (set-face-attribute  'helm-bookmark-directory nil
-                       :foreground "#875f00"
-                       :background "#cfcf67"))
+
 
 (cl-defun helm-alku-action-bookmarks (candidate)
   (cl-letf ((dir (bookmark-location candidate)))

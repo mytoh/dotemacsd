@@ -10,3 +10,4 @@ alias yotsuba pikkukivi yotsuba $*
 alias , napa $*
 alias ag ag --nopager
 alias pam rm -rf $*
+alias ke kill-emacs
