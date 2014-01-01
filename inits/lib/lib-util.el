@@ -70,12 +70,12 @@
   `(progn
      (my-log "enable " ,(propertize (symbol-name option)
                                     'face 'font-lock-variable-name-face))
-     (cl-psetq ,option 1)))
+     (cl-psetq ,option t)))
 
 (cl-defmacro disable-option (option)
   `(progn
      (message ">> disable %s" ,(symbol-name option))
-     (cl-psetq ,option -1)))
+     (cl-psetq ,option nil)))
 
 ;;http://www.reddit.com/r/emacs/comments/umb24/expandfilename_is_good_for_path_concat_too/
 (cl-defun concat-path (&rest parts)
