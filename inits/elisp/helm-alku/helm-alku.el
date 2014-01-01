@@ -10,12 +10,21 @@
 (require 'helm-adaptative)
 (require 'bookmark)
 
-(require 'helm-alku-bookmarks "helm-alku/source/bookmarks")
+(require 'helm-alku-directory "helm-alku/source/directory")
+
+;;;; group
+(defgroup helm-alku nil
+  "personal helm command"
+  :group 'helm)
 
 ;;;; helm sources
-(defvar helm-alku-sources
-  '(helm-source-alku-bookmarks
-    helm-source-recentf))
+(defcustom helm-alku-sources
+  '(helm-source-alku-directory
+    helm-source-pp-bookmarks
+    helm-source-recentf)
+  "helm alku sources"
+  :type 'list
+  :group 'helm-alku)
 
 ;;;; helm
 ;;;###autoload
