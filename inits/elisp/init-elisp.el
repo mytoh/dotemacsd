@@ -1,8 +1,7 @@
 
 (add-subdirs-to-load-path (concat user-emacs-directory "inits/elisp"))
 
-(req 'r7rs)
-(req 'srfi)
+
 
 (req 'csh-mode
      (setq csh-mode-hook
@@ -31,6 +30,20 @@
      (add-to-list 'auto-mode-alist '("\\.esh\\'" . eshell-script-mode)))
 
 (req 'helm-alku
+     (setq helm-alku-directory-list
+           '(("video" . "~/huone/videot")
+             ("sarjakuva" . "~/huone/kuvat/sarjakuva")
+             ("lataukset" . "~/huone/lataukset")
+             ("lehti"  . "~/huone/projektit/lehti")
+             ("flatline"  . "~/huone/projektit/emacs-flatline")
+             ("company-scheme" . "~/huone/projektit/company-scheme")
+             ("conkerorrc" . "~/huone/projektit/conkerorrc")
+             ("dotemacsd" . "~/huone/projektit/dotemacsd")
+             ("dotfiles" . "~/huone/projektit/dotfiles")
+             ("helm-ypv" . "~/huone/projektit/helm-ypv")
+             ("shellar" . "~/huone/projektit/shellar")
+             ("shellar_custom" . "~/huone/projektit/shellar_custom")
+             ))
      (mytoh:define-global-key (kbd "h") #'helm-alku))
 
 (req 'vendle
@@ -53,11 +66,15 @@
      (vendle:register "mytoh/fish-mode")
      (vendle:register "thierryvolpiatto/emacs-bmk-ext")
 
-     (vendle:register-local "~/huone/projektit/flatline-el")
+     (vendle:register-local "~/huone/projektit/emacs-flatline")
      (vendle:register-local "~/huone/projektit/helm-ypv")
      (vendle:register-local "~/huone/projektit/company-scheme")
+     (vendle:register-local "~/huone/projektit/emacs-scheme-keywords")
      ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
+
+     (req 'scheme-keywords
+          (add-hook 'scheme-mode-hook 'scheme-keywords-mode))
 
      ;; install packages
      (vendle:install-packages)
@@ -71,6 +88,7 @@
 
      ;;(req 'emux
      ;; prefix C-c
+
      ;; "C-n" ' emux:term-next
      ;; "SPC" 'emux:term-next
      ;; "C-p"  'emux:term-previous
@@ -140,9 +158,5 @@
           (define-key global-map (kbd "C-x C-e") #'debug-print-eval-last-sexp))
 
      )
-
-
-;; (req 'pretty-scheme
-;;      (add-hook 'scheme-mode-hook 'turn-on-pretty-scheme-mode))
 
 (provide 'init-elisp)
