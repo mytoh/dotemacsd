@@ -21,7 +21,7 @@
      (get-buffer-create buf-name))))
 
 (cl-defun my-scheme-mode-hook ()
-  (define-key my-original-map (kbd "C-s") 'my-scheme-other-window)
+  (define-key scheme-mode-map (kbd "C-s") 'my-scheme-other-window)
   (local-set-key (kbd "C-m") 'newline-and-indent)
   (add-hook 'before-save-hook 'my-before-save-hook nil t))
 (add-hook 'scheme-mode-hook 'my-scheme-mode-hook)

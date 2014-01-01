@@ -39,7 +39,7 @@
 
 
 (cl-defun minun:scheme-mode-hook ()
-  (define-key my-original-map (kbd "C-s") 'minun:scheme-other-window)
+  (define-key scheme-mode-map (kbd "C-s") 'minun:scheme-other-window)
   (local-set-key (kbd "C-m") 'newline-and-indent)
   (define-key scheme-mode-map (kbd "C-m") 'newline-and-indent)
   (cl-dolist (f '(minun:lisp-cleanup

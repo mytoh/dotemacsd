@@ -1,6 +1,9 @@
 
 ;; helm
-(pak 'helm-config
+(req 'helm
+     (require 'helm-config)
+     (helm-mode 1)
+     (helm-match-plugin-mode)
      (global-set-key (kbd "C-c h") #'helm-mini)
      (global-set-key (kbd "M-x") #'helm-M-x)
      (global-set-key (kbd "C-c C-m") #'helm-M-x)
@@ -12,17 +15,20 @@
      (define-key global-map (kbd "C-x b") #'helm-buffers-list)
      (define-key global-map [remap list-buffers] #'helm-buffers-list)
 
+
      (define-key helm-map (kbd "C-M-n") #'helm-next-source)
      (define-key helm-map (kbd "C-M-p") #'helm-previous-source)
-     (define-key helm-c-read-file-map (kbd "C-h") #'delete-backward-char)
-     (define-key helm-c-read-file-map (kbd "TAB") #'helm-execute-persistent-action)
+     (define-key helm-read-file-map (kbd "C-h") #'delete-backward-char)
+     (define-key helm-read-file-map (kbd "TAB") #'helm-execute-persistent-action)
 
      (set-option helm-candidate-number-limit nil)
      (set-option helm-idle-delay             0.1)
      (set-option helm-input-idle-delay       0.1)
-     (set-option helm-ff-lynx-style-map nil)
      (enable-option helm-M-x-always-save-history)
+     ;;;; helm-files
+     (set-option helm-ff-lynx-style-map nil)
      (disable-option helm-ff-transformer-show-only-basename)
+     (set-option  helm-ff-newfile-prompt-p nil)
      ;; disable auto completion
      ;; (setq helm-ff-auto-update-initial-value nil)
      (set-option helm-external-programs-associations
@@ -47,7 +53,7 @@
      (set-face-attribute 'helm-source-header nil
                          :background "#324262")
 
-     (helm-mode 1)
+
      )
 
 ;; helm-themes
