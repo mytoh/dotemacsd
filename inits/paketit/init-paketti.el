@@ -144,6 +144,7 @@
         writeroom-mode
         writegood-mode
         nyan-prompt
+        indent-guide
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
@@ -226,6 +227,7 @@
     helm-git
     helm-themes
     helm-c-yasnippet
+    helm-recoll
     helm-descbinds
     helm-gist
     helm-ls-git
@@ -273,11 +275,7 @@
 
 (defvar init-paketit
   '(
-    ;; this may cause problem
-    paketti-rainbow-mode
-
-    ;; paketti-tumblesocks
-    paketti-circe
+    paketti-rainbow-mode     ; this may cause problem
     paketti-google-translate
     paketti-guide-key
     paketti-dired
@@ -285,26 +283,18 @@
     paketti-expand-region
     paketti-multiple-cursors
     paketti-rainbow-delimiters
-    ;; paketti-auto-complete
     paketti-company-mode
     paketti-tabbar
     paketti-smartparens
-    paketti-projectile
-    paketti-project-persist
     paketti-emms
     paketti-suomalainen-kalenteri
-    paketti-isearch+
     paketti-info+
-    ;; paketti-ghc
-    ;; paketti-haskell-mode
     paketti-popwin
     paketti-w3m
     paketti-eww
     paketti-git-gutter+
     paketti-yasnippet
     paketti-flymake
-    paketti-twittering-mode
-    paketti-highlight-indentation
     paketti-coffee-mode
     paketti-undo-tree
     paketti-direx
@@ -312,27 +302,15 @@
     paketti-lua-mode
     paketti-vala-mode
     paketti-page-break-lines
-    paketti-pretty-mode
-    paketti-pretty-mode-plus
-    ;; paketti-electric-case
-    paketti-visual-regexp
-    paketti-litable
     paketti-stripe-buffer
-    paketti-ace-jump-mode
-    paketti-mentor
-    paketti-fiplr
-    ;; paketti-melpa-upstream-visit
     paketti-quickrun
     paketti-sudo-ext
     paketti-js3
     paketti-cl-lib-highlight
     paketti-anzu
-    ;; paketti-yascroll
     paketti-stumpwm-mode
     paketti-charmap
-    paketti-minimap
     paketti-highlight-unique-symbol
-    paketti-project-explorer
     paketti-auto-auto-indent
     paketti-all-ext
     paketti-auto-highlight-symbol
@@ -340,16 +318,38 @@
     paketti-csharp-mode
     paketti-smartscan
     paketti-volatile-highlights
-    paketti-helm-ag-r
     paketti-recentf-ext
     paketti-unicode-fonts
     paketti-writegood-mode
+    paketti-shell-pop
+    paketti-indent-guide
+    ;; paketti-twittering-mode
+    ;; paketti-tumblesocks
+    ;; paketti-circe
+    ;; paketti-isearch+
+    ;; paketti-auto-complete
+    ;; paketti-projectile
+    ;; paketti-project-persist
+    ;; paketti-ghc
+    ;; paketti-haskell-mode
+    ;; paketti-highlight-indentation
+    ;; paketti-pretty-mode
+    ;; paketti-pretty-mode-plus
+    ;; paketti-electric-case
+    ;; paketti-visual-regexp
+    ;; paketti-litable
+    ;; paketti-ace-jump-mode
+    ;; paketti-mentor
+    ;; paketti-fiplr
+    ;; paketti-melpa-upstream-visit
+    ;; paketti-minimap
+    ;; paketti-project-explorer
+    ;; paketti-yascroll
     ;; paketti-zone-matrix
     ;; paketti-multi-term
     ;; paketti-workgroups2
     ;; paketti-perspective
     ;; paketti-exec-path-from-shell
-    paketti-shell-pop
     ;; paketti-git-gutter
     ;; paketti-dired+
     ;; paketti-dired-single
@@ -367,6 +367,7 @@
     paketti-helm-helm-commands
     paketti-helm-orgcard
     paketti-helm-swoop
+    paketti-helm-ag-r
     paketti-helm-company
     paketti-helm-dictionary
     ))
