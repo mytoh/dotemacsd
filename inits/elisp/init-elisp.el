@@ -34,6 +34,7 @@
            '(("video" . "~/huone/videot")
              ("sarjakuva" . "~/huone/kuvat/sarjakuva")
              ("lataukset" . "~/huone/lataukset")
+             ("4chan" . "~/huone/kuvat/sivusto/4ch")
              ("lehti"  . "~/huone/projektit/lehti")
              ("flatline"  . "~/huone/projektit/emacs-flatline")
              ("company-scheme" . "~/huone/projektit/company-scheme")
@@ -42,8 +43,7 @@
              ("dotfiles" . "~/huone/projektit/dotfiles")
              ("helm-ypv" . "~/huone/projektit/helm-ypv")
              ("shellar" . "~/huone/projektit/shellar")
-             ("shellar_custom" . "~/huone/projektit/shellar_custom")
-             ))
+             ("shellar_custom" . "~/huone/projektit/shellar_custom")))
      (mytoh:define-global-key (kbd "h") #'helm-alku))
 
 (req 'vendle
@@ -65,6 +65,7 @@
      (vendle:register "ober/zone-matrix")
      (vendle:register "mytoh/fish-mode")
      (vendle:register "thierryvolpiatto/emacs-bmk-ext")
+     (vendle:register "kawabata/aozora-view")
 
      (vendle:register-local "~/huone/projektit/emacs-flatline")
      (vendle:register-local "~/huone/projektit/helm-ypv")
