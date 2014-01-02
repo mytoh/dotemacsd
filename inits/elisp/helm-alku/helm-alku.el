@@ -4,11 +4,7 @@
 (require 'helm)
 (require 'helm-bookmark)
 (require 'helm-bmkext)
-(require 'helm-utils)
-(require 'helm-info)
 (require 'helm-files)
-(require 'helm-adaptative)
-(require 'bookmark)
 
 (require 'helm-alku-directory "helm-alku/source/directory")
 
@@ -33,8 +29,8 @@
   (interactive)
   (cl-letf ((helm-ff-transformer-show-only-basename nil))
     (helm :sources helm-alku-sources
-          :buffer "*helm start*"
-          :prompt "Start: "
+          :buffer "*helm alku*"
+          :prompt "Alku: "
           :candidate-number-limit 20)))
 
 ;;; provide
