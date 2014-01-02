@@ -1,12 +1,13 @@
 ;;; paketti-indent-guide.el -*- lexical-binding: t -*-
 
-(require 'indent-guide)
+(req 'indent-guide
 
-(indent-guide-global-mode)
+     (add-hook 'scheme-mode-hook #'indent-guide-mode)
+     (add-hook 'emacs-lisp-mode-hook #'indent-guide-mode)
 
-(set-face-foreground 'indent-guide-face "dimgray")
+     (set-face-foreground 'indent-guide-face "dimgray")
 
-(setq indent-guide-char "𝄄")
+     (setq indent-guide-char ":"))
 
 (provide 'paketti-indent-guide)
 
