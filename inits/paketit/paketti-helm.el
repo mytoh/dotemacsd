@@ -53,6 +53,8 @@
      (set-face-attribute 'helm-source-header nil
                          :background "#324262")
 
+     (set-face-attribute 'helm-selection nil
+                         :background "#337755")
 
      )
 
