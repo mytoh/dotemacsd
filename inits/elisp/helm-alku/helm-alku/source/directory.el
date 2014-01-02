@@ -37,14 +37,6 @@
 
 (provide 'helm-alku-directory)
 
-;; (defvar helm-source-ypv-bookmarks
-;;   `((name . ,(helm-ypv-bookmark-add-source-mark "Bookmarks"))
-;;     (init . helm-ypv-bookmark-init)
-;;     (candidates . helm-ypv-candidate-bookmarks)
-;;     (action . (("Open channel" . helm-ypv-bookmark-action-open-channel)
-;;                ("Remove bookmark" . helm-ypv-bookmark-action-remove)))))
-
-
 ;; Local Variables:
 ;; coding: utf-8
 ;; indent-tabs-mode: nil
