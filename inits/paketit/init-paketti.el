@@ -322,7 +322,7 @@
     paketti-unicode-fonts
     paketti-writegood-mode
     paketti-shell-pop
-    paketti-indent-guide
+    ;; paketti-indent-guide
     ;; paketti-twittering-mode
     ;; paketti-tumblesocks
     ;; paketti-circe
@@ -370,6 +370,7 @@
     paketti-helm-ag-r
     paketti-helm-company
     paketti-helm-dictionary
+    paketti-helm-recoll
     ))
 (append-to-list init-paketit *my-paketit-list-helm*)
 
