@@ -15,19 +15,6 @@
 ;;; prefer lisp function
 (enable-option eshell-prefer-lisp-functions)
 
-;;; switch to eshell or restore previous windows
-;;; http://irreal.org/blog/?p=1742
-(cl-defun mytoh:eshell-switch ()
-  "Bring up a full-screen eshell or restore previous config."
-  (interactive)
-  (if (string= "eshell-mode" major-mode)
-      (jump-to-register :eshell-fullscreen)
-    (progn
-      (window-configuration-to-register :eshell-fullscreen)
-      (eshell)
-      (delete-other-windows))))
-
-(mytoh:define-global-key (kbd "s") 'mytoh:eshell-switch)
 
 
 ;;; start eshell after startup
@@ -38,6 +25,6 @@
 
 ;; load prompt settings
 (require 'paketti-eshell-prompt)
-
+(require 'paketti-eshell-switch)
 
 (provide 'paketti-eshell)
