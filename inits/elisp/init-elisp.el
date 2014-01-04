@@ -159,6 +159,8 @@
           (define-key global-map (kbd "C-x C-e") #'debug-print-eval-last-sexp))
 
      (req 'aozora-view)
+
+     (req 'bookmark-extensions)
      )
 
 (provide 'init-elisp)
