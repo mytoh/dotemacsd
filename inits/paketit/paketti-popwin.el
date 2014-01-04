@@ -2,7 +2,7 @@
 (req 'popwin
      (setq display-buffer-function 'popwin:display-buffer)
      (setq popwin:special-display-config
-           '(("*Warnings*") ("*Compile-Log*") ("*Help*")
+           '(("*Warnings*") ("*Compile-Log*") ("*Help*") ("*Backtrace*")
              ("*Google Translate*")
              ("*eww bookmarks*")
              ("*Completions*" :noselect t)
