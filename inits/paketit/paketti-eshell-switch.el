@@ -68,7 +68,8 @@
   (cond ((string= eshell-buffer-name name)
          nil)
         (t
-         (substring name 9 10))))
+         (substring name
+                    (+ 1 (length eshell-buffer-name)) 10))))
 
 (cl-defun mytoh:eshell-buffer-last ()
   (cl-nth-value (- (length my-eshell-buffers) 1)
@@ -82,18 +83,6 @@
 (add-hook 'eshell-exit-hook
           #'mytoh:eshell-exit-hook)
 
-;;; my eshell map
-(define-prefix-command 'my-eshell-map)
-(global-set-key (kbd "C-z") 'my-eshell-map)
-(cl-defmacro mytoh:define-eshell-key (key func)
-  "define personal eshell key mappings"
-  `(progn
-     (define-key my-eshell-map ,key ,func)
-     (message "bind %s to %s" ,key (symbol-name ,func))))
-
-(mytoh:define-eshell-key (kbd "C-s") #'mytoh:eshell-invoke-or-switch)
-(mytoh:define-eshell-key (kbd "C-n") #'mytoh:eshell-next)
-(mytoh:define-eshell-key (kbd "C-c") #'mytoh:eshell-new)
 
 (provide 'paketti-eshell-switch)
 

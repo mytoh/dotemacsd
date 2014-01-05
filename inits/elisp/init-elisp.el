@@ -2,7 +2,6 @@
 (add-subdirs-to-load-path (concat user-emacs-directory "inits/elisp"))
 
 
-
 (req 'csh-mode
      (setq csh-mode-hook
            #'(lambda ()
@@ -71,6 +70,7 @@
      (vendle:register-local "~/huone/projektit/helm-ypv")
      (vendle:register-local "~/huone/projektit/company-scheme")
      (vendle:register-local "~/huone/projektit/emacs-scheme-keywords")
+     (vendle:register-local "~/huone/projektit/emacs-lehtifile-mode")
      ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
 
@@ -138,9 +138,9 @@
 
 
      (pak 'helm-ypv
-          (autoload #'helm-ypv "helm-ypv")
-          (autoload #'helm-ypv-bookmarks "helm-ypv")
-          (autoload #'helm-ypv-channels "helm-ypv")
+          (autoload 'helm-ypv "helm-ypv")
+          (autoload 'helm-ypv-bookmarks "helm-ypv")
+          (autoload 'helm-ypv-channels "helm-ypv")
           (setq helm-ypv-local-address "localhost:7144")
 
           (with-eval-after-load 'helm-ypv
@@ -161,6 +161,9 @@
      (req 'aozora-view)
 
      (req 'bookmark-extensions)
+
+     (req 'lehtifile-mode
+          (add-to-list 'auto-mode-alist '("Lehtifile\\'" . lehtifile-mode)))
      )
 
 (provide 'init-elisp)

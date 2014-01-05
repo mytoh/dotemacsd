@@ -22,12 +22,12 @@
      (define-key helm-read-file-map (kbd "TAB") #'helm-execute-persistent-action)
 
      (set-option helm-candidate-number-limit nil)
-     (set-option helm-idle-delay             0.1)
-     (set-option helm-input-idle-delay       0.1)
+     (set-option helm-idle-delay             0.3)
+     (set-option helm-input-idle-delay       0.2)
      (enable-option helm-M-x-always-save-history)
      ;;;; helm-files
      (set-option helm-ff-lynx-style-map nil)
-     (disable-option helm-ff-transformer-show-only-basename)
+     (enable-option helm-ff-transformer-show-only-basename)
      (set-option  helm-ff-newfile-prompt-p nil)
      ;; disable auto completion
      ;; (setq helm-ff-auto-update-initial-value nil)
@@ -89,7 +89,7 @@
 
 ;; helm-ls-git
 (pak 'helm-ls-git
-     (mytoh:define-global-key (kbd "f") #'helm-ls-git-ls))
+     (mytoh:define-global-key (kbd "f") #'helm-browse-project))
 
 
 

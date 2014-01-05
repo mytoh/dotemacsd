@@ -82,8 +82,8 @@
         emms-info-mediainfo
         color-moccur
         git-gutter+
-        ;; git-gutter
-        ;; git-gutter-fringe
+        git-gutter
+        git-gutter-fringe
         nyan-mode
         minimap
         eshell-manual
@@ -292,7 +292,8 @@
     paketti-popwin
     paketti-w3m
     paketti-eww
-    paketti-git-gutter+
+    ;; paketti-git-gutter+
+    paketti-git-gutter
     paketti-yasnippet
     paketti-flymake
     paketti-coffee-mode
@@ -350,7 +351,6 @@
     ;; paketti-workgroups2
     ;; paketti-perspective
     ;; paketti-exec-path-from-shell
-    ;; paketti-git-gutter
     ;; paketti-dired+
     ;; paketti-dired-single
     ;; paketti-cursor-chg
@@ -379,6 +379,7 @@
     ;; paketti-org-plus-contrib
     ;; paketti-org-bullets
     paketti-outorg
+    paketti-orglue
     paketti-outshine
     paketti-navi-mode
     paketti-orglink

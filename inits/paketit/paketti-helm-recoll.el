@@ -5,6 +5,7 @@
        (helm-recoll-create-source "main" "~/.recoll"))
      )
 
+(provide 'paketti-helm-recoll)
 
 ;; Local Variables:
 ;; coding: utf-8

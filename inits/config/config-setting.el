@@ -63,6 +63,8 @@
               (cl-letf ((image (image-get-display-property)))
                 (if (image-multi-frame-p image)
                     (image-toggle-animation)))))
+;; (set-option image-transform-resize 'fit-height)
+
 
 ;;;; highlight region
 (transient-mark-mode 1)
@@ -179,13 +181,11 @@
 (savehist-mode 1)
 
 ;;;; add newline to end of file
-;; (enable-option require-final-newline)
+(enable-option require-final-newline)
 
 ;;;; Sort list-colors-display by Hue
 (set-option list-colors-sort 'hsv)
 
-;;;; image-mode
-;; (set-option image-transform-resize 'fit-height)
 
 ;;;; ediff
 ;; コントロール用のバッファを同一フレーム内に表示
@@ -210,5 +210,11 @@
 
 ;;;; loda newer file, .el or .elc
 (enable-option load-prefer-newer)
+
+;;;; invoke debugger
+(enable-option debug-on-error)
+
+;;;; recursive minibuffer
+(enable-option enable-recursive-minibuffers)
 
 (provide 'config-setting)

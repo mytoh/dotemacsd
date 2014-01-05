@@ -1,14 +1,5 @@
 ;; emms
 (req 'emms-setup
-     (when (executable-find "emms-print-metadata")
-       (req 'emms-info-libtag
-            (add-to-list 'emms-info-functions 'emms-info-libtag)))
-     (when (executable-find "mediainfo")
-       (req 'emms-info-mediainfo
-            (add-to-list 'emms-info-functions 'emms-info-mediainfo)))
-     (when (executable-find "metaflac")
-       (req 'emms-info-metaflac
-            (add-to-list 'emms-info-functions 'emms-info-metaflac)))
      (emms-devel)
      (emms-default-players)
      ;; mode-line
@@ -92,7 +83,19 @@ controls, run `mixer' in a shell."
 
      (set-option emms-volume-change-function #'emms-volume-mixer-change)
 
+     ;;;; info
      (req 'emms-info)
+     (when (executable-find "emms-print-metadata")
+       (req 'emms-info-libtag
+            (setq emms-info-functions '(emms-info-libtag))))
+     (when (executable-find "mediainfo")
+       (req 'emms-info-mediainfo
+            (add-to-list 'emms-info-functions 'emms-info-mediainfo)))
+     (when (executable-find "metaflac")
+       (req 'emms-info-metaflac
+            (add-to-list 'emms-info-functions 'emms-info-metaflac)))
+
+
 
      ;;;; keymap
      (define-prefix-command 'my-emms-map)
