@@ -4,18 +4,18 @@
 
 (req 'csh-mode
      (setq csh-mode-hook
-           #'(lambda ()
-               (font-lock-mode 1)             ;; font-lock the buffer
-               (setq csh-indent 4)
-               (setq csh-tab-always-indent t)
-               (setq csh-match-and-tell t)
-               (setq csh-align-to-keyword t)))
+           (lambda ()
+             (font-lock-mode 1)             ;; font-lock the buffer
+             (setq csh-indent 4)
+             (setq csh-tab-always-indent t)
+             (setq csh-match-and-tell t)
+             (setq csh-align-to-keyword t)))
      (add-to-list 'auto-mode-alist '("\\.tcsh\\'" . csh-mode))
      (add-to-list 'auto-mode-alist '("\\.tcshrc\\'" . csh-mode)))
 
 (cl-defun my-csh-add-keywords (face-name keyword-rules)
-  (cl-letf* ((keyword-list (mapcar #'(lambda (x)
-                                       (symbol-name (cdr x)))
+  (cl-letf* ((keyword-list (mapcar (lambda (x)
+                                     (symbol-name (cdr x)))
                                    keyword-rules))
              (keyword-regexp (concat "(\\("
                                      (regexp-opt keyword-list)
@@ -42,8 +42,9 @@
              ("dotfiles" . "~/huone/projektit/dotfiles")
              ("helm-ypv" . "~/huone/projektit/helm-ypv")
              ("shellar" . "~/huone/projektit/shellar")
-             ("shellar_custom" . "~/huone/projektit/shellar_custom")))
-     (mytoh:define-global-key (kbd "h") #'helm-alku))
+             ("shellar_custom" . "~/huone/projektit/shellar_custom")
+             ("paketti" . "~/.emacs.d/inits/paketit")))
+     (mytoh:define-global-key (kbd "h") 'helm-alku))
 
 (req 'vendle
 
@@ -147,7 +148,7 @@
             (add-to-list 'helm-ypv-yp-urls '(dan1 "dandan626.web.fc2.com"))
             (add-to-list 'helm-ypv-yp-urls '(dan2 "www27.atpages.jp/dandan626")))
 
-          (mytoh:define-global-key (kbd "y") #'helm-ypv))
+          (mytoh:define-global-key (kbd "y") 'helm-ypv))
 
 
      (with-eval-after-load 'company
@@ -156,7 +157,7 @@
 
      (req 'debug-print
           (debug-print-init)
-          (define-key global-map (kbd "C-x C-e") #'debug-print-eval-last-sexp))
+          (define-key global-map (kbd "C-x C-e") 'debug-print-eval-last-sexp))
 
      (req 'aozora-view)
 
