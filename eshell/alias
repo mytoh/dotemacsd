@@ -12,3 +12,6 @@ alias ag ag --nopager
 alias pam rm -rf $*
 alias ke kill-emacs
 alias cde cd ~/huone/git/emacs
+
+alias gpl git pull
+alias gst git status
