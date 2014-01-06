@@ -37,7 +37,7 @@
      (define-key my-eshell-map ,key ,func)
      (message "bind %s to %s" ,key (symbol-name ,func))))
 
-(mytoh:define-eshell-key (kbd "C-s") #'mytoh:eshell-invoke-or-switch)
+(mytoh:define-eshell-key (kbd "C-z") #'mytoh:eshell-switch)
 (mytoh:define-eshell-key (kbd "C-n") #'mytoh:eshell-next)
 (mytoh:define-eshell-key (kbd "C-c") #'mytoh:eshell-new)
 

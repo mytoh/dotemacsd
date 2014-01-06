@@ -6,7 +6,7 @@
 (defvar my-eshell-buffers nil)
 
 ;;;; command
-(cl-defun mytoh:eshell-invoke-or-switch ()
+(cl-defun mytoh:eshell-switch ()
   "Bring up a full-screen eshell or restore previous config."
   (interactive)
   (if (string= "eshell-mode" major-mode)
@@ -33,7 +33,7 @@
 (cl-defun mytoh:eshell-new ()
   (interactive)
   (cond ((not my-eshell-buffers)
-         (mytoh:eshell-invoke-or-switch))
+         (mytoh:eshell-switch))
         (t
          (cl-letf* ((next (mytoh:eshell-buffer-name-next
                            (mytoh:eshell-buffer-last)))
