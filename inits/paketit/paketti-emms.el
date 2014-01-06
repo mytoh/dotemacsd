@@ -55,7 +55,7 @@
           ;; mpv
           (define-emms-simple-player mpv
             '(file)
-            (emms-player-simple-regexp "mkv" "wmv" "mp4" "flv" "swf")
+            (emms-player-simple-regexp "webm" "mkv" "wmv" "mp4" "flv" "swf")
             "mpv" "--framedrop=yes" "--softvol=auto" "--really-quiet")
           (add-to-list 'emms-player-list #'emms-player-mpv))
 
