@@ -56,6 +56,8 @@
         highlight-symbol
         ;; dired
         image-dired+
+        slideview
+        image+
         dired+
         dired-single
         projectile
@@ -242,6 +244,7 @@
     helm-company
     helm-dictionary
     helm-ag-r
+    wgrep-helm
     ))
 (append-to-list *my-paketti-list* *my-paketti-list-helm*)
 
@@ -280,6 +283,7 @@
     paketti-guide-key
     paketti-dired
     paketti-image-dired+
+    paketti-image+
     paketti-expand-region
     paketti-multiple-cursors
     paketti-rainbow-delimiters
@@ -323,6 +327,7 @@
     paketti-unicode-fonts
     paketti-writegood-mode
     paketti-shell-pop
+    paketti-color-moccur
     ;; paketti-indent-guide
     ;; paketti-twittering-mode
     ;; paketti-tumblesocks
@@ -371,6 +376,7 @@
     paketti-helm-company
     paketti-helm-dictionary
     paketti-helm-recoll
+    paketti-wgrep-helm
     ))
 (append-to-list init-paketit *my-paketit-list-helm*)
 
