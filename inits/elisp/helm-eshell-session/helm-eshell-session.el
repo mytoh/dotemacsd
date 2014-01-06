@@ -9,7 +9,6 @@
     (init . helm-eshell-session-init)
     (candidates . helm-eshell-session-candidates)
     (type . buffer)
-    (match . helm-buffer-match-major-mode)
     (persistent-action . helm-buffers-list-persistent-action)
     (keymap . ,helm-buffer-map)
     (volatile)
