@@ -52,7 +52,7 @@
 ;;; utilily functions
 
 (cl-defun vendle:concat-path (&rest parts)
-  (cl-reduce #'(lambda (a b) (expand-file-name b a)) parts))
+  (cl-reduce (lambda (a b) (expand-file-name b a)) parts))
 
 ;;;; initialize
 
@@ -75,7 +75,7 @@
 (cl-defun vendle:update-packages ()
   (when (file-exists-p *user-emacs-vendle-directory*)
     (cl-mapc
-     #'vendle:update-package
+     'vendle:update-package
      *vendle-package-list*)))
 
 (cl-defun vendle:update-package (package)
@@ -84,11 +84,11 @@
                (not (file-symlink-p path)))
       (progn
         (cd-absolute path)
-        (message "updating vendle package %s.." path)
+        (message "vendle: updating vendle package %s.." path)
         (shell-command "git pull")
         (cd-absolute user-emacs-directory)
         (byte-recompile-directory path 0)
-        (message "updating vendle package %s.. done" path)))))
+        (message "vendle: updating vendle package %s.. done" path)))))
 
 ;;;; install
 
@@ -105,7 +105,7 @@
            (vendle:install-package-git package)))))
 
 (cl-defun vendle:install-package-git (package)
-  (message "installing plugin %s" (vendle:package-name package))
+  (message "vendle: installing plugin %s" (vendle:package-name package))
   (shell-command (concat  "git clone " (vendle:package-url package) " "
                           (vendle:concat-path *user-emacs-vendle-directory* (vendle:package-name package)))
                  *user-emacs-vendle-directory*)
@@ -129,16 +129,16 @@
 ;;;; clean
 (cl-defun vendle:clean-packages ()
   (cl-letf ((paths (cl-remove-if
-                    #'(lambda (d)
-                        (if (cl-member-if
-                             #'(lambda (p)
-                                 (and (not (cl-equalp 'local (vendle:package-type p)))
-                                      (cl-equalp d (expand-file-name (vendle:package-name p)
-                                                                     *user-emacs-vendle-directory*))))
-                             *vendle-package-list*)
-                            t nil))
+                    (lambda (d)
+                      (if (cl-member-if
+                           (lambda (p)
+                             (and (not (cl-equalp 'local (vendle:package-type p)))
+                                  (cl-equalp d (expand-file-name (vendle:package-name p)
+                                                                 *user-emacs-vendle-directory*))))
+                           *vendle-package-list*)
+                          t nil))
                     (directory-files *user-emacs-vendle-directory*  'absolute (rx (not (any ".")))))))
-    (cl-mapc #'(lambda (p) (delete-directory p t))
+    (cl-mapc (lambda (p) (delete-directory p t))
              paths)))
 
 ;;;; package
@@ -213,7 +213,8 @@
 
 (cl-defun vendle-update ()
   (interactive)
-  (vendle:update-packages))
+  (vendle:update-packages)
+  (message "vendle: package update finished."))
 
 (cl-defun vendle-clean ()
   (interactive)
