@@ -72,7 +72,8 @@
      (vendle:register-local "~/huone/projektit/company-scheme")
      (vendle:register-local "~/huone/projektit/emacs-scheme-keywords")
      (vendle:register-local "~/huone/projektit/emacs-lehtifile-mode")
-     (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk")
+     (when (file-executable-p "/usr/local/share/emacs/24.3/site-lisp/skk")
+       (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk"))
      ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
 
@@ -166,6 +167,14 @@
 
      (req 'lehtifile-mode
           (add-to-list 'auto-mode-alist '("Lehtifile\\'" . lehtifile-mode)))
+
+     (setq skk-user-directory "~/.emacs.d/ddskk/") ; ディレクトリ指定
+     (when (require 'skk-autoloads nil t)
+       ;; C-x C-j で skk モードを起動
+       (define-key global-map (kbd "C-x C-j") 'skk-mode)
+       ;; .skk を自動的にバイトコンパイル
+       (setq skk-byte-compile-init-file t))
+
      )
 
 (provide 'init-elisp)
