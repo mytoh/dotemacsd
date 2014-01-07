@@ -59,10 +59,10 @@
 (auto-image-file-mode 1)
 (enable-option image-animate-loop)
 (add-hook 'image-mode-hook
-          #'(lambda ()
-              (cl-letf ((image (image-get-display-property)))
-                (if (image-multi-frame-p image)
-                    (image-toggle-animation)))))
+          (lambda ()
+            (cl-letf ((image (image-get-display-property)))
+              (if (image-multi-frame-p image)
+                  (image-toggle-animation)))))
 ;; (set-option image-transform-resize 'fit-height)
 
 
@@ -189,9 +189,9 @@
 
 ;;;; ediff
 ;; コントロール用のバッファを同一フレーム内に表示
-(set-option ediff-window-setup-function #'ediff-setup-windows-plain)
+(set-option ediff-window-setup-function 'ediff-setup-windows-plain)
 ;; diffのバッファを上下ではなく左右に並べる
-(set-option ediff-split-window-function #'split-window-horizontally)
+(set-option ediff-split-window-function 'split-window-horizontally)
 
 
 ;;;; scratch

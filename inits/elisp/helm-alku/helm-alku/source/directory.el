@@ -12,11 +12,11 @@
 
 (cl-defun helm-alku-directory-create-candidates (init-list)
   (cl-mapcar
-   #'(lambda (lst)
-       (cl-letf* ((dir (file-name-as-directory (expand-file-name (cdr lst))))
-                  (disp (format "%s\t%s" (car lst) dir))
-                  (real dir))
-         (cons disp real)))
+   (lambda (lst)
+     (cl-letf* ((dir (file-name-as-directory (expand-file-name (cdr lst))))
+                (disp (format "%s\t%s" (car lst) dir))
+                (real dir))
+       (cons disp real)))
    init-list))
 
 (cl-defun helm-alku-directory-init ()

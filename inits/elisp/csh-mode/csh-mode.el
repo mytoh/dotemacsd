@@ -53,8 +53,8 @@
   "*Version number of this version of csh-mode")
 
 (defvar csh-mode-hook
-  '(lambda ()
-     (auto-fill-mode 1))
+  (lambda ()
+    (auto-fill-mode 1))
   "Hook to run each time csh-mode is entered.")
 
 

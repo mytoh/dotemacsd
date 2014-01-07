@@ -392,7 +392,7 @@
     ))
 (append-to-list init-paketit *my-paketit-list-org*)
 
-(mapc #'require init-paketit)
+(mapc 'require init-paketit)
 
 
 ;; ;; egg

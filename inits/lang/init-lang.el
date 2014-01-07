@@ -13,6 +13,6 @@
     lang-c
     ))
 
-(mapc #'require init-langs)
+(mapc 'require init-langs)
 
 (provide 'init-lang)

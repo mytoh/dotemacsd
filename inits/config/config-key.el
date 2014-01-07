@@ -12,12 +12,12 @@
 
 (global-set-key [remap kill-whole-line] 'smart-kill-whole-line)
 
-(mytoh:define-global-key (kbd "p") #'package-list-packages)
+(mytoh:define-global-key (kbd "p") 'package-list-packages)
 
 (defun mytoh:dont-kill-emacs ()
   (interactive)
   (error (substitute-command-keys "To exit emacs: \\[kill-emacs]")))
 
-(define-key global-map (kbd "C-x C-c") #'mytoh:dont-kill-emacs)
+(define-key global-map (kbd "C-x C-c") 'mytoh:dont-kill-emacs)
 
 (provide 'config-key)

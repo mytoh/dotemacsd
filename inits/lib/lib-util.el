@@ -35,12 +35,12 @@
   "(add-hook-fn 'php-mode-hook
                   (require 'symfony)
                   (setq tab-width 2)"
-  `(add-hook ,name #'(lambda () ,@body)))
+  `(add-hook ,name (lambda () ,@body)))
 
 ;; (lazyload (triger-function ...) "filename" &rest body)
 (cl-defmacro lazyload (func lib &rest body)
   `(when (locate-library ,lib)
-     ,@(cl-mapcar #'(lambda (f) `(autoload ',f ,lib nil t)) func)
+     ,@(cl-mapcar (lambda (f) `(autoload ',f ,lib nil t)) func)
      (eval-after-load ,lib
        '(progn
           ,@body)) t))
@@ -79,7 +79,7 @@
 
 ;;http://www.reddit.com/r/emacs/comments/umb24/expandfilename_is_good_for_path_concat_too/
 (cl-defun concat-path (&rest parts)
-  (cl-reduce #'(lambda (a b) (expand-file-name b a)) parts))
+  (cl-reduce (lambda (a b) (expand-file-name b a)) parts))
 
 (cl-defun my-before-save-hook ()
   (save-excursion

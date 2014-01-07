@@ -62,8 +62,8 @@
      (sp-with-modes my-lisp-modes
        (sp-local-pair "(" nil :bind "M-("))
 
-     ;; (add-hook 'emacs-lisp-mode #'turn-on-smartparens-strict-mode)
-     ;; (add-hook 'scheme-mode #'smartparens-strict-mode)
+     ;; (add-hook 'emacs-lisp-mode 'turn-on-smartparens-strict-mode)
+     ;; (add-hook 'scheme-mode 'smartparens-strict-mode)
 
      ;; (set-face-attribute 'sp-pair-overlay-face nil
      ;;                     :background "#fdf6e3"

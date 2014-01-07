@@ -11,8 +11,8 @@
   (indent-region (point-min) (point-max)))
 
 (add-hook 'sh-mode-hook
-          #'(lambda ()
-              (add-hook 'before-save-hook 'my-shell-indent-buffer nil t)))
+          (lambda ()
+            (add-hook 'before-save-hook 'my-shell-indent-buffer nil t)))
 
 
 (provide 'lang-shell)

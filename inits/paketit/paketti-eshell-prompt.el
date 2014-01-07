@@ -21,7 +21,8 @@
 ;; remove highlight
 (setq eshell-highlight-prompt nil)
 
-(setq eshell-prompt-function #'my-eshell-prompt-function
+
+(setq eshell-prompt-function 'my-eshell-prompt-function
       eshell-prompt-regexp
       (concat "^\\([^\n]+\n\\|X / _ / X \\)"))
 

@@ -17,7 +17,7 @@
      . "Show this buffer / C-u \\[helm-execute-persistent-action]: Kill this buffer")))
 
 (defun helm-eshell-session-create-candidates ()
-  (cl-letf* ((bufs (mapcar #'buffer-name (buffer-list)))
+  (cl-letf* ((bufs (mapcar 'buffer-name (buffer-list)))
              (ebufs (cl-remove-if-not (lambda (b) (string-match "*eshell*" b))
                                       bufs)))
     ebufs))

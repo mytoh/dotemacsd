@@ -4,6 +4,7 @@
      (setq helm-ag-r-option-list
            '("-S -U --hidden"
              "-S -U -l"))
-     (mytoh:define-global-key (kbd "a") #'helm-ag-r))
+
+     (mytoh:define-global-key (kbd "a") 'helm-ag-r))
 
 (provide 'paketti-helm-ag-r)

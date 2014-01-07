@@ -27,14 +27,14 @@
              "it" "imf" "mod" "med" "mtm" "okt" "s3m"
              "stm" "stx" "ult" "apun" "xm" "mod" "MOD")
             "mikmod" "-q" "-p" "1" "-X")
-          (add-to-list 'emms-player-list #'emms-player-mikmod)
+          (add-to-list 'emms-player-list 'emms-player-mikmod)
 
           ;; sox
           (define-emms-simple-player sox
             '(file)
             (emms-player-simple-regexp "flac" "mp3" "ogg")
             "play" "--volume" "0.2")
-          (add-to-list 'emms-player-list #'emms-player-sox)
+          (add-to-list 'emms-player-list 'emms-player-sox)
 
           ;; mplayer2
           (define-emms-simple-player mplayer2 '(file url)
@@ -45,19 +45,19 @@
                              "mov" "avi" "divx" "ogm" "ogv" "asf" "mkv"
                              "rm" "rmvb" "mp4" "flac" "vob" "m4a" "ape"))
             "mplayer" "--slave" "--really-quiet")
-          (add-to-list 'emms-player-list #'emms-player-mplayer2)
+          (add-to-list 'emms-player-list 'emms-player-mplayer2)
 
           (define-emms-simple-player mplayer2-playlist '(streamlist)
             "\\`http://"
             "mplayer" "--slave"  "--really-quiet" )
-          (add-to-list 'emms-player-list #'emms-player-mplayer2-playlist)
+          (add-to-list 'emms-player-list 'emms-player-mplayer2-playlist)
 
           ;; mpv
           (define-emms-simple-player mpv
             '(file)
             (emms-player-simple-regexp "webm" "mkv" "wmv" "mp4" "flv" "swf")
             "mpv" "--framedrop=yes" "--softvol=auto" "--really-quiet")
-          (add-to-list 'emms-player-list #'emms-player-mpv))
+          (add-to-list 'emms-player-list 'emms-player-mpv))
 
      (defcustom emms-volume-mixer-control "vol"
        "The control to change the volume with.
@@ -81,7 +81,7 @@ controls, run `mixer' in a shell."
                     (if (re-search-backward "to \\([0-9]+\\):[0-9]+." nil t)
                         (match-string 1))))))
 
-     (set-option emms-volume-change-function #'emms-volume-mixer-change)
+     (set-option emms-volume-change-function 'emms-volume-mixer-change)
 
      ;;;; info
      (req 'emms-info)
@@ -103,14 +103,14 @@ controls, run `mixer' in a shell."
      (defun mytoh:define-emms-key (key func)
        "define personal key mappings"
        (define-key my-emms-map key func))
-     (mytoh:define-emms-key (kbd "P") #'emms-pause)
-     (mytoh:define-emms-key (kbd "s") #'emms-stop)
-     (mytoh:define-emms-key (kbd "p") #'emms-previous)
-     (mytoh:define-emms-key (kbd "n") #'emms-next)
-     (mytoh:define-emms-key (kbd "b") #'emms-smart-browse)
-     (mytoh:define-emms-key (kbd "a f") #'emms-add-file)
-     (mytoh:define-emms-key (kbd "+") #'emms-volume-raise)
-     (mytoh:define-emms-key (kbd "-") #'emms-volume-lower)
+     (mytoh:define-emms-key (kbd "P") 'emms-pause)
+     (mytoh:define-emms-key (kbd "s") 'emms-stop)
+     (mytoh:define-emms-key (kbd "p") 'emms-previous)
+     (mytoh:define-emms-key (kbd "n") 'emms-next)
+     (mytoh:define-emms-key (kbd "b") 'emms-smart-browse)
+     (mytoh:define-emms-key (kbd "a f") 'emms-add-file)
+     (mytoh:define-emms-key (kbd "+") 'emms-volume-raise)
+     (mytoh:define-emms-key (kbd "-") 'emms-volume-lower)
 
      )
 

@@ -23,8 +23,8 @@
   (interactive)
   (if (string= "eshell-mode" major-mode)
       (let ((next (mytoh:eshell-buffer-name-next (buffer-name (current-buffer)))))
-        (if (cl-find-if #'(lambda (buf)
-                            (string= (buffer-name buf) next))
+        (if (cl-find-if (lambda (buf)
+                          (string= (buffer-name buf) next))
                         (buffer-list))
             (switch-to-buffer next)
           (switch-to-buffer eshell-buffer-name)))
@@ -79,9 +79,9 @@
 (cl-defun mytoh:eshell-exit-hook ()
   (cl-letf ((buf (buffer-name (current-buffer))))
     (setq my-eshell-buffers
-          (cl-remove buf my-eshell-buffers :test #'equal))))
+          (cl-remove buf my-eshell-buffers :test 'equal))))
 (add-hook 'eshell-exit-hook
-          #'mytoh:eshell-exit-hook)
+          'mytoh:eshell-exit-hook)
 
 
 (provide 'paketti-eshell-switch)

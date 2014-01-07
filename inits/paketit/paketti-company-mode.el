@@ -20,10 +20,10 @@
                          :foreground "LightSkyBlue")
 
      (add-hook 'company-mode-hook
-               #'(lambda ()
-                   (setq company-lighter " 会社")))
+               (lambda ()
+                 (setq company-lighter " 会社")))
 
-     (add-hook 'after-init-hook #'global-company-mode)
+     (add-hook 'after-init-hook 'global-company-mode)
      )
 
 

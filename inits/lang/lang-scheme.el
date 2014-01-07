@@ -3,8 +3,8 @@
 (define-key emacs-lisp-mode-map (kbd "C-m") 'newline-and-indent)
 
 (cl-defun minun:scheme-add-keywords (face-name keyword-rules)
-  (cl-letf* ((keyword-list (mapcar #'(lambda (x)
-                                       (symbol-name (cdr x)))
+  (cl-letf* ((keyword-list (mapcar (lambda (x)
+                                     (symbol-name (cdr x)))
                                    keyword-rules))
              (keyword-regexp (concat "(\\("
                                      (regexp-opt keyword-list)
@@ -14,10 +14,10 @@
             " on scheme mode")
     (font-lock-add-keywords 'scheme-mode
                             `((,keyword-regexp 1 ',face-name))))
-  (cl-mapc #'(lambda (x)
-               (put (cdr x)
-                    'scheme-indent-function
-                    (car x)))
+  (cl-mapc (lambda (x)
+             (put (cdr x)
+                  'scheme-indent-function
+                  (car x)))
            keyword-rules))
 
 (setq process-coding-system-alist
@@ -64,7 +64,7 @@
        (all-completions ac-target (car (scheme-current-env))))))
   "Source for scheme keywords.")
 ;; (add-hook 'scheme-mode-hook
-;;           #'(lambda ()
+;;           (lambda ()
 ;;               (make-local-variable 'ac-sources)
 ;;               (add-to-list 'ac-sources 'ac-source-scheme)))
 
