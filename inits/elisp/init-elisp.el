@@ -65,6 +65,7 @@
      (vendle:register "thierryvolpiatto/emacs-bmk-ext")
      (vendle:register "kawabata/aozora-view")
      (vendle:register-theme "sabof/hyperplane-theme")
+     (vendle:register-theme "emacs-jp/replace-colorthemes")
 
      (vendle:register-local "~/huone/projektit/emacs-flatline")
      (vendle:register-local "~/huone/projektit/helm-ypv")
