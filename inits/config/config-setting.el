@@ -119,10 +119,6 @@
 (which-function-mode 1)
 (set-face-attribute 'which-func nil :foreground "#4f7b8a")
 
-;;;; save buffer history
-(savehist-mode 1)
-(set-option history-length 100)
-
 ;;;; disable bell
 (set-option ring-bell-function 'ignore)
 (enable-option visible-bell)
@@ -176,16 +172,11 @@
 ;;;; electric indent
 (enable-option electric-layout-mode)
 
-;;;; save minibuffer history
-(set-option savehist-additional-variables '(kill-ring mark-ring global-mark-ring search-ring regexp-search-ring extended-command-history))
-(savehist-mode 1)
-
 ;;;; add newline to end of file
 (enable-option require-final-newline)
 
 ;;;; Sort list-colors-display by Hue
 (set-option list-colors-sort 'hsv)
-
 
 ;;;; ediff
 ;; コントロール用のバッファを同一フレーム内に表示
@@ -216,5 +207,11 @@
 
 ;;;; recursive minibuffer
 (enable-option enable-recursive-minibuffers)
+;;;; save minibuffer history
+(set-option savehist-additional-variables '(kill-ring mark-ring global-mark-ring search-ring regexp-search-ring extended-command-history))
+(savehist-mode 1)
+(set-option history-length 99999999999)
+
+
 
 (provide 'config-setting)

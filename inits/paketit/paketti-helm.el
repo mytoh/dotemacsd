@@ -3,7 +3,7 @@
 (req 'helm
      (require 'helm-config)
      (helm-mode 1)
-     (helm-match-plugin-mode)
+     (helm-match-plugin-mode -1)
      (global-set-key (kbd "C-c h") 'helm-mini)
      (global-set-key (kbd "M-x") 'helm-M-x)
      (global-set-key (kbd "C-c C-m") 'helm-M-x)

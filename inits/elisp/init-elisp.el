@@ -1,7 +1,6 @@
 
 (add-subdirs-to-load-path (concat user-emacs-directory "inits/elisp"))
 
-
 (req 'csh-mode
      (setq csh-mode-hook
            (lambda ()
@@ -161,7 +160,7 @@
           (debug-print-init)
           (define-key global-map (kbd "C-x C-e") 'debug-print-eval-last-sexp))
 
-     (req 'aozora-view)
+     ;; (req 'aozora-view)
 
      (req 'bookmark-extensions)
 

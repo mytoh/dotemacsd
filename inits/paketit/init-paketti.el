@@ -102,7 +102,7 @@
         direx
         ;; pallet
         page-break-lines
-        flycheck
+        ;; flycheck
         fiplr
         fuzzy
         ;; melpa-upstream-visit
@@ -142,16 +142,19 @@
         company
         volatile-highlights
         recentf-ext
-        unicode-fonts
+        ;; unicode-fonts ; require eieio-1.3
         writeroom-mode
         writegood-mode
         nyan-prompt
         indent-guide
+        keyfreq
+        mykie
+        flylisp
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
   '(stumpwm-mode
-    coffee-mode
+    ;; coffee-mode ; require emacs-24.1
     lua-mode
     haskell-mode
     js3-mode
@@ -164,7 +167,7 @@
 (defvar *my-paketti-list-colour-themes*
   '(;; themes
     gruvbox-theme
-    afternoon-theme
+    ;; afternoon-theme ; require emacs-24.1
     sublime-themes
     subatomic-enhanced-theme
     tango-2-theme
@@ -185,24 +188,24 @@
     qsimpleq-theme
     solarized-theme
     birds-of-paradise-plus-theme
-    soothe-theme
+    ;; soothe-theme ; require emacs-24.1
     subatomic-theme
     grandshell-theme
     occidental-theme
     soft-charcoal-theme
     alect-themes
-    waher-theme
-    clues-theme
+    ;; waher-theme ; require emacs-24.1
+    ;; clues-theme ; require emacs-24.1
     ample-theme
     ir-black-theme
-    purple-haze-theme
+    ;; purple-haze-theme ; require emacs-24.0
     flatland-theme
     deep-thought-theme
     espresso-theme
     gandalf-theme
     gruber-darker-theme
     inkpot-theme
-    spacegray-theme
+    ;; spacegray-theme
     ample-zen-theme
     tronesque-theme
     underwater-theme
@@ -210,15 +213,15 @@
     tangotango-theme
     calmer-forest-theme
     jujube-theme
-    bubbleberry-theme
+    ;; bubbleberry-theme
     moe-theme
     naquadah-theme
     noctilux-theme
     obsidian-theme
     soft-morning-theme
-    soft-stone-theme
+    ;; soft-stone-theme
     subatomic256-theme
-    toxi-theme
+    ;; toxi-theme
     ujelly-theme
     zen-and-art-theme
     leuven-theme))
@@ -231,7 +234,7 @@
     helm-c-yasnippet
     helm-recoll
     helm-descbinds
-    helm-gist
+    ;; helm-gist
     helm-ls-git
     helm-migemo
     helm-cmd-t
@@ -240,7 +243,7 @@
     helm-delicious
     helm-helm-commands
     helm-orgcard
-    helm-swoop
+    ;; helm-swoop
     helm-company
     helm-dictionary
     helm-ag-r
@@ -328,6 +331,9 @@
     paketti-writegood-mode
     paketti-shell-pop
     paketti-color-moccur
+    paketti-mykie
+    paketti-keyfreq
+    ;; paketti-flylisp
     ;; paketti-indent-guide
     ;; paketti-twittering-mode
     ;; paketti-tumblesocks

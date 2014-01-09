@@ -1,14 +1,16 @@
 ## -*- mode: eshell-script -*-
 
-(or (getenv "CDPATH")
-    (setenv "CDPATH"
-            (cl-reduce
-             '(lambda (a b)
-                (cl-concatenate 'string
-                                (expand-file-name a) ":" (expand-file-name b)))
-             '("~/huone" "~"  "/usr/local"))))
+#(or (getenv "CDPATH")
+#    (setenv "CDPATH"
+#            (cl-reduce
+#             '(lambda (a b)
+#                (cl-concatenate 'string
+#                                (expand-file-name a) ":" (expand-file-name b)))
+#             '("~/huone" "~"  "/usr/local"))))
 
 (setenv "PAGER" "cat")
+(setenv "TERM" "xterm-256color")
+
 
 ## 補完時に大文字小文字を区別しない
 (setq eshell-cmpl-ignore-case t)
