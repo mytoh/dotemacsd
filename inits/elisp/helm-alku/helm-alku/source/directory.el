@@ -29,7 +29,8 @@
          helm-alku-directory-list)))
 
 (cl-defun helm-alku-directory-action-open-find-file (candidate)
-  (helm-find-files-1 candidate))
+  (cl-letf ((helm-ff-transformer-show-only-basename t))
+    (helm-find-files-1 candidate)))
 
 (defun helm-alku-string-longest (strs)
   (cl-reduce

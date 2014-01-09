@@ -33,6 +33,14 @@
           :prompt "Alku: "
           :candidate-number-limit 20)))
 
+;;;###autoload
+(cl-defun helm-alku-directory ()
+  "Preconfigured `helm' for alku-directory source."
+  (interactive)
+  (helm :sources '(helm-source-alku-directory)
+        :buffer "*helm alku directory*"
+        :prompt "Alku: "))
+
 ;;; provide
 (provide 'helm-alku)
 
