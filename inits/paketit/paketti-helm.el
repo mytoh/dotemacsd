@@ -2,8 +2,10 @@
 ;; helm
 (req 'helm
      (require 'helm-config)
-     (helm-mode 1)
-     (helm-match-plugin-mode -1)
+     (enable-mode helm-mode)
+     (enable-mode helm-adaptative-mode)
+     (disable-mode helm-match-plugin-mode)
+
      (global-set-key (kbd "C-c h") 'helm-mini)
      (global-set-key (kbd "M-x") 'helm-M-x)
      (global-set-key (kbd "C-c C-m") 'helm-M-x)
@@ -21,14 +23,17 @@
      (define-key helm-read-file-map (kbd "C-h") 'delete-backward-char)
      (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 
-     (set-option helm-candidate-number-limit nil)
-     (set-option helm-idle-delay             0.3)
-     (set-option helm-input-idle-delay       0.2)
+     (disable-option helm-candidate-number-limit)
+     (set-option helm-idle-delay          0.01)
+     (set-option helm-input-idle-delay    0.01)
+     (set-option  helm-m-occur-idle-delay 0.01)
      (enable-option helm-M-x-always-save-history)
+     (disable-option helm-quick-update)
+     (set-option helm-default-external-file-browser "pcmanfm")
      ;;;; helm-files
-     (set-option helm-ff-lynx-style-map nil)
+     (disable-option helm-ff-lynx-style-map)
      (enable-option helm-ff-transformer-show-only-basename)
-     (set-option  helm-ff-newfile-prompt-p nil)
+     (disable-option  helm-ff-newfile-prompt-p)
      ;; disable auto completion
      ;; (setq helm-ff-auto-update-initial-value nil)
      (set-option helm-external-programs-associations
@@ -63,9 +68,6 @@
 
 ;; helm-c-yasnippet
 (req 'helm-c-yasnippet)
-
-;; match plugin
-(req 'helm-match-plugin)
 
 ;; misc
 (req 'helm-misc)
