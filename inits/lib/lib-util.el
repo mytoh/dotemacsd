@@ -74,8 +74,21 @@
 
 (cl-defmacro disable-option (option)
   `(progn
-     (message ">> disable %s" ,(symbol-name option))
+     (my-log "disable " ,(propertize (symbol-name option)
+                                     'face 'font-lock-variable-name-face))
      (cl-psetq ,option nil)))
+
+(cl-defmacro enable-mode (mode-fn)
+  `(progn
+     (,mode-fn 1)
+     (my-log "enable mode " ,(propertize (symbol-name mode-fn)
+                                         'face 'font-lock-variable-name-face))))
+
+(cl-defmacro disable-mode (mode-fn)
+  `(progn
+     (,mode-fn -1)
+     (my-log "disable mode " ,(propertize (symbol-name mode-fn)
+                                          'face 'font-lock-variable-name-face))))
 
 ;;http://www.reddit.com/r/emacs/comments/umb24/expandfilename_is_good_for_path_concat_too/
 (cl-defun concat-path (&rest parts)
