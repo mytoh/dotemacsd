@@ -6,21 +6,20 @@
 ;;;; help
 (global-set-key (kbd "C-x C-h") 'help-command)
 
-
 (global-set-key (kbd "C-w") 'kill-region-or-backward-kill-word)
-
 
 (global-set-key [remap kill-whole-line] 'smart-kill-whole-line)
 
 (mytoh:define-global-key (kbd "p") 'package-list-packages)
+
+;;;; default compose mail
+(define-key global-map (kbd "C-x m") nil)
 
 (defun mytoh:dont-kill-emacs ()
   (interactive)
   (error (substitute-command-keys "To exit emacs: \\[kill-emacs]")))
 
 (define-key global-map (kbd "C-x C-c") 'mytoh:dont-kill-emacs)
-
-
 
 ;;;; http://d.hatena.ne.jp/mooz/20100119/p1
 ;; C-q をプリフィックスキー化
