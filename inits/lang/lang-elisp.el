@@ -30,6 +30,8 @@
    (1 . set-option)
    (1 . enable-option)
    (1 . disable-option)
+   (1 . enable-mode)
+   (1 . disable-mode)
    (1 . or)))
 
 (my-elisp-add-keywords
