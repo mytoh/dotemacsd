@@ -60,11 +60,11 @@
      (vendle:register "emacsmirror/mew")
      (vendle:register "naota/navi2ch")
      (vendle:register "tj64/outxxtra")
-     (vendle:register "sabof/hyperplane-theme")
      (vendle:register "ober/zone-matrix")
      (vendle:register "mytoh/fish-mode")
      (vendle:register "thierryvolpiatto/emacs-bmk-ext")
      (vendle:register "kawabata/aozora-view")
+     (vendle:register-theme "sabof/hyperplane-theme")
 
      (vendle:register-local "~/huone/projektit/emacs-flatline")
      (vendle:register-local "~/huone/projektit/helm-ypv")
@@ -126,11 +126,6 @@
      ;; flatline
      (req 'flatline
           (flatline-mode 1))
-
-
-     ;; hyperplane theme
-     (add-to-list 'custom-theme-load-path
-                  (expand-file-name "hyperplane-theme" *user-emacs-vendle-directory*))
 
      ;; fish-mode
      (req 'fish-mode)
