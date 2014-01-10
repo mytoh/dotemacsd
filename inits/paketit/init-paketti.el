@@ -68,7 +68,6 @@
         expand-region
         tabbar
         suomalainen-kalenteri
-        isearch+
         info+
         redo+
         yasnippet
@@ -341,7 +340,6 @@
     ;; paketti-twittering-mode
     ;; paketti-tumblesocks
     ;; paketti-circe
-    ;; paketti-isearch+
     ;; paketti-auto-complete
     ;; paketti-projectile
     ;; paketti-project-persist
