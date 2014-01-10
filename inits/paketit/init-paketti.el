@@ -150,6 +150,7 @@
         keyfreq
         mykie
         flylisp
+        helm-package
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
@@ -301,8 +302,8 @@
     paketti-popwin
     paketti-w3m
     paketti-eww
-    ;; paketti-git-gutter+
-    paketti-git-gutter
+    paketti-git-gutter+
+    ;; paketti-git-gutter
     paketti-yasnippet
     paketti-flymake
     paketti-coffee-mode
@@ -385,6 +386,7 @@
     paketti-helm-dictionary
     paketti-helm-recoll
     paketti-wgrep-helm
+    paketti-helm-package
     ))
 (append-to-list init-paketit *my-paketit-list-helm*)
 
