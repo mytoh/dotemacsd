@@ -8,19 +8,20 @@
   `((name . "eshell-session")
     (init . helm-eshell-session-init)
     (candidates . helm-eshell-session-candidates)
-    (type . buffer)
-    (persistent-action . helm-buffers-list-persistent-action)
     (keymap . ,helm-buffer-map)
-    (volatile)
-    (mode-line . helm-buffer-mode-line-string)
-    (persistent-help
-     . "Show this buffer / C-u \\[helm-execute-persistent-action]: Kill this buffer")))
+    (action . (("Open buffer" . helm-eshell-session-action-open-buffer)))
+    ))
 
 (defun helm-eshell-session-create-candidates ()
   (cl-letf* ((bufs (mapcar 'buffer-name (buffer-list)))
              (ebufs (cl-remove-if-not (lambda (b) (string-match "*eshell*" b))
                                       bufs)))
     ebufs))
+
+(defun helm-eshell-session-action-open-buffer (candidate)
+  (if current-prefix-arg
+      (helm-buffers-persistent-kill candidate)
+    (helm-switch-to-buffer candidate)))
 
 (defvar helm-eshell-session-candidates nil)
 (cl-defun helm-eshell-session-init ()
@@ -31,7 +32,8 @@
 (defun helm-eshell-session ()
   (interactive)
   (helm :sources 'helm-source-eshell-session
-        :buffer "*helm eshell session*"))
+        :buffer "*helm eshell session*"
+        :prompt "eshell: "))
 
 (provide 'helm-eshell-session)
 
