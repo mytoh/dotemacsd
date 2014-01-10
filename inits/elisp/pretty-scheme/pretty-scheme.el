@@ -19,7 +19,7 @@ relevant buffer(s)."
                                                ,(cdr kw))))))
            keywords)))
 
-(cl-defun pretty-scheme-function-keywords ()
+(defvar pretty-scheme-function-keywords
   '(("not" . "¬")
     ("and" . "∧")
     ("or" . "∨")
@@ -33,6 +33,6 @@ relevant buffer(s)."
 (cl-defun turn-on-pretty-scheme-mode ()
   (pretty-scheme-add-function-keywords
    'scheme-mode
-   (pretty-scheme-function-keywords)))
+   pretty-scheme-function-keywords))
 
 (provide 'pretty-scheme)

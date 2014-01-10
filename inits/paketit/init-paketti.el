@@ -172,6 +172,7 @@
     subatomic-enhanced-theme
     tango-2-theme
     twilight-theme
+    sea-before-storm-theme
     zenburn-theme
     mustang-theme
     nzenburn-theme
@@ -224,6 +225,7 @@
     ;; toxi-theme
     ujelly-theme
     zen-and-art-theme
+    twilight-anti-bright-theme
     leuven-theme))
 (append-to-list *my-paketti-list* *my-paketti-list-colour-themes*)
 

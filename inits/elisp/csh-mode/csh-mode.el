@@ -458,7 +458,7 @@ into consideration keywords and other nesting constructs."
   "Indent current line relative to containing block and allow for
 csh-tab-always-indent customization"
   (interactive)
-  (cl-letf (case-fold-search)
+  (cl-letf ((case-fold-search))
     (cond ((save-excursion
              (skip-chars-backward " \t")
              (bolp))
@@ -472,7 +472,7 @@ csh-tab-always-indent customization"
   "Indent current line as far as it should go according
 to the syntax/context"
   (interactive)
-  (cl-letf (case-fold-search)
+  (cl-letf ((case-fold-search))
     (save-excursion
       (beginning-of-line)
       (if (bobp)
@@ -565,7 +565,7 @@ or one of the control structure ending keywords then reindent. Also
 if csh-match-and-tell is non-nil the matching structure will echo in
 the minibuffer"
   (interactive)
-  (cl-letf (case-fold-search)
+  (cl-letf ((case-fold-search))
     (save-excursion
       (beginning-of-line)
       (cond ((looking-at csh-else-re)
@@ -798,7 +798,7 @@ Installation:
 ;;
 (cl-defun csh-completion-init-and-pickup ()
   (interactive)
-  (cl-letf (case-fold-search)
+  (cl-letf ((case-fold-search))
     (csh-completion-list-init)
     (csh-pickup-all)))
 

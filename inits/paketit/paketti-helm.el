@@ -30,8 +30,9 @@
      (enable-option helm-M-x-always-save-history)
      (disable-option helm-quick-update)
      (set-option helm-default-external-file-browser "pcmanfm")
+     (disable-option helm-move-to-line-cycle-in-source)
      ;;;; helm-files
-     (disable-option helm-ff-lynx-style-map)
+     (enable-option helm-ff-lynx-style-map)
      (enable-option helm-ff-transformer-show-only-basename)
      (disable-option  helm-ff-newfile-prompt-p)
      ;; disable auto completion

@@ -48,7 +48,7 @@
           (add-to-list 'emms-player-list 'emms-player-mplayer2)
 
           (define-emms-simple-player mplayer2-playlist '(streamlist)
-            "\\`http://"
+            "\\`http://\\|"
             "mplayer" "--slave"  "--really-quiet" )
           (add-to-list 'emms-player-list 'emms-player-mplayer2-playlist)
 
@@ -57,7 +57,15 @@
             '(file)
             (emms-player-simple-regexp "webm" "mkv" "wmv" "mp4" "flv" "swf")
             "mpv" "--framedrop=yes" "--softvol=auto" "--really-quiet")
-          (add-to-list 'emms-player-list 'emms-player-mpv))
+          (add-to-list 'emms-player-list 'emms-player-mpv)
+
+          (define-emms-simple-player mpv-playlist-file '(file)
+            (emms-player-simple-regexp
+             "pls" "m3u")
+            "mpv" "--really-quiet" "--playlist")
+          (add-to-list 'emms-player-list 'emms-player-mpv-playlist-file)
+
+          )
 
      (defcustom emms-volume-mixer-control "vol"
        "The control to change the volume with.

@@ -142,7 +142,6 @@
                         (vendle:package-path package))
     (add-to-list '*vendle-package-list* package)))
 
-
 ;;;; clean
 (cl-defun vendle:clean-packages ()
   (cl-letf ((paths (cl-remove-if
