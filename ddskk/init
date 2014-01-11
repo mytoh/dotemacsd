@@ -2,3 +2,10 @@
 
 ;; us act for dvorak
 (setq skk-use-act t)
+
+;; 動的候補表示
+(setq skk-dcomp-activate t)
+
+;; 英単語補完
+(setq skk-use-look t)
+(setq skk-look-recursive-search t)
