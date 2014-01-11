@@ -43,6 +43,15 @@
         :buffer "*helm alku directory*"
         :prompt "Alku: "))
 
+;;;###autoload
+(cl-defun helm-alku-command ()
+  "Preconfigured `helm' for alku-command source."
+  (interactive)
+  (helm :sources '(helm-source-alku-command)
+        :buffer "*helm alku command*"
+        :prompt "Alku: "))
+
+
 ;;; provide
 (provide 'helm-alku)
 
