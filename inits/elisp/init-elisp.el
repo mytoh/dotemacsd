@@ -43,6 +43,8 @@
              ("shellar" . "~/huone/projektit/shellar")
              ("shellar_custom" . "~/huone/projektit/shellar_custom")
              ("paketti" . "~/.emacs.d/inits/paketit")))
+     (setq helm-alku-command-list
+           '("v2c" "conkeror" "firefox" "pcmanfm" "thunar"))
      (mytoh:define-global-key (kbd "h") 'helm-alku))
 
 (req 'vendle
