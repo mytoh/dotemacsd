@@ -1,6 +1,7 @@
 ;;; directory.el -*- lexical-binding: t -*-
 
 (require 'helm-files)
+(require 'helm-alku-util "helm-alku/util")
 
 (defcustom helm-alku-directory-list
   '(("Home" . "~"))
@@ -31,21 +32,6 @@
 (cl-defun helm-alku-directory-action-open-find-file (candidate)
   (cl-letf ((helm-ff-transformer-show-only-basename t))
     (helm-find-files-1 candidate)))
-
-(defun helm-alku-string-longest (strs)
-  (cl-reduce
-   (lambda (a b)
-     (cl-letf* ((al (string-width a))
-                (bl (string-width b)))
-       (if (< al bl)  b a)))
-   strs))
-
-(defun helm-alku-string-pad (str longest)
-  (cl-letf ((len (- longest (string-width str)))
-            (offset 4))
-    (cl-concatenate 'string
-                    str
-                    (make-string (+ offset len) ? ))))
 
 (defvar helm-source-alku-directory nil)
 (setq helm-source-alku-directory

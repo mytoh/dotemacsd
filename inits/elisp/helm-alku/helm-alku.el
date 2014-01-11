@@ -7,6 +7,7 @@
 (require 'helm-files)
 
 (require 'helm-alku-directory "helm-alku/source/directory")
+(require 'helm-alku-command "helm-alku/source/command")
 
 ;;;; group
 (defgroup helm-alku nil
@@ -17,6 +18,7 @@
 (defcustom helm-alku-sources
   '(helm-source-alku-directory
     helm-source-pp-bookmarks
+    helm-source-alku-command
     helm-source-recentf)
   "helm alku sources"
   :type 'list
