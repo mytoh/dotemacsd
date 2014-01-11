@@ -1,2 +1,4 @@
+;;; -*- mode: emacs-lisp;lexical-binding: t -*-
+
 ;; us act for dvorak
 (setq skk-use-act t)
