@@ -45,6 +45,7 @@
              ("paketti" . "~/.emacs.d/inits/paketit")))
      (setq helm-alku-command-list
            '("v2c" "conkeror" "firefox" "pcmanfm" "thunar"))
+     (mytoh:define-global-key (kbd "c")  'helm-alku-command)
      (mytoh:define-global-key (kbd "h") 'helm-alku))
 
 (req 'vendle
