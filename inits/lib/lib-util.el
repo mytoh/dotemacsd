@@ -179,4 +179,8 @@ buffer is not visiting a file."
   (kill-whole-line arg)
   (back-to-indentation))
 
+
+(cl-defmacro mytoh:comment (&optional body)
+  t)
+
 (provide 'lib-util)
