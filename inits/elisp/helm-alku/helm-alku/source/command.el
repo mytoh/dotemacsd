@@ -17,15 +17,14 @@
     (cl-mapcar
      (lambda (com)
        (if (stringp com)
-           (cl-letf ((full-path (executable-find com)))
-             (cons (format "%s%s" (helm-alku-string-pad com longest-width)
-                           full-path)
-                   full-path))
-         (cl-letf ((full-path (expand-file-name (cdr com))))
-           (cons (format "%s%s" (helm-alku-string-pad (car com) longest-width)
-                         full-path)
-                 full-path))))
+           (helm-alku-command-format com (executable-find com) longest-width)
+         (helm-alku-command-format (car com) (expand-file-name (cdr com))  longest-width)))
      init-list)))
+
+(cl-defun helm-alku-command-format (command path width)
+  (cons (format "%s%s" (helm-alku-string-pad command width)
+                path)
+        path))
 
 (cl-defun helm-alku-command-action-run (candidate)
   (cl-letf ((com candidate))
