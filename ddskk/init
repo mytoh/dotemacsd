@@ -1,0 +1,2 @@
+;; us act for dvorak
+(setq skk-use-act t)

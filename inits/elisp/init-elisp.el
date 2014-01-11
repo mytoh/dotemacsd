@@ -167,12 +167,15 @@
      (req 'lehtifile-mode
           (add-to-list 'auto-mode-alist '("Lehtifile\\'" . lehtifile-mode)))
 
-     (setq skk-user-directory "~/.emacs.d/ddskk/") ; ディレクトリ指定
-     (when (require 'skk-autoloads nil t)
-       ;; C-x C-j で skk モードを起動
-       (define-key global-map (kbd "C-x C-j") 'skk-mode)
-       ;; .skk を自動的にバイトコンパイル
-       (setq skk-byte-compile-init-file t))
+     ;; ディレクトリ指定
+     ;; ~/.emacs.d/ddskk/init is setting file
+     (setq skk-user-directory "~/.emacs.d/ddskk/")
+     (req 'skk-autoloads
+          ;; C-x C-j で skk モードを起動
+          (define-key global-map (kbd "C-x C-j") 'skk-mode)
+          ;; .skk を自動的にバイトコンパイル
+          (setq skk-byte-compile-init-file t)
+          )
 
      )
 
