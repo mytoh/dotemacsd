@@ -154,7 +154,7 @@
 
 (defvar *my-paketti-list-prog-modes*
   '(stumpwm-mode
-    ;; coffee-mode ; require emacs-24.1
+    coffee-mode
     lua-mode
     haskell-mode
     js3-mode
@@ -173,6 +173,7 @@
     tango-2-theme
     twilight-theme
     sea-before-storm-theme
+    cyberpunk-theme
     zenburn-theme
     mustang-theme
     nzenburn-theme
@@ -226,6 +227,7 @@
     ujelly-theme
     zen-and-art-theme
     twilight-anti-bright-theme
+    steady-theme
     leuven-theme))
 (append-to-list *my-paketti-list* *my-paketti-list-colour-themes*)
 
@@ -245,7 +247,7 @@
     helm-delicious
     helm-helm-commands
     helm-orgcard
-    ;; helm-swoop
+    helm-swoop
     helm-company
     helm-dictionary
     helm-ag-r
