@@ -180,7 +180,7 @@ buffer is not visiting a file."
   (back-to-indentation))
 
 
-(cl-defmacro mytoh:comment (&optional body)
+(cl-defmacro mytoh:comment (&rest body)
   t)
 
 (provide 'lib-util)
