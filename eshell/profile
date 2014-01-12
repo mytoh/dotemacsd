@@ -49,7 +49,7 @@
 (add-to-list 'eshell-visual-commands "tail")
 (add-to-list 'eshell-command-completions-alist
              `("unarchive.sh" . ,(concat (regexp-opt '(".tar" ".tgz" ".tar.gz" ".txz" ".tar.xz" ".cbz" ".cbr" ".cbx"
-                                                       ".rar" ".zip"))
+                                                       ".rar" ".zip" ".7z"))
                                          "\\'")))
 
 (add-to-list 'eshell-output-filter-functions 'eshell-handle-ansi-color)
