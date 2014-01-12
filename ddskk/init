@@ -9,3 +9,15 @@
 ;; 英単語補完
 (setq skk-use-look t)
 (setq skk-look-recursive-search t)
+
+;; 変換時に注釈 (annotation) を表示する
+(setq skk-show-annotation t)
+
+;; 変換候補一覧と注釈 (annotation) を GUI ぽく表示する
+(setq skk-show-tooltip t)
+
+;; Enter キーを押したときには確定する
+(setq skk-egg-like-newline t)
+
+;; 動的補完で候補を複数表示する
+(setq skk-dcomp-multiple-activate t)

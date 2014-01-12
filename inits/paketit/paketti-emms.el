@@ -1,6 +1,5 @@
 ;; emms
-(req 'emms-setup
-     (emms-devel)
+(req 'emms-setup (emms-devel)
      (emms-default-players)
      ;; mode-line
      (emms-mode-line +1)
@@ -79,29 +78,23 @@ controls, run `mixer' in a shell."
      (defun emms-volume-mixer-change (amount)
        "Change mixer master volume by AMOUNT."
        (message "Playback channels: %s"
-                (with-temp-buffer
-                  (when (zerop
-                         (call-process "mixer" nil (current-buffer) nil
-                                       emms-volume-mixer-control
-                                       (format "%s%d"
-                                               (if (< amount 0) "-" "+")
-                                               (abs amount))))
-                    (if (re-search-backward "to \\([0-9]+\\):[0-9]+." nil t)
-                        (match-string 1))))))
+                (with-temp-buffer (when (zerop (call-process "mixer" nil (current-buffer) nil
+                                                             emms-volume-mixer-control (format "%s%d"
+                                                                                               (if (< amount 0) "-" "+")
+                                                                                               (abs amount))))
+                                    (if (re-search-backward "to \\([0-9]+\\):[0-9]+." nil t)
+                                        (match-string 1))))))
 
      (set-option emms-volume-change-function 'emms-volume-mixer-change)
 
-     ;;;; info
+                    ;;;; info
      (req 'emms-info)
      (when (executable-find "emms-print-metadata")
-       (req 'emms-info-libtag
-            (setq emms-info-functions '(emms-info-libtag))))
+       (req 'emms-info-libtag (setq emms-info-functions '(emms-info-libtag))))
      (when (executable-find "mediainfo")
-       (req 'emms-info-mediainfo
-            (add-to-list 'emms-info-functions 'emms-info-mediainfo)))
+       (req 'emms-info-mediainfo (add-to-list 'emms-info-functions 'emms-info-mediainfo)))
      (when (executable-find "metaflac")
-       (req 'emms-info-metaflac
-            (add-to-list 'emms-info-functions 'emms-info-metaflac)))
+       (req 'emms-info-metaflac (add-to-list 'emms-info-functions 'emms-info-metaflac)))
 
 
 
@@ -121,6 +114,14 @@ controls, run `mixer' in a shell."
      (mytoh:define-emms-key (kbd "-") 'emms-volume-lower)
 
      )
+
+(mytoh:comment
+ ;; debug players
+ (emms-player-for '(*track* (type . file)
+                            (name . "myfile.pls")))
+ (emms-player-for '(*track* (type . url)
+                            (name . "http://test")))
+ )
 
 
 (provide 'paketti-emms)

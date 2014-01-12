@@ -167,7 +167,7 @@
 (defvar *my-paketti-list-colour-themes*
   '(;; themes
     gruvbox-theme
-    ;; afternoon-theme ; require emacs-24.1
+    afternoon-theme ; require emacs-24;.1
     sublime-themes
     subatomic-enhanced-theme
     tango-2-theme
@@ -190,24 +190,24 @@
     qsimpleq-theme
     solarized-theme
     birds-of-paradise-plus-theme
-    ;; soothe-theme ; require emacs-24.1
+    soothe-theme ; require emacs-24.1
     subatomic-theme
     grandshell-theme
     occidental-theme
     soft-charcoal-theme
     alect-themes
-    ;; waher-theme ; require emacs-24.1
-    ;; clues-theme ; require emacs-24.1
+    waher-theme ; require emacs-24.1
+    clues-theme ; require emacs-24.1
     ample-theme
     ir-black-theme
-    ;; purple-haze-theme ; require emacs-24.0
+    purple-haze-theme ; require emacs-24.0
     flatland-theme
     deep-thought-theme
     espresso-theme
     gandalf-theme
     gruber-darker-theme
     inkpot-theme
-    ;; spacegray-theme
+    spacegray-theme
     ample-zen-theme
     tronesque-theme
     underwater-theme
@@ -215,15 +215,15 @@
     tangotango-theme
     calmer-forest-theme
     jujube-theme
-    ;; bubbleberry-theme
+    bubbleberry-theme
     moe-theme
     naquadah-theme
     noctilux-theme
     obsidian-theme
     soft-morning-theme
-    ;; soft-stone-theme
+    soft-stone-theme
     subatomic256-theme
-    ;; toxi-theme
+    toxi-theme
     ujelly-theme
     zen-and-art-theme
     twilight-anti-bright-theme
