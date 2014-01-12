@@ -1,29 +1,30 @@
 ;;; config-font.el -*- lexical-binding: t -*-
 ;;;; font
-(cl-defun font-existsp (font)
+(cl-defun font-exists-p (font)
   "Check to see if the named FONT is available"
-  (if (null (x-list-fonts font))
-      nil t))
+  (find-font (font-spec :name font)))
+
+(set-face-attribute 'default nil :height 80)
 
 (cl-defun set-normal-font ()
   (cond ((eq window-system nil) nil)
-        ((font-existsp "CosmicSansNeueMono")
-         (set-face-attribute 'default nil :height 80 :font "CosmicSansNeueMono"))
-        ((font-existsp "Inconsolata")
-         (set-face-attribute 'default nil :height 90 :font "Inconsolata"))
-        ((font-existsp "Droid Sans Mono")
+        ((font-exists-p "CosmicSansNeueMono")
+         (set-fontset-font nil 'ascii (font-spec :name "CosmicSansNeueMono")))
+        ((font-exists-p "Inconsolata")
+         (set-fontset-font nil 'ascii (font-spec :name "Inconsolata")))
+        ((font-exists-p "Droid Sans Mono")
          (set-face-attribute 'default nil :height 80 :font "Droid Sans Mono"))
-        ((font-existsp "Source Code Pro")
+        ((font-exists-p "Source Code Pro")
          (set-face-attribute 'default nil :height 90 :font "Source Code Pro"))
-        ((font-existsp "Ricty")
+        ((font-exists-p "Ricty")
          (set-face-attribute 'default nil :height 90 :font "Ricty"))
-        ((font-existsp "DejaVu Sans Mono")
+        ((font-exists-p "DejaVu Sans Mono")
          (set-face-attribute 'default nil :height 80 :font "DejaVu Sans Mono"))
-        ((font-existsp "ProFont")
+        ((font-exists-p "ProFont")
          (set-face-attribute 'default nil :height 80 :font "ProFont"))
-        ((font-existsp "Bitstream Vera Sans Mono")
+        ((font-exists-p "Bitstream Vera Sans Mono")
          (set-face-attribute 'default nil :height 80 :font "Bitstream Vera Sans Mono"))
-        ((font-existsp "Neep")
+        ((font-exists-p "Neep")
          (set-face-attribute 'default nil :height 80 :font "Neep"))))
 
 
@@ -34,16 +35,19 @@
 ;;; あさきゆめみし　ゑひもせす
 (cl-defun set-japanese-fontset-font ()
   (cond ((eq window-system nil) nil)
-        ((font-existsp "Hiragino Mincho Pro")
+        ((font-exists-p "Hiragino Mincho Pro")
          (set-fontset-font nil 'japanese-jisx0208
-                           (font-spec :family "Hiragino Mincho Pro")))
-        ((font-existsp "IPAGothic")
+                           (font-spec :name "Hiragino Mincho Pro")))
+        ((font-exists-p "IPAGothic")
          (set-fontset-font nil 'japanese-jisx0208
                            '("IPAGothic" . "unicode-bmp")))
-        ((font-existsp "Sazanami Gothic")
+        ((font-exists-p "Sazanami Gothic")
          (set-fontset-font nil 'japanese-jisx0208
                            (font-spec :family "Sazanami Gothic")))))
 
+(cl-defun set-symbol-fontset ()
+  (if (font-exists-p "Symbola")
+      (set-fontset-font nil 'symbol (font-spec :name "Symbola"))))
 
 
 (cl-defun set-bitmap-font ()
@@ -86,6 +90,7 @@
 ;; (set-bitmap-font)
 
 (set-normal-font)
+(set-symbol-fontset)
 ;; (set-japanese-fontset-font)
 
 (provide 'config-font)
