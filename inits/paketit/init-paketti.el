@@ -141,7 +141,7 @@
         company
         volatile-highlights
         recentf-ext
-        ;; unicode-fonts ; require eieio-1.3
+        unicode-fonts ; require eieio-1.3
         writeroom-mode
         writegood-mode
         nyan-prompt
@@ -331,7 +331,7 @@
     paketti-smartscan
     paketti-volatile-highlights
     paketti-recentf-ext
-    paketti-unicode-fonts
+    ;; paketti-unicode-fonts
     paketti-writegood-mode
     paketti-shell-pop
     paketti-color-moccur

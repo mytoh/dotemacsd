@@ -1,6 +1,6 @@
 (pak 'unicode-fonts
      (enable-option unicode-fonts-less-feedback)
-     ;; (unicode-fonts-setup)
+     (unicode-fonts-setup)
      )
 
 (provide 'paketti-unicode-fonts)
