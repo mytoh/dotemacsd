@@ -1,7 +1,7 @@
 ;;; paketti-eww.el -*- lexical-binding: t -*-
 
 (req 'eww
-     (set-option eww-download-path "~/huone/lataukset")
+     (set-option eww-download-directory "~/huone/lataukset")
      (define-key eww-mode-map (kbd "C-i") 'shr-next-link)
      (set-option browse-url-browser-function 'eww-browse-url)
      (add-hook 'after-init-hook
