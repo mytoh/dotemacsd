@@ -150,6 +150,7 @@
         mykie
         flylisp
         helm-package
+        markdown-mode
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
@@ -337,6 +338,7 @@
     paketti-color-moccur
     paketti-mykie
     paketti-keyfreq
+    paketti-markdown-mode
     ;; paketti-flylisp
     ;; paketti-indent-guide
     ;; paketti-twittering-mode
