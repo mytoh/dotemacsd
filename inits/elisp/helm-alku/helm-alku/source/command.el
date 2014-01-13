@@ -27,7 +27,7 @@
         path))
 
 (cl-defun helm-alku-command-action-run (candidate)
-  (cl-letf ((com candidate))
+  (cl-letf ((com (format "%s &" candidate)))
     (start-process-shell-command com nil com)))
 
 (cl-defun helm-alku-command-init ()
