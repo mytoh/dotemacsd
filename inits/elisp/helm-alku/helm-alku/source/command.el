@@ -28,7 +28,9 @@
 
 (cl-defun helm-alku-command-action-run (candidate)
   (cl-letf ((com (format "%s &" candidate)))
-    (start-process-shell-command com nil com)))
+    (message "starting %s..." candidate)
+    (start-process-shell-command com nil com)
+    (message "started %s" candidate)))
 
 (cl-defun helm-alku-command-init ()
   (setq helm-alku-command-candidates

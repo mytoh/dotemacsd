@@ -17,7 +17,7 @@
 ;;;; helm sources
 (defcustom helm-alku-sources
   '(helm-source-alku-directory
-    helm-source-pp-bookmarks
+    helm-source-bookmarks
     helm-source-alku-command
     helm-source-recentf)
   "helm alku sources"
