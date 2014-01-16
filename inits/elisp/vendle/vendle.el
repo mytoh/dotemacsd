@@ -236,5 +236,31 @@
   (interactive)
   (vendle:clean-packages))
 
+;; font-lock
+(cl-defun vendle:turn-on-font-lock ()
+  (cl-flet ((add-keywords (face-name keyword-rules)
+                          (cl-letf* ((keyword-list (cl-mapcar (lambda (x)
+                                                                (symbol-name (cdr x)))
+                                                              keyword-rules))
+                                     (keyword-regexp (concat "(\\("
+                                                             (regexp-opt keyword-list)
+                                                             "\\)\\>")))
+                            (font-lock-add-keywords  'emacs-lisp-mode
+                                                     `((,keyword-regexp 1 ',face-name))))
+                          (cl-mapc (lambda (x)
+                                     (put (cdr x)
+                                          'scheme-indent-function
+                                          (car x)))
+                                   keyword-rules)))
+
+    (add-keywords
+     'font-lock-builtin-face
+     '((1 . vendle:initialize)
+       (1 . vendle:turn-on-font-lock)
+       (1 . vendle:register)
+       (1 . vendle:register-local)
+       (1 . vendle:register-theme)
+       (1 . vendle:register-theme-local)))))
+
 ;;; provide
 (provide 'vendle)
