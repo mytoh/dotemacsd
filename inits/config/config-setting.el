@@ -69,6 +69,9 @@
 ;;;; highlight region
 (transient-mark-mode 1)
 
+;;;; delete seleted text when typing
+(delete-selection-mode 1)
+
 ;;;; highlight current line
 (defface hlline-face
   '((((class color)
@@ -131,13 +134,15 @@
 (disable-option split-width-threshold)
 
 ;;;; backup and autosave
-(defvar backup-directory (expand-file-name "backups" user-emacs-directory))
-(defvar autosave-directory (expand-file-name "autosaves" user-emacs-directory))
-(set-option backup-directory-alist
-            `((".*" . ,backup-directory)))
-(set-option auto-save-list-file-prefix autosave-directory)
-(set-option auto-save-file-name-transforms
-            `((".*" ,autosave-directory t)))
+(setq make-backup-files nil) ; stop creating those backup~ files
+(setq auto-save-default nil)
+;; (defvar backup-directory (expand-file-name "backups" user-emacs-directory))
+;; (defvar autosave-directory (expand-file-name "autosaves" user-emacs-directory))
+;; (set-option backup-directory-alist
+;;             `((".*" . ,backup-directory)))
+;; (set-option auto-save-list-file-prefix autosave-directory)
+;; (set-option auto-save-file-name-transforms
+;;             `((".*" ,autosave-directory t)))
 
 ;;;; recentf
 ;; save more recent files

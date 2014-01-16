@@ -31,6 +31,7 @@
      (disable-option helm-quick-update)
      (set-option helm-default-external-file-browser "pcmanfm")
      (disable-option helm-move-to-line-cycle-in-source)
+     (enable-option enable-recursive-minibuffers)
      ;;;; helm-files
      (enable-option helm-ff-lynx-style-map)
      (enable-option helm-ff-transformer-show-only-basename)

@@ -6,7 +6,7 @@
 
 (set-face-attribute 'default nil :height 80)
 
-(cl-defun set-normal-font ()
+(cl-defun set-ascii-font ()
   (cond ((eq window-system nil) nil)
         ((font-exists-p "CosmicSansNeueMono")
          (set-fontset-font nil 'ascii (font-spec :name "CosmicSansNeueMono")))
@@ -33,7 +33,7 @@
 ;;; わかよたれそ　　つねならむ
 ;;; うゐのおくやま　けふこえて
 ;;; あさきゆめみし　ゑひもせす
-(cl-defun set-japanese-fontset-font ()
+(cl-defun set-japanese-font ()
   (cond ((eq window-system nil) nil)
         ((font-exists-p "Hiragino Mincho Pro")
          (set-fontset-font nil 'japanese-jisx0208
@@ -45,7 +45,7 @@
          (set-fontset-font nil 'japanese-jisx0208
                            (font-spec :family "Sazanami Gothic")))))
 
-(cl-defun set-symbol-fontset ()
+(cl-defun set-symbol-font ()
   (if (font-exists-p "Symbola")
       (set-fontset-font nil 'symbol (font-spec :name "Symbola"))))
 
@@ -89,8 +89,8 @@
 
 ;; (set-bitmap-font)
 
-(set-normal-font)
-(set-symbol-fontset)
-;; (set-japanese-fontset-font)
+(set-ascii-font)
+(set-symbol-font)
+;; (set-japanese-font)
 
 (provide 'config-font)

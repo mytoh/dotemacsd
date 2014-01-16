@@ -80,6 +80,7 @@
        (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk"))
      ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
+     (vendle:turn-on-font-lock)
 
      (req 'scheme-keywords
           (add-hook 'scheme-mode-hook 'scheme-keywords-mode))

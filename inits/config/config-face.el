@@ -4,6 +4,10 @@
 ;;;; colour-theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/inits/themes" )
 (cond ((window-system)
+       ;; make the fringe stand out from the background
+       (setq solarized-distinct-fringe-background t)
+       ;; make the modeline high contrast
+       (setq solarized-high-contrast-mode-line t)
        (load-theme 'gruvbox t))
       (t
        (setq solarized-degrade t)

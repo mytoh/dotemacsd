@@ -23,6 +23,8 @@
                (lambda ()
                  (setq company-lighter " 会社")))
 
+     (set-option company-idle-delay 0.3)
+     (set-option company-begin-commands '(self-insert-command))
      (add-hook 'after-init-hook 'global-company-mode)
      )
 
