@@ -48,6 +48,9 @@
      (mytoh:define-global-key (kbd "c")  'helm-alku-command)
      (mytoh:define-global-key (kbd "h") 'helm-alku))
 
+
+(add-to-list 'load-path (expand-file-name "~/huone/projektit/emacs-vendle"))
+
 (req 'vendle
 
      ;; initialize vendle
