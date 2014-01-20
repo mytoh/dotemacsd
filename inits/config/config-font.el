@@ -49,6 +49,10 @@
   (if (font-exists-p "Symbola")
       (set-fontset-font nil 'symbol (font-spec :name "Symbola"))))
 
+(cl-defun set-cyrillic-font ()
+  (if (font-exists-p "CosmicSansNeueMono")
+      (set-fontset-font nil 'cyrillic (font-spec :name "CosmicSansNeueMono"))))
+
 
 (cl-defun set-bitmap-font ()
   (cl-letf ((k10  "-misc-fixed-medium-r-normal--10-90-75-75-c-100-jisx0208.1983-0")
@@ -91,6 +95,7 @@
 
 (set-ascii-font)
 (set-symbol-font)
+(set-cyrillic-font)
 ;; (set-japanese-font)
 
 (provide 'config-font)
