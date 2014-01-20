@@ -23,5 +23,8 @@
 ;;;;; elisp
 (require 'init-elisp)
 
+;;;;; vendle
+(require 'init-vendle)
+
 ;;;; provide
 (provide 'init-load)
