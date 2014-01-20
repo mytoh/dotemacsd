@@ -8,7 +8,9 @@
        (setq solarized-distinct-fringe-background t)
        ;; make the modeline high contrast
        (setq solarized-high-contrast-mode-line t)
-       (load-theme 'gruvbox t))
+       ;; (load-theme 'gruvbox t)
+       (load-theme 'underwater t)
+       )
       (t
        (setq solarized-degrade t)
        (setq solarized-termcolors 256)
