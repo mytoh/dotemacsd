@@ -338,10 +338,10 @@
     paketti-color-moccur
     paketti-mykie
     paketti-keyfreq
+    paketti-twittering-mode
     paketti-markdown-mode
     ;; paketti-flylisp
     ;; paketti-indent-guide
-    ;; paketti-twittering-mode
     ;; paketti-tumblesocks
     ;; paketti-circe
     ;; paketti-auto-complete

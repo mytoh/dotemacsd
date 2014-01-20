@@ -11,7 +11,6 @@
      ;; dired-find-alternate-file の有効化
      (put 'dired-find-alternate-file 'disabled nil)
 
-
      ;; ファイルなら別バッファで、ディレクトリなら同じバッファで開く
      (cl-defun dired-open-in-accordance-with-situation ()
        (interactive)
