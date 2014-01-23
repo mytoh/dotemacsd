@@ -44,6 +44,9 @@
      ;; install packages
      (vendle:install-packages)
 
+     ;; keymap
+     (mytoh:define-global-key (kbd "v u") 'vendle-update)
+
      ;; update plugins
      ;; (vendle:update-packages)
 
@@ -69,8 +72,8 @@
      ;;     (add-hook 'lisp-mode-hook 'highlight-sexp-mode)
      ;;   (add-hook 'emacs-lisp-mode-hook 'highlight-sexp-mode)
      ;;   (add-hook 'scheme-mode-hook 'highlight-sexp)
-     ;;   (setq hl-sexp-foreground-color nil)
-     ;;   (setq hl-sexp-background-color "#1a1a1a"))
+     ;;   (set-option hl-sexp-foreground-color nil)
+     ;;   (set-option hl-sexp-background-color "#1a1a1a"))
 
 
      ;; seijiseikana
@@ -100,7 +103,7 @@
           (autoload 'helm-ypv "helm-ypv")
           (autoload 'helm-ypv-bookmarks "helm-ypv")
           (autoload 'helm-ypv-channels "helm-ypv")
-          (setq helm-ypv-local-address "localhost:7144")
+          (set-option helm-ypv-local-address "localhost:7144")
 
           (with-eval-after-load 'helm-ypv
             (add-to-list 'helm-ypv-yp-urls '(dan1 "dandan626.web.fc2.com"))
@@ -126,33 +129,24 @@
 
      ;; ディレクトリ指定
      ;; ~/.emacs.d/ddskk/init is setting file
-     (setq skk-user-directory "~/.emacs.d/ddskk/")
+     (set-option skk-user-directory "~/.emacs.d/ddskk/")
      (req 'skk-autoloads
           ;; C-x C-j で skk モードを起動
           (define-key global-map (kbd "C-x C-j") 'skk-mode)
           ;; .skk を自動的にバイトコンパイル
-          (setq skk-byte-compile-init-file t))
+          (enable-option skk-byte-compile-init-file))
 
      (req 'helm-alku
-          (setq helm-alku-directory-list
-                '(("video" . "~/huone/videot")
-                  ("sarjakuva" . "~/huone/kuvat/sarjakuva")
-                  ("lataukset" . "~/huone/lataukset")
-                  ("4chan" . "~/huone/kuvat/sivusto/4ch")
-                  ("lehti"  . "~/huone/projektit/lehti")
-                  ("flatline"  . "~/huone/projektit/emacs-flatline")
-                  ("company-scheme" . "~/huone/projektit/company-scheme")
-                  ("conkerorrc" . "~/huone/projektit/conkerorrc")
-                  ("dotemacsd" . "~/huone/projektit/dotemacsd")
-                  ("dotfiles" . "~/huone/projektit/dotfiles")
-                  ("helm-ypv" . "~/huone/projektit/helm-ypv")
-                  ("helm-alku" . "~/huone/projektit/helm-alku")
-                  ("vendle" . "~/huone/projektit/emacs-vendle")
-                  ("shellar" . "~/huone/projektit/shellar")
-                  ("shellar_custom" . "~/huone/projektit/shellar_custom")
-                  ("paketti" . "~/.emacs.d/inits/paketit")))
-          (setq helm-alku-command-list
-                '("v2c" "conkeror" "firefox" "pcmanfm" "thunar"))
+          (set-option helm-alku-directory-list
+                      '(("video" . "~/huone/videot")
+                        ("sarjakuva" . "~/huone/kuvat/sarjakuva")
+                        ("lataukset" . "~/huone/lataukset")
+                        ("4chan" . "~/huone/kuvat/sivusto/4ch")
+                        ("futaba" . "~/huone/kuvat/sivusto/futaba")
+                        ("paketti" . "~/.emacs.d/inits/paketit")))
+          (helm-alku-directory-add-subdirectories "~/huone/projektit")
+          (set-option helm-alku-command-list
+                      '("v2c" "conkeror" "firefox" "pcmanfm" "thunar" "caja_no_desktop.sh"))
           (mytoh:define-global-key (kbd "c")  'helm-alku-command)
           (mytoh:define-global-key (kbd "h") 'helm-alku))
 
