@@ -53,6 +53,7 @@
                    ("png" . "kuva.sh")
                    ("gif" . "kuva.sh")
                    ("mov" . "mpv")
+                   ("webm" . "mpv")
                    ("swf" . "mpv")
                    ("flv" . "mpv")
                    ("avi" . "mpv")

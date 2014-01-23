@@ -28,24 +28,17 @@
 (require 'paketti-eshell-switch)
 
 
-;;; my eshell map
-(define-prefix-command 'my-eshell-map)
-(global-set-key (kbd "C-z") 'my-eshell-map)
-(cl-defmacro mytoh:define-eshell-key (key func)
-  "define personal eshell key mappings"
-  `(progn
-     (define-key my-eshell-map ,key ,func)
-     (message "bind %s to %s" ,key (symbol-name ,func))))
+(define-key global-map (kbd "C-z") (make-sparse-keymap))
 
-(mytoh:define-eshell-key (kbd "C-z") 'mytoh:eshell-switch)
-(mytoh:define-eshell-key (kbd "C-n") 'mytoh:eshell-next)
-(mytoh:define-eshell-key (kbd "C-c") 'mytoh:eshell-new)
+(define-key global-map (kbd "C-z C-z") 'mytoh:eshell-switch)
+
+(add-hook 'eshell-mode-hook
+          (lambda ()
+            (define-key eshell-mode-map (kbd "C-z C-n") 'mytoh:eshell-next)
+            (define-key eshell-mode-map (kbd "C-z C-c") 'mytoh:eshell-new)))
 
 
 (autoload 'helm-eshell-session "helm-eshell-session")
-(mytoh:define-eshell-key (kbd "h") 'helm-eshell-session)
-
-
-
+(define-key global-map (kbd "C-z h") 'helm-eshell-session)
 
 (provide 'paketti-eshell)

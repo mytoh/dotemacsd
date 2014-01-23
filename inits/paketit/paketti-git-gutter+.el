@@ -1,12 +1,12 @@
 
 (req 'git-gutter+
-     (setq git-gutter+-window-width 2)
-     (setq git-gutter+-modified-sign "☁")
-     (setq git-gutter+-added-sign "☀")
-     (setq git-gutter+-deleted-sign "☂")
-     (setq git-gutter+-disabled-modes
-           '(image-mode image-dired-image-display eshell-mode
-                        eww-mode))
-     (global-git-gutter+-mode t))
+     (set-option git-gutter+-window-width 2)
+     (set-option git-gutter+-modified-sign "☁")
+     (set-option git-gutter+-added-sign "☀")
+     (set-option git-gutter+-deleted-sign "☂")
+     (set-option git-gutter+-disabled-modes
+                 '(image-mode image-dired-image-display eshell-mode
+                              eww-mode))
+     (enable-mode global-git-gutter+-mode))
 
 (provide 'paketti-git-gutter+)

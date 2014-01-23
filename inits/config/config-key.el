@@ -31,6 +31,10 @@
 ;; window-resizer は C-q C-r (resize) で
 (global-set-key (kbd "C-q C-r") 'my-window-resizer)
 
+;;; font
+(global-set-key (kbd "C-+") 'text-scale-adjust)
+(global-set-key (kbd "C--") 'text-scale-adjust)
+
 ;; C-x o にはもううんざり
 (global-set-key (kbd "C-q l") 'windmove-right)
 (global-set-key (kbd "C-q h") 'windmove-left)
