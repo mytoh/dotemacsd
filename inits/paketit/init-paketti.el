@@ -229,6 +229,7 @@
     zen-and-art-theme
     twilight-anti-bright-theme
     steady-theme
+    pastels-on-dark-theme
     leuven-theme))
 (append-to-list *my-paketti-list* *my-paketti-list-colour-themes*)
 
