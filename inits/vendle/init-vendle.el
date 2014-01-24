@@ -90,6 +90,26 @@
 
      ;; flatline
      (req 'flatline
+          (defface my-flatline-left
+            '((t (:foreground "white"
+                              :background  "#123550"
+                              :box nil)))
+            "face for left")
+
+          (defface my-flatline-left-sub
+            '((t (:foreground  "white"
+                               :background  "#112230"
+                               :box nil)))
+            "face for left sub")
+
+          (setq flatline:mode-line
+                '(("%b" . my-flatline-left)
+                  (flatline:major-mode . my-flatline-left-sub)
+                  (flatline:minor-mode . my-flatline-left-sub)
+                  fill
+                  (flatline:column . flatline:face-column)
+                  (flatline:line . flatline:face-line)
+                  (flatline:buffer-directory . flatline:face-buffer-directory)))
           (flatline-mode 1))
 
      ;; fish-mode
