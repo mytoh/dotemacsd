@@ -42,7 +42,7 @@
           (add-hook 'scheme-mode-hook 'scheme-keywords-mode))
 
      ;; install packages
-     (vendle:install-packages)
+     (vendle:check)
 
      ;; keymap
      (mytoh:define-global-key (kbd "v u") 'vendle-update)
@@ -88,29 +88,7 @@
      ;;      (setq navi2ch-ack-when-exit -1)
      ;;      (setq navi2ch-message-user-name ""))
 
-     ;; flatline
-     (req 'flatline
-          (defface my-flatline-left
-            '((t (:foreground "white"
-                              :background  "#123550"
-                              :box nil)))
-            "face for left")
-
-          (defface my-flatline-left-sub
-            '((t (:foreground  "white"
-                               :background  "#112230"
-                               :box nil)))
-            "face for left sub")
-
-          (setq flatline:mode-line
-                '(("%b" . my-flatline-left)
-                  (flatline:major-mode . my-flatline-left-sub)
-                  (flatline:minor-mode . my-flatline-left-sub)
-                  fill
-                  (flatline:column . flatline:face-column)
-                  (flatline:line . flatline:face-line)
-                  (flatline:buffer-directory . flatline:face-buffer-directory)))
-          (flatline-mode 1))
+     (require 'init-flatline)
 
      ;; fish-mode
      (req 'fish-mode)

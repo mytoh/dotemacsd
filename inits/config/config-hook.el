@@ -24,6 +24,15 @@
                         :timeout -1))
 ;; (add-hook 'after-revert-hook 'my-after-revert-hook)
 
+;; make read only when file under certain directory
+;; (add-hook 'find-file-hook
+;;           (lambda ()
+;;             (if (and buffer-file-name
+;;                                 (string-match (regexp-opt `(,(expand-file-name (cl-concatenate 'string user-emacs-directory "elpa"))))
+;;                                               buffer-file-name)
+;;                                 )
+;;                 (read-only-mode 1))))
+
 ;; CamelCase awere editing
 ;; enable just in ruby-mode
 (add-hook 'ruby-mode-hook 'subword-mode)

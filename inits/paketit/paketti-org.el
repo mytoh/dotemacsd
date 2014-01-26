@@ -14,14 +14,12 @@
 
 (add-hook 'org-mode-hook
           (lambda ()
-            (setq org-src-fontify-natively 1)
+            (enable-option org-src-fontify-natively)
+            (enable-option org-startup-indented)
             (org-babel-do-load-languages 'org-babel-load-languages
                                          '((emacs-lisp . t)
                                            (sh . t)
                                            (scheme . t)
                                            (lisp . t)))))
-
-
-
 
 (provide 'paketti-org)

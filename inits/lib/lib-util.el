@@ -1,7 +1,8 @@
 ;;; lib-util.el  -*- lexical-binding: t -*-
 
 (eval-when-compile
-  (require 'cl-lib))
+  (require 'cl-lib)
+  (require 'color))
 
 (cl-defmacro my-log (&rest messages)
   `(progn

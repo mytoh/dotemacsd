@@ -1,3 +1,4 @@
+
 ;;; paketti-eshell.el -*- coding: utf-8; lexical-binding: t -*-
 
 ;;; builtins
@@ -85,6 +86,7 @@
         git-gutter+
         git-gutter
         git-gutter-fringe
+        diff-hl
         nyan-mode
         minimap
         eshell-manual
@@ -150,7 +152,9 @@
         mykie
         flylisp
         helm-package
-        markdown-mode
+        soundcloud
+        emms-soundcloud
+        emacs-xkcd
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
@@ -162,6 +166,8 @@
     vala-mode
     conkeror-minor-mode
     csharp-mode
+    markdown-mode
+    vimrc-mode
     ))
 (append-to-list *my-paketti-list* *my-paketti-list-prog-modes* )
 
@@ -277,9 +283,8 @@
     (package-refresh-contents))
   (cl-dolist (p *my-paketti-list*)
     (unless (package-installed-p p)
-      (message "install %s" p)
-      (package-install p)
-      (message "installing %s"  p))))
+      (message "installing %s"  p)
+      (package-install p))))
 
 (my-paketti-update)
 
@@ -305,8 +310,9 @@
     paketti-popwin
     paketti-w3m
     paketti-eww
-    paketti-git-gutter+
+    ;; paketti-git-gutter+
     ;; paketti-git-gutter
+    paketti-diff-hl
     paketti-yasnippet
     paketti-flymake
     paketti-coffee-mode
@@ -341,6 +347,7 @@
     paketti-keyfreq
     paketti-twittering-mode
     paketti-markdown-mode
+    paketti-vimrc-mode
     ;; paketti-flylisp
     ;; paketti-indent-guide
     ;; paketti-tumblesocks

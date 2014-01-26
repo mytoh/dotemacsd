@@ -30,9 +30,9 @@
      (set-option helm-default-external-file-browser "pcmanfm")
      (set-option  helm-buffers-favorite-modes (append helm-buffers-favorite-modes
                                                       '(picture-mode artist-mode)))
+     (set-option helm-buffer-max-length 35)
      (enable-option enable-recursive-minibuffers)
      (enable-option helm-M-x-always-save-history)
-     (enable-option enable-recursive-minibuffers)
      (disable-option helm-quick-update)
      (disable-option helm-candidate-number-limit)
      (disable-option helm-move-to-line-cycle-in-source)
