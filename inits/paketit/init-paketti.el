@@ -174,6 +174,7 @@
 (defvar *my-paketti-list-colour-themes*
   '(;; themes
     gruvbox-theme
+    cherry-blossom-theme
     afternoon-theme ; require emacs-24;.1
     sublime-themes
     subatomic-enhanced-theme

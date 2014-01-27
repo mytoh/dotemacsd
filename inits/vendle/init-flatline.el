@@ -22,7 +22,8 @@
 
      (cl-defun my-flatline:vc-mode ()
        (if vc-mode
-           vc-mode
+           (cl-concatenate 'string
+                           "⎇" vc-mode)
          ""))
 
      (setq flatline:mode-line
@@ -30,12 +31,13 @@
              ("%b" . my-flatline-left-sub)
              (my-flatline:vc-mode . flatline:face-vc-mode)
              (flatline:minor-mode . my-flatline-left-sub-sub)
-             (fill . my-flatline-left-sub)
+             (fill . my-flatline-left-sub-sub)
              (flatline:column . flatline:face-column)
              (flatline:line . flatline:face-line)
              (flatline:buffer-directory . my-flatline-left)))
 
-     (flatline-mode 1))
+     (flatline-mode 1)
+     )
 
 (provide 'init-flatline)
 

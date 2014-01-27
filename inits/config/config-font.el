@@ -47,7 +47,7 @@
 
 (cl-defun set-symbol-font ()
   (if (font-exists-p "Symbola")
-      (set-fontset-font nil 'symbol (font-spec :name "Symbola"))))
+      (set-fontset-font nil 'symbol (font-spec :name "Symbola" :size 13))))
 
 (cl-defun set-cyrillic-font ()
   (if (font-exists-p "CosmicSansNeueMono")

@@ -16,8 +16,10 @@
      (define-key sp-keymap (kbd "C-M-b")       'sp-backward-sexp)
      (define-key sp-keymap (kbd "C-M-u")       'sp-backward-up-sexp)
      (define-key sp-keymap (kbd "C-M-d")       'sp-down-sexp)
-     (define-key sp-keymap (kbd "C-M-p")       'sp-backward-down-sexp)
-     (define-key sp-keymap (kbd "C-M-n")       'sp-up-sexp)
+     (define-key sp-keymap (kbd "C-M-p")        'sp-previous-sexp)
+     (define-key sp-keymap (kbd "C-M-a")        'sp-beginning-of-sexp)
+     (define-key sp-keymap (kbd "C-M-e") 'sp-end-of-sexp)
+     (define-key sp-keymap (kbd "C-M-n")       'sp-next-sexp)
      (define-key sp-keymap (kbd "M-s")         'sp-splice-sexp) ;; depth-changing commands
      (define-key sp-keymap (kbd "M-<up>")      'sp-splice-sexp-killing-backward)
      (define-key sp-keymap (kbd "M-<down>")    'sp-splice-sexp-killing-forward)
