@@ -1,6 +1,6 @@
 ;; emms
-(req 'emms-setup (emms-devel)
-     (emms-default-players)
+(req 'emms-setup
+     (emms-devel)
      ;; mode-line
      (emms-mode-line +1)
      (req 'emms-mode-line-icon)
@@ -15,6 +15,8 @@
      (enable-option emms-info-asynchronously)
      (enable-option emms-info-auto-update)
      (set-option emms-lastfm-server "http://turtle.libre.fm/")
+
+     ;; (emms-default-players)
      (req 'emms-player-simple
 
           ;; mikmod
@@ -31,7 +33,9 @@
           ;; sox
           (define-emms-simple-player sox
             '(file)
-            (emms-player-simple-regexp "flac" "mp3" "ogg")
+            (emms-player-simple-regexp
+             "flac" "mp3" "ogg" "wma" "oga" "m4a" "mka"
+             "wav")
             "play" "--volume" "0.2")
           (add-to-list 'emms-player-list 'emms-player-sox)
 
@@ -40,15 +44,15 @@
             (cl-concatenate 'string
                             "\\`\\(http\\|mms\\)://\\|"
                             (emms-player-simple-regexp
-                             "ogg" "mp3" "wav" "mpg" "mpeg" "wmv" "wma"
+                             "mpg" "mpeg" "wmv"
                              "mov" "avi" "divx" "ogm" "ogv" "asf" "mkv"
-                             "rm" "rmvb" "mp4" "flac" "vob" "m4a" "ape"))
+                             "rm" "rmvb" "mp4"  "vob" "ape"))
             "mplayer" "--slave" "--really-quiet")
           (add-to-list 'emms-player-list 'emms-player-mplayer2)
 
           (define-emms-simple-player mplayer2-playlist '(streamlist)
             "\\`http://\\|"
-            "mplayer" "--slave"  "--really-quiet" )
+            "mplayer" "--slave"  "--really-quiet" "--playlist")
           (add-to-list 'emms-player-list 'emms-player-mplayer2-playlist)
 
           ;; mpv
@@ -110,6 +114,7 @@ controls, run `mixer' in a shell."
      (mytoh:define-emms-key (kbd "n") 'emms-next)
      (mytoh:define-emms-key (kbd "b") 'emms-smart-browse)
      (mytoh:define-emms-key (kbd "a f") 'emms-add-file)
+     (mytoh:define-emms-key (kbd "a d") 'emms-add-directory-tree)
      (mytoh:define-emms-key (kbd "+") 'emms-volume-raise)
      (mytoh:define-emms-key (kbd "-") 'emms-volume-lower)
 
