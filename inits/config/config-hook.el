@@ -33,6 +33,12 @@
 ;;                                 )
 ;;                 (read-only-mode 1))))
 
+;;; customize file
+(add-hook 'after-init-hook
+          (lambda ()
+            (setq custom-file (locate-user-emacs-file "custom.el"))
+            (load (file-name-sans-extension custom-file) t t)))
+
 ;; CamelCase awere editing
 ;; enable just in ruby-mode
 (add-hook 'ruby-mode-hook 'subword-mode)
