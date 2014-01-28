@@ -2,7 +2,6 @@
 (cl-defun my-magit-highlights ()
   (set-face-attribute 'magit-diff-add nil :foreground "#40ff40" :background nil)
   (set-face-attribute 'magit-diff-del nil :foreground "#ff4040" :background nil)
-  (set-face-attribute 'magit-item-highlight   nil :foreground "#202020" :background nil)
   (set-face-attribute 'magit-diff-file-header nil :foreground "#4040ff" :background nil))
 
 (with-eval-after-load "magit"
@@ -19,7 +18,7 @@
 
 (mytoh:define-global-key (kbd "g") 'magit-status)
 
-(req 'magit
+(pak 'magit
      (my-magit-setup))
 
 

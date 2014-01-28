@@ -4,10 +4,10 @@
      ;; mode-line
      (emms-mode-line +1)
      (req 'emms-mode-line-icon)
-     (setq emms-show-format "NP: %s")
-     (setq emms-mode-line-icon-before-format "("
-           emms-mode-line-format "%s)"
-           emms-mode-line-icon-color "blue")
+     (set-option emms-show-format "NP: %s")
+     (set-option emms-mode-line-icon-before-format "(")
+(set-option     emms-mode-line-format "%s)")
+(set-option              emms-mode-line-icon-color "blue")
      ;; playing time
      (emms-playing-time +1)
      (set-option emms-source-file-default-directory "~/huone/musiikki")
@@ -126,6 +126,8 @@ controls, run `mixer' in a shell."
                             (name . "myfile.pls")))
  (emms-player-for '(*track* (type . url)
                             (name . "http://test")))
+ (emms-player-for '(*track* (type . file)
+                            (name . "test.flac")))
  )
 
 

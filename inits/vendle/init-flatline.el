@@ -3,7 +3,7 @@
 ;; flatline
 (req 'flatline
      (defface my-flatline-left
-       '((t (:foreground "gray14"
+       '((t (:foreground "gray10"
                          :background "SkyBlue3"
                          :box nil)))
        "face for left")
@@ -30,11 +30,13 @@
            '((flatline:major-mode . my-flatline-left)
              ("%b" . my-flatline-left-sub)
              (my-flatline:vc-mode . flatline:face-vc-mode)
-             (flatline:minor-mode . my-flatline-left-sub-sub)
+             (flatline:buffer-directory . my-flatline-left-sub-sub)
+
              (fill . my-flatline-left-sub-sub)
+
              (flatline:column . flatline:face-column)
              (flatline:line . flatline:face-line)
-             (flatline:buffer-directory . my-flatline-left)))
+             (flatline:minor-mode . my-flatline-left)))
 
      (flatline-mode 1)
      )
