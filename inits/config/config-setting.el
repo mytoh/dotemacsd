@@ -217,6 +217,4 @@
 (savehist-mode 1)
 (set-option history-length 99999999999)
 
-
-
 (provide 'config-setting)

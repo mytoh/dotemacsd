@@ -38,8 +38,7 @@
 
      (vendle:turn-on-font-lock)
 
-     (req 'scheme-keywords
-          (add-hook 'scheme-mode-hook 'scheme-keywords-mode))
+
 
      ;; install packages
      (vendle:check)
@@ -50,6 +49,8 @@
      ;; update plugins
      ;; (vendle:update-packages)
 
+     (pak 'scheme-keywords
+          (add-hook 'scheme-mode-hook 'scheme-keywords-mode))
 
      ;; (nyan-mode t)
 
@@ -88,7 +89,7 @@
      ;;      (setq navi2ch-ack-when-exit -1)
      ;;      (setq navi2ch-message-user-name ""))
 
-     (require 'init-flatline)
+     (req 'init-flatline)
 
      ;; fish-mode
      (req 'fish-mode)
@@ -101,9 +102,9 @@
           (autoload 'helm-ypv "helm-ypv")
           (autoload 'helm-ypv-bookmarks "helm-ypv")
           (autoload 'helm-ypv-channels "helm-ypv")
-          (set-option helm-ypv-local-address "localhost:7144")
 
           (with-eval-after-load 'helm-ypv
+            (set-option helm-ypv-local-address "localhost:7144")
             (add-to-list 'helm-ypv-yp-urls '(dan1 "dandan626.web.fc2.com"))
             (add-to-list 'helm-ypv-yp-urls '(dan2 "www27.atpages.jp/dandan626")))
 
@@ -134,19 +135,9 @@
           ;; .skk を自動的にバイトコンパイル
           (enable-option skk-byte-compile-init-file))
 
-     (req 'helm-alku
-          (set-option helm-alku-directory-list
-                      '(("video" . "~/huone/videot")
-                        ("sarjakuva" . "~/huone/kuvat/sarjakuva")
-                        ("lataukset" . "~/huone/lataukset")
-                        ("4chan" . "~/huone/kuvat/sivusto/4ch")
-                        ("futaba" . "~/huone/kuvat/sivusto/futaba")
-                        ("paketti" . "~/.emacs.d/inits/paketit")))
-          (helm-alku-directory-add-subdirectories "~/huone/projektit")
-          (set-option helm-alku-command-list
-                      '("v2c" "conkeror" "firefox" "pcmanfm" "thunar" "caja_no_desktop.sh"))
-          (mytoh:define-global-key (kbd "c")  'helm-alku-command)
-          (mytoh:define-global-key (kbd "h") 'helm-alku))
+     (req 'init-helm-alku)
+
+
 
      )
 
