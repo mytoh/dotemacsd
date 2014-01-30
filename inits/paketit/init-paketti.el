@@ -155,6 +155,8 @@
         soundcloud
         emms-soundcloud
         emacs-xkcd
+        elisp-slime-nav
+        highlight-tail
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
@@ -174,6 +176,7 @@
 (defvar *my-paketti-list-colour-themes*
   '(;; themes
     gruvbox-theme
+    twilight-bright-theme
     cherry-blossom-theme
     afternoon-theme ; require emacs-24;.1
     sublime-themes
@@ -349,6 +352,8 @@
     paketti-twittering-mode
     paketti-markdown-mode
     paketti-vimrc-mode
+    paketti-elisp-slime-nav
+    paketti-highlight-tail
     ;; paketti-flylisp
     ;; paketti-indent-guide
     ;; paketti-tumblesocks
