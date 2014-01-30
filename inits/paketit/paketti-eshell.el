@@ -18,10 +18,11 @@
 
 
 ;;; start eshell after startup
-(add-hook 'emacs-startup-hook (lambda ()
-                                (let ((default-directory (getenv "HOME")))
-                                  (command-execute 'eshell)
-                                  (bury-buffer))))
+(cl-defun my-eshell-startup-hook ()
+  (let ((default-directory (getenv "HOME")))
+    (command-execute 'eshell)
+    (bury-buffer)))
+(add-hook 'emacs-startup-hook 'my-eshell-startup-hook)
 
 ;; load prompt settings
 (require 'paketti-eshell-prompt)
@@ -32,10 +33,11 @@
 
 (define-key global-map (kbd "C-z C-z") 'mytoh:eshell-switch)
 
-(add-hook 'eshell-mode-hook
-          (lambda ()
-            (define-key eshell-mode-map (kbd "C-z C-n") 'mytoh:eshell-next)
-            (define-key eshell-mode-map (kbd "C-z C-c") 'mytoh:eshell-new)))
+(cl-defun my-eshell-mode-hook ()
+  (define-key eshell-mode-map (kbd "C-z C-n") 'mytoh:eshell-next)
+  (define-key eshell-mode-map (kbd "C-z C-p") 'mytoh:eshell-prev)
+  (define-key eshell-mode-map (kbd "C-z C-c") 'mytoh:eshell-new))
+(add-hook 'eshell-mode-hook 'my-eshell-mode-hook)
 
 
 (autoload 'helm-eshell-session "helm-eshell-session")
