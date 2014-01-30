@@ -353,7 +353,7 @@
     paketti-markdown-mode
     paketti-vimrc-mode
     paketti-elisp-slime-nav
-    paketti-highlight-tail
+    ;; paketti-highlight-tail
     ;; paketti-flylisp
     ;; paketti-indent-guide
     ;; paketti-tumblesocks

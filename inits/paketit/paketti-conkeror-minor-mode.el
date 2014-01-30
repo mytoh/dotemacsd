@@ -1,5 +1,5 @@
 
-(req 'conkeror-minor-mode
+(pak 'conkeror-minor-mode
      (cl-defun my-enable-conkeror-minor-mode ()
        (when (string-match "conkeror" (buffer-file-name))
          (conkeror-minor-mode 1)))

@@ -110,7 +110,8 @@
 
      (req 'bookmark-extensions)
 
-     (req 'lehtifile-mode
+     (pak 'lehtifile-mode
+          (autoload 'lehtifile-mode "lehtifile-mode")
           (add-to-list 'auto-mode-alist '("Lehtifile\\'" . lehtifile-mode)))
 
      ;; ディレクトリ指定
@@ -119,12 +120,14 @@
      (req 'skk-autoloads
           ;; C-x C-j で skk モードを起動
           (define-key global-map (kbd "C-x C-j") 'skk-mode)
+          ;; enable skk mode by pressing カタカナ/ひらがな key
+          (global-set-key [hiragana-katakana] 'skk-mode)
+          ;; set default input method to skk
+          (setq default-input-method "japanese-skk")
           ;; .skk を自動的にバイトコンパイル
           (enable-option skk-byte-compile-init-file))
 
      (req 'init-helm-alku)
-
-
 
      )
 
