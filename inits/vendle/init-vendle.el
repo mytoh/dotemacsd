@@ -16,13 +16,12 @@
      (vendle:register "kenoss/debug-print")
      (vendle:register "emacsmirror/eldoc-extension")
      (vendle:register "emacsmirror/mew")
-     (vendle:register "naota/navi2ch")
+     ;; (vendle:register "naota/navi2ch" '(:compile nil))
      (vendle:register "tj64/outxxtra")
      (vendle:register "ober/zone-matrix")
      (vendle:register "mytoh/fish-mode")
      (vendle:register "thierryvolpiatto/emacs-bmk-ext")
      (vendle:register "kawabata/aozora-view")
-
      (vendle:register-theme "sabof/hyperplane-theme")
      (vendle:register-theme "emacs-jp/replace-colorthemes")
 
@@ -38,10 +37,8 @@
 
      (vendle:turn-on-font-lock)
 
-
-
      ;; install packages
-     (vendle:check)
+     (vendle:check-packages)
 
      ;; keymap
      (mytoh:define-global-key (kbd "v u") 'vendle-update)
@@ -98,17 +95,7 @@
      ;; (req 'zone-settings)
 
 
-     (pak 'helm-ypv
-          (autoload 'helm-ypv "helm-ypv")
-          (autoload 'helm-ypv-bookmarks "helm-ypv")
-          (autoload 'helm-ypv-channels "helm-ypv")
-
-          (with-eval-after-load 'helm-ypv
-            (set-option helm-ypv-local-address "localhost:7144")
-            (add-to-list 'helm-ypv-yp-urls '(dan1 "dandan626.web.fc2.com"))
-            (add-to-list 'helm-ypv-yp-urls '(dan2 "www27.atpages.jp/dandan626")))
-
-          (mytoh:define-global-key (kbd "y") 'helm-ypv))
+     (req 'init-helm-ypv)
 
 
      (with-eval-after-load 'company

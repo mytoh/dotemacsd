@@ -65,7 +65,6 @@
                   (image-toggle-animation)))))
 ;; (set-option image-transform-resize 'fit-height)
 
-
 ;;;; highlight region
 (transient-mark-mode 1)
 
@@ -216,5 +215,9 @@
 (set-option savehist-additional-variables '(kill-ring mark-ring global-mark-ring search-ring regexp-search-ring extended-command-history))
 (savehist-mode 1)
 (set-option history-length 99999999999)
+
+;;;; completion
+(add-to-list 'completion-styles 'initials)
+;; (add-to-list 'completion-styles 'substring)
 
 (provide 'config-setting)

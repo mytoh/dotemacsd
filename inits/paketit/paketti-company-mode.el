@@ -28,9 +28,9 @@
      (set-face-attribute 'company-scrollbar-fg nil
                          :background (face-background 'company-tooltip))
 
-     (add-hook 'company-mode-hook
-               (lambda ()
-                 (setq company-lighter " 会社")))
+     (cl-defun my-company-mode-hook ()
+       (setq company-lighter " 会社"))
+     (add-hook 'company-mode-hook 'my-company-mode-hook)
 
      )
 

@@ -88,7 +88,7 @@
 
 ;; descbinds
 (req 'helm-descbinds
-     (helm-descbinds-install))
+     (helm-descbinds-mode))
 
 ;; ag
 (req 'helm-ag
