@@ -1,7 +1,7 @@
 ;;; paketti-vimrc-mode.el -*- lexical-binding: t -*-
 
 
-(req 'vimrc-mode
+(pak 'vimrc-mode
      (add-to-list 'auto-mode-alist '(".vim\\(rc\\)?$" . vimrc-mode)))
 
 (provide 'paketti-vimrc-mode)
