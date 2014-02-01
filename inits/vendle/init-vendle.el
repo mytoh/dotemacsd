@@ -30,6 +30,7 @@
      (vendle:register-local "~/huone/projektit/emacs-scheme-keywords")
      (vendle:register-local "~/huone/projektit/emacs-lehtifile-mode")
      (vendle:register-local "~/huone/projektit/helm-alku")
+     (vendle:register-local "~/huone/projektit/emacs-eshell-session")
      (when (file-executable-p "/usr/local/share/emacs/24.3/site-lisp/skk")
        (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk"))
      ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
