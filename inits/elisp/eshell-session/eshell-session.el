@@ -5,7 +5,8 @@
 ;;; http://irreal.org/blog/?p=1742
 (defvar eshell-session:buffer-list nil)
 
-;;;; util
+;;;; funcs
+
 (cl-defun eshell-session:default-buffer-name-p (name)
   (cl-equalp eshell-buffer-name name))
 
@@ -16,6 +17,57 @@
   (cl-find-if (lambda (buf)
                 (cl-equalp (buffer-name buf) bufname))
               (buffer-list)))
+
+(cl-defun eshell-session:buffer-name-next (name)
+  (cond
+   ((not name)
+    eshell-buffer-name)
+   ((eshell-session:default-buffer-name-p name)
+    "*eshell*<1>"    )
+   (t
+    (cl-letf* ((num-char (eshell-session:buffer-number name))
+               (next-num-char (number-to-string (+ 1 (string-to-int num-char)))))
+      (format "%s<%s>" eshell-buffer-name
+              next-num-char)))))
+
+(cl-defun eshell-session:buffer-name-prev (name)
+  (cond
+   ((not name)
+    eshell-buffer-name)
+   ((eshell-session:default-buffer-name-p name)
+    (eshell-session:buffer-last))
+   (t
+    (cl-letf ((num-char (eshell-session:buffer-number name)))
+      (if (cl-equalp num-char "1")
+          eshell-buffer-name
+        (cl-letf ((prev-num-char (number-to-string (- (string-to-int num-char) 1))))
+          (format "%s<%s>" eshell-buffer-name prev-num-char)))))))
+
+(cl-defun eshell-session:find-next (name)
+  (cond
+   ((cl-find (eshell-session:buffer-name-next name) eshell-session:buffer-list)
+    (eshell-session:buffer-name-next name))
+   (t
+    eshell-buffer-name)))
+
+(cl-defun eshell-session:buffer-number (name)
+  (cond ((eshell-session:default-buffer-name-p name)
+         0)
+        (t
+         (save-match-data
+           (string-match "[0-9]+" name)
+           (match-string  0 name)))))
+
+(cl-defun eshell-session:buffer-last ()
+  (cl-nth-value (- (length eshell-session:buffer-list) 1)
+                eshell-session:buffer-list))
+
+(cl-defun eshell-session:exit-hook ()
+  (cl-letf ((buf (buffer-name (current-buffer))))
+    (setq eshell-session:buffer-list
+          (cl-remove buf eshell-session:buffer-list :test 'equal))))
+(add-hook 'eshell-exit-hook
+          'eshell-session:exit-hook)
 
 ;;;; command
 (cl-defun eshell-session:switch ()
@@ -40,18 +92,6 @@
           (switch-to-buffer eshell-buffer-name)))
     (message "Not eshell buffer")))
 
-(cl-defun eshell-session:buffer-name-next (name)
-  (cond
-   ((not name)
-    eshell-buffer-name)
-   ((eshell-session:default-buffer-name-p name)
-    "*eshell*<1>"    )
-   (t
-    (cl-letf* ((num-char (eshell-session:buffer-number name))
-               (next-num-char (number-to-string (+ 1 (string-to-int num-char)))))
-      (format "%s<%s>" eshell-buffer-name
-              next-num-char)))))
-
 (cl-defun eshell-session:prev ()
   (interactive)
   (if (eshell-session:mode-p major-mode)
@@ -60,19 +100,6 @@
             (switch-to-buffer prev)
           (switch-to-buffer eshell-buffer-name)))
     (message "not eshell buffer")))
-
-(cl-defun eshell-session:buffer-name-prev (name)
-  (cond
-   ((not name)
-    eshell-buffer-name)
-   ((eshell-session:default-buffer-name-p name)
-    (eshell-session:buffer-last))
-   (t
-    (cl-letf ((num-char (eshell-session:buffer-number name)))
-      (if (cl-equalp num-char "1")
-          eshell-buffer-name
-        (cl-letf ((prev-num-char (number-to-string (- (string-to-int num-char) 1))))
-          (format "%s<%s>" eshell-buffer-name prev-num-char)))))))
 
 (cl-defun eshell-session:new ()
   (interactive)
@@ -88,36 +115,8 @@
                                  eshell-session:buffer-list (list next)))
            (eshell num)))))
 
-;;;; funcs
-(cl-defun eshell-session:find-next (name)
-  (cond
-   ((cl-find (eshell-session:buffer-name-next name) eshell-session:buffer-list)
-    (eshell-session:buffer-name-next name))
-   (t
-    eshell-buffer-name)))
 
-
-
-(cl-defun eshell-session:buffer-number (name)
-  (cond ((eshell-session:default-buffer-name-p name)
-         0)
-        (t
-         (save-match-data
-           (string-match "[0-9]+" name)
-           (match-string  0 name)))))
-
-(cl-defun eshell-session:buffer-last ()
-  (cl-nth-value (- (length eshell-session:buffer-list) 1)
-                eshell-session:buffer-list))
-
-(cl-defun eshell-session:exit-hook ()
-  (cl-letf ((buf (buffer-name (current-buffer))))
-    (setq eshell-session:buffer-list
-          (cl-remove buf eshell-session:buffer-list :test 'equal))))
-(add-hook 'eshell-exit-hook
-          'eshell-session:exit-hook)
-
-
+;;; provide
 (provide 'eshell-session)
 
 ;; Local Variables:
