@@ -3,6 +3,7 @@
 (eval-when-compile (require 'cl-lib))
 (require 'helm)
 (require 'helm-buffers)
+(require 'eshell-session)
 
 (defvar helm-source-eshell-session
   `((name . "eshell-session")
@@ -13,13 +14,7 @@
     ))
 
 (defun helm-eshell-session-create-candidates ()
-  (cl-letf* ((bufs (buffer-list))
-             (ebufs (cl-remove-if-not
-                     (lambda (b)
-                       (cl-equalp "eshell-mode"
-                                  (with-current-buffer b (symbol-name major-mode))))
-                     bufs)))
-    (mapcar 'buffer-name ebufs)))
+  eshell-session:session-list)
 
 (defun helm-eshell-session-action-open-buffer (candidate)
   (if current-prefix-arg
