@@ -23,8 +23,20 @@
      (cl-defun my-flatline:vc-mode ()
        (if vc-mode
            (cl-concatenate 'string
-                           "⎇" vc-mode)
+                           ""
+                           vc-mode)
          ""))
+
+     (cl-defun my-flatline:coding-system ()
+       (if (boundp 'buffer-file-coding-system)
+           (symbol-name buffer-file-coding-system)
+         ""))
+
+     (cl-defun my-flatline:position ()
+       (cl-letf ((line-num (number-to-string (line-number-at-pos (point-max)))))
+         (cl-concatenate 'string
+                         "%c" " : "
+                         "%l" "/" line-num)))
 
      (setq flatline:mode-line
            '((flatline:major-mode . my-flatline-left)
@@ -34,8 +46,10 @@
 
              (fill . my-flatline-left-sub-sub)
 
-             (flatline:column . flatline:face-column)
-             (flatline:line . flatline:face-line)
+             (flatline:eol-desc . my-flatline-left-sub-sub)
+             ("<" . my-flatline-left-sub-sub)
+             (my-flatline:coding-system . my-flatline-left-sub-sub)
+             (my-flatline:position . my-flatline-left-sub)
              (flatline:minor-mode . my-flatline-left)))
 
      (flatline-mode 1)
