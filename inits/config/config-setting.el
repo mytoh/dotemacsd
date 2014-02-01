@@ -6,6 +6,8 @@
 ;;disable startup message
 (enable-option inhibit-startup-screen)
 
+;; startup splash
+;; (set-option fancy-splash-image (expand-file-name "~/.emacs.d/splash/splash.xpm"))
 
 ;;;; parens
 (show-paren-mode 1)
@@ -217,7 +219,7 @@
 (set-option history-length 99999999999)
 
 ;;;; completion
-(add-to-list 'completion-styles 'initials)
+;; (add-to-list 'completion-styles 'initials)
 ;; (add-to-list 'completion-styles 'substring)
 
 (provide 'config-setting)

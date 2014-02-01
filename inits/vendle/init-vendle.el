@@ -16,7 +16,6 @@
      (vendle:register "kenoss/debug-print")
      (vendle:register "emacsmirror/eldoc-extension")
      (vendle:register "emacsmirror/mew")
-     ;; (vendle:register "naota/navi2ch" '(:compile nil))
      (vendle:register "tj64/outxxtra")
      (vendle:register "ober/zone-matrix")
      (vendle:register "mytoh/fish-mode")
@@ -80,12 +79,6 @@
      ;; eldoc-extension
      (req 'eldoc-extension)
 
-     ;; navi2ch
-     ;; (req 'navi2ch
-     ;;      (setq navi2ch-mona-enable 1)
-     ;;      (setq navi2ch-ack-when-exit -1)
-     ;;      (setq navi2ch-message-user-name ""))
-
      (req 'init-flatline)
 
      ;; fish-mode
@@ -96,7 +89,6 @@
 
 
      (req 'init-helm-ypv)
-
 
      (with-eval-after-load 'company
        (req 'company-scheme

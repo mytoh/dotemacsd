@@ -13,10 +13,13 @@
     ))
 
 (defun helm-eshell-session-create-candidates ()
-  (cl-letf* ((bufs (mapcar 'buffer-name (buffer-list)))
-             (ebufs (cl-remove-if-not (lambda (b) (string-match "*eshell*" b))
-                                      bufs)))
-    ebufs))
+  (cl-letf* ((bufs (buffer-list))
+             (ebufs (cl-remove-if-not
+                     (lambda (b)
+                       (cl-equalp "eshell-mode"
+                                  (with-current-buffer b (symbol-name major-mode))))
+                     bufs)))
+    (mapcar 'buffer-name ebufs)))
 
 (defun helm-eshell-session-action-open-buffer (candidate)
   (if current-prefix-arg

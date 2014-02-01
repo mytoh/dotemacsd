@@ -157,6 +157,9 @@
         emacs-xkcd
         elisp-slime-nav
         highlight-tail
+        navi2ch
+        elfeed
+        elfeed-web
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
@@ -353,7 +356,9 @@
     paketti-markdown-mode
     paketti-vimrc-mode
     paketti-elisp-slime-nav
-    ;; paketti-highlight-tail
+    paketti-highlight-tail
+    paketti-navi2ch
+    paketti-elfeed
     ;; paketti-flylisp
     ;; paketti-indent-guide
     ;; paketti-tumblesocks
