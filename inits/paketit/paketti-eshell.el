@@ -15,28 +15,31 @@
 ;;; prefer lisp function
 (enable-option eshell-prefer-lisp-functions)
 
-
-
 ;;; start eshell after startup
 (cl-defun my-eshell-startup-hook ()
   (let ((default-directory (getenv "HOME")))
     (command-execute 'eshell)
     (bury-buffer)))
-(add-hook 'emacs-startup-hook 'my-eshell-startup-hook)
+;; (add-hook 'emacs-startup-hook 'my-eshell-startup-hook)
 
 ;; load prompt settings
 (require 'paketti-eshell-prompt)
-(require 'paketti-eshell-switch)
+
+
+(autoload 'eshell-session:switch "eshell-session")
+(autoload 'eshell-session:next "eshell-session")
+(autoload 'eshell-session:prev "eshell-session")
+(autoload 'eshell-session:new "eshell-session")
 
 
 (define-key global-map (kbd "C-z") (make-sparse-keymap))
 
-(define-key global-map (kbd "C-z C-z") 'mytoh:eshell-switch)
+(define-key global-map (kbd "C-z C-z") 'eshell-session:switch)
 
 (cl-defun my-eshell-mode-hook ()
-  (define-key eshell-mode-map (kbd "C-z C-n") 'mytoh:eshell-next)
-  (define-key eshell-mode-map (kbd "C-z C-p") 'mytoh:eshell-prev)
-  (define-key eshell-mode-map (kbd "C-z C-c") 'mytoh:eshell-new))
+  (define-key eshell-mode-map (kbd "C-z C-n") 'eshell-session:next)
+  (define-key eshell-mode-map (kbd "C-z C-p") 'eshell-session:prev)
+  (define-key eshell-mode-map (kbd "C-z C-c") 'eshell-session:new))
 (add-hook 'eshell-mode-hook 'my-eshell-mode-hook)
 
 
