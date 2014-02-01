@@ -31,7 +31,6 @@
 (autoload 'eshell-session:prev "eshell-session")
 (autoload 'eshell-session:new "eshell-session")
 
-
 (define-key global-map (kbd "C-z") (make-sparse-keymap))
 
 (define-key global-map (kbd "C-z C-z") 'eshell-session:switch)

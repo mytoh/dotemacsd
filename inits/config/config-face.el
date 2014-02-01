@@ -19,7 +19,7 @@
 
 
 ;;;; cursor shape
-(add-to-list 'default-frame-alist '(cursor-type . hbar))
+(add-to-list 'default-frame-alist '(cursor-type . box))
 (set-cursor-color (mytoh:colour-hsl-to-hex 137 65 50))
 
 ;;;; terminal colors

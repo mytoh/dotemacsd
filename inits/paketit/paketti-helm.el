@@ -28,8 +28,9 @@
      (set-option helm-input-idle-delay    0.01)
      (set-option  helm-m-occur-idle-delay 0.01)
      (set-option helm-default-external-file-browser "pcmanfm")
-     (set-option  helm-buffers-favorite-modes (append helm-buffers-favorite-modes
-                                                      '(picture-mode artist-mode)))
+     (set-option  helm-buffers-favorite-modes
+                  (append helm-buffers-favorite-modes
+                          '(picture-mode artist-mode)))
      (set-option helm-buffer-max-length 35)
      (enable-option enable-recursive-minibuffers)
      (enable-option helm-M-x-always-save-history)
