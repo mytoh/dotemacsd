@@ -61,11 +61,15 @@
      (set-face-foreground ,face ,fore)
      (set-face-background ,face ,back)))
 
-(cl-defmacro set-option (option value)
-  `(progn
-     (my-log "set " ,(propertize (symbol-name option)
-                                 'face 'font-lock-variable-name-face))
-     (cl-psetq ,option ,value)))
+(cl-defmacro set-option (&rest body)
+  (when body
+    (cl-letf ((option (car body))
+              (value (cadr body)))
+      `(progn
+         (my-log "set " ,(propertize (symbol-name option)
+                                     'face 'font-lock-variable-name-face))
+         (cl-psetq ,option ,value)
+         (set-options ,@(cddr body))))))
 
 (cl-defmacro enable-option (option)
   `(progn
