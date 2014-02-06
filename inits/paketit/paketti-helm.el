@@ -34,15 +34,15 @@
                          '(picture-mode artist-mode))
                  helm-buffer-max-length 200)
 
-     (enable-option enable-recursive-minibuffers)
-     (enable-option helm-M-x-always-save-history)
+     (enable-option enable-recursive-minibuffers
+                    helm-M-x-always-save-history)
      (disable-option helm-quick-update)
      (disable-option helm-candidate-number-limit)
      (disable-option helm-move-to-line-cycle-in-source)
      ;;;; helm-files
-     (enable-option helm-ff-lynx-style-map)
-     (enable-option helm-ff-transformer-show-only-basename)
-     (enable-option helm-ff-search-library-in-sexp)
+     (enable-option helm-ff-lynx-style-map
+                    helm-ff-transformer-show-only-basename
+                    helm-ff-search-library-in-sexp)
      (disable-option helm-ff-newfile-prompt-p)
 
      ;;;; match plugin
