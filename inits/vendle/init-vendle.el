@@ -11,6 +11,7 @@
      (vendle:register "jonathanchu/emacs-powerline")
      (vendle:register "TeMPOraL/nyan-mode")
      (vendle:register "daimrod/highlight-sexp")
+     (vendle:register "m2ym/undohist-el")
      (vendle:register "m2ym/emux-el")
      (vendle:register "moriyamahiroshi/seijiseikana-el")
      (vendle:register "kenoss/debug-print")
@@ -31,7 +32,7 @@
      (vendle:register-local "~/huone/projektit/emacs-lehtifile-mode")
      (vendle:register-local "~/huone/projektit/helm-alku")
      (vendle:register-local "~/huone/projektit/emacs-eshell-session")
-     (when (file-executable-p "/usr/local/share/emacs/24.3/site-lisp/skk")
+     (when (file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
        (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk"))
      ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
@@ -78,7 +79,7 @@
      (req 'seijiseikana)
 
      ;; eldoc-extension
-     (req 'eldoc-extension)
+     ;; (req 'eldoc-extension)
 
      (req 'init-flatline)
 
@@ -121,6 +122,9 @@
           (enable-option skk-byte-compile-init-file))
 
      (req 'init-helm-alku)
+
+     (req 'undohist
+          (undohist-initialize))
 
      )
 

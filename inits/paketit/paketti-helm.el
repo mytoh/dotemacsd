@@ -24,14 +24,16 @@
      (define-key helm-read-file-map (kbd "C-h") 'delete-backward-char)
      (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 
-     (set-option helm-idle-delay          0.01)
-     (set-option helm-input-idle-delay    0.01)
-     (set-option  helm-m-occur-idle-delay 0.01)
-     (set-option helm-default-external-file-browser "pcmanfm")
-     (set-option  helm-buffers-favorite-modes
-                  (append helm-buffers-favorite-modes
-                          '(picture-mode artist-mode)))
-     (set-option helm-buffer-max-length 35)
+
+     (set-option helm-idle-delay          0.01
+                 helm-input-idle-delay    0.01
+                 helm-m-occur-idle-delay 0.01
+                 helm-default-external-file-browser "pcmanfm"
+                 helm-buffers-favorite-modes
+                 (append helm-buffers-favorite-modes
+                         '(picture-mode artist-mode))
+                 helm-buffer-max-length 200)
+
      (enable-option enable-recursive-minibuffers)
      (enable-option helm-M-x-always-save-history)
      (disable-option helm-quick-update)
@@ -70,8 +72,8 @@
      (set-face-attribute 'helm-source-header nil
                          :background "#324262")
 
-     (set-face-attribute 'helm-selection nil
-                         :background "#337755")
+     ;; (set-face-attribute 'helm-selection nil
+     ;;                     :background "#337755")
 
      )
 
@@ -85,7 +87,9 @@
 (req 'helm-misc)
 
 ;; migemo
-;; (req 'helm-migemo)
+(when (executable-find "cmigemo")
+  (pak 'migemo
+       (req 'helm-migemo)))
 
 ;; descbinds
 (req 'helm-descbinds

@@ -8,10 +8,18 @@
 
      (with-eval-after-load 'helm-ypv
        (set-option helm-ypv-local-address "localhost:7144")
-       (add-to-list 'helm-ypv-yp-urls '(dan1 "dandan626.web.fc2.com"))
-       (add-to-list 'helm-ypv-yp-urls '(dan2 "www27.atpages.jp/dandan626")))
+       (load-file "~/.emacs.d/helm-ypv/yp"))
 
-     (mytoh:define-global-key (kbd "y") 'helm-ypv))
+     (mytoh:define-global-key (kbd "y") 'helm-ypv)
+
+     (pak 'migemo
+          (with-eval-after-load "migemo"
+            (defadvice helm-ypv
+                (around ad-helm-M-x activate)
+              (let ((helm-use-migemo t))
+                ad-do-it))))
+
+     )
 
 (provide 'init-helm-ypv)
 

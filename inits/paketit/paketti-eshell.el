@@ -31,16 +31,17 @@
 (autoload 'eshell-session:prev "eshell-session")
 (autoload 'eshell-session:new "eshell-session")
 
-(define-key global-map (kbd "C-z") (make-sparse-keymap))
+(defvar my-eshell-session-map (make-keymap))
+(define-key global-map (kbd "C-z") my-eshell-session-map)
 
 (define-key global-map (kbd "C-z C-z") 'eshell-session:switch)
 
 (cl-defun my-eshell-mode-hook ()
+  (define-key eshell-mode-map (kbd "C-z") (make-sparse-keymap))
   (define-key eshell-mode-map (kbd "C-z C-n") 'eshell-session:next)
   (define-key eshell-mode-map (kbd "C-z C-p") 'eshell-session:prev)
   (define-key eshell-mode-map (kbd "C-z C-c") 'eshell-session:new))
 (add-hook 'eshell-mode-hook 'my-eshell-mode-hook)
-
 
 (autoload 'helm-eshell-session "helm-eshell-session")
 (define-key global-map (kbd "C-z h") 'helm-eshell-session)

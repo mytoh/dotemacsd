@@ -19,9 +19,8 @@
    (my-eshell-propertize "X / _ / X" 'my-eshell-char-face)
    " "))
 
-;; remove highlight
+;; remove highlight, must be set
 (setq eshell-highlight-prompt nil)
-
 
 (setq eshell-prompt-function 'my-eshell-prompt-function
       eshell-prompt-regexp

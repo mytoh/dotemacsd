@@ -27,6 +27,9 @@
 (setq eshell-scroll-to-bottom-on-output t)
 (setq eshell-scroll-show-maximum-output t)
 
+## glob
+(setq eshell-glob-case-insensitive t)
+
 ## history
 (setq eshell-history-size 10000)
 

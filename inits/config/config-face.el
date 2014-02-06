@@ -9,8 +9,7 @@
        ;; make the modeline high contrast
        (setq solarized-high-contrast-mode-line t)
        ;; (load-theme 'gruvbox t)
-       (load-theme 'underwater t)
-       )
+       (load-theme 'underwater t))
       (t
        (setq solarized-degrade t)
        (setq solarized-termcolors 256)
@@ -19,7 +18,7 @@
 
 
 ;;;; cursor shape
-(add-to-list 'default-frame-alist '(cursor-type . box))
+(add-to-list 'default-frame-alist '(cursor-type . hollow))
 (set-cursor-color (mytoh:colour-hsl-to-hex 137 65 50))
 
 ;;;; terminal colors

@@ -1,8 +1,10 @@
 ;;; paketti-diff-hl.el -*- lexical-binding: t -*-
 
 (pak 'diff-hl
-     (global-diff-hl-mode)
      (diff-hl-margin-mode)
+
+     (add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
+     (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
 
      (defun my-diff-hl-update ()
        (with-current-buffer (current-buffer) (diff-hl-update)))

@@ -40,7 +40,9 @@
                            (font-spec :name "Hiragino Mincho Pro")))
         ((font-exists-p "IPAGothic")
          (set-fontset-font nil 'japanese-jisx0208
-                           '("IPAGothic" . "unicode-bmp")))
+                           '("IPAGothic" . "unicode-bmp"))
+         (set-fontset-font  nil 'kana "IPAGothic")
+         (set-fontset-font nil 'han "IPAGothic"))
         ((font-exists-p "Sazanami Gothic")
          (set-fontset-font nil 'japanese-jisx0208
                            (font-spec :family "Sazanami Gothic")))))
@@ -83,7 +85,9 @@
     (set-fontset-font  "fontset-k10"
                        'katakana-jisx0201
                        r10)
-
+    (set-fontset-font  "fontset-k10"
+                       'kana
+                       r10)
     (set-fontset-font "fontset-k10"
                       'han
                       mplus-fxd)

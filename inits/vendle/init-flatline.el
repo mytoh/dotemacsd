@@ -2,30 +2,34 @@
 
 ;; flatline
 (req 'flatline
-     (defface my-flatline-left
+
+     (flatline:set-theme 'solarized-dark)
+
+     (defface flatline-theme-my-edge
        '((t (:foreground "gray10"
-                         :background "SkyBlue3"
+                         :background "Darkorange3"
                          :box nil)))
        "face for left")
 
-     (defface my-flatline-left-sub
-       '((t (:foreground "gray70"
-                         :background  "#123550"
+     (defface flatline-theme-my-middle
+       '((t (:foreground "gray10"
+                         :background  "yellow4"
                          :box nil)))
        "face for sub")
 
-     (defface my-flatline-left-sub-sub
+     (defface flatline-theme-my-fill
        '((t (:foreground  "white"
                           :background  "#112230"
                           :box nil)))
        "face for left sub sub")
 
      (cl-defun my-flatline:vc-mode ()
-       (if vc-mode
-           (cl-concatenate 'string
-                           ""
-                           vc-mode)
-         ""))
+       (cl-letf ((symbol ""))
+         (if vc-mode
+             (cl-concatenate 'string
+                             symbol
+                             vc-mode)
+           "")))
 
      (cl-defun my-flatline:coding-system ()
        (if (boundp 'buffer-file-coding-system)
@@ -38,23 +42,62 @@
                          "%c" " : "
                          "%l" "/" line-num)))
 
-     (setq flatline:mode-line
-           '((flatline:major-mode . my-flatline-left)
-             ("%b" . my-flatline-left-sub)
-             (my-flatline:vc-mode . flatline:face-vc-mode)
-             (flatline:buffer-directory . my-flatline-left-sub-sub)
+     (cl-defun my-flatline:buffer-name ()
+       (cl-letf ((ro (propertize "🔒" 'face
+                                 `(:foreground "#afcf3f"
+                                               :background ,(face-background (flatline:theme-get-face 'left-sub))))))
+         (if buffer-read-only
+             (cl-concatenate 'string
+                             (propertize " " 'face (flatline:theme-get-face 'left-sub))
+                             ro
+                             (propertize " %b " 'face (flatline:theme-get-face 'left-sub)))
+           (propertize " %b " 'face (flatline:theme-get-face 'left-sub)))))
 
-             (fill . my-flatline-left-sub-sub)
+     (cl-defun my-flatline:major-mode ()
+       (propertize
+        (cl-concatenate 'string
+                        " "
+                        mode-name
+                        (if mode-line-process mode-line-process)
+                        "%n"
+                        " ")
+        'face
+        (cl-case major-mode
+          (emacs-lisp-mode
+           (flatline:theme-get-face 'right))
+          (eshell-mode
+           (flatline:theme-get-face 'left))
+          (t (flatline:theme-get-face 'letf)))))
 
-             (flatline:eol-desc . my-flatline-left-sub-sub)
-             ("<" . my-flatline-left-sub-sub)
-             (my-flatline:coding-system . my-flatline-left-sub-sub)
-             (my-flatline:position . my-flatline-left-sub)
-             (flatline:minor-mode . my-flatline-left)))
+     (flatline:update
+      `(my-flatline:major-mode
+        my-flatline:buffer-name
+        (my-flatline:vc-mode . flatline:face-vc-mode)
+        (flatline:buffer-directory . middle)
+
+        (fill . middle)
+
+        (flatline:eol-desc . middle)
+        ("<" . middle)
+        (my-flatline:coding-system . middle)
+        (my-flatline:position . right-sub)
+        (flatline:minor-mode . right)))
 
      (flatline-mode 1)
      )
 
+(mytoh:comment
+ (format-mode-line (flatline:make-component-symbol 'my-flatline:buffer-name))
+ (format-mode-line (my-flatline:buffer-name))
+ (format-mode-line (flatline:make-component-list '("test" . flatline-theme-my-edge)))
+ (setq flatline:mode-line `(("test" . ,(flatline:theme-get-face 'edge))))
+ (fboundp 'my-flatline:buffer-name)
+ (format-mode-line (flatline:make-component-symbol 'my-flatline:major-mode))
+ (cl-defun test-mode-line ()
+   (propertize "test" 'face (flatline:theme-get-face 'left-sub)))
+ (flatline:update `(test-mode-line))
+ (my-flatline:major-mode)
+ )
 (provide 'init-flatline)
 
 ;; Local Variables:

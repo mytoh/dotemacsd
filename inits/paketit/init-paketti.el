@@ -1,4 +1,3 @@
-
 ;;; paketti-eshell.el -*- coding: utf-8; lexical-binding: t -*-
 
 ;;; builtins
@@ -151,15 +150,19 @@
         keyfreq
         mykie
         flylisp
-        helm-package
         soundcloud
         emms-soundcloud
-        emacs-xkcd
+        ;; emacs-xkcd
         elisp-slime-nav
         highlight-tail
         navi2ch
         elfeed
         elfeed-web
+        git-commit-mode
+        gitconfig-mode
+        gitignore-mode
+        lingr
+        smartrep
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
@@ -178,6 +181,7 @@
 
 (defvar *my-paketti-list-colour-themes*
   '(;; themes
+    organic-green-theme
     gruvbox-theme
     twilight-bright-theme
     cherry-blossom-theme
@@ -356,9 +360,11 @@
     paketti-markdown-mode
     paketti-vimrc-mode
     paketti-elisp-slime-nav
-    paketti-highlight-tail
+    ;; paketti-highlight-tail
     paketti-navi2ch
     paketti-elfeed
+    paketti-smartrep
+    paketti-migemo
     ;; paketti-flylisp
     ;; paketti-indent-guide
     ;; paketti-tumblesocks
@@ -391,7 +397,6 @@
     ;; paketti-cursor-chg
     ;; paketti-git-gutter-fringe
     ;; paketti-flycheck
-    ;; paketti-migemo
     ))
 
 
@@ -407,7 +412,7 @@
     paketti-helm-dictionary
     paketti-helm-recoll
     paketti-wgrep-helm
-    paketti-helm-package
+
     ))
 (append-to-list init-paketit *my-paketit-list-helm*)
 
