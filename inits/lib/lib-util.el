@@ -69,19 +69,25 @@
          (my-log "set " ,(propertize (symbol-name option)
                                      'face 'font-lock-variable-name-face))
          (cl-psetq ,option ,value)
-         (set-options ,@(cddr body))))))
+         (set-option ,@(cddr body))))))
 
-(cl-defmacro enable-option (option)
-  `(progn
-     (my-log "enable " ,(propertize (symbol-name option)
-                                    'face 'font-lock-variable-name-face))
-     (cl-psetq ,option t)))
+(cl-defmacro enable-option (&rest body)
+  (when body
+    (cl-letf ((option (car body)))
+      `(progn
+         (my-log "enable " ,(propertize (symbol-name option)
+                                        'face 'font-lock-variable-name-face))
+         (cl-psetq ,option t)
+         (enable-option ,@(cdr body))))))
 
-(cl-defmacro disable-option (option)
-  `(progn
-     (my-log "disable " ,(propertize (symbol-name option)
-                                     'face 'font-lock-variable-name-face))
-     (cl-psetq ,option nil)))
+(cl-defmacro disable-option (&rest body)
+  (when body
+    (cl-letf ((option (car body)))
+      `(progn
+         (my-log "disable " ,(propertize (symbol-name option)
+                                         'face 'font-lock-variable-name-face))
+         (cl-psetq ,option nil)
+         (disable-option ,@(cdr body))))))
 
 (cl-defmacro enable-mode (mode-fn)
   `(progn
