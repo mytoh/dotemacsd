@@ -24,6 +24,7 @@
      (vendle:register "kawabata/aozora-view")
      (vendle:register-theme "sabof/hyperplane-theme")
      (vendle:register-theme "emacs-jp/replace-colorthemes")
+     (vendle:register-theme "owainlewis/emacs-color-themes" '(:path "themes"))
 
      (vendle:register-local "~/huone/projektit/emacs-flatline")
      (vendle:register-local "~/huone/projektit/helm-ypv")
@@ -31,7 +32,7 @@
      (vendle:register-local "~/huone/projektit/emacs-scheme-keywords")
      (vendle:register-local "~/huone/projektit/emacs-lehtifile-mode")
      (vendle:register-local "~/huone/projektit/helm-alku")
-     (vendle:register-local "~/huone/projektit/emacs-navi2ch-etc-mode")
+     (vendle:register-local "~/huone/projektit/emacs-navi2ch-file-mode")
      (vendle:register-local "~/huone/projektit/emacs-eshell-session")
      (when (file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
        (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk"))
@@ -127,7 +128,10 @@
      (req 'undohist
           (undohist-initialize))
 
-     (req 'navi2ch-etc-mode)
+     (req 'navi2ch-file-etc-mode)
+     (req 'navi2ch-file-board-mode)
+     (req 'navi2ch-file-dat-mode)
+     (req 'navi2ch-file-subject-mode)
      )
 
 
