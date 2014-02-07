@@ -39,12 +39,11 @@
   `(add-hook ,name (lambda () ,@body)))
 
 ;; (lazyload (triger-function ...) "filename" &rest body)
-(cl-defmacro lazyload (func lib &rest body)
-  `(when (locate-library ,lib)
-     ,@(cl-mapcar (lambda (f) `(autoload ',f ,lib nil t)) func)
-     (eval-after-load ,lib
-       '(progn
-          ,@body)) t))
+;; http://e-arrows.sakura.ne.jp/2010/03/macros-in-emacs-el.html
+(cl-defmacro lazyload (_funcs _lib)
+  `(progn
+     ,@(cl-mapcar (lambda (f) `(autoload ',f ,_lib nil t))
+                  _funcs)))
 
 ;; (append-to-list exec-path
 ;;                 '("/usr/bin" "/bin"

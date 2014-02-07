@@ -1,4 +1,4 @@
 
-(req 'charmap)
+(pak 'charmap)
 
 (provide 'paketti-charmap)

@@ -4,10 +4,10 @@
      ;; mode-line
      (emms-mode-line +1)
      (req 'emms-mode-line-icon)
-     (set-option emms-show-format "NP: %s")
-     (set-option emms-mode-line-icon-before-format "(")
-(set-option     emms-mode-line-format "%s)")
-(set-option              emms-mode-line-icon-color "blue")
+     (set-option emms-show-format "NP: %s"
+                 emms-mode-line-icon-before-format "("
+                 emms-mode-line-format "%s)"
+                 emms-mode-line-icon-color "blue")
      ;; playing time
      (emms-playing-time +1)
      (set-option emms-source-file-default-directory "~/huone/musiikki")

@@ -18,7 +18,6 @@
                 (around ad-helm-M-x activate)
               (let ((helm-use-migemo t))
                 ad-do-it))))
-
      )
 
 (provide 'init-helm-ypv)

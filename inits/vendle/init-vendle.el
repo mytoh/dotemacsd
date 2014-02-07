@@ -31,6 +31,7 @@
      (vendle:register-local "~/huone/projektit/emacs-scheme-keywords")
      (vendle:register-local "~/huone/projektit/emacs-lehtifile-mode")
      (vendle:register-local "~/huone/projektit/helm-alku")
+     (vendle:register-local "~/huone/projektit/emacs-navi2ch-etc-mode")
      (vendle:register-local "~/huone/projektit/emacs-eshell-session")
      (when (file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
        (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk"))
@@ -126,6 +127,7 @@
      (req 'undohist
           (undohist-initialize))
 
+     (req 'navi2ch-etc-mode)
      )
 
 

@@ -83,7 +83,7 @@
         (my-flatline:position . right-sub)
         (flatline:minor-mode . right)))
 
-     (flatline-mode 1)
+     (enable-mode flatline-mode)
      )
 
 (mytoh:comment

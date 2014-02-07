@@ -11,13 +11,11 @@
 
 ;;;; parens
 (show-paren-mode 1)
-(set-option show-paren-delay 0)
-(set-option show-paren-style 'expression)
+(set-option show-paren-delay 0
+            show-paren-style 'expression)
 (set-face-attribute 'show-paren-match-face nil
                     :background "#252529"
                     :underline nil)
-
-
 
 ;;;; syntax highlight
 (global-font-lock-mode 1)
@@ -30,8 +28,8 @@
 ;;;; encodings
 (set-language-environment  'utf-8)
 (prefer-coding-system 'utf-8)
-(set-option coding-system-for-read 'utf-8)
-(set-option coding-system-for-write 'utf-8)
+(set-option coding-system-for-read 'utf-8
+            coding-system-for-write 'utf-8)
 
 ;;;; start server
 (req 'server
@@ -48,11 +46,11 @@
 (set-option mouse-avoidance-mode 'banish)
 
 ;;;; show info on mode-line
-(enable-option display-time-24hr-format)
-(enable-option display-time-day-and-date)
+(enable-option display-time-24hr-format
+               display-time-day-and-date)
 (display-time)
-(line-number-mode 1)
-(column-number-mode 1)
+(enable-mode line-number-mode)
+(enable-mode column-number-mode)
 
 ;;;; change yes-no to y-n
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -101,9 +99,9 @@
 ;;       scroll-preserve-screen-position 1)
 
 ;;;; disable bars
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(if (fboundp 'menu-bar-mode) (disable-mode menu-bar-mode))
+(if (fboundp 'tool-bar-mode) (disable-mode tool-bar-mode))
+(if (fboundp 'scroll-bar-mode) (disable-mode scroll-bar-mode))
 
 ;;;; delete whole line with C-k once
 (enable-option kill-whole-line)
@@ -113,14 +111,14 @@
 (disable-option cua-enable-cua-keys)
 
 ;;;; ignore case
-(enable-option completion-ignore-case)
-(enable-option read-file-name-completion-ignore-case)
+(enable-option completion-ignore-case
+               read-file-name-completion-ignore-case)
 
 ;;;; alaways show completions
 ;; (icomplete-mode 1)
 
 ;;;; show function name
-(which-function-mode 1)
+(enable-mode which-function-mode)
 (set-face-attribute 'which-func nil :foreground "#4f7b8a")
 
 ;;;; disable bell
@@ -131,8 +129,8 @@
 (set-option byte-compile-warnings '(not cl-functions))
 
 ;;;; dont split verticaly
-(disable-option split-height-threshold)
-(disable-option split-width-threshold)
+(disable-option split-height-threshold
+                split-width-threshold)
 
 ;;;; backup and autosave
 (setq make-backup-files nil) ; stop creating those backup~ files
@@ -155,8 +153,8 @@
 (enable-option find-file-visit-truename)
 
 ;;;; undo
-(set-option undo-limit 100000)
-(set-option undo-string-limit 1300000)
+(set-option undo-limit 100000
+            undo-string-limit 1300000)
 
 ;;;; reload buffer
 (global-auto-revert-mode 1)

@@ -32,13 +32,13 @@
                  helm-buffers-favorite-modes
                  (append helm-buffers-favorite-modes
                          '(picture-mode artist-mode))
-                 helm-buffer-max-length 200)
+                 helm-buffer-max-length 50)
 
      (enable-option enable-recursive-minibuffers
                     helm-M-x-always-save-history)
-     (disable-option helm-quick-update)
-     (disable-option helm-candidate-number-limit)
-     (disable-option helm-move-to-line-cycle-in-source)
+     (disable-option helm-quick-update
+                     helm-candidate-number-limit
+                     helm-move-to-line-cycle-in-source)
      ;;;; helm-files
      (enable-option helm-ff-lynx-style-map
                     helm-ff-transformer-show-only-basename

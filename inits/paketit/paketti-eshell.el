@@ -31,7 +31,7 @@
 (autoload 'eshell-session:prev "eshell-session")
 (autoload 'eshell-session:new "eshell-session")
 
-(defvar my-eshell-session-map (make-keymap))
+(define-prefix-command 'my-eshell-session-map)
 (define-key global-map (kbd "C-z") my-eshell-session-map)
 
 (define-key global-map (kbd "C-z C-z") 'eshell-session:switch)
