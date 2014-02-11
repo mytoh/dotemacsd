@@ -3,7 +3,6 @@
 ;; flatline
 (req 'flatline
 
-     (flatline:set-theme 'solarized-dark)
 
      (defface flatline-theme-my-edge
        '((t (:foreground "gray10"
@@ -44,7 +43,7 @@
 
      (cl-defun my-flatline:buffer-name ()
        (cl-letf ((ro (propertize "🔒" 'face
-                                 `(:foreground "#afcf3f"
+                                 `(:foreground "#bfcf3f"
                                                :background ,(face-background (flatline:theme-get-face 'left-sub))))))
          (if buffer-read-only
              (cl-concatenate 'string
@@ -59,45 +58,34 @@
                         " "
                         mode-name
                         (if mode-line-process mode-line-process)
-                        "%n"
-                        " ")
+                        "%n" " ")
         'face
         (cl-case major-mode
           (emacs-lisp-mode
            (flatline:theme-get-face 'right))
           (eshell-mode
            (flatline:theme-get-face 'left))
-          (t (flatline:theme-get-face 'letf)))))
+          (t (flatline:theme-get-face 'left)))))
 
-     (flatline:update
-      `(my-flatline:major-mode
-        my-flatline:buffer-name
-        (my-flatline:vc-mode . flatline:face-vc-mode)
-        (flatline:buffer-directory . middle)
 
-        (fill . middle)
+     (flatline:set-theme 'solarized-dark)
 
-        (flatline:eol-desc . middle)
-        ("<" . middle)
-        (my-flatline:coding-system . middle)
-        (my-flatline:position . right-sub)
-        (flatline:minor-mode . right)))
+     (setq flatline:mode-line '())
+     (flatline:add 'my-flatline:major-mode)
+     (flatline:add 'my-flatline:buffer-name)
+     (flatline:add '(my-flatline:vc-mode . flatline:face-vc-mode))
+     (flatline:add '(flatline:buffer-directory . middle))
+     (flatline:add '(fill . middle))
+     (flatline:add '(flatline:eol-desc . middle))
+     (flatline:add '("<" . middle))
+     (flatline:add '(my-flatline:coding-system . middle))
+     (flatline:add '(my-flatline:position . right-sub))
+     (flatline:add '(flatline:minor-mode . right))
+     (flatline:update)
 
      (enable-mode flatline-mode)
      )
 
-(mytoh:comment
- (format-mode-line (flatline:make-component-symbol 'my-flatline:buffer-name))
- (format-mode-line (my-flatline:buffer-name))
- (format-mode-line (flatline:make-component-list '("test" . flatline-theme-my-edge)))
- (setq flatline:mode-line `(("test" . ,(flatline:theme-get-face 'edge))))
- (fboundp 'my-flatline:buffer-name)
- (format-mode-line (flatline:make-component-symbol 'my-flatline:major-mode))
- (cl-defun test-mode-line ()
-   (propertize "test" 'face (flatline:theme-get-face 'left-sub)))
- (flatline:update `(test-mode-line))
- (my-flatline:major-mode)
- )
 (provide 'init-flatline)
 
 ;; Local Variables:
