@@ -24,16 +24,18 @@
      (vendle:register "kawabata/aozora-view")
      (vendle:register-theme "sabof/hyperplane-theme")
      (vendle:register-theme "emacs-jp/replace-colorthemes")
+     (vendle:register-theme "djcb/dream-theme")
      (vendle:register-theme "owainlewis/emacs-color-themes" '(:path "themes"))
 
-     (vendle:register-local "~/huone/projektit/emacs-flatline")
-     (vendle:register-local "~/huone/projektit/helm-ypv")
-     (vendle:register-local "~/huone/projektit/company-scheme")
-     (vendle:register-local "~/huone/projektit/emacs-scheme-keywords")
-     (vendle:register-local "~/huone/projektit/emacs-lehtifile-mode")
-     (vendle:register-local "~/huone/projektit/helm-alku")
-     (vendle:register-local "~/huone/projektit/emacs-navi2ch-file-mode")
-     (vendle:register-local "~/huone/projektit/emacs-eshell-session")
+     (cl-flet ((my-project-root (path) (expand-file-name path "~/huone/projektit")))
+       (vendle:register-local (my-project-root  "emacs-flatline"))
+       (vendle:register-local (my-project-root "helm-ypv"))
+       (vendle:register-local (my-project-root "company-scheme"))
+       (vendle:register-local (my-project-root "emacs-scheme-keywords"))
+       (vendle:register-local (my-project-root "emacs-lehtifile-mode"))
+       (vendle:register-local (my-project-root "helm-alku"))
+       (vendle:register-local (my-project-root "emacs-navi2ch-file-mode"))
+       (vendle:register-local (my-project-root "emacs-eshell-session")))
      (when (file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
        (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk"))
      ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
@@ -50,6 +52,7 @@
      ;; (vendle:update-packages)
 
      (pak 'scheme-keywords
+          (autoload 'scheme-keywords-mode "scheme-keywords")
           (add-hook 'scheme-mode-hook 'scheme-keywords-mode))
 
      ;; (nyan-mode t)
@@ -128,10 +131,8 @@
      (req 'undohist
           (undohist-initialize))
 
-     (req 'navi2ch-file-etc-mode)
-     (req 'navi2ch-file-board-mode)
-     (req 'navi2ch-file-dat-mode)
-     (req 'navi2ch-file-subject-mode)
+     (req 'navi2ch-file-mode)
+     (setq navi2ch-file-open-with-shift-jis t)
      )
 
 

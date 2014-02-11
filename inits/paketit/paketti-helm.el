@@ -34,9 +34,9 @@
                          '(picture-mode artist-mode))
                  helm-buffer-max-length 50)
 
-     (enable-option enable-recursive-minibuffers
-                    helm-M-x-always-save-history)
-     (disable-option helm-quick-update
+     (enable-option helm-M-x-always-save-history)
+     (disable-option enable-recursive-minibuffers
+                     helm-quick-update
                      helm-candidate-number-limit
                      helm-move-to-line-cycle-in-source)
      ;;;; helm-files
@@ -109,6 +109,9 @@
 (pak 'helm-ls-git
      (mytoh:define-global-key (kbd "f") 'helm-browse-project))
 
+;; elisp-package
+(pak 'helm-elisp-package
+     (mytoh:define-global-key (kbd "P") 'helm-list-elisp-packages))
 
 
 (provide 'paketti-helm)

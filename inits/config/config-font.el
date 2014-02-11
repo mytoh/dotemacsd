@@ -13,19 +13,19 @@
         ((font-exists-p "Inconsolata")
          (set-fontset-font nil 'ascii (font-spec :name "Inconsolata")))
         ((font-exists-p "Droid Sans Mono")
-         (set-face-attribute 'default nil :height 80 :font "Droid Sans Mono"))
+         (set-face-attribute 'ascii nil :height 80 :font "Droid Sans Mono"))
         ((font-exists-p "Source Code Pro")
-         (set-face-attribute 'default nil :height 90 :font "Source Code Pro"))
+         (set-face-attribute 'ascii nil :height 90 :font "Source Code Pro"))
         ((font-exists-p "Ricty")
-         (set-face-attribute 'default nil :height 90 :font "Ricty"))
+         (set-face-attribute 'ascii nil :height 90 :font "Ricty"))
         ((font-exists-p "DejaVu Sans Mono")
-         (set-face-attribute 'default nil :height 80 :font "DejaVu Sans Mono"))
+         (set-face-attribute 'ascii nil :height 80 :font "DejaVu Sans Mono"))
         ((font-exists-p "ProFont")
-         (set-face-attribute 'default nil :height 80 :font "ProFont"))
+         (set-face-attribute 'ascii nil :height 80 :font "ProFont"))
         ((font-exists-p "Bitstream Vera Sans Mono")
-         (set-face-attribute 'default nil :height 80 :font "Bitstream Vera Sans Mono"))
+         (set-face-attribute 'ascii nil :height 80 :font "Bitstream Vera Sans Mono"))
         ((font-exists-p "Neep")
-         (set-face-attribute 'default nil :height 80 :font "Neep"))))
+         (set-face-attribute 'ascii nil :height 80 :font "Neep"))))
 
 
 
@@ -73,31 +73,20 @@
     (create-fontset-from-fontset-spec
      "-misc-fixed-medium-r-normal--10-*-*-*-*-*-fontset-k10")
 
-    (set-fontset-font "fontset-k10"
-                      'ascii
-                      a10)
-    (set-fontset-font "fontset-k10"
-                      'latin
-                      a10)
-    (set-fontset-font  "fontset-k10"
-                       'japanese-jisx0208
-                       k10)
-    (set-fontset-font  "fontset-k10"
-                       'katakana-jisx0201
-                       r10)
-    (set-fontset-font  "fontset-k10"
-                       'kana
-                       r10)
-    (set-fontset-font "fontset-k10"
-                      'han
-                      mplus-fxd)
+    (cl-flet ((set (script font) (set-fontset-font "fontset-k10" script font)))
+      (set 'ascii                         a10)
+      (set       'latin       a10)
+      (set       'japanese-jisx0208       k10)
+      (set       'katakana-jisx0201       r10)
+      (set       'kana       k10)
+      (set       'han       mplus-fxd))
 
     (set-default-font "fontset-k10")
     ))
 
-;; (set-bitmap-font)
 
-(set-ascii-font)
+;; (set-ascii-font)
+(set-bitmap-font)
 (set-symbol-font)
 (set-cyrillic-font)
 ;; (set-japanese-font)

@@ -21,3 +21,6 @@
 
 ;; 動的補完で候補を複数表示する
 (setq skk-dcomp-multiple-activate t)
+
+;; icon
+(setq skk-show-icon t)

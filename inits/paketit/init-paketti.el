@@ -181,6 +181,12 @@
 
 (defvar *my-paketti-list-colour-themes*
   '(;; themes
+    tommyh-theme
+    django-theme
+    github-theme
+    hemisu-theme
+    heroku-theme
+    sunny-day-theme
     organic-green-theme
     gruvbox-theme
     twilight-bright-theme
@@ -365,6 +371,7 @@
     paketti-elfeed
     paketti-smartrep
     paketti-migemo
+    paketti-ace-jump-mode
     ;; paketti-flylisp
     ;; paketti-indent-guide
     ;; paketti-tumblesocks
@@ -380,7 +387,6 @@
     ;; paketti-electric-case
     ;; paketti-visual-regexp
     ;; paketti-litable
-    ;; paketti-ace-jump-mode
     ;; paketti-mentor
     ;; paketti-fiplr
     ;; paketti-melpa-upstream-visit

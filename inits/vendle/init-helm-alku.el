@@ -13,10 +13,17 @@
                      ("lataukset" . "~/huone/lataukset")
                      ("4chan" . "~/huone/kuvat/sivusto/4ch")
                      ("futaba" . "~/huone/kuvat/sivusto/futaba")
-                     ("paketti" . "~/.emacs.d/inits/paketit")))
+                     ("paketti" . "~/.emacs.d/inits/paketit")
+                     ("vendle" . "~/.emacs.d/vendle")
+                     ("elpa" . "~/.emacs.d/elpa")))
        (helm-alku-directory-add-subdirectories "~/huone/projektit")
        (set-option helm-alku-command-list
-                   '("v2c" "conkeror" "firefox" "pcmanfm" "thunar" "caja_no_desktop.sh")))
+                   '("v2c"
+                     "conkeror"
+                     "firefox"
+                     "pcmanfm"
+                     "thunar"
+                     "caja_no_desktop.sh"  )))
 
      (mytoh:define-global-key (kbd "c")  'helm-alku-command)
      (mytoh:define-global-key (kbd "h") 'helm-alku))

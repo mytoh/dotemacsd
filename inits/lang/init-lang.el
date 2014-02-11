@@ -5,7 +5,7 @@
 (defvar init-langs
   '(lang-lisp
     lang-elisp
-    ;; lang-scheme
+    lang-scheme
     lang-common-lisp
     kernel-mode
     lang-shell
