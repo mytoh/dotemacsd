@@ -133,6 +133,7 @@
 
      (req 'navi2ch-file-mode)
      (setq navi2ch-file-open-with-shift-jis t)
+     (modify-coding-system-alist 'file "\\.dat\\'" 'shift_jis)
      )
 
 

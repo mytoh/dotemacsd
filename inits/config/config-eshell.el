@@ -1,4 +1,4 @@
-;;; paketti-eshell.el -*- lexical-binding: t -*-
+;;; config-eshell.el -*- lexical-binding: t -*-
 ;; eshell
 
 (eval-when-compile
@@ -19,11 +19,12 @@
 (cl-defun my-eshell-startup-hook ()
   (let ((default-directory (getenv "HOME")))
     (command-execute 'eshell)
-    (bury-buffer)))
-;; (add-hook 'emacs-startup-hook 'my-eshell-startup-hook)
+    (bury-buffer)
+    (message "eshell started")))
+(add-hook 'emacs-startup-hook 'my-eshell-startup-hook)
 
 ;; load prompt settings
-(require 'paketti-eshell-prompt)
+(require 'config-eshell-prompt)
 
 
 (autoload 'eshell-session:switch "eshell-session")
@@ -46,4 +47,4 @@
 (autoload 'helm-eshell-session "helm-eshell-session")
 (define-key global-map (kbd "C-z h") 'helm-eshell-session)
 
-(provide 'paketti-eshell)
+(provide 'config-eshell)

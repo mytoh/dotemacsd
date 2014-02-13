@@ -1,4 +1,4 @@
-;;; paketti-eww.el -*- lexical-binding: t -*-
+;;; config-eww.el -*- lexical-binding: t -*-
 
 (pak 'eww
      (set-option browse-url-browser-function 'eww-browse-url)
@@ -11,4 +11,4 @@
 ;; (replace-string "\221" "`" nil (point-min) (point-max))  ; opening single quote
 ;; (replace-string "\222" "'" nil (point-min) (point-max))  ; closing single quote
 
-(provide 'paketti-eww)
+(provide 'config-eww)

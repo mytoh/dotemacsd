@@ -4,7 +4,7 @@
      (require 'helm-config)
      (enable-mode helm-mode)
      (enable-mode helm-adaptative-mode)
-     (disable-mode helm-match-plugin-mode)
+     (enable-mode helm-match-plugin-mode)
 
      (define-key global-map (kbd "C-c h") 'helm-mini)
      (define-key global-map (kbd "M-x") 'helm-M-x)

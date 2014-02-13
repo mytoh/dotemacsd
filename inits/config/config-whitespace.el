@@ -24,8 +24,10 @@
 (set-face-background 'whitespace-space-after-tab
                      "#444033")
 
+(set-face-background 'whitespace-line
+                     "PaleVioletRed3")
 
 ;; デフォルトで視覚化を有効にする。
 (global-whitespace-mode 1)
 
-(provide 'paketti-whitespace)
+(provide 'config-whitespace)

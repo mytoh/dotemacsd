@@ -1,4 +1,4 @@
-;;; paketti-autoinsert.el -*- lexical-binding: t -*-
+;;; config-autoinsert.el -*- lexical-binding: t -*-
 
 ;;;; [[http://d.hatena.ne.jp/higepon/20080731/1217491155]]
 (require 'autoinsert)
@@ -30,4 +30,4 @@
   (message "done."))
 (add-hook 'find-file-not-found-hooks #'auto-insert)
 
-(provide 'paketti-autoinsert)
+(provide 'config-autoinsert)

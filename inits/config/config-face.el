@@ -9,7 +9,7 @@
        ;; make the modeline high contrast
        (setq solarized-high-contrast-mode-line t)
        ;; (load-theme 'gruvbox t)
-       (load-theme 'brin t))
+       (load-theme 'gruvbox t))
       (t
        (setq solarized-degrade t)
        (setq solarized-termcolors 256)

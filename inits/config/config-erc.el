@@ -1,4 +1,4 @@
-
+;;; config-erc.el -*- lexical-binding: t -*-
 
 (pak 'erc
      ;;(erc-autojoin-mode 1)
@@ -7,8 +7,10 @@
      (with-eval-after-load "erc"
        (setq erc-autojoin-channels-alist
              '(("freenode.net"
-                "#emacs" "#scheme" "#freebsd-src" "#erc"
-                "#lisp" "#github" "#vim" "#git" "#zsh" "#tmux" "#xmonad" )))
+                "#emacs"
+                ;; "#scheme" "#freebsd-src" "#erc"
+                ;;"#lisp" "#github" "#vim" "#git" "#zsh" "#tmux" "#xmonad"
+                )))
 
        ;; don't notify some information
        (setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE"
@@ -27,4 +29,4 @@
 
      )
 
-(provide 'paketti-erc)
+(provide 'config-erc)

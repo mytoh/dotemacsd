@@ -7,6 +7,13 @@
     config-face
     config-clipboard
     config-font
+    config-erc
+    config-eshell
+    config-whitespace
+    config-autoinsert
+    config-dired
+    config-eww
+    config-newsticker
     ))
 
 (mapc 'require init-configs)

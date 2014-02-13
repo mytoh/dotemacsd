@@ -26,4 +26,4 @@
       eshell-prompt-regexp
       (concat "^\\([^\n]+\n\\|X / _ / X \\)"))
 
-(provide 'paketti-eshell-prompt)
+(provide 'config-eshell-prompt)

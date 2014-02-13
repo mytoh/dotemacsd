@@ -26,8 +26,6 @@
      (require 'ls-lisp)
      (setq ls-lisp-dirs-first t)
 
-
-
      ;; RET 標準の dired-find-file では dired バッファが複数作られるので
      ;; dired-find-alternate-file を代わりに使う
      (define-key dired-mode-map (kbd "C-m") 'dired-open-in-accordance-with-situation)
@@ -66,4 +64,4 @@
           "kuva.sh")))
 
 
-(provide 'paketti-dired)
+(provide 'config-dired)

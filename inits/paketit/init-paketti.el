@@ -1,4 +1,4 @@
-;;; paketti-eshell.el -*- coding: utf-8; lexical-binding: t -*-
+;;; init-paketti.el -*- coding: utf-8; lexical-binding: t -*-
 
 ;;; builtins
 
@@ -22,13 +22,6 @@
 ;; outlining everywhere
 (require 'allout)
 (allout-init t)
-
-(require 'paketti-newsticker)
-(require 'paketti-eshell)
-(require 'paketti-eldoc)
-(require 'paketti-whitespace)
-(require 'paketti-autoinsert)
-;; (require 'paketti-erc)
 
 ;;; package repositories
 
@@ -97,7 +90,7 @@
         guide-key
         google-translate
         circe
-        ;; tumblesocks
+        tumblesocks
         undo-tree
         direx
         ;; pallet
@@ -111,7 +104,6 @@
         sudo-ext
         shell-pop
         sunrise-commander
-
         pretty-mode
         pretty-mode-plus
         clippy
@@ -293,8 +285,6 @@
     ))
 (append-to-list *my-paketti-list* *my-paketti-list-org*)
 
-
-
 (cl-defun my-paketti-update ()
   (unless package-archive-contents
     (package-refresh-contents))
@@ -305,14 +295,11 @@
 
 (my-paketti-update)
 
-
-
 (defvar init-paketit
   '(
     paketti-rainbow-mode     ; this may cause problem
     paketti-google-translate
     paketti-guide-key
-    paketti-dired
     paketti-image-dired+
     paketti-image+
     paketti-expand-region
@@ -326,7 +313,6 @@
     paketti-info+
     paketti-popwin
     paketti-w3m
-    paketti-eww
     ;; paketti-git-gutter+
     ;; paketti-git-gutter
     paketti-diff-hl
