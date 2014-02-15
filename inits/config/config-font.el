@@ -4,7 +4,7 @@
   "Check to see if the named FONT is available"
   (find-font (font-spec :name font)))
 
-(set-face-attribute 'default nil :height 80)
+;; (set-face-attribute 'default nil :height 80)
 
 (cl-defun set-ascii-font ()
   (cond ((eq window-system nil) nil)
@@ -12,6 +12,8 @@
          (set-fontset-font nil 'ascii (font-spec :name "CosmicSansNeueMono")))
         ((font-exists-p "Inconsolata")
          (set-fontset-font nil 'ascii (font-spec :name "Inconsolata")))
+        ((font-exists-p "Fantasque Sans Mono")
+         (set-fontset-font nil 'ascii (font-spec :name  "Fantasque Sans Mono")))
         ((font-exists-p "Droid Sans Mono")
          (set-face-attribute 'ascii nil :height 80 :font "Droid Sans Mono"))
         ((font-exists-p "Source Code Pro")
@@ -29,10 +31,10 @@
 
 
 
-;;; いろはにほへと　ちりぬるを
-;;; わかよたれそ　　つねならむ
-;;; うゐのおくやま　けふこえて
-;;; あさきゆめみし　ゑひもせす
+;; いろはにほへと　ちりぬるを
+;; わかよたれそ　　つねならむ
+;; うゐのおくやま　けふこえて
+;; あさきゆめみし　ゑひもせす
 (cl-defun set-japanese-font ()
   (cond ((eq window-system nil) nil)
         ((font-exists-p "Hiragino Mincho Pro")
@@ -56,17 +58,20 @@
       (set-fontset-font nil 'cyrillic (font-spec :name "CosmicSansNeueMono"))))
 
 
-(cl-defun set-k10-font ()
+(cl-defun set-naga10-font ()
   (cl-letf ((k10  "-misc-fixed-medium-r-normal--10-*-75-75-c-100-jisx0208.1983-0")
             (a10 "-misc-fixed-medium-r-normal--10-*-75-75-c-50-iso8859-1")
             (r10 "-misc-fixed-medium-r-normal--10-*-75-75-c-50-jisx0201.1976-0")
             (misc-iso "-misc-fixed-medium-r-normal--10-*-75-75-c-60-iso10646-1")
             (mplus-fxd "-mplus-fxd-normal-normal-normal-*-10-*-*-*-c-60-iso10646-1")
-            (symbola "-unknown-Symbola-normal-normal-semicondensed-*-*-*-*-*-*-0-iso10646-1"))
-    (create-fontset-from-fontset-spec
-     "-misc-fixed-medium-r-normal--10-*-*-*-*-*-fontset-k10")
+            (symbola "-unknown-Symbola-normal-normal-semicondensed-*-*-*-*-*-*-0-iso10646-1")
+            (fontset "fontset-naga10"))
+    (create-fontset-from-ascii-font
+     "-misc-fixed-medium-r-normal--10-*-*-*-*-*"
+     nil
+     "naga10")
 
-    (cl-flet ((set (script font) (set-fontset-font "fontset-k10" script font)))
+    (cl-flet ((set (script font) (set-fontset-font fontset script font)))
       (set 'ascii       a10)
       (set 'latin       a10)
       (set 'japanese-jisx0208 k10)
@@ -76,12 +81,11 @@
       (set 'han k10)
       (set 'symbol symbola))
 
-    (set-frame-font "fontset-k10")
+    (add-to-list 'default-frame-alist `(font . ,fontset))
     ))
 
-
 ;; (set-ascii-font)
-(set-k10-font)
+(set-naga10-font)
 ;; (set-symbol-font)
 (set-cyrillic-font)
 ;; (set-japanese-font)

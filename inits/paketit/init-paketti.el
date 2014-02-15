@@ -155,6 +155,7 @@
         gitignore-mode
         lingr
         smartrep
+        highlight-defined
         all-ext))
 
 (defvar *my-paketti-list-prog-modes*
@@ -358,6 +359,7 @@
     paketti-smartrep
     paketti-migemo
     paketti-ace-jump-mode
+    paketti-highlight-defined
     ;; paketti-flylisp
     ;; paketti-indent-guide
     ;; paketti-tumblesocks
@@ -432,7 +434,7 @@
 ;;      (global-set-key (kbd "C-_") 'redo))
 
 
-;;; hackernews
+;; hackernews
 (req 'hackernews)
 
 (provide 'init-paketti)

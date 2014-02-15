@@ -3,7 +3,6 @@
 ;; flatline
 (req 'flatline
 
-
      (defface flatline-theme-my-edge
        '((t (:foreground "gray10"
                          :background "Darkorange3"
@@ -50,15 +49,15 @@
                              (propertize " " 'face (flatline:theme-get-face 'left-sub))
                              ro
                              (propertize " %b " 'face (flatline:theme-get-face 'left-sub)))
-           (propertize " %b " 'face (flatline:theme-get-face 'left-sub)))))
+           (propertize (flatline:pad "%b") 'face (flatline:theme-get-face 'left-sub)))))
 
      (cl-defun my-flatline:major-mode ()
        (propertize
-        (cl-concatenate 'string
-                        " "
-                        mode-name
-                        (if mode-line-process mode-line-process)
-                        "%n" " ")
+        (flatline:pad
+         (cl-concatenate 'string
+                         mode-name
+                         (if mode-line-process mode-line-process)
+                         "%n" ))
         'face
         (cl-case major-mode
           (emacs-lisp-mode
