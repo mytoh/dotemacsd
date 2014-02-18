@@ -5,21 +5,21 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/inits/themes" )
 (cond ((window-system)
        ;; make the fringe stand out from the background
-       (setq solarized-distinct-fringe-background t)
+       (enable-option solarized-distinct-fringe-background)
        ;; make the modeline high contrast
        (setq solarized-high-contrast-mode-line t)
        ;; (load-theme 'gruvbox t)
-       (load-theme 'gruvbox t))
+       (load-theme muki:x-theme t))
       (t
        (setq solarized-degrade t)
        (setq solarized-termcolors 256)
        (defvar monokai-add-font-lock-keywords t)
-       (load-theme 'moe-dark t)))
+       (load-theme muki:term-theme t)))
 
 
 ;;;; cursor shape
 (add-to-list 'default-frame-alist '(cursor-type . hollow))
-(set-cursor-color (mytoh:colour-hsl-to-hex 137 65 50))
+(set-cursor-color (muki:colour-hsl-to-hex 137 65 50))
 
 ;;;; terminal colors
 ;; (set-face-attribute 'term-color-red nil :foreground "#d55e00")

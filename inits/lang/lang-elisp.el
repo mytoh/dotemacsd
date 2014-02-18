@@ -2,7 +2,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.emacs-w3m\\'" .  emacs-lisp-mode))
 
-(cl-defun my-elisp-add-keywords (face-name keyword-rules)
+(cl-defun muki:elisp-add-keywords (face-name keyword-rules)
   (cl-letf* ((keyword-list (cl-mapcar (lambda (x)
                                         (symbol-name (cdr x)))
                                       keyword-rules))
@@ -18,7 +18,7 @@
            keyword-rules))
 
 
-(my-elisp-add-keywords
+(muki:elisp-add-keywords
  'font-lock-builtin-face
  '((1 . setq)
    (1 . add-hook)
@@ -34,7 +34,7 @@
    (1 . disable-mode)
    (1 . or)))
 
-(my-elisp-add-keywords
+(muki:elisp-add-keywords
  'font-lock-keyword-face
  '((1 . define-key)
    (1 . provide)
@@ -54,11 +54,11 @@
 
 
 
-(cl-defun my-elisp-buffer-enable-reindent ()
-  (add-hook 'before-save-hook 'minun:lisp-cleanup nil t)
-  (add-hook 'before-save-hook 'my-indent-buffer nil t))
+(cl-defun muki:elisp-buffer-enable-reindent ()
+  (add-hook 'before-save-hook 'muki:lisp-cleanup nil t)
+  (add-hook 'before-save-hook 'muki:indent-buffer nil t))
 
-(add-hook 'emacs-lisp-mode-hook 'my-elisp-buffer-enable-reindent)
+(add-hook 'emacs-lisp-mode-hook 'muki:elisp-buffer-enable-reindent)
 (add-hook 'emacs-lisp-mode-hook 'checkdoc-minor-mode)
 
 ;;;; keymap

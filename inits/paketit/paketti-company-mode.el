@@ -3,9 +3,9 @@
 
      (set-option company-idle-delay 0.3)
      ;; (set-option company-begin-commands '(self-insert-command))
-     (cl-defun my-company-mode-hook ()
+     (cl-defun muki:company-mode-hook ()
        (setq company-lighter " 会社"))
-     (add-hook 'company-mode-hook 'my-company-mode-hook)
+     (add-hook 'company-mode-hook 'muki:company-mode-hook)
      (add-hook 'after-init-hook 'global-company-mode)
 
      (with-eval-after-load "company"
@@ -14,14 +14,14 @@
 
        ;; faces
        (set-face-attribute 'company-tooltip-selection nil
-                           :background (mytoh:colour-hsl-to-hex 19 60 50))
+                           :background (muki:colour-hsl-to-hex 19 60 50))
 
        (set-face-attribute 'company-tooltip nil
                            :foreground "#dfdfe1"
                            :background "#393939")
 
        (set-face-attribute 'company-tooltip-common nil
-                           :foreground (mytoh:colour-hsl-to-hex 170 70 70))
+                           :foreground (muki:colour-hsl-to-hex 170 70 70))
 
        (set-face-attribute 'company-tooltip-common-selection nil
                            :foreground "LightSkyBlue")

@@ -43,15 +43,15 @@
 
 
      ;; from wiki/Tips-and-tricks
-     (cl-defun my-sp-wrap-with-paren (&optional arg)
+     (cl-defun muki:sp-wrap-with-paren (&optional arg)
        (interactive "p")
        (sp-select-next-thing-exchange arg)
        (execute-kbd-macro (kbd "(")))
-     (define-key sp-keymap (kbd "M-(") 'my-sp-wrap-with-paren)
+     (define-key sp-keymap (kbd "M-(") 'muki:sp-wrap-with-paren)
 
 
      ;; lisp modes
-     (defvar my-lisp-modes
+     (defvar muki:lisp-modes
        '(emacs-lisp-mode
          inferior-emacs-lisp-mode
          lisp-interaction-mode
@@ -61,7 +61,7 @@
          slime-repl-mode
          clojure-mode
          common-lisp-mode))
-     (sp-with-modes my-lisp-modes
+     (sp-with-modes muki:lisp-modes
        (sp-local-pair "(" nil :bind "M-("))
 
      ;; (add-hook 'emacs-lisp-mode 'turn-on-smartparens-strict-mode)

@@ -9,7 +9,7 @@
 
 
                                         ; http://valvallow.blogspot.jp/2011/03/emacs-scheme-gauche.html
-(cl-defun my-scheme-other-window ()
+(cl-defun muki:scheme-other-window ()
   "run scheme on other window"
   (interactive)
   (split-window-horizontally 90)
@@ -20,57 +20,57 @@
     (switch-to-buffer-other-window
      (get-buffer-create buf-name))))
 
-(cl-defun my-scheme-mode-hook ()
-  (define-key scheme-mode-map (kbd "C-s") 'my-scheme-other-window)
+(cl-defun muki:scheme-mode-hook ()
+  (define-key scheme-mode-map (kbd "C-s") 'muki:scheme-other-window)
   (local-set-key (kbd "C-m") 'newline-and-indent)
-  (add-hook 'before-save-hook 'my-before-save-hook nil t))
-(add-hook 'scheme-mode-hook 'my-scheme-mode-hook)
+  (add-hook 'before-save-hook 'muki:before-save-hook nil t))
+(add-hook 'scheme-mode-hook 'muki:scheme-mode-hook)
 
-(cl-defun my-inferior-scheme-mode-hook ()
+(cl-defun muki:inferior-scheme-mode-hook ()
   (local-set-key (kbd "C-p") 'comint-previous-input)
   (local-set-key (kbd "C-n") 'comint-next-line))
-(add-hook 'inferior-scheme-mode-hook 'my-inferior-scheme-mode-hook)
+(add-hook 'inferior-scheme-mode-hook 'muki:inferior-scheme-mode-hook)
 
-(cl-defmacro my-scheme-make-face (face fore)
+(cl-defmacro muki:scheme-make-face (face fore)
   `(progn
      (make-face ,face)
      (set-face-foreground ,face  ,fore)))
 
-(my-scheme-make-face 'my-font-lock-scheme-syntax-face "#9baa99")
-(my-scheme-make-face 'my-font-lock-scheme-function-face "#c3c279")
+(muki:scheme-make-face 'muki:font-lock-scheme-syntax-face "#9baa99")
+(muki:scheme-make-face 'muki:font-lock-scheme-function-face "#c3c279")
 
-(my-scheme-make-face 'my-font-lock-scheme-string-face "#f24f47")
-(my-scheme-make-face 'my-font-lock-scheme-character-face "#fee1a2")
-(my-scheme-make-face 'my-font-lock-scheme-number-face "#b5ae5b")
-(my-scheme-make-face 'my-font-lock-scheme-boolean-face "#ffbe5c")
+(muki:scheme-make-face 'muki:font-lock-scheme-string-face "#f24f47")
+(muki:scheme-make-face 'muki:font-lock-scheme-character-face "#fee1a2")
+(muki:scheme-make-face 'muki:font-lock-scheme-number-face "#b5ae5b")
+(muki:scheme-make-face 'muki:font-lock-scheme-boolean-face "#ffbe5c")
 
-(my-scheme-make-face 'my-font-lock-scheme-delimiter-face "#ababab")
-(my-scheme-make-face 'my-font-lock-scheme-constant-face "#e9c3b9")
+(muki:scheme-make-face 'muki:font-lock-scheme-delimiter-face "#ababab")
+(muki:scheme-make-face 'muki:font-lock-scheme-constant-face "#e9c3b9")
 
-(my-scheme-make-face 'my-font-lock-scheme-comment-face "#ababab")
-(my-scheme-make-face 'my-font-lock-scheme-multicomment-face "#ababab")
-(my-scheme-make-face 'my-font-lock-scheme-error-face "#ababab")
+(muki:scheme-make-face 'muki:font-lock-scheme-comment-face "#ababab")
+(muki:scheme-make-face 'muki:font-lock-scheme-multicomment-face "#ababab")
+(muki:scheme-make-face 'muki:font-lock-scheme-error-face "#ababab")
 
-(my-scheme-make-face 'my-font-lock-scheme-module-macro-face "#9399ab")
-(my-scheme-make-face 'my-font-lock-scheme-module-syntax-face "#93c9ab")
-(my-scheme-make-face 'my-font-lock-scheme-module-function-face "#3b5993")
-(my-scheme-make-face 'my-font-lock-scheme-module-procedure-face "#3b9993")
-(my-scheme-make-face 'my-font-lock-scheme-module-method-face "#c3b9a9")
-(my-scheme-make-face 'my-font-lock-scheme-module-charset-face "#9bc993")
-(my-scheme-make-face 'my-font-lock-scheme-module-class-face "#ebc893")
-(my-scheme-make-face 'my-font-lock-scheme-module-parameter-face "#e999b3")
-(my-scheme-make-face 'my-font-lock-scheme-module-name-face "#6a93cc")
+(muki:scheme-make-face 'muki:font-lock-scheme-module-macro-face "#9399ab")
+(muki:scheme-make-face 'muki:font-lock-scheme-module-syntax-face "#93c9ab")
+(muki:scheme-make-face 'muki:font-lock-scheme-module-function-face "#3b5993")
+(muki:scheme-make-face 'muki:font-lock-scheme-module-procedure-face "#3b9993")
+(muki:scheme-make-face 'muki:font-lock-scheme-module-method-face "#c3b9a9")
+(muki:scheme-make-face 'muki:font-lock-scheme-module-charset-face "#9bc993")
+(muki:scheme-make-face 'muki:font-lock-scheme-module-class-face "#ebc893")
+(muki:scheme-make-face 'muki:font-lock-scheme-module-parameter-face "#e999b3")
+(muki:scheme-make-face 'muki:font-lock-scheme-module-name-face "#6a93cc")
 
-(my-scheme-make-face 'my-font-lock-scheme-regexp-face "#7ea978")
-(my-scheme-make-face 'my-font-lock-scheme-srfi62-comment-face "#ababab")
-(my-scheme-make-face 'my-font-lock-scheme-sharpbang-face "#ababab")
-(my-scheme-make-face 'my-font-lock-scheme-include-face "#ababab")
-(my-scheme-make-face 'my-font-lock-scheme-interpolation-face "#ababab")
+(muki:scheme-make-face 'muki:font-lock-scheme-regexp-face "#7ea978")
+(muki:scheme-make-face 'muki:font-lock-scheme-srfi62-comment-face "#ababab")
+(muki:scheme-make-face 'muki:font-lock-scheme-sharpbang-face "#ababab")
+(muki:scheme-make-face 'muki:font-lock-scheme-include-face "#ababab")
+(muki:scheme-make-face 'muki:font-lock-scheme-interpolation-face "#ababab")
 
 
 
 ;; function from http://emacswiki.org/emacs/AddKeywords
-(cl-defun my-gauche-add-keywords (face-name keyword-rules)
+(cl-defun muki:gauche-add-keywords (face-name keyword-rules)
   (let* ((keyword-list (mapcar (lambda (x)
                                  (symbol-name (cdr x)))
                                keyword-rules))
@@ -85,8 +85,8 @@
                (car x)))
         keyword-rules))
 
-(my-gauche-add-keywords
- 'my-font-lock-scheme-syntax-face
+(muki:gauche-add-keywords
+ 'muki:font-lock-scheme-syntax-face
  '(
    (0 . use)
    (0 . require)
@@ -154,8 +154,8 @@
    (1 . exit)
    ))
 
-(my-gauche-add-keywords
- 'my-font-lock-scheme-function-face
+(muki:gauche-add-keywords
+ 'muki:font-lock-scheme-function-face
  '(
    (1 . open-input-string)
    (1 . add-load-path)
@@ -206,8 +206,8 @@
    ))
 
 ;;  module
-(my-gauche-add-keywords
- 'my-font-lock-scheme-module-function-face
+(muki:gauche-add-keywords
+ 'muki:font-lock-scheme-module-function-face
 
  '(
                                         ;(1 . *argc*)
@@ -332,8 +332,8 @@
 
 
 ;;  syntax
-(my-gauche-add-keywords
- 'my-font-lock-scheme-syntax-face
+(muki:gauche-add-keywords
+ 'muki:font-lock-scheme-syntax-face
 
 
  '(
@@ -366,8 +366,8 @@
 
 
 ;;  macro
-(my-gauche-add-keywords
- 'my-font-lock-scheme-module-macro-face
+(muki:gauche-add-keywords
+ 'muki:font-lock-scheme-module-macro-face
 
  '(
    (1 . $)
@@ -560,8 +560,8 @@
 
 
 ;;  procedure
-(my-gauche-add-keywords
- 'my-font-lock-scheme-module-procedure-face
+(muki:gauche-add-keywords
+ 'muki:font-lock-scheme-module-procedure-face
 
  '(
    (1 . $->rope)
@@ -3559,8 +3559,8 @@
 
 
 ;;  method
-(my-gauche-add-keywords
- 'my-font-lock-scheme-module-method-face
+(muki:gauche-add-keywords
+ 'muki:font-lock-scheme-module-method-face
 
  '(
    (1 . add-hook!)
@@ -3827,8 +3827,8 @@
 
 
 ;;  class
-(my-gauche-add-keywords
- 'my-font-lock-scheme-constant-face
+(muki:gauche-add-keywords
+ 'muki:font-lock-scheme-constant-face
 
 
 
@@ -4127,8 +4127,8 @@
 
 
 ;;  char-set
-(my-gauche-add-keywords
- 'my-font-lock-scheme-module-charset-face
+(muki:gauche-add-keywords
+ 'muki:font-lock-scheme-module-charset-face
 
  '(
    (1 . *rfc2396-unreserved-char-set*)
@@ -4155,8 +4155,8 @@
 
 
 ;;  parameter
-(my-gauche-add-keywords
- 'my-font-lock-scheme-module-parameter-face
+(muki:gauche-add-keywords
+ 'muki:font-lock-scheme-module-parameter-face
 
 
  '(
@@ -4232,33 +4232,33 @@
                                  (submatch
                                   (one-or-more (or (syntax symbol)
                                                    (syntax word))))))
-                           1  'my-font-lock-scheme-module-name-face)
+                           1  'muki:font-lock-scheme-module-name-face)
                           ;; ,@
                           (,(rx ",@")
-                           0 'my-font-lock-scheme-string-face)
+                           0 'muki:font-lock-scheme-string-face)
                           ;; #`
                           (,(rx (submatch "#`\"")
                                 (submatch (one-or-more any))
                                 (submatch  "\""))
-                           (1 'my-font-lock-scheme-regexp-face)
-                           (2 'my-font-lock-scheme-regexp-face)
-                           (3 'my-font-lock-scheme-regexp-face)
+                           (1 'muki:font-lock-scheme-regexp-face)
+                           (2 'muki:font-lock-scheme-regexp-face)
+                           (3 'muki:font-lock-scheme-regexp-face)
                            )
                           ;; #t #f
                           (,(rx (or  "#t" "#f"))
-                           0 'my-font-lock-scheme-boolean-face)
+                           0 'muki:font-lock-scheme-boolean-face)
                           (,(rx "#/"
                                 (submatch
                                  (one-or-more
                                   any))
                                 "/")
-                           0 'my-font-lock-scheme-regexp-face)
+                           0 'muki:font-lock-scheme-regexp-face)
                           (,(rx "*"
                                 (submatch
                                  (one-or-more
                                   any))
                                 "*")
-                           0 'my-font-lock-scheme-constant-face)
+                           0 'muki:font-lock-scheme-constant-face)
                           ))
 
 ;;http://d.hatena.ne.jp/kobapan/20091205/1259972925
@@ -4266,7 +4266,7 @@
 (defvar ac-source-scheme
   '((candidates
      (lambda ()
-       (my-req 'scheme-complete)
+       (req 'scheme-complete)
        (all-completions ac-target (car (scheme-current-env))))))
   "Source for scheme keywords.")
 (add-hook 'scheme-mode-hook

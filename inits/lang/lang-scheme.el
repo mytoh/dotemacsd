@@ -2,16 +2,16 @@
 ;;;; keymap
 ;; (define-key emacs-lisp-mode-map (kbd "C-m") 'newline-and-indent)
 
-(cl-defun minun:scheme-add-keywords (face-name keyword-rules)
+(cl-defun muki:scheme-add-keywords (face-name keyword-rules)
   (cl-letf* ((keyword-list (mapcar (lambda (x)
                                      (symbol-name (cdr x)))
                                    keyword-rules))
              (keyword-regexp (concat "(\\("
                                      (regexp-opt keyword-list)
                                      "\\)[ \n]")))
-    (my-log "adding keywords for face "
-            (propertize (symbol-name face-name) 'face 'font-lock-variable-name-face)
-            " on scheme mode")
+    (muki:log "adding keywords for face "
+              (propertize (symbol-name face-name) 'face 'font-lock-variable-name-face)
+              " on scheme mode")
     (font-lock-add-keywords 'scheme-mode
                             `((,keyword-regexp 1 ',face-name))))
   (cl-mapc (lambda (x)
@@ -26,7 +26,7 @@
 ;; (autoload 'scheme-mode "cmuscheme" "Major mode for Scheme." t)
 ;; (autoload 'run-scheme  "cmuscheme" "Run an inferior Scheme process." t)
 
-(cl-defun minun:scheme-other-window ()
+(cl-defun muki:scheme-other-window ()
   "run scheme on other window"
   (interactive)
   (split-window-horizontally 90)
@@ -37,18 +37,18 @@
     (switch-to-buffer-other-window
      (get-buffer-create buf-name))))
 
-(cl-defun minun:scheme-mode-hook ()
-  (define-key scheme-mode-map (kbd "C-c C-s") 'minun:scheme-other-window)
-  (cl-dolist (f '(minun:lisp-cleanup
+(cl-defun muki:scheme-mode-hook ()
+  (define-key scheme-mode-map (kbd "C-c C-s") 'muki:scheme-other-window)
+  (cl-dolist (f '(muki:lisp-cleanup
                   whitespace-cleanup
-                  my-before-save-hook))
+                  muki:before-save-hook))
     (add-hook 'before-save-hook f nil t)))
-(add-hook 'scheme-mode-hook 'minun:scheme-mode-hook)
+(add-hook 'scheme-mode-hook 'muki:scheme-mode-hook)
 
-;; (cl-defun minun:inferior-scheme-mode-hook ()
+;; (cl-defun muki:inferior-scheme-mode-hook ()
 ;;   (local-set-key (kbd "C-p") 'comint-previous-input)
 ;;   (local-set-key (kbd "C-n") 'comint-next-line))
-;; (add-hook 'inferior-scheme-mode-hook 'minun:inferior-scheme-mode-hook)
+;; (add-hook 'inferior-scheme-mode-hook 'muki:inferior-scheme-mode-hook)
 
 
 
@@ -66,7 +66,7 @@
 ;;               (add-to-list 'ac-sources 'ac-source-scheme)))
 
 ;; scheme mode recognition
-(cl-defun minun:add-scheme-mode (ext)
+(cl-defun muki:add-scheme-mode (ext)
   (add-to-list 'auto-mode-alist `(,(concat "\\." ext "\\'") . scheme-mode)))
 
 ;; (cl-dolist (e '("leh"
@@ -75,15 +75,15 @@
 ;;                 "sls"
 ;;                 "sld"
 ;;                 "ss"))
-;;   (minun:add-scheme-mode e))
+;;   (muki:add-scheme-mode e))
 
 ;; personal syntax
-;; (minun:scheme-add-keywords
+;; (muki:scheme-add-keywords
 ;;  'font-lock-builtin-face
 ;;  '((1 . match)
 ;;    (1 . match-short-command)))
 
-;; (minun:scheme-add-keywords
+;; (muki:scheme-add-keywords
 ;;  'font-lock-keyword-face
 ;;  '((1 . define-case)
 ;;    (1 . define-match)))

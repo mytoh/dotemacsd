@@ -6,9 +6,9 @@
        (setq ac-sources '(ac-source-clang-async))
        (ac-clang-launch-completion-process))
 
-     (cl-defun my-ac-config ()
+     (cl-defun muki:ac-config ()
        (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
        (add-hook 'auto-complete-mode-hook 'ac-common-setup)
        (global-auto-complete-mode t))
 
-     (my-ac-config))
+     (muki:ac-config))

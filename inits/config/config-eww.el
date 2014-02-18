@@ -5,7 +5,7 @@
      (with-eval-after-load 'eww
        (set-option eww-download-directory "~/huone/lataukset")
        (define-key eww-mode-map (kbd "C-i") 'shr-next-link))
-     (mytoh:define-global-key (kbd "w") 'eww)
+     (muki:define-global-key (kbd "w") 'eww)
      )
 
 ;; (replace-string "\221" "`" nil (point-min) (point-max))  ; opening single quote

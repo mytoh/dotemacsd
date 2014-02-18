@@ -5,8 +5,8 @@
 (req 'vendle
 
      ;; initialize vendle
-     (cl-letf ((my-vendle-directory (expand-file-name (concat user-emacs-directory (file-name-as-directory "vendle")))))
-       (vendle:initialize my-vendle-directory))
+     (cl-letf ((muki:vendle-directory (expand-file-name (concat user-emacs-directory (file-name-as-directory "vendle")))))
+       (vendle:initialize muki:vendle-directory))
 
      (vendle:register "jonathanchu/emacs-powerline")
      (vendle:register "TeMPOraL/nyan-mode")
@@ -27,16 +27,16 @@
      (vendle:register-theme "djcb/dream-theme")
      (vendle:register-theme "owainlewis/emacs-color-themes" '(:path "themes"))
 
-     (cl-flet ((my-add-project-root (path)
-                                    (vendle:register-local (expand-file-name path "~/huone/projektit"))))
-       (my-add-project-root  "emacs-flatline")
-       (my-add-project-root "helm-ypv")
-       (my-add-project-root "company-scheme")
-       (my-add-project-root "emacs-scheme-keywords")
-       (my-add-project-root "emacs-lehtifile-mode")
-       (my-add-project-root "helm-alku")
-       (my-add-project-root "emacs-navi2ch-file-mode")
-       (my-add-project-root "emacs-eshell-session"))
+     (cl-flet ((muki:add-project-root (path)
+                                      (vendle:register-local (expand-file-name path "~/huone/projektit"))))
+       (muki:add-project-root  "emacs-flatline")
+       (muki:add-project-root "helm-ypv")
+       (muki:add-project-root "company-scheme")
+       (muki:add-project-root "emacs-scheme-keywords")
+       (muki:add-project-root "emacs-lehtifile-mode")
+       (muki:add-project-root "helm-alku")
+       (muki:add-project-root "emacs-navi2ch-file-mode")
+       (muki:add-project-root "emacs-eshell-session"))
      (when (file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
        (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk"))
      ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
@@ -47,7 +47,7 @@
      (vendle:check-packages)
 
      ;; keymap
-     (mytoh:define-global-key (kbd "v u") 'vendle-update)
+     (muki:define-global-key (kbd "v u") 'vendle-update)
 
      ;; update plugins
      ;; (vendle:update-packages)
@@ -130,7 +130,8 @@
      (req 'init-helm-alku)
 
      (req 'undohist
-          (undohist-initialize))
+          (undohist-initialize)
+          (setq undohist-ignored-files '("\\.git/COMMIT_EDITMSG")))
 
      (req 'navi2ch-file-mode)
      (setq navi2ch-file-open-with-shift-jis t)

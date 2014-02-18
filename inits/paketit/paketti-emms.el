@@ -103,24 +103,24 @@ controls, run `mixer' in a shell."
 
 
      ;;;; keymap
-     (define-prefix-command 'my-emms-map)
-     (global-set-key (kbd "C-c m") 'my-emms-map)
-     (defun mytoh:define-emms-key (key func)
+     (define-prefix-command 'muki:emms-map)
+     (global-set-key (kbd "C-c m") 'muki:emms-map)
+     (defun muki:define-emms-key (key func)
        "define personal key mappings"
-       (define-key my-emms-map key func))
-     (mytoh:define-emms-key (kbd "P") 'emms-pause)
-     (mytoh:define-emms-key (kbd "s") 'emms-stop)
-     (mytoh:define-emms-key (kbd "p") 'emms-previous)
-     (mytoh:define-emms-key (kbd "n") 'emms-next)
-     (mytoh:define-emms-key (kbd "b") 'emms-smart-browse)
-     (mytoh:define-emms-key (kbd "a f") 'emms-add-file)
-     (mytoh:define-emms-key (kbd "a d") 'emms-add-directory-tree)
-     (mytoh:define-emms-key (kbd "+") 'emms-volume-raise)
-     (mytoh:define-emms-key (kbd "-") 'emms-volume-lower)
+       (define-key muki:emms-map key func))
+     (muki:define-emms-key (kbd "P") 'emms-pause)
+     (muki:define-emms-key (kbd "s") 'emms-stop)
+     (muki:define-emms-key (kbd "p") 'emms-previous)
+     (muki:define-emms-key (kbd "n") 'emms-next)
+     (muki:define-emms-key (kbd "b") 'emms-smart-browse)
+     (muki:define-emms-key (kbd "a f") 'emms-add-file)
+     (muki:define-emms-key (kbd "a d") 'emms-add-directory-tree)
+     (muki:define-emms-key (kbd "+") 'emms-volume-raise)
+     (muki:define-emms-key (kbd "-") 'emms-volume-lower)
 
      )
 
-(mytoh:comment
+(muki:comment
  ;; debug players
  (emms-player-for '(*track* (type . file)
                             (name . "myfile.pls")))

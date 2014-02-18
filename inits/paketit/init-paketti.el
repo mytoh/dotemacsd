@@ -38,7 +38,7 @@
 ;;; package list
 
 ;; install packages
-(setq *my-paketti-list*
+(setq *muki:paketti-list*
       '(rainbow-delimiters
         auto-complete
         ac-ja
@@ -158,7 +158,7 @@
         highlight-defined
         all-ext))
 
-(defvar *my-paketti-list-prog-modes*
+(defvar *muki:paketti-list-prog-modes*
   '(stumpwm-mode
     coffee-mode
     lua-mode
@@ -170,9 +170,9 @@
     markdown-mode
     vimrc-mode
     ))
-(append-to-list *my-paketti-list* *my-paketti-list-prog-modes* )
+(append-to-list *muki:paketti-list* *muki:paketti-list-prog-modes* )
 
-(defvar *my-paketti-list-colour-themes*
+(defvar *muki:paketti-list-colour-themes*
   '(;; themes
     tommyh-theme
     django-theme
@@ -247,11 +247,12 @@
     steady-theme
     pastels-on-dark-theme
     leuven-theme))
-(append-to-list *my-paketti-list* *my-paketti-list-colour-themes*)
+(append-to-list *muki:paketti-list* *muki:paketti-list-colour-themes*)
 
-(defvar *my-paketti-list-helm*
+(defvar *muki:paketti-list-helm*
   '(helm
     helm-git
+    helm-git-grep
     helm-themes
     helm-c-yasnippet
     helm-recoll
@@ -271,9 +272,9 @@
     helm-ag-r
     wgrep-helm
     ))
-(append-to-list *my-paketti-list* *my-paketti-list-helm*)
+(append-to-list *muki:paketti-list* *muki:paketti-list-helm*)
 
-(defvar *my-paketti-list-org*
+(defvar *muki:paketti-list-org*
   '(org
     org-magit
     org-plus-contrib
@@ -284,17 +285,17 @@
     orglink
     orglue
     ))
-(append-to-list *my-paketti-list* *my-paketti-list-org*)
+(append-to-list *muki:paketti-list* *muki:paketti-list-org*)
 
-(cl-defun my-paketti-update ()
+(cl-defun muki:paketti-update ()
   (unless package-archive-contents
     (package-refresh-contents))
-  (cl-dolist (p *my-paketti-list*)
+  (cl-dolist (p *muki:paketti-list*)
     (unless (package-installed-p p)
       (message "installing %s"  p)
       (package-install p))))
 
-(my-paketti-update)
+(muki:paketti-update)
 
 (defvar init-paketit
   '(
@@ -360,9 +361,9 @@
     paketti-migemo
     paketti-ace-jump-mode
     paketti-highlight-defined
+    paketti-tumblesocks
     ;; paketti-flylisp
     ;; paketti-indent-guide
-    ;; paketti-tumblesocks
     ;; paketti-circe
     ;; paketti-auto-complete
     ;; paketti-projectile
@@ -394,7 +395,7 @@
     ))
 
 
-(defvar *my-paketit-list-helm*
+(defvar *muki:paketit-list-helm*
   '(;; helm
     paketti-helm
     paketti-helm-delicious
@@ -408,9 +409,9 @@
     paketti-wgrep-helm
 
     ))
-(append-to-list init-paketit *my-paketit-list-helm*)
+(append-to-list init-paketit *muki:paketit-list-helm*)
 
-(defvar *my-paketit-list-org*
+(defvar *muki:paketit-list-org*
   '(paketti-org
     ;; paketti-org-plus-contrib
     ;; paketti-org-bullets
@@ -420,7 +421,7 @@
     paketti-navi-mode
     paketti-orglink
     ))
-(append-to-list init-paketit *my-paketit-list-org*)
+(append-to-list init-paketit *muki:paketit-list-org*)
 
 (mapc 'require init-paketit)
 

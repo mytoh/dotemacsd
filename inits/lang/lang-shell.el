@@ -5,14 +5,14 @@
 (add-shell-mode "subr")
 (add-shell-mode "mksh")
 
-(cl-defun my-shell-indent-buffer ()
+(cl-defun muki:shell-indent-buffer ()
   (interactive)
   (delete-trailing-whitespace)
   (indent-region (point-min) (point-max)))
 
 (add-hook 'sh-mode-hook
           (lambda ()
-            (add-hook 'before-save-hook 'my-shell-indent-buffer nil t)))
+            (add-hook 'before-save-hook 'muki:shell-indent-buffer nil t)))
 
 
 (provide 'lang-shell)

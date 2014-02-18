@@ -25,8 +25,8 @@
                      "thunar"
                      "caja_no_desktop.sh"  )))
 
-     (mytoh:define-global-key (kbd "c")  'helm-alku-command)
-     (mytoh:define-global-key (kbd "h") 'helm-alku))
+     (muki:define-global-key (kbd "c")  'helm-alku-command)
+     (muki:define-global-key (kbd "h") 'helm-alku))
 
 (provide 'init-helm-alku)
 

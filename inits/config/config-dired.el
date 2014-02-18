@@ -6,7 +6,7 @@
                  (concat dired-listing-switches "-h"))
 
      ;; diredを2つのウィンドウで開いている時に、デフォルトの移動orコピー先をもう一方のdiredで開いているディレクトリにする
-     (setq dired-dwim-target t)
+     (enable-option dired-dwim-target)
 
      ;; dired-find-alternate-file の有効化
      (put 'dired-find-alternate-file 'disabled nil)
@@ -22,9 +22,9 @@
              (t
               (dired-find-file))))
 
-     (setq ls-lisp-use-insert-directory-program nil)
+     (disable-option ls-lisp-use-insert-directory-program)
      (require 'ls-lisp)
-     (setq ls-lisp-dirs-first t)
+     (enable-option ls-lisp-dirs-first)
 
      ;; RET 標準の dired-find-file では dired バッファが複数作られるので
      ;; dired-find-alternate-file を代わりに使う
@@ -41,7 +41,7 @@
 
 ;; add [dired] to dired buffer
 ;; [[http://qiita.com/kbkbkbkb1/items/13585a5711d62e9800ef]]
-(cl-defun my-dired-append-buffer-name-hint ()
+(cl-defun muki:dired-append-buffer-name-hint ()
   "Append a auxiliary string to a name of dired buffer."
   (when (eq major-mode 'dired-mode)
     (let* ((dir (expand-file-name list-buffers-directory))
@@ -49,19 +49,19 @@
                            (string-match "^\\([a-zA-Z]:\\)" dir))
                       (match-string 1 dir) "")))
       (rename-buffer (concat (buffer-name) " [" drive "dired]") t))))
-;; (add-hook 'dired-mode-hook 'my-dired-append-buffer-name-hint)
+;; (add-hook 'dired-mode-hook 'muki:dired-append-buffer-name-hint)
 
 ;; dired
 (add-hook 'dired-load-hook
           (lambda () (load "dired-x")))
-(setq dired-guess-shell-alist-user
-      `(( ,(rx  "."
-                (or "jpg"
-                    "png"
-                    "bmp"
-                    "gif")
-                line-end)
-          "kuva.sh")))
+(set-option dired-guess-shell-alist-user
+            `(( ,(rx  "."
+                      (or "jpg"
+                          "png"
+                          "bmp"
+                          "gif")
+                      line-end)
+                "kuva.sh")))
 
 
 (provide 'config-dired)

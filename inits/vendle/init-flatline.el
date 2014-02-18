@@ -3,25 +3,25 @@
 ;; flatline
 (req 'flatline
 
-     (defface flatline-theme-my-edge
+     (defface flatline-theme-muki-edge
        '((t (:foreground "gray10"
                          :background "Darkorange3"
                          :box nil)))
        "face for left")
 
-     (defface flatline-theme-my-middle
+     (defface flatline-theme-muki-middle
        '((t (:foreground "gray10"
                          :background  "yellow4"
                          :box nil)))
        "face for sub")
 
-     (defface flatline-theme-my-fill
+     (defface flatline-theme-muki-fill
        '((t (:foreground  "white"
                           :background  "#112230"
                           :box nil)))
        "face for left sub sub")
 
-     (cl-defun my-flatline:vc-mode ()
+     (cl-defun muki:flatline:vc-mode ()
        (cl-letf ((symbol ""))
          (if vc-mode
              (cl-concatenate 'string
@@ -29,18 +29,18 @@
                              vc-mode)
            "")))
 
-     (cl-defun my-flatline:coding-system ()
+     (cl-defun muki:flatline:coding-system ()
        (if (boundp 'buffer-file-coding-system)
            (symbol-name buffer-file-coding-system)
          ""))
 
-     (cl-defun my-flatline:position ()
+     (cl-defun muki:flatline:position ()
        (cl-letf ((line-num (number-to-string (line-number-at-pos (point-max)))))
          (cl-concatenate 'string
                          "%c" " : "
                          "%l" "/" line-num)))
 
-     (cl-defun my-flatline:buffer-name ()
+     (cl-defun muki:flatline:buffer-name ()
        (cl-letf ((ro (propertize "🔒" 'face
                                  `(:foreground "#bfcf3f"
                                                :background ,(face-background (flatline:theme-get-face 'left-sub))))))
@@ -51,7 +51,7 @@
                              (propertize " %b " 'face (flatline:theme-get-face 'left-sub)))
            (propertize (flatline:pad "%b") 'face (flatline:theme-get-face 'left-sub)))))
 
-     (cl-defun my-flatline:major-mode ()
+     (cl-defun muki:flatline:major-mode ()
        (propertize
         (flatline:pad
          (cl-concatenate 'string
@@ -66,19 +66,18 @@
            (flatline:theme-get-face 'left))
           (t (flatline:theme-get-face 'left)))))
 
-
      (flatline:set-theme 'solarized-dark)
 
      (setq flatline:mode-line '())
-     (flatline:add 'my-flatline:major-mode)
-     (flatline:add 'my-flatline:buffer-name)
-     (flatline:add '(my-flatline:vc-mode . flatline:face-vc-mode))
+     (flatline:add 'muki:flatline:major-mode)
+     (flatline:add 'muki:flatline:buffer-name)
+     (flatline:add '(muki:flatline:vc-mode . flatline:face-vc-mode))
      (flatline:add '(flatline:buffer-directory . middle))
      (flatline:add '(fill . middle))
      (flatline:add '(flatline:eol-desc . middle))
      (flatline:add '("<" . middle))
-     (flatline:add '(my-flatline:coding-system . middle))
-     (flatline:add '(my-flatline:position . right-sub))
+     (flatline:add '(muki:flatline:coding-system . middle))
+     (flatline:add '(muki:flatline:position . right-sub))
      (flatline:add '(flatline:minor-mode . right))
      (flatline:update)
 

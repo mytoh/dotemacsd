@@ -12,7 +12,7 @@
 ;;      (add-to-list 'auto-mode-alist '("\\.tcsh\\'" . csh-mode))
 ;;      (add-to-list 'auto-mode-alist '("\\.tcshrc\\'" . csh-mode)))
 
-(cl-defun my-csh-add-keywords (face-name keyword-rules)
+(cl-defun muki:csh-add-keywords (face-name keyword-rules)
   (cl-letf* ((keyword-list (mapcar (lambda (x)
                                      (symbol-name (cdr x)))
                                    keyword-rules))

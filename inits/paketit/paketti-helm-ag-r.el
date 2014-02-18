@@ -5,6 +5,6 @@
            '("-S -U --hidden"
              "-S -U -l"))
 
-     (mytoh:define-global-key (kbd "a") 'helm-ag-r))
+     (muki:define-global-key (kbd "a") 'helm-ag-r))
 
 (provide 'paketti-helm-ag-r)

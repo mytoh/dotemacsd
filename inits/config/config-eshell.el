@@ -16,12 +16,12 @@
 (enable-option eshell-prefer-lisp-functions)
 
 ;;; start eshell after startup
-(cl-defun my-eshell-startup-hook ()
+(cl-defun muki:eshell-startup-hook ()
   (let ((default-directory (getenv "HOME")))
     (command-execute 'eshell)
     (bury-buffer)
     (message "eshell started")))
-(add-hook 'emacs-startup-hook 'my-eshell-startup-hook)
+(add-hook 'emacs-startup-hook 'muki:eshell-startup-hook)
 
 ;; load prompt settings
 (require 'config-eshell-prompt)
@@ -32,17 +32,17 @@
 (autoload 'eshell-session:prev "eshell-session")
 (autoload 'eshell-session:new "eshell-session")
 
-(define-prefix-command 'my-eshell-session-map)
-(define-key global-map (kbd "C-z") 'my-eshell-session-map)
+(define-prefix-command 'muki:eshell-session-map)
+(define-key global-map (kbd "C-z") 'muki:eshell-session-map)
 
 (define-key global-map (kbd "C-z C-z") 'eshell-session:switch)
 
-(cl-defun my-eshell-mode-hook ()
+(cl-defun muki:eshell-mode-hook ()
   (define-key eshell-mode-map (kbd "C-z") (make-sparse-keymap))
   (define-key eshell-mode-map (kbd "C-z C-n") 'eshell-session:next)
   (define-key eshell-mode-map (kbd "C-z C-p") 'eshell-session:prev)
   (define-key eshell-mode-map (kbd "C-z C-c") 'eshell-session:new))
-(add-hook 'eshell-mode-hook 'my-eshell-mode-hook)
+(add-hook 'eshell-mode-hook 'muki:eshell-mode-hook)
 
 (autoload 'helm-eshell-session "helm-eshell-session")
 (define-key global-map (kbd "C-z h") 'helm-eshell-session)

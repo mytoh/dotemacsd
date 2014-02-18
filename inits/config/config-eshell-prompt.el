@@ -1,28 +1,28 @@
 
-(defface my-eshell-pwd-face
+(defface muki:eshell-pwd-face
   '((t (:foreground "#93b8bb")))
   "eshell prompt current directory face")
 
-(defface my-eshell-char-face
+(defface muki:eshell-char-face
   '((t (:foreground "#e6ae2e")))
   "eshell prompt prompt character face")
 
 ;; prompt
-(cl-defun my-eshell-propertize (s f)
+(cl-defun muki:eshell-propertize (s f)
   (propertize s 'face f))
 
-(cl-defun my-eshell-prompt-function ()
+(cl-defun muki:eshell-prompt-function ()
   (concat
    "[0m"
-   (my-eshell-propertize (abbreviate-file-name (eshell/pwd)) 'my-eshell-pwd-face)
+   (muki:eshell-propertize (abbreviate-file-name (eshell/pwd)) 'muki:eshell-pwd-face)
    "\n"
-   (my-eshell-propertize "X / _ / X" 'my-eshell-char-face)
+   (muki:eshell-propertize "X / _ / X" 'muki:eshell-char-face)
    " "))
 
 ;; remove highlight, must be set
 (setq eshell-highlight-prompt nil)
 
-(setq eshell-prompt-function 'my-eshell-prompt-function
+(setq eshell-prompt-function 'muki:eshell-prompt-function
       eshell-prompt-regexp
       (concat "^\\([^\n]+\n\\|X / _ / X \\)"))
 

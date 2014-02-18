@@ -4,7 +4,7 @@
   (require 'cl-lib)
   (require 'color))
 
-(cl-defmacro my-log (&rest messages)
+(cl-defmacro muki:log (&rest messages)
   `(progn
      (message (concat (propertize ">> " 'face 'font-lock-doc-face)
                       ,@messages) " ...")))
@@ -15,11 +15,11 @@
   `(cond
     ((locate-library (symbol-name ,lib))
      (require ,lib nil 'noerror)
-     (my-log "loading " (propertize (symbol-name ,lib)
-                                    'face 'font-lock-variable-name-face))
+     (muki:log "loading " (propertize (symbol-name ,lib)
+                                      'face 'font-lock-variable-name-face))
      ,@body
-     (my-log "loaded " (propertize (symbol-name ,lib)
-                                   'face 'font-lock-keyword-face)))
+     (muki:log "loaded " (propertize (symbol-name ,lib)
+                                     'face 'font-lock-keyword-face)))
     (t (message "%s not loaded" (symbol-name ,lib)))))
 
 (cl-defmacro pak (package &rest body)
@@ -27,8 +27,8 @@
   `(cond
     ((or (package-installed-p ,package)
          (locate-library (symbol-name ,package)))
-     (my-log "found package " (propertize (symbol-name ,package)
-                                          'face 'font-lock-variable-name-face))
+     (muki:log "found package " (propertize (symbol-name ,package)
+                                            'face 'font-lock-variable-name-face))
      ,@body)
     (t (message "%s not found" (symbol-name ,package)))))
 
@@ -51,11 +51,11 @@
 (cl-defmacro append-to-list (to lst)
   `(cl-psetq ,to (append ,to ,lst)))
 
-(cl-defmacro my-add-to-load-path (path)
+(cl-defmacro muki:add-to-load-path (path)
   `(when (file-exists-p ,path)
      (add-to-list 'load-path ,path)))
 
-(cl-defmacro my-set-face-colours (face fore back)
+(cl-defmacro muki:set-face-colours (face fore back)
   `(progn
      (set-face-foreground ,face ,fore)
      (set-face-background ,face ,back)))
@@ -65,8 +65,8 @@
     (cl-letf ((option (car body))
               (value (cadr body)))
       `(progn
-         (my-log "set " ,(propertize (symbol-name option)
-                                     'face 'font-lock-variable-name-face))
+         (muki:log "set " ,(propertize (symbol-name option)
+                                       'face 'font-lock-variable-name-face))
          (cl-psetq ,option ,value)
          (set-option ,@(cddr body))))))
 
@@ -74,8 +74,8 @@
   (when body
     (cl-letf ((option (car body)))
       `(progn
-         (my-log "enable " ,(propertize (symbol-name option)
-                                        'face 'font-lock-variable-name-face))
+         (muki:log "enable " ,(propertize (symbol-name option)
+                                          'face 'font-lock-variable-name-face))
          (cl-psetq ,option t)
          (enable-option ,@(cdr body))))))
 
@@ -83,28 +83,28 @@
   (when body
     (cl-letf ((option (car body)))
       `(progn
-         (my-log "disable " ,(propertize (symbol-name option)
-                                         'face 'font-lock-variable-name-face))
+         (muki:log "disable " ,(propertize (symbol-name option)
+                                           'face 'font-lock-variable-name-face))
          (cl-psetq ,option nil)
          (disable-option ,@(cdr body))))))
 
 (cl-defmacro enable-mode (mode-fn)
   `(progn
      (,mode-fn 1)
-     (my-log "enable mode " ,(propertize (symbol-name mode-fn)
-                                         'face 'font-lock-variable-name-face))))
+     (muki:log "enable mode " ,(propertize (symbol-name mode-fn)
+                                           'face 'font-lock-variable-name-face))))
 
 (cl-defmacro disable-mode (mode-fn)
   `(progn
      (,mode-fn -1)
-     (my-log "disable mode " ,(propertize (symbol-name mode-fn)
-                                          'face 'font-lock-variable-name-face))))
+     (muki:log "disable mode " ,(propertize (symbol-name mode-fn)
+                                            'face 'font-lock-variable-name-face))))
 
 ;;http://www.reddit.com/r/emacs/comments/umb24/expandfilename_is_good_for_path_concat_too/
 (cl-defun concat-path (&rest parts)
   (cl-reduce (lambda (a b) (expand-file-name b a)) parts))
 
-(cl-defun my-before-save-hook ()
+(cl-defun muki:before-save-hook ()
   (save-excursion
     (goto-char (point-min))
     (delete-trailing-whitespace)
@@ -118,7 +118,7 @@
       (replace-match  "((" nil nil))
     (indent-region (point-min) (point-max))))
 
-(cl-defun my-indent-buffer ()
+(cl-defun muki:indent-buffer ()
   "milkypostman/dotemacs/defun.el"
   (interactive)
   (delete-trailing-whitespace)
@@ -160,18 +160,18 @@ buffer is not visiting a file."
     (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
 
 ;;; colour util
-(cl-defun mytoh:colour-hsl-to-hex (h s l)
+(cl-defun muki:colour-hsl-to-hex (h s l)
   (cl-destructuring-bind (r g b)
       (color-hsl-to-rgb (/ h 360.0) (/ s 100.0) (/ l 100.0))
     (color-rgb-to-hex r g b)))
 
 ;;; my global map
-(define-prefix-command 'my-global-map)
-(global-set-key (kbd "C-c e") 'my-global-map)
-(cl-defmacro mytoh:define-global-key (key func)
+(define-prefix-command 'muki:global-map)
+(global-set-key (kbd "C-c e") 'muki:global-map)
+(cl-defmacro muki:define-global-key (key func)
   "define personal global key mappings"
   `(progn
-     (define-key my-global-map ,key ,func)
+     (define-key muki:global-map ,key ,func)
      (message "bind %s to %s" ,key (symbol-name ,func))))
 
 ;; smart kill word
@@ -190,7 +190,7 @@ buffer is not visiting a file."
   (back-to-indentation))
 
 
-(cl-defmacro mytoh:comment (&rest body)
+(cl-defmacro muki:comment (&rest body)
   t)
 
 (provide 'lib-util)

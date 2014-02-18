@@ -97,7 +97,7 @@
 
 ;; ag
 (req 'helm-ag
-     (setq helm-ag-source-type 'file-line))
+     (set-option helm-ag-source-type 'file-line))
 
 ;; cmd-t
 ;; (req 'helm-cmd-t
@@ -107,11 +107,14 @@
 
 ;; helm-ls-git
 (pak 'helm-ls-git
-     (mytoh:define-global-key (kbd "f") 'helm-browse-project))
+     (muki:define-global-key (kbd "f") 'helm-browse-project))
 
 ;; elisp-package
 (pak 'helm-elisp-package
-     (mytoh:define-global-key (kbd "P") 'helm-list-elisp-packages))
+     (muki:define-global-key (kbd "P") 'helm-list-elisp-packages))
 
+;; helm-git-grep
+(pak 'helm-git-grep
+     (muki:define-global-key (kbd "r") 'helm-git-grep))
 
 (provide 'paketti-helm)

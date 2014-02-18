@@ -1,7 +1,7 @@
 ;;; paketti-elfeed.el -*- lexical-binding: t -*-
 
 (pak 'elfeed
-     (mytoh:define-global-key (kbd "l") 'elfeed)
+     (muki:define-global-key (kbd "l") 'elfeed)
 
      ;; Somewhere in your .emacs file
      (setq elfeed-feeds

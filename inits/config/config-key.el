@@ -10,16 +10,16 @@
 
 (global-set-key [remap kill-whole-line] 'smart-kill-whole-line)
 
-(mytoh:define-global-key (kbd "p") 'package-list-packages)
+(muki:define-global-key (kbd "p") 'package-list-packages)
 
 ;;;; default compose mail
 (define-key global-map (kbd "C-x m") nil)
 
-(defun mytoh:dont-kill-emacs ()
+(defun muki:dont-kill-emacs ()
   (interactive)
   (error (substitute-command-keys "To exit emacs: \\[kill-emacs]")))
 
-(define-key global-map (kbd "C-x C-c") 'mytoh:dont-kill-emacs)
+(define-key global-map (kbd "C-x C-c") 'muki:dont-kill-emacs)
 
 ;;;; http://d.hatena.ne.jp/mooz/20100119/p1
 ;; C-q をプリフィックスキー化
@@ -29,7 +29,7 @@
 (global-set-key (kbd "C-q C-q") 'quoted-insert)
 
 ;; window-resizer は C-q C-r (resize) で
-(global-set-key (kbd "C-q C-r") 'my-window-resizer)
+(global-set-key (kbd "C-q C-r") 'muki:window-resizer)
 
 ;;; font
 (global-set-key (kbd "C-+") 'text-scale-adjust)
@@ -42,7 +42,7 @@
 (global-set-key (kbd "C-q k") 'windmove-up)
 
 ;; http://d.hatena.ne.jp/khiker/20100119/window_resize
-(defun my-window-resizer ()
+(defun muki:window-resizer ()
   "Control window size and position."
   (interactive)
   (let ((window-obj (selected-window))

@@ -1,7 +1,7 @@
 ;;; config-setting.el -*- lexical-binding: t -*-
 
 ;;;; user elisps
-(my-add-to-load-path (concat user-emacs-directory "elisp"))
+(muki:add-to-load-path (concat user-emacs-directory "elisp"))
 
 ;;disable startup message
 (enable-option inhibit-startup-screen)
@@ -133,8 +133,8 @@
                 split-width-threshold)
 
 ;;;; backup and autosave
-(setq make-backup-files nil) ; stop creating those backup~ files
-(setq auto-save-default nil)
+(disable-option make-backup-files) ; stop creating those backup~ files
+(disable-option auto-save-default)
 ;; (defvar backup-directory (expand-file-name "backups" user-emacs-directory))
 ;; (defvar autosave-directory (expand-file-name "autosaves" user-emacs-directory))
 ;; (set-option backup-directory-alist
@@ -146,8 +146,8 @@
 ;;;; recentf
 ;; save more recent files
 (set-option recentf-max-saved-items nil)
-(defvar my-recentf-exclude `(,(rx  ".el.gz" string-end) "archive-contents$" "-autoloads.el$"))
-(set-option recentf-exclude my-recentf-exclude)
+(defvar muki:recentf-exclude `(,(rx  ".el.gz" string-end) "archive-contents$" "-autoloads.el$"))
+(set-option recentf-exclude muki:recentf-exclude)
 (set-option recentf-auto-cleanup 10)
 ;;;; don't record symbolic link file name
 (enable-option find-file-visit-truename)
@@ -216,8 +216,15 @@
 (savehist-mode 1)
 (set-option history-length 99999999999)
 
+;;;; macro print level
+(set-option eval-expression-print-level nil)
+
 ;;;; completion
 ;; (add-to-list 'completion-styles 'initials)
 ;; (add-to-list 'completion-styles 'substring)
+
+;;;; theme
+(set-option muki:x-theme 'gruvbox)
+(set-option muki:term-theme 'moe-theme)
 
 (provide 'config-setting)

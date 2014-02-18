@@ -1,5 +1,5 @@
 
-(cl-defun minun:lisp-cleanup ()
+(cl-defun muki:lisp-cleanup ()
   (interactive)
   (save-excursion
     (goto-char (point-min))
@@ -17,7 +17,7 @@
     (goto-char (point-min))
     (while (re-search-forward (rx (group (+ word)) (+ space) "(") nil t)
       (replace-match "\\1 ("))
-    (while (re-search-forward (rx (group (in "\"")) (+ space) ")" ) nil t)
+    (while (re-search-forward (rx (group (in "\"")) (+ space) ")") nil t)
       (replace-match "\\1)"))
     ))
 

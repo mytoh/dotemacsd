@@ -6,10 +6,10 @@
      (add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
      (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
 
-     (defun my-diff-hl-update ()
+     (defun muki:diff-hl-update ()
        (with-current-buffer (current-buffer) (diff-hl-update)))
 
-     (add-hook 'magit-refresh-file-buffer-hook 'my-diff-hl-update))
+     (add-hook 'magit-refresh-file-buffer-hook 'muki:diff-hl-update))
 
 (provide 'paketti-diff-hl)
 

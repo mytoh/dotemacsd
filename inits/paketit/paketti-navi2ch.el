@@ -2,7 +2,7 @@
 
 ;; navi2ch
 (pak 'navi2ch
-     (mytoh:define-global-key (kbd "2") 'navi2ch))
+     (muki:define-global-key (kbd "2") 'navi2ch))
 
 (provide 'paketti-navi2ch)
 
