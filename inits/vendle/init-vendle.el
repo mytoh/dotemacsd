@@ -22,6 +22,7 @@
      (vendle:register "mytoh/fish-mode")
      (vendle:register "thierryvolpiatto/emacs-bmk-ext")
      (vendle:register "kawabata/aozora-view")
+     (vendle:register "syohex/emacs-rebuildfm")
      (vendle:register-theme "sabof/hyperplane-theme")
      (vendle:register-theme "emacs-jp/replace-colorthemes")
      (vendle:register-theme "djcb/dream-theme")
@@ -52,9 +53,9 @@
      ;; update plugins
      ;; (vendle:update-packages)
 
-     (pak 'scheme-keywords
-          (autoload 'scheme-keywords-mode "scheme-keywords")
-          (add-hook 'scheme-mode-hook 'scheme-keywords-mode))
+     (liby 'scheme-keywords
+           (autoload 'scheme-keywords-mode "scheme-keywords")
+           (add-hook 'scheme-mode-hook 'scheme-keywords-mode))
 
      ;; (nyan-mode t)
 
@@ -110,9 +111,9 @@
 
      (req 'bookmark-extensions)
 
-     (pak 'lehtifile-mode
-          (autoload 'lehtifile-mode "lehtifile-mode")
-          (add-to-list 'auto-mode-alist '("Lehtifile\\'" . lehtifile-mode)))
+     (liby 'lehtifile-mode
+           (autoload 'lehtifile-mode "lehtifile-mode")
+           (add-to-list 'auto-mode-alist '("Lehtifile\\'" . lehtifile-mode)))
 
      ;; ディレクトリ指定
      ;; ~/.emacs.d/ddskk/init is setting file
@@ -133,9 +134,12 @@
           (undohist-initialize)
           (setq undohist-ignored-files '("\\.git/COMMIT_EDITMSG")))
 
-     (req 'navi2ch-file-mode)
-     (setq navi2ch-file-open-with-shift-jis t)
-     (modify-coding-system-alist 'file "\\.dat$" 'shift_jis)
+     (req 'navi2ch-file-mode
+          (setq navi2ch-file-open-with-shift-jis t)
+          (modify-coding-system-alist 'file "\\.dat$" 'shift_jis))
+
+     (req 'rebuildfm)
+
      )
 
 

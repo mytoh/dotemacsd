@@ -3,9 +3,8 @@
 ;;; builtins
 
 ;; save curosr position
-(req 'saveplace
-     (setq-default save-place t))
-
+(liby 'saveplace
+      (setq-default save-place t))
 
 ;; checkdoc
 (req 'checkdoc)
@@ -38,7 +37,7 @@
 ;;; package list
 
 ;; install packages
-(setq *muki:paketti-list*
+(setq muki:paketti-list
       '(rainbow-delimiters
         auto-complete
         ac-ja
@@ -158,7 +157,7 @@
         highlight-defined
         all-ext))
 
-(defvar *muki:paketti-list-prog-modes*
+(defvar muki:paketti-list-prog-modes
   '(stumpwm-mode
     coffee-mode
     lua-mode
@@ -170,10 +169,11 @@
     markdown-mode
     vimrc-mode
     ))
-(append-to-list *muki:paketti-list* *muki:paketti-list-prog-modes* )
+(append-to-list muki:paketti-list muki:paketti-list-prog-modes)
 
-(defvar *muki:paketti-list-colour-themes*
+(defvar muki:paketti-list-colour-themes
   '(;; themes
+    darkburn-theme
     tommyh-theme
     django-theme
     github-theme
@@ -247,9 +247,9 @@
     steady-theme
     pastels-on-dark-theme
     leuven-theme))
-(append-to-list *muki:paketti-list* *muki:paketti-list-colour-themes*)
+(append-to-list muki:paketti-list muki:paketti-list-colour-themes)
 
-(defvar *muki:paketti-list-helm*
+(defvar muki:paketti-list-helm
   '(helm
     helm-git
     helm-git-grep
@@ -272,9 +272,9 @@
     helm-ag-r
     wgrep-helm
     ))
-(append-to-list *muki:paketti-list* *muki:paketti-list-helm*)
+(append-to-list muki:paketti-list muki:paketti-list-helm)
 
-(defvar *muki:paketti-list-org*
+(defvar muki:paketti-list-org
   '(org
     org-magit
     org-plus-contrib
@@ -285,12 +285,12 @@
     orglink
     orglue
     ))
-(append-to-list *muki:paketti-list* *muki:paketti-list-org*)
+(append-to-list muki:paketti-list muki:paketti-list-org)
 
 (cl-defun muki:paketti-update ()
   (unless package-archive-contents
     (package-refresh-contents))
-  (cl-dolist (p *muki:paketti-list*)
+  (cl-dolist (p muki:paketti-list)
     (unless (package-installed-p p)
       (message "installing %s"  p)
       (package-install p))))
@@ -395,7 +395,7 @@
     ))
 
 
-(defvar *muki:paketit-list-helm*
+(defvar muki:paketit-list-helm
   '(;; helm
     paketti-helm
     paketti-helm-delicious
@@ -409,9 +409,9 @@
     paketti-wgrep-helm
 
     ))
-(append-to-list init-paketit *muki:paketit-list-helm*)
+(append-to-list init-paketit muki:paketit-list-helm)
 
-(defvar *muki:paketit-list-org*
+(defvar muki:paketit-list-org
   '(paketti-org
     ;; paketti-org-plus-contrib
     ;; paketti-org-bullets
@@ -421,7 +421,7 @@
     paketti-navi-mode
     paketti-orglink
     ))
-(append-to-list init-paketit *muki:paketit-list-org*)
+(append-to-list init-paketit muki:paketit-list-org)
 
 (mapc 'require init-paketit)
 
@@ -436,6 +436,6 @@
 
 
 ;; hackernews
-(req 'hackernews)
+(pak 'hackernews)
 
 (provide 'init-paketti)

@@ -4,7 +4,7 @@
   (cl-letf ((my-paths `(,(expand-file-name "~/huone/homebrew/bin"))))
     (cl-dolist (dir my-paths)
       ;; sakito.jp/emacs/emacsshell.html
-      (when (and (file-exists-p dir) (not (member dir exec-path)))
+      (when (and (file-directory-p dir) (not (member dir exec-path)))
         (setenv "PATH" (concat dir ":" (getenv "PATH")))
         (cl-dolist (p dir)
           (add-to-list 'exec-path p)))))

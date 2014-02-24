@@ -32,6 +32,15 @@
      ,@body)
     (t (message "%s not found" (symbol-name ,package)))))
 
+(cl-defmacro liby (library &rest body)
+  "execute body when library found"
+  `(cond
+    ((locate-library (symbol-name ,library))
+     (muki:log "found library " (propertize (symbol-name ,library)
+                                            'face 'font-lock-variable-name-face))
+     ,@body)
+    (t (message "%s not found" (symbol-name ,library)))))
+
 (cl-defmacro add-hook-fn (name &rest body)
   "(add-hook-fn 'php-mode-hook
                   (require 'symfony)

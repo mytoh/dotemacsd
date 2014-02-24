@@ -41,6 +41,7 @@
    (1 . require)
    (1 . req)
    (1 . define-emms-simple-player)
+   (1 . liby)
    (1 . pak)))
 
 (font-lock-add-keywords

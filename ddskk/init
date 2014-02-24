@@ -1,6 +1,6 @@
 ;;; -*- mode: emacs-lisp;lexical-binding: t -*-
 
-;; us act for dvorak
+;; use act for dvorak
 (setq skk-use-act t)
 
 ;; 動的候補表示

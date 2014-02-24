@@ -133,8 +133,11 @@
                 split-width-threshold)
 
 ;;;; backup and autosave
-(disable-option make-backup-files) ; stop creating those backup~ files
+;;disable backup
+(enable-option backup-inhibited)
+;;disable auto save
 (disable-option auto-save-default)
+(disable-option make-backup-files) ; stop creating those backup~ files
 ;; (defvar backup-directory (expand-file-name "backups" user-emacs-directory))
 ;; (defvar autosave-directory (expand-file-name "autosaves" user-emacs-directory))
 ;; (set-option backup-directory-alist
