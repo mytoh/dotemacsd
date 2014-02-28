@@ -1,7 +1,7 @@
 ;;; config-setting.el -*- lexical-binding: t -*-
 
 ;;;; user elisps
-(muki:add-to-load-path (concat user-emacs-directory "elisp"))
+(muki:add-to-load-path (muki:user-emacs-directory "elisp"))
 
 ;;disable startup message
 (enable-option inhibit-startup-screen)
@@ -228,6 +228,6 @@
 
 ;;;; theme
 (set-option muki:x-theme 'gruvbox)
-(set-option muki:term-theme 'moe-theme)
+(set-option muki:term-theme 'moe-dark)
 
 (provide 'config-setting)

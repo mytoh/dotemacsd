@@ -1,5 +1,5 @@
 
-(add-subdirs-to-load-path (concat user-emacs-directory "inits/elisp"))
+(add-subdirs-to-load-path (muki:user-emacs-directory "inits/elisp"))
 
 ;; (req 'csh-mode
 ;;      (setq csh-mode-hook

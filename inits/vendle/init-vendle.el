@@ -1,11 +1,12 @@
 ;;; init-vendle.el -*- lexical-binding: t -*-
 
-(add-to-list 'load-path (expand-file-name "~/huone/projektit/emacs-vendle"))
+(muki:add-to-load-path (expand-file-name "~/huone/projektit/emacs-vendle"))
 
 (req 'vendle
 
      ;; initialize vendle
-     (cl-letf ((muki:vendle-directory (expand-file-name (concat user-emacs-directory (file-name-as-directory "vendle")))))
+     (cl-letf ((muki:vendle-directory
+                (muki:user-emacs-directory (file-name-as-directory "vendle"))))
        (vendle:initialize muki:vendle-directory))
 
      (vendle:register "jonathanchu/emacs-powerline")
@@ -16,7 +17,7 @@
      (vendle:register "moriyamahiroshi/seijiseikana-el")
      (vendle:register "kenoss/debug-print")
      (vendle:register "emacsmirror/eldoc-extension")
-     (vendle:register "emacsmirror/mew")
+     ;; (vendle:register "emacsmirror/mew")
      (vendle:register "tj64/outxxtra")
      (vendle:register "ober/zone-matrix")
      (vendle:register "mytoh/fish-mode")
@@ -27,17 +28,26 @@
      (vendle:register-theme "emacs-jp/replace-colorthemes")
      (vendle:register-theme "djcb/dream-theme")
      (vendle:register-theme "owainlewis/emacs-color-themes" '(:path "themes"))
+     (vendle:register-theme "FrankRuben/cuatroporocho-theme")
+     (vendle:register-theme "neomantic/Emacs-Sunburst-Color-Theme")
+     (vendle:register-theme "ranmocy/amelie-theme")
+     (vendle:register-theme "ccann/badger-theme")
+     (vendle:register-theme "yuttie/steady-theme-emacs")
+     (vendle:register-theme "rozh/grandpunk-theme")
+     (vendle:register-theme "nhunzaker/emacs-laravel-plus-theme")
 
-     (cl-flet ((muki:add-project-root (path)
-                                      (vendle:register-local (expand-file-name path "~/huone/projektit"))))
-       (muki:add-project-root  "emacs-flatline")
-       (muki:add-project-root "helm-ypv")
-       (muki:add-project-root "company-scheme")
-       (muki:add-project-root "emacs-scheme-keywords")
-       (muki:add-project-root "emacs-lehtifile-mode")
-       (muki:add-project-root "helm-alku")
-       (muki:add-project-root "emacs-navi2ch-file-mode")
-       (muki:add-project-root "emacs-eshell-session"))
+
+     (cl-flet ((add-project-root (path)
+                                 (vendle:register-local (expand-file-name path "~/huone/projektit"))))
+       (add-project-root  "emacs-flatline")
+       (add-project-root "helm-ypv")
+       (add-project-root "company-scheme")
+       (add-project-root "emacs-scheme-keywords")
+       (add-project-root "emacs-lehtifile-mode")
+       (add-project-root "helm-alku")
+       (add-project-root "emacs-navi2ch-file-mode")
+       (add-project-root "emacs-eshell-session")
+       (add-project-root "helm-project-buffer"))
      (when (file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
        (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk"))
      ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
@@ -139,6 +149,10 @@
           (modify-coding-system-alist 'file "\\.dat$" 'shift_jis))
 
      (req 'rebuildfm)
+
+     (liby 'helm-project-buffer
+           (autoload 'helm-project-buffer "helm-project-buffer")
+           (define-key global-map (kbd "C-c p") 'helm-project-buffer))
 
      )
 

@@ -2,9 +2,10 @@
 
 (liby 'helm-alku
 
-      (autoload 'helm-alku-program "helm-alku")
       (autoload 'helm-alku "helm-alku")
+      (autoload 'helm-alku-program "helm-alku")
       (autoload 'helm-alku-directory "helm-alku")
+      (autoload 'helm-alku-vihko "helm-alku")
 
       (with-eval-after-load 'helm-alku
         (set-option helm-alku-directory-list
@@ -26,7 +27,9 @@
                       "caja_no_desktop.sh"  )))
 
       (muki:define-global-key (kbd "c")  'helm-alku-program)
-      (muki:define-global-key (kbd "h") 'helm-alku))
+      (muki:define-global-key (kbd "n") 'helm-alku-vihko)
+      (muki:define-global-key (kbd "h") 'helm-alku)
+      )
 
 (provide 'init-helm-alku)
 

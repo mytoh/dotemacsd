@@ -39,6 +39,7 @@
 ;; install packages
 (setq muki:paketti-list
       '(rainbow-delimiters
+        rainbow-blocks
         auto-complete
         ac-ja
         ac-slime
@@ -155,6 +156,7 @@
         lingr
         smartrep
         highlight-defined
+        sublimity
         all-ext))
 
 (defvar muki:paketti-list-prog-modes
@@ -173,6 +175,7 @@
 
 (defvar muki:paketti-list-colour-themes
   '(;; themes
+    colorsarenice-theme
     darkburn-theme
     tommyh-theme
     django-theme
@@ -271,6 +274,7 @@
     helm-dictionary
     helm-ag-r
     wgrep-helm
+    helm-mode-manager
     ))
 (append-to-list muki:paketti-list muki:paketti-list-helm)
 
@@ -307,6 +311,7 @@
     paketti-expand-region
     paketti-multiple-cursors
     paketti-rainbow-delimiters
+    ;; paketti-rainbow-blocks
     paketti-company-mode
     paketti-tabbar
     paketti-smartparens
@@ -402,7 +407,8 @@
     paketti-helm-helm-commands
     paketti-helm-orgcard
     paketti-helm-swoop
-    paketti-helm-ag-r
+    ;; paketti-helm-ag-r
+    paketti-helm-ag
     paketti-helm-company
     paketti-helm-dictionary
     paketti-helm-recoll

@@ -32,7 +32,9 @@
                  helm-buffers-favorite-modes
                  (append helm-buffers-favorite-modes
                          '(picture-mode artist-mode))
-                 helm-buffer-max-length 50)
+                 helm-buffer-max-length 50
+                 )
+     (add-to-list 'helm-boring-file-regexp-list  "\\.elc$")
 
      (enable-option helm-M-x-always-save-history)
      (disable-option enable-recursive-minibuffers
@@ -42,7 +44,8 @@
      ;;;; helm-files
      (enable-option helm-ff-lynx-style-map
                     helm-ff-transformer-show-only-basename
-                    helm-ff-search-library-in-sexp)
+                    helm-ff-search-library-in-sexp
+                    helm-ff-skip-boring-files)
      (disable-option helm-ff-newfile-prompt-p)
 
      ;;;; match plugin
@@ -95,9 +98,6 @@
 (req 'helm-descbinds
      (helm-descbinds-mode))
 
-;; ag
-(req 'helm-ag
-     (set-option helm-ag-source-type 'file-line))
 
 ;; cmd-t
 ;; (req 'helm-cmd-t

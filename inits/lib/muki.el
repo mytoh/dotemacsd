@@ -2,12 +2,17 @@
 
 (eval-when-compile
   (require 'cl-lib)
+  (require 'subr-x)
   (require 'color))
 
 (cl-defmacro muki:log (&rest messages)
   `(progn
      (message (concat (propertize ">> " 'face 'font-lock-doc-face)
                       ,@messages) " ...")))
+
+(cl-defun muki:user-emacs-directory (&optional path)
+  (expand-file-name (concat user-emacs-directory
+                            (string-remove-prefix "/" path))))
 
 ;; http://e-arrows.sakura.ne.jp/2010/03/macros-in-emacs-el.html
 (cl-defmacro req (lib &rest body)
@@ -176,7 +181,10 @@ buffer is not visiting a file."
 
 ;;; my global map
 (define-prefix-command 'muki:global-map)
-(global-set-key (kbd "C-c e") 'muki:global-map)
+(defcustom muki:global-prefix-key
+  "C-c e"
+  "personal global prefix key")
+(global-set-key (kbd muki:global-prefix-key) 'muki:global-map)
 (cl-defmacro muki:define-global-key (key func)
   "define personal global key mappings"
   `(progn
@@ -202,4 +210,4 @@ buffer is not visiting a file."
 (cl-defmacro muki:comment (&rest body)
   t)
 
-(provide 'lib-util)
+(provide 'muki)
