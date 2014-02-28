@@ -35,6 +35,7 @@
                  helm-buffer-max-length 50
                  )
      (add-to-list 'helm-boring-file-regexp-list  "\\.elc$")
+     (add-to-list 'helm-boring-file-regexp-list  "\\.git/COMMIT_EDITMSG$")
 
      (enable-option helm-M-x-always-save-history)
      (disable-option enable-recursive-minibuffers
