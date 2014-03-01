@@ -226,6 +226,9 @@
 ;; (add-to-list 'completion-styles 'initials)
 ;; (add-to-list 'completion-styles 'substring)
 
+;;;; visit true file location
+(enable-option find-file-visit-truename)
+
 ;;;; theme
 (set-option muki:x-theme 'gruvbox)
 (set-option muki:term-theme 'moe-dark)
