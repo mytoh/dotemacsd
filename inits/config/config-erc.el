@@ -1,12 +1,12 @@
 ;;; config-erc.el -*- lexical-binding: t -*-
 
 (liby 'erc
-      ;;(erc-autojoin-mode 1)
+      (erc-autojoin-mode 1)
 
-      ;;(erc :server "irc.freenode.net" :port 6667 :nick "teask")
+      ;;(erc :server "chat.freenode.net" :port 6667 :nick "teask")
       (with-eval-after-load "erc"
         (setq erc-autojoin-channels-alist
-              '(("freenode.net"
+              '(("chat.freenode.net"
                  "#emacs"
                  ;; "#scheme" "#freebsd-src" "#erc"
                  ;;"#lisp" "#github" "#vim" "#git" "#zsh" "#tmux" "#xmonad"
