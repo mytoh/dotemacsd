@@ -7,6 +7,7 @@ alias la ls -a
 alias tk talikko $*
 alias futaba pikkukivi futaba $*
 alias yotsuba pikkukivi yotsuba $*
+alias ylilauta pikkukivi ylilauta $*
 alias , napa $*
 alias ag ag --nopager
 alias pam rm -rf $*
