@@ -157,6 +157,10 @@
         smartrep
         highlight-defined
         sublimity
+        erc-hl-nicks
+        erc-image
+        erc-tweet
+        erc-youtube
         all-ext))
 
 (defvar muki:paketti-list-prog-modes
@@ -367,6 +371,8 @@
     paketti-ace-jump-mode
     paketti-highlight-defined
     paketti-tumblesocks
+    paketti-erc-image
+    paketti-erc-tweet
     ;; paketti-flylisp
     ;; paketti-indent-guide
     ;; paketti-circe
