@@ -11,7 +11,7 @@ alias ylilauta pikkukivi ylilauta $*
 alias , napa $*
 alias ag ag --nopager
 alias pam rm -rf $*
-alias ke kill-emacs
+alias ke save-buffers-kill-emacs
 alias cde cd ~/huone/git/emacs
 
 alias gpl git pull
