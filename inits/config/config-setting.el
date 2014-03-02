@@ -138,6 +138,7 @@
 ;;disable auto save
 (disable-option auto-save-default)
 (disable-option make-backup-files) ; stop creating those backup~ files
+(enable-option delete-auto-save-files)
 ;; (defvar backup-directory (expand-file-name "backups" user-emacs-directory))
 ;; (defvar autosave-directory (expand-file-name "autosaves" user-emacs-directory))
 ;; (set-option backup-directory-alist
@@ -220,7 +221,8 @@
 (set-option history-length 99999999999)
 
 ;;;; macro print level
-(set-option eval-expression-print-level nil)
+(disable-option eval-expression-print-level)
+(disable-option eval-expression-print-length)
 
 ;;;; completion
 ;; (add-to-list 'completion-styles 'initials)

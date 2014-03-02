@@ -13,7 +13,6 @@
      (global-set-key (kbd "C-M-z") 'helm-resume)
      (global-set-key [remap find-file] 'helm-find-files)
      (global-set-key [remap occur] 'helm-occur)
-     (global-set-key (kbd "C-x b") 'helm-buffers-list)
      (global-set-key [remap list-buffers] 'helm-buffers-list)
      (global-set-key [remap jump-to-register] 'helm-register)
      (global-set-key [remap dabbrev-expand]   'helm-dabbrev)

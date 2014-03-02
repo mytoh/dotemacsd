@@ -20,6 +20,7 @@
   (error (substitute-command-keys "To exit emacs: \\[kill-emacs]")))
 
 (global-set-key (kbd "C-x C-c") 'muki:dont-kill-emacs)
+(global-set-key (kbd "C-x C-z") 'muki:dont-kill-emacs)
 
 ;;;; http://d.hatena.ne.jp/mooz/20100119/p1
 ;; C-q をプリフィックスキー化

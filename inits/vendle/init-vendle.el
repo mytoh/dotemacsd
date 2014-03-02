@@ -35,7 +35,7 @@
      (vendle:register-theme "yuttie/steady-theme-emacs")
      (vendle:register-theme "rozh/grandpunk-theme")
      (vendle:register-theme "nhunzaker/emacs-laravel-plus-theme")
-
+     (vendle:register-theme "nishikawasasaki/ns-milk-theme")
 
      (cl-flet ((add-project-root (path)
                                  (vendle:register-local (expand-file-name path "~/huone/projektit"))))
@@ -152,7 +152,7 @@
 
      (liby 'helm-project-buffer
            (autoload 'helm-project-buffer "helm-project-buffer")
-           (global-set-key (kbd "C-c p") 'helm-project-buffer))
+           (global-set-key (kbd "C-x b") 'helm-project-buffer))
 
      )
 

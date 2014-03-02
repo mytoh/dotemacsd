@@ -16,8 +16,6 @@
        (defvar monokai-add-font-lock-keywords t)
        (load-theme muki:term-theme t)))
 
-(set-option fringe-mode 'no-fringes)
-
 ;;;; cursor shape
 (add-to-list 'default-frame-alist '(cursor-type . hollow))
 (set-cursor-color (muki:colour-hsl-to-hex 137 65 50))

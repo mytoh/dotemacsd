@@ -15,7 +15,7 @@
        (define-key helm-swoop-map (kbd "M-i") 'helm-multi-swoop-all-from-helm-swoop))
 
      ;; Save buffer when helm-multi-swoop-edit complete
-     (setq helm-multi-swoop-edit-save t)
+     (enable-option helm-multi-swoop-edit-save)
 
      ;; 値がtの場合はウィンドウ内に分割、nilなら別のウィンドウを使用
      (setq helm-swoop-split-with-multiple-windows nil)

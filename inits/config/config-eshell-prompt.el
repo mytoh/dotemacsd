@@ -16,10 +16,10 @@
   (propertize s 'face f))
 
 (cl-defun muki:eshell-git-branch ()
-  (cl-letf ((branches (vc-git-branches)))
-    (if (null (car branches))
+  (cl-letf ((curbr (car (vc-git-branches))))
+    (if (null curbr)
         ""
-      (car (vc-git-branches)))))
+      curbr)))
 
 (cl-defun muki:eshell-prompt-function ()
   (concat
