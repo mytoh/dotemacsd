@@ -6,18 +6,18 @@
      (enable-mode helm-adaptative-mode)
      (enable-mode helm-match-plugin-mode)
 
-     (define-key global-map (kbd "C-c h") 'helm-mini)
-     (define-key global-map (kbd "M-x") 'helm-M-x)
-     (define-key global-map (kbd "C-c C-m") 'helm-M-x)
-     (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
-     (define-key global-map (kbd "C-M-z") 'helm-resume)
-     (define-key global-map [remap find-file] 'helm-find-files)
-     (define-key global-map [remap occur] 'helm-occur)
-     (define-key global-map (kbd "C-x b") 'helm-buffers-list)
-     (define-key global-map [remap list-buffers] 'helm-buffers-list)
-     (define-key global-map [remap jump-to-register] 'helm-register)
-     (define-key global-map [remap dabbrev-expand]   'helm-dabbrev)
-     (define-key global-map [remap find-tag]         'helm-etags-select)
+     (global-set-key (kbd "C-c h") 'helm-mini)
+     (global-set-key (kbd "M-x") 'helm-M-x)
+     (global-set-key (kbd "C-c C-m") 'helm-M-x)
+     (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+     (global-set-key (kbd "C-M-z") 'helm-resume)
+     (global-set-key [remap find-file] 'helm-find-files)
+     (global-set-key [remap occur] 'helm-occur)
+     (global-set-key (kbd "C-x b") 'helm-buffers-list)
+     (global-set-key [remap list-buffers] 'helm-buffers-list)
+     (global-set-key [remap jump-to-register] 'helm-register)
+     (global-set-key [remap dabbrev-expand]   'helm-dabbrev)
+     (global-set-key [remap find-tag]         'helm-etags-select)
 
      (define-key helm-map (kbd "C-M-n") 'helm-next-source)
      (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
@@ -102,7 +102,7 @@
 
 ;; cmd-t
 ;; (req 'helm-cmd-t
-;;      (define-key global-map (kbd "M-t") 'helm-cmd-t))
+;;      (global-set-key (kbd "M-t") 'helm-cmd-t))
 ;; (req 'helm-C-x-b
 ;;      (define-key global-map [remap switch-to-buffer] 'helm-C-x-b))
 

@@ -13,17 +13,17 @@
 (muki:define-global-key (kbd "p") 'package-list-packages)
 
 ;;;; default compose mail
-(define-key global-map (kbd "C-x m") nil)
+(global-unset-key (kbd "C-x m"))
 
 (defun muki:dont-kill-emacs ()
   (interactive)
   (error (substitute-command-keys "To exit emacs: \\[kill-emacs]")))
 
-(define-key global-map (kbd "C-x C-c") 'muki:dont-kill-emacs)
+(global-set-key (kbd "C-x C-c") 'muki:dont-kill-emacs)
 
 ;;;; http://d.hatena.ne.jp/mooz/20100119/p1
 ;; C-q をプリフィックスキー化
-(define-key global-map (kbd "C-q") (make-sparse-keymap))
+(global-set-key (kbd "C-q") (make-sparse-keymap))
 
 ;; quoted-insert は C-q C-q へ割り当て
 (global-set-key (kbd "C-q C-q") 'quoted-insert)

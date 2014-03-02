@@ -115,7 +115,7 @@
 
      (req 'debug-print
           (debug-print-init)
-          (define-key global-map (kbd "C-x C-e") 'debug-print-eval-last-sexp))
+          (global-set-key (kbd "C-x C-e") 'debug-print-eval-last-sexp))
 
      ;; (req 'aozora-view)
 
@@ -130,7 +130,7 @@
      (set-option skk-user-directory "~/.emacs.d/ddskk/")
      (req 'skk-autoloads
           ;; C-x C-j で skk モードを起動
-          (define-key global-map (kbd "C-x C-j") 'skk-mode)
+          (global-set-key (kbd "C-x C-j") 'skk-mode)
           ;; enable skk mode by pressing カタカナ/ひらがな key
           (global-set-key [hiragana-katakana] 'skk-mode)
           ;; set default input method to skk
@@ -152,10 +152,9 @@
 
      (liby 'helm-project-buffer
            (autoload 'helm-project-buffer "helm-project-buffer")
-           (define-key global-map (kbd "C-c p") 'helm-project-buffer))
+           (global-set-key (kbd "C-c p") 'helm-project-buffer))
 
      )
-
 
 (provide 'init-vendle)
 

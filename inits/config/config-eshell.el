@@ -33,9 +33,9 @@
 (autoload 'eshell-session:new "eshell-session")
 
 (define-prefix-command 'muki:eshell-session-map)
-(define-key global-map (kbd "C-z") 'muki:eshell-session-map)
+(global-set-key (kbd "C-z") 'muki:eshell-session-map)
 
-(define-key global-map (kbd "C-z C-z") 'eshell-session:switch)
+(global-set-key (kbd "C-z C-z") 'eshell-session:switch)
 
 (cl-defun muki:eshell-mode-hook ()
   (define-key eshell-mode-map (kbd "C-z") (make-sparse-keymap))
@@ -45,6 +45,6 @@
 (add-hook 'eshell-mode-hook 'muki:eshell-mode-hook)
 
 (autoload 'helm-eshell-session "helm-eshell-session")
-(define-key global-map (kbd "C-z h") 'helm-eshell-session)
+(global-set-key (kbd "C-z h") 'helm-eshell-session)
 
 (provide 'config-eshell)
