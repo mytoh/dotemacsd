@@ -20,7 +20,7 @@
 
      (set-face-attribute 'tabbar-selected nil
                          :foreground "#ffffff"
-                         :background "#7b7b8b"
+                         :background "#6b6b7b"
                          :box nil)
      (set-face-attribute 'tabbar-unselected nil
                          :foreground "#7b7b8b"
