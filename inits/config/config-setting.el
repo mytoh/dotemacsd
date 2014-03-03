@@ -232,7 +232,7 @@
 (enable-option find-file-visit-truename)
 
 ;;;; theme
-(set-option muki:x-theme 'gruvbox)
+(set-option muki:x-theme 'soothe)
 (set-option muki:term-theme 'moe-dark)
 
 (provide 'config-setting)

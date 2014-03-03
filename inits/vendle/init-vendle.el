@@ -47,6 +47,7 @@
        (add-project-root "helm-alku")
        (add-project-root "emacs-navi2ch-file-mode")
        (add-project-root "emacs-eshell-session")
+       (add-project-root "emacs-eshell-alias")
        (add-project-root "helm-project-buffer"))
      (when (file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
        (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk"))
@@ -145,8 +146,7 @@
           (setq undohist-ignored-files '("\\.git/COMMIT_EDITMSG")))
 
      (req 'navi2ch-file-mode
-          (setq navi2ch-file-open-with-shift-jis t)
-          (modify-coding-system-alist 'file "\\.dat$" 'shift_jis))
+          (setq navi2ch-file-open-with-shift-jis t))
 
      (req 'rebuildfm)
 
@@ -154,6 +154,7 @@
            (autoload 'helm-project-buffer "helm-project-buffer")
            (global-set-key (kbd "C-x b") 'helm-project-buffer))
 
+     ;; (req 'eshell-alias)
      )
 
 (provide 'init-vendle)

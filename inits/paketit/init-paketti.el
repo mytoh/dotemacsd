@@ -179,6 +179,7 @@
 
 (defvar muki:paketti-list-colour-themes
   '(;; themes
+    tango-plus-theme
     colorsarenice-theme
     darkburn-theme
     tommyh-theme
