@@ -126,7 +126,7 @@
 
      (liby 'lehtifile-mode
            (autoload 'lehtifile-mode "lehtifile-mode")
-           (add-to-list 'auto-mode-alist '("Lehtifile\\'" . lehtifile-mode)))
+           (add-to-list 'auto-mode-alist '("/Lehtifile\\'" . lehtifile-mode)))
 
      ;; ディレクトリ指定
      ;; ~/.emacs.d/ddskk/init is setting file
