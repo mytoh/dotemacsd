@@ -1,24 +1,46 @@
 
+;; company-in-string-or-comment
+(defun muki:in-string-or-comment ()
+  (let ((ppss (syntax-ppss)))
+    (or (car (setq ppss (nthcdr 3 ppss)))
+        (car (setq ppss (cdr ppss)))
+        (nth 3 ppss))))
+
 (cl-defun muki:lisp-cleanup ()
   (interactive)
   (save-excursion
     (goto-char (point-min))
-    (while (re-search-forward ")\s+)" nil t)
-      (replace-match "))"))
-    (goto-char (point-min))
-    (while (re-search-forward "(\s+(" nil t)
-      (replace-match "(("))
-    (goto-char (point-min))
-    (while (re-search-forward (rx (group (+ word)) (+ space) ")" ) nil t)
-      (replace-match "\\1)"))
-    (goto-char (point-min))
-    (while (re-search-forward (rx "(" (+ space) (group (+ word))) nil t)
-      (replace-match "(\\1"))
-    (goto-char (point-min))
-    (while (re-search-forward (rx (group (+ word)) (+ space) "(") nil t)
-      (replace-match "\\1 ("))
-    (while (re-search-forward (rx (group (in "\"")) (+ space) ")") nil t)
-      (replace-match "\\1)"))
-    ))
+
+    (save-excursion
+      (while (re-search-forward ")\s+)" nil t)
+        (when (not (muki:in-string-or-comment))
+          (replace-match "))"))))
+    (save-excursion
+      (while (re-search-forward "(\s+("nil t)
+        (when (not (muki:in-string-or-comment))
+          (replace-match "(("))))
+
+    (save-excursion
+      (while (re-search-forward (rx (group (+ word)) symbol-end (+ space) ")") nil t)
+        (when (not (muki:in-string-or-comment))
+          (replace-match "\\1)"))))
+    (save-excursion
+      (while (re-search-forward (rx "(" (+ space) symbol-start (group (+ word))) nil t)
+        (when (not (muki:in-string-or-comment))
+          (replace-match "(\\1"))))
+
+    (save-excursion
+      (while (re-search-forward (rx (group (+ word)) (+ space) "(") nil t)
+        (when (not (muki:in-string-or-comment))
+          (replace-match "\\1 ("))))
+
+    (save-excursion
+      (while (re-search-forward (rx (group (in "\"")) (+ space) ")") nil t)
+        (when (not (muki:in-string-or-comment))
+          (replace-match "\\1)"))))
+    (save-excursion
+      (while (re-search-forward (rx "(" (+ space) (group (in "\""))) nil t)
+        (when (not (muki:in-string-or-comment))
+          (replace-match "(\\1"))))))
 
 (provide 'lang-lisp)
