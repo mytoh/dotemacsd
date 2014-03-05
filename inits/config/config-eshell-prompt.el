@@ -1,13 +1,13 @@
 
-(defface muki:eshell-pwd-face
+(defface muki:eshell-pwd
   '((t (:foreground "#93b8bb")))
   "eshell prompt current directory face")
 
-(defface muki:eshell-char-face
+(defface muki:eshell-char
   '((t (:foreground "#e6ae2e")))
   "eshell prompt prompt character face")
 
-(defface muki:eshell-branch-face
+(defface muki:eshell-branch
   '((t (:foreground "#36ae9e")))
   "eshell prompt prompt branch face")
 
@@ -24,11 +24,11 @@
 (cl-defun muki:eshell-prompt-function ()
   (concat
    "[0m"
-   (muki:eshell-propertize (abbreviate-file-name (eshell/pwd)) 'muki:eshell-pwd-face)
+   (muki:eshell-propertize (abbreviate-file-name (eshell/pwd)) 'muki:eshell-pwd)
    "  "
-   (muki:eshell-propertize (muki:eshell-git-branch) 'muki:eshell-branch-face)
+   (muki:eshell-propertize (muki:eshell-git-branch) 'muki:eshell-branch)
    "\n"
-   (muki:eshell-propertize "X / _ / X" 'muki:eshell-char-face)
+   (muki:eshell-propertize "X / _ / X" 'muki:eshell-char)
    " "))
 
 ;; remove highlight, must be set
