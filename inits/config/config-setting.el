@@ -72,7 +72,7 @@
 (delete-selection-mode 1)
 
 ;;;; highlight current line
-(defface hlline-face
+(defface muki:hlline
   '((((class color)
       (background dark))
      (:background "dark slate gray"))
@@ -82,7 +82,7 @@
     (t
      ()))
   "*Face used by hl-line.")
-(set-option hl-lineface 'hlline-face)
+(set-option hl-lineface 'muki:hlline)
 (global-hl-line-mode)
 
 ;;;; display keys
