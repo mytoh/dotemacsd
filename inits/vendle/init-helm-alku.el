@@ -24,11 +24,11 @@
                       "firefox"
                       "pcmanfm"
                       "thunar"
-                      "caja_no_desktop.sh"  )))
+                      "caja_no_desktop.sh")))
 
       (muki:define-global-key (kbd "c")  'helm-alku-program)
       (muki:define-global-key (kbd "n") 'helm-alku-vihko)
-      (muki:define-global-key (kbd "h") 'helm-alku)
+      (global-set-key (kbd "C-c h") 'helm-alku)
       )
 
 (provide 'init-helm-alku)
