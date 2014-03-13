@@ -11,7 +11,8 @@
 
 ;; 各ファイルによってテンプレートを切り替える
 (setq auto-insert-alist
-      (nconc '(("\\.el$" . ["template.el" mytoh:elisp-template]))
+      (nconc '(("\\.el\\'" . ["template.el" muki:elisp-template])
+               ("\\.scm\\'" . ["template.scm" muki:scheme-template]))
              auto-insert-alist))
 (require 'cl-lib)
 
@@ -19,7 +20,7 @@
 (defvar template-replacements-alists
   '(("%file%"             . (lambda () (file-name-nondirectory (buffer-file-name))))))
 
-(defun mytoh:elisp-template ()
+(defun muki:elisp-template ()
   (time-stamp)
   (mapc #'(lambda(c)
             (progn
@@ -28,6 +29,17 @@
         template-replacements-alists)
   (goto-char (point-max))
   (message "done."))
+
+(defun muki:scheme-template ()
+  (time-stamp)
+  (mapc #'(lambda(c)
+            (progn
+              (goto-char (point-min))
+              (replace-string (car c) (funcall (cdr c)) nil)))
+        template-replacements-alists)
+  (goto-char (point-max))
+  (message "done."))
+
 (add-hook 'find-file-not-found-hooks #'auto-insert)
 
 (provide 'config-autoinsert)

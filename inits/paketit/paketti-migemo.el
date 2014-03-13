@@ -2,7 +2,7 @@
 (when (executable-find "cmigemo")
   (req 'migemo
        (set-option migemo-command "cmigemo")
-       (set-option migemo-dictionary "/usr/local/share/cmigemo/utf-8/migemo-dict")
+       (set-option migemo-dictionary "~/huone/ohjelmat/cmigemo/share/migemo/utf-8")
        (set-option migemo-options '("-q" "--emacs"))
        (disable-option migemo-user-dictionary)
        (disable-option migemo-regex-dictionary)

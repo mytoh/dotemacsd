@@ -41,7 +41,7 @@
       '(rainbow-delimiters
         rainbow-blocks
         auto-complete
-        ac-ja
+        ;; ac-ja
         ac-slime
         bookmark+
         cursor-chg
@@ -81,11 +81,11 @@
         diff-hl
         nyan-mode
         minimap
-        eshell-manual
+        ;; eshell-manual
         hackernews
         twittering-mode
         highlight-indentation
-        auto-highlight-symbol
+        ;; auto-highlight-symbol
         multiple-cursors
         guide-key
         google-translate
@@ -105,7 +105,7 @@
         shell-pop
         sunrise-commander
         pretty-mode
-        pretty-mode-plus
+        ;; pretty-mode-plus
         clippy
         ;; electric-case
         paredit
@@ -130,7 +130,7 @@
         smartscan
         multi-term
         free-keys
-        zone-matrix
+        ;; zone-matrix
         company
         volatile-highlights
         recentf-ext
@@ -161,6 +161,10 @@
         erc-image
         erc-tweet
         erc-youtube
+        eldoc-extension
+        manage-minor-mode
+        ;; tab-group
+        dim-autoload
         all-ext))
 
 (defvar muki:paketti-list-prog-modes
@@ -169,7 +173,7 @@
     lua-mode
     haskell-mode
     js3-mode
-    vala-mode
+    ;; vala-mode
     conkeror-minor-mode
     csharp-mode
     markdown-mode
@@ -179,12 +183,13 @@
 
 (defvar muki:paketti-list-colour-themes
   '(;; themes
+    planet-theme
     tango-plus-theme
     colorsarenice-theme
     darkburn-theme
     tommyh-theme
     django-theme
-    github-theme
+    ;; github-theme
     hemisu-theme
     heroku-theme
     sunny-day-theme
@@ -194,25 +199,25 @@
     cherry-blossom-theme
     afternoon-theme ; require emacs-24;.1
     sublime-themes
-    subatomic-enhanced-theme
+    ;; subatomic-enhanced-theme
     tango-2-theme
     twilight-theme
-    sea-before-storm-theme
+    ;; sea-before-storm-theme
     cyberpunk-theme
     zenburn-theme
     mustang-theme
-    nzenburn-theme
+    ;; nzenburn-theme
     phoenix-dark-pink-theme
     phoenix-dark-mono-theme
-    assemblage-theme
+    ;; assemblage-theme
     dakrone-theme
     anti-zenburn-theme
     busybee-theme
     molokai-theme
     monokai-theme
-    late-night-theme
-    tron-theme
-    qsimpleq-theme
+    ;; late-night-theme
+    ;; tron-theme
+    ;; qsimpleq-theme
     solarized-theme
     birds-of-paradise-plus-theme
     soothe-theme ; require emacs-24.1
@@ -221,13 +226,13 @@
     occidental-theme
     soft-charcoal-theme
     alect-themes
-    waher-theme ; require emacs-24.1
+    ;;waher-theme ; require emacs-24.1
     clues-theme ; require emacs-24.1
     ample-theme
     ir-black-theme
     purple-haze-theme ; require emacs-24.0
     flatland-theme
-    deep-thought-theme
+    ;;deep-thought-theme
     espresso-theme
     gandalf-theme
     gruber-darker-theme
@@ -239,7 +244,7 @@
     base16-theme
     tangotango-theme
     calmer-forest-theme
-    jujube-theme
+    ;;jujube-theme
     bubbleberry-theme
     moe-theme
     naquadah-theme
@@ -252,7 +257,7 @@
     ujelly-theme
     zen-and-art-theme
     twilight-anti-bright-theme
-    steady-theme
+    ;;steady-theme
     pastels-on-dark-theme
     leuven-theme))
 (append-to-list muki:paketti-list muki:paketti-list-colour-themes)
@@ -263,7 +268,7 @@
     helm-git-grep
     helm-themes
     helm-c-yasnippet
-    helm-recoll
+    ;; helm-recoll
     helm-descbinds
     ;; helm-gist
     helm-ls-git
@@ -271,7 +276,7 @@
     helm-cmd-t
     helm-projectile
     helm-ag
-    helm-delicious
+    ;; helm-delicious
     helm-helm-commands
     helm-orgcard
     helm-swoop
@@ -326,8 +331,8 @@
     paketti-popwin
     paketti-w3m
     ;; paketti-git-gutter+
-    ;; paketti-git-gutter
-    paketti-diff-hl
+    paketti-git-gutter
+    ;; paketti-diff-hl
     paketti-yasnippet
     paketti-flymake
     paketti-coffee-mode
@@ -374,6 +379,10 @@
     paketti-tumblesocks
     paketti-erc-image
     paketti-erc-tweet
+    paketti-eldoc-extension
+    paketti-manage-minor-mode
+    paketti-dim-autoload
+    ;; paketti-tab-group
     ;; paketti-flylisp
     ;; paketti-indent-guide
     ;; paketti-circe

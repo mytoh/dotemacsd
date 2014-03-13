@@ -16,7 +16,6 @@
      (vendle:register "m2ym/emux-el")
      (vendle:register "moriyamahiroshi/seijiseikana-el")
      (vendle:register "kenoss/debug-print")
-     (vendle:register "emacsmirror/eldoc-extension")
      ;; (vendle:register "emacsmirror/mew")
      (vendle:register "tj64/outxxtra")
      (vendle:register "ober/zone-matrix")
@@ -25,6 +24,8 @@
      (vendle:register "kawabata/aozora-view")
      (vendle:register "syohex/emacs-rebuildfm")
      (vendle:register "tomoya/fuzzyjump.el")
+     (vendle:register "omouse/emacs-sos")
+     (vendle:register "davexunit/yon-chan")
 
      (vendle:register-theme "sabof/hyperplane-theme")
      (vendle:register-theme "emacs-jp/replace-colorthemes")
@@ -97,9 +98,6 @@
 
      ;; seijiseikana
      (req 'seijiseikana)
-
-     ;; eldoc-extension
-     ;; (req 'eldoc-extension)
 
      (req 'init-flatline)
 
@@ -187,6 +185,8 @@
             (define-key map (kbd "w") (lambda () (interactive) (fuzzyjump 3 7)))
             (define-key map (kbd "v") (lambda () (interactive) (fuzzyjump 3 9))))
           (fuzzyjump-mode t))
+
+     (req 'sos)
 
      ;; (req 'eshell-alias)
      )

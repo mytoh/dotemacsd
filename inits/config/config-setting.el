@@ -232,7 +232,13 @@
 (enable-option find-file-visit-truename)
 
 ;;;; theme
-(set-option muki:x-theme 'soothe)
+;; comidia, planet
+(set-option muki:x-theme 'planet)
 (set-option muki:term-theme 'moe-dark)
+
+(enable-option x-select-enable-clipboard
+               x-select-enable-primary)
+
+
 
 (provide 'config-setting)

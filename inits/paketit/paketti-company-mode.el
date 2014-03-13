@@ -2,10 +2,7 @@
 (pak 'company
 
      (set-option company-idle-delay 0.3)
-     ;; (set-option company-begin-commands '(self-insert-command))
-     (cl-defun muki:company-mode-hook ()
-       (setq company-lighter " 会社"))
-     (add-hook 'company-mode-hook 'muki:company-mode-hook)
+     (set-option company-begin-commands '(self-insert-command))
      (add-hook 'after-init-hook 'global-company-mode)
 
      (with-eval-after-load "company"

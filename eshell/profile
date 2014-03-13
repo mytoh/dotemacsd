@@ -1,12 +1,12 @@
 ## -*- mode: eshell-script -*-
 
 #(or (getenv "CDPATH")
-#    (setenv "CDPATH"
-#            (cl-reduce
-#             '(lambda (a b)
-#                (cl-concatenate 'string
-#                                (expand-file-name a) ":" (expand-file-name b)))
-#             '("~/huone" "~"  "/usr/local"))))
+     #    (setenv "CDPATH"
+                  #            (cl-reduce
+                                #             '(lambda (a b)
+                                                 #                (cl-concatenate 'string
+                                                                                  #                                (expand-file-name a) ":" (expand-file-name b)))
+                                              #             '("~/huone" "~"  "/usr/local"))))
 
 (setenv "PAGER" "cat")
 (setenv "TERM" "xterm-256color")
@@ -100,3 +100,5 @@
 (add-to-list 'eshell-command-aliases-list '("cde" "cd ~/huone/git/emacs"))
 (add-to-list 'eshell-command-aliases-list '("gpl" "git pull"))
 (add-to-list 'eshell-command-aliases-list '("gst" "git status"))
+
+(recenter 0)
