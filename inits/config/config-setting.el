@@ -10,7 +10,7 @@
 ;; (set-option fancy-splash-image (expand-file-name "~/.emacs.d/splash/splash.xpm"))
 
 ;;;; parens
-(show-paren-mode 1)
+(enable-mode show-paren-mode)
 (set-option show-paren-delay 0
             show-paren-style 'expression)
 (set-face-attribute 'show-paren-match-face nil
@@ -207,7 +207,7 @@
 
 ")
 
-;;;; loda newer file, .el or .elc
+;;;; load newer file, .el or .elc
 (enable-option load-prefer-newer)
 
 ;;;; invoke debugger
@@ -232,13 +232,17 @@
 (enable-option find-file-visit-truename)
 
 ;;;; theme
-;; comidia, planet
-(set-option muki:x-theme 'planet)
+;; comidia, planet, monokai, molokai
+(set-option muki:x-theme 'monokai)
 (set-option muki:term-theme 'moe-dark)
 
 (enable-option x-select-enable-clipboard
                x-select-enable-primary)
 
+;;;; browse web
+(set-option browse-url-generic-program "conkeror")
 
+;;;; prettify symbols
+(enable-mode global-prettify-symbols-mode)
 
 (provide 'config-setting)

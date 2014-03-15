@@ -1,4 +1,6 @@
 
+(require 'vc-git)
+
 (defface muki:eshell-pwd
   '((t (:foreground "#93b8bb")))
   "eshell prompt current directory face")

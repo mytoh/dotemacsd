@@ -24,6 +24,7 @@
                       "firefox"
                       "pcmanfm"
                       "thunar"
+                      "mcomix"
                       "caja_no_desktop.sh")))
 
       (muki:define-global-key (kbd "c")  'helm-alku-program)

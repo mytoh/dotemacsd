@@ -110,9 +110,9 @@
 
      (req 'init-helm-ypv)
 
-     (with-eval-after-load 'company
-       (req 'company-scheme
-            (add-to-list 'company-backends 'company-scheme)))
+     ;; (with-eval-after-load 'company
+     ;;   (req 'company-scheme
+     ;;        (add-to-list 'company-backends 'company-scheme)))
 
      (req 'debug-print
           (debug-print-init)

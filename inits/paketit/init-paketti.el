@@ -71,7 +71,7 @@
         ht
         ;; powerline
         popwin
-        ghc
+        ;; ghc
         emms
         emms-info-mediainfo
         color-moccur
@@ -165,6 +165,8 @@
         manage-minor-mode
         ;; tab-group
         dim-autoload
+        highlight-escape-sequences
+        dark-souls
         all-ext))
 
 (defvar muki:paketti-list-prog-modes
@@ -183,13 +185,13 @@
 
 (defvar muki:paketti-list-colour-themes
   '(;; themes
+    monochrome-theme
     planet-theme
     tango-plus-theme
     colorsarenice-theme
     darkburn-theme
     tommyh-theme
     django-theme
-    ;; github-theme
     hemisu-theme
     heroku-theme
     sunny-day-theme
@@ -199,25 +201,18 @@
     cherry-blossom-theme
     afternoon-theme ; require emacs-24;.1
     sublime-themes
-    ;; subatomic-enhanced-theme
     tango-2-theme
     twilight-theme
-    ;; sea-before-storm-theme
     cyberpunk-theme
     zenburn-theme
     mustang-theme
-    ;; nzenburn-theme
     phoenix-dark-pink-theme
     phoenix-dark-mono-theme
-    ;; assemblage-theme
     dakrone-theme
     anti-zenburn-theme
     busybee-theme
     molokai-theme
     monokai-theme
-    ;; late-night-theme
-    ;; tron-theme
-    ;; qsimpleq-theme
     solarized-theme
     birds-of-paradise-plus-theme
     soothe-theme ; require emacs-24.1
@@ -226,13 +221,11 @@
     occidental-theme
     soft-charcoal-theme
     alect-themes
-    ;;waher-theme ; require emacs-24.1
     clues-theme ; require emacs-24.1
     ample-theme
     ir-black-theme
     purple-haze-theme ; require emacs-24.0
     flatland-theme
-    ;;deep-thought-theme
     espresso-theme
     gandalf-theme
     gruber-darker-theme
@@ -244,7 +237,6 @@
     base16-theme
     tangotango-theme
     calmer-forest-theme
-    ;;jujube-theme
     bubbleberry-theme
     moe-theme
     naquadah-theme
@@ -257,9 +249,21 @@
     ujelly-theme
     zen-and-art-theme
     twilight-anti-bright-theme
-    ;;steady-theme
     pastels-on-dark-theme
-    leuven-theme))
+    leuven-theme
+    ;;steady-theme
+    ;;jujube-theme
+    ;; github-theme
+    ;; subatomic-enhanced-theme
+    ;; sea-before-storm-theme
+    ;; nzenburn-theme
+    ;; assemblage-theme
+    ;; late-night-theme
+    ;; tron-theme
+    ;; qsimpleq-theme
+    ;;deep-thought-theme
+    ;;waher-theme ; require emacs-24.1
+    ))
 (append-to-list muki:paketti-list muki:paketti-list-colour-themes)
 
 (defvar muki:paketti-list-helm
@@ -321,8 +325,6 @@
     paketti-expand-region
     paketti-multiple-cursors
     paketti-rainbow-delimiters
-    ;; paketti-rainbow-blocks
-    paketti-company-mode
     paketti-tabbar
     paketti-smartparens
     paketti-emms
@@ -330,9 +332,7 @@
     paketti-info+
     paketti-popwin
     paketti-w3m
-    ;; paketti-git-gutter+
     paketti-git-gutter
-    ;; paketti-diff-hl
     paketti-yasnippet
     paketti-flymake
     paketti-coffee-mode
@@ -359,7 +359,6 @@
     paketti-smartscan
     paketti-volatile-highlights
     paketti-recentf-ext
-    ;; paketti-unicode-fonts
     paketti-writegood-mode
     paketti-shell-pop
     paketti-color-moccur
@@ -369,7 +368,6 @@
     paketti-markdown-mode
     paketti-vimrc-mode
     paketti-elisp-slime-nav
-    ;; paketti-highlight-tail
     paketti-navi2ch
     paketti-elfeed
     paketti-smartrep
@@ -382,6 +380,16 @@
     paketti-eldoc-extension
     paketti-manage-minor-mode
     paketti-dim-autoload
+    paketti-highlight-escape-sequences
+    paketti-company-mode
+
+    ;;; marmalade
+    ;; paketti-rainbow-blocks
+    ;; paketti-highlight-tail
+    ;; paketti-unicode-fonts
+    ;; paketti-git-gutter+
+    ;; paketti-diff-hl
+
     ;; paketti-tab-group
     ;; paketti-flylisp
     ;; paketti-indent-guide

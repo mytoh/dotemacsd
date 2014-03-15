@@ -24,3 +24,11 @@
 
 ;; icon
 (setq skk-show-icon t)
+
+;; face
+(defface muki:skk-tooltip
+  '((t (:foreground "#93b8bb"
+                        :background "#232323"
+                        :bok nil)))
+  "face for skk tooltip")
+(setq skk-tooltip-face 'muki:skk-tooltip)
