@@ -38,7 +38,6 @@
 (global-set-key (kbd "C-z C-z") 'eshell-session:switch)
 
 (cl-defun muki:eshell-mode-hook ()
-  (define-key eshell-mode-map (kbd "C-z") (make-sparse-keymap))
   (define-key eshell-mode-map (kbd "C-z C-n") 'eshell-session:next)
   (define-key eshell-mode-map (kbd "C-z C-p") 'eshell-session:prev)
   (define-key eshell-mode-map (kbd "C-z C-c") 'eshell-session:new))

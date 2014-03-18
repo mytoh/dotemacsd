@@ -26,12 +26,12 @@
      (vendle:register "tomoya/fuzzyjump.el")
      (vendle:register "omouse/emacs-sos")
      (vendle:register "davexunit/yon-chan")
+     (vendle:register "owainlewis/emacs-color-themes")
 
      (vendle:register-theme "sabof/hyperplane-theme")
      (vendle:register-theme "emacs-jp/replace-colorthemes")
      (vendle:register-theme "djcb/dream-theme")
-     (vendle:register-theme "owainlewis/emacs-color-themes" '(:path "themes"))
-     (vendle:register-theme "FrankRuben/cuatroporocho-theme")
+     (vendle:register-theme "FrankRuben/cuatroporocho-theme" '(:compile nil))
      (vendle:register-theme "neomantic/Emacs-Sunburst-Color-Theme")
      (vendle:register-theme "ranmocy/amelie-theme")
      (vendle:register-theme "ccann/badger-theme")
@@ -63,6 +63,10 @@
 
      ;; keymap
      (muki:define-global-key (kbd "v u") 'vendle-update)
+     (muki:define-global-key (kbd "v c") 'vendle-check)
+     (muki:define-global-key (kbd "v l") 'vendle-clean)
+     (req 'helm-vendle
+          (muki:define-global-key (kbd "v h") 'helm-vendle))
 
      ;; update plugins
      ;; (vendle:update-packages)
@@ -189,11 +193,10 @@
      (req 'sos)
 
      ;; (req 'eshell-alias)
+
+     (req 'emacs-color-themes)
      )
 
 (provide 'init-vendle)
 
-;; Local Variables:
-;; coding: utf-8
-;; indent-tabs-mode: nil
-;; End:
+;;; init-vendle.el ends here

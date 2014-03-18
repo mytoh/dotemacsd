@@ -62,6 +62,9 @@
 (add-hook 'emacs-lisp-mode-hook 'muki:elisp-buffer-enable-reindent)
 (add-hook 'emacs-lisp-mode-hook 'checkdoc-minor-mode)
 (add-hook 'emacs-lisp-mode-hook 'eldoc-mode)
+(add-hook 'emacs-lisp-mode-hook
+          (lambda ()
+            (setq mode-name " ξ ")))
 
 ;;;; keymap
 (define-key emacs-lisp-mode-map (kbd "C-m") 'newline-and-indent)

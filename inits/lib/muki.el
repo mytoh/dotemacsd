@@ -11,8 +11,9 @@
                       ,@messages) " ...")))
 
 (cl-defun muki:user-emacs-directory (&optional path)
-  (expand-file-name (concat user-emacs-directory
-                            (string-remove-prefix "/" path))))
+  (if path
+      (expand-file-name path user-emacs-directory)
+    user-emacs-directory))
 
 ;; http://e-arrows.sakura.ne.jp/2010/03/macros-in-emacs-el.html
 (cl-defmacro req (lib &rest body)

@@ -167,6 +167,7 @@
         dim-autoload
         highlight-escape-sequences
         dark-souls
+        iplayer
         all-ext))
 
 (defvar muki:paketti-list-prog-modes

@@ -14,6 +14,7 @@
 
 (add-hook 'org-mode-hook
           (lambda ()
+            (setq mode-name " ꙮ ")
             (enable-option org-src-fontify-natively)
             (enable-option org-startup-indented)
             (org-babel-do-load-languages 'org-babel-load-languages
