@@ -183,6 +183,7 @@
     csharp-mode
     markdown-mode
     vimrc-mode
+    yaml-mode
     ))
 (append-to-list muki:paketti-list muki:paketti-list-prog-modes)
 
