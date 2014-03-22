@@ -84,10 +84,13 @@
     (add-to-list 'default-frame-alist `(font . ,fontset))
     ))
 
-;; (set-ascii-font)
-(set-naga10-font)
-;; (set-symbol-font)
-(set-cyrillic-font)
-;; (set-japanese-font)
+(cond
+  ((eq window-system nil)
+   ;; (set-ascii-font)
+   (set-naga10-font)
+   ;; (set-symbol-font)
+   (set-cyrillic-font)
+   ;; (set-japanese-font)
+   ))
 
 (provide 'config-font)
