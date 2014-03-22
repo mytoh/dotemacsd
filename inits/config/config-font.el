@@ -85,7 +85,7 @@
     ))
 
 (cond
-  ((eq window-system nil)
+  (window-system
    ;; (set-ascii-font)
    (set-naga10-font)
    ;; (set-symbol-font)
