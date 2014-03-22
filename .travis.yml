@@ -8,6 +8,6 @@ before_install:
       sudo apt-get update -qq &&
       sudo apt-get install -qq
           emacs-snapshot-el emacs-snapshot-gtk emacs-snapshot;
-    fi
+      fi
 script:
   ./run-travis.sh

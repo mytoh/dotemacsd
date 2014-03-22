@@ -1,8 +1,6 @@
 #!/bin/sh
 
-WORK_DIR=$(shell pwd)
-PACKAGE_NAME=$(shell basename $(WORK_DIR))
-TRAVIS_FILE=.travis.yml
+EMACS=${EMACS:-$(which emacs)}
 
 ${EMACS} --version
 ${EMACS} --batch -Q -l init.el
