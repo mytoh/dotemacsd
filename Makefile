@@ -9,4 +9,4 @@ TRAVIS_FILE=.travis.yml
 .PHONY : travis-ci
 
 travis-ci:
-$(EMACS) $(EMACS_BATCH) -l init.el
+	$(EMACS) $(EMACS_BATCH) -l init.el
