@@ -27,6 +27,7 @@
      (vendle:register "omouse/emacs-sos")
      (vendle:register "davexunit/yon-chan")
      (vendle:register "owainlewis/emacs-color-themes")
+     (vendle:register "omouse/org-doing")
 
      (vendle:register-theme "sabof/hyperplane-theme")
      (vendle:register-theme "emacs-jp/replace-colorthemes")
@@ -39,6 +40,10 @@
      (vendle:register-theme "rozh/grandpunk-theme")
      (vendle:register-theme "nhunzaker/emacs-laravel-plus-theme")
      (vendle:register-theme "nishikawasasaki/ns-milk-theme")
+     (vendle:register-theme "tiborsimko/ostrich-theme-el")
+     (vendle:register-theme "ZehCnaS34/zonokai")
+     (vendle:register-theme "michaelparenteau/parenteau-theme")
+
 
      (cl-flet ((add-project-root (path)
                                  (vendle:register-local (expand-file-name path "~/huone/projektit"))))
@@ -145,9 +150,9 @@
 
      (req 'init-helm-alku)
 
-     (req 'undohist
-          (undohist-initialize)
-          (setq undohist-ignored-files '("\\.git/COMMIT_EDITMSG")))
+     ;; (req 'undohist
+     ;;      (undohist-initialize)
+     ;;      (setq undohist-ignored-files '("\\.git/COMMIT_EDITMSG")))
 
      (req 'navi2ch-file-mode
           (setq navi2ch-file-open-with-shift-jis t))
@@ -195,6 +200,8 @@
      ;; (req 'eshell-alias)
 
      (req 'emacs-color-themes)
+
+     (req 'yon-chan)
      )
 
 (provide 'init-vendle)

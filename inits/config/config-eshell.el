@@ -46,4 +46,10 @@
 (autoload 'helm-eshell-session "helm-eshell-session")
 (global-set-key (kbd "C-z h") 'helm-eshell-session)
 
+(defun eshell/clear ()
+  "Clears the shell buffer."
+  (interactive)
+  (let ((inhibit-read-only t))
+    (erase-buffer)))
+
 (provide 'config-eshell)

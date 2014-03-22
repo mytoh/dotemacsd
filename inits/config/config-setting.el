@@ -73,14 +73,14 @@
 
 ;;;; highlight current line
 (defface muki:hlline
-  '((((class color)
-      (background dark))
-     (:background "dark slate gray"))
-    (((class color)
-      (background light))
-     (:background "#b8fbb9"))
-    (t
-     ()))
+    '((((class color)
+        (background dark))
+       (:background "dark slate gray"))
+      (((class color)
+        (background light))
+       (:background "#b8fbb9"))
+      (t
+       ()))
   "*Face used by hl-line.")
 (set-option hl-lineface 'muki:hlline)
 (global-hl-line-mode)
@@ -232,8 +232,8 @@
 (enable-option find-file-visit-truename)
 
 ;;;; theme
-;; comidia, planet, monokai, molokai
-(set-option muki:x-theme 'monokai)
+;; comidia, planet, monokai, molokai, subatomic256
+(set-option muki:x-theme 'subatomic256)
 (set-option muki:term-theme 'moe-dark)
 
 (enable-option x-select-enable-clipboard

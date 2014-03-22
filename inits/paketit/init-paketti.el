@@ -116,6 +116,7 @@
         ;; auto-complete-clang-async
         mentor
         cask
+        caskxy
         cl-lib-highlight
         anzu
         whitespace-cleanup-mode
@@ -168,6 +169,7 @@
         highlight-escape-sequences
         dark-souls
         iplayer
+        prodigy
         all-ext))
 
 (defvar muki:paketti-list-prog-modes
@@ -186,6 +188,7 @@
 
 (defvar muki:paketti-list-colour-themes
   '(;; themes
+    flatui-theme
     monochrome-theme
     planet-theme
     tango-plus-theme

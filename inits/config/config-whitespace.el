@@ -12,20 +12,27 @@
                          tabs
                          indentation:tab
                          tab-mark
+                         ;; space-mark
                          space-before-tab  ; タブの前にあるスペースを対象とする。
-                         space-after-tab)) ; タブの後にあるスペースを対象とする。
+                         space-after-tab   ; タブの後にあるスペースを対象とする。
+                         ))
 
 (setq whitespace-display-mappings
       '(
         (newline-mark 10 [60 10]) ; newlne, <
         (tab-mark 9 [187 9] [92 9]) ; tab, Â»
+        ;; (space-mark 32 [183] [46]) ; 32 SPACE, 183 MIDDLE DOT 「·」, 46 FULL STOP 「.」
+        (space-mark   ?\    [?\xB7]     [?.])	; space
         ))
 
 (set-face-background 'whitespace-space-after-tab
                      "#444033")
 
 (set-face-background 'whitespace-line
-                     "PaleVioletRed3")
+                     "#331212")
+
+
+
 
 ;; デフォルトで視覚化を有効にする。
 (global-whitespace-mode 1)

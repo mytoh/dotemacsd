@@ -51,7 +51,7 @@
          (+ space)
          (submatch (+ (or (syntax word)
                           (syntax symbol)))))
-    (1 'font-lock-function-name-face))))
+     (1 'font-lock-function-name-face))))
 
 
 
@@ -65,6 +65,8 @@
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
             (setq mode-name " ξ ")))
+
+(setq lisp-indent-function 'common-lisp-indent-function)
 
 ;;;; keymap
 (define-key emacs-lisp-mode-map (kbd "C-m") 'newline-and-indent)

@@ -77,6 +77,9 @@
      (set-face-attribute 'helm-selection nil
                          :background "#236765")
 
+     ;;;; helm-grep
+     (setq helm-grep-default-command "LANG=C grep -a -d skip %e -n%cH -e %p %f")
+
      )
 
 ;; helm-themes
@@ -106,7 +109,7 @@
 
 ;; helm-ls-git
 (pak 'helm-ls-git
-     (muki:define-global-key (kbd "f") 'helm-browse-project))
+     (muki:define-global-key (kbd "f") 'helm-ls-git-ls))
 
 ;; elisp-package
 (pak 'helm-elisp-package

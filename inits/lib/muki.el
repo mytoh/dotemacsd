@@ -6,9 +6,9 @@
   (require 'color))
 
 (cl-defmacro muki:log (&rest messages)
-  `(progn
-     (message (concat (propertize ">> " 'face 'font-lock-doc-face)
-                      ,@messages) " ...")))
+  `(cl-locally
+    (message (concat (propertize ">> " 'face 'font-lock-doc-face)
+                     ,@messages) " ...")))
 
 (cl-defun muki:user-emacs-directory (&optional path)
   (if path
@@ -56,64 +56,64 @@
 ;; (lazyload (triger-function ...) "filename" &rest body)
 ;; http://e-arrows.sakura.ne.jp/2010/03/macros-in-emacs-el.html
 (cl-defmacro lazyload (_funcs _lib)
-  `(progn
-     ,@(cl-mapcar (lambda (f) `(autoload ',f ,_lib nil t))
-                  _funcs)))
+  `(cl-locally
+    ,@(cl-mapcar (lambda (f) `(autoload ',f ,_lib nil t))
+                 _funcs)))
 
 ;; (append-to-list exec-path
 ;;                 '("/usr/bin" "/bin"
 ;;                   "/usr/sbin" "/sbin"))
 (cl-defmacro append-to-list (to lst)
-  `(cl-psetq ,to (append ,to ,lst)))
+  `(setq ,to (append ,to ,lst)))
 
 (cl-defmacro muki:add-to-load-path (path)
   `(when (file-exists-p ,path)
      (add-to-list 'load-path ,path)))
 
 (cl-defmacro muki:set-face-colours (face fore back)
-  `(progn
-     (set-face-foreground ,face ,fore)
-     (set-face-background ,face ,back)))
+  `(cl-locally
+    (set-face-foreground ,face ,fore)
+    (set-face-background ,face ,back)))
 
 (cl-defmacro set-option (&rest body)
   (when body
     (cl-letf ((option (car body))
               (value (cadr body)))
-      `(progn
-         (muki:log "set " ,(propertize (symbol-name option)
-                                       'face 'font-lock-variable-name-face))
-         (cl-psetq ,option ,value)
-         (set-option ,@(cddr body))))))
+      `(cl-locally
+        (muki:log "set " ,(propertize (symbol-name option)
+                                      'face 'font-lock-variable-name-face))
+        (setq ,option ,value)
+        (set-option ,@(cddr body))))))
 
 (cl-defmacro enable-option (&rest body)
   (when body
     (cl-letf ((option (car body)))
-      `(progn
-         (muki:log "enable " ,(propertize (symbol-name option)
-                                          'face 'font-lock-variable-name-face))
-         (cl-psetq ,option t)
-         (enable-option ,@(cdr body))))))
+      `(cl-locally
+        (muki:log "enable " ,(propertize (symbol-name option)
+                                         'face 'font-lock-variable-name-face))
+        (setq ,option t)
+        (enable-option ,@(cdr body))))))
 
 (cl-defmacro disable-option (&rest body)
   (when body
     (cl-letf ((option (car body)))
-      `(progn
-         (muki:log "disable " ,(propertize (symbol-name option)
-                                           'face 'font-lock-variable-name-face))
-         (cl-psetq ,option nil)
-         (disable-option ,@(cdr body))))))
+      `(cl-locally
+        (muki:log "disable " ,(propertize (symbol-name option)
+                                          'face 'font-lock-variable-name-face))
+        (setq ,option nil)
+        (disable-option ,@(cdr body))))))
 
 (cl-defmacro enable-mode (mode-fn)
-  `(progn
-     (,mode-fn 1)
-     (muki:log "enable mode " ,(propertize (symbol-name mode-fn)
-                                           'face 'font-lock-variable-name-face))))
+  `(cl-locally
+    (,mode-fn 1)
+    (muki:log "enable mode " ,(propertize (symbol-name mode-fn)
+                                          'face 'font-lock-variable-name-face))))
 
 (cl-defmacro disable-mode (mode-fn)
-  `(progn
-     (,mode-fn -1)
-     (muki:log "disable mode " ,(propertize (symbol-name mode-fn)
-                                            'face 'font-lock-variable-name-face))))
+  `(cl-locally
+    (,mode-fn -1)
+    (muki:log "disable mode " ,(propertize (symbol-name mode-fn)
+                                           'face 'font-lock-variable-name-face))))
 
 ;;http://www.reddit.com/r/emacs/comments/umb24/expandfilename_is_good_for_path_concat_too/
 (cl-defun concat-path (&rest parts)
@@ -188,9 +188,9 @@ buffer is not visiting a file."
 (global-set-key (kbd muki:global-prefix-key) 'muki:global-map)
 (cl-defmacro muki:define-global-key (key func)
   "define personal global key mappings"
-  `(progn
-     (define-key muki:global-map ,key ,func)
-     (message "bind %s to %s" ,key (symbol-name ,func))))
+  `(cl-locally
+    (define-key muki:global-map ,key ,func)
+    (message "bind %s to %s" ,key (symbol-name ,func))))
 
 ;; smart kill word
 ;; http://d.hatena.ne.jp/kiwanami/20091222/1261504543
