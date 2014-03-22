@@ -1,6 +1,6 @@
 ;;; init-paketti.el -*- coding: utf-8; lexical-binding: t -*-
 
-;;; builtins
+;;;; builtins
 
 ;; save curosr position
 (liby 'saveplace
@@ -27,10 +27,10 @@
 ;; package.el
 (req 'package
      ;; load MELPA
-     (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
-     (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-     (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
-     (add-to-list 'package-archives '("SC" . "http://joseito.republika.pl/sunrise-commander/") t)
+     (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") 'append)
+     (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") 'append)
+     (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") 'append)
+     (add-to-list 'package-archives '("SC" . "http://joseito.republika.pl/sunrise-commander/") 'append)
      (package-initialize))
 
 
