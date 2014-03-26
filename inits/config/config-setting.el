@@ -232,8 +232,8 @@
 (enable-option find-file-visit-truename)
 
 ;;;; theme
-;; comidia, planet, monokai, molokai, subatomic256
-(set-option muki:x-theme 'subatomic256)
+;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus
+(set-option muki:x-theme 'planet)
 (set-option muki:term-theme 'moe-dark)
 
 (enable-option x-select-enable-clipboard

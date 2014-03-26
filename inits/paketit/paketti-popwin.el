@@ -8,6 +8,7 @@
              ("*Completions*" :noselect t)
              ("*guide-key*" :position bottom)
              ("*Man" :regexp t :stick t)
+             ("*magit:*" :regexp t)
              ("*ag*" :noselect t) ("*diff*"))))
 
 (provide 'paketti-popwin)

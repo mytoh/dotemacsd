@@ -15,6 +15,10 @@
      (enable-option emms-info-asynchronously)
      (enable-option emms-info-auto-update)
      (set-option emms-lastfm-server "http://turtle.libre.fm/")
+     (setq emms-browser-info-title-format "%cS%i%n")
+     (setq emms-browser-playlist-info-title-format
+           emms-browser-info-title-format)
+
 
      ;; (emms-default-players)
      (req 'emms-player-simple
@@ -32,7 +36,7 @@
 
           ;; sox
           (define-emms-simple-player sox
-            '(file)
+              '(file)
             (emms-player-simple-regexp
              "flac" "mp3" "ogg" "wma" "oga" "m4a" "mka"
              "wav")
@@ -57,7 +61,7 @@
 
           ;; mpv
           (define-emms-simple-player mpv
-            '(file)
+              '(file)
             (emms-player-simple-regexp "webm" "mkv" "wmv" "mp4" "flv" "swf")
             "mpv" "--framedrop=yes" "--softvol=auto" "--really-quiet")
           (add-to-list 'emms-player-list 'emms-player-mpv)
@@ -75,8 +79,8 @@
 Controls includes \"Volume\", \"PCM\", etc. For a full list of available
 controls, run `mixer' in a shell."
        :type '(choice (const :tag "Volume" "vol")
-                      (const :tag "PCM" "pcm")
-                      (string :tag "Something else: "))
+               (const :tag "PCM" "pcm")
+               (string :tag "Something else: "))
        :group 'emms-volume)
 
      (defun emms-volume-mixer-change (amount)
@@ -123,11 +127,11 @@ controls, run `mixer' in a shell."
 (muki:comment
  ;; debug players
  (emms-player-for '(*track* (type . file)
-                            (name . "myfile.pls")))
+                    (name . "myfile.pls")))
  (emms-player-for '(*track* (type . url)
-                            (name . "http://test")))
+                    (name . "http://test")))
  (emms-player-for '(*track* (type . file)
-                            (name . "test.flac")))
+                    (name . "test.flac")))
  )
 
 

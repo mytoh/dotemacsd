@@ -71,7 +71,7 @@
         ht
         ;; powerline
         popwin
-        ;; ghc
+        ghc
         emms
         emms-info-mediainfo
         color-moccur
@@ -95,7 +95,7 @@
         direx
         ;; pallet
         page-break-lines
-        ;; flycheck
+        flycheck
         fiplr
         fuzzy
         ;; melpa-upstream-visit
@@ -170,6 +170,7 @@
         dark-souls
         iplayer
         prodigy
+        mocker
         all-ext))
 
 (defvar muki:paketti-list-prog-modes
@@ -256,18 +257,18 @@
     twilight-anti-bright-theme
     pastels-on-dark-theme
     leuven-theme
-    ;;steady-theme
-    ;;jujube-theme
-    ;; github-theme
-    ;; subatomic-enhanced-theme
-    ;; sea-before-storm-theme
-    ;; nzenburn-theme
-    ;; assemblage-theme
-    ;; late-night-theme
-    ;; tron-theme
-    ;; qsimpleq-theme
-    ;;deep-thought-theme
-    ;;waher-theme ; require emacs-24.1
+    niflheim-theme
+    steady-theme
+    jujube-theme
+    github-theme
+    sea-before-storm-theme
+    nzenburn-theme
+    assemblage-theme
+    late-night-theme
+    tron-theme
+    qsimpleq-theme
+    deep-thought-theme
+    waher-theme ; require emacs-24.1
     ))
 (append-to-list muki:paketti-list muki:paketti-list-colour-themes)
 
@@ -277,15 +278,15 @@
     helm-git-grep
     helm-themes
     helm-c-yasnippet
-    ;; helm-recoll
+    helm-recoll
     helm-descbinds
-    ;; helm-gist
+    helm-gist
     helm-ls-git
     helm-migemo
     helm-cmd-t
     helm-projectile
     helm-ag
-    ;; helm-delicious
+    helm-delicious
     helm-helm-commands
     helm-orgcard
     helm-swoop
@@ -294,6 +295,7 @@
     helm-ag-r
     wgrep-helm
     helm-mode-manager
+    helm-proc
     ))
 (append-to-list muki:paketti-list muki:paketti-list-helm)
 

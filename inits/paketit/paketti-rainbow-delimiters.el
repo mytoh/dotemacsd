@@ -13,7 +13,7 @@
      ;;   (set-face-attribute 'rainbow-delimiters-depth-6-face nil :foreground "brown")
      ;;   (set-face-attribute 'rainbow-delimiters-depth-7-face nil :foreground "purple")
      ;;   (set-face-attribute 'rainbow-delimiters-depth-8-face nil :foreground "khaki")
-     ;;   (set-face-attribute 'rainbow-delimiters-depth-9-face nil :foreground "salmon"))
+     ;;   (set-face-attribute 'rainbow-delimiters-depth-9-face nil :inherit 'font-lock-doc-face))
      '((((((((((((((((((((((((((((((((()))))))))))))))))))))))))))))))))
      )
 
