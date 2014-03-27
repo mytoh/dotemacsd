@@ -112,6 +112,7 @@
 
 ;;;; ignore case
 (enable-option completion-ignore-case
+               read-buffer-completion-ignore-case
                read-file-name-completion-ignore-case)
 
 ;;;; alaways show completions

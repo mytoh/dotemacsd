@@ -171,6 +171,7 @@
         iplayer
         prodigy
         mocker
+        weechat
         all-ext))
 
 (defvar muki:paketti-list-prog-modes
@@ -450,7 +451,7 @@
 
 (defvar muki:paketit-list-org
   '(paketti-org
-    ;; paketti-org-plus-contrib
+    paketti-org-plus-contrib
     ;; paketti-org-bullets
     paketti-outorg
     paketti-orglue
