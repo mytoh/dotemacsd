@@ -3,7 +3,6 @@
 (muki:add-to-load-path (expand-file-name "~/huone/projektit/emacs-vendle"))
 
 (req 'vendle
-
      ;; initialize vendle
      (cl-letf ((muki:vendle-directory
                 (muki:user-emacs-directory (file-name-as-directory "vendle"))))
@@ -68,10 +67,10 @@
 
      ;; keymap
      (muki:define-global-key (kbd "v u") 'vendle-update)
-     (muki:define-global-key (kbd "v c") 'vendle-check)
-     (muki:define-global-key (kbd "v l") 'vendle-clean)
+     (muki:define-global-key (kbd "v k") 'vendle-check)
+     (muki:define-global-key (kbd "v c") 'vendle-clean)
      (req 'helm-vendle
-          (muki:define-global-key (kbd "v h") 'helm-vendle))
+          (muki:define-global-key (kbd "v l") 'helm-vendle))
 
      ;; update plugins
      ;; (vendle:update-packages)

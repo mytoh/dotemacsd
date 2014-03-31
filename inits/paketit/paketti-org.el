@@ -14,14 +14,15 @@
 (enable-option org-src-fontify-natively)
 (enable-option org-startup-indented)
 
+(cl-defun muki:org-mode-hook-function ()
+  (setq mode-name " ꙮ ")
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((emacs-lisp . t)
+     (sh . t)
+     (scheme . t)
+     (lisp . t))))
 (add-hook 'org-mode-hook
-          (lambda ()
-            (setq mode-name " ꙮ ")
-            (org-babel-do-load-languages
-             'org-babel-load-languages
-             '((emacs-lisp . t)
-               (sh . t)
-               (scheme . t)
-               (lisp . t)))))
+          'muki:org-mode-hook-function)
 
 (provide 'paketti-org)

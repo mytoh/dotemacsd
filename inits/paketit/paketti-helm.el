@@ -120,3 +120,5 @@
      (muki:define-global-key (kbd "r") 'helm-git-grep))
 
 (provide 'paketti-helm)
+
+;;; paketti-helm.el ends here

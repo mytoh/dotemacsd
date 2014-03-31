@@ -72,18 +72,12 @@
 (delete-selection-mode 1)
 
 ;;;; highlight current line
-(defface muki:hlline
-    '((((class color)
-        (background dark))
-       (:background "dark slate gray"))
-      (((class color)
-        (background light))
-       (:background "#b8fbb9"))
-      (t
-       ()))
-  "*Face used by hl-line.")
-(set-option hl-lineface 'muki:hlline)
-(global-hl-line-mode)
+;; highlight the current line; set a custom face, so we can
+;; recognize from the normal marking (selection)
+(defface hl-line '((t (:background "Gray10")))
+  "Face to use for `hl-line-face'." :group 'hl-line)
+(setq hl-line-face 'hl-line)
+(global-hl-line-mode t) ; turn it on for all modes by default
 
 ;;;; display keys
 (set-option echo-keystrokes 0.1)

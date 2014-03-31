@@ -1,7 +1,6 @@
 ;;; init-paketti.el -*- coding: utf-8; lexical-binding: t -*-
 
 ;;;; builtins
-
 ;; save curosr position
 (liby 'saveplace
       (setq-default save-place t))
@@ -19,8 +18,8 @@
   (terminal-init-bobcat))
 
 ;; outlining everywhere
-(require 'allout)
-(allout-init t)
+;; (require 'allout)
+;; (allout-auto-activation)
 
 ;;; package repositories
 
@@ -172,6 +171,9 @@
         prodigy
         mocker
         weechat
+        sauron
+        2048-game
+        ;;fancy-narrow
         all-ext))
 
 (defvar muki:paketti-list-prog-modes
@@ -191,6 +193,7 @@
 
 (defvar muki:paketti-list-colour-themes
   '(;; themes
+    distinguished-theme
     flatui-theme
     monochrome-theme
     planet-theme
@@ -275,6 +278,7 @@
 
 (defvar muki:paketti-list-helm
   '(helm
+    helm-flycheck
     helm-git
     helm-git-grep
     helm-themes
@@ -390,6 +394,8 @@
     paketti-dim-autoload
     paketti-highlight-escape-sequences
     paketti-company-mode
+    paketti-fancy-narrow
+    paketti-flycheck
 
     ;;; marmalade
     ;; paketti-rainbow-blocks
@@ -428,7 +434,6 @@
     ;; paketti-dired-single
     ;; paketti-cursor-chg
     ;; paketti-git-gutter-fringe
-    ;; paketti-flycheck
     ))
 
 
@@ -439,8 +444,8 @@
     paketti-helm-helm-commands
     paketti-helm-orgcard
     paketti-helm-swoop
-    ;; paketti-helm-ag-r
-    paketti-helm-ag
+    paketti-helm-ag-r
+    ;; paketti-helm-ag
     paketti-helm-company
     paketti-helm-dictionary
     paketti-helm-recoll
@@ -451,12 +456,12 @@
 
 (defvar muki:paketit-list-org
   '(paketti-org
-    paketti-org-plus-contrib
+    ;; paketti-org-plus-contrib
     ;; paketti-org-bullets
     paketti-outorg
     paketti-orglue
     paketti-outshine
-    paketti-navi-mode
+    ;; paketti-navi-mode
     paketti-orglink
     ))
 (append-to-list init-paketit muki:paketit-list-org)

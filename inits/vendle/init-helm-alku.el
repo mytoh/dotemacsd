@@ -25,6 +25,7 @@
                       "pcmanfm"
                       "thunar"
                       "mcomix"
+                      "gmusicbrowser"
                       "caja_no_desktop.sh")))
 
       (muki:define-global-key (kbd "c")  'helm-alku-program)

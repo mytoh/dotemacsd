@@ -2,12 +2,10 @@
 (req 'smartparens
      (req 'smartparens-config)
 
-     (smartparens-global-mode t)
-
+     (smartparens-global-mode)
      ;; (smartparens-global-strict-mode t)
-
      ;; highlights matching pairs
-     (show-smartparens-global-mode t)
+     ;; (show-smartparens-global-mode t)
 
      ;;;;;;;;;;;;
      ;; keys

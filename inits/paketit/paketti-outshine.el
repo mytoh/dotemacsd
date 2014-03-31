@@ -1,5 +1,5 @@
 ;; outshine
-(pak 'outshine
+(req 'outshine
      (add-hook 'outline-minor-mode-hook 'outshine-hook-function)
 
      ;; (defvar outline-minor-mode-prefix "\M-#")

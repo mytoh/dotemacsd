@@ -70,13 +70,13 @@
 (cl-defun muki:add-scheme-mode (ext)
   (add-to-list 'auto-mode-alist `(,(concat "\\." ext "\\'") . scheme-mode)))
 
-;; (cl-dolist (e '("leh"
-;;                 "lehspec"
-;;                 "sps"
-;;                 "sls"
-;;                 "sld"
-;;                 "ss"))
-;;   (muki:add-scheme-mode e))
+(cl-dolist (e '("lehspec"
+                "sps"
+                "sls"
+                "sld"
+                "ss"))
+  (muki:add-scheme-mode e))
+(add-to-list 'auto-mode-alist '("Piikafile" . scheme-mode))
 
 ;; personal syntax
 ;; (muki:scheme-add-keywords

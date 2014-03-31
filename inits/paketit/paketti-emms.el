@@ -1,4 +1,8 @@
 ;; emms
+
+(if (file-exists-p "~/.emms")
+    (load "~/.emms"))
+
 (req 'emms-setup
      (emms-devel)
      ;; mode-line
@@ -15,7 +19,7 @@
      (enable-option emms-info-asynchronously)
      (enable-option emms-info-auto-update)
      (set-option emms-lastfm-server "http://turtle.libre.fm/")
-     (setq emms-browser-info-title-format "%cS%i%n")
+     (set-option emms-browser-info-title-format "%cS%i%n")
      (setq emms-browser-playlist-info-title-format
            emms-browser-info-title-format)
 
@@ -98,11 +102,14 @@ controls, run `mixer' in a shell."
                     ;;;; info
      (req 'emms-info)
      (when (executable-find "emms-print-metadata")
-       (req 'emms-info-libtag (setq emms-info-functions '(emms-info-libtag))))
+       (req 'emms-info-libtag
+            (setq emms-info-functions '(emms-info-libtag))))
      (when (executable-find "mediainfo")
-       (req 'emms-info-mediainfo (add-to-list 'emms-info-functions 'emms-info-mediainfo)))
+       (req 'emms-info-mediainfo
+            (add-to-list 'emms-info-functions 'emms-info-mediainfo)))
      (when (executable-find "metaflac")
-       (req 'emms-info-metaflac (add-to-list 'emms-info-functions 'emms-info-metaflac)))
+       (req 'emms-info-metaflac
+            (add-to-list 'emms-info-functions 'emms-info-metaflac)))
 
 
 
