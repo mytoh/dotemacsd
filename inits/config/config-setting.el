@@ -145,7 +145,9 @@
 ;;;; recentf
 ;; save more recent files
 (set-option recentf-max-saved-items nil)
-(defvar muki:recentf-exclude `(,(rx  ".el.gz" string-end) "archive-contents$" "-autoloads.el$"))
+(defvar muki:recentf-exclude `(,(rx  "\\.el\\.gz\\'" string-end)
+                                "archive-contents\\'"
+                                "-autoloads\\.el\\'"))
 (set-option recentf-exclude muki:recentf-exclude)
 (set-option recentf-auto-cleanup 10)
 ;;;; don't record symbolic link file name

@@ -80,11 +80,11 @@
         diff-hl
         nyan-mode
         minimap
-        ;; eshell-manual
+        eshell-manual
         hackernews
         twittering-mode
         highlight-indentation
-        ;; auto-highlight-symbol
+        auto-highlight-symbol
         multiple-cursors
         guide-key
         google-translate
@@ -102,11 +102,21 @@
         quickrun
         sudo-ext
         shell-pop
+
         sunrise-commander
+        sunrise-x-buttons
+        sunrise-x-checkpoints
+        sunrise-x-loop
+        sunrise-x-mirror
+        sunrise-x-modeline
+        sunrise-x-popviewer
+        sunrise-x-tabs
+        sunrise-x-tree
+
         pretty-mode
         ;; pretty-mode-plus
         clippy
-        ;; electric-case
+        electric-case
         paredit
         visual-regexp
         litable
@@ -130,7 +140,7 @@
         smartscan
         multi-term
         free-keys
-        ;; zone-matrix
+        zone-matrix
         company
         volatile-highlights
         recentf-ext
@@ -144,7 +154,7 @@
         flylisp
         soundcloud
         emms-soundcloud
-        ;; emacs-xkcd
+        xkcd
         elisp-slime-nav
         highlight-tail
         navi2ch
@@ -173,7 +183,7 @@
         weechat
         sauron
         2048-game
-        ;;fancy-narrow
+        fancy-narrow
         all-ext))
 
 (defvar muki:paketti-list-prog-modes
@@ -193,6 +203,7 @@
 
 (defvar muki:paketti-list-colour-themes
   '(;; themes
+    minimal-theme
     distinguished-theme
     flatui-theme
     monochrome-theme
@@ -396,6 +407,7 @@
     paketti-company-mode
     paketti-fancy-narrow
     paketti-flycheck
+    paketti-sunrise-commander
 
     ;;; marmalade
     ;; paketti-rainbow-blocks
