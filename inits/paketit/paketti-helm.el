@@ -93,8 +93,9 @@
 
 ;; migemo
 (when (executable-find "cmigemo")
-  (pak 'migemo
-       (req 'helm-migemo)))
+  (req 'migemo
+       (req 'helm-migemo
+            (setq helm-use-migemo t))))
 
 ;; descbinds
 (req 'helm-descbinds

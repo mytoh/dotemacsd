@@ -12,7 +12,7 @@
   "Face used for the line delimiting the end of source blocks")
 
 (enable-option org-src-fontify-natively)
-(enable-option org-startup-indented)
+;; (enable-option org-startup-indented)
 
 (cl-defun muki:org-mode-hook-function ()
   (setq mode-name " ꙮ ")

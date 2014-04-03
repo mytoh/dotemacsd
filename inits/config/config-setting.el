@@ -230,8 +230,8 @@
 
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus
-(set-option muki:x-theme 'planet)
-(set-option muki:term-theme 'moe-dark)
+(defvar muki:x-theme 'planet)
+(defvar muki:term-theme 'moe-dark)
 
 (enable-option x-select-enable-clipboard
                x-select-enable-primary)
@@ -241,5 +241,7 @@
 
 ;;;; prettify symbols
 (enable-mode global-prettify-symbols-mode)
+
+(enable-mode global-highlight-changes-mode)
 
 (provide 'config-setting)

@@ -1,3 +1,4 @@
+
 ;;; init-paketti.el -*- coding: utf-8; lexical-binding: t -*-
 
 ;;;; builtins
@@ -184,6 +185,8 @@
         sauron
         2048-game
         fancy-narrow
+        migemo
+        ace-link
         all-ext))
 
 (defvar muki:paketti-list-prog-modes
@@ -225,7 +228,6 @@
     tango-2-theme
     twilight-theme
     cyberpunk-theme
-    zenburn-theme
     mustang-theme
     phoenix-dark-pink-theme
     phoenix-dark-mono-theme
@@ -311,7 +313,7 @@
     helm-ag-r
     wgrep-helm
     helm-mode-manager
-    helm-proc
+    ;; helm-proc
     ))
 (append-to-list muki:paketti-list muki:paketti-list-helm)
 
@@ -408,6 +410,7 @@
     paketti-fancy-narrow
     paketti-flycheck
     paketti-sunrise-commander
+    paketti-ace-link
 
     ;;; marmalade
     ;; paketti-rainbow-blocks

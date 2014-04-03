@@ -50,6 +50,15 @@
             (setq custom-file (locate-user-emacs-file "custom.el"))
             (load (file-name-sans-extension custom-file) t t)))
 
+
+;;; banish mouse pointer
+(cl-defun banish ()
+  (interactive)
+  (set-mouse-position (selected-frame) 1000 1000))
+(cl-defun my-focus-in-hook ()
+  (banish))
+(add-hook 'focus-in-hook 'my-focus-in-hook)
+
 ;; CamelCase awere editing
 ;; enable just in ruby-mode
 (add-hook 'ruby-mode-hook 'subword-mode)
