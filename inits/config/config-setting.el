@@ -242,6 +242,7 @@
 ;;;; prettify symbols
 (enable-mode global-prettify-symbols-mode)
 
-(enable-mode global-highlight-changes-mode)
+(when window-system
+  (enable-mode global-highlight-changes-mode))
 
 (provide 'config-setting)
