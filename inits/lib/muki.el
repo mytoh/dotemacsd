@@ -13,39 +13,39 @@
 (cl-defun muki:user-emacs-directory (&optional path)
   (if path
       (expand-file-name path user-emacs-directory)
-    user-emacs-directory))
+      user-emacs-directory))
 
 ;; http://e-arrows.sakura.ne.jp/2010/03/macros-in-emacs-el.html
 (cl-defmacro req (lib &rest body)
   "load library if file is exits"
   `(cond
-    ((locate-library (symbol-name ,lib))
-     (require ,lib nil 'noerror)
-     (muki:log "loading " (propertize (symbol-name ,lib)
-                                      'face 'font-lock-variable-name-face))
-     ,@body
-     (muki:log "loaded " (propertize (symbol-name ,lib)
-                                     'face 'font-lock-keyword-face)))
-    (t (message "%s not loaded" (symbol-name ,lib)))))
+     ((locate-library (symbol-name ,lib))
+      (require ,lib nil 'noerror)
+      (muki:log "loading " (propertize (symbol-name ,lib)
+                                       'face 'font-lock-variable-name-face))
+      ,@body
+      (muki:log "loaded " (propertize (symbol-name ,lib)
+                                      'face 'font-lock-keyword-face)))
+     (t (message "%s not loaded" (symbol-name ,lib)))))
 
 (cl-defmacro pak (package &rest body)
   "execute body when package is installed"
   `(cond
-    ((or (package-installed-p ,package)
-         (locate-library (symbol-name ,package)))
-     (muki:log "found package " (propertize (symbol-name ,package)
-                                            'face 'font-lock-variable-name-face))
-     ,@body)
-    (t (message "%s not found" (symbol-name ,package)))))
+     ((or (package-installed-p ,package)
+          (locate-library (symbol-name ,package)))
+      (muki:log "found package " (propertize (symbol-name ,package)
+                                             'face 'font-lock-variable-name-face))
+      ,@body)
+     (t (message "%s not found" (symbol-name ,package)))))
 
 (cl-defmacro liby (library &rest body)
   "execute body when library found"
   `(cond
-    ((locate-library (symbol-name ,library))
-     (muki:log "found library " (propertize (symbol-name ,library)
-                                            'face 'font-lock-variable-name-face))
-     ,@body)
-    (t (message "%s not found" (symbol-name ,library)))))
+     ((locate-library (symbol-name ,library))
+      (muki:log "found library " (propertize (symbol-name ,library)
+                                             'face 'font-lock-variable-name-face))
+      ,@body)
+     (t (message "%s not found" (symbol-name ,library)))))
 
 (cl-defmacro add-hook-fn (name &rest body)
   "(add-hook-fn 'php-mode-hook
@@ -172,7 +172,7 @@ buffer is not visiting a file."
   (if (or arg (not buffer-file-name))
       (find-file (concat "/sudo:root@localhost:"
                          (ido-read-file-name "Find file(as root): ")))
-    (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
+      (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
 
 ;;; colour util
 (cl-defun muki:colour-hsl-to-hex (h s l)
@@ -181,16 +181,20 @@ buffer is not visiting a file."
     (color-rgb-to-hex r g b)))
 
 ;;; my global map
-(define-prefix-command 'muki:global-map)
 (defcustom muki:global-prefix-key
   "C-c e"
   "personal global prefix key")
-(global-set-key (kbd muki:global-prefix-key) 'muki:global-map)
-(cl-defmacro muki:define-global-key (key func)
+(setq muki:global-map (make-sparse-keymap))
+(cl-defun muki:define-global-key (keymap func)
   "define personal global key mappings"
-  `(cl-locally
-    (define-key muki:global-map ,key ,func)
-    (message "bind %s to %s" ,key (symbol-name ,func))))
+  (cl-letf ((key (concat (kbd muki:global-prefix-key) keymap)))
+    (define-key muki:global-map key func)
+    (message "bind %s to %s" keymap (symbol-name func))))
+(define-minor-mode muki-mode
+    "muki keymapping"
+  :keymap muki:global-map
+  :lighter " ☕"
+  :global t :init-value t)
 
 ;; smart kill word
 ;; http://d.hatena.ne.jp/kiwanami/20091222/1261504543
@@ -198,7 +202,7 @@ buffer is not visiting a file."
   (interactive)
   (if (region-active-p)
       (kill-region (point) (mark))
-    (backward-kill-word 1)))
+      (backward-kill-word 1)))
 
 ;; kill whole line
 (cl-defun smart-kill-whole-line (&optional arg)
