@@ -86,3 +86,4 @@
   (add-to-list 'eshell-command-aliases-list '("cde" "cd ~/huone/git/emacs"))
   (add-to-list 'eshell-command-aliases-list '("gpl" "git pull"))
   (add-to-list 'eshell-command-aliases-list '("gst" "git status"))
+  (add-to-list 'eshell-command-aliases-list '("kuva" "pikkukivi kuva $1"))

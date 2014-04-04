@@ -6,45 +6,41 @@
         (car (setq ppss (cdr ppss)))
         (nth 3 ppss))))
 
+(cl-defun muki:lisp-cleanup-support (regex replace)
+  (save-excursion
+    (while (re-search-forward regex nil t)
+      (when (not (muki:in-string-or-comment))
+        (replace-match replace)))))
+
 (cl-defun muki:lisp-cleanup ()
   (interactive)
   (save-excursion
     (goto-char (point-min))
 
-    (save-excursion
-      (while (re-search-forward ")\s+)" nil t)
-        (when (not (muki:in-string-or-comment))
-          (replace-match "))"))))
-    (save-excursion
-      (while (re-search-forward "(\s+("nil t)
-        (when (not (muki:in-string-or-comment))
-          (replace-match "(("))))
+    (muki:lisp-cleanup-support ")\s+)"  "))")
+    (muki:lisp-cleanup-support "(\s+(" "((")
 
-    (save-excursion
-      (while (re-search-forward (rx (group (+ (or word (in "?" "." "-")))) symbol-end (+ space) ")") nil t)
-        (when (not (muki:in-string-or-comment))
-          (replace-match "\\1)"))))
-    (save-excursion
-      (while (re-search-forward (rx "(" (+ space) symbol-start (group (+ (or word (in "?" "." "-"))))) nil t)
-        (when (not (muki:in-string-or-comment))
-          (replace-match "(\\1"))))
+    (muki:lisp-cleanup-support
+     (rx (group (+ (or word (in "?" "." "-")))) symbol-end (+ space) ")")
+     "\\1)")
+    (muki:lisp-cleanup-support
+     (rx "(" (+ space) symbol-start (group (+ (or word (in "?" "." "-")))))
+     "(\\1")
 
-    (save-excursion
-      (while (re-search-forward (rx (group (+ word)) (+ space) "(") nil t)
-        (when (not (muki:in-string-or-comment))
-          (replace-match "\\1 ("))))
-    (save-excursion
-      (while (re-search-forward (rx ")" (group (+ word)) (+ space)) nil t)
-        (when (not (muki:in-string-or-comment))
-          (replace-match ") \\1"))))
+    (muki:lisp-cleanup-support
+     (rx (group (+ word)) (+ space) "(")
+     "\\1 (")
+    (muki:lisp-cleanup-support
+     (rx ")" (group (+ word)) (+ space))
+     ") \\1")
 
-    (save-excursion
-      (while (re-search-forward (rx (group (in "\"")) (+ space) ")") nil t)
-        (when (not (muki:in-string-or-comment))
-          (replace-match "\\1)"))))
-    (save-excursion
-      (while (re-search-forward (rx "(" (+ space) (group (in "\""))) nil t)
-        (when (not (muki:in-string-or-comment))
-          (replace-match "(\\1"))))))
+    (muki:lisp-cleanup-support
+     (rx (group (in "\"")) (+ space) ")")
+     "\\1)")
+    (muki:lisp-cleanup-support
+     (rx "(" (+ space) (group (in "\"")))
+     "(\\1")
+
+    ))
 
 (provide 'lang-lisp)

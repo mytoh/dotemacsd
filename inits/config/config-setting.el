@@ -230,7 +230,7 @@
 
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus
-(defvar muki:x-theme 'planet)
+(defvar muki:x-theme 'subatomic256)
 (defvar muki:term-theme 'moe-dark)
 
 (enable-option x-select-enable-clipboard
@@ -238,11 +238,16 @@
 
 ;;;; browse web
 (set-option browse-url-generic-program "conkeror")
+(set-option browse-url-browser-function 'browse-url-generic)
 
 ;;;; prettify symbols
 (enable-mode global-prettify-symbols-mode)
 
 (when window-system
-  (enable-mode global-highlight-changes-mode))
+  (enable-mode global-highlight-changes-mode)
+  (set-face-foreground 'highlight-changes nil)
+  (set-face-background 'highlight-changes "Palevioletred4")
+  (set-face-foreground 'highlight-changes-delete nil)
+  (set-face-background 'highlight-changes-delete "Palevioletred4"))
 
 (provide 'config-setting)
