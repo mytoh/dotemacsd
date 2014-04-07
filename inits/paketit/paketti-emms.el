@@ -128,8 +128,45 @@ controls, run `mixer' in a shell."
      (muki:define-emms-key (kbd "a d") 'emms-add-directory-tree)
      (muki:define-emms-key (kbd "+") 'emms-volume-raise)
      (muki:define-emms-key (kbd "-") 'emms-volume-lower)
-
      )
+
+(cl-defun helm-librefm-stream ()
+  (interactive)
+  (helm :sources '(helm-source-librefm-stream)
+        :buffer "*helm librefm stream *"
+        :prompt "Tag: "))
+
+(defvar helm-source-librefm-stream
+  `((name . "Librefm")
+    (init . helm-librefm-stream-init)
+    (candidates . helm-librefm-stream-candidates)
+    (action . (("Open Stream" . helm-librefm-stream-action-open)))))
+
+(cl-defun helm-librefm-stream-action-open (tag)
+  (cl-letf ((url (cl-concatenate 'string
+                                 "librefm://globaltags/"
+                                 tag)))
+    (emms-librefm-stream url)))
+
+(cl-defun helm-librefm-stream-init ()
+  (setq helm-librefm-stream-candidates
+        (helm-librefm-stream-create-candidates
+         helm-librefm-stream-tags)))
+
+(cl-defun helm-librefm-stream-create-candidates (tags)
+  tags)
+
+(defvar helm-librefm-stream-tags
+  '( "Folk"
+    "Rock"
+    "Metal"
+    "Classical"
+    "Pop"
+    "Blues"
+    "Jazz"
+    "Punk"
+    "Ambient"
+    "Electronic"))
 
 (muki:comment
  ;; debug players
@@ -141,7 +178,7 @@ controls, run `mixer' in a shell."
                     (name . "test.flac")))
 ;;; librefm streaming
  ;; ibrefm://globaltags/Classical
- ;; Folk
+ ";; Folk"
  ;; Rock
  ;; Metal
  ;; Classical
