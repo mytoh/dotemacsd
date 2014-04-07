@@ -413,6 +413,7 @@
     paketti-flycheck
     paketti-sunrise-commander
     paketti-ace-link
+    paketti-easy-kill
 
     ;;; marmalade
     ;; paketti-rainbow-blocks
