@@ -1,6 +1,6 @@
 
 (defface org-block-begin-line
-    '((t (:underline "#a7a6aa" :foreground "#008ed1" :background "#cacadf")))
+    '((t (:underline "#a7a6aa" :foreground "#008ed1" :background "#8a8abf")))
   "Face used for the line delimiting the begin of source blocks.")
 
 (defface org-block-background
@@ -8,7 +8,7 @@
   "Face used for the source block background")
 
 (defface org-block-end-line
-    '((t (:overline "#a7a6aa" :foreground "#008ed1" :background "#cacadf")))
+    '((t (:overline "#a7a6aa" :foreground "#008ed1" :background "#8a8abf")))
   "Face used for the line delimiting the end of source blocks")
 
 (enable-option org-src-fontify-natively)

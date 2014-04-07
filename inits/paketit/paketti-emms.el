@@ -139,6 +139,19 @@ controls, run `mixer' in a shell."
                     (name . "http://test")))
  (emms-player-for '(*track* (type . file)
                     (name . "test.flac")))
+;;; librefm streaming
+ ;; ibrefm://globaltags/Classical
+ ;; Folk
+ ;; Rock
+ ;; Metal
+ ;; Classical
+ ;; Pop
+ ;; Blues
+ ;; Jazz
+ ;; Punk
+ ;; Ambient
+ ;; Electronic
+
  )
 
 

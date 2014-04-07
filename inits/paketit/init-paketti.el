@@ -39,33 +39,33 @@
 ;; install packages
 (setq muki:paketti-list
       '(rainbow-delimiters
-        rainbow-blocks
-        auto-complete
+        ;; rainbow-blocks
+        ;; auto-complete
         ;; ac-ja
-        ac-slime
+        ;; ac-slime
         bookmark+
         cursor-chg
         deferred
         highlight-symbol
         ;; dired
         image-dired+
-        slideview
+        ;; slideview
         image+
         dired+
         dired-single
-        projectile
-        project-persist
+        ;; projectile
+        ;; project-persist
         magit
         rainbow-mode
-        scheme-complete
+        ;; scheme-complete
         expand-region
         tabbar
         suomalainen-kalenteri
         info+
         redo+
         yasnippet
-        mew
-        w3m
+        ;; mew
+        ;; w3m
         smartparens
         dash
         ht
@@ -77,14 +77,14 @@
         color-moccur
         git-gutter+
         git-gutter
-        git-gutter-fringe
+        ;; git-gutter-fringe
         diff-hl
         nyan-mode
         minimap
         eshell-manual
         hackernews
-        twittering-mode
-        highlight-indentation
+        ;; twittering-mode
+        ;; highlight-indentation
         auto-highlight-symbol
         multiple-cursors
         guide-key
@@ -96,8 +96,8 @@
         ;; pallet
         page-break-lines
         flycheck
-        fiplr
-        fuzzy
+        ;; fiplr
+        ;; fuzzy
         ;; melpa-upstream-visit
         ;; melpa
         quickrun
@@ -116,12 +116,12 @@
 
         pretty-mode
         ;; pretty-mode-plus
-        clippy
+        ;; clippy
         electric-case
-        paredit
-        visual-regexp
-        litable
-        stripe-buffer
+        ;; paredit
+        ;; visual-regexp
+        ;; litable
+        ;; stripe-buffer
         ace-jump-mode
         ;; auto-complete-clang-async
         mentor
@@ -130,29 +130,29 @@
         cl-lib-highlight
         anzu
         whitespace-cleanup-mode
-        yascroll
-        charmap
-        project-explorer
+        ;; yascroll
+        ;; charmap
+        ;; project-explorer
         highlight-unique-symbol
         exec-path-from-shell
         auto-auto-indent
-        perspective
-        workgroups2
+        ;; perspective
+        ;; workgroups2
         smartscan
-        multi-term
+        ;; multi-term
         free-keys
         zone-matrix
         company
         volatile-highlights
         recentf-ext
         unicode-fonts ; require eieio-1.3
-        writeroom-mode
-        writegood-mode
-        nyan-prompt
-        indent-guide
+        ;; writeroom-mode
+        ;; writegood-mode
+        ;; nyan-prompt
+        ;; indent-guide
         keyfreq
         mykie
-        flylisp
+        ;; flylisp
         soundcloud
         emms-soundcloud
         xkcd
@@ -167,7 +167,7 @@
         lingr
         smartrep
         highlight-defined
-        sublimity
+        ;; sublimity
         erc-hl-nicks
         erc-image
         erc-tweet
@@ -187,7 +187,9 @@
         fancy-narrow
         migemo
         ace-link
-        all-ext))
+        all-ext
+        easy-kill
+        ))
 
 (defvar muki:paketti-list-prog-modes
   '(stumpwm-mode
@@ -285,6 +287,7 @@
     tron-theme
     qsimpleq-theme
     deep-thought-theme
+    stekene-theme
     waher-theme ; require emacs-24.1
     ))
 (append-to-list muki:paketti-list muki:paketti-list-colour-themes)
@@ -356,7 +359,7 @@
     paketti-suomalainen-kalenteri
     paketti-info+
     paketti-popwin
-    paketti-w3m
+    ;; paketti-w3m
     paketti-git-gutter
     paketti-yasnippet
     paketti-flymake
@@ -367,15 +370,14 @@
     paketti-lua-mode
     paketti-vala-mode
     paketti-page-break-lines
-    paketti-stripe-buffer
+    ;; paketti-stripe-buffer
     paketti-quickrun
     paketti-sudo-ext
     paketti-js3
     paketti-cl-lib-highlight
     paketti-anzu
     paketti-stumpwm-mode
-    paketti-charmap
-    paketti-highlight-unique-symbol
+    ;; paketti-charmap
     paketti-auto-auto-indent
     paketti-all-ext
     paketti-auto-highlight-symbol
@@ -384,7 +386,7 @@
     paketti-smartscan
     paketti-volatile-highlights
     paketti-recentf-ext
-    paketti-writegood-mode
+    ;; paketti-writegood-mode
     paketti-shell-pop
     paketti-color-moccur
     paketti-mykie
@@ -419,6 +421,7 @@
     ;; paketti-git-gutter+
     ;; paketti-diff-hl
 
+    ;; paketti-highlight-unique-symbol
     ;; paketti-tab-group
     ;; paketti-flylisp
     ;; paketti-indent-guide

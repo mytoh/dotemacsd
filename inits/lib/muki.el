@@ -211,6 +211,14 @@ buffer is not visiting a file."
   (kill-whole-line arg)
   (back-to-indentation))
 
+(cl-defun muki:org-make-src ()
+  (interactive)
+  (save-excursion
+    (goto-char (region-beginning))
+    (insert "#+begin_src \n")
+    (goto-char (region-end))
+    (insert "\n#+end_src\n")))
+
 
 (cl-defmacro muki:comment (&rest body)
   t)

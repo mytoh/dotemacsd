@@ -20,7 +20,7 @@
 ;;;; syntax highlight
 (global-font-lock-mode 1)
 ;;;; dont enable this option
-;; (enable-option font-lock-maximum-decoration)
+(enable-option font-lock-maximum-decoration)
 
 ;;;; read symlinked file
 (enable-option vc-follow-symlinks)
@@ -245,9 +245,11 @@
 
 (when window-system
   (enable-mode global-highlight-changes-mode)
-  (set-face-foreground 'highlight-changes nil)
-  (set-face-background 'highlight-changes "Palevioletred4")
-  (set-face-foreground 'highlight-changes-delete nil)
-  (set-face-background 'highlight-changes-delete "Palevioletred4"))
+  (set-face-attribute 'highlight-changes nil
+                      :foreground nil
+                      :background "#3b271d")
+  (set-face-attribute 'highlight-changes-delete nil
+                      :foreground nil
+                      :background "#3b272d"))
 
 (provide 'config-setting)
