@@ -142,21 +142,30 @@ controls, run `mixer' in a shell."
     (candidates . helm-librefm-stream-candidates)
     (action . (("Open Stream" . helm-librefm-stream-action-open)))))
 
-(cl-defun helm-librefm-stream-action-open (tag)
-  (cl-letf ((url (cl-concatenate 'string
-                                 "librefm://globaltags/"
-                                 tag)))
-    (emms-librefm-stream url)))
+(cl-defun helm-librefm-stream-action-open (candidate)
+  (emms-librefm-stream candidate))
 
 (cl-defun helm-librefm-stream-init ()
   (setq helm-librefm-stream-candidates
-        (helm-librefm-stream-create-candidates
-         helm-librefm-stream-tags)))
+        (helm-librefm-stream-create-candidates)))
 
-(cl-defun helm-librefm-stream-create-candidates (tags)
-  tags)
+(cl-defun helm-librefm-stream-create-candidates ()
+  (cons
+   '("Community loved" . "librefm://community/loved")
+   (helm-librefm-stream-station-tag
+    helm-librefm-stream-global-tags)))
 
-(defvar helm-librefm-stream-tags
+(cl-defun helm-librefm-stream-station-tag (tags)
+  (cl-mapcar
+   (lambda (tag)
+     (cons
+      tag
+      (cl-concatenate 'string
+                      "librefm://globaltags/"
+                      tag)))
+   tags))
+
+(defvar helm-librefm-stream-global-tags
   '( "Folk"
     "Rock"
     "Metal"
