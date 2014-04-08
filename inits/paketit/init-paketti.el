@@ -96,6 +96,7 @@
         ;; pallet
         page-break-lines
         flycheck
+        flycheck-pos-tip
         ;; fiplr
         ;; fuzzy
         ;; melpa-upstream-visit
@@ -411,6 +412,7 @@
     paketti-company-mode
     paketti-fancy-narrow
     paketti-flycheck
+    paketti-flycheck-pos-tip
     paketti-sunrise-commander
     paketti-ace-link
     paketti-easy-kill
