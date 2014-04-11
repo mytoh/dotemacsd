@@ -27,34 +27,43 @@
      ;; (emms-default-players)
      (req 'emms-player-simple
 
-          ;; mikmod
-          (define-emms-simple-player mikmod '(file)
+          (defvar regexp-file-music-mikmod
             (emms-player-simple-regexp
              "669" "AMF" "DSM" "FAR" "GDM" "IT" "IMF"
              "MED" "MTM" "OKT" "S3M" "STM" "STX" "ULT"
              "APUN" "XM" "MOD" "amf" "dsm" "far" "gdm"
              "it" "imf" "mod" "med" "mtm" "okt" "s3m"
-             "stm" "stx" "ult" "apun" "xm" "mod" "MOD")
+             "stm" "stx" "ult" "apun" "xm" "mod" "MOD"))
+
+          (defvar regexp-file-music-general
+            (emms-player-simple-regexp
+             "flac" "mp3" "ogg" "wma" "oga" "m4a" "mka"
+             "wav"))
+
+          (defvar regexp-file-video
+            (emms-player-simple-regexp
+             "mpg" "mpeg" "wmv"
+             "mov" "avi" "divx" "ogm" "ogv" "asf" "mkv"
+             "rm" "rmvb" "mp4"  "vob" "ape" "webm" "flv" "swf"))
+
+          ;; mikmod
+          (define-emms-simple-player mikmod '(file)
+            regexp-file-music-mikmod
             "mikmod" "-q" "-p" "1" "-X")
           (add-to-list 'emms-player-list 'emms-player-mikmod)
 
           ;; sox
           (define-emms-simple-player sox
               '(file)
-            (emms-player-simple-regexp
-             "flac" "mp3" "ogg" "wma" "oga" "m4a" "mka"
-             "wav")
-            "play" "--volume" "0.2")
+            regexp-file-music-general
+            "play" "--volume" "0.5" "--no-show-progress")
           (add-to-list 'emms-player-list 'emms-player-sox)
 
           ;; mplayer2
           (define-emms-simple-player mplayer2 '(file url)
             (cl-concatenate 'string
                             "\\`\\(http\\|mms\\)://\\|"
-                            (emms-player-simple-regexp
-                             "mpg" "mpeg" "wmv"
-                             "mov" "avi" "divx" "ogm" "ogv" "asf" "mkv"
-                             "rm" "rmvb" "mp4"  "vob" "ape"))
+                            regexp-file-video)
             "mplayer" "--slave" "--really-quiet")
           (add-to-list 'emms-player-list 'emms-player-mplayer2)
 
@@ -66,7 +75,7 @@
           ;; mpv
           (define-emms-simple-player mpv
               '(file)
-            (emms-player-simple-regexp "webm" "mkv" "wmv" "mp4" "flv" "swf")
+            regexp-file-video
             "mpv" "--framedrop=yes" "--softvol=auto" "--really-quiet")
           (add-to-list 'emms-player-list 'emms-player-mpv)
 
@@ -176,6 +185,8 @@ controls, run `mixer' in a shell."
     "Punk"
     "Ambient"
     "Electronic"))
+
+(muki:define-emms-key (kbd "l") 'helm-librefm-stream)
 
 (muki:comment
  ;; debug players

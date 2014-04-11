@@ -14,7 +14,8 @@
 (set-option show-paren-delay 0
             show-paren-style 'expression)
 (set-face-attribute 'show-paren-match-face nil
-                    :background "#252529"
+                    :foreground nil
+                    :background "#354039"
                     :underline nil)
 
 ;;;; syntax highlight
@@ -229,8 +230,8 @@
 (enable-option find-file-visit-truename)
 
 ;;;; theme
-;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus
-(defvar muki:x-theme 'subatomic256)
+;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly
+(defvar muki:x-theme 'firebelly)
 (defvar muki:term-theme 'moe-dark)
 
 (enable-option x-select-enable-clipboard

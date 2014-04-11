@@ -18,14 +18,15 @@
 
 ;; ここが腕の見せ所
 (defvar template-replacements-alists
-  '(("%file%"             . (lambda () (file-name-nondirectory (buffer-file-name))))))
+  '(("%file-base%" . (lambda () (file-name-base (file-name-nondirectory (buffer-file-name)))))
+    ("%file%"             . (lambda () (file-name-nondirectory (buffer-file-name))))))
 
 (defun muki:elisp-template ()
   (time-stamp)
   (mapc #'(lambda(c)
             (cl-locally
-             (goto-char (point-min))
-             (replace-string (car c) (funcall (cdr c)) nil)))
+                (goto-char (point-min))
+              (replace-string (car c) (funcall (cdr c)) nil)))
         template-replacements-alists)
   (goto-char (point-max))
   (message "done."))
@@ -34,8 +35,8 @@
   (time-stamp)
   (mapc #'(lambda(c)
             (cl-locally
-             (goto-char (point-min))
-             (replace-string (car c) (funcall (cdr c)) nil)))
+                (goto-char (point-min))
+              (replace-string (car c) (funcall (cdr c)) nil)))
         template-replacements-alists)
   (goto-char (point-max))
   (message "done."))

@@ -1,8 +1,6 @@
-;;; %file% -*- lexical-binding: t -*-
+;;; %file-base% -*- lexical-binding: t -*-
+
+;;; Code:
 
 
-
-;; Local Variables:
-;; coding: utf-8
-;; indent-tabs-mode: nil
-;; End:
+;;; %file% ends here

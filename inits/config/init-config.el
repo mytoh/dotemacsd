@@ -14,6 +14,7 @@
     config-dired
     config-eww
     config-newsticker
+    config-rcirc
     ))
 
 (mapc 'require init-configs)

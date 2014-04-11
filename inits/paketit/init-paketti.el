@@ -1,4 +1,3 @@
-
 ;;; init-paketti.el -*- coding: utf-8; lexical-binding: t -*-
 
 ;;;; builtins
@@ -122,7 +121,6 @@
         ;; paredit
         ;; visual-regexp
         ;; litable
-        ;; stripe-buffer
         ace-jump-mode
         ;; auto-complete-clang-async
         mentor
@@ -190,6 +188,7 @@
         ace-link
         all-ext
         easy-kill
+        stripe-buffer
         ))
 
 (defvar muki:paketti-list-prog-modes
@@ -198,6 +197,7 @@
     lua-mode
     haskell-mode
     js3-mode
+    js2-mode
     ;; vala-mode
     conkeror-minor-mode
     csharp-mode
@@ -209,6 +209,7 @@
 
 (defvar muki:paketti-list-colour-themes
   '(;; themes
+    firebelly-theme
     minimal-theme
     distinguished-theme
     flatui-theme
@@ -317,7 +318,7 @@
     helm-ag-r
     wgrep-helm
     helm-mode-manager
-    ;; helm-proc
+    helm-proc
     ))
 (append-to-list muki:paketti-list muki:paketti-list-helm)
 
@@ -371,7 +372,6 @@
     paketti-lua-mode
     paketti-vala-mode
     paketti-page-break-lines
-    ;; paketti-stripe-buffer
     paketti-quickrun
     paketti-sudo-ext
     paketti-js3
@@ -416,6 +416,10 @@
     paketti-sunrise-commander
     paketti-ace-link
     paketti-easy-kill
+    paketti-stripe-buffer
+    paketti-haskell-mode
+    paketti-ghc
+
 
     ;;; marmalade
     ;; paketti-rainbow-blocks
@@ -432,8 +436,6 @@
     ;; paketti-auto-complete
     ;; paketti-projectile
     ;; paketti-project-persist
-    ;; paketti-ghc
-    ;; paketti-haskell-mode
     ;; paketti-highlight-indentation
     ;; paketti-pretty-mode
     ;; paketti-pretty-mode-plus
