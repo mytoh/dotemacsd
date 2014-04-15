@@ -230,8 +230,8 @@
 (enable-option find-file-visit-truename)
 
 ;;;; theme
-;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly
-(defvar muki:x-theme 'firebelly)
+;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art
+(defvar muki:x-theme 'zen-and-art)
 (defvar muki:term-theme 'moe-dark)
 
 (enable-option x-select-enable-clipboard

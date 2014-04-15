@@ -6,6 +6,10 @@
      (setq git-gutter:deleted-sign "☂")
      (setq git-gutter:disabled-modes '(image-mode eshell-mode))
      (global-git-gutter-mode t)
+     (eval-after-load "diminish"
+       '(progn
+         (eval-after-load "git-gutter"
+           '(diminish 'git-gutter-mode ""))))
      )
 
 (provide 'paketti-git-gutter)
