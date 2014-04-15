@@ -7,13 +7,13 @@
 
 (cl-defmacro muki:log (&rest messages)
   `(cl-locally
-    (message (concat (propertize ">> " 'face 'font-lock-doc-face)
-                     ,@messages) " ...")))
+       (message (concat (propertize ">> " 'face 'font-lock-doc-face)
+                        ,@messages) " ...")))
 
 (cl-defun muki:user-emacs-directory (&optional path)
   (if path
       (expand-file-name path user-emacs-directory)
-      user-emacs-directory))
+    user-emacs-directory))
 
 ;; http://e-arrows.sakura.ne.jp/2010/03/macros-in-emacs-el.html
 (cl-defmacro req (lib &rest body)
@@ -57,8 +57,8 @@
 ;; http://e-arrows.sakura.ne.jp/2010/03/macros-in-emacs-el.html
 (cl-defmacro lazyload (_funcs _lib)
   `(cl-locally
-    ,@(cl-mapcar (lambda (f) `(autoload ',f ,_lib nil t))
-                 _funcs)))
+       ,@(cl-mapcar (lambda (f) `(autoload ',f ,_lib nil t))
+                    _funcs)))
 
 ;; (append-to-list exec-path
 ;;                 '("/usr/bin" "/bin"
@@ -67,53 +67,53 @@
   `(setq ,to (append ,to ,lst)))
 
 (cl-defmacro muki:add-to-load-path (path)
-  `(when (file-exists-p ,path)
-     (add-to-list 'load-path ,path)))
+  `(and (file-exists-p ,path)
+        (add-to-list 'load-path ,path)))
 
 (cl-defmacro muki:set-face-colours (face fore back)
   `(cl-locally
-    (set-face-foreground ,face ,fore)
-    (set-face-background ,face ,back)))
+       (set-face-foreground ,face ,fore)
+     (set-face-background ,face ,back)))
 
 (cl-defmacro set-option (&rest body)
-  (when body
-    (cl-letf ((option (car body))
-              (value (cadr body)))
-      `(cl-locally
-        (muki:log "set " ,(propertize (symbol-name option)
-                                      'face 'font-lock-variable-name-face))
-        (setq ,option ,value)
-        (set-option ,@(cddr body))))))
+  (and body
+       (cl-letf ((option (car body))
+                 (value (cadr body)))
+         `(cl-locally
+              (muki:log "set " ,(propertize (symbol-name option)
+                                            'face 'font-lock-variable-name-face))
+            (setq ,option ,value)
+            (set-option ,@(cddr body))))))
 
 (cl-defmacro enable-option (&rest body)
-  (when body
-    (cl-letf ((option (car body)))
-      `(cl-locally
-        (muki:log "enable " ,(propertize (symbol-name option)
-                                         'face 'font-lock-variable-name-face))
-        (setq ,option t)
-        (enable-option ,@(cdr body))))))
+  (and body
+       (cl-letf ((option (car body)))
+         `(cl-locally
+              (muki:log "enable " ,(propertize (symbol-name option)
+                                               'face 'font-lock-variable-name-face))
+            (setq ,option t)
+            (enable-option ,@(cdr body))))))
 
 (cl-defmacro disable-option (&rest body)
-  (when body
-    (cl-letf ((option (car body)))
-      `(cl-locally
-        (muki:log "disable " ,(propertize (symbol-name option)
-                                          'face 'font-lock-variable-name-face))
-        (setq ,option nil)
-        (disable-option ,@(cdr body))))))
+  (and body
+       (cl-letf ((option (car body)))
+         `(cl-locally
+              (muki:log "disable " ,(propertize (symbol-name option)
+                                                'face 'font-lock-variable-name-face))
+            (setq ,option nil)
+            (disable-option ,@(cdr body))))))
 
 (cl-defmacro enable-mode (mode-fn)
   `(cl-locally
-    (,mode-fn 1)
-    (muki:log "enable mode " ,(propertize (symbol-name mode-fn)
-                                          'face 'font-lock-variable-name-face))))
+       (,mode-fn 1)
+     (muki:log "enable mode " ,(propertize (symbol-name mode-fn)
+                                           'face 'font-lock-variable-name-face))))
 
 (cl-defmacro disable-mode (mode-fn)
   `(cl-locally
-    (,mode-fn -1)
-    (muki:log "disable mode " ,(propertize (symbol-name mode-fn)
-                                           'face 'font-lock-variable-name-face))))
+       (,mode-fn -1)
+     (muki:log "disable mode " ,(propertize (symbol-name mode-fn)
+                                            'face 'font-lock-variable-name-face))))
 
 ;;http://www.reddit.com/r/emacs/comments/umb24/expandfilename_is_good_for_path_concat_too/
 (cl-defun concat-path (&rest parts)
@@ -145,10 +145,10 @@
 emacs load path"
   (cl-dolist (f (directory-files parent-dir))
     (cl-letf ((name (expand-file-name f parent-dir)))
-      (when (and (file-directory-p name)
-                 (not (equal f ".."))
-                 (not (equal f ".")))
-        (add-to-list 'load-path name)))))
+      (and (file-directory-p name)
+           (not (equal f ".."))
+           (not (equal f "."))
+           (add-to-list 'load-path name)))))
 
 ;; kill other buffers
 (cl-defun kill-other-buffers ()
@@ -172,7 +172,7 @@ buffer is not visiting a file."
   (if (or arg (not buffer-file-name))
       (find-file (concat "/sudo:root@localhost:"
                          (ido-read-file-name "Find file(as root): ")))
-      (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
+    (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
 
 ;;; colour util
 (cl-defun muki:colour-hsl-to-hex (h s l)
@@ -202,7 +202,7 @@ buffer is not visiting a file."
   (interactive)
   (if (region-active-p)
       (kill-region (point) (mark))
-      (backward-kill-word 1)))
+    (backward-kill-word 1)))
 
 ;; kill whole line
 (cl-defun smart-kill-whole-line (&optional arg)

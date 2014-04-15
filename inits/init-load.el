@@ -27,7 +27,7 @@
 (require 'init-vendle)
 
 ;;;;; el-get
-(require 'init-el-get)
+;; (require 'init-el-get)
 
 ;;;; provide
 (provide 'init-load)

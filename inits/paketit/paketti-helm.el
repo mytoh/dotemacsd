@@ -39,7 +39,8 @@
      (disable-option enable-recursive-minibuffers
                      helm-quick-update
                      helm-candidate-number-limit
-                     helm-move-to-line-cycle-in-source)
+                     helm-move-to-line-cycle-in-source
+                     helm-debug)
      ;;;; helm-files
      (enable-option helm-ff-lynx-style-map
                     helm-ff-transformer-show-only-basename

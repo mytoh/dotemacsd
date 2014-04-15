@@ -69,6 +69,10 @@
      ;;                     :background "#fdf6e3"
      ;;                     :foreground "#073642")
 
+     (eval-after-load "diminish"
+       '(progn
+         (eval-after-load "smartparens"
+           '(diminish 'smartparens-mode " ⚖"))))
 
      )
 

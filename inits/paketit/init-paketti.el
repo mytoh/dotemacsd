@@ -189,6 +189,8 @@
         all-ext
         easy-kill
         stripe-buffer
+        paradox
+        diminish
         ))
 
 (defvar muki:paketti-list-prog-modes
@@ -332,6 +334,7 @@
     navi-mode
     orglink
     orglue
+    worf
     ))
 (append-to-list muki:paketti-list muki:paketti-list-org)
 
@@ -419,6 +422,8 @@
     paketti-stripe-buffer
     paketti-haskell-mode
     paketti-ghc
+    paketti-paradox
+    paketti-diminish
 
 
     ;;; marmalade

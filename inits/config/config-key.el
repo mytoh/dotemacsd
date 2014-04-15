@@ -10,7 +10,7 @@
 
 (global-set-key [remap kill-whole-line] 'smart-kill-whole-line)
 
-(muki:define-global-key (kbd "p") 'package-list-packages)
+;; (muki:define-global-key (kbd "p") 'package-list-packages)
 
 ;;;; default compose mail
 (global-unset-key (kbd "C-x m"))

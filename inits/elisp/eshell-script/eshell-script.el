@@ -11,8 +11,8 @@
 (define-derived-mode eshell-script-mode emacs-lisp-mode "Esh"
                      "Major mode for editing eshell scripts."
                      (setq-local comment-start "# ")
-                     (setq-local comment-end   "\n")
-                     (setq-local comment-start-skipe "#[^']+*"))
+                     (setq-local comment-end   "")
+                     (setq-local comment-start-skip "#[^']+*"))
 
 (provide 'eshell-script)
 
