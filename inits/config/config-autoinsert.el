@@ -12,7 +12,8 @@
 ;; 各ファイルによってテンプレートを切り替える
 (setq auto-insert-alist
       (nconc '(("\\.el\\'" . ["template.el" muki:elisp-template])
-               ("\\.scm\\'" . ["template.scm" muki:scheme-template]))
+               ("\\.scm\\'" . ["template.scm" muki:scheme-template])
+               ("\\.sh\\'" . ["template.sh" muki:shell-template]))
              auto-insert-alist))
 (require 'cl-lib)
 
@@ -32,6 +33,16 @@
   (message "done."))
 
 (defun muki:scheme-template ()
+  (time-stamp)
+  (mapc #'(lambda(c)
+            (cl-locally
+                (goto-char (point-min))
+              (replace-string (car c) (funcall (cdr c)) nil)))
+        template-replacements-alists)
+  (goto-char (point-max))
+  (message "done."))
+
+(defun muki:shell-template ()
   (time-stamp)
   (mapc #'(lambda(c)
             (cl-locally
