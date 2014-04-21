@@ -30,8 +30,9 @@
                  helm-buffers-favorite-modes
                  (append helm-buffers-favorite-modes
                          '(picture-mode artist-mode))
-                 helm-buffer-max-length 50
+                 ;; helm-buffer-max-length 50x
                  )
+     (set-option helm-boring-file-regexp-list '("\\.git$" "\\.hg$" "\\.svn$" "\\.CVS$" "\\._darcs$" "\\.la$" "\\.o$" "\\.i$"))
      (add-to-list 'helm-boring-file-regexp-list  "\\.elc$")
      (add-to-list 'helm-boring-file-regexp-list  "\\.git/COMMIT_EDITMSG$")
 
@@ -55,9 +56,9 @@
      (set-option helm-external-programs-associations
                  '(("cbz" . "mcomix")
                    ("cbr" . "mcomix")
-                   ("jpg" . "kuva.sh")
-                   ("png" . "kuva.sh")
-                   ("gif" . "kuva.sh")
+                   ("jpg" . "pikkukivi kuva")
+                   ("png" . "pikkukivi kuva")
+                   ("gif" . "pikkukivi kuva")
                    ("mov" . "mpv")
                    ("webm" . "mpv")
                    ("swf" . "mpv")
@@ -104,8 +105,8 @@
 
 
 ;; cmd-t
-;; (req 'helm-cmd-t
-;;      (global-set-key (kbd "M-t") 'helm-cmd-t))
+(req 'helm-cmd-t
+     (global-set-key (kbd "M-t") 'helm-cmd-t))
 ;; (req 'helm-C-x-b
 ;;      (define-key global-map [remap switch-to-buffer] 'helm-C-x-b))
 

@@ -191,6 +191,8 @@
         stripe-buffer
         paradox
         diminish
+        json-reformat
+        zop-to-char
         ))
 
 (defvar muki:paketti-list-prog-modes
@@ -200,6 +202,7 @@
     haskell-mode
     js3-mode
     js2-mode
+    json-mode
     ;; vala-mode
     conkeror-minor-mode
     csharp-mode
@@ -424,6 +427,7 @@
     paketti-ghc
     paketti-paradox
     paketti-diminish
+    paketti-zop-to-char
 
 
     ;;; marmalade

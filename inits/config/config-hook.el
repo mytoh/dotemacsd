@@ -33,7 +33,7 @@
                           :x 1100
                           :y 100
                           :timeout 5000)))
-(add-hook 'after-init-hook 'muki:init-finish-notify)
+;; (add-hook 'after-init-hook 'muki:init-finish-notify)
 
 ;; make read only when file under certain directory
 ;; (add-hook 'find-file-hook

@@ -6,9 +6,8 @@
      (add-hook 'javascript-mode-hook 'rainbow-mode)
      (add-hook 'css-mode-hook 'rainbow-mode)
      (add-hook 'js3-mode-hook 'rainbow-mode)
-     (eval-after-load "diminish"
-       '(progn
-         (eval-after-load "rainbow-mode"
-           '(diminish 'rainbow-mode " ω")))))
+     (with-eval-after-load "diminish"
+       (eval-after-load "rainbow-mode"
+         '(diminish 'rainbow-mode " ω"))))
 
 (provide 'paketti-rainbow-mode)
