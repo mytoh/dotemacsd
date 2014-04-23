@@ -2,19 +2,21 @@
 ;;; faces
 
 ;;;; colour-theme
-(add-to-list 'custom-theme-load-path "~/.emacs.d/inits/themes")
-(cond ((window-system)
-       ;; make the fringe stand out from the background
-       (enable-option solarized-distinct-fringe-background)
-       ;; make the modeline high contrast
-       (setq solarized-high-contrast-mode-line t)
-       ;; (load-theme 'gruvbox t)
-       (load-theme muki:x-theme 'no-confirm))
-      (t
-       (setq solarized-degrade t)
-       (setq solarized-termcolors 256)
-       (defvar monokai-add-font-lock-keywords t)
-       (load-theme muki:term-theme 'no-confirm)))
+(cl-defun muki:load-theme ()
+  (add-to-list 'custom-theme-load-path "~/.emacs.d/inits/themes")
+  (cond ((window-system)
+         ;; make the fringe stand out from the background
+         (enable-option solarized-distinct-fringe-background)
+         ;; make the modeline high contrast
+         (setq solarized-high-contrast-mode-line t)
+         ;; (load-theme 'gruvbox t)
+         (load-theme muki:x-theme 'no-confirm))
+        (t
+         (setq solarized-degrade t)
+         (setq solarized-termcolors 256)
+         (defvar monokai-add-font-lock-keywords t)
+         (load-theme muki:term-theme 'no-confirm))))
+(add-to-list 'after-init-hook 'muki:load-theme)
 
 ;;;; cursor shape
 (add-to-list 'default-frame-alist '(cursor-type . hollow))
