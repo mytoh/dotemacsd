@@ -27,6 +27,8 @@
      (vendle:register "davexunit/yon-chan")
      (vendle:register "owainlewis/emacs-color-themes")
      (vendle:register "omouse/org-doing")
+     (vendle:register "git://git.sv.gnu.org/emms.git"
+                      '(:name "emms" :load-path "lisp"))
 
      (vendle:register-theme "sabof/hyperplane-theme")
      (vendle:register-theme "emacs-jp/replace-colorthemes")
@@ -201,6 +203,8 @@
      (req 'emacs-color-themes)
 
      (req 'yon-chan)
+
+     (req 'init-emms)
      )
 
 (provide 'init-vendle)
