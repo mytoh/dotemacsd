@@ -21,6 +21,7 @@
                      (event "eventyp.xrea.jp")
                      (message "peercast.takami98.net/message-yp")))
 
+      (helm-migemize-command helm-ypv)
       )
 
 (provide 'init-helm-ypv)

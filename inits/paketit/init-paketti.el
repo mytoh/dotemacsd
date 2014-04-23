@@ -349,7 +349,7 @@
       (message "installing %s"  p)
       (package-install p))))
 
-(muki:paketti-update)
+;; (muki:paketti-update)
 
 (defvar init-paketit
   '(
@@ -363,7 +363,6 @@
     paketti-rainbow-delimiters
     paketti-tabbar
     paketti-smartparens
-    paketti-emms
     paketti-suomalainen-kalenteri
     paketti-info+
     paketti-popwin
