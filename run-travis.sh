@@ -8,7 +8,7 @@ install_dotemacsd() {
 }
 
 install_vendle() {
-    git clone git://github.com/mytoh/emacs/vendle /home/travis/projektit/emacs-vendle
+    git clone git://github.com/mytoh/emacs-vendle /home/travis/projektit/emacs-vendle
 }
 
 install_dotemacsd
