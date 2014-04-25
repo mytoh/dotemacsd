@@ -30,6 +30,12 @@
      (vendle:register "git://git.sv.gnu.org/emms.git"
                       '(:name "emms" :load-path "lisp"))
 
+     (vendle:register "emacs-helm/helm")
+     (vendle:register "thierryvolpiatto/pcomplete-extension")
+     (vendle:register "yuutayamada/helm-ag-r")
+     (vendle:register "yasuyk/helm-git-grep")
+     (vendle:register "emacs-helm/helm-migemo")
+
      (vendle:register-theme "sabof/hyperplane-theme")
      (vendle:register-theme "emacs-jp/replace-colorthemes")
      (vendle:register-theme "djcb/dream-theme")
@@ -71,8 +77,17 @@
      (muki:define-global-key (kbd "v u") 'vendle-update)
      (muki:define-global-key (kbd "v k") 'vendle-check)
      (muki:define-global-key (kbd "v c") 'vendle-clean)
-     (req 'helm-vendle
-          (muki:define-global-key (kbd "v l") 'helm-vendle))
+     (with-eval-after-load "helm"
+       (req 'helm-vendle
+            (muki:define-global-key (kbd "v l") 'helm-vendle)))
+
+     (req 'init-helm)
+     (req 'init-helm-ypv)
+     (req 'init-helm-alku)
+     (liby 'helm-project-buffer
+           (autoload 'helm-project-buffer "helm-project-buffer")
+           (global-set-key (kbd "C-x b") 'helm-project-buffer))
+     (req 'init-helm-ag-r)
 
      ;; update plugins
      ;; (vendle:update-packages)
@@ -118,7 +133,6 @@
      ;; (req 'zone-settings)
 
 
-     (req 'init-helm-ypv)
 
      ;; (with-eval-after-load 'company
      ;;   (req 'company-scheme
@@ -149,7 +163,6 @@
           ;; .skk を自動的にバイトコンパイル
           (enable-option skk-byte-compile-init-file))
 
-     (req 'init-helm-alku)
 
      ;; (req 'undohist
      ;;      (undohist-initialize)
@@ -160,9 +173,7 @@
 
      (req 'rebuildfm)
 
-     (liby 'helm-project-buffer
-           (autoload 'helm-project-buffer "helm-project-buffer")
-           (global-set-key (kbd "C-x b") 'helm-project-buffer))
+
 
      (req 'fuzzyjump
           (let ((map fuzzyjump-cmd-map))

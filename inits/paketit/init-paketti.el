@@ -470,17 +470,15 @@
 
 (defvar muki:paketit-list-helm
   '(;; helm
-    paketti-helm
-    paketti-helm-delicious
-    paketti-helm-helm-commands
-    paketti-helm-orgcard
-    paketti-helm-swoop
-    paketti-helm-ag-r
+    ;; paketti-helm-delicious
+    ;; paketti-helm-helm-commands
+    ;; paketti-helm-orgcard
+    ;; paketti-helm-swoop
     ;; paketti-helm-ag
-    paketti-helm-company
-    paketti-helm-dictionary
-    paketti-helm-recoll
-    paketti-wgrep-helm
+    ;; paketti-helm-company
+    ;; paketti-helm-dictionary
+    ;; paketti-helm-recoll
+    ;; paketti-wgrep-helm
 
     ))
 (append-to-list init-paketit muki:paketit-list-helm)
