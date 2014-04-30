@@ -60,7 +60,7 @@
          clojure-mode
          common-lisp-mode))
      (sp-with-modes muki:lisp-modes
-       (sp-local-pair "(" nil :bind "M-("))
+                    (sp-local-pair "(" nil :bind "M-("))
 
      ;; (add-hook 'emacs-lisp-mode 'turn-on-smartparens-strict-mode)
      ;; (add-hook 'scheme-mode 'smartparens-strict-mode)
@@ -77,4 +77,4 @@
      )
 
 
-(provide 'paketti-smartparens)
+(provide 'init-smartparens)

@@ -6,4 +6,4 @@
      (add-hook 'emacs-lisp-mode-hook 'outline-minor-mode)
      (add-hook 'scheme-mode-hook 'outline-minor-mode))
 
-(provide 'paketti-outshine)
+(provide 'init-outshine)

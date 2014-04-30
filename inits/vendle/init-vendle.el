@@ -16,12 +16,10 @@
      (vendle:register "moriyamahiroshi/seijiseikana-el")
      (vendle:register "kenoss/debug-print")
      ;; (vendle:register "emacsmirror/mew")
-     (vendle:register "tj64/outxxtra")
      (vendle:register "ober/zone-matrix")
      (vendle:register "mytoh/fish-mode")
      (vendle:register "thierryvolpiatto/emacs-bmk-ext")
      (vendle:register "kawabata/aozora-view")
-     (vendle:register "syohex/emacs-rebuildfm")
      (vendle:register "tomoya/fuzzyjump.el")
      (vendle:register "omouse/emacs-sos")
      (vendle:register "davexunit/yon-chan")
@@ -29,13 +27,49 @@
      (vendle:register "omouse/org-doing")
      (vendle:register "git://git.sv.gnu.org/emms.git"
                       '(:name "emms" :load-path "lisp"))
+     (vendle:register "magit/git-modes")
+     (vendle:register "magit/magit")
+     (vendle:register "company-mode/company-mode")
+     (vendle:register "syohex/emacs-git-gutter")
+     (vendle:register "syohex/emacs-rebuildfm")
+     (vendle:register "syohex/emacs-anzu" '(:compile nil))
+     (vendle:register "Fuco1/smartparens" '(:compile nil))
+     (vendle:register "Fuco1/org-pretty-table" '(:compile nil))
+     (vendle:register "haskell/haskell-mode")
+     (vendle:register "Bruce-Connor/paradox")
+     (vendle:register "steckerhalter/google-el")
 
-     (vendle:register "emacs-helm/helm")
+     ;;; org
+     (vendle:register "git://orgmode.org/org-mode.git"
+                      '(:load-path ("." "lisp" "contrib/lisp")))
+     (vendle:register "tj64/outshine" '(:compile nil))
+     (vendle:register "tj64/outorg" '(:compile nil))
+     ;; (vendle:register "tj64/navi")
+
+     ;;; helm
+     (vendle:register "emacs-helm/helm" '(:compile nil))
      (vendle:register "thierryvolpiatto/pcomplete-extension")
      (vendle:register "yuutayamada/helm-ag-r")
      (vendle:register "yasuyk/helm-git-grep")
      (vendle:register "emacs-helm/helm-migemo")
+     (vendle:register "emacs-helm/helm-ls-git")
+     (vendle:register "emacs-helm/helm-cmd-t")
+     (vendle:register "ShingoFukuyama/helm-swoop")
+     (vendle:register "steckerhalter/helm-google")
+     (vendle:register "syohex/emacs-helm-ag")
+     (vendle:register "markus1189/helm-hoogle")
+     (vendle:register "jixiuf/helm-etags-plus")
+     (vendle:register "syohex/emacs-helm-themes")
+     (vendle:register "syohex/emacs-helm-open-github")
+     (vendle:register "istib/helm-mode-manager")
+     (vendle:register "tkf/emacs-pinot-search")
+     (vendle:register "yasuyk/helm-flycheck")
+     (vendle:register "emacs-helm/helm-descbinds")
+     (vendle:register "yasuyk/helm-company")
+     (vendle:register "emacs-helm/helm-dictionary")
+     (vendle:register "emacs-helm/helm-recoll")
 
+     ;;; theme
      (vendle:register-theme "sabof/hyperplane-theme")
      (vendle:register-theme "emacs-jp/replace-colorthemes")
      (vendle:register-theme "djcb/dream-theme")
@@ -88,6 +122,8 @@
            (autoload 'helm-project-buffer "helm-project-buffer")
            (global-set-key (kbd "C-x b") 'helm-project-buffer))
      (req 'init-helm-ag-r)
+     (req 'init-helm-swoop)
+     (req 'init-helm-helm-commands)
 
      ;; update plugins
      ;; (vendle:update-packages)
@@ -216,6 +252,21 @@
      (req 'yon-chan)
 
      (req 'init-emms)
+
+     (req 'init-magit)
+
+     (req 'init-company-mode)
+
+     (req 'init-org)
+     (req 'outorg)
+     (req 'init-outshine)
+     (req 'org-pretty-table)
+
+     (req 'init-anzu)
+
+     (req 'init-smartparens)
+
+     (req 'init-haskell-mode)
      )
 
 (provide 'init-vendle)

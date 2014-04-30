@@ -28,4 +28,4 @@
      )
 
 
-(provide 'paketti-helm-swoop)
+(provide 'init-helm-swoop)

@@ -16,10 +16,11 @@
               (set (make-local-variable 'fill-column) 72)
               (turn-on-auto-fill))))
 
+(autoload 'magit-status "magit")
 (muki:define-global-key (kbd "g") 'magit-status)
 
 (pak 'magit
      (muki:magit-setup))
 
 
-(provide 'paketti-magit)
+(provide 'init-magit)

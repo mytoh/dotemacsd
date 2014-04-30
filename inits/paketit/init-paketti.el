@@ -362,18 +362,15 @@
     paketti-multiple-cursors
     paketti-rainbow-delimiters
     paketti-tabbar
-    paketti-smartparens
     paketti-suomalainen-kalenteri
     paketti-info+
     paketti-popwin
     ;; paketti-w3m
-    paketti-git-gutter
     paketti-yasnippet
     paketti-flymake
     paketti-coffee-mode
     paketti-undo-tree
     paketti-direx
-    paketti-magit
     paketti-lua-mode
     paketti-vala-mode
     paketti-page-break-lines
@@ -381,7 +378,6 @@
     paketti-sudo-ext
     paketti-js3
     paketti-cl-lib-highlight
-    paketti-anzu
     paketti-stumpwm-mode
     ;; paketti-charmap
     paketti-auto-auto-indent
@@ -414,7 +410,6 @@
     paketti-manage-minor-mode
     paketti-dim-autoload
     paketti-highlight-escape-sequences
-    paketti-company-mode
     paketti-fancy-narrow
     paketti-flycheck
     paketti-flycheck-pos-tip
@@ -422,8 +417,7 @@
     paketti-ace-link
     paketti-easy-kill
     paketti-stripe-buffer
-    paketti-haskell-mode
-    paketti-ghc
+    ;; paketti-ghc
     paketti-paradox
     paketti-diminish
     paketti-zop-to-char
@@ -484,14 +478,12 @@
 (append-to-list init-paketit muki:paketit-list-helm)
 
 (defvar muki:paketit-list-org
-  '(paketti-org
+  '(;; paketti-org
     ;; paketti-org-plus-contrib
     ;; paketti-org-bullets
-    paketti-outorg
-    paketti-orglue
-    paketti-outshine
+    ;; paketti-orglue
     ;; paketti-navi-mode
-    paketti-orglink
+    ;; paketti-orglink
     ))
 (append-to-list init-paketit muki:paketit-list-org)
 

@@ -9,4 +9,4 @@
      ;; (disable-option anzu-use-migemo)
      )
 
-(provide 'paketti-anzu)
+(provide 'init-anzu)

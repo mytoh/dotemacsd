@@ -36,4 +36,4 @@
 
 
 
-(provide 'paketti-company-mode)
+(provide 'init-company-mode)

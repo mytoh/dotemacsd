@@ -5,4 +5,4 @@
      (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
      )
 
-(provide 'paketti-haskell-mode)
+(provide 'init-haskell-mode)
