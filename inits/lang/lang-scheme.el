@@ -43,7 +43,8 @@
                   whitespace-cleanup
                   muki:before-save-hook))
     (add-hook 'before-save-hook f nil t))
-  (setq mode-name " ☯ "))
+  ;; (setq mode-name " ☯ ")
+  )
 (add-hook 'scheme-mode-hook 'muki:scheme-mode-hook)
 
 ;; (cl-defun muki:inferior-scheme-mode-hook ()

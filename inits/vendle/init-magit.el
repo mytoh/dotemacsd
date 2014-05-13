@@ -19,8 +19,8 @@
 (autoload 'magit-status "magit")
 (muki:define-global-key (kbd "g") 'magit-status)
 
-(pak 'magit
-     (muki:magit-setup))
+(liby 'magit
+      (muki:magit-setup))
 
 
 (provide 'init-magit)

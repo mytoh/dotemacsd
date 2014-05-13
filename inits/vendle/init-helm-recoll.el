@@ -1,10 +1,10 @@
 ;;; paketti-helm-recoll.el -*- lexical-binding: t -*-
 
-(pak 'helm-recoll
-     (with-eval-after-load
-         (when (executable-find "recoll")
-           (helm-recoll-create-source "main" "~/.recoll")))
-     )
+(liby 'helm-recoll
+      (with-eval-after-load
+          (when (executable-find "recoll")
+            (helm-recoll-create-source "main" "~/.recoll")))
+      )
 
 (provide 'paketti-helm-recoll)
 

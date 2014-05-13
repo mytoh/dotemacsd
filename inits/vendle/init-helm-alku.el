@@ -26,7 +26,8 @@
                       "thunar"
                       "mcomix"
                       "gmusicbrowser"
-                      "caja_no_desktop.sh")))
+                      "caja_no_desktop.sh"
+                      "qcomicbook")))
 
       (muki:define-global-key (kbd "c")  'helm-alku-program)
       (muki:define-global-key (kbd "n") 'helm-alku-vihko)

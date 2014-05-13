@@ -33,7 +33,6 @@
                   ;; helm-buffer-max-length 50x
                   )
       (set-option helm-boring-file-regexp-list '("\\.git$" "\\.hg$" "\\.svn$" "\\.CVS$" "\\._darcs$" "\\.la$" "\\.o$" "\\.i$"))
-      (add-to-list 'helm-boring-file-regexp-list  "\\.elc$")
       (add-to-list 'helm-boring-file-regexp-list  "\\.git/COMMIT_EDITMSG$")
 
       (enable-option helm-M-x-always-save-history)
@@ -85,7 +84,7 @@
       )
 
 ;; helm-themes
-;; (req 'helm-themes)
+(req 'helm-themes)
 
 ;; helm-c-yasnippet
 (req 'helm-c-yasnippet)
@@ -110,15 +109,15 @@
 ;;      (define-key global-map [remap switch-to-buffer] 'helm-C-x-b))
 
 ;; helm-ls-git
-(pak 'helm-ls-git
+(req 'helm-ls-git
      (muki:define-global-key (kbd "f") 'helm-ls-git-ls))
 
 ;; elisp-package
-(pak 'helm-elisp-package
+(req 'helm-elisp-package
      (muki:define-global-key (kbd "P") 'helm-list-elisp-packages))
 
 ;; helm-git-grep
-(pak 'helm-git-grep
+(req 'helm-git-grep
      (muki:define-global-key (kbd "r") 'helm-git-grep))
 
 (provide 'init-helm)

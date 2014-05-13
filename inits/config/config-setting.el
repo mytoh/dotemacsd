@@ -244,13 +244,13 @@
 ;;;; prettify symbols
 (enable-mode global-prettify-symbols-mode)
 
-(when window-system
-  (enable-mode global-highlight-changes-mode)
-  (set-face-attribute 'highlight-changes nil
-                      :foreground nil
-                      :background "#3b271d")
-  (set-face-attribute 'highlight-changes-delete nil
-                      :foreground nil
-                      :background "#3b272d"))
+;; (when window-system
+;;   (enable-mode global-highlight-changes-mode)
+;;   (set-face-attribute 'highlight-changes nil
+;;                       :foreground nil
+;;                       :background "#3b271d")
+;;   (set-face-attribute 'highlight-changes-delete nil
+;;                       :foreground nil
+;;                       :background "#3b272d"))
 
 (provide 'config-setting)

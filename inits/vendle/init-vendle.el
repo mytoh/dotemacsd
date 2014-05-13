@@ -38,6 +38,11 @@
      (vendle:register "haskell/haskell-mode")
      (vendle:register "Bruce-Connor/paradox")
      (vendle:register "steckerhalter/google-el")
+     (vendle:register "daemianmack/magit-cheatsheet")
+     (vendle:register "re5et/itail")
+     (vendle:register "syohex/emacs-quickrun")
+     (vendle:register "fxbois/web-mode" '(:compile nil))
+     (vendle:register "m00natic/eww-lnum")
 
      ;;; org
      (vendle:register "git://orgmode.org/org-mode.git"
@@ -70,7 +75,9 @@
      (vendle:register "emacs-helm/helm-recoll")
 
      ;;; theme
+     (vendle:register-theme "Fanael/stekene-theme")
      (vendle:register-theme "sabof/hyperplane-theme")
+     (vendle:register-theme "niflheim-theme/emacs" '(:name "niflheim-theme"))
      (vendle:register-theme "emacs-jp/replace-colorthemes")
      (vendle:register-theme "djcb/dream-theme")
      (vendle:register-theme "FrankRuben/cuatroporocho-theme" '(:compile nil))
@@ -170,9 +177,6 @@
 
 
 
-     ;; (with-eval-after-load 'company
-     ;;   (req 'company-scheme
-     ;;        (add-to-list 'company-backends 'company-scheme)))
 
      (req 'debug-print
           (debug-print-init)
@@ -267,6 +271,35 @@
      (req 'init-smartparens)
 
      (req 'init-haskell-mode)
+
+     (req 'itail)
+
+     (req 'quickrun
+          (cl-defun quickrun-sc (start end)
+            (interactive "r")
+            (if mark-active
+                (quickrun :start start :end end)
+              (quickrun)))
+          (global-set-key (kbd "<f5>") 'quickrun-sc)
+          (with-eval-after-load "popwin"
+            (push '("*quickrun*") popwin:special-display-config))
+          (quickrun-add-command "scheme/gosh-r7rs"
+                                '((:command . "gosh")
+                                  (:exec    . "%c -r7 %s"))
+                                :default "scheme"
+                                :mode 'scheme-mode))
+
+     (req 'web-mode
+          (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+          (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+          (add-to-list 'auto-mode-alist '("\\.[gj]sp\\'" . web-mode))
+          (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+          (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+          (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+          (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+          (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)))
+
+     (req 'init-paradox)
      )
 
 (provide 'init-vendle)

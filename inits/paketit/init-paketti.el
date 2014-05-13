@@ -418,7 +418,7 @@
     paketti-easy-kill
     paketti-stripe-buffer
     ;; paketti-ghc
-    paketti-paradox
+
     paketti-diminish
     paketti-zop-to-char
 

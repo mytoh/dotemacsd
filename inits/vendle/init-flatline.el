@@ -4,21 +4,21 @@
 (req 'flatline
 
      (defface flatline-theme-muki-edge
-       '((t (:foreground "gray10"
-                         :background "Darkorange3"
-                         :box nil)))
+         '((t (:foreground "gray10"
+               :background "Darkorange3"
+               :box nil)))
        "face for left")
 
      (defface flatline-theme-muki-middle
-       '((t (:foreground "gray10"
-                         :background  "yellow4"
-                         :box nil)))
+         '((t (:foreground "gray10"
+               :background  "yellow4"
+               :box nil)))
        "face for sub")
 
      (defface flatline-theme-muki-fill
-       '((t (:foreground  "white"
-                          :background  "#112230"
-                          :box nil)))
+         '((t (:foreground  "white"
+               :background  "#112230"
+               :box nil)))
        "face for left sub sub")
 
      (cl-defun muki:flatline:vc-mode ()
@@ -56,8 +56,10 @@
         (flatline:pad
          (cl-concatenate 'string
                          mode-name
-                         (if mode-line-process mode-line-process)
-                         "%n" ))
+                         (if mode-line-process
+                             (format-mode-line mode-line-process)
+                           "")
+                         "%n"))
         'face
         (cl-case major-mode
           (emacs-lisp-mode
