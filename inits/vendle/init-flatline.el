@@ -23,7 +23,8 @@
 
      (cl-defun muki:flatline:vc-mode ()
        (cl-letf ((symbol ""))
-         (if vc-mode
+         (if (and (not (tramp-tramp-file-p buffer-file-name))
+                  vc-mode)
              (cl-concatenate 'string
                              symbol
                              vc-mode)
