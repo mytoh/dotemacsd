@@ -12,11 +12,11 @@
 ;;;; parens
 (enable-mode show-paren-mode)
 (set-option show-paren-delay 0
-            show-paren-style 'expression)
-(set-face-attribute 'show-paren-match-face nil
-                    :foreground nil
-                    :background "#354039"
-                    :underline nil)
+            show-paren-style 'mixed)
+;; (set-face-attribute 'show-paren-match-face nil
+;;                     :foreground nil
+;;                     :background "#354039"
+;;                     :underline nil)
 
 ;;;; syntax highlight
 (global-font-lock-mode 1)
@@ -231,7 +231,7 @@
 
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art
-(defvar muki:x-theme 'zen-and-art)
+(defvar muki:x-theme 'purple-haze)
 (defvar muki:term-theme 'moe-dark)
 
 (enable-option x-select-enable-clipboard

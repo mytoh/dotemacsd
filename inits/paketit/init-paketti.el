@@ -57,7 +57,7 @@
         magit
         rainbow-mode
         ;; scheme-complete
-        expand-region
+        ;; expand-region
         tabbar
         suomalainen-kalenteri
         info+
@@ -84,7 +84,7 @@
         hackernews
         ;; twittering-mode
         ;; highlight-indentation
-        auto-highlight-symbol
+        ;; auto-highlight-symbol
         multiple-cursors
         guide-key
         google-translate
@@ -140,7 +140,6 @@
         smartscan
         ;; multi-term
         free-keys
-        zone-matrix
         company
         volatile-highlights
         recentf-ext
@@ -188,7 +187,7 @@
         ace-link
         all-ext
         easy-kill
-        stripe-buffer
+        ;; stripe-buffer
         paradox
         diminish
         json-reformat
@@ -214,6 +213,7 @@
 
 (defvar muki:paketti-list-colour-themes
   '(;; themes
+    gratuitous-dark-theme
     firebelly-theme
     minimal-theme
     distinguished-theme
@@ -256,7 +256,7 @@
     clues-theme ; require emacs-24.1
     ample-theme
     ir-black-theme
-    purple-haze-theme ; require emacs-24.0
+    ;; purple-haze-theme ; require emacs-24.0
     flatland-theme
     espresso-theme
     gandalf-theme
@@ -285,17 +285,17 @@
     leuven-theme
     niflheim-theme
     steady-theme
-    jujube-theme
+    ;; jujube-theme
     github-theme
-    sea-before-storm-theme
-    nzenburn-theme
-    assemblage-theme
-    late-night-theme
-    tron-theme
-    qsimpleq-theme
-    deep-thought-theme
-    stekene-theme
-    waher-theme ; require emacs-24.1
+    ;; sea-before-storm-theme
+    ;; nzenburn-theme
+    ;; assemblage-theme
+    ;; late-night-theme
+    ;; tron-theme
+    ;; qsimpleq-theme
+    ;; deep-thought-theme
+    ;; stekene-theme
+    ;; waher-theme ; require emacs-24.1
     ))
 (append-to-list muki:paketti-list muki:paketti-list-colour-themes)
 
@@ -339,7 +339,7 @@
     orglue
     worf
     ))
-(append-to-list muki:paketti-list muki:paketti-list-org)
+;; (append-to-list muki:paketti-list muki:paketti-list-org)
 
 (cl-defun muki:paketti-update ()
   (unless package-archive-contents
@@ -349,7 +349,7 @@
       (message "installing %s"  p)
       (package-install p))))
 
-;; (muki:paketti-update)
+(muki:paketti-update)
 
 (defvar init-paketit
   '(
@@ -358,7 +358,6 @@
     paketti-guide-key
     paketti-image-dired+
     paketti-image+
-    paketti-expand-region
     paketti-multiple-cursors
     paketti-rainbow-delimiters
     paketti-tabbar
@@ -416,7 +415,7 @@
     paketti-sunrise-commander
     paketti-ace-link
     paketti-easy-kill
-    paketti-stripe-buffer
+    ;; paketti-stripe-buffer
     ;; paketti-ghc
 
     paketti-diminish

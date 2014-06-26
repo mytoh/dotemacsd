@@ -6,7 +6,7 @@
      (global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp)
      (setq anzu-deactivate-region t)
      (setq anzu-search-threshold 1000)
-     ;; (disable-option anzu-use-migemo)
+     (enable-option anzu-use-migemo)
      )
 
 (provide 'init-anzu)

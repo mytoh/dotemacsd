@@ -8,51 +8,9 @@
                 (muki:user-emacs-directory (file-name-as-directory "vendle"))))
        (vendle:initialize muki:vendle-directory))
 
-     (vendle:register "jonathanchu/emacs-powerline")
-     (vendle:register "TeMPOraL/nyan-mode")
-     (vendle:register "daimrod/highlight-sexp")
-     (vendle:register "m2ym/undohist-el")
-     (vendle:register "m2ym/emux-el")
-     (vendle:register "moriyamahiroshi/seijiseikana-el")
-     (vendle:register "kenoss/debug-print")
-     ;; (vendle:register "emacsmirror/mew")
-     (vendle:register "ober/zone-matrix")
-     (vendle:register "mytoh/fish-mode")
-     (vendle:register "thierryvolpiatto/emacs-bmk-ext")
-     (vendle:register "kawabata/aozora-view")
-     (vendle:register "tomoya/fuzzyjump.el")
-     (vendle:register "omouse/emacs-sos")
-     (vendle:register "davexunit/yon-chan")
-     (vendle:register "owainlewis/emacs-color-themes")
-     (vendle:register "omouse/org-doing")
-     (vendle:register "git://git.sv.gnu.org/emms.git"
-                      '(:name "emms" :load-path "lisp"))
-     (vendle:register "magit/git-modes")
-     (vendle:register "magit/magit")
-     (vendle:register "company-mode/company-mode")
-     (vendle:register "syohex/emacs-git-gutter")
-     (vendle:register "syohex/emacs-rebuildfm")
-     (vendle:register "syohex/emacs-anzu" '(:compile nil))
-     (vendle:register "Fuco1/smartparens" '(:compile nil))
-     (vendle:register "Fuco1/org-pretty-table" '(:compile nil))
-     (vendle:register "haskell/haskell-mode")
-     (vendle:register "Bruce-Connor/paradox")
-     (vendle:register "steckerhalter/google-el")
-     (vendle:register "daemianmack/magit-cheatsheet")
-     (vendle:register "re5et/itail")
-     (vendle:register "syohex/emacs-quickrun")
-     (vendle:register "fxbois/web-mode" '(:compile nil))
-     (vendle:register "m00natic/eww-lnum")
-
-     ;;; org
-     (vendle:register "git://orgmode.org/org-mode.git"
-                      '(:load-path ("." "lisp" "contrib/lisp")))
-     (vendle:register "tj64/outshine" '(:compile nil))
-     (vendle:register "tj64/outorg" '(:compile nil))
-     ;; (vendle:register "tj64/navi")
 
      ;;; helm
-     (vendle:register "emacs-helm/helm" '(:compile nil))
+     (vendle:register "emacs-helm/helm")
      (vendle:register "thierryvolpiatto/pcomplete-extension")
      (vendle:register "yuutayamada/helm-ag-r")
      (vendle:register "yasuyk/helm-git-grep")
@@ -73,8 +31,62 @@
      (vendle:register "yasuyk/helm-company")
      (vendle:register "emacs-helm/helm-dictionary")
      (vendle:register "emacs-helm/helm-recoll")
+     (vendle:register "mhayashi1120/Emacs-wgrep")
+
+     (vendle:register "jonathanchu/emacs-powerline")
+     (vendle:register "TeMPOraL/nyan-mode")
+     (vendle:register "daimrod/highlight-sexp")
+     (vendle:register "m2ym/undohist-el")
+     (vendle:register "m2ym/emux-el")
+     (vendle:register "moriyamahiroshi/seijiseikana-el")
+     (vendle:register "kenoss/debug-print")
+     ;; (vendle:register "emacsmirror/mew")
+     (vendle:register "ober/zone-matrix")
+     (vendle:register "mytoh/fish-mode")
+     (vendle:register "thierryvolpiatto/emacs-bmk-ext")
+     (vendle:register "kawabata/aozora-view")
+     (vendle:register "tomoya/fuzzyjump.el")
+     (vendle:register "omouse/emacs-sos")
+     (vendle:register "davexunit/yon-chan")
+     (vendle:register "omouse/org-doing")
+     (vendle:register "git://git.sv.gnu.org/emms.git"
+                      '(:name "emms" :load-path "lisp"))
+     (vendle:register "magit/git-modes")
+     (vendle:register "magit/magit")
+     (vendle:register "company-mode/company-mode")
+     (vendle:register "syohex/emacs-git-gutter")
+     (vendle:register "syohex/emacs-rebuildfm")
+     (vendle:register "syohex/emacs-anzu" '(:compile nil))
+     (vendle:register "Fuco1/smartparens"
+                      '(:compile nil :deps (("magnars/dash.el" :compile nil))))
+     (vendle:register "magnars/expand-region.el")
+     (vendle:register "Fuco1/org-pretty-table" '(:compile nil))
+     (vendle:register "haskell/haskell-mode")
+     (vendle:register "Bruce-Connor/paradox")
+     (vendle:register "steckerhalter/google-el")
+     (vendle:register "daemianmack/magit-cheatsheet")
+     (vendle:register "re5et/itail")
+     (vendle:register "syohex/emacs-quickrun")
+     (vendle:register "fxbois/web-mode" '(:compile nil))
+     (vendle:register "m00natic/eww-lnum")
+     (vendle:register "emacsmirror/auto-highlight-symbol")
+     (vendle:register "skeeto/elfeed")
+     (vendle:register "zk-phi/spray")
+     (vendle:register "nschum/highlight-parentheses.el")
+     (vendle:register "dominikh/go-mode.el")
+     (vendle:register "immerrr/lua-mode")
+
+     ;;; org
+     (vendle:register "git://orgmode.org/org-mode.git"
+                      '(:load-path ("." "lisp" "contrib/lisp")
+                        :compile nil))
+     (vendle:register "tj64/outshine" '(:compile nil))
+     (vendle:register "tj64/outorg" '(:compile nil))
+     ;; (vendle:register "tj64/navi")
 
      ;;; theme
+     (vendle:register "owainlewis/emacs-color-themes")
+     (vendle:register-theme "j0ni/phoenix-dark-pink")
      (vendle:register-theme "Fanael/stekene-theme")
      (vendle:register-theme "sabof/hyperplane-theme")
      (vendle:register-theme "niflheim-theme/emacs" '(:name "niflheim-theme"))
@@ -91,6 +103,7 @@
      (vendle:register-theme "tiborsimko/ostrich-theme-el")
      (vendle:register-theme "ZehCnaS34/zonokai" '(:load-path "config"))
      (vendle:register-theme "michaelparenteau/parenteau-theme")
+     (vendle:register-theme "emacsfodder/emacs-purple-haze-theme")
 
 
      (cl-flet ((add-project-root (path)
@@ -131,6 +144,7 @@
      (req 'init-helm-ag-r)
      (req 'init-helm-swoop)
      (req 'init-helm-helm-commands)
+     (req 'init-wgrep-helm)
 
      ;; update plugins
      ;; (vendle:update-packages)
@@ -174,9 +188,6 @@
 
      ;; zone matrix
      ;; (req 'zone-settings)
-
-
-
 
      (req 'debug-print
           (debug-print-init)
@@ -300,6 +311,20 @@
           (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)))
 
      (req 'init-paradox)
+
+     (req 'spray)
+
+     (req 'highlight-parentheses
+          (global-highlight-parentheses-mode))
+
+     (req 'go-mode)
+
+     (req 'init-expand-region)
+
+     (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+     (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+     (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+
      )
 
 (provide 'init-vendle)

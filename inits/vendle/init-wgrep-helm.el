@@ -2,7 +2,7 @@
 
 (req 'wgrep-helm)
 
-(provide 'paketti-wgrep-helm)
+(provide 'init-wgrep-helm)
 
 ;; Local Variables:
 ;; coding: utf-8

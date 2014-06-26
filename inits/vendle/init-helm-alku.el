@@ -12,7 +12,7 @@
                     '(("video" . "~/huone/videot")
                       ("sarjakuva" . "~/huone/kuvat/sarjakuva")
                       ("lataukset" . "~/huone/lataukset")
-                      ("4chan" . "~/huone/kuvat/sivusto/4ch")
+                      ("4chan" . "~/huone/kuvat/sivusto/4chan")
                       ("futaba" . "~/huone/kuvat/sivusto/futaba")
                       ("paketti" . "~/.emacs.d/inits/paketit")
                       ("vendle" . "~/.emacs.d/vendle")
@@ -22,6 +22,7 @@
                     '("v2c"
                       "conkeror"
                       "firefox"
+                      "rox"
                       "pcmanfm"
                       "thunar"
                       "mcomix"

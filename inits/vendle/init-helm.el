@@ -79,7 +79,7 @@
                           :background "#236765")
 
      ;;;; helm-grep
-      (setq helm-grep-default-command "LANG=C grep -a -d skip %e -n%cH -e %p %f")
+      (setq helm-grep-default-command "env LANG=C grep -a -d skip %e -n%cH -e %p %f")
 
       )
 
@@ -119,6 +119,8 @@
 ;; helm-git-grep
 (req 'helm-git-grep
      (muki:define-global-key (kbd "r") 'helm-git-grep))
+
+(req 'helm-mode-manager)
 
 (provide 'init-helm)
 

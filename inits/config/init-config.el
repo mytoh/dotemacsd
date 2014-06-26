@@ -15,6 +15,7 @@
     config-eww
     config-newsticker
     config-rcirc
+    config-tramp
     ))
 
 (mapc 'require init-configs)
