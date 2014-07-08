@@ -28,7 +28,9 @@
 
 ;;;; encodings
 (set-language-environment  'utf-8)
+(set-charset-priority 'unicode)
 (prefer-coding-system 'utf-8)
+(set-option default-process-coding-system '(utf-8-unix . utf-8-unix))
 (set-option coding-system-for-read 'utf-8
             coding-system-for-write 'utf-8)
 
