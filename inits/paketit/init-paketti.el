@@ -192,6 +192,7 @@
         diminish
         json-reformat
         zop-to-char
+        pophint
         ))
 
 (defvar muki:paketti-list-prog-modes
