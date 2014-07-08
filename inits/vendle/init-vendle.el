@@ -75,11 +75,16 @@
      (vendle:register "nschum/highlight-parentheses.el")
      (vendle:register "dominikh/go-mode.el")
      (vendle:register "immerrr/lua-mode")
+     (vendle:register "daic-h/emacs-rotate")
+     (vendle:register "pidu/git-timemachine")
+     (vendle:register "k-talo/smooth-scroll.el")
+     (vendle:register "m2ym/yascroll-el")
 
      ;;; org
      (vendle:register "git://orgmode.org/org-mode.git"
                       '(:load-path ("." "lisp" "contrib/lisp")
-                        :compile nil))
+                        :compile nil
+                        :build ("gmake")))
      (vendle:register "tj64/outshine" '(:compile nil))
      (vendle:register "tj64/outorg" '(:compile nil))
      ;; (vendle:register "tj64/navi")
@@ -95,7 +100,6 @@
      (vendle:register-theme "FrankRuben/cuatroporocho-theme" '(:compile nil))
      (vendle:register-theme "neomantic/Emacs-Sunburst-Color-Theme")
      (vendle:register-theme "ranmocy/amelie-theme")
-     ;; (vendle:register-theme "ccann/badger-theme")
      (vendle:register-theme "yuttie/steady-theme-emacs")
      (vendle:register-theme "rozh/grandpunk-theme")
      (vendle:register-theme "nhunzaker/emacs-laravel-plus-theme")
@@ -104,6 +108,7 @@
      (vendle:register-theme "ZehCnaS34/zonokai" '(:load-path "config"))
      (vendle:register-theme "michaelparenteau/parenteau-theme")
      (vendle:register-theme "emacsfodder/emacs-purple-haze-theme")
+     ;; (vendle:register-theme "ccann/badger-theme")"
 
 
      (cl-flet ((add-project-root (path)
@@ -325,6 +330,17 @@
      (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
      (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
+     (req 'rotate
+          (global-set-key (kbd "C-c C-SPC") 'rotate-layout)
+          (global-set-key (kbd "C-c C-c C-SPC") 'rotate-window))
+
+     (req 'git-timemachine)
+
+     ;; (req 'smooth-scroll
+     ;;      (smooth-scroll-mode nil))
+
+     ;; (req 'yascroll
+     ;;      (global-yascroll-bar-mode))
      )
 
 (provide 'init-vendle)
