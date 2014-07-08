@@ -1,13 +1,22 @@
  ;;; -*- coding: utf-8 -*-
 (when (string-equal system-type "berkeley-unix")
-  (cl-letf ((my-paths `(,(expand-file-name "~/huone/bin" )
-                        ,(expand-file-name "~/.config/lehti/bin" )
-                        ,(expand-file-name "~/.config/loitsu/bin"))))
-    (cl-dolist (dir my-paths)
-      ;; sakito.jp/emacs/emacsshell.html
-      (when (and (file-directory-p dir) (not (member dir exec-path)))
-        (setenv "PATH" (concat dir ":" (getenv "PATH")))
-        (cl-dolist (p dir)
-          (add-to-list 'exec-path p))))))
+  (cond ((string-equal "fish" (file-name-base (getenv "SHELL")))
+         (setenv "SHELL" "/bin/tcsh")
+         (setenv "PATH" (shell-command-to-string "tcsh -c 'echo $PATH'"))
+         (cl-letf ((my-paths (mapcar 'expand-file-name '(  "~/huone/bin" "~/.config/lehti/bin"
+                                                         "~/.config/loitsu/bin"))))
+           (cl-dolist (dir my-paths)
+             ;; sakito.jp/emacs/emacsshell.html
+             (when (and (file-directory-p dir) (not (member dir exec-path)))
+               (setenv "PATH" (concat dir ":" (getenv "PATH")))
+               (add-to-list 'exec-path dir)))))
+        (t
+         (cl-letf ((my-paths (mapcar 'expand-file-name '(  "~/huone/bin" "~/.config/lehti/bin"
+                                                         "~/.config/loitsu/bin"))))
+           (cl-dolist (dir my-paths)
+             ;; sakito.jp/emacs/emacsshell.html
+             (when (and (file-directory-p dir) (not (member dir exec-path)))
+               (setenv "PATH" (concat dir ":" (getenv "PATH")))
+               (add-to-list 'exec-path dir)))))))
 
 (provide 'system-freebsd)
