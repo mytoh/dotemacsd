@@ -8,14 +8,15 @@
 (eval-when-compile (require 'init-lib "lib/init-lib"))
 (add-subdirs-to-load-path (muki:user-emacs-directory "inits"))
 
+;;;;; system
+(require 'init-system)
+
 ;;;;; packages
 (require 'init-paketti)
 
 ;;;;; config
 (require 'init-config)
 
-;;;;; system
-(require 'init-system)
 
 ;;;;; lang
 (require 'init-lang)
