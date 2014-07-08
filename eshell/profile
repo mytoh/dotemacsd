@@ -83,7 +83,7 @@
 (add-to-list 'eshell-command-aliases-list '("ag" "ag --nopager"))
 (add-to-list 'eshell-command-aliases-list '("pam" "rm -rf $*"))
 (add-to-list 'eshell-command-aliases-list '("ke" "save-buffers-kill-emacs"))
-(add-to-list 'eshell-command-aliases-list '("cde" "cd ~/huone/git/emacs"))
+(add-to-list 'eshell-command-aliases-list '("cde" "cd ~/huone/git/git.savannah.gnu.org/emacs"))
 (add-to-list 'eshell-command-aliases-list '("gpl" "git pull"))
 (add-to-list 'eshell-command-aliases-list '("gst" "git status"))
 (add-to-list 'eshell-command-aliases-list '("kuva" "pikkukivi kuva $1"))
