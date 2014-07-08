@@ -27,18 +27,19 @@
                   helm-input-idle-delay    0.01
                   helm-m-occur-idle-delay 0.01
                   helm-default-external-file-browser "pcmanfm"
-                  helm-buffers-favorite-modes
-                  (append helm-buffers-favorite-modes
-                          '(picture-mode artist-mode))
+                  helm-buffers-favorite-modes (append helm-buffers-favorite-modes
+                                                      '(picture-mode artist-mode))
                   ;; helm-buffer-max-length 50x
+                  helm-candidate-number-limit 200
                   )
       (set-option helm-boring-file-regexp-list '("\\.git$" "\\.hg$" "\\.svn$" "\\.CVS$" "\\._darcs$" "\\.la$" "\\.o$" "\\.i$"))
       (add-to-list 'helm-boring-file-regexp-list  "\\.git/COMMIT_EDITMSG$")
 
-      (enable-option helm-M-x-always-save-history)
+      (enable-option helm-M-x-always-save-history
+                     helm-split-window-in-side-p ; open helm buffer inside current window, not occupy whole other window
+                     )
       (disable-option enable-recursive-minibuffers
                       helm-quick-update
-                      helm-candidate-number-limit
                       helm-move-to-line-cycle-in-source
                       helm-debug)
      ;;;; helm-files
