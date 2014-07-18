@@ -20,7 +20,7 @@
       (define-key helm-map (kbd "C-M-n") 'helm-next-source)
       (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
       (define-key helm-read-file-map (kbd "C-h") 'delete-backward-char)
-      (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+      ;; (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 
 
       (set-option helm-idle-delay          0.01
@@ -36,12 +36,13 @@
       (add-to-list 'helm-boring-file-regexp-list  "\\.git/COMMIT_EDITMSG$")
 
       (enable-option helm-M-x-always-save-history
-                     helm-split-window-in-side-p ; open helm buffer inside current window, not occupy whole other window
                      )
       (disable-option enable-recursive-minibuffers
                       helm-quick-update
                       helm-move-to-line-cycle-in-source
-                      helm-debug)
+                      helm-debug
+                      helm-split-window-in-side-p ; open helm buffer inside current window, not occupy whole other window
+                      )
      ;;;; helm-files
       (enable-option helm-ff-lynx-style-map
                      helm-ff-transformer-show-only-basename
@@ -57,6 +58,7 @@
                   '(("cbz" . "mcomix")
                     ("cbr" . "mcomix")
                     ("jpg" . "pikkukivi kuva")
+                    ("JPG" . "pikkukivi kuva")
                     ("png" . "pikkukivi kuva")
                     ("gif" . "pikkukivi kuva")
                     ("mov" . "mpv")
@@ -94,10 +96,10 @@
 (req 'helm-misc)
 
 ;; migemo
-(when (executable-find "cmigemo")
-  (req 'migemo
-       (req 'helm-migemo
-            (setq helm-use-migemo t))))
+;; (when (executable-find "cmigemo")
+;;   (req 'migemo
+;;        (req 'helm-migemo
+;;             (setq helm-use-migemo t))))
 
 ;; descbinds
 (req 'helm-descbinds

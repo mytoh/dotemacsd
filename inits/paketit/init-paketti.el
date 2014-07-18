@@ -71,7 +71,7 @@
         ;; powerline
         popwin
         ghc
-        emms
+        ;; emms
         emms-info-mediainfo
         color-moccur
         git-gutter+
@@ -127,7 +127,7 @@
         cask
         caskxy
         cl-lib-highlight
-        anzu
+        ;; anzu
         whitespace-cleanup-mode
         ;; yascroll
         ;; charmap
@@ -183,12 +183,12 @@
         sauron
         2048-game
         fancy-narrow
-        migemo
+        ;; migemo
         ace-link
         all-ext
         easy-kill
         ;; stripe-buffer
-        paradox
+        ;; paradox
         diminish
         json-reformat
         zop-to-char
@@ -199,7 +199,7 @@
   '(stumpwm-mode
     coffee-mode
     lua-mode
-    haskell-mode
+    ;; haskell-mode
     js3-mode
     js2-mode
     json-mode
@@ -326,7 +326,7 @@
     helm-mode-manager
     helm-proc
     ))
-(append-to-list muki:paketti-list muki:paketti-list-helm)
+;; (append-to-list muki:paketti-list muki:paketti-list-helm)
 
 (defvar muki:paketti-list-org
   '(org
@@ -399,8 +399,8 @@
     paketti-elisp-slime-nav
     paketti-navi2ch
     paketti-elfeed
-    paketti-smartrep
-    paketti-migemo
+    ;; paketti-smartrep
+    ;; paketti-migemo
     paketti-ace-jump-mode
     paketti-highlight-defined
     paketti-tumblesocks

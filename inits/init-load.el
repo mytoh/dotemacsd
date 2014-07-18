@@ -11,6 +11,9 @@
 ;;;;; system
 (require 'init-system)
 
+;;;;; vendle
+(require 'init-vendle)
+
 ;;;;; packages
 (require 'init-paketti)
 
@@ -24,8 +27,6 @@
 ;;;;; elisp
 (require 'init-elisp)
 
-;;;;; vendle
-(require 'init-vendle)
 
 ;;;;; el-get
 ;; (require 'init-el-get)

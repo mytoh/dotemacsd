@@ -8,6 +8,7 @@
                 (muki:user-emacs-directory (file-name-as-directory "vendle"))))
        (vendle:initialize muki:vendle-directory))
 
+     (vendle:register "magnars/s.el")
 
      ;;; helm
      (vendle:register "emacs-helm/helm")
@@ -51,6 +52,7 @@
      (vendle:register "omouse/org-doing")
      (vendle:register "git://git.sv.gnu.org/emms.git"
                       '(:name "emms" :load-path "lisp"))
+     (vendle:register "fgallina/emms-info-mediainfo")
      (vendle:register "magit/git-modes")
      (vendle:register "magit/magit")
      (vendle:register "company-mode/company-mode")
@@ -79,6 +81,9 @@
      (vendle:register "pidu/git-timemachine")
      (vendle:register "k-talo/smooth-scroll.el")
      (vendle:register "m2ym/yascroll-el")
+     (vendle:register "emacs-jp/migemo")
+     (vendle:register "taksatou/flappymacs")
+     (vendle:register "gongo/yamada-el")
 
      ;;; org
      (vendle:register "git://orgmode.org/org-mode.git"
@@ -123,8 +128,13 @@
        (add-project-root "emacs-eshell-session")
        (add-project-root "emacs-eshell-alias")
        (add-project-root "helm-project-buffer"))
-     (when (file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
-       (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk"))
+
+     (cond
+       ((file-directory-p "~/.emacs.d/vendle/ddskk-20140706")
+        (vendle:register-local "~/.emacs.d/vendle/ddskk-20140706"))
+       ((file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
+        (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk")))
+
      ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
      (vendle:turn-on-font-lock)
@@ -139,6 +149,8 @@
      (with-eval-after-load "helm"
        (req 'helm-vendle
             (muki:define-global-key (kbd "v l") 'helm-vendle)))
+
+     (req 'init-migemo)
 
      (req 'init-helm)
      (req 'init-helm-ypv)
@@ -211,7 +223,7 @@
      (set-option skk-user-directory "~/.emacs.d/ddskk/")
      (req 'skk-autoloads
           ;; C-x C-j で skk モードを起動
-          (global-set-key (kbd "C-x C-j") 'skk-mode)
+          (global-set-key (kbd "C-x C-\\") 'skk-mode)
           ;; enable skk mode by pressing カタカナ/ひらがな key
           (global-set-key [hiragana-katakana] 'skk-mode)
           ;; set default input method to skk
@@ -341,6 +353,16 @@
 
      ;; (req 'yascroll
      ;;      (global-yascroll-bar-mode))
+
+     (req 'flappymacs)
+
+     (req 'yamada
+          ;; (global-set-key (kbd "C-c C-c C-y") 'yamada-dancing)
+
+          ;; (yamada-dancing 1) ;; or C-c C-c C-y (M-x yamada-dancing)
+          ;; (yamada-dancing 5) ;; or C-u 5 C-c C-c C-y
+          )
+
      )
 
 (provide 'init-vendle)

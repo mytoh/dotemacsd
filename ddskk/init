@@ -27,8 +27,41 @@
 
 ;; face
 (defface muki:skk-tooltip
-  '((t (:foreground "#93b8bb"
-                        :background "#232323"
-                        :bok nil)))
+    '((t (:foreground "#93b8bb"
+          :background "#232323"
+          :bok nil)))
   "face for skk tooltip")
 (setq skk-tooltip-face 'muki:skk-tooltip)
+
+;; か行をcで入れるときに辞書の送りがなをちゃんとする。
+;; (setq skk-okuri-char-alist '((\"c\" . \"k\")))
+
+(defun muki:add-skk-jisyo (dicts)
+  (cl-letf ((dict-directory (expand-file-name "ddskk/dic"
+                                              user-emacs-directory)))
+    (cl-mapc
+     (lambda (d)
+       (cl-letf ((elem (if (listp d)
+                           (cons (expand-file-name (car d) dict-directory)
+                                 (cdr d))
+                         (expand-file-name d dict-directory))))
+         (when (file-exists-p (if (listp elem) (car elem) elem))
+           (add-to-list 'skk-search-prog-list
+                        `(skk-search-jisyo-file
+                          ,elem
+                          10000)
+                        t))))
+     dicts)))
+
+(muki:add-skk-jisyo
+ '("SKK-JISYO.jinmei"
+   "SKK-JISYO.itaiji"
+   "SKK-JISYO.itaiji.JIS3_4"
+   ;; "SKK-JISYO.emoji.utf8"
+   ))
+
+;; (muki:add-skk-jisyo
+;;  '(("SKK-JISYO.jinmei" . euc-jp)
+;;    ("SKK-JISYO.itaiji" . euc-jp)
+;;    ("SKK-JISYO.itaiji.JIS3_4" . euc-jp)
+;;    ("SKK-JISYO.emoji.utf8" . utf-8)))
