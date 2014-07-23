@@ -57,6 +57,8 @@
       (set-option helm-external-programs-associations
                   '(("cbz" . "mcomix")
                     ("cbr" . "mcomix")
+                    ("zip" . "mcomix")
+                    ("rar" . "mcomix")
                     ("jpg" . "pikkukivi kuva")
                     ("JPG" . "pikkukivi kuva")
                     ("png" . "pikkukivi kuva")

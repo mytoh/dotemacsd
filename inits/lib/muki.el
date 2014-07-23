@@ -185,11 +185,13 @@ buffer is not visiting a file."
   "C-c e"
   "personal global prefix key")
 (setq muki:global-map (make-sparse-keymap))
+
 (cl-defun muki:define-global-key (keymap func)
   "define personal global key mappings"
   (cl-letf ((key (concat (kbd muki:global-prefix-key) keymap)))
     (define-key muki:global-map key func)
     (message "bind %s to %s" keymap (symbol-name func))))
+
 (define-minor-mode muki-mode
     "muki keymapping"
   :keymap muki:global-map

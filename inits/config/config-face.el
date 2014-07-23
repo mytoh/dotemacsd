@@ -19,8 +19,8 @@
 (add-to-list 'after-init-hook 'muki:load-theme)
 
 ;;;; cursor shape
-(add-to-list 'default-frame-alist '(cursor-type . hollow))
-(set-cursor-color (muki:colour-hsl-to-hex 137 65 50))
+(add-to-list 'default-frame-alist '(cursor-type . box))
+(set-cursor-color (muki:colour-hsl-to-hex 127 55 39))
 
 ;;;; terminal colors
 ;; (set-face-attribute 'term-color-red nil :foreground "#d55e00")
