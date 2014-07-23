@@ -84,6 +84,7 @@
      (vendle:register "emacs-jp/migemo")
      (vendle:register "taksatou/flappymacs")
      (vendle:register "gongo/yamada-el")
+     (vendle:register "jiyoo/flyparens")
 
      ;;; org
      (vendle:register "git://orgmode.org/org-mode.git"
@@ -362,6 +363,8 @@
           ;; (yamada-dancing 1) ;; or C-c C-c C-y (M-x yamada-dancing)
           ;; (yamada-dancing 5) ;; or C-u 5 C-c C-c C-y
           )
+
+     (req 'init-flyparens)
 
      )
 
