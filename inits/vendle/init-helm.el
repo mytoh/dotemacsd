@@ -68,7 +68,8 @@
                     ("avi" . "mpv")
                     ("mkv" . "mpv")
                     ("mp4" . "mpv")
-                    ("wmv" . "mpv")))
+                    ("wmv" . "mpv")
+                    ("webm" . "mpv")))
       (enable-option helm-bookmark-show-location)
 
       (set-face-attribute  'helm-bookmark-directory nil
