@@ -14,6 +14,10 @@
 (enable-option org-src-fontify-natively)
 ;; (enable-option org-startup-indented)
 
+(cl-defun muki:org-mode-before-save-hook ()
+  (delete-trailing-whitespace)
+  (untabify (point-min) (point-max)))
+
 (cl-defun muki:org-mode-hook-function ()
   (setq mode-name " ꙮ ")
   (org-babel-do-load-languages
@@ -21,8 +25,14 @@
    '((emacs-lisp . t)
      (sh . t)
      (scheme . t)
-     (lisp . t))))
+     (lisp . t)))
+  (add-hook 'before-save-hook
+            'muki:org-mode-before-save-hook))
 (add-hook 'org-mode-hook
           'muki:org-mode-hook-function)
+
+
+
+
 
 (provide 'init-org)
