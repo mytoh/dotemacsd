@@ -99,6 +99,7 @@
 (if (fboundp 'menu-bar-mode) (disable-mode menu-bar-mode))
 (if (fboundp 'tool-bar-mode) (disable-mode tool-bar-mode))
 (if (fboundp 'scroll-bar-mode) (disable-mode scroll-bar-mode))
+(if (fboundp 'horizontal-scroll-bar-mode) (disable-mode horizontal-scroll-bar-mode))
 
 ;;;; delete whole line with C-k once
 (enable-option kill-whole-line)
