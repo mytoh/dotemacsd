@@ -6,6 +6,7 @@
       (autoload 'helm-alku-program "helm-alku")
       (autoload 'helm-alku-directory "helm-alku")
       (autoload 'helm-alku-vihko "helm-alku")
+      (autoload 'helm-alku-ääliö "helm-alku")
 
       (with-eval-after-load 'helm-alku
         (set-option helm-alku-directory-list
@@ -13,6 +14,7 @@
                       ("sarjakuva" . "~/huone/kuvat/sarjakuva")
                       ("lataukset" . "~/huone/lataukset")
                       ("4chan" . "~/huone/kuvat/sivusto/4chan")
+                      ("lainchan" . "~/huone/kuvat/sivusto/lainchan")
                       ("futaba" . "~/huone/kuvat/sivusto/futaba")
                       ("paketti" . "~/.emacs.d/inits/paketit")
                       ("vendle" . "~/.emacs.d/vendle")
@@ -28,12 +30,12 @@
                       "mcomix"
                       "gmusicbrowser"
                       "caja_no_desktop.sh"
-                      "qcomicbook")))
+                      "qcomicbook"
+                      "xombrero")))
 
       (muki:define-global-key (kbd "c")  'helm-alku-program)
       (muki:define-global-key (kbd "n") 'helm-alku-vihko)
       (global-set-key (kbd "C-c h") 'helm-alku)
-
 
       )
 

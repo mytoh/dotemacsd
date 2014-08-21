@@ -33,6 +33,7 @@
      (vendle:register "emacs-helm/helm-dictionary")
      (vendle:register "emacs-helm/helm-recoll")
      (vendle:register "mhayashi1120/Emacs-wgrep")
+     (vendle:register "ShingoFukuyama/helm-css-scss")
 
      (vendle:register "jonathanchu/emacs-powerline")
      (vendle:register "TeMPOraL/nyan-mode")
@@ -63,7 +64,7 @@
                       '(:compile nil :deps (("magnars/dash.el" :compile nil))))
      (vendle:register "magnars/expand-region.el")
      (vendle:register "Fuco1/org-pretty-table" '(:compile nil))
-     (vendle:register "haskell/haskell-mode")
+     (vendle:register "haskell/haskell-mode" '(:compile nil :build ("gmake all")))
      (vendle:register "Bruce-Connor/paradox")
      (vendle:register "steckerhalter/google-el")
      (vendle:register "daemianmack/magit-cheatsheet")
@@ -85,6 +86,17 @@
      (vendle:register "taksatou/flappymacs")
      (vendle:register "gongo/yamada-el")
      (vendle:register "jiyoo/flyparens")
+     (vendle:register "zenozeng/css-eldoc")
+     (vendle:register "yasuyk/web-beautify")
+     (vendle:register "mhayashi1120/Emacs-slideview")
+     (vendle:register "mhayashi1120/Emacs-imagex")
+     (vendle:register "kiwanami/emacs-window-manager"
+                      '(:deps ("kiwanami/emacs-window-layout")))
+     (vendle:register "m2ym/direx-el"
+                      '(:deps ("m2ym/popwin-el")))
+     (vendle:register "aki2o/e2wm-direx"
+                      '(:deps ("kiwanami/emacs-window-manager"
+                               "m2ym/direx-el")))
 
      ;;; org
      (vendle:register "git://orgmode.org/org-mode.git"
@@ -93,10 +105,13 @@
                         :build ("gmake")))
      (vendle:register "tj64/outshine" '(:compile nil))
      (vendle:register "tj64/outorg" '(:compile nil))
+     ;; (vendle:register "https://bitbucket.org/ukaszg/org-eldoc.git")
      ;; (vendle:register "tj64/navi")
 
      ;;; theme
      (vendle:register "owainlewis/emacs-color-themes")
+     (vendle:register "kuanyui/moe-theme.el")
+     (vendle:register-theme "caisah/seti-theme")
      (vendle:register-theme "j0ni/phoenix-dark-pink")
      (vendle:register-theme "Fanael/stekene-theme")
      (vendle:register-theme "sabof/hyperplane-theme")
@@ -131,8 +146,8 @@
        (add-project-root "helm-project-buffer"))
 
      (cond
-       ((file-directory-p "~/.emacs.d/vendle/ddskk-20140706")
-        (vendle:register-local "~/.emacs.d/vendle/ddskk-20140706"))
+       ((file-directory-p "~/.emacs.d/vendle/ddskk-20140817")
+        (vendle:register-local "~/.emacs.d/vendle/ddskk-20140817"))
        ((file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
         (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk")))
 
@@ -163,6 +178,7 @@
      (req 'init-helm-swoop)
      (req 'init-helm-helm-commands)
      (req 'init-wgrep-helm)
+     (req 'helm-css-scss)
 
      ;; update plugins
      ;; (vendle:update-packages)
@@ -230,8 +246,10 @@
           ;; set default input method to skk
           (setq default-input-method "japanese-skk")
           ;; .skk を自動的にバイトコンパイル
-          (enable-option skk-byte-compile-init-file))
+          ;; (enable-option skk-byte-compile-init-file)
 
+          ;; (req 'context-skk)
+          )
 
      ;; (req 'undohist
      ;;      (undohist-initialize)
@@ -364,7 +382,38 @@
           ;; (yamada-dancing 5) ;; or C-u 5 C-c C-c C-y
           )
 
-     (req 'init-flyparens)
+     ;; (req 'init-flyparens)
+
+     (req 'css-eldoc
+          (turn-on-css-eldoc))
+
+     (req 'web-beautify
+          (eval-after-load 'css-mode
+            '(add-hook 'css-mode-hook
+              (lambda ()
+                (add-hook 'before-save-hook 'web-beautify-css-buffer t t)))))
+
+     (req 'moe-theme
+;;; org-modeで見出しごとにフォントの大きさを変える
+          (setq moe-theme-resize-org-title
+                '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
+;;; mode-lineをオレンジにする
+          ;; (サポートしている他の色: blue, orange, green ,magenta, yellow, purple, red, cyan, w/b)
+          ;; (setq moe-theme-mode-line-color 'orange)
+          (moe-dark)
+          ;; あるいは (moe-light)
+          )
+
+     (req 'direx)
+
+     (req 'init-e2wm)
+
+     ;; (liby 'slideview
+     ;;       (add-hook 'image-mode-hook 'slideview-mode))
+
+     ;; (req 'image+
+     ;;      (imagex-auto-adjust-mode 1))
+
 
      )
 

@@ -91,7 +91,7 @@
         circe
         tumblesocks
         undo-tree
-        direx
+        ;; direx
         ;; pallet
         page-break-lines
         flycheck
@@ -193,6 +193,7 @@
         json-reformat
         zop-to-char
         pophint
+        pymacs
         ))
 
 (defvar muki:paketti-list-prog-modes
@@ -370,7 +371,7 @@
     paketti-flymake
     paketti-coffee-mode
     paketti-undo-tree
-    paketti-direx
+    ;; paketti-direx
     paketti-lua-mode
     paketti-vala-mode
     paketti-page-break-lines

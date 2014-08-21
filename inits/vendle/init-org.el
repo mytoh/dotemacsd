@@ -1,6 +1,6 @@
 
 (defface org-block-begin-line
-    '((t (:underline "#a7a6aa" :foreground "#008ed1" :background nil)))
+    '((t (:underline "#a7a6aa" :foreground nil  :background  "#008ed1")))
   "Face used for the line delimiting the begin of source blocks.")
 
 (defface org-block-background
@@ -8,7 +8,7 @@
   "Face used for the source block background")
 
 (defface org-block-end-line
-    '((t (:overline "#a7a6aa" :foreground "#008ed1" :background nil)))
+    '((t (:underline "#a7a6aa" :foreground nil  :background "#008ed1")))
   "Face used for the line delimiting the end of source blocks")
 
 (enable-option org-src-fontify-natively)
@@ -18,8 +18,22 @@
   (delete-trailing-whitespace)
   (untabify (point-min) (point-max)))
 
+(cl-defun muki:org-startup-options ()
+  (setq org-startup-folded 'showall)
+  (setq org-descriptive-links nil))
+
+(cl-defun muki:org-html-export-option ()
+  (setq org-html-doctype "html5")
+  (setq org-html-html5-fancy t)
+  (setq org-html-preamble nil)
+  (setq org-html-postamble nil))
+
 (cl-defun muki:org-mode-hook-function ()
   (setq mode-name " ꙮ ")
+  (setq org-html-postamble nil)
+  (setq org-descriptive-links nil)
+  (muki:org-startup-options)
+  (muki:org-html-export-option)
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((emacs-lisp . t)
@@ -28,6 +42,7 @@
      (lisp . t)))
   (add-hook 'before-save-hook
             'muki:org-mode-before-save-hook))
+
 (add-hook 'org-mode-hook
           'muki:org-mode-hook-function)
 

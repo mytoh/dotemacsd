@@ -10,6 +10,8 @@
 
 (global-set-key [remap kill-whole-line] 'smart-kill-whole-line)
 
+(global-set-key (kbd "C-<tab>") 'other-window)
+
 ;; (muki:define-global-key (kbd "p") 'package-list-packages)
 
 ;;;; default compose mail

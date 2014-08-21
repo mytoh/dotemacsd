@@ -19,6 +19,11 @@
 
       (define-key helm-map (kbd "C-M-n") 'helm-next-source)
       (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
+      (cl-loop for n from 0 to 9 do
+           (define-key helm-map (kbd (format "C-%s" n))
+             (lambda ()
+               (interactive)
+               (helm-select-nth-action n))))
       (define-key helm-read-file-map (kbd "C-h") 'delete-backward-char)
       ;; (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 
@@ -59,6 +64,7 @@
                     ("cbr" . "mcomix")
                     ("zip" . "mcomix")
                     ("rar" . "mcomix")
+                    ("pdf" . "mcomix")
                     ("jpg" . "pikkukivi kuva")
                     ("JPG" . "pikkukivi kuva")
                     ("png" . "pikkukivi kuva")

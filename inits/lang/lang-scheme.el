@@ -26,10 +26,18 @@
 ;; (autoload 'scheme-mode "cmuscheme" "Major mode for Scheme." t)
 ;; (autoload 'run-scheme  "cmuscheme" "Run an inferior Scheme process." t)
 
+;;  gauche
+(setq process-coding-system-alist
+      (cons '("gosh" utf-8 . utf-8) process-coding-system-alist))
+(setq scheme-program-name "gosh -r7 -i")
+(autoload 'scheme-mode "cmuscheme" "Major mode for Scheme." t)
+(autoload 'run-scheme  "cmuscheme" "Run an inferior Scheme process." t)
+
+;; http://valvallow.blogspot.jp/2011/03/emacs-scheme-gauche.html
 (cl-defun muki:scheme-other-window ()
   "run scheme on other window"
   (interactive)
-  (split-window-horizontally 90)
+  (split-window-horizontally 70)
   (cl-letf ((buf-name (buffer-name (current-buffer))))
     (switch-to-buffer-other-window
      (get-buffer-create "*scheme*"))

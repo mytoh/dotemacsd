@@ -241,7 +241,7 @@
                x-select-enable-primary)
 
 ;;;; browse web
-(set-option browse-url-generic-program "conkeror")
+(set-option browse-url-generic-program "xombrero")
 (set-option browse-url-browser-function 'browse-url-generic)
 
 ;;;; prettify symbols
@@ -255,5 +255,11 @@
 ;;   (set-face-attribute 'highlight-changes-delete nil
 ;;                       :foreground nil
 ;;                       :background "#3b272d"))
+
+;;;; proxy
+(set-option url-proxy-services '(("http" . "192.168.1.22:8080")))
+
+;;;; info
+(set-option Info-additional-directory-list (list (expand-file-name "~/huone/työkalupakki/info")))
 
 (provide 'config-setting)

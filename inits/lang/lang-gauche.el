@@ -3,12 +3,12 @@
 ;;  gauche
 (setq process-coding-system-alist
       (cons '("gosh" utf-8 . utf-8) process-coding-system-alist))
-(setq scheme-program-name "gosh -i")
+(setq scheme-program-name "gosh -r7 -i")
 (autoload 'scheme-mode "cmuscheme" "Major mode for Scheme." t)
 (autoload 'run-scheme  "cmuscheme" "Run an inferior Scheme process." t)
 
 
-                                        ; http://valvallow.blogspot.jp/2011/03/emacs-scheme-gauche.html
+;; http://valvallow.blogspot.jp/2011/03/emacs-scheme-gauche.html
 (cl-defun muki:scheme-other-window ()
   "run scheme on other window"
   (interactive)
@@ -191,7 +191,7 @@
    (1 . values-ref)
    (1 . ces-convert)
    (1 . file-exists?)
-   (1 . file-is-directory? )
+   (1 . file-is-directory?)
    (1 . sys-symlink)
    (1 . sys-dirname)
 
@@ -4189,7 +4189,7 @@
                                             (submatch (or (syntax word)
                                                           (syntax symbol)))))
                                  (syntax close-parenthesis)))
-                           1 'font-lock-variable-name-face)
+                            1 'font-lock-variable-name-face)
                           ;; (require-extension (srfi 1))
                           (,(rx (and
                                  (syntax open-parenthesis) "require-extension" (zero-or-more (in "  \t\n"))
@@ -4197,15 +4197,15 @@
                                  (submatch
                                   "srfi")
                                  (submatch (one-or-more (or numeric
-                                                            (in " \t\n" ))))
+                                                            (in " \t\n"))))
                                  (syntax close-parenthesis)
                                  (syntax close-parenthesis)
                                         ;(one-or-more
                                         ;(one-or-more (in " \n\t"))
                                         ;(submatch (one-or-more numeric)))
                                  ))
-                           (1 'font-lock-variable-name-face)
-                           (2 'font-lock-type-face))
+                            (1 'font-lock-variable-name-face)
+                            (2 'font-lock-type-face))
                           ;; (export some-function)
                           (,(rx (and
                                  (syntax open-parenthesis) "export" (one-or-more (in " \t\n"))
@@ -4213,7 +4213,7 @@
                                   (one-or-more (or (syntax word)
                                                    (syntax symbol)
                                                    (in " \t\n"))))))
-                           1  'font-lock-variable-name-face)
+                            1  'font-lock-variable-name-face)
                           ;; (export some-function)
                           ;; (,(rx (and
                           ;;        (syntax open-parenthesis) "export" (zero-or-more (in " \t\n"))
@@ -4232,33 +4232,33 @@
                                  (submatch
                                   (one-or-more (or (syntax symbol)
                                                    (syntax word))))))
-                           1  'muki:font-lock-scheme-module-name-face)
+                            1  'muki:font-lock-scheme-module-name-face)
                           ;; ,@
                           (,(rx ",@")
-                           0 'muki:font-lock-scheme-string-face)
+                            0 'muki:font-lock-scheme-string-face)
                           ;; #`
                           (,(rx (submatch "#`\"")
                                 (submatch (one-or-more any))
                                 (submatch  "\""))
-                           (1 'muki:font-lock-scheme-regexp-face)
-                           (2 'muki:font-lock-scheme-regexp-face)
-                           (3 'muki:font-lock-scheme-regexp-face)
-                           )
+                            (1 'muki:font-lock-scheme-regexp-face)
+                            (2 'muki:font-lock-scheme-regexp-face)
+                            (3 'muki:font-lock-scheme-regexp-face)
+                            )
                           ;; #t #f
                           (,(rx (or  "#t" "#f"))
-                           0 'muki:font-lock-scheme-boolean-face)
+                            0 'muki:font-lock-scheme-boolean-face)
                           (,(rx "#/"
                                 (submatch
                                  (one-or-more
                                   any))
                                 "/")
-                           0 'muki:font-lock-scheme-regexp-face)
+                            0 'muki:font-lock-scheme-regexp-face)
                           (,(rx "*"
                                 (submatch
                                  (one-or-more
                                   any))
                                 "*")
-                           0 'muki:font-lock-scheme-constant-face)
+                            0 'muki:font-lock-scheme-constant-face)
                           ))
 
 ;;http://d.hatena.ne.jp/kobapan/20091205/1259972925

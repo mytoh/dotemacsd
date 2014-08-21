@@ -8,6 +8,8 @@
 
 (cl-defun set-ascii-font ()
   (cond ((eq window-system nil) nil)
+        ((font-exists-p "Liberation Mono")
+         (set-fontset-font nil 'ascii (font-spec :name "Liberation Mono")))
         ((font-exists-p "CosmicSansNeueMono")
          (set-fontset-font nil 'ascii (font-spec :name "CosmicSansNeueMono")))
         ((font-exists-p "Inconsolata")
