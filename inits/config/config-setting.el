@@ -257,9 +257,9 @@
 ;;                       :background "#3b272d"))
 
 ;;;; proxy
-(set-option url-proxy-services '(("http" . "192.168.1.22:8080")))
+;; (set-option url-proxy-services '(("http" . "192.168.1.22:8080")))
 
 ;;;; info
-(set-option Info-additional-directory-list (list (expand-file-name "~/huone/työkalupakki/info")))
+(set-option Info-additional-directory-list (list (expand-file-name "~/huone/työkaluvaja/info")))
 
 (provide 'config-setting)

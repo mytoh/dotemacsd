@@ -8,6 +8,8 @@
 
 (cl-defun set-ascii-font ()
   (cond ((eq window-system nil) nil)
+        ((font-exists-p "Fira Mono")
+         (set-fontset-font nil 'ascii (font-spec :name "Fira Mono" :size 9 :weight 'normal)))
         ((font-exists-p "Liberation Mono")
          (set-fontset-font nil 'ascii (font-spec :name "Liberation Mono")))
         ((font-exists-p "CosmicSansNeueMono")
@@ -23,7 +25,7 @@
         ((font-exists-p "Ricty")
          (set-face-attribute 'ascii nil :height 90 :font "Ricty"))
         ((font-exists-p "DejaVu Sans Mono")
-         (set-face-attribute 'ascii nil :height 80 :font "DejaVu Sans Mono"))
+         (set-face-attribute 'default nil :height 80 :font "DejaVu Sans Mono"))
         ((font-exists-p "ProFont")
          (set-face-attribute 'ascii nil :height 80 :font "ProFont"))
         ((font-exists-p "Bitstream Vera Sans Mono")
@@ -45,8 +47,8 @@
         ((font-exists-p "IPAGothic")
          (set-fontset-font nil 'japanese-jisx0208
                            '("IPAGothic" . "unicode-bmp"))
-         (set-fontset-font  nil 'kana "IPAGothic")
-         (set-fontset-font nil 'han "IPAGothic"))
+         (set-fontset-font  nil 'kana (font-spec :name "IPAGothic" :size 10 :weight 'normal))
+         (set-fontset-font nil 'han (font-spec :name "IPAGothic" :size 10 :weight 'normal)))
         ((font-exists-p "Sazanami Gothic")
          (set-fontset-font nil 'japanese-jisx0208
                            (font-spec :family "Sazanami Gothic")))))
@@ -86,13 +88,23 @@
     (add-to-list 'default-frame-alist `(font . ,fontset))
     ))
 
-(cond
-  (window-system
-   ;; (set-ascii-font)
-   (set-naga10-font)
-   ;; (set-symbol-font)
-   (set-cyrillic-font)
-   ;; (set-japanese-font)
-   ))
+
+(cl-defun muki:set-font (type)
+  (cond
+    ((equalp type 'bitmap)
+     ;; (set-ascii-font)
+     (set-naga10-font)
+     ;; (set-symbol-font)
+     (set-cyrillic-font)
+     ;; (set-japanese-font)
+     )
+    ((equalp type 'antialias)
+     (set-ascii-font)
+     ;; (set-naga10-font)
+     (set-symbol-font)
+     (set-cyrillic-font)
+     (set-japanese-font))))
+
+(muki:set-font 'antialias)
 
 (provide 'config-font)

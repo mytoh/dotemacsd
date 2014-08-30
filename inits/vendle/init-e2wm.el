@@ -15,22 +15,24 @@
       '(("prefix m" . e2wm:dp-magit))
       e2wm:prefix-key)
 
-     (req 'e2wm-direx
-          (setq e2wm:c-code-recipe
-                '(| (:left-max-size 40)
-                  (- (:upper-size-ratio 0.6)
-                   files history)
-                  (- (:lower-max-size 150)
-                   (| (:right-max-size 40)
-                    main imenu)
-                   sub)))
+     ;; (req 'e2wm-direx
 
-          (setq e2wm:c-code-winfo
-                '((:name main)
-                  (:name files    :plugin direx)
-                  (:name history :plugin history-list)
-                  (:name imenu   :plugin imenu :default-hide nil)
-                  (:name sub     :buffer "*info*" :default-hide t)))))
+     ;;      (setq e2wm:c-code-winfo
+     ;;            '((:name main)
+     ;;              (:name files    :plugin direx)
+     ;;              (:name history :plugin history-list)
+     ;;              (:name imenu   :plugin imenu :default-hide nil)
+     ;;              (:name sub     :buffer "*info*" :default-hide t))))
+
+     ;;; dashboard
+
+     (setq e2wm:c-dashboard-plugins
+           '(clock top
+             (open :plugin-args (:command eshell :buffer "*eshell*"))
+             (open :plugin-args (:command doctor :buffer "*doctor*"))))
+
+     )
+
 
 (provide 'init-e2wm)
 

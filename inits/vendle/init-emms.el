@@ -79,11 +79,11 @@
             "mpv" "--framedrop=yes" "--softvol=auto" "--really-quiet")
           (add-to-list 'emms-player-list 'emms-player-mpv)
 
-          (define-emms-simple-player mpv-playlist-file '(file)
-            (emms-player-simple-regexp
-             "pls" "m3u")
-            "mpv" "--really-quiet" "--playlist")
-          (add-to-list 'emms-player-list 'emms-player-mpv-playlist-file)
+          ;; (define-emms-simple-player mpv-playlist-file '(file)
+          ;;   (emms-player-simple-regexp
+          ;;    "pls" "m3u")
+          ;;   "mpv" "--really-quiet" "--playlist")
+          ;; (add-to-list 'emms-player-list 'emms-player-mpv-playlist-file)
 
           )
 

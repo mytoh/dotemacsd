@@ -1,6 +1,6 @@
 
 (defface org-block-begin-line
-    '((t (:underline "#a7a6aa" :foreground nil  :background  "#008ed1")))
+    '((t (:underline "#a7a6aa" :foreground nil  :background "#808ea1")))
   "Face used for the line delimiting the begin of source blocks.")
 
 (defface org-block-background
@@ -8,7 +8,7 @@
   "Face used for the source block background")
 
 (defface org-block-end-line
-    '((t (:underline "#a7a6aa" :foreground nil  :background "#008ed1")))
+    '((t (:underline "#a7a6aa" :foreground nil  :background "#808ea1")))
   "Face used for the line delimiting the end of source blocks")
 
 (enable-option org-src-fontify-natively)
@@ -45,9 +45,5 @@
 
 (add-hook 'org-mode-hook
           'muki:org-mode-hook-function)
-
-
-
-
 
 (provide 'init-org)

@@ -37,7 +37,7 @@
 (cl-defun muki:scheme-other-window ()
   "run scheme on other window"
   (interactive)
-  (split-window-horizontally 70)
+  (split-window-horizontally 110)
   (cl-letf ((buf-name (buffer-name (current-buffer))))
     (switch-to-buffer-other-window
      (get-buffer-create "*scheme*"))

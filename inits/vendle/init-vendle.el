@@ -29,7 +29,8 @@
      (vendle:register "tkf/emacs-pinot-search")
      (vendle:register "yasuyk/helm-flycheck")
      (vendle:register "emacs-helm/helm-descbinds")
-     (vendle:register "yasuyk/helm-company")
+     (vendle:register "yasuyk/helm-company"
+                      '(:deps ("rejeep/f.el")))
      (vendle:register "emacs-helm/helm-dictionary")
      (vendle:register "emacs-helm/helm-recoll")
      (vendle:register "mhayashi1120/Emacs-wgrep")
@@ -97,6 +98,14 @@
      (vendle:register "aki2o/e2wm-direx"
                       '(:deps ("kiwanami/emacs-window-manager"
                                "m2ym/direx-el")))
+     (vendle:register "yu-i9/oniisama")
+     (vendle:register "nicferrier/elnode"
+                      '(:deps ("nicferrier/emacs-fakir"
+                               "nicferrier/emacs-kv"
+                               "nicferrier/emacs-db"
+                               "nicferrier/emacs-noflet"
+                               "nicferrier/emacs-web")))
+     (vendle:register "syohex/emacs-eew")
 
      ;;; org
      (vendle:register "git://orgmode.org/org-mode.git"
@@ -129,6 +138,11 @@
      (vendle:register-theme "ZehCnaS34/zonokai" '(:load-path "config"))
      (vendle:register-theme "michaelparenteau/parenteau-theme")
      (vendle:register-theme "emacsfodder/emacs-purple-haze-theme")
+     (vendle:register-theme "gchp/flatland-emacs")
+     (vendle:register-theme "mswift42/busybee-theme")
+     (vendle:register-theme "byels/emacs-cherry-blossom-theme")
+     (vendle:register-theme "startling/firebelly")
+     (vendle:register-theme "Greduan/emacs-theme-gruvbox")
      ;; (vendle:register-theme "ccann/badger-theme")"
 
 
@@ -394,10 +408,10 @@
                 (add-hook 'before-save-hook 'web-beautify-css-buffer t t)))))
 
      (req 'moe-theme
-;;; org-modeで見出しごとにフォントの大きさを変える
+          ;; org-modeで見出しごとにフォントの大きさを変える
           (setq moe-theme-resize-org-title
                 '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
-;;; mode-lineをオレンジにする
+          ;; mode-lineをオレンジにする
           ;; (サポートしている他の色: blue, orange, green ,magenta, yellow, purple, red, cyan, w/b)
           ;; (setq moe-theme-mode-line-color 'orange)
           (moe-dark)
@@ -407,6 +421,13 @@
      (req 'direx)
 
      (req 'init-e2wm)
+
+     (req 'oniisama
+          (imouto))
+
+     (req 'init-elnode)
+
+     (req 'eew)
 
      ;; (liby 'slideview
      ;;       (add-hook 'image-mode-hook 'slideview-mode))

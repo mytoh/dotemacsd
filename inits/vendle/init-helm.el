@@ -1,10 +1,24 @@
-
 ;; helm
-(liby 'helm
-      (require 'helm-config)
+(liby 'helm (require 'helm-config)
       (enable-mode helm-mode)
       (enable-mode helm-adaptative-mode)
       (enable-mode helm-match-plugin-mode)
+
+      (defun helm-select-2nd-action-or-end-of-line ()
+        "Select the 2nd action for the currently selected candidate.
+This happen when point is at the end of minibuffer.
+Otherwise goto the end of minibuffer."
+        (interactive)
+        (if (eolp)
+            (helm-select-nth-action 1)
+          (end-of-line)))
+
+      ;; bind C-1 to C-9 to actions
+      (cl-loop for n from 0 to 8 do
+           (define-key helm-map (kbd (format "C-%s" (1+ n)))
+             `(lambda ()
+                (interactive)
+                (helm-select-nth-action ,n))))
 
       (global-set-key (kbd "M-x") 'helm-M-x)
       (global-set-key (kbd "C-c C-m") 'helm-M-x)
@@ -19,14 +33,8 @@
 
       (define-key helm-map (kbd "C-M-n") 'helm-next-source)
       (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
-      (cl-loop for n from 0 to 9 do
-           (define-key helm-map (kbd (format "C-%s" n))
-             (lambda ()
-               (interactive)
-               (helm-select-nth-action n))))
       (define-key helm-read-file-map (kbd "C-h") 'delete-backward-char)
       ;; (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
-
 
       (set-option helm-idle-delay          0.01
                   helm-input-idle-delay    0.01
@@ -35,28 +43,25 @@
                   helm-buffers-favorite-modes (append helm-buffers-favorite-modes
                                                       '(picture-mode artist-mode))
                   ;; helm-buffer-max-length 50x
-                  helm-candidate-number-limit 200
-                  )
+                  helm-candidate-number-limit 200)
       (set-option helm-boring-file-regexp-list '("\\.git$" "\\.hg$" "\\.svn$" "\\.CVS$" "\\._darcs$" "\\.la$" "\\.o$" "\\.i$"))
       (add-to-list 'helm-boring-file-regexp-list  "\\.git/COMMIT_EDITMSG$")
 
-      (enable-option helm-M-x-always-save-history
-                     )
+      (enable-option helm-M-x-always-save-history)
       (disable-option enable-recursive-minibuffers
                       helm-quick-update
                       helm-move-to-line-cycle-in-source
                       helm-debug
                       helm-split-window-in-side-p ; open helm buffer inside current window, not occupy whole other window
                       )
-     ;;;; helm-files
+      ;; helm-files
       (enable-option helm-ff-lynx-style-map
                      helm-ff-transformer-show-only-basename
                      helm-ff-search-library-in-sexp
                      helm-ff-skip-boring-files)
       (disable-option helm-ff-newfile-prompt-p)
 
-     ;;;; match plugin
-      (set-option helm-mp-highlight-delay 0.2)
+               ;;;; match plugin (set-option helm-mp-highlight-delay 0.2)
       ;; disable auto completion
       ;; (setq helm-ff-auto-update-initial-value nil)
       (set-option helm-external-programs-associations
@@ -90,7 +95,7 @@
       (set-face-attribute 'helm-selection nil
                           :background "#236765")
 
-     ;;;; helm-grep
+      ;;;; helm-grep
       (setq helm-grep-default-command "env LANG=C grep -a -d skip %e -n%cH -e %p %f")
 
       )
@@ -98,8 +103,7 @@
 ;; helm-themes
 (req 'helm-themes)
 
-;; helm-c-yasnippet
-(req 'helm-c-yasnippet)
+;; helm-c-yasnippet (req 'helm-c-yasnippet)
 
 ;; misc
 (req 'helm-misc)
@@ -110,27 +114,20 @@
 ;;        (req 'helm-migemo
 ;;             (setq helm-use-migemo t))))
 
-;; descbinds
-(req 'helm-descbinds
-     (helm-descbinds-mode))
+;; descbinds (req 'helm-descbinds (helm-descbinds-mode))
 
-;; cmd-t
-(req 'helm-cmd-t
-     (global-set-key (kbd "M-t") 'helm-cmd-t))
+;; cmd-t (req 'helm-cmd-t (global-set-key (kbd "M-t") 'helm-cmd-t))
 ;; (req 'helm-C-x-b
 ;;      (define-key global-map [remap switch-to-buffer] 'helm-C-x-b))
 
 ;; helm-ls-git
-(req 'helm-ls-git
-     (muki:define-global-key (kbd "f") 'helm-ls-git-ls))
+(req 'helm-ls-git (muki:define-global-key (kbd "f") 'helm-ls-git-ls))
 
 ;; elisp-package
-(req 'helm-elisp-package
-     (muki:define-global-key (kbd "P") 'helm-list-elisp-packages))
+(req 'helm-elisp-package (muki:define-global-key (kbd "P") 'helm-list-elisp-packages))
 
 ;; helm-git-grep
-(req 'helm-git-grep
-     (muki:define-global-key (kbd "r") 'helm-git-grep))
+(req 'helm-git-grep (muki:define-global-key (kbd "r") 'helm-git-grep))
 
 (req 'helm-mode-manager)
 
