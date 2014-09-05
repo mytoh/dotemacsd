@@ -9,7 +9,7 @@
 (cl-defun muki:lisp-cleanup-support (regex replace)
   (save-excursion
     (while (re-search-forward regex nil t)
-      (when (not (muki:in-string-or-comment))
+      (unless (muki:in-string-or-comment)
         (replace-match replace)))))
 
 (cl-defun muki:lisp-cleanup ()

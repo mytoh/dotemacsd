@@ -21,6 +21,6 @@
   (interactive)
   (set-frame-parameter
    nil 'fullscreen
-   (when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
+   (unless (frame-parameter nil 'fullscreen) 'fullboth)))
 
 (provide 'system-darwin)
