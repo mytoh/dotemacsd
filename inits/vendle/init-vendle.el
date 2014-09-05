@@ -196,6 +196,7 @@
     (autoload 'helm-project-buffer "helm-project-buffer")
     (global-set-key (kbd "C-x b") 'helm-project-buffer))
   (req 'init-helm-ag-r)
+  ;; (req 'init-helm-ag)
   (req 'init-helm-swoop)
   (req 'init-helm-helm-commands)
   (req 'init-wgrep-helm)
