@@ -6,6 +6,7 @@
   (require 'color))
 
 (cl-defmacro muki:log (&rest messages)
+  (declare (debug t))
   `(cl-locally
        (message (concat (propertize ">> " 'face 'font-lock-doc-face)
                         ,@messages) " ...")))
@@ -18,6 +19,8 @@
 ;; http://e-arrows.sakura.ne.jp/2010/03/macros-in-emacs-el.html
 (cl-defmacro req (lib &rest body)
   "load library if file is exits"
+  (declare (debug t)
+           (indent 1))
   `(cond
      ((locate-library (symbol-name ,lib))
       (require ,lib nil 'noerror)
@@ -30,6 +33,8 @@
 
 (cl-defmacro pak (package &rest body)
   "execute body when package is installed"
+  (declare (debug t)
+           (indent 1))
   `(cond
      ((or (package-installed-p ,package)
           (locate-library (symbol-name ,package)))
@@ -40,6 +45,8 @@
 
 (cl-defmacro liby (library &rest body)
   "execute body when library found"
+  (declare (debug t)
+           (indent 1))
   `(cond
      ((locate-library (symbol-name ,library))
       (muki:log "found library " (propertize (symbol-name ,library)
@@ -51,31 +58,38 @@
   "(add-hook-fn 'php-mode-hook
                   (require 'symfony)
                   (setq tab-width 2)"
+  (declare (debug t)
+           (indent 1))
   `(add-hook ,name (lambda () ,@body)))
 
 ;; (lazyload (triger-function ...) "filename" &rest body)
 ;; http://e-arrows.sakura.ne.jp/2010/03/macros-in-emacs-el.html
-(cl-defmacro lazyload (_funcs _lib)
+(cl-defmacro lazyload (funcs lib)
+  (declare (debug t))
   `(cl-locally
-       ,@(cl-mapcar (lambda (f) `(autoload ',f ,_lib nil t))
-                    _funcs)))
+       ,@(cl-mapcar (lambda (f) `(autoload ',f ,lib nil t))
+                    funcs)))
 
 ;; (append-to-list exec-path
 ;;                 '("/usr/bin" "/bin"
 ;;                   "/usr/sbin" "/sbin"))
 (cl-defmacro append-to-list (to lst)
+  (declare (debug t))
   `(setq ,to (append ,to ,lst)))
 
 (cl-defmacro muki:add-to-load-path (path)
+  (declare (debug t))
   `(and (file-exists-p ,path)
         (add-to-list 'load-path ,path)))
 
 (cl-defmacro muki:set-face-colours (face fore back)
+  (declare (debug t))
   `(cl-locally
        (set-face-foreground ,face ,fore)
      (set-face-background ,face ,back)))
 
 (cl-defmacro set-option (&rest body)
+  (declare (debug t))
   (and body
        (cl-letf ((option (car body))
                  (value (cadr body)))
@@ -86,6 +100,7 @@
             (set-option ,@(cddr body))))))
 
 (cl-defmacro enable-option (&rest body)
+  (declare (debug t))
   (and body
        (cl-letf ((option (car body)))
          `(cl-locally
@@ -95,6 +110,7 @@
             (enable-option ,@(cdr body))))))
 
 (cl-defmacro disable-option (&rest body)
+  (declare (debug t))
   (and body
        (cl-letf ((option (car body)))
          `(cl-locally
@@ -104,12 +120,14 @@
             (disable-option ,@(cdr body))))))
 
 (cl-defmacro enable-mode (mode-fn)
+  (declare (debug t))
   `(cl-locally
        (,mode-fn 1)
      (muki:log "enable mode " ,(propertize (symbol-name mode-fn)
                                            'face 'font-lock-variable-name-face))))
 
 (cl-defmacro disable-mode (mode-fn)
+  (declare (debug t))
   `(cl-locally
        (,mode-fn -1)
      (muki:log "disable mode " ,(propertize (symbol-name mode-fn)

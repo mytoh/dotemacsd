@@ -1,4 +1,4 @@
-;;; %file-base% -*- lexical-binding: t -*-
+;;; %file-base% -*- lexical-binding: t; -*-
 
 ;;; Code:
 

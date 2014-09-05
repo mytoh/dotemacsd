@@ -11,6 +11,15 @@
     '((t (:underline "#a7a6aa" :foreground nil  :background "#808ea1")))
   "Face used for the line delimiting the end of source blocks")
 
+;; give us some hint we are running
+(defadvice org-babel-execute-src-block (around progress nil activate)
+  (set-face-attribute
+   'org-block-background nil :background "LightSteelBlue")
+  (message "Running your code block")
+  ad-do-it
+  (set-face-attribute 'org-block-background nil :background "gray")
+  (message "Done with code block"))
+
 (enable-option org-src-fontify-natively)
 ;; (enable-option org-startup-indented)
 

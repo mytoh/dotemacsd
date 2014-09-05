@@ -37,13 +37,13 @@
 
 (eval-after-load "paredit"
   '(progn (define-key paredit-mode-map (kbd "C-S-d")
-            'paredit-duplicate-closest-sexp)
-          (define-key paredit-mode-map (kbd "M-)")
-            'paredit-wrap-round-from-behind)))
+           'paredit-duplicate-closest-sexp)
+    (define-key paredit-mode-map (kbd "M-)")
+     'paredit-wrap-round-from-behind)))
 
-(add-hook 'emacs-lisp-mode-hook           #'(lambda () (paredit-mode t)))
-(add-hook 'lisp-mode-hook                        #'(lambda () (paredit-mode t)))
-(add-hook 'lisp-interaction-mode-hook  #'(lambda () (paredit-mode t)))
-(add-hook 'scheme-mode-hook                 #'(lambda () (paredit-mode t)))
+(add-hook 'emacs-lisp-mode-hook (lambda () (paredit-mode t)))
+(add-hook 'lisp-mode-hook (lambda () (paredit-mode t)))
+(add-hook 'lisp-interaction-mode-hook (lambda () (paredit-mode t)))
+(add-hook 'scheme-mode-hook (lambda () (paredit-mode t)))
 
 (provide 'paketti-paredit)

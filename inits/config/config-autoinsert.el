@@ -24,30 +24,30 @@
 
 (defun muki:elisp-template ()
   (time-stamp)
-  (mapc #'(lambda(c)
-            (cl-locally
-                (goto-char (point-min))
-              (replace-string (car c) (funcall (cdr c)) nil)))
+  (mapc (lambda(c)
+          (cl-locally
+              (goto-char (point-min))
+            (replace-string (car c) (funcall (cdr c)) nil)))
         template-replacements-alists)
   (goto-char (point-max))
   (message "done."))
 
 (defun muki:scheme-template ()
   (time-stamp)
-  (mapc #'(lambda(c)
-            (cl-locally
-                (goto-char (point-min))
-              (replace-string (car c) (funcall (cdr c)) nil)))
+  (mapc (lambda(c)
+          (cl-locally
+              (goto-char (point-min))
+            (replace-string (car c) (funcall (cdr c)) nil)))
         template-replacements-alists)
   (goto-char (point-max))
   (message "done."))
 
 (defun muki:shell-template ()
   (time-stamp)
-  (mapc #'(lambda(c)
-            (cl-locally
-                (goto-char (point-min))
-              (replace-string (car c) (funcall (cdr c)) nil)))
+  (mapc (lambda(c)
+          (cl-locally
+              (goto-char (point-min))
+            (replace-string (car c) (funcall (cdr c)) nil)))
         template-replacements-alists)
   (goto-char (point-max))
   (message "done."))

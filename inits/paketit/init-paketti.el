@@ -104,15 +104,15 @@
         sudo-ext
         shell-pop
 
-        sunrise-commander
-        sunrise-x-buttons
-        sunrise-x-checkpoints
-        sunrise-x-loop
-        sunrise-x-mirror
-        sunrise-x-modeline
-        sunrise-x-popviewer
-        sunrise-x-tabs
-        sunrise-x-tree
+        ;; sunrise-commander
+        ;; sunrise-x-buttons
+        ;; sunrise-x-checkpoints
+        ;; sunrise-x-loop
+        ;; sunrise-x-mirror
+        ;; sunrise-x-modeline
+        ;; sunrise-x-popviewer
+        ;; sunrise-x-tabs
+        ;; sunrise-x-tree
 
         pretty-mode
         ;; pretty-mode-plus
@@ -414,7 +414,7 @@
     paketti-fancy-narrow
     paketti-flycheck
     paketti-flycheck-pos-tip
-    paketti-sunrise-commander
+    ;; paketti-sunrise-commander
     paketti-ace-link
     paketti-easy-kill
     ;; paketti-stripe-buffer

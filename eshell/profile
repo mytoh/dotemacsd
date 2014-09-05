@@ -2,7 +2,7 @@
                                         #(or (getenv "CDPATH")
                                         #    (setenv "CDPATH"
                                         #            (cl-reduce
-                                        #             '(lambda (a b)
+                                        #             (lambda (a b)
                                         #         (cl-concatenate 'string
                                         #         (expand-file-name a) ":" (expand-file-name b)))
                                         #      '("~/huone" "~"  "/usr/local"))))

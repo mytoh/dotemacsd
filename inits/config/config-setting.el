@@ -262,4 +262,26 @@
 ;;;; info
 (set-option Info-additional-directory-list (list (expand-file-name "~/huone/työkaluvaja/info")))
 
+;;;; file type and external program list used for helm and sunrise
+(defvar muki:external-programs-associations nil)
+(set-option muki:external-programs-associations
+            '(("cbz" . "mcomix")
+              ("cbr" . "mcomix")
+              ("zip" . "mcomix")
+              ("rar" . "mcomix")
+              ("pdf" . "mcomix")
+              ("jpg" . "pikkukivi kuva")
+              ("JPG" . "pikkukivi kuva")
+              ("png" . "pikkukivi kuva")
+              ("gif" . "pikkukivi kuva")
+              ("mov" . "mpv")
+              ("webm" . "mpv")
+              ("swf" . "mpv")
+              ("flv" . "mpv")
+              ("avi" . "mpv")
+              ("mkv" . "mpv")
+              ("mp4" . "mpv")
+              ("wmv" . "mpv")
+              ("webm" . "mpv")))
+
 (provide 'config-setting)

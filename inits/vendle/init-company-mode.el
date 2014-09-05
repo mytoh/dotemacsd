@@ -37,6 +37,6 @@
 (req 'company-scheme
      (add-hook 'scheme-mode-hook
                (lambda ()
-                 (set (make-local-variable 'company-backends) '(company-scheme)))))
+                 (setq-local company-backends '(company-scheme)))))
 
 (provide 'init-company-mode)

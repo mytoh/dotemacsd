@@ -47,12 +47,13 @@ Otherwise goto the end of minibuffer."
       (set-option helm-boring-file-regexp-list '("\\.git$" "\\.hg$" "\\.svn$" "\\.CVS$" "\\._darcs$" "\\.la$" "\\.o$" "\\.i$"))
       (add-to-list 'helm-boring-file-regexp-list  "\\.git/COMMIT_EDITMSG$")
 
-      (enable-option helm-M-x-always-save-history)
+      (enable-option helm-M-x-always-save-history
+                     helm-split-window-in-side-p ; open helm buffer inside current window, not occupy whole other window
+                     )
       (disable-option enable-recursive-minibuffers
                       helm-quick-update
                       helm-move-to-line-cycle-in-source
                       helm-debug
-                      helm-split-window-in-side-p ; open helm buffer inside current window, not occupy whole other window
                       )
       ;; helm-files
       (enable-option helm-ff-lynx-style-map
@@ -60,10 +61,13 @@ Otherwise goto the end of minibuffer."
                      helm-ff-search-library-in-sexp
                      helm-ff-skip-boring-files)
       (disable-option helm-ff-newfile-prompt-p)
-
-               ;;;; match plugin (set-option helm-mp-highlight-delay 0.2)
       ;; disable auto completion
       ;; (setq helm-ff-auto-update-initial-value nil)
+
+      ;; match plugin
+      (set-option helm-mp-highlight-delay 0.2)
+
+
       (set-option helm-external-programs-associations
                   '(("cbz" . "mcomix")
                     ("cbr" . "mcomix")
@@ -83,6 +87,7 @@ Otherwise goto the end of minibuffer."
                     ("mp4" . "mpv")
                     ("wmv" . "mpv")
                     ("webm" . "mpv")))
+
       (enable-option helm-bookmark-show-location)
 
       (set-face-attribute  'helm-bookmark-directory nil
@@ -114,9 +119,11 @@ Otherwise goto the end of minibuffer."
 ;;        (req 'helm-migemo
 ;;             (setq helm-use-migemo t))))
 
-;; descbinds (req 'helm-descbinds (helm-descbinds-mode))
+;; descbinds
+(req 'helm-descbinds (helm-descbinds-mode))
 
-;; cmd-t (req 'helm-cmd-t (global-set-key (kbd "M-t") 'helm-cmd-t))
+;; cmd-t
+(req 'helm-cmd-t (global-set-key (kbd "M-t") 'helm-cmd-t))
 ;; (req 'helm-C-x-b
 ;;      (define-key global-map [remap switch-to-buffer] 'helm-C-x-b))
 

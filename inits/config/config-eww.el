@@ -2,6 +2,7 @@
 
 (liby 'eww
       ;; (set-option browse-url-browser-function 'eww-browse-url)
+      (set-option eww-home-url "file:///home/mytoh/.org/etusivu/etusivu.html")
       (disable-option shr-image-animate)
       (with-eval-after-load 'eww
         (set-option eww-download-directory "~/huone/lataukset")
