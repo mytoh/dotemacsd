@@ -12,7 +12,7 @@
 
 (global-set-key (kbd "C-<tab>") 'other-window)
 
-;; (muki:define-global-key (kbd "p") 'package-list-packages)
+;; (muki:define-global-key "p" 'package-list-packages)
 
 ;;;; default compose mail
 (global-unset-key (kbd "C-x m"))

@@ -100,6 +100,9 @@
                    '(:deps ("kiwanami/emacs-window-manager"
                             "m2ym/direx-el")))
   (vendle:register "yu-i9/oniisama")
+  (vendle:register "nicferrier/emacs-web"
+                   '(:deps ("magnars/dash.el"
+                            "magnars/s.el")))
   (vendle:register "nicferrier/elnode"
                    '(:deps ("nicferrier/emacs-fakir"
                             "nicferrier/emacs-kv"
@@ -184,12 +187,12 @@
   (vendle:check-packages)
 
   ;; keymap
-  (muki:define-global-key (kbd "v u") 'vendle-update)
-  (muki:define-global-key (kbd "v k") 'vendle-check)
-  (muki:define-global-key (kbd "v c") 'vendle-clean)
+  (muki:define-global-key "v u" 'vendle-update)
+  (muki:define-global-key "v k" 'vendle-check)
+  (muki:define-global-key "v c" 'vendle-clean)
   (with-eval-after-load "helm"
     (req 'helm-vendle
-      (muki:define-global-key (kbd "v l") 'helm-vendle)))
+      (muki:define-global-key "v l" 'helm-vendle)))
 
   (req 'init-migemo)
 

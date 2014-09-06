@@ -13,7 +13,7 @@
     (cl-letf ((url-proxy-services '(("http" . "proxy.koti:8080"))))
       (eww url)))
 
-  (muki:define-global-key (kbd "w") 'muki:eww)
+  (muki:define-global-key "w" 'muki:eww)
   )
 
 ;; (replace-string "\221" "`" nil (point-min) (point-max))  ; opening single quote

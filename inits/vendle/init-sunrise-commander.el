@@ -26,8 +26,8 @@
     (sunrise)
     (sr-popviewer-mode 1))
 
-  (muki:define-global-key (kbd "x") 'muki:sunrise)
-  (muki:define-global-key (kbd "X") 'sunrise-cd)
+  (muki:define-global-key "x" 'muki:sunrise)
+  (muki:define-global-key "X" 'sunrise-cd)
 
   (defvar muki:sunrise-external-programs-associations
     '(("cbz" . "mcomix")

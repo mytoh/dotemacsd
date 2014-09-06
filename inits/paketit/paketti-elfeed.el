@@ -1,12 +1,12 @@
 ;;; paketti-elfeed.el -*- lexical-binding: t -*-
 
 (pak 'elfeed
-     (muki:define-global-key (kbd "l") 'elfeed)
+  (muki:define-global-key "l" 'elfeed)
 
-     ;; Somewhere in your .emacs file
-     (setq elfeed-feeds
-           '("http://nullprogram.com/feed/"
-             "http://www.terminally-incoherent.com/blog/feed/")))
+  ;; Somewhere in your .emacs file
+  (setq elfeed-feeds
+        '("http://nullprogram.com/feed/"
+          "http://www.terminally-incoherent.com/blog/feed/")))
 
 (provide 'paketti-elfeed)
 
