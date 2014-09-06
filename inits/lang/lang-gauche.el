@@ -23,7 +23,7 @@
 (cl-defun muki:scheme-mode-hook ()
   (define-key scheme-mode-map (kbd "C-s") 'muki:scheme-other-window)
   (local-set-key (kbd "C-m") 'newline-and-indent)
-  (add-hook 'before-save-hook 'muki:before-save-hook nil t))
+  (add-hook 'before-save-hook 'muki:lisp-before-save-hook nil t))
 (add-hook 'scheme-mode-hook 'muki:scheme-mode-hook)
 
 (cl-defun muki:inferior-scheme-mode-hook ()

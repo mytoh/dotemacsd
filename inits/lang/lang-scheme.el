@@ -49,7 +49,7 @@
   (define-key scheme-mode-map (kbd "C-c C-s") 'muki:scheme-other-window)
   (cl-dolist (f '(muki:lisp-cleanup
                   whitespace-cleanup
-                  muki:before-save-hook))
+                  muki:lisp-before-save-hook))
     (add-hook 'before-save-hook f nil t))
   ;; (setq mode-name " ☯ ")
   )
