@@ -271,7 +271,7 @@
     ;; C-x C-j で skk モードを起動
     (muki:global-set-key "C-x C-\\" 'skk-mode)
     ;; enable skk mode by pressing カタカナ/ひらがな key
-    (global-set-key [hiragana-katakana] 'skk-mode)
+    (muki:global-set-key [hiragana-katakana] 'skk-mode)
     ;; set default input method to skk
     (setq default-input-method "japanese-skk")
     ;; .skk を自動的にバイトコンパイル

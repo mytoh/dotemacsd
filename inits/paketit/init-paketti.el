@@ -357,7 +357,7 @@
   '(
     paketti-rainbow-mode     ; this may cause problem
     paketti-google-translate
-    paketti-guide-key
+    ;; paketti-guide-key
     paketti-image-dired+
     paketti-image+
     paketti-multiple-cursors
@@ -497,7 +497,7 @@
 
 ;; redo+
 ;; (req 'redo+
-;;      (global-set-key (kbd "C-_") 'redo))
+;;      (muki:global-set-key "C-_" 'redo))
 
 
 ;; hackernews

@@ -8,7 +8,7 @@
 
 (muki:global-set-key "C-w" 'kill-region-or-backward-kill-word)
 
-(global-set-key [remap kill-whole-line] 'smart-kill-whole-line)
+(muki:global-set-key [remap kill-whole-line] 'smart-kill-whole-line)
 
 (muki:global-set-key "C-<tab>" 'other-window)
 

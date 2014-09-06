@@ -1,7 +1,7 @@
 ;;; paketti-easy-kill.el -*- lexical-binding: t -*-
 
 (req 'easy-kill
-     (global-set-key [remap kill-ring-save] 'easy-kill))
+  (muki:global-set-key [remap kill-ring-save] 'easy-kill))
 
 (provide 'paketti-easy-kill)
 
