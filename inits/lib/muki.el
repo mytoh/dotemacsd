@@ -198,23 +198,31 @@ buffer is not visiting a file."
       (color-hsl-to-rgb (/ h 360.0) (/ s 100.0) (/ l 100.0))
     (color-rgb-to-hex r g b)))
 
+;;; keymap utils
+(cl-defun muki:global-set-key (key func)
+  (global-set-key (kbd key) func))
+
+(cl-defun muki:define-key (keymap key def)
+  (define-key keymap (kbd key) def))
+
 ;;; my global map
 (defcustom muki:global-prefix-key
   "C-c e"
   "personal global prefix key")
 (setq muki:global-map (make-sparse-keymap))
 
-(cl-defun muki:define-global-key (keymap func)
+(cl-defun muki:define-global-key (key def)
   "define personal global key mappings"
-  (cl-letf ((key (concat (kbd muki:global-prefix-key) keymap)))
-    (define-key muki:global-map key func)
-    (message "bind %s to %s" keymap (symbol-name func))))
+  (cl-letf ((k (string-join (list muki:global-prefix-key key) " ")))
+    (muki:define-key muki:global-map k def)
+    (message "bind %s to %s" k (symbol-name def))))
 
 (define-minor-mode muki-mode
     "muki keymapping"
   :keymap muki:global-map
   :lighter " ☕"
-  :global t :init-value t)
+  :global t
+  :init-value t)
 
 ;; smart kill word
 ;; http://d.hatena.ne.jp/kiwanami/20091222/1261504543
