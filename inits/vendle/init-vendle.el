@@ -109,10 +109,13 @@
   (vendle:register "syohex/emacs-eew")
   (vendle:register "escherdragon/sunrise-commander"
                    '(:compile nil))
-
   (vendle:register "http://git.gnus.org/gnus.git"
                    '(:build ("./configure" "gmake")
                      :load-path ("lisp" "contrib")))
+  (vendle:register "dholm/tabbar")
+  ;; (vendle:register "aki2o/guide-key-tip"
+  ;;                  '(:deps ("kbkbkbkb1/guide-key"
+  ;;                           "emacs-mirror/pos-tip")))
 
      ;;; org
   (vendle:register "git://orgmode.org/org-mode.git"
@@ -167,8 +170,9 @@
     (add-project-root "helm-project-buffer"))
 
   (cond
-    ((file-directory-p "~/.emacs.d/vendle/ddskk-20140817")
-     (vendle:register-local "~/.emacs.d/vendle/ddskk-20140817"))
+    ((file-directory-p "~/.emacs.d/vendle/ddskk-20140831")
+     (vendle:register-local "~/.emacs.d/vendle/ddskk-20140831"
+                            '(:build ("gmake elc"))))
     ((file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
      (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk")))
 
@@ -438,6 +442,8 @@
   (req 'eew)
 
   (req 'init-sunrise-commander)
+
+  (req 'init-tabbar)
 
   ;; (liby 'slideview
   ;;       (add-hook 'image-mode-hook 'slideview-mode))

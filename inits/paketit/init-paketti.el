@@ -3,14 +3,14 @@
 ;;;; builtins
 ;; save curosr position
 (liby 'saveplace
-      (setq-default save-place t))
+  (setq-default save-place t))
 
 ;; checkdoc
 (req 'checkdoc)
 
 ;; uniquify
 (req 'uniquify
-     (set-option uniquify-buffer-name-style 'post-forward-angle-brackets))
+  (set-option uniquify-buffer-name-style 'post-forward-angle-brackets))
 
 ;; term/bobcat
 (load "term/bobcat")
@@ -25,12 +25,12 @@
 
 ;; package.el
 (req 'package
-     ;; load MELPA
-     (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") 'append)
-     (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") 'append)
-     (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") 'append)
-     (add-to-list 'package-archives '("SC" . "http://joseito.republika.pl/sunrise-commander/") 'append)
-     (package-initialize))
+  ;; load MELPA
+  (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") 'append)
+  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") 'append)
+  (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") 'append)
+  (add-to-list 'package-archives '("SC" . "http://joseito.republika.pl/sunrise-commander/") 'append)
+  (package-initialize))
 
 
 ;;; package list
@@ -58,7 +58,7 @@
         rainbow-mode
         ;; scheme-complete
         ;; expand-region
-        tabbar
+        ;; tabbar
         suomalainen-kalenteri
         info+
         redo+
@@ -362,7 +362,7 @@
     paketti-image+
     paketti-multiple-cursors
     paketti-rainbow-delimiters
-    paketti-tabbar
+    ;; paketti-tabbar
     paketti-suomalainen-kalenteri
     paketti-info+
     paketti-popwin

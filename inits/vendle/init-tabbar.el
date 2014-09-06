@@ -41,4 +41,4 @@
   (global-set-key (kbd "M-]") 'tabbar-forward)  ; 次のタブ
   )
 
-(provide 'paketti-tabbar)
+(provide 'init-tabbar)
