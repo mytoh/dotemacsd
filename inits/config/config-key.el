@@ -4,13 +4,13 @@
 (define-key lisp-interaction-mode-map (kbd "C-m") 'newline-and-indent)
 
 ;;;; help
-(global-set-key (kbd "C-x C-h") 'help-command)
+(muki:global-set-key "C-x C-h" 'help-command)
 
-(global-set-key (kbd "C-w") 'kill-region-or-backward-kill-word)
+(muki:global-set-key "C-w" 'kill-region-or-backward-kill-word)
 
 (global-set-key [remap kill-whole-line] 'smart-kill-whole-line)
 
-(global-set-key (kbd "C-<tab>") 'other-window)
+(muki:global-set-key "C-<tab>" 'other-window)
 
 ;; (muki:define-global-key "p" 'package-list-packages)
 
@@ -21,28 +21,28 @@
   (interactive)
   (error (substitute-command-keys "To exit emacs: \\[kill-emacs]")))
 
-(global-set-key (kbd "C-x C-c") 'muki:dont-kill-emacs)
-(global-set-key (kbd "C-x C-z") 'muki:dont-kill-emacs)
+(muki:global-set-key "C-x C-c" 'muki:dont-kill-emacs)
+(muki:global-set-key "C-x C-z" 'muki:dont-kill-emacs)
 
 ;;;; http://d.hatena.ne.jp/mooz/20100119/p1
 ;; C-q をプリフィックスキー化
-(global-set-key (kbd "C-q") (make-sparse-keymap))
+(muki:global-set-key "C-q" (make-sparse-keymap))
 
 ;; quoted-insert は C-q C-q へ割り当て
-(global-set-key (kbd "C-q C-q") 'quoted-insert)
+(muki:global-set-key "C-q C-q" 'quoted-insert)
 
 ;; window-resizer は C-q C-r (resize) で
-(global-set-key (kbd "C-q C-r") 'muki:window-resizer)
+(muki:global-set-key "C-q C-r" 'muki:window-resizer)
 
 ;;; font
-(global-set-key (kbd "C-+") 'text-scale-adjust)
-(global-set-key (kbd "C--") 'text-scale-adjust)
+(muki:global-set-key "C-+" 'text-scale-adjust)
+(muki:global-set-key "C--" 'text-scale-adjust)
 
 ;; C-x o にはもううんざり
-(global-set-key (kbd "C-q l") 'windmove-right)
-(global-set-key (kbd "C-q h") 'windmove-left)
-(global-set-key (kbd "C-q j") 'windmove-down)
-(global-set-key (kbd "C-q k") 'windmove-up)
+(muki:global-set-key "C-q l" 'windmove-right)
+(muki:global-set-key "C-q h" 'windmove-left)
+(muki:global-set-key "C-q j" 'windmove-down)
+(muki:global-set-key "C-q k" 'windmove-up)
 
 ;; http://d.hatena.ne.jp/khiker/20100119/window_resize
 (defun muki:window-resizer ()

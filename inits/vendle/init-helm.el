@@ -20,10 +20,10 @@ Otherwise goto the end of minibuffer."
                 (interactive)
                 (helm-select-nth-action ,n))))
 
-      (global-set-key (kbd "M-x") 'helm-M-x)
-      (global-set-key (kbd "C-c C-m") 'helm-M-x)
-      (global-set-key (kbd "M-y") 'helm-show-kill-ring)
-      (global-set-key (kbd "C-M-z") 'helm-resume)
+      (muki:global-set-key "M-x" 'helm-M-x)
+      (muki:global-set-key "C-c C-m" 'helm-M-x)
+      (muki:global-set-key "M-y" 'helm-show-kill-ring)
+      (muki:global-set-key "C-M-z" 'helm-resume)
       (global-set-key [remap find-file] 'helm-find-files)
       (global-set-key [remap occur] 'helm-occur)
       (global-set-key [remap list-buffers] 'helm-buffers-list)
@@ -123,7 +123,8 @@ Otherwise goto the end of minibuffer."
 (req 'helm-descbinds (helm-descbinds-mode))
 
 ;; cmd-t
-(req 'helm-cmd-t (global-set-key (kbd "M-t") 'helm-cmd-t))
+(req 'helm-cmd-t
+  (muki:global-set-key "M-t" 'helm-cmd-t))
 ;; (req 'helm-C-x-b
 ;;      (define-key global-map [remap switch-to-buffer] 'helm-C-x-b))
 

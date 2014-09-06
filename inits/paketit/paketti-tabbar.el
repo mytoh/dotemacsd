@@ -37,8 +37,8 @@
                       :background (face-background 'default)
                       :height 60)
 
-  (global-set-key (kbd "M-[") 'tabbar-backward) ; 前のタブ
-  (global-set-key (kbd "M-]") 'tabbar-forward)  ; 次のタブ
+  (muki:global-set-key "M-[" 'tabbar-backward) ; 前のタブ
+  (muki:global-set-key "M-]" 'tabbar-forward)  ; 次のタブ
   )
 
 (provide 'paketti-tabbar)

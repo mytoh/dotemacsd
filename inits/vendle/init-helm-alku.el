@@ -35,7 +35,7 @@
 
   (muki:define-global-key "c"  'helm-alku-program)
   (muki:define-global-key "n" 'helm-alku-vihko)
-  (global-set-key (kbd "C-c h") 'helm-alku)
+  (muki:global-set-key "C-c h" 'helm-alku)
 
   )
 

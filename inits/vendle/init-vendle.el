@@ -116,9 +116,9 @@
                    '(:build ("./configure" "gmake")
                      :load-path ("lisp" "contrib")))
   (vendle:register "dholm/tabbar")
-  ;; (vendle:register "aki2o/guide-key-tip"
-  ;;                  '(:deps ("kbkbkbkb1/guide-key"
-  ;;                           "emacs-mirror/pos-tip")))
+  (vendle:register "aki2o/guide-key-tip"
+                   '(:deps ("kbkbkbkb1/guide-key"
+                            "emacsmirror/pos-tip")))
 
      ;;; org
   (vendle:register "git://orgmode.org/org-mode.git"
@@ -201,7 +201,7 @@
   (req 'init-helm-alku)
   (liby 'helm-project-buffer
     (autoload 'helm-project-buffer "helm-project-buffer")
-    (global-set-key (kbd "C-x b") 'helm-project-buffer))
+    (muki:global-set-key "C-x b" 'helm-project-buffer))
   (req 'init-helm-ag-r)
   ;; (req 'init-helm-ag)
   (req 'init-helm-swoop)
@@ -254,7 +254,7 @@
 
   (req 'debug-print
     (debug-print-init)
-    (global-set-key (kbd "C-x C-e") 'debug-print-eval-last-sexp))
+    (muki:global-set-key "C-x C-e" 'debug-print-eval-last-sexp))
 
   ;; (req 'aozora-view)
 
@@ -269,7 +269,7 @@
   (set-option skk-user-directory "~/.emacs.d/ddskk/")
   (req 'skk-autoloads
     ;; C-x C-j で skk モードを起動
-    (global-set-key (kbd "C-x C-\\") 'skk-mode)
+    (muki:global-set-key "C-x C-\\" 'skk-mode)
     ;; enable skk mode by pressing カタカナ/ひらがな key
     (global-set-key [hiragana-katakana] 'skk-mode)
     ;; set default input method to skk
@@ -356,7 +356,7 @@
       (if mark-active
           (quickrun :start start :end end)
         (quickrun)))
-    (global-set-key (kbd "<f5>") 'quickrun-sc)
+    (muki:global-set-key "<f5>" 'quickrun-sc)
     (with-eval-after-load "popwin"
       (push '("*quickrun*") popwin:special-display-config))
     (quickrun-add-command "scheme/gosh-r7rs"
@@ -391,8 +391,8 @@
   (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
   (req 'rotate
-    (global-set-key (kbd "C-c C-SPC") 'rotate-layout)
-    (global-set-key (kbd "C-c C-c C-SPC") 'rotate-window))
+    (muki:global-set-key "C-c C-SPC" 'rotate-layout)
+    (muki:global-set-key "C-c C-c C-SPC" 'rotate-window))
 
   (req 'git-timemachine)
 
@@ -405,7 +405,7 @@
   (req 'flappymacs)
 
   (req 'yamada
-    ;; (global-set-key (kbd "C-c C-c C-y") 'yamada-dancing)
+    ;; (muki:global-set-key "C-c C-c C-y" 'yamada-dancing)
 
     ;; (yamada-dancing 1) ;; or C-c C-c C-y (M-x yamada-dancing)
     ;; (yamada-dancing 5) ;; or C-u 5 C-c C-c C-y
@@ -447,6 +447,19 @@
   (req 'init-sunrise-commander)
 
   (req 'init-tabbar)
+
+  (req 'guide-key
+    (setq guide-key/guide-key-sequence
+          `("C-x r" "C-x 4" "C-q"
+                    ,(if (boundp 'helm-command-prefix-key)
+                         helm-command-prefix-key
+                         "C-x c")
+                    (org-mode "C-c C-x")))
+    ;; (guide-key-mode 1)
+    )
+
+  (req 'guide-key-tip
+    (setq guide-key-tip/enabled t))
 
   ;; (liby 'slideview
   ;;       (add-hook 'image-mode-hook 'slideview-mode))

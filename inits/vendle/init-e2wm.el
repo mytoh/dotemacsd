@@ -3,7 +3,7 @@
 ;;; Code:
 
 (req 'e2wm
-  (global-set-key (kbd "M-+") 'e2wm:start-management)
+  (muki:global-set-key "M-+" 'e2wm:start-management)
   (req 'e2wm-vcs)
 
   (setq e2wm:def-plugin-clock-url "http://www.avtokei.jp/images/clocks/%H/%H%M.jpg\?1277461066")

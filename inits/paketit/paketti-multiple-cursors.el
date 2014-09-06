@@ -2,11 +2,11 @@
 ;; #* multiple-cursor
 (req 'multiple-cursors
 
-     (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+  (muki:global-set-key "C-S-c C-S-c" 'mc/edit-lines)
 
-     (global-set-key (kbd "C->") 'mc/mark-next-like-this)
-     (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-     (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this))
+  (muki:global-set-key "C->" 'mc/mark-next-like-this)
+  (muki:global-set-key "C-<" 'mc/mark-previous-like-this)
+  (muki:global-set-key "C-c C-<" 'mc/mark-all-like-this))
 
 ;; * provide
 (provide 'paketti-multiple-cursors)

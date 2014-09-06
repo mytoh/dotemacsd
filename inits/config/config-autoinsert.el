@@ -1,4 +1,4 @@
-;;; config-autoinsert.el -*- lexical-binding: t -*-
+;;; config-autoinsert.el -*- lexical-binding: t; coding: utf-8 -*-
 
 ;;;; [[http://d.hatena.ne.jp/higepon/20080731/1217491155]]
 (require 'autoinsert)
