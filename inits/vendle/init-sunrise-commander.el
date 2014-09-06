@@ -62,10 +62,6 @@
                                          (format "%s \"%s\" &" prog file)))
         (message "can't find associated program!"))))
 
-  ;; (add-hook 'sr-mode-hook
-  ;;           (lambda ()
-  ;;             (define-key sr-mode-map (kbd "C-c o") 'muki:sunrise-open-external)))
-
   (define-key sr-mode-map (kbd "C-c o") 'muki:sunrise-open-external)
 
   )
