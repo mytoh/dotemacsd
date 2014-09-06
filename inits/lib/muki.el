@@ -137,7 +137,7 @@
 (cl-defun concat-path (&rest parts)
   (cl-reduce (lambda (a b) (expand-file-name b a)) parts))
 
-(cl-defun muki:before-save-hook ()
+(cl-defun muki:lisp-before-save-hook ()
   (save-excursion
     (goto-char (point-min))
     (delete-trailing-whitespace)
@@ -200,10 +200,14 @@ buffer is not visiting a file."
 
 ;;; keymap utils
 (cl-defun muki:global-set-key (key func)
-  (global-set-key (kbd key) func))
+  (cl-etypecase key
+    (string (global-set-key (kbd key) func))
+    (t (global-set-key key func))))
 
 (cl-defun muki:define-key (keymap key def)
-  (define-key keymap (kbd key) def))
+  (cl-etypecase key
+    (string (define-key keymap (kbd key) def))
+    (t (define-key keymap key def))))
 
 ;;; my global map
 (defcustom muki:global-prefix-key
@@ -252,3 +256,5 @@ buffer is not visiting a file."
   t)
 
 (provide 'muki)
+
+;;; muki.el ends here
