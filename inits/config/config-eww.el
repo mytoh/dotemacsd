@@ -6,7 +6,7 @@
   (disable-option shr-image-animate)
   (with-eval-after-load 'eww
     (set-option eww-download-directory "~/huone/lataukset")
-    (define-key eww-mode-map (kbd "C-i") 'shr-next-link))
+    (muki:define-key eww-mode-map "C-i" 'shr-next-link))
 
   (cl-defun muki:eww (url)
     (interactive "sEnter URL or keywords: ")

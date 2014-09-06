@@ -15,10 +15,10 @@ Otherwise goto the end of minibuffer."
 
       ;; bind C-1 to C-9 to actions
       (cl-loop for n from 0 to 8 do
-           (define-key helm-map (kbd (format "C-%s" (1+ n)))
-             `(lambda ()
-                (interactive)
-                (helm-select-nth-action ,n))))
+           (muki:define-key helm-map (format "C-%s" (1+ n))
+                            `(lambda ()
+                               (interactive)
+                               (helm-select-nth-action ,n))))
 
       (muki:global-set-key "M-x" 'helm-M-x)
       (muki:global-set-key "C-c C-m" 'helm-M-x)
@@ -31,10 +31,10 @@ Otherwise goto the end of minibuffer."
       (muki:global-set-key [remap dabbrev-expand]   'helm-dabbrev)
       (muki:global-set-key [remap find-tag]         'helm-etags-select)
 
-      (define-key helm-map (kbd "C-M-n") 'helm-next-source)
-      (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
-      (define-key helm-read-file-map (kbd "C-h") 'delete-backward-char)
-      ;; (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+      (muki:define-key helm-map "C-M-n" 'helm-next-source)
+      (muki:define-key helm-map "C-M-p" 'helm-previous-source)
+      (muki:define-key helm-read-file-map "C-h" 'delete-backward-char)
+      ;; (muki:define-key helm-read-file-map "TAB" 'helm-execute-persistent-action)
 
       (set-option helm-idle-delay          0.01
                   helm-input-idle-delay    0.01
@@ -126,7 +126,7 @@ Otherwise goto the end of minibuffer."
 (req 'helm-cmd-t
   (muki:global-set-key "M-t" 'helm-cmd-t))
 ;; (req 'helm-C-x-b
-;;      (define-key global-map [remap switch-to-buffer] 'helm-C-x-b))
+;;      (muki:define-key global-map [remap switch-to-buffer] 'helm-C-x-b))
 
 ;; helm-ls-git
 (req 'helm-ls-git (muki:define-global-key "f" 'helm-ls-git-ls))

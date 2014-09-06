@@ -127,16 +127,16 @@ controls, run `mixer' in a shell."
   (muki:global-set-key "C-c m" 'muki:emms-map)
   (defun muki:define-emms-key (key func)
     "define personal key mappings"
-    (define-key muki:emms-map key func))
-  (muki:define-emms-key (kbd "P") 'emms-pause)
-  (muki:define-emms-key (kbd "s") 'emms-stop)
-  (muki:define-emms-key (kbd "p") 'emms-previous)
-  (muki:define-emms-key (kbd "n") 'emms-next)
-  (muki:define-emms-key (kbd "b") 'emms-smart-browse)
-  (muki:define-emms-key (kbd "a f") 'emms-add-file)
-  (muki:define-emms-key (kbd "a d") 'emms-add-directory-tree)
-  (muki:define-emms-key (kbd "+") 'emms-volume-raise)
-  (muki:define-emms-key (kbd "-") 'emms-volume-lower)
+    (muki:define-key muki:emms-map key func))
+  (muki:define-emms-key "P" 'emms-pause)
+  (muki:define-emms-key "s" 'emms-stop)
+  (muki:define-emms-key "p" 'emms-previous)
+  (muki:define-emms-key "n" 'emms-next)
+  (muki:define-emms-key "b" 'emms-smart-browse)
+  (muki:define-emms-key "a f" 'emms-add-file)
+  (muki:define-emms-key "a d" 'emms-add-directory-tree)
+  (muki:define-emms-key "+" 'emms-volume-raise)
+  (muki:define-emms-key "-" 'emms-volume-lower)
   )
 
 (cl-defun helm-librefm-stream ()
@@ -186,7 +186,7 @@ controls, run `mixer' in a shell."
     "Ambient"
     "Electronic"))
 
-(muki:define-emms-key (kbd "l") 'helm-librefm-stream)
+(muki:define-emms-key "l" 'helm-librefm-stream)
 
 (muki:comment
  ;; debug players
