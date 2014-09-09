@@ -62,7 +62,7 @@
                                          (format "%s \"%s\" &" prog file)))
         (message "can't find associated program!"))))
 
-  (muki:define-key sr-mode-map "C-c o" 'muki:sunrise-open-external)
+  (muki:define-key sr-mode-map "C-c C-x" 'muki:sunrise-open-external)
 
   )
 

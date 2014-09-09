@@ -36,9 +36,9 @@
 
 ;;;; start server
 (req 'server
-     ;; (enable-option server-use-tcp)
-     (unless (server-running-p)
-       (server-start)))
+  ;; (enable-option server-use-tcp)
+  (unless (server-running-p)
+    (server-start)))
 
 ;;;; use space instead of tab
 (setq-default tab-width 4
@@ -233,8 +233,8 @@
 (enable-option find-file-visit-truename)
 
 ;;;; theme
-;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox
-(defvar muki:x-theme 'gruvbox)
+;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
+(defvar muki:x-theme 'base16-tomorrow)
 (defvar muki:term-theme 'moe-dark)
 
 (enable-option x-select-enable-clipboard

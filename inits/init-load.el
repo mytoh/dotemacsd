@@ -14,12 +14,11 @@
 ;;;;; vendle
 (require 'init-vendle)
 
-;;;;; packages
-(require 'init-paketti)
-
 ;;;;; config
 (require 'init-config)
 
+;;;;; packages
+(require 'init-paketti)
 
 ;;;;; lang
 (require 'init-lang)

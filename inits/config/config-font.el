@@ -91,14 +91,14 @@
 
 (cl-defun muki:set-font (type)
   (cond
-    ((equalp type 'bitmap)
+    ((cl-equalp type 'bitmap)
      ;; (set-ascii-font)
      (set-naga10-font)
      ;; (set-symbol-font)
      (set-cyrillic-font)
      ;; (set-japanese-font)
      )
-    ((equalp type 'antialias)
+    ((cl-equalp type 'antialias)
      (set-ascii-font)
      ;; (set-naga10-font)
      (set-symbol-font)

@@ -361,7 +361,7 @@
     paketti-image-dired+
     paketti-image+
     paketti-multiple-cursors
-    paketti-rainbow-delimiters
+    ;; paketti-rainbow-delimiters
     ;; paketti-tabbar
     paketti-suomalainen-kalenteri
     paketti-info+

@@ -119,6 +119,8 @@
   (vendle:register "aki2o/guide-key-tip"
                    '(:deps ("kbkbkbkb1/guide-key"
                             "emacsmirror/pos-tip")))
+  (vendle:register "clojure-emacs/clojure-mode")
+  (vendle:register "jlr/rainbow-delimiters")
 
      ;;; org
   (vendle:register "git://orgmode.org/org-mode.git"
@@ -159,8 +161,8 @@
   ;; (vendle:register-theme "ccann/badger-theme")"
 
 
-  (cl-flet ((add-project-root (path)
-              (vendle:register-local (expand-file-name path "~/huone/projektit"))))
+  (cl-labels ((add-project-root (path)
+                (vendle:register-local (expand-file-name path "~/huone/projektit"))))
     (add-project-root  "emacs-flatline")
     (add-project-root "helm-ypv")
     (add-project-root "company-scheme")
@@ -331,7 +333,8 @@
 
   (req 'yon-chan)
 
-  (req 'init-emms)
+  ;; (req 'init-emms)
+  (req 'init-emms-mpd)
 
   (req 'init-magit)
 
@@ -422,16 +425,16 @@
         (lambda ()
           (add-hook 'before-save-hook 'web-beautify-css-buffer t t)))))
 
-  (req 'moe-theme
-    ;; org-modeで見出しごとにフォントの大きさを変える
-    (setq moe-theme-resize-org-title
-          '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
-    ;; mode-lineをオレンジにする
-    ;; (サポートしている他の色: blue, orange, green ,magenta, yellow, purple, red, cyan, w/b)
-    ;; (setq moe-theme-mode-line-color 'orange)
-    (moe-dark)
-    ;; あるいは (moe-light)
-    )
+  ;; (req 'moe-theme
+  ;;   ;; org-modeで見出しごとにフォントの大きさを変える
+  ;;   (setq moe-theme-resize-org-title
+  ;;         '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
+  ;;   ;; mode-lineをオレンジにする
+  ;;   ;; (サポートしている他の色: blue, orange, green ,magenta, yellow, purple, red, cyan, w/b)
+  ;;   ;; (setq moe-theme-mode-line-color 'orange)
+  ;;   (moe-dark)
+  ;;   ;; あるいは (moe-light)
+  ;;   )
 
   (req 'direx)
 
@@ -460,6 +463,11 @@
 
   (req 'guide-key-tip
     (setq guide-key-tip/enabled t))
+
+  (req 'clojure-mode
+    (req 'clojure-mode-extra-font-locking))
+
+  (req 'init-rainbow-delimiters)
 
   ;; (liby 'slideview
   ;;       (add-hook 'image-mode-hook 'slideview-mode))
