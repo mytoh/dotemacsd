@@ -1,3 +1,4 @@
+;;; init-org.el -*- lexical-binding: t; -*-
 
 (defface org-block-begin-line
     '((t (:underline "#a7a6aa" :foreground nil  :background "#808ea1")))
@@ -28,19 +29,19 @@
   (untabify (point-min) (point-max)))
 
 (cl-defun muki:org-startup-options ()
-  (setq org-startup-folded 'showall)
-  (setq org-descriptive-links nil))
+  (set-option org-startup-folded 'showall)
+  (set-option org-descriptive-links nil))
 
 (cl-defun muki:org-html-export-option ()
-  (setq org-html-doctype "html5")
-  (setq org-html-html5-fancy t)
-  (setq org-html-preamble nil)
-  (setq org-html-postamble nil))
+  (set-option org-html-doctype "html5")
+  (set-option org-html-html5-fancy t)
+  (set-option org-html-preamble nil)
+  (set-option org-html-postamble nil))
 
 (cl-defun muki:org-mode-hook-function ()
-  (setq mode-name " ꙮ ")
-  (setq org-html-postamble nil)
-  (setq org-descriptive-links nil)
+  (set-option mode-name " ꙮ ")
+  (set-option org-html-postamble nil)
+  (set-option org-descriptive-links nil)
   (muki:org-startup-options)
   (muki:org-html-export-option)
   (org-babel-do-load-languages
@@ -48,11 +49,46 @@
    '((emacs-lisp . t)
      (sh . t)
      (scheme . t)
-     (lisp . t)))
-  (add-hook 'before-save-hook
-            'muki:org-mode-before-save-hook))
+     (lisp . t))))
 
 (add-hook 'org-mode-hook
           'muki:org-mode-hook-function)
 
+(with-eval-after-load 'org
+  (require 'org-bibtex)
+  (add-hook 'before-save-hook
+            'muki:org-mode-before-save-hook))
+
+;; github.com/thierryvolpiatto/emacs-tv-config
+(defun muki:insert-org-src-keyword (beg end)
+  (interactive "r")
+  (save-excursion
+    (goto-char beg)
+    (insert "#+begin_src\n")
+    (goto-char end)
+    (forward-line 1)
+    (insert "\n#+end_src")))
+
+(muki:define-key org-mode-map "C-c o o" 'helm-org-headlines)
+(muki:define-key org-mode-map "C-c o k" 'muki:insert-org-src-keyword)
+(add-hook 'org-mode-hook
+          (lambda ()
+            (local-set-key (kbd "M-C-n") 'outline-next-visible-heading)
+            (local-set-key (kbd "M-C-p") 'outline-previous-visible-heading)
+            (local-set-key (kbd "M-C-u") 'outline-up-heading)
+            ;; table
+            (local-set-key (kbd "M-C-w") 'org-table-copy-region)
+            (local-set-key (kbd "M-C-y") 'org-table-paste-rectangle)
+            (local-set-key (kbd "M-C-l") 'org-table-sort-lines)
+            ;; display images
+            (local-set-key (kbd "M-I") 'org-toggle-iimage-in-org)))
+
+(req 'org-bullets
+  (cl-defun enable-org-bullets ()
+    (org-bullets-mode 1))
+  ;; (add-hook 'org-mode-hook 'enable-org-bullets)
+  )
+
 (provide 'init-org)
+
+;;; init-org.el ends here

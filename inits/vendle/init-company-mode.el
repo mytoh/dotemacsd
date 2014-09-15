@@ -1,11 +1,11 @@
 
 (req 'company
 
-  (setq company-idle-delay 0.3)
-  ;; (setq company-tooltip-limit 20)
+  ;; (setq company-idle-delay 0.3)
+  (setq company-tooltip-limit 30)
   (setq company-minimum-prefix-length 2)
-  (setq company-echo-delay 0)
-  (setq company-auto-complete nil)
+  ;; (setq company-echo-delay 0)
+  ;; (setq company-auto-complete nil)
   (global-company-mode 1)
   (add-to-list 'company-backends 'company-dabbrev t)
   (add-to-list 'company-backends 'company-ispell t)
@@ -32,11 +32,12 @@
 
   (set-face-attribute 'company-scrollbar-fg nil
                       :background (face-background 'company-tooltip))
+
+  (req 'company-scheme
+    (add-to-list 'company-backends 'company-scheme-backend t))
+
   )
 
-(req 'company-scheme
-  (add-hook 'scheme-mode-hook
-            (lambda ()
-              (setq-local company-backends '(company-scheme)))))
+
 
 (provide 'init-company-mode)

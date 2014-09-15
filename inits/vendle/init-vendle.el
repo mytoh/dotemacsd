@@ -35,6 +35,11 @@
   (vendle:register "emacs-helm/helm-recoll")
   (vendle:register "mhayashi1120/Emacs-wgrep")
   (vendle:register "ShingoFukuyama/helm-css-scss")
+  (vendle:register "tmalsburg/helm-bibtex"
+                   '(:deps ("joostkremers/ebib"
+                            "magnars/s.el"
+                            "magnars/dash.el"
+                            "rejeep/f.el")))
 
   (vendle:register "jonathanchu/emacs-powerline")
   (vendle:register "TeMPOraL/nyan-mode")
@@ -57,7 +62,8 @@
   (vendle:register "fgallina/emms-info-mediainfo")
   (vendle:register "magit/git-modes")
   (vendle:register "magit/magit"
-                   '(:build ("gmake lisp docs")))
+                   '(:build ("gmake lisp docs")
+                     :info "."))
   (vendle:register "company-mode/company-mode")
   (vendle:register "syohex/emacs-git-gutter")
   (vendle:register "syohex/emacs-rebuildfm")
@@ -65,6 +71,7 @@
   (vendle:register "Fuco1/smartparens"
                    '(:compile nil :deps (("magnars/dash.el" :compile nil))))
   (vendle:register "magnars/expand-region.el")
+  (vendle:register "magnars/multiple-cursors.el")
   (vendle:register "Fuco1/org-pretty-table" '(:compile nil))
   (vendle:register "haskell/haskell-mode" '(:compile nil :build ("gmake all")))
   (vendle:register "Bruce-Connor/paradox")
@@ -88,6 +95,9 @@
   (vendle:register "taksatou/flappymacs")
   (vendle:register "gongo/yamada-el")
   (vendle:register "jiyoo/flyparens")
+  (vendle:register "flycheck/flycheck"
+                   '(:deps ("magnars/dash.el")
+                     :info "."))
   (vendle:register "zenozeng/css-eldoc")
   (vendle:register "yasuyk/web-beautify")
   (vendle:register "mhayashi1120/Emacs-slideview")
@@ -121,12 +131,17 @@
                             "emacsmirror/pos-tip")))
   (vendle:register "clojure-emacs/clojure-mode")
   (vendle:register "jlr/rainbow-delimiters")
+  (vendle:register "zk-phi/highlight-stages")
+  (vendle:register "zk-phi/indent-guide")
+  (vendle:register "jschaf/emacs-lorem-ipsum")
+  (vendle:register "remyferre/comment-dwim-2")
 
      ;;; org
   (vendle:register "git://orgmode.org/org-mode.git"
-                   '(:load-path ("." "lisp" "contrib/lisp")
+                   '(:load-path ("lisp" "contrib/lisp")
                      :compile nil
-                     :build ("gmake")))
+                     :build ("gmake" "gmake doc")
+                     :info ("doc")))
   (vendle:register "tj64/outshine" '(:compile nil))
   (vendle:register "tj64/outorg" '(:compile nil))
   ;; (vendle:register "https://bitbucket.org/ukaszg/org-eldoc.git")
@@ -198,18 +213,6 @@
 
   (req 'init-migemo)
 
-  (req 'init-helm)
-  (req 'init-helm-ypv)
-  (req 'init-helm-alku)
-  (liby 'helm-project-buffer
-    (autoload 'helm-project-buffer "helm-project-buffer")
-    (muki:global-set-key "C-x b" 'helm-project-buffer))
-  (req 'init-helm-ag-r)
-  ;; (req 'init-helm-ag)
-  (req 'init-helm-swoop)
-  (req 'init-helm-helm-commands)
-  (req 'init-wgrep-helm)
-  (req 'helm-css-scss)
 
   ;; update plugins
   ;; (vendle:update-packages)
@@ -219,7 +222,6 @@
     (add-hook 'scheme-mode-hook 'scheme-keywords-mode))
 
   ;; (nyan-mode t)
-
 
   ;;(req 'emux
   ;; prefix C-c
@@ -469,12 +471,46 @@
 
   (req 'init-rainbow-delimiters)
 
+  (req 'highlight-stages
+    (add-hook 'emacs-lisp-mode-hook 'highlight-stages-mode)
+    (add-hook 'scheme-mode-hook 'highlight-stages-mode))
+
+  (req 'indent-guide
+    (add-hook 'emacs-lisp-mode-hook 'indent-guide-mode)
+    (add-hook 'scheme-mode-hook 'indent-guide-mode)
+    (set-option indent-guide-char "|"))
+
+  (req 'init-elfeed)
+
+  (req 'lorem-ipsum)
+
   ;; (liby 'slideview
   ;;       (add-hook 'image-mode-hook 'slideview-mode))
 
   ;; (req 'image+
   ;;      (imagex-auto-adjust-mode 1))
 
+  (req 'init-flycheck)
+
+  (req 'init-multiple-cursors)
+
+  (req 'comment-dwim-2
+    (muki:global-set-key  "M-;" 'comment-dwim-2))
+
+  ;;; helm
+  (req 'init-helm)
+  (req 'init-helm-ypv)
+  (req 'init-helm-alku)
+  (liby 'helm-project-buffer
+    (autoload 'helm-project-buffer "helm-project-buffer")
+    (muki:global-set-key "C-x b" 'helm-project-buffer))
+  (req 'init-helm-ag-r)
+  ;; (req 'init-helm-ag)
+  (req 'init-helm-swoop)
+  (req 'init-helm-helm-commands)
+  (req 'init-wgrep-helm)
+  (req 'helm-css-scss)
+  (req 'helm-bibtex)
 
   )
 

@@ -36,8 +36,11 @@
   (muki:define-key sp-keymap "M-f"   'sp-forward-whitespace)
   (muki:define-key sp-keymap "M-b"   'sp-backward-symbol)
   (muki:define-key sp-keymap "C-M-k" 'sp-kill-sexp)
+
   (muki:define-key sp-keymap "C-]"   'sp-select-next-thing-exchange)
   (muki:define-key sp-keymap "C-M-]" 'sp-select-next-thing)
+  (muki:define-key sp-keymap "M-S" 'sp-split-sexp)
+  (muki:define-key sp-keymap "M-J" 'sp-join-sexp)
 
 
   ;; from wiki/Tips-and-tricks

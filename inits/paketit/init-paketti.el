@@ -85,7 +85,7 @@
         ;; twittering-mode
         ;; highlight-indentation
         ;; auto-highlight-symbol
-        multiple-cursors
+        ;; multiple-cursors
         guide-key
         google-translate
         circe
@@ -94,7 +94,7 @@
         ;; direx
         ;; pallet
         page-break-lines
-        flycheck
+        ;; flycheck
         flycheck-pos-tip
         ;; fiplr
         ;; fuzzy
@@ -157,7 +157,7 @@
         elisp-slime-nav
         highlight-tail
         navi2ch
-        elfeed
+        ;; elfeed
         elfeed-web
         git-commit-mode
         gitconfig-mode
@@ -360,7 +360,7 @@
     ;; paketti-guide-key
     paketti-image-dired+
     paketti-image+
-    paketti-multiple-cursors
+    ;; paketti-multiple-cursors
     ;; paketti-rainbow-delimiters
     ;; paketti-tabbar
     paketti-suomalainen-kalenteri
@@ -399,7 +399,7 @@
     paketti-vimrc-mode
     paketti-elisp-slime-nav
     paketti-navi2ch
-    paketti-elfeed
+    ;; paketti-elfeed
     ;; paketti-smartrep
     ;; paketti-migemo
     paketti-ace-jump-mode
@@ -412,7 +412,7 @@
     paketti-dim-autoload
     paketti-highlight-escape-sequences
     paketti-fancy-narrow
-    paketti-flycheck
+    ;; paketti-flycheck
     paketti-flycheck-pos-tip
     ;; paketti-sunrise-commander
     paketti-ace-link

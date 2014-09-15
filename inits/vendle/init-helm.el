@@ -44,8 +44,10 @@ Otherwise goto the end of minibuffer."
                                                       '(picture-mode artist-mode))
                   ;; helm-buffer-max-length 50x
                   helm-candidate-number-limit 200)
-      (set-option helm-boring-file-regexp-list '("\\.git$" "\\.hg$" "\\.svn$" "\\.CVS$" "\\._darcs$" "\\.la$" "\\.o$" "\\.i$"))
-      (add-to-list 'helm-boring-file-regexp-list  "\\.git/COMMIT_EDITMSG$")
+
+      (set-option helm-boring-file-regexp-list '("\\.git\\'" "\\.hg\\'" "\\.svn\\'" "\\.CVS\\'" "\\._darcs\\'" "\\.la\\'" "\\.o\\'" "\\.i\\'"))
+
+      (add-to-list 'helm-boring-file-regexp-list  "\\.git/COMMIT_EDITMSG\\'")
 
       (enable-option helm-M-x-always-save-history
                      helm-split-window-in-side-p ; open helm buffer inside current window, not occupy whole other window

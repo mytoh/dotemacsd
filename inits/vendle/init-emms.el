@@ -1,7 +1,6 @@
 ;; emms
 
-(if (file-exists-p "~/.emms")
-    (load "~/.emms"))
+(muki:load "~/.emms")
 
 (req 'emms-setup
   (emms-devel)
@@ -20,8 +19,8 @@
   (enable-option emms-info-auto-update)
   (set-option emms-lastfm-server "http://turtle.libre.fm/")
   (set-option emms-browser-info-title-format "%cS%i%n")
-  (setq emms-browser-playlist-info-title-format
-        emms-browser-info-title-format)
+  (set-option emms-browser-playlist-info-title-format
+              emms-browser-info-title-format)
 
 
   ;; (emms-default-players)

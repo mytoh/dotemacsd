@@ -1,3 +1,4 @@
+;;; init-multiple-cursors.el -*- lexical-binding: t; -*-
 
 ;; #* multiple-cursor
 (req 'multiple-cursors
@@ -9,4 +10,4 @@
   (muki:global-set-key "C-c C-<" 'mc/mark-all-like-this))
 
 ;; * provide
-(provide 'paketti-multiple-cursors)
+(provide 'init-multiple-cursors)

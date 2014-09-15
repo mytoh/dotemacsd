@@ -82,6 +82,13 @@
   `(and (file-exists-p ,path)
         (add-to-list 'load-path ,path)))
 
+(cl-defmacro muki:expand-file-names (&rest names)
+  (cl-labels ((rec (l ns)
+                (if (cl-endp ns)
+                    l
+                  (rec (list 'expand-file-name (car ns) l)  (cdr ns)))))
+    (rec '() names)))
+
 (cl-defmacro muki:set-face-colours (face fore back)
   (declare (debug t))
   `(cl-locally
@@ -251,6 +258,12 @@ buffer is not visiting a file."
     (goto-char (region-end))
     (insert "\n#+end_src\n")))
 
+(cl-defun muki:load (file)
+  (if (file-exists-p file)
+      (progn
+        (muki:log "loading file " file)
+        (load file))
+    (muki:log "can't find file " file)))
 
 (cl-defmacro muki:comment (&rest body)
   t)

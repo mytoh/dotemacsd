@@ -77,10 +77,15 @@
 ;;;; highlight current line
 ;; highlight the current line; set a custom face, so we can
 ;; recognize from the normal marking (selection)
-(defface hl-line '((t (:background "Gray10")))
-  "Face to use for `hl-line-face'." :group 'hl-line)
+
 (setq hl-line-face 'hl-line)
+
 (global-hl-line-mode t) ; turn it on for all modes by default
+
+(cl-defun muki:set-hl-line-face ()
+  (set-face-attribute 'hl-line nil :foreground nil :background "Gray20"))
+
+(add-hook 'after-init-hook 'muki:set-hl-line-face)
 
 ;;;; display keys
 (set-option echo-keystrokes 0.1)
@@ -153,7 +158,7 @@
                                 "archive-contents\\'"
                                 "-autoloads\\.el\\'"))
 (set-option recentf-exclude muki:recentf-exclude)
-(set-option recentf-auto-cleanup 10)
+;; (set-option recentf-auto-cleanup 10)
 ;;;; don't record symbolic link file name
 (enable-option find-file-visit-truename)
 
