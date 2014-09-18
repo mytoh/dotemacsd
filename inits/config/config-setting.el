@@ -36,9 +36,9 @@
 
 ;;;; start server
 (req 'server
-  ;; (enable-option server-use-tcp)
-  (unless (server-running-p)
-    (server-start)))
+     ;; (enable-option server-use-tcp)
+     (unless (server-running-p)
+       (server-start)))
 
 ;;;; use space instead of tab
 (setq-default tab-width 4
@@ -64,8 +64,8 @@
 (add-hook 'image-mode-hook
           (lambda ()
             (cl-letf ((image (image-get-display-property)))
-              (if (image-multi-frame-p image)
-                  (image-toggle-animation)))))
+                     (if (image-multi-frame-p image)
+                         (image-toggle-animation)))))
 ;; (set-option image-transform-resize 'fit-height)
 
 ;;;; highlight region
@@ -83,7 +83,7 @@
 (global-hl-line-mode t) ; turn it on for all modes by default
 
 (cl-defun muki:set-hl-line-face ()
-  (set-face-attribute 'hl-line nil :foreground nil :background "Gray20"))
+          (set-face-attribute 'hl-line nil :foreground nil :background "Gray20"))
 
 (add-hook 'after-init-hook 'muki:set-hl-line-face)
 
@@ -155,8 +155,8 @@
 ;; save more recent files
 (set-option recentf-max-saved-items nil)
 (defvar muki:recentf-exclude `(,(rx  "\\.el\\.gz\\'" string-end)
-                                "archive-contents\\'"
-                                "-autoloads\\.el\\'"))
+                               "archive-contents\\'"
+                               "-autoloads\\.el\\'"))
 (set-option recentf-exclude muki:recentf-exclude)
 ;; (set-option recentf-auto-cleanup 10)
 ;;;; don't record symbolic link file name
@@ -288,5 +288,8 @@
               ("mp4" . "mpv")
               ("wmv" . "mpv")
               ("webm" . "mpv")))
+
+;;;; enable local variables
+(set-option enable-local-variables :all)
 
 (provide 'config-setting)

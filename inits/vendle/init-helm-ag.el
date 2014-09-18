@@ -3,7 +3,7 @@
 ;; ag
 (req 'helm-ag
   (set-option helm-ag-source-type 'file-line)
-  (muki:define-global-key "a" 'helm-ag))
+  (muki:define-launcher-key "a" 'helm-ag))
 
 (provide 'init-helm-ag)
 

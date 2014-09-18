@@ -33,8 +33,8 @@
                   "qcomicbook"
                   "xombrero")))
 
-  (muki:define-global-key "c"  'helm-alku-program)
-  (muki:define-global-key "n" 'helm-alku-vihko)
+  (muki:define-launcher-key "c"  'helm-alku-program)
+  (muki:define-launcher-key "n" 'helm-alku-vihko)
   (muki:global-set-key "C-c h" 'helm-alku)
 
   )

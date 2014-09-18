@@ -4,7 +4,7 @@
 
   (muki:load "~/.elfeed-feeds")
 
-  (muki:define-global-key "l" 'elfeed)
+  (muki:define-launcher-key "l" 'elfeed)
 
   ;; Somewhere in your .emacs file
   (set-option elfeed-feeds

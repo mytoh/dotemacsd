@@ -29,21 +29,37 @@
   (untabify (point-min) (point-max)))
 
 (cl-defun muki:org-startup-options ()
-  (set-option org-startup-folded 'showall)
-  (set-option org-descriptive-links nil))
+  (set-option org-startup-folded 'showall))
 
-(cl-defun muki:org-html-export-option ()
+(cl-defun muki:org-html-export-options ()
   (set-option org-html-doctype "html5")
   (set-option org-html-html5-fancy t)
   (set-option org-html-preamble nil)
   (set-option org-html-postamble nil))
 
-(cl-defun muki:org-mode-hook-function ()
+(cl-defun muki:org-general-options ()
   (set-option mode-name " ꙮ ")
-  (set-option org-html-postamble nil)
-  (set-option org-descriptive-links nil)
-  (muki:org-startup-options)
-  (muki:org-html-export-option)
+  (disable-option org-descriptive-links)
+  (set-option org-cycle-separator-lines 0)
+  ;; < s TAB
+  (set-option org-structure-template-alist
+              '(("s" "#+begin_src ?\n\n#+end_src")
+                ("e" "#+begin_example\n?\n#+end_example")
+                ("q" "#+begin_quote\n?\n#+end_quote")
+                ("v" "#+begin_verse\n?\n#+end_verse")
+                ("v" "#+begin_verbatim\n?\n#+end_verbatim")
+                ("c" "#+begin_center\n?\n#+end_center")
+                ("l" "#+begin_latex\n?\n#+end_latex")
+                ("l" "#+latex: ")
+                ("h" "#+begin_html\n?\n#+end_html")
+                ("h" "#+html: ")
+                ("a" "#+begin_ascii\n?\n#+end_ascii")
+                ("a" "#+ascii: ")
+                ("i" "#+index: ?")
+                ("i" "#+include: %file ?"))))
+
+(cl-defun muki:org-babel-options ()
+  (disable-option org-confirm-babel-evaluate)
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((emacs-lisp . t)
@@ -51,23 +67,22 @@
      (scheme . t)
      (lisp . t))))
 
+(cl-defun muki:org-mode-hook-function ()
+  (muki:org-general-options)
+  (muki:org-startup-options)
+  (muki:org-html-export-options)
+  (muki:org-babel-options))
+
 (add-hook 'org-mode-hook
           'muki:org-mode-hook-function)
 
 (with-eval-after-load 'org
   (require 'org-bibtex)
+  (when (executable-find "a2ps")
+    (require 'org-checklist))
   (add-hook 'before-save-hook
             'muki:org-mode-before-save-hook))
 
-;; github.com/thierryvolpiatto/emacs-tv-config
-(defun muki:insert-org-src-keyword (beg end)
-  (interactive "r")
-  (save-excursion
-    (goto-char beg)
-    (insert "#+begin_src\n")
-    (goto-char end)
-    (forward-line 1)
-    (insert "\n#+end_src")))
 
 (muki:define-key org-mode-map "C-c o o" 'helm-org-headlines)
 (muki:define-key org-mode-map "C-c o k" 'muki:insert-org-src-keyword)

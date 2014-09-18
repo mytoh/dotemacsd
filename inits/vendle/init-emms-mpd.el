@@ -18,6 +18,13 @@
 
   (req 'emms-player-mpd
 
+    (enable-mode emms-playing-time)
+    (enable-option emms-info-asynchronously)
+    (enable-option emms-info-auto-update)
+    (set-option emms-browser-info-title-format "%cS%i%n")
+    (set-option emms-browser-playlist-info-title-format
+                emms-browser-info-title-format)
+
     ;; Adjust `emms-player-mpd-server-name' and
     ;; `emms-player-mpd-server-port' to match the location and port of
     ;; your MusicPD server.

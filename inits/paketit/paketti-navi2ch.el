@@ -2,7 +2,7 @@
 
 ;; navi2ch
 (pak 'navi2ch
-  (muki:define-global-key "2" 'navi2ch))
+  (muki:define-launcher-key "2" 'navi2ch))
 
 (provide 'paketti-navi2ch)
 

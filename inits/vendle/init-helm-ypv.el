@@ -10,7 +10,7 @@
     (set-option helm-ypv-local-address "peca.koti:7145")
     (load-file "~/.emacs.d/helm-ypv/yp"))
 
-  (muki:define-global-key  "y" 'helm-ypv)
+  (muki:define-launcher-key  "y" 'helm-ypv)
 
   (set-option  helm-ypv-yp-urls
                '((sp  "bayonet.ddo.jp/sp")

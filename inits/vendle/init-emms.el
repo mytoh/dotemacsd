@@ -107,7 +107,7 @@ controls, run `mixer' in a shell."
 
   (set-option emms-volume-change-function 'emms-volume-mixer-change)
 
-                    ;;;; info
+    ;;;; info
   (req 'emms-info)
   (when (executable-find "emms-print-metadata")
     (req 'emms-info-libtag
@@ -119,9 +119,7 @@ controls, run `mixer' in a shell."
     (req 'emms-info-metaflac
       (add-to-list 'emms-info-functions 'emms-info-metaflac)))
 
-
-
-     ;;;; keymap
+   ;;;; keymap
   (define-prefix-command 'muki:emms-map)
   (muki:global-set-key "C-c m" 'muki:emms-map)
   (defun muki:define-emms-key (key func)

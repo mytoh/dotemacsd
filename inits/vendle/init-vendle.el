@@ -135,6 +135,8 @@
   (vendle:register "zk-phi/indent-guide")
   (vendle:register "jschaf/emacs-lorem-ipsum")
   (vendle:register "remyferre/comment-dwim-2")
+  (vendle:register "capitaomorte/sly"
+                   '(:build  "gmake compile contrib-compile"))
 
      ;;; org
   (vendle:register "git://orgmode.org/org-mode.git"
@@ -204,12 +206,12 @@
   (vendle:check-packages)
 
   ;; keymap
-  (muki:define-global-key "v u" 'vendle-update)
-  (muki:define-global-key "v k" 'vendle-check)
-  (muki:define-global-key "v c" 'vendle-clean)
+  (muki:define-launcher-key "v u" 'vendle-update)
+  (muki:define-launcher-key "v k" 'vendle-check)
+  (muki:define-launcher-key "v c" 'vendle-clean)
   (with-eval-after-load "helm"
     (req 'helm-vendle
-      (muki:define-global-key "v l" 'helm-vendle)))
+      (muki:define-launcher-key "v l" 'helm-vendle)))
 
   (req 'init-migemo)
 
@@ -292,8 +294,6 @@
     (setq navi2ch-file-open-with-shift-jis t))
 
   (req 'rebuildfm)
-
-
 
   (req 'fuzzyjump
     (let ((map fuzzyjump-cmd-map))
@@ -445,7 +445,7 @@
   (req 'oniisama
     (imouto))
 
-  (req 'init-elnode)
+  ;; (req 'init-elnode)
 
   (req 'eew)
 
@@ -496,6 +496,11 @@
 
   (req 'comment-dwim-2
     (muki:global-set-key  "M-;" 'comment-dwim-2))
+
+  (req 'init-auto-highlight-symbol)
+
+  (req 'sly-autoloads
+    (setq inferior-lisp-program "sbcl"))
 
   ;;; helm
   (req 'init-helm)

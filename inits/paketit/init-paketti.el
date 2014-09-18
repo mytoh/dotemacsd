@@ -45,7 +45,7 @@
         bookmark+
         cursor-chg
         deferred
-        highlight-symbol
+        ;; highlight-symbol
         ;; dired
         image-dired+
         ;; slideview
@@ -383,10 +383,9 @@
     ;; paketti-charmap
     paketti-auto-auto-indent
     paketti-all-ext
-    paketti-auto-highlight-symbol
     paketti-conkeror-minor-mode
     paketti-csharp-mode
-    paketti-smartscan
+    ;; paketti-smartscan
     paketti-volatile-highlights
     paketti-recentf-ext
     ;; paketti-writegood-mode

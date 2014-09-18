@@ -3,7 +3,7 @@
 ;;; Code:
 
 (req 'paradox
-  (muki:define-global-key "p" 'paradox-list-packages))
+  (muki:define-launcher-key "p" 'paradox-list-packages))
 
 (provide 'init-paradox)
 

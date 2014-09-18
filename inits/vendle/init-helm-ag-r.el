@@ -6,6 +6,6 @@
                 "-S -U -l")
               helm-ag-r-requires-pattern 2)
 
-  (muki:define-global-key "a" 'helm-ag-r))
+  (muki:define-launcher-key "a" 'helm-ag-r))
 
 (provide 'init-helm-ag-r)
