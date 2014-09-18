@@ -217,23 +217,25 @@ buffer is not visiting a file."
     (t (define-key keymap key def))))
 
 ;;; my global map
-(defcustom muki:global-prefix-key
+(defcustom muki:launcher-prefix-key
   "C-c e"
-  "personal global prefix key")
-(setq muki:global-map (make-sparse-keymap))
+  "personal launcher prefix key")
 
-(cl-defun muki:define-global-key (key def)
+(define-prefix-command 'muki:launcher-map)
+(global-set-key (kbd muki:launcher-prefix-key) 'muki:launcher-map)
+
+(cl-defun muki:define-launcher-key (key def)
   "define personal global key mappings"
-  (cl-letf ((k (string-join (list muki:global-prefix-key key) " ")))
-    (muki:define-key muki:global-map k def)
+  (cl-letf ((k (kbd key)))
+    (muki:define-key muki:launcher-map k def)
     (message "bind %s to %s" k (symbol-name def))))
 
-(define-minor-mode muki-mode
-    "muki keymapping"
-  :keymap muki:global-map
-  :lighter " ☕"
-  :global t
-  :init-value t)
+;; (define-minor-mode muki-mode
+;;     "muki keymapping"
+;;   :keymap muki:launcher-map
+;;   :lighter " ☕"
+;;   :global t
+;;   :init-value t)
 
 ;; smart kill word
 ;; http://d.hatena.ne.jp/kiwanami/20091222/1261504543
