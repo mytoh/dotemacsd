@@ -15,7 +15,7 @@
 
 ;;; notify reverting
 (require 'notifications)
-(cl-defun muki:after-revert-hook ()
+(defun-add-hook muki:after-revert-hook (after-revert-hook)
   (when window-system
     (notifications-notify :title (format "Revert %s" (buffer-file-name))
                           :body "Check it out"

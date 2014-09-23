@@ -1,3 +1,6 @@
+
+(require 'muki)
+
 ;; helm
 (liby 'helm (require 'helm-config)
       (enable-mode helm-mode)

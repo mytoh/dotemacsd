@@ -1,5 +1,5 @@
 
-(liby 'helm-swoop
+(req 'helm-swoop
 
   ;; キーバインドはお好みで
   (muki:global-set-key "M-i" 'helm-swoop)

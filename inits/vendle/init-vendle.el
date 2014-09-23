@@ -1,17 +1,25 @@
 ;;; init-vendle.el -*- lexical-binding: t; -*-
 
-(muki:add-to-load-path (expand-file-name "~/huone/projektit/emacs-vendle"))
+;;; requires
+(require 'muki)
+
+;;; setup
+(muki:add-to-load-path  "~/huone/projektit/emacs-vendle")
 
 (req 'vendle
-  ;; initialize vendle
+;;;; initialize vendle
   (cl-letf ((muki:vendle-directory
              (muki:user-emacs-directory (file-name-as-directory "vendle"))))
     (vendle:initialize muki:vendle-directory))
 
+
+;;;; register packages
   (vendle:register "magnars/s.el")
 
-     ;;; helm
-  (vendle:register "emacs-helm/helm")
+;;;;; helm
+  (vendle:register "emacs-helm/helm"
+                   '(:build ("gmake")
+                     :deps ("jwiegley/emacs-async")))
   (vendle:register "thierryvolpiatto/pcomplete-extension")
   (vendle:register "yuutayamada/helm-ag-r")
   (vendle:register "yasuyk/helm-git-grep")
@@ -41,6 +49,7 @@
                             "magnars/dash.el"
                             "rejeep/f.el")))
 
+;;;;; general packages
   (vendle:register "jonathanchu/emacs-powerline")
   (vendle:register "TeMPOraL/nyan-mode")
   (vendle:register "daimrod/highlight-sexp")
@@ -137,19 +146,25 @@
   (vendle:register "remyferre/comment-dwim-2")
   (vendle:register "capitaomorte/sly"
                    '(:build  "gmake compile contrib-compile"))
+  (vendle:register "hayamiz/twittering-mode")
+  (vendle:register "defunkt/coffee-mode")
+  (vendle:register "fbkante/recycle")
+  (vendle:register "kawabata/ids-edit")
+  (vendle:register "gbalats/autodisass-llvm-bitcode")
 
-     ;;; org
+;;;;; org
   (vendle:register "git://orgmode.org/org-mode.git"
                    '(:load-path ("lisp" "contrib/lisp")
                      :compile nil
                      :build ("gmake" "gmake doc")
-                     :info ("doc")))
+                     :info "doc"))
   (vendle:register "tj64/outshine" '(:compile nil))
   (vendle:register "tj64/outorg" '(:compile nil))
   ;; (vendle:register "https://bitbucket.org/ukaszg/org-eldoc.git")
-  ;; (vendle:register "tj64/navi")
+  (vendle:register "tj64/navi")
+  (vendle:register "kawabata/ox-pandoc")
 
-     ;;; theme
+;;;;; themes
   (vendle:register "owainlewis/emacs-color-themes")
   (vendle:register "kuanyui/moe-theme.el")
   (vendle:register-theme "caisah/seti-theme")
@@ -175,9 +190,11 @@
   (vendle:register-theme "byels/emacs-cherry-blossom-theme")
   (vendle:register-theme "startling/firebelly")
   (vendle:register-theme "Greduan/emacs-theme-gruvbox")
+  (vendle:register-theme "donderom/jazz-theme")
   ;; (vendle:register-theme "ccann/badger-theme")"
 
 
+;;;;; local packages
   (cl-labels ((add-project-root (path)
                 (vendle:register-local (expand-file-name path "~/huone/projektit"))))
     (add-project-root  "emacs-flatline")
@@ -192,9 +209,10 @@
     (add-project-root "helm-project-buffer"))
 
   (cond
-    ((file-directory-p "~/.emacs.d/vendle/ddskk-20140831")
-     (vendle:register-local "~/.emacs.d/vendle/ddskk-20140831"
-                            '(:build ("gmake elc"))))
+    ((file-directory-p "~/.emacs.d/vendle/ddskk")
+     (vendle:register-local "~/.emacs.d/vendle/ddskk"
+                            '(:build ("gmake elc info")
+                              :info "info")))
     ((file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
      (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk")))
 
@@ -202,10 +220,10 @@
 
   (vendle:turn-on-font-lock)
 
-  ;; install packages
+;;;; install packages
   (vendle:check-packages)
 
-  ;; keymap
+;;;; vendle keymap
   (muki:define-launcher-key "v u" 'vendle-update)
   (muki:define-launcher-key "v k" 'vendle-check)
   (muki:define-launcher-key "v c" 'vendle-clean)
@@ -213,8 +231,14 @@
     (req 'helm-vendle
       (muki:define-launcher-key "v l" 'helm-vendle)))
 
+;;;; package requires
   (req 'init-migemo)
 
+  (req 'init-outshine)
+  (req 'init-org)
+  ;; (req 'org-pretty-table
+  ;;   (add-hook 'org-mode-hook
+  ;;             'turn-on-org-pretty-table-mode))
 
   ;; update plugins
   ;; (vendle:update-packages)
@@ -276,12 +300,13 @@
   (req 'skk-autoloads
     ;; C-x C-j で skk モードを起動
     (muki:global-set-key "C-x C-\\" 'skk-mode)
+    (muki:global-set-key "C-x C-j" 'skk-mode)
     ;; enable skk mode by pressing カタカナ/ひらがな key
     (muki:global-set-key [hiragana-katakana] 'skk-mode)
     ;; set default input method to skk
-    (setq default-input-method "japanese-skk")
+    ;; (setq default-input-method "japanese-skk")
     ;; .skk を自動的にバイトコンパイル
-    ;; (enable-option skk-byte-compile-init-file)
+    (enable-option skk-byte-compile-init-file)
 
     ;; (req 'context-skk)
     )
@@ -342,10 +367,6 @@
 
   (req 'init-company-mode)
 
-  (req 'init-org)
-  (req 'outorg)
-  (req 'init-outshine)
-  (req 'org-pretty-table)
 
   (req 'init-anzu)
 
@@ -494,15 +515,28 @@
 
   (req 'init-multiple-cursors)
 
-  (req 'comment-dwim-2
-    (muki:global-set-key  "M-;" 'comment-dwim-2))
+  ;; (req 'comment-dwim-2
+  ;;   (muki:global-set-key  "M-;" 'comment-dwim-2))
 
   (req 'init-auto-highlight-symbol)
 
   (req 'sly-autoloads
     (setq inferior-lisp-program "sbcl"))
 
-  ;;; helm
+  (req 'twittering-mode
+    (setq twittering-allow-insecure-server-cert t))
+
+  (req 'coffee-mode)
+
+  ;; (req 'recycle
+  ;;   (global-set-key (kbd "C-.") 'recycle)
+  ;;   (global-set-key (kbd "C-,") 'recycle-2nd))
+
+  ;; (req 'ids-edit
+  ;;   (global-ids-edit-mode))
+
+
+;;;;; helm
   (req 'init-helm)
   (req 'init-helm-ypv)
   (req 'init-helm-alku)

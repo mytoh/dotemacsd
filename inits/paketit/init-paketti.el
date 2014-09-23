@@ -54,7 +54,7 @@
         dired-single
         ;; projectile
         ;; project-persist
-        magit
+        ;; magit
         rainbow-mode
         ;; scheme-complete
         ;; expand-region

@@ -1,6 +1,6 @@
 ;;; config-face.el  -*- lexical-binding: t -*-
-;;; faces
 
+;;; faces
 ;;;; colour-theme
 (cl-defun muki:load-theme ()
   (add-to-list 'custom-theme-load-path "~/.emacs.d/inits/themes")

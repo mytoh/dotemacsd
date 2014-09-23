@@ -1,7 +1,11 @@
 ;;; config-setting.el -*- lexical-binding: t -*-
 
+;;; requires
+(require 'muki)
+
+;;; settings
 ;;;; user elisps
-(muki:add-to-load-path (muki:user-emacs-directory "elisp"))
+(muki:add-to-load-path (muki:user-emacs-directory (file-name-as-directory "elisp")))
 
 ;;disable startup message
 (enable-option inhibit-startup-screen)
@@ -36,9 +40,9 @@
 
 ;;;; start server
 (req 'server
-     ;; (enable-option server-use-tcp)
-     (unless (server-running-p)
-       (server-start)))
+  ;; (enable-option server-use-tcp)
+  (unless (server-running-p)
+    (server-start)))
 
 ;;;; use space instead of tab
 (setq-default tab-width 4
@@ -64,8 +68,8 @@
 (add-hook 'image-mode-hook
           (lambda ()
             (cl-letf ((image (image-get-display-property)))
-                     (if (image-multi-frame-p image)
-                         (image-toggle-animation)))))
+              (if (image-multi-frame-p image)
+                  (image-toggle-animation)))))
 ;; (set-option image-transform-resize 'fit-height)
 
 ;;;; highlight region
@@ -83,7 +87,7 @@
 (global-hl-line-mode t) ; turn it on for all modes by default
 
 (cl-defun muki:set-hl-line-face ()
-          (set-face-attribute 'hl-line nil :foreground nil :background "Gray20"))
+  (set-face-attribute 'hl-line nil :foreground nil :background "Gray20"))
 
 (add-hook 'after-init-hook 'muki:set-hl-line-face)
 
@@ -155,8 +159,8 @@
 ;; save more recent files
 (set-option recentf-max-saved-items nil)
 (defvar muki:recentf-exclude `(,(rx  "\\.el\\.gz\\'" string-end)
-                               "archive-contents\\'"
-                               "-autoloads\\.el\\'"))
+                                "archive-contents\\'"
+                                "-autoloads\\.el\\'"))
 (set-option recentf-exclude muki:recentf-exclude)
 ;; (set-option recentf-auto-cleanup 10)
 ;;;; don't record symbolic link file name
@@ -222,7 +226,8 @@
 ;;;; recursive minibuffer
 (enable-option enable-recursive-minibuffers)
 ;;;; save minibuffer history
-(set-option savehist-additional-variables '(kill-ring mark-ring global-mark-ring search-ring regexp-search-ring extended-command-history))
+(set-option savehist-additional-variables
+            '(kill-ring mark-ring global-mark-ring search-ring regexp-search-ring extended-command-history))
 (savehist-mode 1)
 (set-option history-length 99999999999)
 
@@ -239,7 +244,8 @@
 
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
-(defvar muki:x-theme 'base16-tomorrow)
+;; spolsky, odersky, jazz
+(defvar muki:x-theme 'jazz)
 (defvar muki:term-theme 'moe-dark)
 
 (enable-option x-select-enable-clipboard
@@ -293,3 +299,5 @@
 (set-option enable-local-variables :all)
 
 (provide 'config-setting)
+
+;;; config-setting.el ends here

@@ -1,8 +1,6 @@
 
 (req 'tramp
 
-  ;; (setq tramp-default-method "ssh")
-
   ;; (setq vc-handled-backends '(SVN GIT))
 
   ;; Disable version control. If you access remote files which are not under version control, a lot of check operations can be avoided by disabling VC. This can be achieved by
