@@ -7,6 +7,13 @@
       (enable-mode helm-adaptative-mode)
       (enable-mode helm-match-plugin-mode)
 
+      (cl-letf ((background
+                 (face-background 'default))
+                (percent 20))
+        (set-face-attribute 'helm-selection nil
+                            :background
+                            (color-lighten-name background percent)))
+
       (defun helm-select-2nd-action-or-end-of-line ()
         "Select the 2nd action for the currently selected candidate.
 This happen when point is at the end of minibuffer.
