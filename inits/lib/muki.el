@@ -54,13 +54,17 @@
       ,@body)
      (t (message "%s not found" (symbol-name ,library)))))
 
-(cl-defmacro add-hook-fn (name &rest body)
-  "(add-hook-fn 'php-mode-hook
-                  (require 'symfony)
-                  (setq tab-width 2)"
+(cl-defmacro defun-add-hook (hookfunc hooknames &rest body)
   (declare (debug t)
-           (indent 1))
-  `(add-hook ,name (lambda () ,@body)))
+           (doc-string 3)
+           (indent 2))
+  `(cl-locally
+       (cl-defun ,hookfunc ()
+         ,@body)
+     ,@(cl-mapcar
+        (lambda (name)
+          `(add-hook ',name (quote ,hookfunc)))
+        hooknames)))
 
 ;; (lazyload (triger-function ...) "filename" &rest body)
 ;; http://e-arrows.sakura.ne.jp/2010/03/macros-in-emacs-el.html
@@ -77,10 +81,10 @@
   (declare (debug t))
   `(setq ,to (append ,to ,lst)))
 
-(cl-defmacro muki:add-to-load-path (path)
-  (declare (debug t))
-  `(and (file-exists-p ,path)
-        (add-to-list 'load-path ,path)))
+(cl-defun muki:add-to-load-path (path)
+  (and (file-exists-p path)
+       (add-to-list 'load-path (expand-file-name
+                                (file-name-as-directory path)))))
 
 (cl-defmacro muki:expand-file-names (&rest names)
   (cl-labels ((rec (l ns)
