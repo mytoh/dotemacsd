@@ -1,31 +1,44 @@
 ;;; -*- mode: emacs-lisp;lexical-binding: t -*-
 
-;; use act for dvorak
+;;; ddskk init
+
+;;;; large dict
+;; (setq skk-large-jisyo (expand-file-name "ddskk/dic/SKK-JISYO.L"
+;;                                         user-emacs-directory))
+(setq skk-large-jisyo (cons (expand-file-name "ddskk/dic/npiiii4skk/npiiii.l.euc"
+                                              user-emacs-directory)
+                            'euc))
+;; (setq skk-large-jisyo "/usr/local/share/skk/SKK-JISYO.L")
+
+;;;; use act for dvorak
 (setq skk-use-act t)
 
-;; 動的候補表示
+;;;; 動的候補表示
 (setq skk-dcomp-activate t)
 
-;; 英単語補完
+;;;; 英単語補完
 (setq skk-use-look t)
 (setq skk-look-recursive-search t)
 
-;; 変換時に注釈 (annotation) を表示する
+;;;; 変換時に注釈 (annotation) を表示する
 (setq skk-show-annotation t)
 
-;; 変換候補一覧と注釈 (annotation) を GUI ぽく表示する
+;;;; 変換候補一覧と注釈 (annotation) を GUI ぽく表示する
 (setq skk-show-tooltip t)
 
-;; Enter キーを押したときには確定する
+;;;; Enter キーを押したときには確定する
 (setq skk-egg-like-newline t)
 
-;; 動的補完で候補を複数表示する
+;;;; 動的補完で候補を複数表示する
 (setq skk-dcomp-multiple-activate t)
 
-;; icon
+;;;; icon
 (setq skk-show-icon t)
 
-;; face
+;;;; preload dictionaries
+(setq skk-preload t)
+
+;;;; face
 (defface muki:skk-tooltip
     '((t (:foreground "#93b8bb"
           :background "#232323"
@@ -33,7 +46,7 @@
   "face for skk tooltip")
 (setq skk-tooltip-face 'muki:skk-tooltip)
 
-;; か行をcで入れるときに辞書の送りがなをちゃんとする。
+;;;; か行をcで入れるときに辞書の送りがなをちゃんとする。
 ;; (setq skk-okuri-char-alist '((\"c\" . \"k\")))
 
 (defun muki:add-skk-jisyo (dicts)
@@ -46,22 +59,33 @@
                                  (cdr d))
                          (expand-file-name d dict-directory))))
          (when (file-exists-p (if (listp elem) (car elem) elem))
-           (add-to-list 'skk-search-prog-list
-                        `(skk-search-jisyo-file
-                          ,elem
-                          10000)
-                        t))))
+           (add-to-list 'skk-extra-jisyo-file-list
+                        elem))))
      dicts)))
 
 (muki:add-skk-jisyo
- '("SKK-JISYO.jinmei"
-   "SKK-JISYO.itaiji"
-   "SKK-JISYO.itaiji.JIS3_4"
-   ;; "SKK-JISYO.emoji.utf8"
+ '(
+   ("SKK-JISYO.itaiji" . euc-jp)
+   ("SKK-JISYO.assoc" . euc-jp)
+   ("SKK-JISYO.edict" . euc-jp)
+   ;;    ;; ("SKK-JISYO.emoji.utf8" . utf8)
+   ("SKK-JISYO.fullname" . euc-jp)
+   ("SKK-JISYO.geo" . euc-jp)
+   ("SKK-JISYO.jinmei" . euc-jp)
+   ("SKK-JISYO.law" . euc-jp)
+   ("SKK-JISYO.okinawa" . euc-jp)
+   ("SKK-JISYO.propernoun" . euc-jp)
+   ;;    ;; "SKK-JISYO.station"
    ))
 
 ;; (muki:add-skk-jisyo
-;;  '(("SKK-JISYO.jinmei" . euc-jp)
-;;    ("SKK-JISYO.itaiji" . euc-jp)
-;;    ("SKK-JISYO.itaiji.JIS3_4" . euc-jp)
-;;    ("SKK-JISYO.emoji.utf8" . utf-8)))
+;;  '("SKK-JISYO.jinmei"
+;;    "SKK-JISYO.itaiji"
+;;    "SKK-JISYO.itaiji.JIS3_4"
+;;    ;; "SKK-JISYO.emoji.utf8"
+;;    ))
+
+
+;;;; utf-8
+;; this line should put on last
+(setq skk-jisyo-code 'utf-8)
