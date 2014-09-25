@@ -1,9 +1,9 @@
 ;; rainbow-delimiters
 (req 'rainbow-delimiters
-  (add-hook 'scheme-mode-hook       'rainbow-delimiters-mode)
-  (add-hook 'lisp-mode-hook         'rainbow-delimiters-mode)
-  (add-hook 'emacs-lisp-mode-hook   'rainbow-delimiters-mode)
-  (add-hook 'clojure-mode-hook   'rainbow-delimiters-mode)
+  (hook 'scheme-mode-hook       'rainbow-delimiters-mode)
+  (hook 'lisp-mode-hook         'rainbow-delimiters-mode)
+  (hook 'emacs-lisp-mode-hook   'rainbow-delimiters-mode)
+  (hook 'clojure-mode-hook   'rainbow-delimiters-mode)
   ;; (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
   ;; (with-eval-after-load "rainbow-delimiters"
   ;;   (set-face-attribute 'rainbow-delimiters-depth-1-face nil :inherit 'font-lock-builtin-face)

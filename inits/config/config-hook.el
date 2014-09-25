@@ -45,10 +45,9 @@
 ;;                 (read-only-mode 1))))
 
 ;;; customize file
-(add-hook 'after-init-hook
-          (lambda ()
-            (setq custom-file (locate-user-emacs-file "custom.el"))
-            (load (file-name-sans-extension custom-file) t t)))
+(defun-add-hook muki:set-custom-el-file (after-init-hook)
+  (setq custom-file (locate-user-emacs-file "custom.el"))
+  (load (file-name-sans-extension custom-file) t t))
 
 
 ;;; banish mouse pointer

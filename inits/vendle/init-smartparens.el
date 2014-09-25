@@ -77,9 +77,9 @@
   ;;                     :background "#fdf6e3"
   ;;                     :foreground "#073642")
 
-  (with-eval-after-load "diminish"
-    (with-eval-after-load "smartparens"
-      (diminish 'smartparens-mode " ⚖")))
+  (after "diminish"
+      (after "smartparens"
+          (diminish 'smartparens-mode " ⚖")))
 
   )
 

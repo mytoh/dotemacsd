@@ -89,44 +89,44 @@
   (muki:org-babel-options)
   (muki:org-set-faces))
 
-(with-eval-after-load 'org
-  (muki:org-mode-hook-function))
+(after 'org
+    (muki:org-mode-hook-function))
 
 ;; (add-hook 'org-mode-hook
 ;;           'muki:org-mode-hook-function)
 
-(with-eval-after-load 'org
-  ;; Problems while trying to load feature `org-interactive-query'
-  ;; Problems while trying to load feature `org-jsinfo'
-  (defvar my-org-modules
-    '(org-bbdb
-      org-gnus
-      org-drill
-      org-info
-      org-habit
-      org-irc
-      org-mouse
-      org-annotate-file
-      org-eval
-      org-expiry
-      org-man
-      org-panel
-      org-screen
-      org-toc
-      org-collector
-      ))
-  (cl-mapc (lambda (m) (add-to-list 'org-modules m))
-           my-org-modules)
-  (when (executable-find "a2ps")
-    (add-to-list 'org-modules 'org-checklist))
-  (add-hook 'before-save-hook
-            'muki:org-mode-before-save-hook))
+(after'org
+ ;; Problems while trying to load feature `org-interactive-query'
+ ;; Problems while trying to load feature `org-jsinfo'
+ (defvar my-org-modules
+   '(org-bbdb
+     org-gnus
+     org-drill
+     org-info
+     org-habit
+     org-irc
+     org-mouse
+     org-annotate-file
+     org-eval
+     org-expiry
+     org-man
+     org-panel
+     org-screen
+     org-toc
+     org-collector
+     ))
+ (cl-mapc (lambda (m) (add-to-list 'org-modules m))
+          my-org-modules)
+ (when (executable-find "a2ps")
+   (add-to-list 'org-modules 'org-checklist))
+ (add-hook 'before-save-hook
+           'muki:org-mode-before-save-hook))
 
 (cl-defun muki:org-insert-book-drawer ()
   (interactive)
   (insert "\n")
   (cl-mapc (lambda (s) (insert s)
-                   (insert "\n"))
+              (insert "\n"))
            '("   :properties:"
              "   :title: "
              "   :btype: book"
@@ -147,8 +147,8 @@
 ;;     I often cut and paste subtrees. This makes it easier to cut
 ;;     something and paste it elsewhere in the hierarchy.
 ;;     #+begin_src emacs-lisp
-(with-eval-after-load 'org
-  (muki:define-key org-mode-map "C-c k" 'org-cut-subtree)
+(after 'org
+    (muki:define-key org-mode-map "C-c k" 'org-cut-subtree)
   (setq org-yank-adjusted-subtrees t))
 
 (add-hook 'org-mode-hook

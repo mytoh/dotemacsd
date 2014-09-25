@@ -2,7 +2,6 @@
 
 ;;; Code:
 
-
 (req 'diminish)
 
 (provide 'paketti-diminish)

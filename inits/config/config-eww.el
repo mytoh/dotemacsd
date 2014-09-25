@@ -4,8 +4,8 @@
   ;; (set-option browse-url-browser-function 'eww-browse-url)
   (set-option eww-home-url "file:///home/mytoh/.org/etusivu/etusivu.html")
   (disable-option shr-image-animate)
-  (with-eval-after-load 'eww
-    (set-option eww-download-directory "~/huone/lataukset")
+  (after 'eww
+      (set-option eww-download-directory "~/huone/lataukset")
     (set-option eww-search-prefix "https://duckduckgo.com/html/?q=!g+")
     (muki:define-key eww-mode-map "C-i" 'shr-next-link))
 

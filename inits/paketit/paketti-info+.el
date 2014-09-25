@@ -1,6 +1,6 @@
 ;; ;; info+
-(with-eval-after-load "info"
-  (req 'info+)
+(after "info"
+    (req 'info+)
   (set-face-attribute 'info-function-ref-item nil
                       :background "#222222")
   (set-face-attribute 'info-reference-item nil

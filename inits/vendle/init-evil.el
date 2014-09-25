@@ -3,12 +3,13 @@
 ;;; Code:
 
 (req 'evil
-  (set-option evil-emacs-state-cursor '("red" box))
-  (set-option evil-normal-state-cursor '("green" box))
-  (set-option evil-visual-state-cursor '("orange" box))
-  (set-option evil-insert-state-cursor '("red" bar))
-  (set-option evil-replace-state-cursor '("red" bar))
-  (set-option evil-operator-state-cursor '("red" hollow))
+  (set-option evil-emacs-state-cursor '("red" box)
+              evil-normal-state-cursor '("green" box)
+              evil-visual-state-cursor '("orange" box)
+              evil-insert-state-cursor '("red" bar)
+              evil-replace-state-cursor '("red" bar)
+              evil-operator-state-cursor '("red" hollow))
+  (disable-option evil-move-cursor-back)
   (enable-mode evil-mode))
 
 (req 'evil-leader
@@ -28,6 +29,9 @@
 
 (req 'evil-surround
   (enable-mode global-evil-surround-mode))
+
+(req 'evil-matchit
+  (enable-mode global-evil-matchit-mode))
 
 (provide 'init-evil)
 

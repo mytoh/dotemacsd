@@ -5,12 +5,12 @@
 ;; The sr-rainbow macro allows to easily manipulate the font locking of file and directory names in
 ;; Sunrise using regular expressions. For instance, in order to highlight files and directories that have read/write permissions set for users other than their owner you could add to your .emacs file a snippet like the following:
 
-(with-eval-after-load 'sunrise-commander
-  (sr-rainbow sr-gorw-dir
-              (:background "misty rose"
-                           :foreground "blue1"
-                           :bold t)
-              "^..\\(d....\\(...\\)?w..*$\\)")
+(after 'sunrise-commander
+    (sr-rainbow sr-gorw-dir
+     (:background "misty rose"
+                  :foreground "blue1"
+                  :bold t)
+     "^..\\(d....\\(...\\)?w..*$\\)")
   (sr-rainbow sr-gorw
               (:background "misty rose")
               "^..\\(-....\\(...\\)?w..*$\\)")

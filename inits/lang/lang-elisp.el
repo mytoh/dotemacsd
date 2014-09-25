@@ -56,8 +56,6 @@
                           (syntax symbol)))))
      (1 'font-lock-function-name-face))))
 
-
-
 (cl-defun muki:elisp-buffer-enable-reindent ()
   (add-hook 'before-save-hook 'muki:lisp-cleanup nil t)
   (add-hook 'before-save-hook 'muki:indent-buffer nil t))

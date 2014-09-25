@@ -159,6 +159,7 @@
   (vendle:register "cofi/evil-leader")
   (vendle:register "timcharper/evil-surround")
   (vendle:register "redguardtoo/evil-nerd-commenter")
+  (vendle:register "redguardtoo/evil-matchit")
 
 ;;;;; org
   (vendle:register "git://orgmode.org/org-mode.git"
@@ -235,9 +236,9 @@
   (muki:define-launcher-key "v u" 'vendle-update)
   (muki:define-launcher-key "v k" 'vendle-check)
   (muki:define-launcher-key "v c" 'vendle-clean)
-  (with-eval-after-load "helm"
-    (req 'helm-vendle
-      (muki:define-launcher-key "v l" 'helm-vendle)))
+  (after "helm"
+      (req 'helm-vendle
+        (muki:define-launcher-key "v l" 'helm-vendle)))
 
 ;;;; package requires
   (req 'init-migemo)
@@ -392,8 +393,8 @@
           (quickrun :start start :end end)
         (quickrun)))
     (muki:global-set-key "<f5>" 'quickrun-sc)
-    (with-eval-after-load "popwin"
-      (push '("*quickrun*") popwin:special-display-config))
+    (after "popwin"
+        (push '("*quickrun*") popwin:special-display-config))
     (quickrun-add-command "scheme/gosh-r7rs"
                           '((:command . "gosh")
                             (:exec    . "%c -r7 %s"))

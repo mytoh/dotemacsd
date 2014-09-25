@@ -5,9 +5,9 @@
   (autoload 'helm-ypv-bookmarks "helm-ypv")
   (autoload 'helm-ypv-channels "helm-ypv")
 
-  (with-eval-after-load 'helm-ypv
-    ;; (set-option helm-ypv-local-address "localhost:7144")
-    (set-option helm-ypv-local-address "peca.koti:7145")
+  (after 'helm-ypv
+      ;; (set-option helm-ypv-local-address "localhost:7144")
+      (set-option helm-ypv-local-address "peca.koti:7145")
     (load-file "~/.emacs.d/helm-ypv/yp"))
 
   (muki:define-launcher-key  "y" 'helm-ypv)
