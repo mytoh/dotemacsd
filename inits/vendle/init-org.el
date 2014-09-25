@@ -5,8 +5,8 @@
   "Face used for the source block background")
 
 (cl-defun muki:org-set-faces ()
-  (set-face-attribute 'org-block-begin-line nil :background "#303e41")
-  (set-face-attribute 'org-block-end-line nil :background "#303e41"))
+  (set-face-attribute 'org-block-begin-line nil :background "#202e31")
+  (set-face-attribute 'org-block-end-line nil :background "#202e31"))
 
 ;; give us some hint we are running
 (defadvice org-babel-execute-src-block (around progress nil activate)
@@ -24,21 +24,34 @@
 
 (cl-defun muki:org-startup-options ()
   (set-option org-startup-folded 'showall)
-  (disable-option org-startup-truncated))
+  (disable-option org-startup-truncated)
+  (enable-option org-startup-with-inline-images))
 
 (cl-defun muki:org-html-export-options ()
   (set-option org-html-doctype "html5")
-  (set-option org-html-html5-fancy t)
-  (set-option org-html-preamble nil)
-  (set-option org-html-postamble nil))
+  (enable-option org-html-html5-fancy)
+  (disable-option org-html-include-timestamps)
+  (disable-option org-html-preamble)
+  (disable-option org-html-postamble))
 
 (cl-defun muki:org-general-options ()
   (set-option org-directory "~/.org")
   (set-option mode-name " ꙮ ")
   (enable-option org-src-fontify-natively)
   ;; (enable-option org-startup-indented)
+  (enable-option org-edit-src-block-indentation)
   (disable-option org-descriptive-links)
   (set-option org-cycle-separator-lines 0)
+  (set-option org-use-speed-commands
+              (lambda () (and (looking-at org-outline-regexp) (looking-back "^\**"))))
+  (add-to-list 'org-speed-commands-user '("N" org-narrow-to-subtree))
+  (add-to-list 'org-speed-commands-user '("W" widen))
+  (cl-defun muki:org-speed-command-user-next (arg)
+    (interactive "p")
+    (outline-next-visible-heading arg)
+    (recenter-top-bottom))
+  (add-to-list 'org-speed-commands-user
+               '("n" org-speed-move-safe 'muki:org-speed-command-user-next))
   (set-option org-agenda-files
               '("~/.org/todo.org"))
   (add-to-list 'org-file-apps '("\\.pdf\\'" . "qpdfview %s"))
@@ -57,7 +70,8 @@
                 ("a" "#+begin_ascii\n?\n#+end_ascii")
                 ("a" "#+ascii: ")
                 ("i" "#+index: ?")
-                ("i" "#+include: %file ?"))))
+                ("i" "#+include: %file ?")))
+  (disable-mode whitespace-mode))
 
 (cl-defun muki:org-babel-options ()
   (disable-option org-confirm-babel-evaluate)
@@ -82,10 +96,29 @@
 ;;           'muki:org-mode-hook-function)
 
 (with-eval-after-load 'org
+  ;; Problems while trying to load feature `org-interactive-query'
+  ;; Problems while trying to load feature `org-jsinfo'
+  (defvar my-org-modules
+    '(org-bbdb
+      org-gnus
+      org-drill
+      org-info
+      org-habit
+      org-irc
+      org-mouse
+      org-annotate-file
+      org-eval
+      org-expiry
+      org-man
+      org-panel
+      org-screen
+      org-toc
+      org-collector
+      ))
+  (cl-mapc (lambda (m) (add-to-list 'org-modules m))
+           my-org-modules)
   (when (executable-find "a2ps")
     (add-to-list 'org-modules 'org-checklist))
-  (add-to-list 'org-modules 'org-collector)
-  (add-to-list 'org-modules 'org-panel)
   (add-hook 'before-save-hook
             'muki:org-mode-before-save-hook))
 
@@ -94,21 +127,29 @@
   (insert "\n")
   (cl-mapc (lambda (s) (insert s)
                    (insert "\n"))
-           '(":properties:"
-             ":title: "
-             ":btype: book"
-             ":author: "
-             ":journal: "
-             ":isbn: "
-             ":publisher: "
-             ":year: "
-             ":month:  "
-             ":volume:  "
-             ":url:"
-             ":end:")))
+           '("   :properties:"
+             "   :title: "
+             "   :btype: book"
+             "   :author: "
+             "   :journal: "
+             "   :isbn: "
+             "   :publisher: "
+             "   :year: "
+             "   :month: "
+             "   :volume: "
+             "   :url: "
+             "   :end:")))
 
 (muki:define-key org-mode-map "C-c o o" 'helm-org-headlines)
 (muki:define-key org-mode-map "C-c o b" 'muki:org-insert-book-drawer)
+
+;;;; Viewing, navigating, and editing the Org tree
+;;     I often cut and paste subtrees. This makes it easier to cut
+;;     something and paste it elsewhere in the hierarchy.
+;;     #+begin_src emacs-lisp
+(with-eval-after-load 'org
+  (muki:define-key org-mode-map "C-c k" 'org-cut-subtree)
+  (setq org-yank-adjusted-subtrees t))
 
 (add-hook 'org-mode-hook
           (lambda ()
@@ -141,6 +182,8 @@
     (org-bullets-mode 1))
   ;; (add-hook 'org-mode-hook 'enable-org-bullets)
   )
+
+(add-hook 'org-mode-hook 'turn-off-auto-fill)
 
 (provide 'init-org)
 

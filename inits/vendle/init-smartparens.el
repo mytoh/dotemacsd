@@ -69,9 +69,9 @@
   (add-hook 'emacs-lisp-mode 'smartparens-strict-mode)
   (add-hook 'scheme-mode 'smartparens-strict-mode)
 
-  (sp-with-modes '(org-mode)
-    ;; fix quotatin in org-mode
-    (sp-local-pair "“" "”" :trigger "\""))
+  ;; (sp-with-modes '(org-mode)
+  ;;   ;; fix quotatin in org-mode
+  ;;   (sp-local-pair "“" "”" :trigger "\""))
 
   ;; (set-face-attribute 'sp-pair-overlay-face nil
   ;;                     :background "#fdf6e3"

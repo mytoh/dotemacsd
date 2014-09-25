@@ -12,7 +12,6 @@
              (muki:user-emacs-directory (file-name-as-directory "vendle"))))
     (vendle:initialize muki:vendle-directory))
 
-
 ;;;; register packages
   (vendle:register "magnars/s.el")
 
@@ -151,6 +150,15 @@
   (vendle:register "fbkante/recycle")
   (vendle:register "kawabata/ids-edit")
   (vendle:register "gbalats/autodisass-llvm-bitcode")
+  (vendle:register "sachac/artbollocks-mode")
+  (vendle:register "alpaker/Fill-Column-Indicator")
+  (vendle:register "tungd/color-theme-approximate")
+
+;;;;; evil
+  (vendle:register "git://gitorious.org/evil/evil.git")
+  (vendle:register "cofi/evil-leader")
+  (vendle:register "timcharper/evil-surround")
+  (vendle:register "redguardtoo/evil-nerd-commenter")
 
 ;;;;; org
   (vendle:register "git://orgmode.org/org-mode.git"
@@ -235,6 +243,7 @@
   (req 'init-migemo)
 
   (req 'init-outshine)
+  (req 'navi-mode)
   (req 'init-org)
   ;; (req 'org-pretty-table
   ;;   (add-hook 'org-mode-hook
@@ -528,6 +537,9 @@
 
   (req 'coffee-mode)
 
+  (req 'artbollocks-mode
+    (add-hook 'text-mode-hook 'artbollocks-mode))
+
   ;; (req 'recycle
   ;;   (global-set-key (kbd "C-.") 'recycle)
   ;;   (global-set-key (kbd "C-,") 'recycle-2nd))
@@ -535,6 +547,16 @@
   ;; (req 'ids-edit
   ;;   (global-ids-edit-mode))
 
+  (req 'fill-column-indicator
+    (add-hook 'prog-mode-hook 'fci-mode)
+    ;; (add-hook 'text-mode-hook 'fci-mode)
+    )
+
+  (req 'color-theme-approximate
+    (color-theme-approximate-on))
+
+;;;;; evil
+  (req 'init-evil)
 
 ;;;;; helm
   (req 'init-helm)

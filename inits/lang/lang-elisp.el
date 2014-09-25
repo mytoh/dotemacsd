@@ -21,8 +21,9 @@
 (muki:elisp-add-keywords
  'font-lock-builtin-face
  '((1 . setq)
-   (1 . add-hook)
    (1 . if)
+   (1 . hook)
+   (1 . add-hook)
    (1 . lambda)
    (1 . add-to-list)
    (1 . font-lock-add-keywords)
@@ -42,7 +43,8 @@
    (1 . req)
    (1 . define-emms-simple-player)
    (1 . liby)
-   (1 . pak)))
+   (1 . pak)
+   (1 . after)))
 
 (font-lock-add-keywords
  'emacs-lisp-mode

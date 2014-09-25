@@ -10,6 +10,8 @@
   (cond ((eq window-system nil) nil)
         ((font-exists-p "Fira Mono")
          (set-fontset-font nil 'ascii (font-spec :name "Fira Mono" :size 9 :weight 'normal)))
+        ((font-exists-p "Ricty Diminished")
+         (set-fontset-font nil 'ascii (font-spec :name "Ricty Diminished" :size 11 :weight 'regular)))
         ((font-exists-p "Liberation Mono")
          (set-fontset-font nil 'ascii (font-spec :name "Liberation Mono")))
         ((font-exists-p "CosmicSansNeueMono")
@@ -41,6 +43,9 @@
 ;; あさきゆめみし　ゑひもせす
 (cl-defun set-japanese-font ()
   (cond ((eq window-system nil) nil)
+        ((font-exists-p "Ricty Diminished")
+         (set-fontset-font nil 'japanese-jisx0208
+                           (font-spec :name "Ricty Diminished" :size 9)))
         ((font-exists-p "Hiragino Mincho Pro")
          (set-fontset-font nil 'japanese-jisx0208
                            (font-spec :name "Hiragino Mincho Pro")))
@@ -55,7 +60,7 @@
 
 (cl-defun set-symbol-font ()
   (if (font-exists-p "Symbola")
-      (set-fontset-font nil 'symbol (font-spec :name "Symbola" :size 13))))
+      (set-fontset-font nil 'symbol (font-spec :name "Symbola" :size 10))))
 
 (cl-defun set-cyrillic-font ()
   (if (font-exists-p "CosmicSansNeueMono")

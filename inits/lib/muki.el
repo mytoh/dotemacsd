@@ -54,6 +54,15 @@
       ,@body)
      (t (message "%s not found" (symbol-name ,library)))))
 
+;; http://github.com/juanjux/emacs-dotfiles
+(defmacro after (feature &rest body)
+  "After FEATURE is loaded, evaluate BODY."
+  (declare (indent defun))
+  `(with-eval-after-load ,feature ,@body))
+
+(defun hook (hook function &optional append local)
+  (add-hook hook function append local))
+
 (cl-defmacro defun-add-hook (hookfunc hooknames &rest body)
   (declare (debug t)
            (doc-string 3)

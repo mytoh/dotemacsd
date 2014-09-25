@@ -4,7 +4,7 @@
 (muki:define-key lisp-interaction-mode-map "C-m" 'newline-and-indent)
 
 ;;;; help
-(muki:global-set-key "C-x C-h" 'help-command)
+(define-key global-map "\M-?" 'help-for-help) ; ヘルプ
 
 (muki:global-set-key "C-w" 'kill-region-or-backward-kill-word)
 
@@ -79,5 +79,26 @@
                    (call-interactively command)))
                (message "Quit")
                (throw 'end-flag t)))))))
+
+;;;; Copied from [[http://www.reddit.com/r/emacs/comments/25v0eo/you_emacs_tips_and_tricks/chldury]]
+;;;; [[http://pages.sachachua.com/.emacs.d/Sacha.html#sec-1-8-21]]
+
+(cl-defun muki:vsplit-last-buffer (prefix)
+  "Split the window vertically and display the previous buffer."
+  (interactive "p")
+  (split-window-vertically)
+  (other-window 1 nil)
+  (unless prefix
+    (switch-to-next-buffer)))
+
+(cl-defun muki:hsplit-last-buffer (prefix)
+  "Split the window horizontally and display the previous buffer."
+  (interactive "p")
+  (split-window-horizontally)
+  (other-window 1 nil)
+  (unless prefix (switch-to-next-buffer)))
+
+(muki:global-set-key "C-x 2" 'muki:vsplit-last-buffer)
+(muki:global-set-key "C-x 3" 'muki:hsplit-last-buffer)
 
 (provide 'config-key)

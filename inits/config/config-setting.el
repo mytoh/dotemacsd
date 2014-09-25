@@ -38,6 +38,10 @@
 (set-option coding-system-for-read 'utf-8
             coding-system-for-write 'utf-8)
 
+;;;; clipboard
+(when (display-graphic-p)
+  (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING)))
+
 ;;;; start server
 (req 'server
   ;; (enable-option server-use-tcp)
@@ -103,6 +107,8 @@
 ;;       scroll-step 4
 ;;       scroll-conservatively 35
 ;;       scroll-preserve-screen-position 1)
+(set-option scroll-conservatively 9999
+            scroll-preserve-screen-position t)
 
 ;;;; disable bars
 (if (fboundp 'menu-bar-mode) (disable-mode menu-bar-mode))
@@ -297,6 +303,10 @@
 
 ;;;; enable local variables
 (set-option enable-local-variables :all)
+
+;;; bookmark
+(set-option bookmark-default-file "~/.emacs.d/bookmarks"
+            bookmark-save-flag 1) ;; save after every change
 
 (provide 'config-setting)
 
