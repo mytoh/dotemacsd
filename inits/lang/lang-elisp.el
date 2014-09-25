@@ -44,7 +44,8 @@
    (1 . define-emms-simple-player)
    (1 . liby)
    (1 . pak)
-   (1 . after)))
+   (1 . after)
+   (1 . defun-add-hook)))
 
 (font-lock-add-keywords
  'emacs-lisp-mode
