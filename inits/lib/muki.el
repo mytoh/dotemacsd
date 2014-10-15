@@ -218,38 +218,6 @@ buffer is not visiting a file."
       (color-hsl-to-rgb (/ h 360.0) (/ s 100.0) (/ l 100.0))
     (color-rgb-to-hex r g b)))
 
-;;; keymap utils
-(cl-defun muki:global-set-key (key func)
-  (cl-etypecase key
-    (string (global-set-key (kbd key) func))
-    (t (global-set-key key func))))
-
-(cl-defun muki:define-key (keymap key def)
-  (cl-etypecase key
-    (string (define-key keymap (kbd key) def))
-    (t (define-key keymap key def))))
-
-;;; my global map
-(defcustom muki:launcher-prefix-key
-  "C-c e"
-  "personal launcher prefix key")
-
-(define-prefix-command 'muki:launcher-map)
-(global-set-key (kbd muki:launcher-prefix-key) 'muki:launcher-map)
-
-(cl-defun muki:define-launcher-key (key def)
-  "define personal global key mappings"
-  (cl-letf ((k (kbd key)))
-    (muki:define-key muki:launcher-map k def)
-    (message "bind %s to %s" k (symbol-name def))))
-
-;; (define-minor-mode muki-mode
-;;     "muki keymapping"
-;;   :keymap muki:launcher-map
-;;   :lighter " ☕"
-;;   :global t
-;;   :init-value t)
-
 ;; smart kill word
 ;; http://d.hatena.ne.jp/kiwanami/20091222/1261504543
 (cl-defun kill-region-or-backward-kill-word ()
@@ -282,6 +250,44 @@ buffer is not visiting a file."
 
 (cl-defmacro muki:comment (&rest body)
   t)
+
+;; close other buffers
+;; [[http://kotatu.org/blog/2014/02/02/emacs-kill-other-buffers/]]
+(defun muki:kill-other-buffers ()
+  "Kill all other buffers."
+  (interactive)
+  (let* ((no-kill-buffer-names
+          ;; 消さないバッファ名を指定
+          (list (buffer-name (current-buffer))
+                "*Messages*" "*Compile-Log*" "*Help*"
+                "*init log*" "*Ibuffer*" "*scratch*"
+                "*MULTI-TERM-DEDICATED*"))
+         (interested-buffers
+          (cl-remove-if-not
+           '(lambda (buffer)
+             (and
+              ;; donk kill buffers who has the windows displayed in
+              (not (get-buffer-window (buffer-name buffer)))
+              ;; dont kill hidden buffers (hidden buffers' name starts with SPACE)
+              (not (save-match-data (string-match "^ " (buffer-name buffer))))
+              ;; dont kill special buffersa with stars
+              (not (save-match-data (string-match "^\\*.+\\*\\'" (buffer-name buffer))))
+              ;; dont kill buffers who have running processes
+              (let ((proc (get-buffer-process buffer)))
+                (if proc
+                    (equal 'exit
+                           (process-status
+                            (get-buffer-process buffer)))
+                  t))))
+           (buffer-list)))
+         (buffers-to-kill
+          (set-difference interested-buffers
+                          (mapcar '(lambda (buffer-name)
+                                    (get-buffer buffer-name))
+                                  no-kill-buffer-names))))
+    (mapc 'kill-buffer buffers-to-kill)))
+
+(require 'muki-keys)
 
 (provide 'muki)
 
