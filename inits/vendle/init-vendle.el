@@ -50,6 +50,7 @@
 
 ;;;;; general packages
   (vendle:register "jonathanchu/emacs-powerline")
+  (vendle:register "raugturi/powerline-evil")
   (vendle:register "TeMPOraL/nyan-mode")
   (vendle:register "daimrod/highlight-sexp")
   (vendle:register "m2ym/undohist-el")
@@ -66,13 +67,21 @@
   (vendle:register "davexunit/yon-chan")
   (vendle:register "omouse/org-doing")
   (vendle:register "git://git.sv.gnu.org/emms.git"
-                   '(:name "emms" :load-path "lisp"))
+                   '(:name "emms" :load-path "lisp"
+                     :build ("gmake lisp docs emms-print-metadata")))
   (vendle:register "fgallina/emms-info-mediainfo")
+  (vendle:register "osener/emms-soundcloud" )
+  (vendle:register "r0man/soundklaus.el"
+                   '(:deps (("magnars/dash.el" :compile nil)
+                            "magnars/s.el"
+                            "kiwanami/emacs-deferred")))
+
   (vendle:register "magit/git-modes")
   (vendle:register "magit/magit"
                    '(:build ("gmake lisp docs")
                      :info "."))
   (vendle:register "company-mode/company-mode")
+  (vendle:register "proofit404/company-edbi")
   (vendle:register "syohex/emacs-git-gutter")
   (vendle:register "syohex/emacs-rebuildfm")
   (vendle:register "syohex/emacs-anzu" '(:compile nil))
@@ -90,7 +99,10 @@
   (vendle:register "fxbois/web-mode" '(:compile nil))
   (vendle:register "m00natic/eww-lnum")
   (vendle:register "emacsmirror/auto-highlight-symbol")
+  (vendle:register "emacsmirror/rainbow-mode")
   (vendle:register "skeeto/elfeed")
+  (vendle:register "remyhonig/elfeed-org"
+                   '(:deps ("skeeto/elfeed")))
   (vendle:register "zk-phi/spray")
   (vendle:register "nschum/highlight-parentheses.el")
   (vendle:register "dominikh/go-mode.el")
@@ -106,6 +118,8 @@
   (vendle:register "flycheck/flycheck"
                    '(:deps ("magnars/dash.el")
                      :info "."))
+  (vendle:register "flycheck/flycheck-pos-tip"
+                   '(:deps ("auto-complete/popup-el")))
   (vendle:register "zenozeng/css-eldoc")
   (vendle:register "yasuyk/web-beautify")
   (vendle:register "mhayashi1120/Emacs-slideview")
@@ -126,13 +140,15 @@
                             "nicferrier/emacs-kv"
                             "nicferrier/emacs-db"
                             "nicferrier/emacs-noflet"
-                            "nicferrier/emacs-web")))
+                            )))
+  (vendle:register "nicferrier/emacs-web"
+                   '(:deps ("nicferrier/elnode")))
   (vendle:register "syohex/emacs-eew")
   (vendle:register "escherdragon/sunrise-commander"
                    '(:compile nil))
-  (vendle:register "http://git.gnus.org/gnus.git"
-                   '(:build ("./configure" "gmake")
-                     :load-path ("lisp" "contrib")))
+  ;; (vendle:register "http://git.gnus.org/gnus.git"
+  ;;                  '(:build ("./configure" "gmake")
+  ;;                    :load-path ("lisp" "contrib")))
   (vendle:register "dholm/tabbar")
   (vendle:register "aki2o/guide-key-tip"
                    '(:deps ("kbkbkbkb1/guide-key"
@@ -143,8 +159,8 @@
   (vendle:register "zk-phi/indent-guide")
   (vendle:register "jschaf/emacs-lorem-ipsum")
   (vendle:register "remyferre/comment-dwim-2")
-  (vendle:register "capitaomorte/sly"
-                   '(:build  "gmake compile contrib-compile"))
+;  (vendle:register "capitaomorte/sly"
+ ;                  '(:build ("gmake compile contrib-compile")))
   (vendle:register "hayamiz/twittering-mode")
   (vendle:register "defunkt/coffee-mode")
   (vendle:register "fbkante/recycle")
@@ -153,13 +169,61 @@
   (vendle:register "sachac/artbollocks-mode")
   (vendle:register "alpaker/Fill-Column-Indicator")
   (vendle:register "tungd/color-theme-approximate")
+  (vendle:register "http://www.dr-qubit.org/git/undo-tree.git")
+  (vendle:register "Bruce-Connor/emacs-google-this")
+  (vendle:register "roman/golden-ratio.el")
+  (vendle:register "winterTTr/ace-jump-mode" )
+  (vendle:register "ieure/nssh-el")
+  (vendle:register "mhayashi1120/japanlaw.el")
+  (vendle:register "roman/navorski.el")
+  (vendle:register "febuiles/lyricwiki.el")
+  (vendle:register "sabof/svg-mode-line-themes"
+                   '(:deps ("philjackson/xmlgen")))
+  (vendle:register "naota/navi2ch"
+                   '(:build ("./configure" "gmake")))
+  (vendle:register "purcell/elisp-slime-nav")
+  (vendle:register "gcr/tumblesocks"
+                   '(:deps ( "psanford/emacs-oauth"
+                            "git://jblevins.org/git/markdown-mode.git")))
+  (vendle:register "thomblake/js3-mode")
+  (vendle:register "jd/google-maps.el")
+  (vendle:register "atykhonov/google-translate")
+  (vendle:register "lateau/charmap")
+  (vendle:register "bling/pt.el")
+  (vendle:register "emacsmirror/goto-last-change")
+  (vendle:register "dimitri/switch-window")
+  ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
-  (vendle:register "git://gitorious.org/evil/evil.git")
+  (vendle:register "git://gitorious.org/evil/evil.git"
+                   '(:build ("gmake doc all")
+                     :info "doc"
+                     :deps ("emacsmirror/goto-chg"
+                            "http://www.dr-qubit.org/git/undo-tree.git")))
   (vendle:register "cofi/evil-leader")
   (vendle:register "timcharper/evil-surround")
   (vendle:register "redguardtoo/evil-nerd-commenter")
   (vendle:register "redguardtoo/evil-matchit")
+  (vendle:register "Dewdrops/evil-exchange")
+  (vendle:register "edwtjo/evil-org-mode")
+  (vendle:register "bling/evil-visualstar")
+  (vendle:register "tarao/evil-plugins")
+  (vendle:register "tarleb/evil-rebellion")
+  (vendle:register "AshleyMoni/evil-sneak")
+  (vendle:register "juanjux/evil-search-highlight-persist")
+  (vendle:register "sunesimonsen/evil-walk-on-the-edge")
+  (vendle:register "bling/evil-jumper")
+  (vendle:register "roman/evil-paredit")
+  (vendle:register "Dewdrops/evil-extra-operator")
+  (vendle:register "cofi/evil-indent-textobject")
+  (vendle:register "linktohack/evil-space")
+  (vendle:register "jschaf/evil-smartparens")
+  (vendle:register "edwtjo/evil-projectile")
+  (vendle:register "nadavspi/evil-linewise")
+  (vendle:register "TheBB/evil-paragraph-textobject")
+  (vendle:register "syl20bnr/evil-lisp-state"
+                   '(:deps ("magnars/expand-region.el")
+                     :compile nil))
 
 ;;;;; org
   (vendle:register "git://orgmode.org/org-mode.git"
@@ -169,9 +233,12 @@
                      :info "doc"))
   (vendle:register "tj64/outshine" '(:compile nil))
   (vendle:register "tj64/outorg" '(:compile nil))
+  ;; (vendle:register "jleechpe/outorg-export")
   ;; (vendle:register "https://bitbucket.org/ukaszg/org-eldoc.git")
   (vendle:register "tj64/navi")
-  (vendle:register "kawabata/ox-pandoc")
+  (vendle:register "kawabata/ox-pandoc"
+                   '(:deps ("Wilfred/ht.el"
+                            "magnars/dash.el")))
 
 ;;;;; themes
   (vendle:register "owainlewis/emacs-color-themes")
@@ -191,15 +258,17 @@
   (vendle:register-theme "nhunzaker/emacs-laravel-plus-theme")
   (vendle:register-theme "nishikawasasaki/ns-milk-theme")
   (vendle:register-theme "tiborsimko/ostrich-theme-el")
-  (vendle:register-theme "ZehCnaS34/zonokai" '(:load-path "config"))
   (vendle:register-theme "michaelparenteau/parenteau-theme")
   (vendle:register-theme "emacsfodder/emacs-purple-haze-theme")
+  (vendle:register-theme "emacsfodder/emacs-clues-theme" )
   (vendle:register-theme "gchp/flatland-emacs")
   (vendle:register-theme "mswift42/busybee-theme")
   (vendle:register-theme "byels/emacs-cherry-blossom-theme")
   (vendle:register-theme "startling/firebelly")
   (vendle:register-theme "Greduan/emacs-theme-gruvbox")
   (vendle:register-theme "donderom/jazz-theme")
+  (vendle:register-theme "andre-richter/emacs-lush-theme")
+  (vendle:register-theme "Lokaltog/distinguished-theme")
   ;; (vendle:register-theme "ccann/badger-theme")"
 
 
@@ -218,8 +287,8 @@
     (add-project-root "helm-project-buffer"))
 
   (cond
-    ((file-directory-p "~/.emacs.d/vendle/ddskk")
-     (vendle:register-local "~/.emacs.d/vendle/ddskk"
+    ((file-directory-p (muki:user-emacs-directory "vendle/ddskk"))
+     (vendle:register-local (muki:user-emacs-directory "vendle/ddskk")
                             '(:build ("gmake elc info")
                               :info "info")))
     ((file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
@@ -227,10 +296,75 @@
 
   ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
-  (vendle:turn-on-font-lock)
+;;;;; not library
+  (vendle:fetch "purcell/emacs.d")
+  (vendle:fetch "redguardtoo/mastering-emacs-in-one-year-guide")
+  (vendle:fetch "git://git.savannah.nongnu.org/emacs-tiny-tools.git")
+  (vendle:fetch "bbatsov/emacs-lisp-style-guide")
+  (vendle:fetch "danielsz/.emacs.d")
+  (vendle:fetch "davvil/.emacs.d")
+  (vendle:fetch "hico-horiuchi/dotemacs")
+  (vendle:fetch "juanjux/emacs-dotfiles")
+  (vendle:fetch "redguardtoo/emacs.d")
+  (vendle:fetch "sachac/.emacs.d")
+  (vendle:fetch "serras/emacs-haskell-tutorial")
+  (vendle:fetch "supermomonga/dot-emacs")
+  (vendle:fetch "thierryvolpiatto/emacs-tv-config")
+  (vendle:fetch "xiaohanyu/oh-my-emacs")
+  (vendle:fetch "bling/emacs-evil-bootstrap")
+  (vendle:fetch "capdevc/dotfiles-cc")
+  (vendle:fetch "siancu/evilmode-pack")
+  (vendle:fetch "emacs-tw/awesome-emacs")
+  (vendle:fetch "syl20bnr/spacemacs")
+  (vendle:fetch "bbatsov/prelude")
+  (vendle:fetch "bling/dotemacs")
+  (vendle:fetch "cofi/dotfiles")
+  (vendle:fetch "tarao/dotfiles")
+  (vendle:fetch "fukamachi/emacs-config")
+  (vendle:fetch "mikio/dotfiles")
+  (vendle:fetch "yukihr/dotfiles")
+  (vendle:fetch "handlename/dot-emacs")
+  (vendle:fetch "seven1m/.emacs.d")
+  (vendle:fetch "gongo/elfactory")
+  (vendle:fetch "rdallasgray/graphene")
+  (vendle:fetch "mgill25/emacs")
+  (vendle:fetch "nikki93/.emacs.d")
+  (vendle:fetch "davvil/.emacs.d")
+  (vendle:fetch "sunesimonsen/evil-config")
+  (vendle:fetch "jcf/emacs.d")
+  (vendle:fetch "jcf/previous-emacs.d")
+  (vendle:fetch "nathantypanski/emacs.d")
+  (vendle:fetch "lukaszkorecki/cult-leader")
+  (vendle:fetch "ahmadseleem/ViMacs")
+  (vendle:fetch "lunaryorn/.emacs.d")
+  (vendle:fetch "febuiles/dotemacs")
+  (vendle:fetch "git://orgmode.org/worg.git")
+  (vendle:fetch "roman/emacs.d")
+  (vendle:fetch "iconpin/dotemacs")
+  (vendle:fetch "jpace121/evil-ed")
+  (vendle:fetch "edwtjo/evil-ed")
+  (vendle:fetch "sunesimonsen/evil-config")
+  (vendle:fetch "gbarta/evil-my-shims")
+  (vendle:fetch "novoid/Memacs")
+  (vendle:fetch "terhechte/emacs.d")
+  (vendle:fetch "echosa/emacs.d")
+  (vendle:fetch "wataken44/dot.emacs.d2")
+  (vendle:fetch "scottjad/dotfiles")
+  (vendle:fetch "alexander-yakushev/.emacs.d")
+  (vendle:fetch "LukeSwart/.emacs.d")
+  (vendle:fetch "romanoaugusto88/.emacs.d")
+  (vendle:fetch "jirkamarsik/sonic-screwdriver")
+  (vendle:fetch "defunkt/emacs")
+  (vendle:fetch "rejeep/emacs")
+  (vendle:fetch "dragonwasrobot/dot-emacs")
+  (vendle:fetch "jhamrick/emacs")
+  (vendle:fetch "joedicastro/dotfiles")
+  (vendle:fetch "emacs-tw/awesome-emacs")
 
 ;;;; install packages
   (vendle:check-packages)
+
+  (vendle:turn-on-font-lock)
 
 ;;;; vendle keymap
   (muki:define-launcher-key "v u" 'vendle-update)
@@ -244,7 +378,7 @@
   (req 'init-migemo)
 
   (req 'init-outshine)
-  (req 'navi-mode)
+  ;; (req 'navi-mode)
   (req 'init-org)
   ;; (req 'org-pretty-table
   ;;   (add-hook 'org-mode-hook
@@ -306,7 +440,7 @@
 
   ;; ディレクトリ指定
   ;; ~/.emacs.d/ddskk/init is setting file
-  (set-option skk-user-directory "~/.emacs.d/ddskk/")
+  (set-option skk-user-directory (muki:user-emacs-directory "ddskk/"))
   (req 'skk-autoloads
     ;; C-x C-j で skk モードを起動
     (muki:global-set-key "C-x C-\\" 'skk-mode)
@@ -324,6 +458,8 @@
   ;; (req 'undohist
   ;;      (undohist-initialize)
   ;;      (setq undohist-ignored-files '("\\.git/COMMIT_EDITMSG")))
+
+  (req 'init-navi2ch)
 
   (req 'navi2ch-file-mode
     (setq navi2ch-file-open-with-shift-jis t))
@@ -548,13 +684,60 @@
   ;; (req 'ids-edit
   ;;   (global-ids-edit-mode))
 
-  (req 'fill-column-indicator
-    (add-hook 'prog-mode-hook 'fci-mode)
-    ;; (add-hook 'text-mode-hook 'fci-mode)
-    )
+  ;; (req 'fill-column-indicator
+  ;;   (add-hook 'prog-mode-hook 'fci-mode)
+  ;;   ;; (add-hook 'text-mode-hook 'fci-mode)
+  ;;   )
 
   (req 'color-theme-approximate
     (color-theme-approximate-on))
+
+  (req 'google-this)
+
+  (req 'golden-ratio
+    (enable-mode golden-ratio-mode))
+
+  (req 'nssh)
+
+  (req 'init-popwin)
+
+  (req 'init-tumblesocks)
+
+  (req 'init-rainbow-mode)
+
+  (req 'markdown-mode
+    (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode)))
+
+  (req 'google-translate
+    (req 'google-translate-default-ui)
+
+    (cl-letf ((mpv (executable-find "mpv")))
+      (when mpv
+        (set-option google-translate-listen-program mpv)))
+
+    (setq google-translate-default-source-language "en")
+    (setq google-translate-default-target-language "fi")
+    )
+
+  (req 'charmap
+    (setq charmap-text-scale-adjust 2))
+
+  (req 'pt)
+
+  (req 'switch-window
+    (global-set-key (kbd "C-x o") 'switch-window)
+    (set-option switch-window-shortcut-style 'qwerty)
+    (set-option switch-window-qwerty-shortcuts
+                '("a" "o" "e" "u" "h" "t" "n" "s" "," "." "c" "r")))
+
+
+  ;; (req 'js3-mode
+  ;;   (add-to-list 'auto-mode-alist '("\\.js\\'" . js3-mode))
+  ;;   )
+
+  ;;;; yasnippet
+  ;; (req 'yasnippet
+  ;;   (yas-global-mode 1))
 
 ;;;;; evil
   (req 'init-evil)
@@ -573,6 +756,18 @@
   (req 'init-wgrep-helm)
   (req 'helm-css-scss)
   (req 'helm-bibtex)
+
+
+  ;;; util
+  (cl-defun vendle-find-duplicate-packages ()
+    (cl-remove-if-not
+     (lambda (p)
+       (cl-find-if (lambda (v) (equalp (vendle:package-name v)
+                                  p))
+                   *vendle-package-list*))
+     (cl-mapcar
+      (lambda (p) (format "%s" p))
+      package-activated-list)))
 
   )
 

@@ -1,6 +1,6 @@
 ;;; init-el-get.el -*- lexical-binding: t -*-
 
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+(add-to-list 'load-path (muki:user-emacs-directory "el-get/el-get"))
 
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
@@ -10,8 +10,8 @@
     (eval-print-last-sexp)))
 
 (pak 'el-get
-     (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-     (el-get 'sync))
+  (add-to-list 'el-get-recipe-path (muki:user-emacs-directory "el-get-user/recipes"))
+  (el-get 'sync))
 
 (provide 'init-el-get)
 

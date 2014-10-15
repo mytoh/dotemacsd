@@ -1,11 +1,7 @@
 
 (req 'smartparens
   (req 'smartparens-config)
-
-  (smartparens-global-mode)
-  ;; (smartparens-global-strict-mode t)
-  ;; highlights matching pairs
-  ;; (show-smartparens-global-mode t)
+  (enable-option sp-show-pair-from-inside)
 
      ;;;;;;;;;;;;
   ;; keys
@@ -63,11 +59,19 @@
       slime-repl-mode
       clojure-mode
       common-lisp-mode))
+
   (sp-with-modes muki:lisp-modes
     (sp-local-pair "(" nil :bind "M-("))
 
-  (add-hook 'emacs-lisp-mode 'smartparens-strict-mode)
-  (add-hook 'scheme-mode 'smartparens-strict-mode)
+  (cl-defun muki:smartparens-setup-strict-modes ()
+    (cl-mapc
+     (lambda (mode)
+       (let ((hook (intern (format "%s-hook" (symbol-name mode)))))
+         (add-hook hook 'smartparens-strict-mode)))
+     muki:lisp-modes))
+
+  (muki:smartparens-setup-strict-modes)
+
 
   ;; (sp-with-modes '(org-mode)
   ;;   ;; fix quotatin in org-mode
@@ -80,6 +84,11 @@
   (after "diminish"
       (after "smartparens"
           (diminish 'smartparens-mode " ⚖")))
+
+  (smartparens-global-mode)
+  ;; (smartparens-global-strict-mode t)
+  ;; highlights matching pairs
+  ;; (show-smartparens-global-mode t)
 
   )
 

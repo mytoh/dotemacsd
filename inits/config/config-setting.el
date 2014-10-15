@@ -11,7 +11,7 @@
 (enable-option inhibit-startup-screen)
 
 ;; startup splash
-;; (set-option fancy-splash-image (expand-file-name "~/.emacs.d/splash/splash.xpm"))
+;; (set-option fancy-splash-image (muki:user-emacs-directory "splash/splash.xpm"))
 
 ;;;; parens
 (enable-mode show-paren-mode)
@@ -250,9 +250,9 @@
 
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
-;; spolsky, odersky, jazz
-(defvar muki:x-theme 'jazz)
-(defvar muki:term-theme 'moe-dark)
+;; spolsky, odersky, jazz, purple-haze
+(defvar muki:x-theme 'brin)
+(defvar muki:term-theme 'flatland)
 
 (enable-option x-select-enable-clipboard
                x-select-enable-primary)
@@ -305,8 +305,37 @@
 (set-option enable-local-variables :all)
 
 ;;; bookmark
-(set-option bookmark-default-file "~/.emacs.d/bookmarks"
+(set-option bookmark-default-file (muki:user-emacs-directory "bookmarks")
             bookmark-save-flag 1) ;; save after every change
+
+;;;; builtins
+
+;;;;; checkdoc
+(req 'checkdoc)
+
+;;;;; uniquify
+(req 'uniquify
+  (set-option uniquify-buffer-name-style 'post-forward-angle-brackets))
+
+;;;;; term/bobcat
+(load "term/bobcat")
+(when (fboundp 'terminal-init-bobcat)
+  (terminal-init-bobcat))
+
+;;;;; outlining everywhere
+;; (require 'allout)
+;; (allout-auto-activation)
+
+;;;;; save cursor position
+(req 'saveplace
+  (setq save-place-file (concat user-emacs-directory "saveplace.el")) ; use standard emacs dir
+  (setq-default save-place t))
+
+;; important for golden-ratio to better work
+(enable-option window-combination-resize)
+
+;; limit on depth in eval, appyl and funcall
+(set-option max-lisp-eval-depth (* 10 max-lisp-eval-depth))
 
 (provide 'config-setting)
 

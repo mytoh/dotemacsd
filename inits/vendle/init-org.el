@@ -17,7 +17,6 @@
   (set-face-attribute 'org-block-background nil :background "gray")
   (message "Done with code block"))
 
-
 (cl-defun muki:org-mode-before-save-hook ()
   (delete-trailing-whitespace)
   (untabify (point-min) (point-max)))
@@ -44,6 +43,7 @@
   (set-option org-cycle-separator-lines 0)
   (set-option org-use-speed-commands
               (lambda () (and (looking-at org-outline-regexp) (looking-back "^\**"))))
+  (set-option org-catch-invisible-edits 'smart)
   (add-to-list 'org-speed-commands-user '("N" org-narrow-to-subtree))
   (add-to-list 'org-speed-commands-user '("W" widen))
   (cl-defun muki:org-speed-command-user-next (arg)
@@ -114,6 +114,7 @@
      org-screen
      org-toc
      org-collector
+     org-eww
      ))
  (cl-mapc (lambda (m) (add-to-list 'org-modules m))
           my-org-modules)
@@ -182,6 +183,9 @@
     (org-bullets-mode 1))
   ;; (add-hook 'org-mode-hook 'enable-org-bullets)
   )
+
+(req 'ox-pandoc)
+(req 'org-protocol)
 
 (add-hook 'org-mode-hook 'turn-off-auto-fill)
 

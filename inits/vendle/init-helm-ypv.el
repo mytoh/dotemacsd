@@ -8,7 +8,7 @@
   (after 'helm-ypv
       ;; (set-option helm-ypv-local-address "localhost:7144")
       (set-option helm-ypv-local-address "peca.koti:7145")
-    (load-file "~/.emacs.d/helm-ypv/yp"))
+    (load-file (muki:user-emacs-directory "helm-ypv/yp")))
 
   (muki:define-launcher-key  "y" 'helm-ypv)
 

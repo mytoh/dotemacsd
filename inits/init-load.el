@@ -18,7 +18,7 @@
 (require 'init-config)
 
 ;;;;; packages
-(require 'init-paketti)
+;;(require 'init-paketti)
 
 ;;;;; lang
 (require 'init-lang)

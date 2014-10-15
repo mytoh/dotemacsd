@@ -1,15 +1,15 @@
 ## -*- mode: eshell-script -*-
-                                        #(or (getenv "CDPATH")
-                                        #    (setenv "CDPATH"
-                                        #            (cl-reduce
-                                        #             (lambda (a b)
-                                        #         (cl-concatenate 'string
-                                        #         (expand-file-name a) ":" (expand-file-name b)))
-                                        #      '("~/huone" "~"  "/usr/local"))))
+
+##(or (getenv "CDPATH")
+##    (setenv "CDPATH"
+##            (cl-reduce
+##             (lambda (a b)
+##         (cl-concatenate 'string
+##         (expand-file-name a) ":" (expand-file-name b)))
+##      '("~/huone" "~"  "/usr/local"))))
 
 (setenv "PAGER" "cat")
 (setenv "TERM" "xterm-256color")
-
 
 ## 補完時に大文字小文字を区別しない
 (setq eshell-cmpl-ignore-case t)
@@ -28,17 +28,24 @@
 (setq eshell-glob-case-insensitive t)
 ## history
 (setq eshell-history-size 100000)
+
 ## run ls after cd
 (setq eshell-list-files-after-cd t)
+
 ## helm
 (define-key eshell-mode-map
     (kbd "C-l") 'helm-eshell-history)
+
 ## helm complete
 (define-key eshell-mode-map
     [remap eshell-pcomplete]  'helm-esh-pcomplete)
 (define-key eshell-mode-map (kbd "C-p") 'eshell-previous-matching-input-from-input)
 (define-key eshell-mode-map (kbd "C-n") 'eshell-next-matching-input-from-input)
-                                        # (define-key eshell-mode-map (kbd "C-r") #'eshell-previous-matching-input-from-input)
+(req 'evil
+  (evil-define-key 'normal eshell-mode-map (kbd "C-p") 'eshell-previous-prompt)
+  (evil-define-key 'normal eshell-mode-map (kbd "C-n") 'eshell-next-prompt))
+
+## (define-key eshell-mode-map (kbd "C-r") #'eshell-previous-matching-input-from-input)
 (add-to-list 'eshell-visual-commands "ssh")
 (add-to-list 'eshell-visual-commands "tail")
 (add-to-list 'eshell-visual-commands "lv")
@@ -46,9 +53,10 @@
              `("unarchive.sh" . ,(concat (regexp-opt '(".tar" ".tgz" ".tar.gz" ".txz" ".tar.xz" ".cbz" ".cbr" ".cbx"
                                                        ".rar" ".zip" ".7z"))
                                          "\\'")))
-(add-to-list 'eshell-output-filter-functions 'eshell-handle-ansi-color)
+## (add-to-list 'eshell-output-filter-functions 'eshell-handle-ansi-color)
 (add-to-list 'eshell-output-filter-functions 'eshell-truncate-buffer)
 (add-to-list 'eshell-output-filter-functions 'eshell-postoutput-scroll-to-bottom)
+
 ## ls colors
 (set-face-attribute 'eshell-ls-directory nil  :foreground "#83a598")
 (set-face-attribute 'eshell-ls-symlink   nil :foreground "#8ec07c")
@@ -57,34 +65,40 @@
 (set-face-attribute 'eshell-ls-unreadable nil :foreground "#665c54")
 (set-face-attribute 'eshell-ls-special   nil :foreground "#fe8019")
 (set-face-attribute 'eshell-ls-missing   nil :foreground "#fb4934")
+
 (defun pcomplete/sudo ()
   (let ((prec (pcomplete-arg 'last -1)))
     (cond ((string= "sudo" prec)
            (while (pcomplete-here*
                    (funcall pcomplete-command-completion-function)
                    (pcomplete-arg 'last) t))))))
+
 (defun pcomplete/please ()
   (let ((prec (pcomplete-arg 'last -1)))
     (cond ((string= "please" prec)
            (while (pcomplete-here*
                    (funcall pcomplete-command-completion-function)
                    (pcomplete-arg 'last) t))))))
-(add-to-list 'eshell-command-aliases-list '("img" "propertize \"Image\" (quote display) ${create-image ${expand-file-name $1}}"))
-(add-to-list 'eshell-command-aliases-list '("k" "killall -9 $*"))
-(add-to-list 'eshell-command-aliases-list '("d" "dired-other-window ${pwd}"))
-(add-to-list 'eshell-command-aliases-list '("ff" "find-file $1"))
-(add-to-list 'eshell-command-aliases-list '("ll" "ls -l"))
-(add-to-list 'eshell-command-aliases-list '("la" "ls -a"))
-(add-to-list 'eshell-command-aliases-list '("tk" "talikko $*"))
-(add-to-list 'eshell-command-aliases-list '("futaba" "pikkukivi futaba $*"))
-(add-to-list 'eshell-command-aliases-list '("yotsuba" "pikkukivi yotsuba $*"))
-(add-to-list 'eshell-command-aliases-list '("ylilauta" "pikkukivi ylilauta $*"))
-(add-to-list 'eshell-command-aliases-list '("," "napa $*"))
-(add-to-list 'eshell-command-aliases-list '("ag" "ag --nopager"))
-(add-to-list 'eshell-command-aliases-list '("pam" "rm -rf $*"))
-(add-to-list 'eshell-command-aliases-list '("ke" "save-buffers-kill-emacs"))
-(add-to-list 'eshell-command-aliases-list '("cde" "cd ~/huone/git/git.savannah.gnu.org/emacs"))
-(add-to-list 'eshell-command-aliases-list '("gpl" "git pull"))
-(add-to-list 'eshell-command-aliases-list '("gst" "git status"))
-(add-to-list 'eshell-command-aliases-list '("kuva" "pikkukivi kuva $1"))
-(add-to-list 'eshell-command-aliases-list '("vittu" "pikkukivi vittu $*"))
+
+(cl-defun muki:eshell-add-alias (lst)
+  (add-to-list 'eshell-command-aliases-list lst))
+
+(muki:eshell-add-alias  '("img" "propertize \"Image\" (quote display) ${create-image ${expand-file-name $1}}"))
+(muki:eshell-add-alias  '("k" "killall -9 $*"))
+(muki:eshell-add-alias  '("d" "dired-other-window ${pwd}"))
+(muki:eshell-add-alias  '("ff" "find-file $1"))
+(muki:eshell-add-alias  '("ll" "ls -l"))
+(muki:eshell-add-alias  '("la" "ls -a"))
+(muki:eshell-add-alias  '("tk" "talikko $*"))
+(muki:eshell-add-alias  '("futaba" "pikkukivi futaba $*"))
+(muki:eshell-add-alias  '("yotsuba" "pikkukivi yotsuba $*"))
+(muki:eshell-add-alias  '("ylilauta" "pikkukivi ylilauta $*"))
+(muki:eshell-add-alias  '("," "napa $*"))
+(muki:eshell-add-alias  '("ag" "ag --nopager"))
+(muki:eshell-add-alias  '("pam" "rm -rf $*"))
+(muki:eshell-add-alias  '("ke" "save-buffers-kill-emacs"))
+(muki:eshell-add-alias  '("cde" "cd ~/huone/git/git.savannah.gnu.org/emacs"))
+(muki:eshell-add-alias  '("gpl" "git pull"))
+(muki:eshell-add-alias  '("gst" "git status"))
+(muki:eshell-add-alias  '("kuva" "pikkukivi kuva $1"))
+(muki:eshell-add-alias  '("vittu" "pikkukivi vittu $*"))

@@ -4,14 +4,17 @@
   "Check to see if the named FONT is available"
   (find-font (font-spec :name font)))
 
-;; (set-face-attribute 'default nil :height 80)
+(cl-defun set-default-font-size ()
+  (set-face-attribute 'default nil :height 75))
+
+(set-default-font-size)
 
 (cl-defun set-ascii-font ()
   (cond ((eq window-system nil) nil)
         ((font-exists-p "Fira Mono")
-         (set-fontset-font nil 'ascii (font-spec :name "Fira Mono" :size 9 :weight 'normal)))
+         (set-fontset-font nil 'ascii (font-spec :name "Fira Mono" :weight 'normal)))
         ((font-exists-p "Ricty Diminished")
-         (set-fontset-font nil 'ascii (font-spec :name "Ricty Diminished" :size 11 :weight 'regular)))
+         (set-fontset-font nil 'ascii (font-spec :name "Ricty Diminished" :size 10 :weight 'regular)))
         ((font-exists-p "Liberation Mono")
          (set-fontset-font nil 'ascii (font-spec :name "Liberation Mono")))
         ((font-exists-p "CosmicSansNeueMono")
@@ -45,7 +48,7 @@
   (cond ((eq window-system nil) nil)
         ((font-exists-p "Ricty Diminished")
          (set-fontset-font nil 'japanese-jisx0208
-                           (font-spec :name "Ricty Diminished" :size 9)))
+                           (font-spec :name "Ricty Diminished" )))
         ((font-exists-p "Hiragino Mincho Pro")
          (set-fontset-font nil 'japanese-jisx0208
                            (font-spec :name "Hiragino Mincho Pro")))

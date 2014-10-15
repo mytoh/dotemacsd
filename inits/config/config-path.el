@@ -1,15 +1,21 @@
 ;;; config-path.el  -*- lexical-binding: t -*-
 ;;; shellenv.el
 ;;; (setenv "PATH" "path:path")
-;; (cl-letf ((shellenv (expand-file-name "~/.emacs.d/shellenv.el")))
+;; (cl-letf ((shellenv (muki:user-emacs-directory "shellenv.el")))
 ;;   (when (file-exists-p shellenv)
 ;;     (load-file shellenv)
 ;;     (cl-dolist (shpath (reverse (split-string (getenv "PATH") ":")))
 ;;       (add-to-list 'exec-path shpath))))
 
 (cl-defun set-exec-path-from-shell-PATH (shell)
-  (cl-letf* ((option (if (string-match "tcsh$" shell)
-                         "-c" "--login -i -c"))
+  (cl-letf* ((option (cond ((string-match "tcsh\\'" shell)
+                            "-c")
+                           ((string-match "mksh\\'" shell)
+                            "-l -c")
+                           ;; ((string-match "fish\\'" shell)
+                           ;;  "--login -c \"sh -c 'echo $PATH'\"")
+                           (else
+                            "--login -c")))
              (path-from-shell (replace-regexp-in-string
                                "[ \t\n]*$" ""
                                (shell-command-to-string (concat shell " " option " 'echo $PATH'")))))

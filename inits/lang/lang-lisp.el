@@ -24,7 +24,7 @@
      (rx (group (+ (or word (in "?" "." "-")))) symbol-end (+ space) ")")
      "\\1)")
     (muki:lisp-cleanup-support
-     (rx "(" (+ space) symbol-start (group (+ (or word (in "?" "." "-")))))
+     (rx "(" (+ space) symbol-start (group (+ (or word (in "?" "-")))))
      "(\\1")
 
     (muki:lisp-cleanup-support
@@ -34,12 +34,12 @@
      (rx ")" (group (+ word)) (+ space))
      ") \\1")
 
-    (muki:lisp-cleanup-support
-     (rx (group (in "\"")) (+ space) ")")
-     "\\1)")
-    (muki:lisp-cleanup-support
-     (rx "(" (+ space) (group (in "\"")))
-     "(\\1")
+    ;; (muki:lisp-cleanup-support
+    ;;  (rx (group (in "\"")) (+ space) ")")
+    ;;  "\\1)")
+    ;; (muki:lisp-cleanup-support
+    ;;  (rx "(" (+ space) (group (in "\"")))
+    ;;  "(\\1")
 
     ))
 

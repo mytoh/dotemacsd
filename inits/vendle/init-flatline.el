@@ -72,6 +72,7 @@
   (flatline:set-theme 'solarized-dark)
 
   (setq flatline:mode-line '())
+  (flatline:add 'flatline:evil-tag)
   (flatline:add 'muki:flatline:major-mode)
   (flatline:add 'muki:flatline:buffer-name)
   (flatline:add '(muki:flatline:vc-mode . flatline:face-vc-mode))

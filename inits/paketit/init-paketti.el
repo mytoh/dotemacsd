@@ -1,26 +1,5 @@
 ;;; init-paketti.el -*- coding: utf-8; lexical-binding: t -*-
 
-;;;; builtins
-;; save curosr position
-(liby 'saveplace
-  (setq-default save-place t))
-
-;; checkdoc
-(req 'checkdoc)
-
-;; uniquify
-(req 'uniquify
-  (set-option uniquify-buffer-name-style 'post-forward-angle-brackets))
-
-;; term/bobcat
-(load "term/bobcat")
-(when (fboundp 'terminal-init-bobcat)
-  (terminal-init-bobcat))
-
-;; outlining everywhere
-;; (require 'allout)
-;; (allout-auto-activation)
-
 ;;; package repositories
 
 ;; package.el
@@ -37,7 +16,8 @@
 
 ;; install packages
 (setq muki:paketti-list
-      '(rainbow-delimiters
+      '(
+        ;; rainbow-delimiters
         ;; rainbow-blocks
         ;; auto-complete
         ;; ac-ja
@@ -55,7 +35,7 @@
         ;; projectile
         ;; project-persist
         ;; magit
-        rainbow-mode
+        ;; rainbow-mode
         ;; scheme-complete
         ;; expand-region
         ;; tabbar
@@ -65,20 +45,20 @@
         yasnippet
         ;; mew
         ;; w3m
-        smartparens
+        ;; smartparens
         dash
         ht
         ;; powerline
-        popwin
+        ;; popwin
         ghc
         ;; emms
-        emms-info-mediainfo
+        ;;; emms-info-mediainfo
         color-moccur
         git-gutter+
         git-gutter
         ;; git-gutter-fringe
         diff-hl
-        nyan-mode
+        ;; nyan-mode
         minimap
         eshell-manual
         hackernews
@@ -86,16 +66,16 @@
         ;; highlight-indentation
         ;; auto-highlight-symbol
         ;; multiple-cursors
-        guide-key
+        ;; guide-key
         google-translate
         circe
         tumblesocks
-        undo-tree
+        ;; undo-tree
         ;; direx
         ;; pallet
         page-break-lines
         ;; flycheck
-        flycheck-pos-tip
+        ;; flycheck-pos-tip
         ;; fiplr
         ;; fuzzy
         ;; melpa-upstream-visit
@@ -152,13 +132,13 @@
         mykie
         ;; flylisp
         soundcloud
-        emms-soundcloud
+        ;; emms-soundcloud
         xkcd
-        elisp-slime-nav
+        ;; elisp-slime-nav
         highlight-tail
-        navi2ch
+        ;; navi2ch
         ;; elfeed
-        elfeed-web
+        ;; elfeed-web
         git-commit-mode
         gitconfig-mode
         gitignore-mode
@@ -198,8 +178,8 @@
 
 (defvar muki:paketti-list-prog-modes
   '(stumpwm-mode
-    coffee-mode
-    lua-mode
+    ;; coffee-mode
+    ;; lua-mode
     ;; haskell-mode
     js3-mode
     js2-mode
@@ -244,7 +224,7 @@
     phoenix-dark-mono-theme
     dakrone-theme
     anti-zenburn-theme
-    busybee-theme
+    ;; busybee-theme
     molokai-theme
     monokai-theme
     solarized-theme
@@ -285,7 +265,7 @@
     twilight-anti-bright-theme
     pastels-on-dark-theme
     leuven-theme
-    niflheim-theme
+    ;; niflheim-theme
     steady-theme
     ;; jujube-theme
     github-theme
@@ -355,7 +335,7 @@
 
 (defvar init-paketit
   '(
-    paketti-rainbow-mode     ; this may cause problem
+    ;; paketti-rainbow-mode     ; this may cause problem
     paketti-google-translate
     ;; paketti-guide-key
     paketti-image-dired+
@@ -365,12 +345,12 @@
     ;; paketti-tabbar
     paketti-suomalainen-kalenteri
     paketti-info+
-    paketti-popwin
+    ;; paketti-popwin
     ;; paketti-w3m
     paketti-yasnippet
     paketti-flymake
     paketti-coffee-mode
-    paketti-undo-tree
+    ;; paketti-undo-tree
     ;; paketti-direx
     paketti-lua-mode
     paketti-vala-mode
@@ -392,12 +372,12 @@
     paketti-shell-pop
     paketti-color-moccur
     paketti-mykie
-    paketti-keyfreq
+    ;; paketti-keyfreq
     paketti-twittering-mode
     paketti-markdown-mode
     paketti-vimrc-mode
-    paketti-elisp-slime-nav
-    paketti-navi2ch
+    ;; paketti-elisp-slime-nav
+    ;; paketti-navi2ch
     ;; paketti-elfeed
     ;; paketti-smartrep
     ;; paketti-migemo
@@ -412,7 +392,7 @@
     paketti-highlight-escape-sequences
     paketti-fancy-narrow
     ;; paketti-flycheck
-    paketti-flycheck-pos-tip
+    ;; paketti-flycheck-pos-tip
     ;; paketti-sunrise-commander
     paketti-ace-link
     paketti-easy-kill
@@ -475,7 +455,7 @@
     ;; paketti-wgrep-helm
 
     ))
-(append-to-list init-paketit muki:paketit-list-helm)
+;; (append-to-list init-paketit muki:paketit-list-helm)
 
 (defvar muki:paketit-list-org
   '(;; paketti-org
@@ -485,7 +465,7 @@
     ;; paketti-navi-mode
     ;; paketti-orglink
     ))
-(append-to-list init-paketit muki:paketit-list-org)
+;; (append-to-list init-paketit muki:paketit-list-org)
 
 (mapc 'require init-paketit)
 

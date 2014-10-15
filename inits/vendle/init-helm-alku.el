@@ -1,24 +1,24 @@
 ;;; init-helm-alku.el -*- lexical-binding: t -*-
 
-(liby 'helm-alku
+(req 'helm-alku
 
-  (autoload 'helm-alku "helm-alku")
-  (autoload 'helm-alku-program "helm-alku")
-  (autoload 'helm-alku-directory "helm-alku")
-  (autoload 'helm-alku-vihko "helm-alku")
-  (autoload 'helm-alku-ääliö "helm-alku")
+  ;; (autoload 'helm-alku "helm-alku")
+  ;; (autoload 'helm-alku-program "helm-alku")
+  ;; (autoload 'helm-alku-directory "helm-alku")
+  ;; (autoload 'helm-alku-vihko "helm-alku")
+  ;; (autoload 'helm-alku-ääliö "helm-alku")
 
   (after 'helm-alku
       (set-option helm-alku-directory-list
-       '(("video" . "~/huone/videot")
+       `(("video" . "~/huone/videot")
          ("sarjakuva" . "~/huone/kuvat/sarjakuva")
          ("lataukset" . "~/huone/lataukset")
          ("4chan" . "~/huone/kuvat/sivusto/4chan")
          ("lainchan" . "~/huone/kuvat/sivusto/lainchan")
          ("futaba" . "~/huone/kuvat/sivusto/futaba")
-         ("paketti" . "~/.emacs.d/inits/paketit")
-         ("vendle" . "~/.emacs.d/vendle")
-         ("elpa" . "~/.emacs.d/elpa")))
+         ("paketti" . ,(muki:user-emacs-directory "inits/paketit"))
+         ("vendle" . ,(muki:user-emacs-directory "vendle"))
+         ("elpa" . ,(muki:user-emacs-directory "elpa"))))
     (helm-alku-directory-add-subdirectories "~/huone/projektit")
     (set-option helm-alku-program-list
                 '("v2c"

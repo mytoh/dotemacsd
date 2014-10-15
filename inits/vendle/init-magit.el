@@ -3,7 +3,8 @@
   (set-face-attribute 'magit-diff-add nil :foreground "#40ff40" :background nil)
   (set-face-attribute 'magit-diff-del nil :foreground "#ff4040" :background nil)
   (set-face-attribute 'magit-diff-file-header nil :foreground "#4040ff" :background nil)
-  (set-face-attribute 'magit-item-highlight nil :foreground nil))
+  ;; (set-face-attribute 'magit-item-highlight nil :foreground nil)
+  )
 
 (after "magit"
     (muki:magit-highlights))
