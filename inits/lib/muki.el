@@ -16,43 +16,6 @@
       (expand-file-name path user-emacs-directory)
     user-emacs-directory))
 
-;; http://e-arrows.sakura.ne.jp/2010/03/macros-in-emacs-el.html
-(cl-defmacro req (lib &rest body)
-  "load library if file is exits"
-  (declare (debug t)
-           (indent 1))
-  `(cond
-     ((locate-library (symbol-name ,lib))
-      (require ,lib nil 'noerror)
-      (muki:log "loading " (propertize (symbol-name ,lib)
-                                       'face 'font-lock-variable-name-face))
-      ,@body
-      (muki:log "loaded " (propertize (symbol-name ,lib)
-                                      'face 'font-lock-keyword-face)))
-     (t (message "%s not loaded" (symbol-name ,lib)))))
-
-(cl-defmacro pak (package &rest body)
-  "execute body when package is installed"
-  (declare (debug t)
-           (indent 1))
-  `(cond
-     ((or (package-installed-p ,package)
-          (locate-library (symbol-name ,package)))
-      (muki:log "found package " (propertize (symbol-name ,package)
-                                             'face 'font-lock-variable-name-face))
-      ,@body)
-     (t (message "%s not found" (symbol-name ,package)))))
-
-(cl-defmacro liby (library &rest body)
-  "execute body when library found"
-  (declare (debug t)
-           (indent 1))
-  `(cond
-     ((locate-library (symbol-name ,library))
-      (muki:log "found library " (propertize (symbol-name ,library)
-                                             'face 'font-lock-variable-name-face))
-      ,@body)
-     (t (message "%s not found" (symbol-name ,library)))))
 
 ;; http://github.com/juanjux/emacs-dotfiles
 (defmacro after (feature &rest body)
@@ -108,50 +71,6 @@
        (set-face-foreground ,face ,fore)
      (set-face-background ,face ,back)))
 
-(cl-defmacro set-option (&rest body)
-  (declare (debug t))
-  (and body
-       (cl-letf ((option (car body))
-                 (value (cadr body)))
-         `(cl-locally
-              (muki:log "set " ,(propertize (symbol-name option)
-                                            'face 'font-lock-variable-name-face))
-            (setq ,option ,value)
-            (set-option ,@(cddr body))))))
-
-(cl-defmacro enable-option (&rest body)
-  (declare (debug t))
-  (and body
-       (cl-letf ((option (car body)))
-         `(cl-locally
-              (muki:log "enable " ,(propertize (symbol-name option)
-                                               'face 'font-lock-variable-name-face))
-            (setq ,option t)
-            (enable-option ,@(cdr body))))))
-
-(cl-defmacro disable-option (&rest body)
-  (declare (debug t))
-  (and body
-       (cl-letf ((option (car body)))
-         `(cl-locally
-              (muki:log "disable " ,(propertize (symbol-name option)
-                                                'face 'font-lock-variable-name-face))
-            (setq ,option nil)
-            (disable-option ,@(cdr body))))))
-
-(cl-defmacro enable-mode (mode-fn)
-  (declare (debug t))
-  `(cl-locally
-       (,mode-fn 1)
-     (muki:log "enable mode " ,(propertize (symbol-name mode-fn)
-                                           'face 'font-lock-variable-name-face))))
-
-(cl-defmacro disable-mode (mode-fn)
-  (declare (debug t))
-  `(cl-locally
-       (,mode-fn -1)
-     (muki:log "disable mode " ,(propertize (symbol-name mode-fn)
-                                            'face 'font-lock-variable-name-face))))
 
 ;;http://www.reddit.com/r/emacs/comments/umb24/expandfilename_is_good_for_path_concat_too/
 (cl-defun concat-path (&rest parts)
@@ -287,7 +206,10 @@ buffer is not visiting a file."
                                   no-kill-buffer-names))))
     (mapc 'kill-buffer buffers-to-kill)))
 
-(require 'muki-keys)
+(require 'muki-key)
+(require 'muki-option)
+(require 'muki-mode)
+(require 'muki-lib)
 
 (provide 'muki)
 

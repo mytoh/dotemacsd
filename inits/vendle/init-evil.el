@@ -140,6 +140,12 @@ is a kind of temporary one which is not confirmed yet."
   (global-evil-leader-mode)
   (evil-leader/set-leader ",")
   (enable-option evil-leader/in-all-states)
+
+  (evil-leader/set-key
+      "b K"  'muki:kill-other-buffers
+    "b n"  'switch-to-next-buffer
+    "b p"  'switch-to-prev-buffer)
+
   (liby 'eshell-session
     (evil-leader/set-key "z z" 'eshell-session:switch)
     (evil-leader/set-key "z c" 'eshell-session:new)
@@ -153,7 +159,8 @@ is a kind of temporary one which is not confirmed yet."
     (evil-leader/set-key "e v c" 'vendle-clean)
     (evil-leader/set-key "e v l" 'helm-vendle))
   (liby 'helm-project-buffer
-    (evil-leader/set-key "b" 'helm-project-buffer))
+    (evil-leader/set-key "b b" 'helm-project-buffer))
+
 
   (defun-add-hook muki:evil-ace-jump-mode-setup (after-init-hook)
     (when (and (featurep 'evil) (featurep 'evil-leader))

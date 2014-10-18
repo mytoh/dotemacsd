@@ -1,4 +1,4 @@
-;;; muki-keys -*- lexical-binding: t; coding: utf-8; -*-
+;;; muki-key -*- lexical-binding: t; coding: utf-8; -*-
 
 ;;; Code:
 ;; (defvar global-keys-minor-mode-map (make-sparse-keymap)
@@ -45,7 +45,8 @@
     (t (global-set-key key func))))
 
 (cl-defmacro muki:define-key (keymap &rest body)
-  (declare (debug t))
+  (declare (debug t)
+           (indent 1))
   (and body
        (cl-letf ((key (car body))
                  (def (cadr body)))
@@ -56,6 +57,6 @@
             (muki:define-key ,keymap ,@(cddr body))))))
 
 
-(provide 'muki-keys)
+(provide 'muki-key)
 
-;;; muki-keys.el ends here
+;;; muki-key.el ends here

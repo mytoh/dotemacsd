@@ -8,7 +8,7 @@
   (hook 'js3-mode-hook 'rainbow-mode)
   (hook 'js-mode-hook 'rainbow-mode)
   (after "diminish"
-      (eval-after-load "rainbow-mode"
-        '(diminish 'rainbow-mode " ω"))))
+      (after "rainbow-mode"
+          (diminish 'rainbow-mode " ω"))))
 
 (provide 'init-rainbow-mode)

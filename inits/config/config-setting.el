@@ -250,8 +250,8 @@
 
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
-;; spolsky, odersky, jazz, purple-haze
-(defvar muki:x-theme 'brin)
+;; spolsky, odersky, jazz, purple-haze, warm-night, brin
+(defvar muki:x-theme 'warm-night)
 (defvar muki:term-theme 'flatland)
 
 (enable-option x-select-enable-clipboard
@@ -336,6 +336,11 @@
 
 ;; limit on depth in eval, appyl and funcall
 (set-option max-lisp-eval-depth (* 10 max-lisp-eval-depth))
+
+;; instantly display current keystrokes in mini buffer
+(setq echo-keystrokes 0.02)
+
+(set-option message-log-max)
 
 (provide 'config-setting)
 

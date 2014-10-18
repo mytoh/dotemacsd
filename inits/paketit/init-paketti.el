@@ -22,8 +22,8 @@
         ;; auto-complete
         ;; ac-ja
         ;; ac-slime
-        bookmark+
-        cursor-chg
+        ;; bookmark+
+        ;; cursor-chg
         deferred
         ;; highlight-symbol
         ;; dired
