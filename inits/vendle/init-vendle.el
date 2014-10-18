@@ -18,30 +18,51 @@
 ;;;;; helm
   (vendle:register "emacs-helm/helm"
                    '(:build ("gmake")
-                     :deps ("jwiegley/emacs-async")))
+                     :deps ("jwiegley/emacs-async")
+                     :tag "helm"))
   (vendle:register "thierryvolpiatto/pcomplete-extension")
-  (vendle:register "yuutayamada/helm-ag-r")
-  (vendle:register "yasuyk/helm-git-grep")
-  (vendle:register "emacs-helm/helm-migemo")
-  (vendle:register "emacs-helm/helm-ls-git")
-  (vendle:register "emacs-helm/helm-cmd-t")
-  (vendle:register "ShingoFukuyama/helm-swoop")
-  (vendle:register "steckerhalter/helm-google")
-  (vendle:register "syohex/emacs-helm-ag")
-  (vendle:register "markus1189/helm-hoogle")
-  (vendle:register "jixiuf/helm-etags-plus")
-  (vendle:register "syohex/emacs-helm-themes")
-  (vendle:register "syohex/emacs-helm-open-github")
-  (vendle:register "istib/helm-mode-manager")
-  (vendle:register "tkf/emacs-pinot-search")
-  (vendle:register "yasuyk/helm-flycheck")
-  (vendle:register "emacs-helm/helm-descbinds")
+  (vendle:register "yuutayamada/helm-ag-r"
+                   '(:tag ("helm" "ag")))
+  (vendle:register "yasuyk/helm-git-grep"
+                   '(:tag ("helm" "git")))
+  (vendle:register "emacs-helm/helm-migemo"
+                   '(:tag ("helm" "migemo")))
+  (vendle:register "emacs-helm/helm-ls-git"
+                   '(:tag ("helm" "git")))
+  (vendle:register "emacs-helm/helm-cmd-t"
+                   '(:tag ("helm")))
+  (vendle:register "ShingoFukuyama/helm-swoop"
+                   '(:tag ("helm")))
+  (vendle:register "steckerhalter/helm-google"
+                   '(:tag ("helm" "google")))
+  (vendle:register "syohex/emacs-helm-ag"
+                   '(:tag ("helm" "ag")))
+  (vendle:register "markus1189/helm-hoogle"
+                   '(:tag ("helm" "haskell")))
+  (vendle:register "jixiuf/helm-etags-plus"
+                   '(:tag ("helm")))
+  (vendle:register "syohex/emacs-helm-themes"
+                   '(:tag ("helm" "theme")))
+  (vendle:register "syohex/emacs-helm-open-github"
+                   '(:tag ("helm" "github")))
+  (vendle:register "istib/helm-mode-manager"
+                   '(:tag ("helm")))
+  (vendle:register "tkf/emacs-pinot-search"
+                   '(:tag ("helm")))
+  (vendle:register "yasuyk/helm-flycheck"
+                   '(:tag ("helm" "flycheck")))
+  (vendle:register "emacs-helm/helm-descbinds"
+                   '(:tag ("helm")))
   (vendle:register "yasuyk/helm-company"
-                   '(:deps ("rejeep/f.el")))
-  (vendle:register "emacs-helm/helm-dictionary")
-  (vendle:register "emacs-helm/helm-recoll")
+                   '(:deps ("rejeep/f.el")
+                     :tag ("helm" "company")))
+  (vendle:register "emacs-helm/helm-dictionary"
+                   '(:tag ("helm")))
+  (vendle:register "emacs-helm/helm-recoll"
+                   '(:tag ("helm")))
   (vendle:register "mhayashi1120/Emacs-wgrep")
-  (vendle:register "ShingoFukuyama/helm-css-scss")
+  (vendle:register "ShingoFukuyama/helm-css-scss"
+                   '(:tag ("helm" "css")))
   (vendle:register "tmalsburg/helm-bibtex"
                    '(:deps ("joostkremers/ebib"
                             "magnars/s.el"
@@ -50,7 +71,8 @@
 
 ;;;;; general packages
   (vendle:register "jonathanchu/emacs-powerline")
-  (vendle:register "raugturi/powerline-evil")
+  (vendle:register "raugturi/powerline-evil"
+                   '(:tag ("evil" "modeline")))
   (vendle:register "TeMPOraL/nyan-mode")
   (vendle:register "daimrod/highlight-sexp")
   (vendle:register "m2ym/undohist-el")
@@ -65,22 +87,30 @@
   (vendle:register "tomoya/fuzzyjump.el")
   (vendle:register "omouse/emacs-sos")
   (vendle:register "davexunit/yon-chan")
-  (vendle:register "omouse/org-doing")
+  (vendle:register "omouse/org-doing"
+                   '(:tag "org"))
   (vendle:register "git://git.sv.gnu.org/emms.git"
                    '(:name "emms" :load-path "lisp"
-                     :build ("gmake lisp docs emms-print-metadata")))
-  (vendle:register "fgallina/emms-info-mediainfo")
-  (vendle:register "osener/emms-soundcloud" )
+                     :build ("gmake lisp docs emms-print-metadata")
+                     :tag "emms"))
+  (vendle:register "fgallina/emms-info-mediainfo"
+                   '(:tag "emms"))
+  (vendle:register "osener/emms-soundcloud"
+                   '(:tag ("emms" "soundcloud")))
   (vendle:register "r0man/soundklaus.el"
                    '(:deps (("magnars/dash.el" :compile nil)
                             "magnars/s.el"
-                            "kiwanami/emacs-deferred")))
+                            "kiwanami/emacs-deferred")
+                     :tag "soundcloud"))
 
-  (vendle:register "magit/git-modes")
+  (vendle:register "magit/git-modes"
+                   '(:tag "git"))
   (vendle:register "magit/magit"
                    '(:build ("gmake lisp docs")
-                     :info "."))
-  (vendle:register "company-mode/company-mode")
+                     :info "."
+                     :tag "git"))
+  (vendle:register "company-mode/company-mode"
+                   '(:tag "company"))
   (vendle:register "proofit404/company-edbi")
   (vendle:register "syohex/emacs-git-gutter")
   (vendle:register "syohex/emacs-rebuildfm")
@@ -89,11 +119,16 @@
                    '(:compile nil :deps (("magnars/dash.el" :compile nil))))
   (vendle:register "magnars/expand-region.el")
   (vendle:register "magnars/multiple-cursors.el")
-  (vendle:register "Fuco1/org-pretty-table" '(:compile nil))
-  (vendle:register "haskell/haskell-mode" '(:compile nil :build ("gmake all")))
+  (vendle:register "Fuco1/org-pretty-table"
+                   '(:compile nil :tag "org"))
+  (vendle:register "haskell/haskell-mode"
+                   '(:tag "haskell"
+                     :compile nil
+                     :build ("gmake all")))
   (vendle:register "Bruce-Connor/paradox")
   (vendle:register "steckerhalter/google-el")
-  (vendle:register "daemianmack/magit-cheatsheet")
+  (vendle:register "daemianmack/magit-cheatsheet"
+                   '(:tag "magit"))
   (vendle:register "re5et/itail")
   (vendle:register "syohex/emacs-quickrun")
   (vendle:register "fxbois/web-mode" '(:compile nil))
@@ -159,8 +194,8 @@
   (vendle:register "zk-phi/indent-guide")
   (vendle:register "jschaf/emacs-lorem-ipsum")
   (vendle:register "remyferre/comment-dwim-2")
-;  (vendle:register "capitaomorte/sly"
- ;                  '(:build ("gmake compile contrib-compile")))
+  (vendle:register "capitaomorte/sly"
+                   '(:build ("gmake compile contrib-compile")))
   (vendle:register "hayamiz/twittering-mode")
   (vendle:register "defunkt/coffee-mode")
   (vendle:register "fbkante/recycle")
@@ -192,6 +227,9 @@
   (vendle:register "bling/pt.el")
   (vendle:register "emacsmirror/goto-last-change")
   (vendle:register "dimitri/switch-window")
+  (vendle:register "rnkn/olivetti")
+  (vendle:register "emacsmirror/diminish")
+  (vendle:register "ShingoFukuyama/emacs-emoji-cheat-sheet")
   ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
@@ -199,46 +237,74 @@
                    '(:build ("gmake doc all")
                      :info "doc"
                      :deps ("emacsmirror/goto-chg"
-                            "http://www.dr-qubit.org/git/undo-tree.git")))
-  (vendle:register "cofi/evil-leader")
-  (vendle:register "timcharper/evil-surround")
-  (vendle:register "redguardtoo/evil-nerd-commenter")
-  (vendle:register "redguardtoo/evil-matchit")
-  (vendle:register "Dewdrops/evil-exchange")
-  (vendle:register "edwtjo/evil-org-mode")
-  (vendle:register "bling/evil-visualstar")
-  (vendle:register "tarao/evil-plugins")
-  (vendle:register "tarleb/evil-rebellion")
-  (vendle:register "AshleyMoni/evil-sneak")
-  (vendle:register "juanjux/evil-search-highlight-persist")
-  (vendle:register "sunesimonsen/evil-walk-on-the-edge")
-  (vendle:register "bling/evil-jumper")
-  (vendle:register "roman/evil-paredit")
-  (vendle:register "Dewdrops/evil-extra-operator")
-  (vendle:register "cofi/evil-indent-textobject")
-  (vendle:register "linktohack/evil-space")
-  (vendle:register "jschaf/evil-smartparens")
-  (vendle:register "edwtjo/evil-projectile")
-  (vendle:register "nadavspi/evil-linewise")
-  (vendle:register "TheBB/evil-paragraph-textobject")
+                            "http://www.dr-qubit.org/git/undo-tree.git")
+                     :tag "evil"))
+  (vendle:register "cofi/evil-leader"
+                   '(:tag "evil"))
+  (vendle:register "timcharper/evil-surround"
+                   '(:tag "evil"))
+  (vendle:register "redguardtoo/evil-nerd-commenter"
+                   '(:tag "evil"))
+  (vendle:register "redguardtoo/evil-matchit"
+                   '(:tag "evil"))
+  (vendle:register "Dewdrops/evil-exchange"
+                   '(:tag "evil"))
+  (vendle:register "edwtjo/evil-org-mode"
+                   '(:tag "evil"))
+  (vendle:register "bling/evil-visualstar"
+                   '(:tag "evil"))
+  (vendle:register "tarao/evil-plugins"
+                   '(:tag "evil"))
+  (vendle:register "tarleb/evil-rebellion"
+                   '(:tag "evil"))
+  (vendle:register "AshleyMoni/evil-sneak"
+                   '(:tag "evil"))
+  (vendle:register "juanjux/evil-search-highlight-persist"
+                   '(:tag "evil"))
+  (vendle:register "sunesimonsen/evil-walk-on-the-edge"
+                   '(:tag "evil"))
+  (vendle:register "bling/evil-jumper"
+                   '(:tag "evil"))
+  (vendle:register "roman/evil-paredit"
+                   '(:tag "evil"))
+  (vendle:register "Dewdrops/evil-extra-operator"
+                   '(:tag "evil"))
+  (vendle:register "cofi/evil-indent-textobject"
+                   '(:tag "evil"))
+  (vendle:register "linktohack/evil-space"
+                   '(:tag "evil"))
+  (vendle:register "jschaf/evil-smartparens"
+                   '(:tag "evil"))
+  (vendle:register "edwtjo/evil-projectile"
+                   '(:tag "evil"))
+  (vendle:register "nadavspi/evil-linewise"
+                   '(:tag "evil"))
+  (vendle:register "TheBB/evil-paragraph-textobject"
+                   '(:tag "evil"))
   (vendle:register "syl20bnr/evil-lisp-state"
                    '(:deps ("magnars/expand-region.el")
-                     :compile nil))
+                     :compile nil
+                     :tag "evil"))
 
 ;;;;; org
   (vendle:register "git://orgmode.org/org-mode.git"
                    '(:load-path ("lisp" "contrib/lisp")
                      :compile nil
                      :build ("gmake" "gmake doc")
-                     :info "doc"))
-  (vendle:register "tj64/outshine" '(:compile nil))
-  (vendle:register "tj64/outorg" '(:compile nil))
+                     :info "doc"
+                     :tag "org"))
+  (vendle:register "tj64/outshine" '(:compile nil
+                                     :tag ("org" "outline")))
+  (vendle:register "tj64/outorg" '(:compile nil
+                                   :tag ("org" "outline")))
   ;; (vendle:register "jleechpe/outorg-export")
   ;; (vendle:register "https://bitbucket.org/ukaszg/org-eldoc.git")
-  (vendle:register "tj64/navi")
+  (vendle:register "tj64/navi"
+                   '(:tag ("org" "outline")))
   (vendle:register "kawabata/ox-pandoc"
                    '(:deps ("Wilfred/ht.el"
-                            "magnars/dash.el")))
+                            "magnars/dash.el")
+                     :tag "org"))
 
 ;;;;; themes
   (vendle:register "owainlewis/emacs-color-themes")
@@ -269,22 +335,25 @@
   (vendle:register-theme "donderom/jazz-theme")
   (vendle:register-theme "andre-richter/emacs-lush-theme")
   (vendle:register-theme "Lokaltog/distinguished-theme")
+  (vendle:register-theme "mswift42/warm-night-theme")
+  (vendle:register-theme "jasonm23/emacs-bubbleberry-theme")
   ;; (vendle:register-theme "ccann/badger-theme")"
 
 
 ;;;;; local packages
-  (cl-labels ((add-project-root (path)
-                (vendle:register-local (expand-file-name path "~/huone/projektit"))))
+  (cl-labels ((add-project-root (path &optional option)
+                (vendle:register-local (expand-file-name path "~/huone/projektit")
+                                       option)))
     (add-project-root  "emacs-flatline")
-    (add-project-root "helm-ypv")
-    (add-project-root "company-scheme")
-    (add-project-root "emacs-scheme-keywords")
+    (add-project-root "helm-ypv" '(:tag "helm"))
+    (add-project-root "company-scheme" '(:tag ("company" "scheme")))
+    (add-project-root "emacs-scheme-keywords" '(tag "scheme"))
     (add-project-root "emacs-lehtifile-mode")
-    (add-project-root "helm-alku")
-    (add-project-root "emacs-navi2ch-file-mode")
-    (add-project-root "emacs-eshell-session")
-    (add-project-root "emacs-eshell-alias")
-    (add-project-root "helm-project-buffer"))
+    (add-project-root "helm-alku" '(:tag ("helm")))
+    (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
+    (add-project-root "emacs-eshell-session" '(:tag "eshell"))
+    (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
+    (add-project-root "helm-project-buffer" '(:tag "helm")))
 
   (cond
     ((file-directory-p (muki:user-emacs-directory "vendle/ddskk"))
@@ -360,6 +429,7 @@
   (vendle:fetch "jhamrick/emacs")
   (vendle:fetch "joedicastro/dotfiles")
   (vendle:fetch "emacs-tw/awesome-emacs")
+  (vendle:fetch "11111000000/emacs-d")
 
 ;;;; install packages
   (vendle:check-packages)
@@ -375,7 +445,10 @@
         (muki:define-launcher-key "v l" 'helm-vendle)))
 
 ;;;; package requires
+
   (req 'init-migemo)
+
+  (req 'init-diminish)
 
   (req 'init-outshine)
   ;; (req 'navi-mode)
@@ -466,37 +539,37 @@
 
   (req 'rebuildfm)
 
-  (req 'fuzzyjump
-    (let ((map fuzzyjump-cmd-map))
-      (define-key map (kbd "'") (lambda () (interactive) (fuzzyjump 1 0)))
-      (define-key map (kbd ",") (lambda () (interactive) (fuzzyjump 1 1)))
-      (define-key map (kbd ".") (lambda () (interactive) (fuzzyjump 1 2)))
-      (define-key map (kbd "p") (lambda () (interactive) (fuzzyjump 1 3)))
-      (define-key map (kbd "y") (lambda () (interactive) (fuzzyjump 1 4)))
-      (define-key map (kbd "f") (lambda () (interactive) (fuzzyjump 1 5)))
-      (define-key map (kbd "g") (lambda () (interactive) (fuzzyjump 1 6)))
-      (define-key map (kbd "c") (lambda () (interactive) (fuzzyjump 1 7)))
-      (define-key map (kbd "r") (lambda () (interactive) (fuzzyjump 1 8)))
-      (define-key map (kbd "l") (lambda () (interactive) (fuzzyjump 1 9)))
-      (define-key map (kbd "a") (lambda () (interactive) (fuzzyjump 2 0)))
-      (define-key map (kbd "o") (lambda () (interactive) (fuzzyjump 2 1)))
-      (define-key map (kbd "e") (lambda () (interactive) (fuzzyjump 2 2)))
-      (define-key map (kbd "u") (lambda () (interactive) (fuzzyjump 2 3)))
-      (define-key map (kbd "i") (lambda () (interactive) (fuzzyjump 2 4)))
-      (define-key map (kbd "d") (lambda () (interactive) (fuzzyjump 2 5)))
-      (define-key map (kbd "h") (lambda () (interactive) (fuzzyjump 2 6)))
-      (define-key map (kbd "t") (lambda () (interactive) (fuzzyjump 2 7)))
-      (define-key map (kbd "n") (lambda () (interactive) (fuzzyjump 2 9)))
-      (define-key map (kbd ";") (lambda () (interactive) (fuzzyjump 3 0)))
-      (define-key map (kbd "q") (lambda () (interactive) (fuzzyjump 3 1)))
-      (define-key map (kbd "j") (lambda () (interactive) (fuzzyjump 3 2)))
-      (define-key map (kbd "k") (lambda () (interactive) (fuzzyjump 3 3)))
-      (define-key map (kbd "x") (lambda () (interactive) (fuzzyjump 3 4)))
-      (define-key map (kbd "b") (lambda () (interactive) (fuzzyjump 3 5)))
-      (define-key map (kbd "m") (lambda () (interactive) (fuzzyjump 3 6)))
-      (define-key map (kbd "w") (lambda () (interactive) (fuzzyjump 3 7)))
-      (define-key map (kbd "v") (lambda () (interactive) (fuzzyjump 3 9))))
-    (fuzzyjump-mode t))
+  ;; (req 'fuzzyjump
+  ;;   (let ((map fuzzyjump-cmd-map))
+  ;;     (define-key map (kbd "'") (lambda () (interactive) (fuzzyjump 1 0)))
+  ;;     (define-key map (kbd ",") (lambda () (interactive) (fuzzyjump 1 1)))
+  ;;     (define-key map (kbd ".") (lambda () (interactive) (fuzzyjump 1 2)))
+  ;;     (define-key map (kbd "p") (lambda () (interactive) (fuzzyjump 1 3)))
+  ;;     (define-key map (kbd "y") (lambda () (interactive) (fuzzyjump 1 4)))
+  ;;     (define-key map (kbd "f") (lambda () (interactive) (fuzzyjump 1 5)))
+  ;;     (define-key map (kbd "g") (lambda () (interactive) (fuzzyjump 1 6)))
+  ;;     (define-key map (kbd "c") (lambda () (interactive) (fuzzyjump 1 7)))
+  ;;     (define-key map (kbd "r") (lambda () (interactive) (fuzzyjump 1 8)))
+  ;;     (define-key map (kbd "l") (lambda () (interactive) (fuzzyjump 1 9)))
+  ;;     (define-key map (kbd "a") (lambda () (interactive) (fuzzyjump 2 0)))
+  ;;     (define-key map (kbd "o") (lambda () (interactive) (fuzzyjump 2 1)))
+  ;;     (define-key map (kbd "e") (lambda () (interactive) (fuzzyjump 2 2)))
+  ;;     (define-key map (kbd "u") (lambda () (interactive) (fuzzyjump 2 3)))
+  ;;     (define-key map (kbd "i") (lambda () (interactive) (fuzzyjump 2 4)))
+  ;;     (define-key map (kbd "d") (lambda () (interactive) (fuzzyjump 2 5)))
+  ;;     (define-key map (kbd "h") (lambda () (interactive) (fuzzyjump 2 6)))
+  ;;     (define-key map (kbd "t") (lambda () (interactive) (fuzzyjump 2 7)))
+  ;;     (define-key map (kbd "n") (lambda () (interactive) (fuzzyjump 2 9)))
+  ;;     (define-key map (kbd ";") (lambda () (interactive) (fuzzyjump 3 0)))
+  ;;     (define-key map (kbd "q") (lambda () (interactive) (fuzzyjump 3 1)))
+  ;;     (define-key map (kbd "j") (lambda () (interactive) (fuzzyjump 3 2)))
+  ;;     (define-key map (kbd "k") (lambda () (interactive) (fuzzyjump 3 3)))
+  ;;     (define-key map (kbd "x") (lambda () (interactive) (fuzzyjump 3 4)))
+  ;;     (define-key map (kbd "b") (lambda () (interactive) (fuzzyjump 3 5)))
+  ;;     (define-key map (kbd "m") (lambda () (interactive) (fuzzyjump 3 6)))
+  ;;     (define-key map (kbd "w") (lambda () (interactive) (fuzzyjump 3 7)))
+  ;;     (define-key map (kbd "v") (lambda () (interactive) (fuzzyjump 3 9))))
+  ;;   (fuzzyjump-mode t))
 
   (req 'sos)
 
@@ -730,6 +803,9 @@
     (set-option switch-window-qwerty-shortcuts
                 '("a" "o" "e" "u" "h" "t" "n" "s" "," "." "c" "r")))
 
+  (req 'olivetti)
+
+  (req 'emoji-cheat-sheet)
 
   ;; (req 'js3-mode
   ;;   (add-to-list 'auto-mode-alist '("\\.js\\'" . js3-mode))
@@ -763,7 +839,7 @@
     (cl-remove-if-not
      (lambda (p)
        (cl-find-if (lambda (v) (equalp (vendle:package-name v)
-                                  p))
+                                       p))
                    *vendle-package-list*))
      (cl-mapcar
       (lambda (p) (format "%s" p))
