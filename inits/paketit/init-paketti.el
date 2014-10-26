@@ -6,8 +6,8 @@
 (req 'package
   ;; load MELPA
   (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") 'append)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") 'append)
-  (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") 'append)
+  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") 'append)
+  (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/") 'append)
   (add-to-list 'package-archives '("SC" . "http://joseito.republika.pl/sunrise-commander/") 'append)
   (package-initialize))
 
@@ -331,7 +331,7 @@
       (message "installing %s"  p)
       (package-install p))))
 
-(muki:paketti-update)
+;;(muki:paketti-update)
 
 (defvar init-paketit
   '(
@@ -467,7 +467,7 @@
     ))
 ;; (append-to-list init-paketit muki:paketit-list-org)
 
-(mapc 'require init-paketit)
+;; (mapc 'require init-paketit)
 
 
 ;; ;; egg

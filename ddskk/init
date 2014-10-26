@@ -38,6 +38,9 @@
 ;;;; preload dictionaries
 (setq skk-preload t)
 
+;;;; show input mode
+(setq skk-show-mode-show t)
+
 ;;;; face
 (defface muki:skk-tooltip
     '((t (:foreground "#93b8bb"

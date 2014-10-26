@@ -142,25 +142,37 @@ is a kind of temporary one which is not confirmed yet."
   (enable-option evil-leader/in-all-states)
 
   (evil-leader/set-key
+      ";" 'helm-M-x)
+
+  (evil-leader/set-key
       "b K"  'muki:kill-other-buffers
     "b n"  'switch-to-next-buffer
     "b p"  'switch-to-prev-buffer)
 
   (liby 'eshell-session
-    (evil-leader/set-key "z z" 'eshell-session:switch)
-    (evil-leader/set-key "z c" 'eshell-session:new)
-    (evil-leader/set-key "z n" 'eshell-session:next)
-    (evil-leader/set-key "z p" 'eshell-session:prev))
+    (evil-leader/set-key
+        "z z" 'eshell-session:switch
+      "z c" 'eshell-session:new
+      "z n" 'eshell-session:next
+      "z p" 'eshell-session:prev))
+
   (liby 'helm-ypv
     (evil-leader/set-key "e y" 'helm-ypv))
+
   (liby 'vendle
-    (evil-leader/set-key "e v u" 'vendle-update)
-    (evil-leader/set-key "e v k" 'vendle-check)
-    (evil-leader/set-key "e v c" 'vendle-clean)
-    (evil-leader/set-key "e v l" 'helm-vendle))
+    (evil-leader/set-key "e v u" 'vendle-update
+      "e v k" 'vendle-check
+      "e v c" 'vendle-clean
+      "e v l" 'helm-vendle))
+
   (liby 'helm-project-buffer
     (evil-leader/set-key "b b" 'helm-project-buffer))
 
+  (liby 'helm
+    (evil-leader/set-key
+        "?" 'helm-descbinds
+      "h s"   'helm-swoop
+      "h t"  'helm-themes))
 
   (defun-add-hook muki:evil-ace-jump-mode-setup (after-init-hook)
     (when (and (featurep 'evil) (featurep 'evil-leader))
@@ -223,6 +235,9 @@ is a kind of temporary one which is not confirmed yet."
 (req 'evil-lisp-state
   (define-key evil-normal-state-map "L" 'evil-lisp-state)
   (define-key evil-lisp-state-map (kbd "C-g") 'evil-normal-state))
+
+(req 'evil-escape
+  (evil-escape-mode))
 
 (provide 'init-evil)
 

@@ -148,11 +148,12 @@
 
 ;;;; backup and autosave
 ;;disable backup
-(enable-option backup-inhibited)
+;; (enable-option backup-inhibited)
+;; (disable-option make-backup-files) ; stop creating those backup~ files
 ;;disable auto save
 (disable-option auto-save-default)
-(disable-option make-backup-files) ; stop creating those backup~ files
 (enable-option delete-auto-save-files)
+(set-option backup-directory-alist (quote (("." . "~/.emacs.d/backups"))))
 ;; (defvar backup-directory (expand-file-name "backups" user-emacs-directory))
 ;; (defvar autosave-directory (expand-file-name "autosaves" user-emacs-directory))
 ;; (set-option backup-directory-alist
@@ -251,14 +252,14 @@
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
 ;; spolsky, odersky, jazz, purple-haze, warm-night, brin
-(defvar muki:x-theme 'warm-night)
+(defvar muki:x-theme 'cyberpunk)
 (defvar muki:term-theme 'flatland)
 
 (enable-option x-select-enable-clipboard
                x-select-enable-primary)
 
 ;;;; browse web
-(set-option browse-url-generic-program "xombrero")
+(set-option browse-url-generic-program "conkeror")
 (set-option browse-url-browser-function 'browse-url-generic)
 
 ;;;; prettify symbols
@@ -341,6 +342,9 @@
 (setq echo-keystrokes 0.02)
 
 (set-option message-log-max)
+
+;; file revert time
+(set-option auto-revert-interval 1)
 
 (provide 'config-setting)
 

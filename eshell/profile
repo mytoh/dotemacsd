@@ -53,18 +53,18 @@
              `("unarchive.sh" . ,(concat (regexp-opt '(".tar" ".tgz" ".tar.gz" ".txz" ".tar.xz" ".cbz" ".cbr" ".cbx"
                                                        ".rar" ".zip" ".7z"))
                                          "\\'")))
-## (add-to-list 'eshell-output-filter-functions 'eshell-handle-ansi-color)
+(add-to-list 'eshell-output-filter-functions 'eshell-handle-ansi-color)
 (add-to-list 'eshell-output-filter-functions 'eshell-truncate-buffer)
 (add-to-list 'eshell-output-filter-functions 'eshell-postoutput-scroll-to-bottom)
 
 ## ls colors
-(set-face-attribute 'eshell-ls-directory nil  :foreground "#83a598")
-(set-face-attribute 'eshell-ls-symlink   nil :foreground "#8ec07c")
-(set-face-attribute 'eshell-ls-executable nil :foreground "#b8bb26")
-(set-face-attribute 'eshell-ls-readonly  nil :foreground "#d3869b")
-(set-face-attribute 'eshell-ls-unreadable nil :foreground "#665c54")
-(set-face-attribute 'eshell-ls-special   nil :foreground "#fe8019")
-(set-face-attribute 'eshell-ls-missing   nil :foreground "#fb4934")
+                                        #(set-face-attribute 'eshell-ls-directory nil  :foreground "#83a598")
+                                        #(set-face-attribute 'eshell-ls-symlink   nil :foreground "#8ec07c")
+                                        #(set-face-attribute 'eshell-ls-executable nil :foreground "#b8bb26")
+                                        #(set-face-attribute 'eshell-ls-readonly  nil :foreground "#d3869b")
+                                        #(set-face-attribute 'eshell-ls-unreadable nil :foreground "#665c54")
+                                        #(set-face-attribute 'eshell-ls-special   nil :foreground "#fe8019")
+                                        #(set-face-attribute 'eshell-ls-missing   nil :foreground "#fb4934")
 
 (defun pcomplete/sudo ()
   (let ((prec (pcomplete-arg 'last -1)))
@@ -102,3 +102,5 @@
 (muki:eshell-add-alias  '("gst" "git status"))
 (muki:eshell-add-alias  '("kuva" "pikkukivi kuva $1"))
 (muki:eshell-add-alias  '("vittu" "pikkukivi vittu $*"))
+(muki:eshell-add-alias '("build-emacs" "cde; gpl; gmake clean distclean; ./autogen.sh && ./configure --prefix=/home/mytoh/huone/ohjelmat/emacs --enable-silent-rules CFLAGS='-g3 -O3' CC=clang-devel CPP=clang-cpp-devel CXX=clang++-devel MAKE=gmake && gmake && gmake install; gmake clean distclean"))
+(muki:eshell-add-alias '("build-emacs-bootstrap" "cde; gpl; gmake clean distclean; ./autogen.sh && ./configure --prefix=/home/mytoh/huone/ohjelmat/emacs --disable-acl --with-sound=oss --with-x-toolkit=gtk3 --with-file-notification=gfile --enable-link-time-optimization --enable-silent-rules CC=clang-devel CPP=clang-cpp-devel CXX=clang++-devel MAKE=gmake && gmake bootstrap && gmake && gmake install; gmake clean distclean"))

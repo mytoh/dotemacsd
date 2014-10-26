@@ -19,7 +19,9 @@
 
 (setq whitespace-display-mappings
       '(
-        (newline-mark 10 [60 10]) ; newlne, <
+        ;; (newline-mark 10 [60 10]) ; newlne, <
+        ;; (newline-mark ?\n   [?\xB6 ?\n] )   ; end-of-line, ~
+        (newline-mark ?\n [?~ ?\n])   ; end-of-line, ~
         (tab-mark 9 [187 9] [92 9]) ; tab, Â»
         ;; (space-mark 32 [183] [46]) ; 32 SPACE, 183 MIDDLE DOT 「·」, 46 FULL STOP 「.」
         (space-mark   ?\    [?\xB7]     [?.])   ; space
@@ -33,6 +35,11 @@
                      "cyan")
 (set-face-background 'whitespace-space
                      "cyan")
+
+(whitespace-newline-mode)
+(set-face-foreground 'whitespace-newline
+                     (color-lighten-name (face-background 'default)
+                                         30))
 
 ;; デフォルトで視覚化を有効にする。
 (global-whitespace-mode 1)

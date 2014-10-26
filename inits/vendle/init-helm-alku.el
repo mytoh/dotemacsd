@@ -1,12 +1,19 @@
 ;;; init-helm-alku.el -*- lexical-binding: t -*-
 
-(req 'helm-alku
+(liby 'helm-alku
 
   ;; (autoload 'helm-alku "helm-alku")
   ;; (autoload 'helm-alku-program "helm-alku")
   ;; (autoload 'helm-alku-directory "helm-alku")
   ;; (autoload 'helm-alku-vihko "helm-alku")
   ;; (autoload 'helm-alku-ääliö "helm-alku")
+
+  (auto (helm-alku
+         helm-alku-program
+         helm-alku-directory
+         helm-alku-vihko
+         helm-alku-ääliö)
+        "helm-alku")
 
   (after 'helm-alku
       (set-option helm-alku-directory-list

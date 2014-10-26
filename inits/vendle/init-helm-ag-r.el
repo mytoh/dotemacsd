@@ -1,6 +1,7 @@
 ;;; init-helm-ag-r.el -*- lexical-binding: t -*-
 
-(req 'helm-ag-r
+(liby 'helm-ag-r
+  (auto (helm-ag-r) "helm-ag-r")
   (set-option helm-ag-r-option-list
               '("-S -U --hidden"
                 "-S -U -l")

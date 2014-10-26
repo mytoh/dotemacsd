@@ -40,6 +40,12 @@
       ,@body)
      (t (message "%s not found" (symbol-name ,library)))))
 
+(cl-defmacro auto (funcs lib)
+  (declare (debug t))
+  `(cl-locally
+       ,@(cl-mapcar (lambda (f) `(autoload ',f ,lib nil t))
+                    funcs)))
+
 (provide 'muki-lib)
 
 ;;; muki-lib.el ends here

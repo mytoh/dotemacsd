@@ -40,11 +40,11 @@
 
 ;; (lazyload (triger-function ...) "filename" &rest body)
 ;; http://e-arrows.sakura.ne.jp/2010/03/macros-in-emacs-el.html
-(cl-defmacro lazyload (funcs lib)
-  (declare (debug t))
-  `(cl-locally
-       ,@(cl-mapcar (lambda (f) `(autoload ',f ,lib nil t))
-                    funcs)))
+;; (cl-defmacro lazyload (funcs lib)
+;;   (declare (debug t))
+;;   `(cl-locally
+;;        ,@(cl-mapcar (lambda (f) `(autoload ',f ,lib nil t))
+;;                     funcs)))
 
 ;; (append-to-list exec-path
 ;;                 '("/usr/bin" "/bin"

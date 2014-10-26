@@ -143,15 +143,18 @@ Otherwise goto the end of minibuffer."
 ;;      (muki:define-key global-map [remap switch-to-buffer] 'helm-C-x-b))
 
 ;; helm-ls-git
-(req 'helm-ls-git
+(liby 'helm-ls-git
+  (auto (helm-ls-git-ls) "helm-ls-git")
   (muki:define-launcher-key "f" 'helm-ls-git-ls))
 
 ;; elisp-package
-(req 'helm-elisp-package
+(liby 'helm-elisp-package
+  (auto (helm-list-elisp-packages) "helm-elisp-package")
   (muki:define-launcher-key "P" 'helm-list-elisp-packages))
 
 ;; helm-git-grep
-(req 'helm-git-grep
+(liby 'helm-git-grep
+  (auto (helm-git-grep) "helm-git-grep")
   (muki:define-launcher-key "r" 'helm-git-grep))
 
 (req 'helm-mode-manager)

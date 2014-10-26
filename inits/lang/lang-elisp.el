@@ -71,6 +71,9 @@
           (lambda ()
             (setq mode-name " ξ ")))
 
+(defun-add-hook muki:elisp-pretty-symbols (emacs-lisp-mode-hook)
+  (push '(">=" . ?≥) prettify-symbols-alist))
+
 (setq lisp-indent-function 'common-lisp-indent-function)
 
 ;;;; keymap

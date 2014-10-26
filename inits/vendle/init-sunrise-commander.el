@@ -56,15 +56,18 @@
                       (symbol-name x))))
              nums ""))))
 
-(req 'sunrise-commander
-  (req 'sunrise-x-modeline
-    (enable-option sr-modeline-use-utf8-marks))
-  (req 'sunrise-x-tabs
-    (muki:define-key sr-tabs-mode-map "C-n"  'dired-next-line)
-    (muki:define-key sr-tabs-mode-map "C-p"  'dired-previous-line)
-    (muki:define-key sr-tabs-mode-map "M-n" 'sr-tabs-next)
-    (muki:define-key sr-tabs-mode-map "M-p" 'sr-tabs-prev))
-  (req 'sunrise-x-popviewer)
+(liby 'sunrise-commander
+  (after 'sunrise-commander
+      (req 'sunrise-x-modeline
+        (enable-option sr-modeline-use-utf8-marks))
+    (req 'sunrise-x-tabs
+      (muki:define-key sr-tabs-mode-map "C-n"  'dired-next-line)
+      (muki:define-key sr-tabs-mode-map "C-p"  'dired-previous-line)
+      (muki:define-key sr-tabs-mode-map "M-n" 'sr-tabs-next)
+      (muki:define-key sr-tabs-mode-map "M-p" 'sr-tabs-prev))
+    (req 'sunrise-x-popviewer))
+
+  (auto (sunrise) "sunrise-commander")
 
   (cl-defun muki:sunrise ()
     (interactive)
@@ -107,9 +110,10 @@
                                          (format "%s \"%s\" &" prog file)))
         (message "can't find associated program!"))))
 
-  (muki:define-key sr-mode-map "C-c C-x" 'muki:sunrise-open-external)
-  (muki:define-key sr-mode-map "C-n" 'dired-next-line)
-  (muki:define-key sr-mode-map "C-p" 'dired-previous-line)
+  (after 'sunrise-commander
+      (muki:define-key sr-mode-map "C-c C-x" 'muki:sunrise-open-external)
+    (muki:define-key sr-mode-map "C-n" 'dired-next-line)
+    (muki:define-key sr-mode-map "C-p" 'dired-previous-line))
 
   )
 

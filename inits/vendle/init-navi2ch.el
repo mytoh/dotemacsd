@@ -1,7 +1,8 @@
 ;;; init-navi2ch.el -*- lexical-binding: t -*-
 
 ;; navi2ch
-(req 'navi2ch
+(liby 'navi2ch
+  (auto (navi2ch) "navi2ch")
   (enable-option navi2ch-mona-enable)
   (muki:define-launcher-key "2" 'navi2ch))
 

@@ -1,6 +1,7 @@
 ;;; config-eww.el -*- lexical-binding: t -*-
 
 (liby 'eww
+  (auto (eww) "eww")
   ;; (set-option browse-url-browser-function 'eww-browse-url)
   (set-option eww-home-url "file:///home/mytoh/.org/etusivu/etusivu.html")
   (disable-option shr-image-animate)

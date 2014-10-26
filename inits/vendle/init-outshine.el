@@ -2,7 +2,13 @@
 
 (defvar outline-minor-mode-prefix (kbd "C-c"))
 
-(req 'outshine
+(liby 'outshine
+  (auto (outshine-hook-function
+         outline-hide-more
+         outline-show-more
+         outline-previous-visible-heading
+         outline-next-visible-heading)
+        "outshine")
   (add-hook 'outline-minor-mode-hook 'outshine-hook-function)
 
   ;; (defvar outline-minor-mode-prefix "\M-#")
@@ -15,7 +21,7 @@
   (add-hook 'ledger-mode-hook 'outline-minor-mode)
   (add-hook 'message-mode-hook 'outline-minor-mode)
 
-  (add-hook 'org-mode-hook
+    (add-hook 'org-mode-hook
             (lambda ()
               ;; Redefine arrow keys, since promoting/demoting and moving
               ;; subtrees up and down are less frequent tasks then

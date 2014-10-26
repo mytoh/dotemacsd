@@ -18,7 +18,7 @@
           (set (make-local-variable 'fill-column) 72)
           (turn-on-auto-fill))))
 
-(autoload 'magit-status "magit")
+(auto (magit-status) "magit")
 (muki:define-launcher-key "g" 'magit-status)
 
 (liby 'magit

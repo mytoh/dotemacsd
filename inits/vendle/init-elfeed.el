@@ -1,10 +1,11 @@
 ;;; init-elfeed.el -*- lexical-binding: t -*-
 
-(req 'elfeed
+(liby 'elfeed
+
+  (auto (elfeed) "elfeed")
+  (muki:define-launcher-key "l" 'elfeed)
 
   (muki:load "~/.elfeed-feeds")
-
-  (muki:define-launcher-key "l" 'elfeed)
 
   ;; Somewhere in your .emacs file
   (set-option elfeed-feeds
@@ -21,7 +22,8 @@
     (let ((entry (elfeed-search-selected :single)))
       (xcowsay (elfeed-entry-title entry))))
 
-  (muki:define-key elfeed-search-mode-map "x" #'elfeed-xcowsay)
+  (after 'elfeed
+      (muki:define-key elfeed-search-mode-map "x" #'elfeed-xcowsay))
   )
 
 (provide 'init-elfeed)
