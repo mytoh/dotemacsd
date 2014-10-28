@@ -144,10 +144,16 @@ is a kind of temporary one which is not confirmed yet."
   (evil-leader/set-key
       ";" 'helm-M-x)
 
+  (cl-defun switch-to-scratch-buffer ()
+    (interactive)
+    (switch-to-buffer
+     (get-buffer-create "*scratch*")))
+
   (evil-leader/set-key
       "b K"  'muki:kill-other-buffers
     "b n"  'switch-to-next-buffer
-    "b p"  'switch-to-prev-buffer)
+    "b p"  'switch-to-prev-buffer
+    "b s" 'switch-to-scratch-buffer)
 
   (liby 'eshell-session
     (evil-leader/set-key
@@ -236,8 +242,10 @@ is a kind of temporary one which is not confirmed yet."
   (define-key evil-normal-state-map "L" 'evil-lisp-state)
   (define-key evil-lisp-state-map (kbd "C-g") 'evil-normal-state))
 
-(req 'evil-escape
-  (evil-escape-mode))
+(req 'evil-jumper)
+
+;; (req 'evil-escape
+;;   (evil-escape-mode))
 
 (provide 'init-evil)
 
