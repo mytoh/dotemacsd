@@ -53,7 +53,7 @@
          `(cl-locally
               (cl-etypecase ,key
                 (string (define-key ,keymap (kbd ,key) ,def))
-                (t (define-key keymap ,key ,def)))
+                (t (define-key ,keymap ,key ,def)))
             (muki:define-key ,keymap ,@(cddr body))))))
 
 
