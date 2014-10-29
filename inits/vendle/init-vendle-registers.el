@@ -188,7 +188,7 @@
                  '(:deps ("kbkbkbkb1/guide-key"
                           "emacsmirror/pos-tip")))
 (vendle:register "clojure-emacs/clojure-mode")
-(vendle:register "jlr/rainbow-delimiters")
+(vendle:register "Fanael/rainbow-delimiters")
 (vendle:register "zk-phi/highlight-stages")
 (vendle:register "zk-phi/indent-guide")
 (vendle:register "jschaf/emacs-lorem-ipsum")
@@ -235,7 +235,9 @@
 (vendle:register "victorhge/iedit")
 (vendle:register "gaudecker/mip-mode")
 (vendle:register "mugijiru/cat-mode")
-
+(vendle:register "syl20bnr/vi-tilde-fringe"
+                 '(:tag "vi"))
+(vendle:register "Fanael/highlight-defined")
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
@@ -381,6 +383,8 @@
                        '(:tag "theme"))
 (vendle:register-theme "n3mo/cyberpunk-theme.el"
                        '(:tag "theme"))
+(vendle:register-theme "Fanael/colorsarenice-theme"
+                       '(:tag "theme"))
 ;; (vendle:register-theme "ccann/badger-theme")"
 
 
@@ -493,6 +497,23 @@
 (vendle:fetch "takaishi/.emacs.d"
               '(:tag "dotfiles"))
 (vendle:fetch "nanasess/dot.emacs")
+(vendle:fetch "technomancy/better-defaults")
+(vendle:fetch "chrismccord/dot_emacs")
+(vendle:fetch "thomasf/dotfiles-thomasf-emacs"
+              '(:tag ( "dotfiles" "evil" )))
+(vendle:fetch "xcwen/site-lisp"
+              '(:tag ("evil")))
+(vendle:fetch "yangchenyun/emacs-prelude"
+              '(:tag ( "dotfiles" "evil" )))
+(vendle:fetch "gabriel-laddel/masamune-os"
+              '(:tag "dotfiles"))
+(vendle:fetch "Fanael/init.el"
+              '(:tag "dotfiles"))
+(vendle:fetch "deftsp/.emacs.d"
+              '(:tag ("dotfiles" "evil")))
+(vendle:fetch "zhen-qin/.emacs.d"
+              '(:tag ("dotfiles" "evil")))
+(vendle:fetch "LeifAndersen/Emacs")
 
 (provide 'init-vendle-registers)
 

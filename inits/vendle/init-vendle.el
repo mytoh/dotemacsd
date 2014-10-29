@@ -259,7 +259,7 @@
     (turn-on-css-eldoc))
 
   (liby 'web-beautify
-    (auto (web-beatify-css-buffer) "web-beautify")
+    (auto (web-beautify-css-buffer) "web-beautify")
     (after 'css-mode
         (add-hook 'css-mode-hook
          (lambda ()
@@ -411,8 +411,17 @@
   (req 'cat-mode)
 
   (req 'rich-minority
-    (rich-minority-mode 1)
+    (add-to-list 'rm-text-properties
+                 '("Golden" 'face 'font-lock-variable-face))
+    (rich-minority-mode 1))
+
+  (liby 'highlight-defined
+    (auto (highlight-defined-mode) "highlight-defined")
+    (add-hook 'emacs-lisp-mode-hook 'highlight-defined-mode)
     )
+
+  ;; (req 'vi-tilde-fringe
+  ;;   (add-hook 'prog-mode-hook 'vi-tilde-fringe-mode))
 
   ;; (liby 'aggressive-indent
   ;;   (auto (aggressive-indent-mode) "aggressive-indent")
@@ -441,8 +450,8 @@
   (liby 'helm-project-buffer
     (auto (helm-project-buffer) "helm-project-buffer")
     (muki:global-set-key "C-x b" 'helm-project-buffer))
-  (req 'init-helm-ag-r)
-  ;; (req 'init-helm-ag)
+  ;; (req 'init-helm-ag-r)
+  (req 'init-helm-ag)
   (req 'init-helm-swoop)
   (req 'init-helm-helm-commands)
   (req 'init-wgrep-helm)
@@ -455,7 +464,7 @@
     (cl-remove-if-not
      (lambda (p)
        (cl-find-if (lambda (v) (equalp (vendle:package-name v)
-                                       p))
+                                  p))
                    *vendle-package-list*))
      (cl-mapcar
       (lambda (p) (format "%s" p))

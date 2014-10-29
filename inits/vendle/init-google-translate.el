@@ -4,8 +4,6 @@
 
 (req 'google-translate
 
-  (auto (google-translate-default-ui)
-        "google-translate-default-ui")
 
   (cl-letf ((mpv (executable-find "mpv")))
     (when mpv
@@ -17,8 +15,8 @@
   ;; (setq google-translate-default-source-language "en")
   ;; (setq google-translate-default-target-language "fi")
 
-  (auto (google-translate-smooth-ui) "google-translate")
-  (auto (google-translate-smooth-ui) "google-translate-smooth-ui")
+
+  (req 'google-translate-smooth-ui)
 
   (setq google-translate-translation-directions-alist
         '(("fi" . "en") ("en" . "fi") ("fi" . "ja") ("ja" . "fi")))
