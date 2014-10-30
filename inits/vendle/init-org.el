@@ -143,15 +143,16 @@
 
 (add-hook 'org-mode-hook
           (lambda ()
-(muki:define-key org-mode-map "C-c o o" 'helm-org-headlines)
-(muki:define-key org-mode-map "C-c o b" 'muki:org-insert-book-drawer)))
+            (add-key org-mode-map
+                     "C-c o o" 'helm-org-headlines
+                     "C-c o b" 'muki:org-insert-book-drawer)))
 
 ;;;; Viewing, navigating, and editing the Org tree
 ;;     I often cut and paste subtrees. This makes it easier to cut
 ;;     something and paste it elsewhere in the hierarchy.
 ;;     #+begin_src emacs-lisp
 (after 'org
-    (muki:define-key org-mode-map "C-c k" 'org-cut-subtree)
+    (add-key org-mode-map "C-c k" 'org-cut-subtree)
   (setq org-yank-adjusted-subtrees t))
 
 (add-hook 'org-mode-hook

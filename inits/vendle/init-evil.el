@@ -60,14 +60,14 @@
      ("C-f" . evil-forward-char)
      ("C-b" . evil-backward-char)))
 
-  (muki:define-key evil-normal-state-map (kbd "C-r") 'isearch-backward)
+  (add-key evil-normal-state-map (kbd "C-r") 'isearch-backward)
   (define-key evil-motion-state-map ";" 'evil-ex)
   (define-key evil-insert-state-map (kbd "C-c") 'evil-normal-state)
   (define-key evil-visual-state-map (kbd "C-c") 'evil-exit-visual-state)
 
-  (muki:define-key evil-ex-completion-map
-    "M-p" 'previous-complete-history-element
-    "M-n" 'next-complete-history-element)
+  (add-key evil-ex-completion-map
+           "M-p" 'previous-complete-history-element
+           "M-n" 'next-complete-history-element)
 
   (liby 'helm
     (evil-ex-define-cmd "e[dit]" 'helm-find-files))

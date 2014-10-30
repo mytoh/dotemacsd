@@ -77,6 +77,6 @@
 (setq lisp-indent-function 'common-lisp-indent-function)
 
 ;;;; keymap
-(muki:define-key emacs-lisp-mode-map "C-m" 'newline-and-indent)
+(add-key emacs-lisp-mode-map "C-m" 'newline-and-indent)
 
 (provide 'lang-elisp)

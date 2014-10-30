@@ -11,8 +11,9 @@
   (add-to-list 'company-backends 'company-ispell t)
   (add-to-list 'company-backends 'company-files t)
 
-  (muki:define-key company-active-map "C-n" 'company-select-next)
-  (muki:define-key company-active-map "C-p" 'company-select-previous)
+  (add-key company-active-map
+           "C-n" 'company-select-next
+           "C-p" 'company-select-previous)
 
   (set-face-attribute 'company-tooltip-selection nil
                       :background (muki:colour-hsl-to-hex 19 60 50))

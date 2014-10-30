@@ -124,7 +124,7 @@ controls, run `mixer' in a shell."
   (add-global-key "C-c m" 'muki:emms-map)
   (defun muki:define-emms-key (key func)
     "define personal key mappings"
-    (muki:define-key muki:emms-map key func))
+    (add-key muki:emms-map key func))
   (muki:define-emms-key "P" 'emms-pause)
   (muki:define-emms-key "s" 'emms-stop)
   (muki:define-emms-key "p" 'emms-previous)

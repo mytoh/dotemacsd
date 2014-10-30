@@ -23,7 +23,7 @@
       (xcowsay (elfeed-entry-title entry))))
 
   (after 'elfeed
-      (muki:define-key elfeed-search-mode-map "x" #'elfeed-xcowsay))
+      (add-key elfeed-search-mode-map "x" #'elfeed-xcowsay))
   )
 
 (provide 'init-elfeed)

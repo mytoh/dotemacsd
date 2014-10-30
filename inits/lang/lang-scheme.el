@@ -46,7 +46,7 @@
      (get-buffer-create buf-name))))
 
 (cl-defun muki:scheme-mode-hook ()
-  (muki:define-key scheme-mode-map "C-c C-s" 'muki:scheme-other-window)
+  (add-key scheme-mode-map "C-c C-s" 'muki:scheme-other-window)
   (cl-dolist (f '(muki:lisp-cleanup
                   whitespace-cleanup
                   muki:lisp-before-save-hook))

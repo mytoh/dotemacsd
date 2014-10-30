@@ -1,7 +1,7 @@
 ;;; config-key.el  -*- lexical-binding: t -*-
 
 ;;;; indent
-(muki:define-key lisp-interaction-mode-map "C-m" 'newline-and-indent)
+(add-key lisp-interaction-mode-map "C-m" 'newline-and-indent)
 
 ;;;; help
 (define-key global-map "\M-?" 'help-for-help) ; ヘルプ

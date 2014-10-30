@@ -8,7 +8,7 @@
   (after 'eww
       (set-option eww-download-directory "~/huone/lataukset")
     (set-option eww-search-prefix "https://duckduckgo.com/html/?q=!g+")
-    (muki:define-key eww-mode-map "C-i" 'shr-next-link))
+    (add-key eww-mode-map "C-i" 'shr-next-link))
 
   (cl-defun muki:eww (url)
     (interactive "sEnter URL or keywords: ")
