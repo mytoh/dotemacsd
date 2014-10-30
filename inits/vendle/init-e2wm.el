@@ -4,7 +4,7 @@
 
 (liby 'e2wm
   (auto (e2wm:start-management) "e2wm")
-  (muki:global-set-key "M-+" 'e2wm:start-management)
+  (add-global-key "M-+" 'e2wm:start-management)
 
   (setq e2wm:def-plugin-clock-url "http://www.avtokei.jp/images/clocks/%H/%H%M.jpg\?1277461066")
   (setq e2wm:def-plugin-clock-referer "http://www.avtokei.jp/index.html")

@@ -48,7 +48,7 @@
 
        ;;;; keymap
     (define-prefix-command 'muki:emms-map)
-    (muki:global-set-key "C-c m" 'muki:emms-map)
+    (add-global-key "C-c m" 'muki:emms-map)
     (defun muki:define-emms-key (key func)
       "define personal key mappings"
       (muki:define-key muki:emms-map key func))

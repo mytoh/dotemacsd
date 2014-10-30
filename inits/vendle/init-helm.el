@@ -32,16 +32,16 @@ Otherwise goto the end of minibuffer."
                            (interactive)
                            (helm-select-nth-action ,n))))
 
-  (muki:global-set-key "M-x" 'helm-M-x)
-  (muki:global-set-key "C-c C-m" 'helm-M-x)
-  (muki:global-set-key "M-y" 'helm-show-kill-ring)
-  (muki:global-set-key "C-M-z" 'helm-resume)
-  (muki:global-set-key [remap find-file] 'helm-find-files)
-  (muki:global-set-key [remap occur] 'helm-occur)
-  (muki:global-set-key [remap list-buffers] 'helm-buffers-list)
-  (muki:global-set-key [remap jump-to-register] 'helm-register)
-  (muki:global-set-key [remap dabbrev-expand]   'helm-dabbrev)
-  (muki:global-set-key [remap find-tag]         'helm-etags-select)
+  (add-global-key "M-x" 'helm-M-x
+                  "C-c C-m" 'helm-M-x
+                  "M-y" 'helm-show-kill-ring
+                  "C-M-z" 'helm-resume
+                  [remap find-file] 'helm-find-files
+                  [remap occur] 'helm-occur
+                  [remap list-buffers] 'helm-buffers-list
+                  [remap jump-to-register] 'helm-register
+                  [remap dabbrev-expand]   'helm-dabbrev
+                  [remap find-tag]         'helm-etags-select)
 
   (muki:define-key helm-map "C-M-n" 'helm-next-source)
   (muki:define-key helm-map "C-M-p" 'helm-previous-source)
@@ -81,6 +81,9 @@ Otherwise goto the end of minibuffer."
   ;; match plugin
   (set-option helm-mp-highlight-delay 0.2)
 
+  ;; use curl
+  (when (executable-find "curl")
+    (enable-option helm-google-suggest-use-curl-p))
 
   (set-option helm-external-programs-associations
               '(("cbz" . "mcomix")
@@ -138,7 +141,7 @@ Otherwise goto the end of minibuffer."
 
 ;; cmd-t
 (req 'helm-cmd-t
-  (muki:global-set-key "M-t" 'helm-cmd-t))
+  (add-global-key "M-t" 'helm-cmd-t))
 ;; (req 'helm-C-x-b
 ;;      (muki:define-key global-map [remap switch-to-buffer] 'helm-C-x-b))
 

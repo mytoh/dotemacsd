@@ -88,7 +88,7 @@
 
   (req 'debug-print
     (debug-print-init)
-    (muki:global-set-key "C-x C-e" 'debug-print-eval-last-sexp))
+    (add-global-key "C-x C-e" 'debug-print-eval-last-sexp))
 
   ;; (req 'aozora-view)
 
@@ -103,10 +103,10 @@
   (set-option skk-user-directory (muki:user-emacs-directory "ddskk/"))
   (req 'skk-autoloads
     ;; C-x C-j で skk モードを起動
-    (muki:global-set-key "C-x C-\\" 'skk-mode)
-    (muki:global-set-key "C-x C-j" 'skk-mode)
-    ;; enable skk mode by pressing カタカナ/ひらがな key
-    (muki:global-set-key [hiragana-katakana] 'skk-mode)
+    (add-global-key "C-x C-\\" 'skk-mode
+                    "C-x C-j" 'skk-mode
+                    ;; enable skk mode by pressing カタカナ/ひらがな key
+                    [hiragana-katakana] 'skk-mode)
     ;; set default input method to skk
     ;; (setq default-input-method "japanese-skk")
     ;; .skk を自動的にバイトコンパイル
@@ -192,7 +192,7 @@
       (if mark-active
           (quickrun :start start :end end)
         (quickrun)))
-    (muki:global-set-key "<f5>" 'quickrun-sc)
+    (add-global-key "<f5>" 'quickrun-sc)
     (after "popwin"
         (push '("*quickrun*") popwin:special-display-config))
     (quickrun-add-command "scheme/gosh-r7rs"
@@ -230,8 +230,8 @@
 
   (liby 'rotate
     (auto (rotate-layout rotate-window) "rotate")
-    (muki:global-set-key "C-c C-SPC" 'rotate-layout)
-    (muki:global-set-key "C-c C-c C-SPC" 'rotate-window))
+    (add-global-key "C-c C-SPC" 'rotate-layout
+                    "C-c C-c C-SPC" 'rotate-window))
 
   (req 'git-timemachine)
 
@@ -247,7 +247,7 @@
   (liby 'yamada
     (auto (yamada) "yamada")
 
-    ;; (muki:global-set-key "C-c C-c C-y" 'yamada-dancing)
+    ;; (add-global-key "C-c C-c C-y" 'yamada-dancing)
 
     ;; (yamada-dancing 1) ;; or C-c C-c C-y (M-x yamada-dancing)
     ;; (yamada-dancing 5) ;; or C-u 5 C-c C-c C-y
@@ -335,7 +335,7 @@
   (req 'init-multiple-cursors)
 
   ;; (req 'comment-dwim-2
-  ;;   (muki:global-set-key  "M-;" 'comment-dwim-2))
+  ;;   (add-global-key  "M-;" 'comment-dwim-2))
 
   (req 'init-auto-highlight-symbol)
 
@@ -449,7 +449,7 @@
   (req 'init-helm-alku)
   (liby 'helm-project-buffer
     (auto (helm-project-buffer) "helm-project-buffer")
-    (muki:global-set-key "C-x b" 'helm-project-buffer))
+    (add-global-key "C-x b" 'helm-project-buffer))
   ;; (req 'init-helm-ag-r)
   (req 'init-helm-ag)
   (req 'init-helm-swoop)

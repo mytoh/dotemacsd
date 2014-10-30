@@ -2,10 +2,10 @@
 (req 'helm-swoop
 
   ;; キーバインドはお好みで
-  (muki:global-set-key "M-i" 'helm-swoop)
-  (muki:global-set-key "M-I" 'helm-swoop-back-to-last-point)
-  (muki:global-set-key "C-c M-i" 'helm-multi-swoop)
-  (muki:global-set-key "C-x M-i" 'helm-multi-swoop-all)
+  (add-global-key "M-i" 'helm-swoop
+                  "M-I" 'helm-swoop-back-to-last-point
+                  "C-c M-i" 'helm-multi-swoop
+                  "C-x M-i" 'helm-multi-swoop-all)
 
   ;; isearch実行中にhelm-swoopに移行
   (define-key isearch-mode-map (kbd "M-i") 'helm-swoop-from-isearch)
