@@ -390,18 +390,18 @@
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
-              (vendle:register-local (expand-file-name path "~/huone/projektit")
-                                     option)))
-  (add-project-root  "emacs-flatline")
-  (add-project-root "helm-ypv" '(:tag "helm"))
-  (add-project-root "company-scheme" '(:tag ("company" "scheme")))
-  (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
-  (add-project-root "emacs-lehtifile-mode")
-  (add-project-root "helm-alku" '(:tag ("helm")))
-  (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
-  (add-project-root "emacs-eshell-session" '(:tag "eshell"))
-  (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
-  (add-project-root "helm-project-buffer" '(:tag "helm")))
+                              (vendle:register-local (expand-file-name path "~/huone/projektit")
+                                                     option)))
+           (add-project-root  "emacs-flatline")
+           (add-project-root "helm-ypv" '(:tag "helm"))
+           (add-project-root "company-scheme" '(:tag ("company" "scheme")))
+           (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
+           (add-project-root "emacs-lehtifile-mode")
+           (add-project-root "helm-alku" '(:tag ("helm")))
+           (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
+           (add-project-root "emacs-eshell-session" '(:tag "eshell"))
+           (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
+           (add-project-root "helm-project-buffer" '(:tag "helm")))
 
 (cond
   ((file-directory-p (muki:user-emacs-directory "vendle/ddskk"))
@@ -506,7 +506,8 @@
 (vendle:fetch "yangchenyun/emacs-prelude"
               '(:tag ( "dotfiles" "evil" )))
 (vendle:fetch "gabriel-laddel/masamune-os"
-              '(:tag "dotfiles"))
+              '(:tag ( "lisp" "nix" "stumpwm")))
+(vendle:fetch "gabriel-laddel/masamune")
 (vendle:fetch "Fanael/init.el"
               '(:tag "dotfiles"))
 (vendle:fetch "deftsp/.emacs.d"
@@ -514,6 +515,12 @@
 (vendle:fetch "zhen-qin/.emacs.d"
               '(:tag ("dotfiles" "evil")))
 (vendle:fetch "LeifAndersen/Emacs")
+(vendle:fetch "uwabami/emacs-config")
+(vendle:fetch "farseer90718/dotemacs")
+(vendle:fetch "bixuanzju/emacs.d")
+(vendle:fetch "mahinshaw/emacsd"
+              '(:tag ("evil")))
+
 
 (provide 'init-vendle-registers)
 
