@@ -24,10 +24,10 @@
 (global-set-key (kbd muki:launcher-prefix-key) 'muki:launcher-map)
 
 (cl-defun muki:define-launcher-key (key def)
-  "define personal global key mappings"
-  (cl-letf ((k (kbd key)))
-    (muki:define-key muki:launcher-map k def)
-    (message "bind %s to %s" k (symbol-name def))))
+          "define personal global key mappings"
+          (cl-letf ((k (kbd key)))
+                   (muki:define-key muki:launcher-map k def)
+                   (message "bind %s to %s" k (symbol-name def))))
 
 ;; (define-minor-mode muki-keys-mode
 ;;     "muki keymapping"
@@ -40,22 +40,26 @@
 
 ;;; keymap utils
 (cl-defun muki:global-set-key (key func)
-  (cl-etypecase key
-    (string (global-set-key (kbd key) func))
-    (t (global-set-key key func))))
+          (cl-etypecase key
+                        (string (global-set-key (kbd key) func))
+                        (t (global-set-key key func))))
+
+(cl-defmacro add-global-key (&rest bindings)
+             (declare (debug t))
+             `(muki:define-key global-map ,@bindings))
+
 
 (cl-defmacro muki:define-key (keymap &rest body)
-  (declare (debug t)
-           (indent 1))
-  (and body
-       (cl-letf ((key (car body))
-                 (def (cadr body)))
-         `(cl-locally
-              (cl-etypecase ,key
-                (string (define-key ,keymap (kbd ,key) ,def))
-                (t (define-key ,keymap ,key ,def)))
-            (muki:define-key ,keymap ,@(cddr body))))))
-
+             (declare (debug t)
+                      (indent 1))
+             (and body
+                  (cl-letf ((key (car body))
+                            (def (cadr body)))
+                           `(cl-locally
+                             (cl-etypecase ,key
+                                           (string (define-key ,keymap (kbd ,key) ,def))
+                                           (t (define-key ,keymap ,key ,def)))
+                             (muki:define-key ,keymap ,@(cddr body))))))
 
 (provide 'muki-key)
 
