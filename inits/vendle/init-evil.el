@@ -23,8 +23,8 @@
 
   (enable-mode evil-mode)
   ;; [[http://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/]]
-  (defadvice evil-search-next (after advice-for-evil-ex-search-next activate)
-    (evil-scroll-line-to-center (line-number-at-pos)))
+  ;; (defadvice evil-search-next (after advice-for-evil-ex-search-next activate)
+  ;;   (evil-scroll-line-to-center (line-number-at-pos)))
 
   ;; [[https://github.com/supermomonga/dot-emacs/blob/master/package-config/evil.el]]
   (add-key evil-normal-state-map  "C-h"
@@ -123,11 +123,8 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 
 
   ;; advice for evil search
-  (defadvice evil-ex-search-next (after advice-for-evil-ex-search-next activate)
-    (recenter))
-
-  (defadvice evil-ex-search-previous (after advice-for-evil-ex-search-previous activate)
-    (recenter))
+  (advice-add 'evil-ex-search-next :after 'recenter)
+  (advice-add 'evil-ex-search-previous :after 'recenter)
 
   (liby 'skk
     ;; [[http://d.hatena.ne.jp/tarao/20130304/evil_config]]
