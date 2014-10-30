@@ -27,12 +27,12 @@
     (evil-scroll-line-to-center (line-number-at-pos)))
 
   ;; [[https://github.com/supermomonga/dot-emacs/blob/master/package-config/evil.el]]
-  (define-key evil-normal-state-map (kbd "C-h")
-    (lambda ()
-      (interactive)
-      (evil-insert-state)
-      (insert-string " ")
-      (evil-normal-state)))
+  (add-key evil-normal-state-map  "C-h"
+           (lambda ()
+             (interactive)
+             (evil-insert-state)
+             (insert-string " ")
+             (evil-normal-state)))
 
   ;; 物理行移動と論理行移動を入れ替え
   ;; http://d.hatena.ne.jp/tarao/20130304/evil_config#misc-physical-line
@@ -41,8 +41,8 @@
     "Swap KEY1 and KEY2 in MAP."
     (let ((def1 (lookup-key map key1))
           (def2 (lookup-key map key2)))
-      (define-key map key1 def2)
-      (define-key map key2 def1)))
+      (add-key map key1 def2)
+      (add-key map key2 def1)))
   (evil-swap-key evil-motion-state-map "j" "gj")
   (evil-swap-key evil-motion-state-map "k" "gk")
 
@@ -51,7 +51,7 @@
    (lambda (l)
      (cl-mapc
       (lambda (m)
-        (define-key m (kbd (car l)) (cdr l)))
+        (add-key m (car l) (cdr l)))
       (list evil-insert-state-map
             evil-motion-state-map)))
    '(("C-e" . evil-end-of-line)
@@ -60,14 +60,14 @@
      ("C-f" . evil-forward-char)
      ("C-b" . evil-backward-char)))
 
-  (add-key evil-normal-state-map (kbd "C-r") 'isearch-backward)
-  (define-key evil-motion-state-map ";" 'evil-ex)
-  (define-key evil-insert-state-map (kbd "C-c") 'evil-normal-state)
-  (define-key evil-visual-state-map (kbd "C-c") 'evil-exit-visual-state)
+  (add-key evil-normal-state-map  "C-r" 'isearch-backward)
+  (add-key evil-motion-state-map ";" 'evil-ex)
+  (add-key evil-insert-state-map  "C-c" 'evil-normal-state)
+  (add-key evil-visual-state-map  "C-c" 'evil-exit-visual-state)
 
   (add-key evil-ex-completion-map
-           "M-p" 'previous-complete-history-element
-           "M-n" 'next-complete-history-element)
+    "M-p" 'previous-complete-history-element
+    "M-n" 'next-complete-history-element)
 
   (liby 'helm
     (evil-ex-define-cmd "e[dit]" 'helm-find-files))
@@ -79,8 +79,8 @@
   ;; smartparen
   (liby 'smartparens
     (with-eval-after-load 'smartparens
-      ;; (define-key evil-normal-state-map ")" 'sp-up-sexp)
-      ;; (define-key evil-normal-state-map "(" 'sp-backward-up-sexp)
+      ;; (add-key evil-normal-state-map ")" 'sp-up-sexp)
+      ;; (add-key evil-normal-state-map "(" 'sp-backward-up-sexp)
       ))
 
   ;; [[https://github.com/davvil/.emacs.d/blob/master/init.el]]
@@ -95,14 +95,14 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
         (setq deactivate-mark  t)
       (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
       (abort-recursive-edit)))
-  (define-key evil-normal-state-map [escape] 'keyboard-quit)
-  (define-key evil-visual-state-map [escape] 'keyboard-quit)
-  (define-key evil-emacs-state-map [escape] 'keyboard-quit)
-  (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
-  (define-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
-  (define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
-  (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
-  (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+  (add-key evil-normal-state-map [escape] 'keyboard-quit)
+  (add-key evil-visual-state-map [escape] 'keyboard-quit)
+  (add-key evil-emacs-state-map [escape] 'keyboard-quit)
+  (add-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
+  (add-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
+  (add-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
+  (add-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
+  (add-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
   (global-set-key [escape] 'evil-exit-emacs-state)
 
   (cl-loop for (mode . state) in '((git-commit-mode . insert)
@@ -201,11 +201,11 @@ is a kind of temporary one which is not confirmed yet."
 (liby 'evil-nerd-commenter
   ;; (set-opton evilnc-hotkey-comment-operator ",,")
   (req 'evil-nerd-commenter
-    (define-key evil-normal-state-map ",ci" 'evilnc-comment-or-uncomment-lines)
-    (define-key evil-normal-state-map ",cl" 'evilnc-comment-or-uncomment-to-the-line)
-    (define-key evil-normal-state-map ",cc" 'evilnc-copy-and-comment-lines)
-    (define-key evil-normal-state-map ",cp" 'evilnc-comment-or-uncomment-paragraphs)
-    (define-key evil-normal-state-map ",cr" 'comment-or-uncomment-region)))
+    (add-key evil-normal-state-map ",ci" 'evilnc-comment-or-uncomment-lines)
+    (add-key evil-normal-state-map ",cl" 'evilnc-comment-or-uncomment-to-the-line)
+    (add-key evil-normal-state-map ",cc" 'evilnc-copy-and-comment-lines)
+    (add-key evil-normal-state-map ",cp" 'evilnc-comment-or-uncomment-paragraphs)
+    (add-key evil-normal-state-map ",cr" 'comment-or-uncomment-region)))
 
 (req 'evil-surround
   (enable-mode global-evil-surround-mode)
@@ -249,8 +249,8 @@ is a kind of temporary one which is not confirmed yet."
 
 
 (req 'evil-lisp-state
-  (define-key evil-normal-state-map "L" 'evil-lisp-state)
-  (define-key evil-lisp-state-map (kbd "C-g") 'evil-normal-state))
+  (add-key evil-normal-state-map "L" 'evil-lisp-state)
+  (add-key evil-lisp-state-map "C-g" 'evil-normal-state))
 
 (req 'evil-jumper)
 
