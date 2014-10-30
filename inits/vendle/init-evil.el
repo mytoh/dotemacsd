@@ -121,6 +121,14 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
                                    (dired-mode . emacs))
      do (evil-set-initial-state mode state))
 
+
+  ;; advice for evil search
+  (defadvice evil-ex-search-next (after advice-for-evil-ex-search-next activate)
+    (recenter))
+
+  (defadvice evil-ex-search-previous (after advice-for-evil-ex-search-previous activate)
+    (recenter))
+
   (liby 'skk
     ;; [[http://d.hatena.ne.jp/tarao/20130304/evil_config]]
     (defadvice evil-ex-search-update-pattern
@@ -135,7 +143,8 @@ is a kind of temporary one which is not confirmed yet."
     (if (boundp 'skk-mode)
         (defun-add-hook muki:evil-disable-skk (evil-normal-state-entry-hook)
           (if skk-mode
-              (skk-mode-off))))))
+              (skk-mode-off)))))
+  )
 
 (req 'evil-leader
   (global-evil-leader-mode)
