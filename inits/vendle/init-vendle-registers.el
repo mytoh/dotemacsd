@@ -238,6 +238,11 @@
 (vendle:register "syl20bnr/vi-tilde-fringe"
                  '(:tag "vi"))
 (vendle:register "Fanael/highlight-defined")
+(vendle:register "Bruce-Connor/conkeror-minor-mode")
+(vendle:register "larsmagne/movie.el"
+                 '(:deps ("larsmagne/pvr.el"
+                          "larsmagne/imdb.el")
+                   :desc "http://lars.ingebrigtsen.no/2011/04/12/emacs-movie-browser/" ))
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
@@ -299,6 +304,8 @@
 (vendle:register "gridaphobe/evil-god-state"
                  '(:tag "evil"
                    :deps ( "chrisdone/god-mode" )))
+(vendle:register "vermiculus/stack-mode")
+(vendle:register "tarleb/evil-scout")
 
 ;;;;; org
 (vendle:register "git://orgmode.org/org-mode.git"
@@ -385,23 +392,25 @@
                        '(:tag "theme"))
 (vendle:register-theme "Fanael/colorsarenice-theme"
                        '(:tag "theme"))
-;; (vendle:register-theme "ccann/badger-theme")"
+(vendle:register-theme "kodx/TangoDark"
+                       '(:tag "theme"))
+;; (vendle:register-theme "ccann/badger-theme")
 
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
-                              (vendle:register-local (expand-file-name path "~/huone/projektit")
-                                                     option)))
-           (add-project-root  "emacs-flatline")
-           (add-project-root "helm-ypv" '(:tag "helm"))
-           (add-project-root "company-scheme" '(:tag ("company" "scheme")))
-           (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
-           (add-project-root "emacs-lehtifile-mode")
-           (add-project-root "helm-alku" '(:tag ("helm")))
-           (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
-           (add-project-root "emacs-eshell-session" '(:tag "eshell"))
-           (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
-           (add-project-root "helm-project-buffer" '(:tag "helm")))
+              (vendle:register-local (expand-file-name path "~/huone/projektit")
+                                     option)))
+  (add-project-root  "emacs-flatline")
+  (add-project-root "helm-ypv" '(:tag "helm"))
+  (add-project-root "company-scheme" '(:tag ("company" "scheme")))
+  (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
+  (add-project-root "emacs-lehtifile-mode")
+  (add-project-root "helm-alku" '(:tag ("helm")))
+  (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
+  (add-project-root "emacs-eshell-session" '(:tag "eshell"))
+  (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
+  (add-project-root "helm-project-buffer" '(:tag "helm")))
 
 (cond
   ((file-directory-p (muki:user-emacs-directory "vendle/ddskk"))
@@ -520,6 +529,8 @@
 (vendle:fetch "bixuanzju/emacs.d")
 (vendle:fetch "mahinshaw/emacsd"
               '(:tag ("evil")))
+(vendle:fetch "bosko/boem")
+(vendle:fetch "jceb/vim-orgmode")
 
 
 (provide 'init-vendle-registers)

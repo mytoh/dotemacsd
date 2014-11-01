@@ -97,11 +97,38 @@
     ))
 
 
+(cl-defun set-neep-font ()
+  (cl-letf ((k10  "-misc-fixed-medium-r-normal--10-*-75-75-c-100-jisx0208.1983-0")
+            (neep "-jmk-Neep-normal-normal-semicondensed-*-11-*-*-*-c-50-iso10646-1")
+            (r10 "-misc-fixed-medium-r-normal--10-*-75-75-c-50-jisx0201.1976-0")
+            (misc-iso "-misc-fixed-medium-r-normal--10-*-75-75-c-60-iso10646-1")
+            (mplus-fxd "-mplus-fxd-normal-normal-normal-*-10-*-*-*-c-60-iso10646-1")
+            (symbola "-unknown-Symbola-normal-normal-semicondensed-*-*-*-*-*-*-0-iso10646-1")
+            (fontset "fontset-naga10"))
+    (create-fontset-from-ascii-font
+     "-misc-fixed-medium-r-normal--10-*-*-*-*-*"
+     nil
+     "naga10")
+
+    (cl-flet ((set (script font) (set-fontset-font fontset script font)))
+      (set 'ascii       neep)
+      (set 'latin       neep)
+      (set 'japanese-jisx0208 k10)
+      (set 'katakana-jisx0201       r10)
+      (set 'kana k10)
+      (set 'cjk-misc misc-iso)
+      (set 'han k10)
+      (set 'symbol symbola))
+
+    (add-to-list 'default-frame-alist `(font . ,fontset))
+    ))
+
 (cl-defun muki:set-font (type)
   (cond
     ((cl-equalp type 'bitmap)
      ;; (set-ascii-font)
-     (set-naga10-font)
+     ;; (set-naga10-font)
+     (set-neep-font)
      ;; (set-symbol-font)
      (set-cyrillic-font)
      ;; (set-japanese-font)
@@ -113,6 +140,6 @@
      (set-cyrillic-font)
      (set-japanese-font))))
 
-(muki:set-font 'antialias)
+(muki:set-font 'bitmap)
 
 (provide 'config-font)

@@ -72,6 +72,27 @@
   (liby 'helm
     (evil-ex-define-cmd "e[dit]" 'helm-find-files))
 
+  ;; org
+  ;; normal state shortcuts
+  (evil-define-key 'motion org-mode-map
+    "]]" (if (fboundp 'org-forward-same-level) ;to be backward compatible with older org version
+             'org-forward-same-level
+           'org-forward-heading-same-level)
+    "[[" (if (fboundp 'org-backward-same-level)
+             'org-backward-same-level
+           'org-backward-heading-same-level)
+    "{" 'outline-previous-heading
+    "}" 'outline-next-heading
+    "g{" 'outline-up-heading
+    "g}" 'outline-next-heading
+    (kbd "TAB") 'org-cycle)
+
+  (evil-define-key 'normal org-mode-map
+    "<<" 'org-shiftmetaleft
+    ">>" 'org-shiftmetaright
+    "<[[" 'org-metaleft
+    ">]]" 'org-metaright)
+
   ;; eww
   (evil-define-key 'motion eww-mode-map
     "<TAB>" 'shr-next-link)
@@ -149,7 +170,9 @@ is a kind of temporary one which is not confirmed yet."
   (enable-option evil-leader/in-all-states)
 
   (evil-leader/set-key
-      ";" 'helm-M-x)
+      "x r" 'revert-buffer
+    "x s" 'eval-last-sexp
+    )
 
   (cl-defun switch-to-scratch-buffer ()
     (interactive)
@@ -183,7 +206,8 @@ is a kind of temporary one which is not confirmed yet."
 
   (liby 'helm
     (evil-leader/set-key
-        "?" 'helm-descbinds
+        ";" 'helm-M-x
+      "?" 'helm-descbinds
       "h s"   'helm-swoop
       "h t"  'helm-themes))
 
@@ -223,7 +247,9 @@ is a kind of temporary one which is not confirmed yet."
 (req 'evil-exchange
   (evil-exchange-install))
 
-(req 'evil-org)
+;; (req 'evil-org)
+
+
 
 (req 'evil-visualstar)
 

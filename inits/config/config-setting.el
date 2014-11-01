@@ -110,6 +110,15 @@
 (set-option scroll-conservatively 9999
             scroll-preserve-screen-position t)
 
+;;;; scroll one line at a time (less "jumpy" than defaults)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+
+(setq scroll-step 1) ;; keyboard scroll one line at a time
+
 ;;;; disable bars
 (if (fboundp 'menu-bar-mode) (disable-mode menu-bar-mode))
 (if (fboundp 'tool-bar-mode) (disable-mode tool-bar-mode))
@@ -228,7 +237,7 @@
 (enable-option load-prefer-newer)
 
 ;;;; invoke debugger
-(enable-option debug-on-error)
+;; (enable-option debug-on-error)
 
 ;;;; recursive minibuffer
 (enable-option enable-recursive-minibuffers)

@@ -3,18 +3,22 @@
 ;;; Code:
 
 (cl-defmacro enable-mode (mode-fn)
-  (declare (debug t))
-  `(cl-locally
-       (,mode-fn 1)
-     (muki:log "enable mode " ,(propertize (symbol-name mode-fn)
-                                           'face 'font-lock-variable-name-face))))
+             (declare (debug t))
+             `(cl-locally
+               (,mode-fn 1)
+               (muki:log "enable mode " ,(propertize (symbol-name mode-fn)
+                                                     'face 'font-lock-variable-name-face))))
 
 (cl-defmacro disable-mode (mode-fn)
-  (declare (debug t))
-  `(cl-locally
-       (,mode-fn -1)
-     (muki:log "disable mode " ,(propertize (symbol-name mode-fn)
-                                            'face 'font-lock-variable-name-face))))
+             (declare (debug t))
+             `(cl-locally
+               (,mode-fn -1)
+               (muki:log "disable mode " ,(propertize (symbol-name mode-fn)
+                                                      'face 'font-lock-variable-name-face))))
+
+(cl-defun mode (regexp fn)
+          (add-to-list 'auto-mode-alist
+                       `(,regexp . ,fn)))
 
 (provide 'muki-mode)
 ;;; muki-mode.el ends here
