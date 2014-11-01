@@ -243,6 +243,8 @@
                  '(:deps ("larsmagne/pvr.el"
                           "larsmagne/imdb.el")
                    :desc "http://lars.ingebrigtsen.no/2011/04/12/emacs-movie-browser/" ))
+(vendle:register "gregsexton/httprepl.el"
+                 '(:tag ("http" "repl")))
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
@@ -531,6 +533,8 @@
               '(:tag ("evil")))
 (vendle:fetch "bosko/boem")
 (vendle:fetch "jceb/vim-orgmode")
+(vendle:fetch "borntorock/UI-toolkit-using-orgmode"
+              '(:tag ("org")))
 
 
 (provide 'init-vendle-registers)
