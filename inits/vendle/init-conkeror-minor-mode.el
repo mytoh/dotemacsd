@@ -10,7 +10,7 @@
     (when (string-match "conkeror" (buffer-file-name))
       (conkeror-minor-mode 1)))
 
-  (add-to-list 'auto-mode-alist '("\\/*conkerorrc/*.js\\'" . conkeror-minor-mode))
+  (mode "\\/*conkerorrc/*.js\\'"  conkeror-minor-mode)
 
   ;; (add-hook 'js-mode-hook 'muki:enable-conkeror-minor-mode)
   ;; (add-hook 'js3-mode-hook 'muki:enable-conkeror-minor-mode)

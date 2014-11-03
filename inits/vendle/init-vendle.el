@@ -203,14 +203,14 @@
 
   (liby 'web-mode
     (auto (web-mode) "web-mode")
-    (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-    (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
-    (add-to-list 'auto-mode-alist '("\\.[gj]sp\\'" . web-mode))
-    (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-    (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-    (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-    (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-    (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)))
+    (mode "\\.phtml\\'"  web-mode)
+    (mode "\\.tpl\\.php\\'"  web-mode)
+    (mode "\\.[gj]sp\\'"  web-mode)
+    (mode "\\.as[cp]x\\'"  web-mode)
+    (mode "\\.erb\\'"  web-mode)
+    (mode "\\.mustache\\'"  web-mode)
+    (mode "\\.djhtml\\'"  web-mode)
+    (mode "\\.html?\\'"  web-mode))
 
   (req 'init-paradox)
 
@@ -225,7 +225,7 @@
 
   (liby 'lua-mode
     (auto (lua-mode) "lua-mode" )
-    (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+    (mode "\\.lua$" lua-mode)
     (add-to-list 'interpreter-mode-alist '("lua" . lua-mode)))
 
   (liby 'rotate
@@ -277,7 +277,10 @@
   ;;   ;; あるいは (moe-light)
   ;;   )
 
-  (req 'direx)
+  (liby 'direx
+    (auto (direx:jump-to-directory
+           direx:jump-to-directory-other-window)
+          "direx"))
 
   (req 'init-e2wm)
 
@@ -342,6 +345,8 @@
 
   ;; (req 'init-auto-highlight-symbol)
 
+  (req 'init-highlight-symbol)
+
   (req 'sly-autoloads
     (setq inferior-lisp-program "sbcl"))
 
@@ -387,7 +392,7 @@
   (req 'init-rainbow-mode)
 
   (req 'markdown-mode
-    (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode)))
+    (mode "README\\.md\\'"  gfm-mode))
 
   (req 'init-google-translate)
 
