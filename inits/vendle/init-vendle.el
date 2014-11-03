@@ -203,14 +203,14 @@
 
   (liby 'web-mode
     (auto (web-mode) "web-mode")
-    (mode "\\.phtml\\'"  web-mode)
-    (mode "\\.tpl\\.php\\'"  web-mode)
-    (mode "\\.[gj]sp\\'"  web-mode)
-    (mode "\\.as[cp]x\\'"  web-mode)
-    (mode "\\.erb\\'"  web-mode)
-    (mode "\\.mustache\\'"  web-mode)
-    (mode "\\.djhtml\\'"  web-mode)
-    (mode "\\.html?\\'"  web-mode))
+    (mode "\\.phtml\\'"  'web-mode)
+    (mode "\\.tpl\\.php\\'"  'web-mode)
+    (mode "\\.[gj]sp\\'"  'web-mode)
+    (mode "\\.as[cp]x\\'"  'web-mode)
+    (mode "\\.erb\\'"  'web-mode)
+    (mode "\\.mustache\\'"  'web-mode)
+    (mode "\\.djhtml\\'"  'web-mode)
+    (mode "\\.html?\\'"  'web-mode))
 
   (req 'init-paradox)
 
@@ -225,7 +225,7 @@
 
   (liby 'lua-mode
     (auto (lua-mode) "lua-mode" )
-    (mode "\\.lua$" lua-mode)
+    (mode "\\.lua$" 'lua-mode)
     (add-to-list 'interpreter-mode-alist '("lua" . lua-mode)))
 
   (liby 'rotate
@@ -392,7 +392,7 @@
   (req 'init-rainbow-mode)
 
   (req 'markdown-mode
-    (mode "README\\.md\\'"  gfm-mode))
+    (mode "README\\.md\\'"  'gfm-mode))
 
   (req 'init-google-translate)
 
@@ -436,6 +436,13 @@
 
   (req 'aria2
     (enable-option  aria2-add-evil-quirks))
+
+
+  (liby 'eww-lnum
+    (auto (eww-lnum-follow eww-lnum-universal) "eww-lnum")
+    (after "eww"
+        (define-key eww-mode-map "f" 'eww-lnum-follow)
+      (define-key eww-mode-map "F" 'eww-lnum-universal)))
 
 
   ;; (req 'vi-tilde-fringe
@@ -482,7 +489,7 @@
     (cl-remove-if-not
      (lambda (p)
        (cl-find-if (lambda (v) (equalp (vendle:package-name v)
-                                       p))
+                                  p))
                    *vendle-package-list*))
      (cl-mapcar
       (lambda (p) (format "%s" p))
