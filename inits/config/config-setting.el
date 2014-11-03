@@ -260,7 +260,7 @@
 
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
-;; spolsky, odersky, jazz, purple-haze, warm-night, brin
+;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham
 (defvar muki:x-theme 'cyberpunk)
 (defvar muki:term-theme 'flatland)
 
@@ -354,6 +354,9 @@
 
 ;; file revert time
 (set-option auto-revert-interval 1)
+
+;; heap size
+(set-option gc-cons-percentage 0.5) ; 0.1
 
 (provide 'config-setting)
 
