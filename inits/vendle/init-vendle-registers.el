@@ -3,7 +3,6 @@
 ;;; Code:
 
 ;; * register packages
-(vendle:register "magnars/s.el")
 
 ;; ** helm
 (vendle:register "emacs-helm/helm"
@@ -61,6 +60,7 @@
                    :tag ("helm" "bibtex")))
 
 ;; ** general packages
+(vendle:register "magnars/s.el")
 (vendle:register "jonathanchu/emacs-powerline")
 (vendle:register "raugturi/powerline-evil"
                  '(:tag ("evil" "modeline")))
