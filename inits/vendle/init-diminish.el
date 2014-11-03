@@ -15,6 +15,8 @@
       (diminish 'flycheck-mode " ✔"))
   (after "outline"
       (diminish 'outline-minor-mode " 📇"))
+  (after "golden-ratio"
+      (diminish 'golden-ratio-mode " ⊞"))
 
   (after 'helm-mode
       (diminish 'helm-mode))
