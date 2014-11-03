@@ -131,6 +131,7 @@
 (vendle:register "fxbois/web-mode" '(:compile nil))
 (vendle:register "m00natic/eww-lnum")
 (vendle:register "emacsmirror/auto-highlight-symbol")
+(vendle:register "nschum/highlight-symbol.el")
 (vendle:register "emacsmirror/rainbow-mode")
 (vendle:register "skeeto/elfeed"
                  '(:tag "rss"))
@@ -423,18 +424,18 @@
 
 ;; ** local packages
 (cl-labels ((add-project-root (path &optional option)
-                              (vendle:register-local (expand-file-name path "~/huone/projektit")
-                                                     option)))
-           (add-project-root  "emacs-flatline")
-           (add-project-root "helm-ypv" '(:tag "helm"))
-           (add-project-root "company-scheme" '(:tag ("company" "scheme")))
-           (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
-           (add-project-root "emacs-lehtifile-mode")
-           (add-project-root "helm-alku" '(:tag ("helm")))
-           (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
-           (add-project-root "emacs-eshell-session" '(:tag "eshell"))
-           (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
-           (add-project-root "helm-project-buffer" '(:tag "helm")))
+              (vendle:register-local (expand-file-name path "~/huone/projektit")
+                                     option)))
+  (add-project-root  "emacs-flatline")
+  (add-project-root "helm-ypv" '(:tag "helm"))
+  (add-project-root "company-scheme" '(:tag ("company" "scheme")))
+  (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
+  (add-project-root "emacs-lehtifile-mode")
+  (add-project-root "helm-alku" '(:tag ("helm")))
+  (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
+  (add-project-root "emacs-eshell-session" '(:tag "eshell"))
+  (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
+  (add-project-root "helm-project-buffer" '(:tag "helm")))
 
 (cond
   ((file-directory-p (muki:user-emacs-directory "vendle/ddskk"))
