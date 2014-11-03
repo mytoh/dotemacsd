@@ -242,12 +242,19 @@
 (vendle:register "larsmagne/movie.el"
                  '(:deps ("larsmagne/pvr.el"
                           "larsmagne/imdb.el")
-                   :desc "http://lars.ingebrigtsen.no/2011/04/12/emacs-movie-browser/" ))
+                   :desc "http://lars.ingebrigtsen.no/2011/04/12/emacs-movie-browser" ))
+(vendle:register "larsmagne/csid"
+                 '(:desc "http://lars.ingebrigtsen.no/2013/09/crowdsourcing-is-dead.html"))
 (vendle:register "gregsexton/httprepl.el"
                  '(:tag ("http" "repl")))
 (vendle:register "nicferrier/emacs-twaddle"
                  '(:tag ("twitter")
-                   :deps ("VincentToups/shadchen-el")))
+                   :deps ("VincentToups/shadchen-el"
+                          "nicferrier/emacs-kv"
+                          "magnars/dash.el"
+                          "nicferrier/emacs-web"
+                          "nicferrier/emacs-noflet"
+                          "nicferrier/elnode")))
 (vendle:register "https://bitbucket.org/ukaszg/aria2-mode.git"
                  '(:tag "aria2" ))
 ;; (vendle:register "capitaomorte/yasnippet")
@@ -403,6 +410,7 @@
 (vendle:register-theme "kodx/TangoDark"
                        '(:tag "theme"))
 (vendle:register-theme "wasamasa/gotham-theme")
+(vendle:register-theme "neil477/base16-emacs")
 ;; (vendle:register-theme "ccann/badger-theme")
 
 
@@ -544,6 +552,8 @@
 (vendle:fetch "borntorock/UI-toolkit-using-orgmode"
               '(:tag ("org")))
 (vendle:fetch "bodil/emacs.d")
+;; (vendle:fetch "jixiuf/emacs_conf"
+;;               '(:tag ("evil")))
 
 
 (provide 'init-vendle-registers)
