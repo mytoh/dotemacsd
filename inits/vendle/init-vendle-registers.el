@@ -564,6 +564,7 @@
 (vendle:fetch "bodil/emacs.d")
 (vendle:fetch "jixiuf/emacs_conf"
               '(:tag ("evil")))
+(vendle:fetch "m00natic/dot-emacs")
 
 
 (provide 'init-vendle-registers)
