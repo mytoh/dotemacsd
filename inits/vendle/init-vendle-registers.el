@@ -2,10 +2,10 @@
 
 ;;; Code:
 
-;;;; register packages
+;; * register packages
 (vendle:register "magnars/s.el")
 
-;;;;; helm
+;; ** helm
 (vendle:register "emacs-helm/helm"
                  '(:build ("gmake")
                    :deps ("jwiegley/emacs-async")
@@ -60,7 +60,7 @@
                           "rejeep/f.el")
                    :tag ("helm" "bibtex")))
 
-;;;;; general packages
+;; ** general packages
 (vendle:register "jonathanchu/emacs-powerline")
 (vendle:register "raugturi/powerline-evil"
                  '(:tag ("evil" "modeline")))
@@ -245,9 +245,14 @@
                    :desc "http://lars.ingebrigtsen.no/2011/04/12/emacs-movie-browser/" ))
 (vendle:register "gregsexton/httprepl.el"
                  '(:tag ("http" "repl")))
+(vendle:register "nicferrier/emacs-twaddle"
+                 '(:tag ("twitter")
+                   :deps ("VincentToups/shadchen-el")))
+(vendle:register "https://bitbucket.org/ukaszg/aria2-mode.git"
+                 '(:tag "aria2" ))
 ;; (vendle:register "capitaomorte/yasnippet")
 
-;;;;; evil
+;; ** evil
 (vendle:register "git://gitorious.org/evil/evil.git"
                  '(:build ("gmake doc all")
                    :info "doc"
@@ -309,7 +314,8 @@
 (vendle:register "vermiculus/stack-mode")
 (vendle:register "tarleb/evil-scout")
 
-;;;;; org
+
+;; ** org
 (vendle:register "git://orgmode.org/org-mode.git"
                  '(:load-path ("lisp" "contrib/lisp")
                    :compile nil
@@ -331,7 +337,7 @@
                           "magnars/dash.el")
                    :tag ( "org" "pandoc" )))
 
-;;;;; themes
+;; ** themes
 (vendle:register "owainlewis/emacs-color-themes"
                  '(:tag "theme"))
 (vendle:register "kuanyui/moe-theme.el"
@@ -396,10 +402,11 @@
                        '(:tag "theme"))
 (vendle:register-theme "kodx/TangoDark"
                        '(:tag "theme"))
+(vendle:register-theme "wasamasa/gotham-theme")
 ;; (vendle:register-theme "ccann/badger-theme")
 
 
-;;;;; local packages
+;; ** local packages
 (cl-labels ((add-project-root (path &optional option)
               (vendle:register-local (expand-file-name path "~/huone/projektit")
                                      option)))
@@ -424,7 +431,7 @@
 
 ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
-;;;;; not library
+;; ** not library
 (vendle:fetch "purcell/emacs.d")
 (vendle:fetch "redguardtoo/mastering-emacs-in-one-year-guide")
 (vendle:fetch "git://git.savannah.nongnu.org/emacs-tiny-tools.git")
@@ -532,9 +539,11 @@
 (vendle:fetch "mahinshaw/emacsd"
               '(:tag ("evil")))
 (vendle:fetch "bosko/boem")
-(vendle:fetch "jceb/vim-orgmode")
+(vendle:fetch "jceb/vim-orgmode"
+              '(:tag ("vim" "org")))
 (vendle:fetch "borntorock/UI-toolkit-using-orgmode"
               '(:tag ("org")))
+(vendle:fetch "bodil/emacs.d")
 
 
 (provide 'init-vendle-registers)

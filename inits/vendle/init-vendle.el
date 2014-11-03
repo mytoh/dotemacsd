@@ -1,25 +1,25 @@
-;;; init-vendle.el -*- lexical-binding: t; -*-
+;; init-vendle.el -*- lexical-binding: t; -*-
 
-;;; requires
+;; * requires
 (require 'muki)
 
-;;; setup
+;; * setup
 (muki:add-to-load-path  "~/huone/projektit/emacs-vendle")
 
 (req 'vendle
-;;;; initialize vendle
+  ;; ** initialize vendle
   (cl-letf ((muki:vendle-directory
              (muki:user-emacs-directory (file-name-as-directory "vendle"))))
     (vendle:initialize muki:vendle-directory))
 
   (req 'init-vendle-registers)
 
-;;;; install packages
+  ;; ** install packages
   (vendle:check-packages)
 
   (vendle:turn-on-font-lock)
 
-;;;; vendle keymap
+  ;; ** vendle keymap
   (muki:define-launcher-key "v u" 'vendle-update)
   (muki:define-launcher-key "v k" 'vendle-check)
   (muki:define-launcher-key "v c" 'vendle-clean)
@@ -28,7 +28,7 @@
     (auto (helm-vendle) "helm-vendle")
     (muki:define-launcher-key "v l" 'helm-vendle))
 
-;;;; package requires
+  ;; ** package requires
 
   (req 'init-migemo)
 
@@ -233,7 +233,8 @@
     (add-global-key "C-c C-SPC" 'rotate-layout
                     "C-c C-c C-SPC" 'rotate-window))
 
-  (req 'git-timemachine)
+  (liby 'git-timemachine
+    (auto (git-timemachine) "git-timemachine"))
 
   ;; (req 'smooth-scroll
   ;;      (smooth-scroll-mode nil))
@@ -285,7 +286,8 @@
 
   ;; (req 'init-elnode)
 
-  (req 'eew)
+  (liby 'eew
+    (auto (eew) "eew"))
 
   (req 'init-sunrise-commander)
 
@@ -322,7 +324,8 @@
 
   (req 'init-elfeed)
 
-  (req 'lorem-ipsum)
+  (liby 'lorem-ipsum
+    (auto (lorem-ipsum) "lorem-ipsum"))
 
   ;; (liby 'slideview
   ;;       (add-hook 'image-mode-hook 'slideview-mode))
@@ -342,7 +345,8 @@
   (req 'sly-autoloads
     (setq inferior-lisp-program "sbcl"))
 
-  (req 'twittering-mode
+  (liby 'twittering-mode
+    (auto (twit) "twittering-mode")
     (setq twittering-allow-insecure-server-cert t))
 
   (req 'coffee-mode)
@@ -366,10 +370,12 @@
   (req 'color-theme-approximate
     (color-theme-approximate-on))
 
-  (req 'google-this)
+  (liby 'google-this
+    (auto (google-this) "google-this"))
 
   (req 'golden-ratio
-    (enable-mode golden-ratio-mode))
+    (enable-mode golden-ratio-mode)
+    (add-to-list 'golden-ratio-exclude-modes 'magit-status-mode))
 
   (liby 'nssh
     (auto (nssh nssh-all) "nssh"))
@@ -423,6 +429,9 @@
   (liby 'httprepl
     (auto (httprepl) "httprepl"))
 
+  (req 'aria2-mode
+    (enable-option  aria2-add-evil-quirks))
+
 
   ;; (req 'vi-tilde-fringe
   ;;   (add-hook 'prog-mode-hook 'vi-tilde-fringe-mode))
@@ -440,14 +449,14 @@
   ;;   (add-to-list 'auto-mode-alist '("\\.js\\'" . js3-mode))
   ;;   )
 
-  ;;;; yasnippet
+  ;; ** yasnippet
   ;; (req 'yasnippet
   ;;   (yas-global-mode 1))
 
-;;;;; evil
+  ;; ** evil
   (req 'init-evil)
 
-;;;;; helm
+  ;; ** helm
   (req 'init-helm)
   (req 'init-helm-ypv)
   (req 'init-helm-alku)
@@ -468,7 +477,7 @@
     (cl-remove-if-not
      (lambda (p)
        (cl-find-if (lambda (v) (equalp (vendle:package-name v)
-                                       p))
+                                  p))
                    *vendle-package-list*))
      (cl-mapcar
       (lambda (p) (format "%s" p))
