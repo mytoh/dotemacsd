@@ -255,7 +255,7 @@
                           "nicferrier/emacs-web"
                           "nicferrier/emacs-noflet"
                           "nicferrier/elnode")))
-(vendle:register "https://bitbucket.org/ukaszg/aria2-mode.git"
+(vendle:register "https://bitbucket.org/ukaszg/aria2.git"
                  '(:tag "aria2" ))
 ;; (vendle:register "capitaomorte/yasnippet")
 
@@ -411,23 +411,30 @@
                        '(:tag "theme"))
 (vendle:register-theme "wasamasa/gotham-theme")
 (vendle:register-theme "neil477/base16-emacs")
-;; (vendle:register-theme "ccann/badger-theme")
+(vendle:register-theme "oneKelvinSmith/monokai-emacs")
+(vendle:register-theme "hbin/molokai-theme")
+(vendle:register-theme "jordonbiondo/ample-theme")
+(vendle:register-theme "mjwall/ample-zen")
+(vendle:register-theme "emacsfodder/emacs-soothe-theme")
+(vendle:register-theme "bruce/emacs-spacegray-theme")
+(vendle:register-theme "juba/color-theme-tangotango")
+(vendle:register-theme "ccann/badger-theme")
 
 
 ;; ** local packages
 (cl-labels ((add-project-root (path &optional option)
-              (vendle:register-local (expand-file-name path "~/huone/projektit")
-                                     option)))
-  (add-project-root  "emacs-flatline")
-  (add-project-root "helm-ypv" '(:tag "helm"))
-  (add-project-root "company-scheme" '(:tag ("company" "scheme")))
-  (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
-  (add-project-root "emacs-lehtifile-mode")
-  (add-project-root "helm-alku" '(:tag ("helm")))
-  (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
-  (add-project-root "emacs-eshell-session" '(:tag "eshell"))
-  (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
-  (add-project-root "helm-project-buffer" '(:tag "helm")))
+                              (vendle:register-local (expand-file-name path "~/huone/projektit")
+                                                     option)))
+           (add-project-root  "emacs-flatline")
+           (add-project-root "helm-ypv" '(:tag "helm"))
+           (add-project-root "company-scheme" '(:tag ("company" "scheme")))
+           (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
+           (add-project-root "emacs-lehtifile-mode")
+           (add-project-root "helm-alku" '(:tag ("helm")))
+           (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
+           (add-project-root "emacs-eshell-session" '(:tag "eshell"))
+           (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
+           (add-project-root "helm-project-buffer" '(:tag "helm")))
 
 (cond
   ((file-directory-p (muki:user-emacs-directory "vendle/ddskk"))
@@ -552,8 +559,8 @@
 (vendle:fetch "borntorock/UI-toolkit-using-orgmode"
               '(:tag ("org")))
 (vendle:fetch "bodil/emacs.d")
-;; (vendle:fetch "jixiuf/emacs_conf"
-;;               '(:tag ("evil")))
+(vendle:fetch "jixiuf/emacs_conf"
+              '(:tag ("evil")))
 
 
 (provide 'init-vendle-registers)

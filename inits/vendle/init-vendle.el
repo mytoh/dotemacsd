@@ -340,7 +340,7 @@
   ;; (req 'comment-dwim-2
   ;;   (add-global-key  "M-;" 'comment-dwim-2))
 
-  (req 'init-auto-highlight-symbol)
+  ;; (req 'init-auto-highlight-symbol)
 
   (req 'sly-autoloads
     (setq inferior-lisp-program "sbcl"))
@@ -429,7 +429,7 @@
   (liby 'httprepl
     (auto (httprepl) "httprepl"))
 
-  (req 'aria2-mode
+  (req 'aria2
     (enable-option  aria2-add-evil-quirks))
 
 
@@ -477,7 +477,7 @@
     (cl-remove-if-not
      (lambda (p)
        (cl-find-if (lambda (v) (equalp (vendle:package-name v)
-                                  p))
+                                       p))
                    *vendle-package-list*))
      (cl-mapcar
       (lambda (p) (format "%s" p))
