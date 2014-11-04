@@ -2,6 +2,63 @@
 
 ;;; Code:
 
+(cl-defun init-evil-leader ()
+  (req 'evil-leader
+    (global-evil-leader-mode)
+    (evil-leader/set-leader ",")
+    (enable-option evil-leader/in-all-states)
+
+    (evil-leader/set-key
+        "v r" 'revert-buffer
+      "v s" 'eval-last-sexp
+      "v w" 'evil-write
+      "v q" 'evil-quit-all
+      )
+
+    (cl-defun switch-to-scratch-buffer ()
+      (interactive)
+      (switch-to-buffer
+       (get-buffer-create "*scratch*")))
+
+    (evil-leader/set-key
+        "b K"  'muki:kill-other-buffers
+      "b n"  'switch-to-next-buffer
+      "b p"  'switch-to-prev-buffer
+      "b s" 'switch-to-scratch-buffer)
+
+    (liby 'eshell-session
+      (evil-leader/set-key
+          "z z" 'eshell-session:switch
+        "z c" 'eshell-session:new
+        "z n" 'eshell-session:next
+        "z p" 'eshell-session:prev))
+
+    (liby 'helm-ypv
+      (evil-leader/set-key "e y" 'helm-ypv))
+
+    (liby 'vendle
+      (evil-leader/set-key "e v u" 'vendle-update
+        "e v k" 'vendle-check
+        "e v c" 'vendle-clean
+        "e v l" 'helm-vendle))
+
+    (liby 'helm-project-buffer
+      (evil-leader/set-key "b b" 'helm-project-buffer))
+
+    (liby 'helm
+      (evil-leader/set-key
+          ";" 'helm-M-x
+        "?" 'helm-descbinds
+        "h s"   'helm-swoop
+        "h t"  'helm-themes))
+
+    (defun-add-hook muki:evil-ace-jump-mode-setup (after-init-hook)
+      (when (and (featurep 'evil) (featurep 'evil-leader))
+        (evil-leader/set-key
+            "<SPC>c" 'evil-ace-jump-char-mode
+          "<SPC>w" 'evil-ace-jump-word-mode
+          "<SPC>l" 'evil-ace-jump-line-mode)))))
+
 (liby 'evil
   (set-option evil-toggle-key "C-`")
 
@@ -15,11 +72,21 @@
               evil-magic 'very-magic)
   (enable-option evil-cross-lines
                  evil-want-fine-undo
-                 evil-cjk-emacs-word-boundary)
+                 evil-cjk-emacs-word-boundary
+                 )
   (disable-option evil-move-cursor-back)
   (set-option evil-esc-delay 0.001)
 
+  (cl-locally
+      (enable-option evil-want-C-u-scroll)
+    (when evil-want-C-u-scroll
+      (add-global-key "M-u" 'universal-argument)
+      (after "evil"
+          (add-key evil-normal-state-map "M-u" 'universal-argument))))
+
   (req 'evil)
+
+  (init-evil-leader)
 
   (enable-mode evil-mode)
   ;; [[http://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/]]
@@ -164,60 +231,7 @@ is a kind of temporary one which is not confirmed yet."
               (skk-mode-off)))))
   )
 
-(req 'evil-leader
-  (global-evil-leader-mode)
-  (evil-leader/set-leader ",")
-  (enable-option evil-leader/in-all-states)
 
-  (evil-leader/set-key
-      "x r" 'revert-buffer
-    "x s" 'eval-last-sexp
-    )
-
-  (cl-defun switch-to-scratch-buffer ()
-    (interactive)
-    (switch-to-buffer
-     (get-buffer-create "*scratch*")))
-
-  (evil-leader/set-key
-      "b K"  'muki:kill-other-buffers
-    "b n"  'switch-to-next-buffer
-    "b p"  'switch-to-prev-buffer
-    "b s" 'switch-to-scratch-buffer)
-
-  (liby 'eshell-session
-    (evil-leader/set-key
-        "z z" 'eshell-session:switch
-      "z c" 'eshell-session:new
-      "z n" 'eshell-session:next
-      "z p" 'eshell-session:prev))
-
-  (liby 'helm-ypv
-    (evil-leader/set-key "e y" 'helm-ypv))
-
-  (liby 'vendle
-    (evil-leader/set-key "e v u" 'vendle-update
-      "e v k" 'vendle-check
-      "e v c" 'vendle-clean
-      "e v l" 'helm-vendle))
-
-  (liby 'helm-project-buffer
-    (evil-leader/set-key "b b" 'helm-project-buffer))
-
-  (liby 'helm
-    (evil-leader/set-key
-        ";" 'helm-M-x
-      "?" 'helm-descbinds
-      "h s"   'helm-swoop
-      "h t"  'helm-themes))
-
-  (defun-add-hook muki:evil-ace-jump-mode-setup (after-init-hook)
-    (when (and (featurep 'evil) (featurep 'evil-leader))
-      (evil-leader/set-key
-          "<SPC>c" 'evil-ace-jump-char-mode
-        "<SPC>w" 'evil-ace-jump-word-mode
-        "<SPC>l" 'evil-ace-jump-line-mode)))
-  )
 
 (liby 'evil-nerd-commenter
   ;; (set-opton evilnc-hotkey-comment-operator ",,")
