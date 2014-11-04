@@ -417,7 +417,11 @@
     (auto (emoji-cheat-sheet emoji-cheat-sheet-copy-at-point)
           "emoji-cheat-sheet"))
 
-  (req 'vimrc-mode)
+  (liby 'vimrc-mode
+    (auto (vimrc-mode) "vimrc-mode")
+    (mode "\\.vim\\'" 'vimrc-mode)
+    (mode "[._]?g?vimrc\\'"  'vimrc-mode)
+    (mode "\\.exrc\\'"  'vimrc-mode))
 
   (req 'cat-mode)
 
