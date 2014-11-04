@@ -565,6 +565,9 @@
 (vendle:fetch "jixiuf/emacs_conf"
               '(:tag ("evil")))
 (vendle:fetch "m00natic/dot-emacs")
+(vendle:fetch "holguinj/evil-clojure-emacs"
+              '(:tag ("evil" "clojure")))
+(vendle:fetch "thomasf/dotfiles-thomasf-emacs")
 
 
 (provide 'init-vendle-registers)
