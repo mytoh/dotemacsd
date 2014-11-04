@@ -496,7 +496,7 @@
     (cl-remove-if-not
      (lambda (p)
        (cl-find-if (lambda (v) (equalp (vendle:package-name v)
-                                  p))
+                                       p))
                    *vendle-package-list*))
      (cl-mapcar
       (lambda (p) (format "%s" p))
