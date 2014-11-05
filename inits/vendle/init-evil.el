@@ -60,6 +60,7 @@
           "<SPC>l" 'evil-ace-jump-line-mode)))))
 
 (liby 'evil
+  (req 'goto-chg)
   (set-option evil-toggle-key "C-`")
 
   (set-option evil-emacs-state-cursor '("red" box)
