@@ -260,6 +260,7 @@
                  '(:tag "aria2" ))
 (vendle:register "m00natic/eww-lnum"
                  '(:tag "eww"))
+(vendle:register "yoshiki/yaml-mode")
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;; ** evil
