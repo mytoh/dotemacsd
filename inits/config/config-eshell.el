@@ -39,9 +39,9 @@
 
 (cl-defun muki:eshell-mode-hook ()
   (add-key eshell-mode-map
-           "C-z C-n" 'eshell-session:next
-           "C-z C-p" 'eshell-session:prev
-           "C-z C-c" 'eshell-session:new))
+    "C-z C-n" 'eshell-session:next
+    "C-z C-p" 'eshell-session:prev
+    "C-z C-c" 'eshell-session:new))
 (add-hook 'eshell-mode-hook 'muki:eshell-mode-hook)
 
 (autoload 'helm-eshell-session "helm-eshell-session")
