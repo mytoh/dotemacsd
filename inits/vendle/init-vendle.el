@@ -452,6 +452,7 @@
         (set-face-attribute 'eww-lnum-number nil
          :foreground "#3355bb")))
 
+  (req 'yaml-mode)
 
   ;; (req 'vi-tilde-fringe
   ;;   (add-hook 'prog-mode-hook 'vi-tilde-fringe-mode))
@@ -497,7 +498,7 @@
     (cl-remove-if-not
      (lambda (p)
        (cl-find-if (lambda (v) (equalp (vendle:package-name v)
-                                       p))
+                                  p))
                    *vendle-package-list*))
      (cl-mapcar
       (lambda (p) (format "%s" p))
