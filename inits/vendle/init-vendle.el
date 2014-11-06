@@ -173,6 +173,7 @@
   (req 'init-emms-mpd)
 
   (req 'init-magit)
+  (req 'init-git-modes)
 
   (req 'init-company-mode)
 
