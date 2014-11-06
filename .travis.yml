@@ -2,9 +2,6 @@ language: emacs-lisp
 env:
   matrix:
     - EMACS=emacs-snapshot EMACS_PPA=ppa:ubuntu-elisp/ppa
-  matrix:
-    allow_failures:
-      - env: EMACS=emacs-snapshot EMACS_PPA=ppa:ubuntu-elisp/ppa
 before_install:
   # Install Emacs
   - if [ -n "$EMACS_PPA" ]; then
