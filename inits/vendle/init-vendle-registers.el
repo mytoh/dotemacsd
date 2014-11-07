@@ -2,9 +2,9 @@
 
 ;;; Code:
 
-;; * register packages
+;;;;  register packages
 
-;; ** helm
+;;;;; helm
 (vendle:register "emacs-helm/helm"
                  '(:build ("gmake")
                    :deps ("jwiegley/emacs-async")
@@ -59,7 +59,7 @@
                           "rejeep/f.el")
                    :tag ("helm" "bibtex")))
 
-;; ** general packages
+;;;;;  general packages
 (vendle:register "magnars/s.el")
 (vendle:register "jonathanchu/emacs-powerline")
 (vendle:register "raugturi/powerline-evil"
@@ -265,7 +265,7 @@
 (vendle:register "emacsmirror/info-plus" )
 ;; (vendle:register "capitaomorte/yasnippet")
 
-;; ** evil
+;;;;; evil
 (vendle:register "git://gitorious.org/evil/evil.git"
                  '(:build ("gmake doc all")
                    :info "doc"
@@ -328,17 +328,19 @@
 (vendle:register "tarleb/evil-scout")
 
 
-;; ** org
+;;;;; org
 (vendle:register "git://orgmode.org/org-mode.git"
                  '(:load-path ("lisp" "contrib/lisp")
                    :compile nil
                    :build ("gmake" "gmake doc")
                    :info "doc"
                    :tag "org"))
+(vendle:register "tj64/org-hlc")
 (vendle:register "tj64/outshine" '(:compile nil
                                    :tag ("org" "outline")))
 (vendle:register "tj64/outorg" '(:compile nil
                                  :tag ("org" "outline")))
+;; (vendle:register "jleechpe/outorg-export")
 (vendle:register "https://bitbucket.org/ukaszg/org-eldoc.git"
                  '(:tag ("org" "eldoc")))
 ;; (vendle:register "jleechpe/outorg-export")
@@ -350,7 +352,7 @@
                           "magnars/dash.el")
                    :tag ( "org" "pandoc" )))
 
-;; ** themes
+;;;;; themes
 (vendle:register "owainlewis/emacs-color-themes"
                  '(:tag "theme"))
 (vendle:register "kuanyui/moe-theme.el"
@@ -427,20 +429,20 @@
 (vendle:register-theme "ccann/badger-theme")
 
 
-;; ** local packages
+;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
-              (vendle:register-local (expand-file-name path "~/huone/projektit")
-                                     option)))
-  (add-project-root  "emacs-flatline")
-  (add-project-root "helm-ypv" '(:tag "helm"))
-  (add-project-root "company-scheme" '(:tag ("company" "scheme")))
-  (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
-  (add-project-root "emacs-lehtifile-mode")
-  (add-project-root "helm-alku" '(:tag ("helm")))
-  (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
-  (add-project-root "emacs-eshell-session" '(:tag "eshell"))
-  (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
-  (add-project-root "helm-project-buffer" '(:tag "helm")))
+                              (vendle:register-local (expand-file-name path "~/huone/projektit")
+                                                     option)))
+           (add-project-root  "emacs-flatline")
+           (add-project-root "helm-ypv" '(:tag "helm"))
+           (add-project-root "company-scheme" '(:tag ("company" "scheme")))
+           (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
+           (add-project-root "emacs-lehtifile-mode")
+           (add-project-root "helm-alku" '(:tag ("helm")))
+           (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
+           (add-project-root "emacs-eshell-session" '(:tag "eshell"))
+           (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
+           (add-project-root "helm-project-buffer" '(:tag "helm")))
 
 (cond
   ((file-directory-p (muki:user-emacs-directory "vendle/ddskk"))
@@ -452,7 +454,7 @@
 
 ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
-;; ** not library
+;;;;; not library
 (vendle:fetch "purcell/emacs.d")
 (vendle:fetch "redguardtoo/mastering-emacs-in-one-year-guide")
 (vendle:fetch "git://git.savannah.nongnu.org/emacs-tiny-tools.git")
@@ -575,7 +577,8 @@
               '(:tag ("evil" "haskell")))
 (vendle:fetch "rolandwalker/emacs-travis"
               '(:tag ("travis")))
-
+(vendle:fetch "wcsmith/dotemacs"
+              '(:tag ("evil")))
 
 (provide 'init-vendle-registers)
 
