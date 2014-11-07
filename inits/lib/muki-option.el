@@ -10,7 +10,7 @@
          `(cl-locally
               (muki:log "set " ,(propertize (symbol-name option)
                                             'face 'font-lock-variable-name-face))
-            (setq ,option ,value)
+            (cl-psetq ,option ,value)
             (set-option ,@(cddr body))))))
 
 (cl-defmacro enable-option (&rest body)
@@ -20,7 +20,7 @@
          `(cl-locally
               (muki:log "enable " ,(propertize (symbol-name option)
                                                'face 'font-lock-variable-name-face))
-            (setq ,option t)
+            (cl-psetq ,option t)
             (enable-option ,@(cdr body))))))
 
 (cl-defmacro disable-option (&rest body)
@@ -30,7 +30,7 @@
          `(cl-locally
               (muki:log "disable " ,(propertize (symbol-name option)
                                                 'face 'font-lock-variable-name-face))
-            (setq ,option nil)
+            (cl-psetq ,option nil)
             (disable-option ,@(cdr body))))))
 
 (provide 'muki-option)
