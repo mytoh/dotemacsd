@@ -179,6 +179,11 @@
                                 "-autoloads\\.el\\'"))
 (set-option recentf-exclude muki:recentf-exclude)
 ;; (set-option recentf-auto-cleanup 10)
+
+;;;;; exclude tramp files
+;; [[http://d.hatena.ne.jp/daimatz/20110529/1306602969]]
+(set-option recentf-exclude '("^/[^/:]+:"))
+
 ;;;; don't record symbolic link file name
 (enable-option find-file-visit-truename)
 
