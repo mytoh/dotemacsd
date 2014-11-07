@@ -261,6 +261,8 @@
 (vendle:register "m00natic/eww-lnum"
                  '(:tag "eww"))
 (vendle:register "yoshiki/yaml-mode")
+(vendle:register "ijp/mbe.el")
+(vendle:register "emacsmirror/info-plus" )
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;; ** evil
@@ -569,6 +571,10 @@
 (vendle:fetch "holguinj/evil-clojure-emacs"
               '(:tag ("evil" "clojure")))
 (vendle:fetch "thomasf/dotfiles-thomasf-emacs")
+(vendle:fetch "jfeltz/emacs.d"
+              '(:tag ("evil" "haskell")))
+(vendle:fetch "rolandwalker/emacs-travis"
+              '(:tag ("travis")))
 
 
 (provide 'init-vendle-registers)
