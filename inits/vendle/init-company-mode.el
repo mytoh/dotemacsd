@@ -12,8 +12,8 @@
   (add-to-list 'company-backends 'company-files t)
 
   (add-key company-active-map
-           "C-n" 'company-select-next
-           "C-p" 'company-select-previous)
+    "C-n" 'company-select-next
+    "C-p" 'company-select-previous)
 
   (set-face-attribute 'company-tooltip-selection nil
                       :background (muki:colour-hsl-to-hex 19 60 50))
@@ -34,8 +34,8 @@
   (set-face-attribute 'company-scrollbar-fg nil
                       :background (face-background 'company-tooltip))
 
-  (req 'company-scheme
-    (add-to-list 'company-backends 'company-scheme-backend t))
+  ;; (req 'company-scheme
+  ;;   (add-to-list 'company-backends 'company-scheme-backend t))
 
   )
 
