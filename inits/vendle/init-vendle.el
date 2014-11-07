@@ -454,6 +454,8 @@
 
   (req 'yaml-mode)
 
+  (req 'init-info-plus)
+
   ;; (req 'vi-tilde-fringe
   ;;   (add-hook 'prog-mode-hook 'vi-tilde-fringe-mode))
 
