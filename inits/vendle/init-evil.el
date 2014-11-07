@@ -143,12 +143,8 @@
   ;; org
   ;; normal state shortcuts
   (evil-define-key 'motion org-mode-map
-    "]]" (if (fboundp 'org-forward-same-level) ;to be backward compatible with older org version
-             'org-forward-same-level
-           'org-forward-heading-same-level)
-    "[[" (if (fboundp 'org-backward-same-level)
-             'org-backward-same-level
-           'org-backward-heading-same-level)
+    "]]" 'org-forward-same-level
+    "[[" 'org-backward-same-level
     "{" 'outline-previous-heading
     "}" 'outline-next-heading
     "g{" 'outline-up-heading
