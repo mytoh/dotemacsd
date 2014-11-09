@@ -44,8 +44,8 @@ Otherwise goto the end of minibuffer."
                   [remap find-tag]         'helm-etags-select)
 
   (add-key helm-map
-           "C-M-n" 'helm-next-source
-           "C-M-p" 'helm-previous-source)
+    "C-M-n" 'helm-next-source
+    "C-M-p" 'helm-previous-source)
   (add-key helm-read-file-map "C-h" 'delete-backward-char)
   ;; (add-key helm-read-file-map "TAB" 'helm-execute-persistent-action)
 
@@ -56,7 +56,9 @@ Otherwise goto the end of minibuffer."
               helm-buffers-favorite-modes (append helm-buffers-favorite-modes
                                                   '(picture-mode artist-mode))
               ;; helm-buffer-max-length 50x
-              helm-candidate-number-limit 200)
+              helm-candidate-number-limit 200
+              helm-raise-command                         "wmctrl -xa %s"
+              )
 
   (set-option helm-boring-file-regexp-list '("\\.git\\'" "\\.hg\\'" "\\.svn\\'" "\\.CVS\\'" "\\._darcs\\'" "\\.la\\'" "\\.o\\'" "\\.i\\'"))
 
