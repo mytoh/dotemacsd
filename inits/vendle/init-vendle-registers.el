@@ -341,10 +341,7 @@
 (vendle:register "tj64/outorg" '(:compile nil
                                  :tag ("org" "outline")))
 ;; (vendle:register "jleechpe/outorg-export")
-(vendle:register "https://bitbucket.org/ukaszg/org-eldoc.git"
-                 '(:tag ("org" "eldoc")))
 ;; (vendle:register "jleechpe/outorg-export")
-;; (vendle:register "https://bitbucket.org/ukaszg/org-eldoc.git")
 (vendle:register "tj64/navi"
                  '(:tag ("org" "outline")))
 (vendle:register "kawabata/ox-pandoc"
@@ -431,18 +428,18 @@
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
-                              (vendle:register-local (expand-file-name path "~/huone/projektit")
-                                                     option)))
-           (add-project-root  "emacs-flatline")
-           (add-project-root "helm-ypv" '(:tag "helm"))
-           (add-project-root "company-scheme" '(:tag ("company" "scheme")))
-           (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
-           (add-project-root "emacs-lehtifile-mode")
-           (add-project-root "helm-alku" '(:tag ("helm")))
-           (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
-           (add-project-root "emacs-eshell-session" '(:tag "eshell"))
-           (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
-           (add-project-root "helm-project-buffer" '(:tag "helm")))
+              (vendle:register-local (expand-file-name path "~/huone/projektit")
+                                     option)))
+  (add-project-root  "emacs-flatline")
+  (add-project-root "helm-ypv" '(:tag "helm"))
+  (add-project-root "company-scheme" '(:tag ("company" "scheme")))
+  (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
+  (add-project-root "emacs-lehtifile-mode")
+  (add-project-root "helm-alku" '(:tag ("helm")))
+  (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
+  (add-project-root "emacs-eshell-session" '(:tag "eshell"))
+  (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
+  (add-project-root "helm-project-buffer" '(:tag "helm")))
 
 (cond
   ((file-directory-p (muki:user-emacs-directory "vendle/ddskk"))
@@ -579,6 +576,9 @@
               '(:tag ("travis")))
 (vendle:fetch "wcsmith/dotemacs"
               '(:tag ("evil")))
+(vendle:fetch "takaxp/emacs.d")
+(vendle:fetch "senny/cabbage")
+(vendle:fetch "tsu-nera/dotfiles")
 
 (provide 'init-vendle-registers)
 
