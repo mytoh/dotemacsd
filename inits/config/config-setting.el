@@ -129,8 +129,8 @@
 (enable-option kill-whole-line)
 
 ;;;; enable rectangular mode
-(cua-mode 1)
-(disable-option cua-enable-cua-keys)
+;; (cua-mode 1)
+;; (disable-option cua-enable-cua-keys)
 
 ;;;; ignore case
 (enable-option completion-ignore-case
