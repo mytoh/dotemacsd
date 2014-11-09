@@ -98,7 +98,7 @@
 (muki:eshell-add-alias  "pam" "rm -rf $*")
 (muki:eshell-add-alias  "ke" "save-buffers-kill-emacs")
 (muki:eshell-add-alias  "cde" "cd ~/huone/git/git.savannah.gnu.org/emacs")
-(muki:eshell-add-alias  "gpl" "git pull")
+(muki:eshell-add-alias  "gpl" "git pull --verbose")
 (muki:eshell-add-alias  "gst" "git status")
 (muki:eshell-add-alias  "kuva" "pikkukivi kuva $1")
 (muki:eshell-add-alias  "vittu" "pikkukivi vittu $*")
