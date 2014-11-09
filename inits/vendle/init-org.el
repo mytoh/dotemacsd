@@ -1,4 +1,5 @@
 ;;; init-org.el -*- lexical-binding: t; -*-
+(req 'org)
 
 (defface org-block-background
     '((t (:background "#2b2948")))
@@ -144,8 +145,8 @@
 (add-hook 'org-mode-hook
           (lambda ()
             (add-key org-mode-map
-                     "C-c o o" 'helm-org-headlines
-                     "C-c o b" 'muki:org-insert-book-drawer)))
+              "C-c o o" 'helm-org-headlines
+              "C-c o b" 'muki:org-insert-book-drawer)))
 
 ;;;; Viewing, navigating, and editing the Org tree
 ;;     I often cut and paste subtrees. This makes it easier to cut
@@ -189,6 +190,9 @@
 
 (req 'ox-pandoc)
 (req 'org-protocol)
+
+(req 'org-eldoc
+  (org-eldoc-hook-setup))
 
 (add-hook 'org-mode-hook 'turn-off-auto-fill)
 
