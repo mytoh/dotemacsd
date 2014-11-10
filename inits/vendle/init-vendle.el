@@ -41,9 +41,6 @@
   ;;   (add-hook 'org-mode-hook
   ;;             'turn-on-org-pretty-table-mode))
 
-  (req 'org-eldoc
-    (org-eldoc-hook-setup))
-
   ;; update plugins
   ;; (vendle:update-packages)
 
@@ -439,8 +436,8 @@
   (liby 'httprepl
     (auto (httprepl) "httprepl"))
 
-  (req 'aria2
-    (enable-option  aria2-add-evil-quirks))
+  ;; (req 'aria2
+  ;;   (enable-option  aria2-add-evil-quirks))
 
 
   (liby 'eww-lnum
@@ -455,6 +452,8 @@
   (req 'yaml-mode)
 
   (req 'init-info-plus)
+
+  (req 'init-elisp-slime-nav)
 
   ;; (req 'vi-tilde-fringe
   ;;   (add-hook 'prog-mode-hook 'vi-tilde-fringe-mode))
