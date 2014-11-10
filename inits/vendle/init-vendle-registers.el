@@ -350,70 +350,39 @@
                    :tag ( "org" "pandoc" )))
 
 ;;;;; themes
-(vendle:register "owainlewis/emacs-color-themes"
-                 '(:tag "theme"))
-(vendle:register "kuanyui/moe-theme.el"
-                 '(:tag "theme"))
-(vendle:register-theme "caisah/seti-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "j0ni/phoenix-dark-pink"
-                       '(:tag "theme"))
-(vendle:register-theme "Fanael/stekene-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "sabof/hyperplane-theme"
-                       '(:tag "theme"))
+(vendle:register "owainlewis/emacs-color-themes")
+(vendle:register "kuanyui/moe-theme.el")
+(vendle:register-theme "caisah/seti-theme")
+(vendle:register-theme "j0ni/phoenix-dark-pink")
+(vendle:register-theme "Fanael/stekene-theme")
+(vendle:register-theme "sabof/hyperplane-theme")
 (vendle:register-theme "niflheim-theme/emacs" '(:name "niflheim-theme"))
-(vendle:register-theme "emacs-jp/replace-colorthemes"
-                       '(:tag "theme"))
-(vendle:register-theme "djcb/dream-theme"
-                       '(:tag "theme"))
+(vendle:register-theme "emacs-jp/replace-colorthemes")
+(vendle:register-theme "djcb/dream-theme")
 (vendle:register-theme "FrankRuben/cuatroporocho-theme" '(:compile nil))
-(vendle:register-theme "neomantic/Emacs-Sunburst-Color-Theme"
-                       '(:tag "theme"))
-(vendle:register-theme "ranmocy/amelie-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "yuttie/steady-theme-emacs"
-                       '(:tag "theme"))
-(vendle:register-theme "rozh/grandpunk-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "nhunzaker/emacs-laravel-plus-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "nishikawasasaki/ns-milk-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "tiborsimko/ostrich-theme-el"
-                       '(:tag "theme"))
-(vendle:register-theme "michaelparenteau/parenteau-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "emacsfodder/emacs-purple-haze-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "emacsfodder/emacs-clues-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "gchp/flatland-emacs"
-                       '(:tag "theme"))
-(vendle:register-theme "mswift42/busybee-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "byels/emacs-cherry-blossom-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "startling/firebelly"
-                       '(:tag "theme"))
-(vendle:register-theme "Greduan/emacs-theme-gruvbox"
-                       '(:tag "theme"))
-(vendle:register-theme "donderom/jazz-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "andre-richter/emacs-lush-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "Lokaltog/distinguished-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "mswift42/warm-night-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "jasonm23/emacs-bubbleberry-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "n3mo/cyberpunk-theme.el"
-                       '(:tag "theme"))
-(vendle:register-theme "Fanael/colorsarenice-theme"
-                       '(:tag "theme"))
-(vendle:register-theme "kodx/TangoDark"
-                       '(:tag "theme"))
+(vendle:register-theme "neomantic/Emacs-Sunburst-Color-Theme")
+(vendle:register-theme "ranmocy/amelie-theme")
+(vendle:register-theme "yuttie/steady-theme-emacs")
+(vendle:register-theme "rozh/grandpunk-theme")
+(vendle:register-theme "nhunzaker/emacs-laravel-plus-theme")
+(vendle:register-theme "nishikawasasaki/ns-milk-theme")
+(vendle:register-theme "tiborsimko/ostrich-theme-el")
+(vendle:register-theme "michaelparenteau/parenteau-theme")
+(vendle:register-theme "emacsfodder/emacs-purple-haze-theme")
+(vendle:register-theme "emacsfodder/emacs-clues-theme")
+(vendle:register-theme "gchp/flatland-emacs")
+(vendle:register-theme "mswift42/busybee-theme")
+(vendle:register-theme "byels/emacs-cherry-blossom-theme")
+(vendle:register-theme "startling/firebelly")
+(vendle:register-theme "Greduan/emacs-theme-gruvbox")
+(vendle:register-theme "donderom/jazz-theme")
+(vendle:register-theme "andre-richter/emacs-lush-theme")
+(vendle:register-theme "Lokaltog/distinguished-theme")
+(vendle:register-theme "mswift42/warm-night-theme")
+(vendle:register-theme "jasonm23/emacs-bubbleberry-theme")
+(vendle:register-theme "n3mo/cyberpunk-theme.el")
+(vendle:register-theme "Fanael/colorsarenice-theme")
+(vendle:register-theme "kodx/TangoDark")
 (vendle:register-theme "wasamasa/gotham-theme")
 (vendle:register-theme "neil477/base16-emacs")
 (vendle:register-theme "oneKelvinSmith/monokai-emacs")
@@ -569,7 +538,6 @@
 (vendle:fetch "m00natic/dot-emacs")
 (vendle:fetch "holguinj/evil-clojure-emacs"
               '(:tag ("evil" "clojure")))
-(vendle:fetch "thomasf/dotfiles-thomasf-emacs")
 (vendle:fetch "jfeltz/emacs.d"
               '(:tag ("evil" "haskell")))
 (vendle:fetch "rolandwalker/emacs-travis"
@@ -579,6 +547,11 @@
 (vendle:fetch "takaxp/emacs.d")
 (vendle:fetch "senny/cabbage")
 (vendle:fetch "tsu-nera/dotfiles")
+(vendle:fetch "capitaomorte/holy"
+              '(:tag ("stumpwm")))
+(vendle:fetch "avendael/dotemacs"
+              '(:tag ("evil")))
+(vendle:fetch "VincentToups/emacs-utils")
 
 (provide 'init-vendle-registers)
 
