@@ -217,6 +217,11 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
          evil-normal-state
          evil-previous-line)))
 
+  ;; elisp-slime-nav
+  (after 'elisp-slime-nav
+      (evil-define-key 'normal emacs-lisp-mode-map (kbd "K")
+                       'elisp-slime-nav-describe-elisp-thing-at-point))
+
 
   (muki:init-evil-escape)
 
