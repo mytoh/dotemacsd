@@ -194,6 +194,8 @@
 (req 'org-eldoc
   (org-eldoc-hook-setup))
 
+(req 'org-hlc)
+
 (add-hook 'org-mode-hook 'turn-off-auto-fill)
 
 (provide 'init-org)
