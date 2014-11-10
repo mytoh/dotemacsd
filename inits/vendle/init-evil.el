@@ -59,6 +59,34 @@
           "<SPC>w" 'evil-ace-jump-word-mode
           "<SPC>l" 'evil-ace-jump-line-mode)))))
 
+
+(cl-defun muki:init-evil-escape ()
+  (req 'evil-escape
+    (evil-escape-mode)))
+
+(cl-defun muki:init-evil-escape-w/o-lib ()
+  ;; [[https://github.com/davvil/.emacs.d/blob/master/init.el]]
+  ;; [[http://juanjoalvarez.net/es/detail/2014/sep/19/vim-emacsevil-chaotic-migration-guide/]]
+  ;; esc quits
+  (defun minibuffer-keyboard-quit ()
+    "Abort recursive edit.
+In Delete Selection mode, if the mark is active, just deactivate it;
+then it takes a second \\[keyboard-quit] to abort the minibuffer."
+    (interactive)
+    (if (and delete-selection-mode transient-mark-mode mark-active)
+        (setq deactivate-mark  t)
+      (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
+      (abort-recursive-edit)))
+  (add-key evil-normal-state-map [escape] 'keyboard-quit)
+  (add-key evil-visual-state-map [escape] 'keyboard-quit)
+  (add-key evil-emacs-state-map [escape] 'keyboard-quit)
+  (add-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
+  (add-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
+  (add-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
+  (add-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
+  (add-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+  (global-set-key [escape] 'evil-exit-emacs-state))
+
 (liby 'evil
   (req 'goto-chg)
   (set-option evil-toggle-key "C-`")
@@ -168,27 +196,29 @@
       ;; (add-key evil-normal-state-map "(" 'sp-backward-up-sexp)
       ))
 
-  ;; [[https://github.com/davvil/.emacs.d/blob/master/init.el]]
-  ;; [[http://juanjoalvarez.net/es/detail/2014/sep/19/vim-emacsevil-chaotic-migration-guide/]]
-  ;; esc quits
-  (defun minibuffer-keyboard-quit ()
-    "Abort recursive edit.
-In Delete Selection mode, if the mark is active, just deactivate it;
-then it takes a second \\[keyboard-quit] to abort the minibuffer."
-    (interactive)
-    (if (and delete-selection-mode transient-mark-mode mark-active)
-        (setq deactivate-mark  t)
-      (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
-      (abort-recursive-edit)))
-  (add-key evil-normal-state-map [escape] 'keyboard-quit)
-  (add-key evil-visual-state-map [escape] 'keyboard-quit)
-  (add-key evil-emacs-state-map [escape] 'keyboard-quit)
-  (add-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
-  (add-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
-  (add-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
-  (add-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
-  (add-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
-  (global-set-key [escape] 'evil-exit-emacs-state)
+  ;; multiple-cursors
+  (after 'multiple-cursors
+      (setq mc/cmds-to-run-for-all
+       '(evil-append-line
+         evil-backward-WORD-begin
+         evil-backward-word-begin
+         evil-delete-char
+         evil-delete-line
+         evil-digit-argument-or-evil-beginning-of-line
+         evil-emacs-state
+         evil-end-of-line
+         evil-force-normal-state
+         evil-forward-WORD-begin
+         evil-forward-WORD-end
+         evil-forward-word-begin
+         evil-forward-word-end
+         evil-insert
+         evil-next-line
+         evil-normal-state
+         evil-previous-line)))
+
+
+  (muki:init-evil-escape)
 
   (cl-loop for (mode . state) in '((git-commit-mode . insert)
                                    (git-rebase-mode . emacs)
@@ -288,8 +318,6 @@ is a kind of temporary one which is not confirmed yet."
 
 (req 'evil-jumper)
 
-;; (req 'evil-escape
-;;   (evil-escape-mode))
 
 (provide 'init-evil)
 
