@@ -3,34 +3,8 @@
 ;;; Code:
 
 (require 'init-evil-leader "init-evil/leader")
+(require 'init-evil-escape "init-evil/escape")
 
-
-(cl-defun muki:init-evil-escape ()
-  (req 'evil-escape
-    (evil-escape-mode)))
-
-(cl-defun muki:init-evil-escape-w/o-lib ()
-  ;; [[https://github.com/davvil/.emacs.d/blob/master/init.el]]
-  ;; [[http://juanjoalvarez.net/es/detail/2014/sep/19/vim-emacsevil-chaotic-migration-guide/]]
-  ;; esc quits
-  (defun minibuffer-keyboard-quit ()
-    "Abort recursive edit.
-In Delete Selection mode, if the mark is active, just deactivate it;
-then it takes a second \\[keyboard-quit] to abort the minibuffer."
-    (interactive)
-    (if (and delete-selection-mode transient-mark-mode mark-active)
-        (setq deactivate-mark  t)
-      (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
-      (abort-recursive-edit)))
-  (add-key evil-normal-state-map [escape] 'keyboard-quit)
-  (add-key evil-visual-state-map [escape] 'keyboard-quit)
-  (add-key evil-emacs-state-map [escape] 'keyboard-quit)
-  (add-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
-  (add-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
-  (add-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
-  (add-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
-  (add-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
-  (global-set-key [escape] 'evil-exit-emacs-state))
 
 (liby 'evil
   (req 'goto-chg)
