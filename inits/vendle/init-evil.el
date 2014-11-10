@@ -11,8 +11,9 @@
     (evil-leader/set-key
         "v r" 'revert-buffer
       "v s" 'eval-last-sexp
-      "v w" 'evil-write
-      "v q" 'evil-quit-all
+      "w" 'evil-write
+      "Q" 'evil-quit-all
+      "q" 'evil-quit
       )
 
     (cl-defun switch-to-scratch-buffer ()
