@@ -10,7 +10,7 @@
 
     (evil-leader/set-key
         "v r" 'revert-buffer
-      "v s" 'eval-last-sexp
+      "v e" 'pp-eval-last-sexp
       "w" 'evil-write
       "Q" 'evil-quit-all
       "q" 'evil-quit
