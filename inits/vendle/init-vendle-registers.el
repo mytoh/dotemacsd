@@ -263,6 +263,8 @@
 (vendle:register "yoshiki/yaml-mode")
 (vendle:register "ijp/mbe.el")
 (vendle:register "emacsmirror/info-plus" )
+(vendle:register"kaihaosw/eshell-prompt-extras"
+                '(:tag "eshell"))
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
