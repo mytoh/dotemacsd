@@ -263,8 +263,13 @@
 (vendle:register "yoshiki/yaml-mode")
 (vendle:register "ijp/mbe.el")
 (vendle:register "emacsmirror/info-plus" )
-(vendle:register"kaihaosw/eshell-prompt-extras"
-                '(:tag "eshell"))
+(vendle:register "kaihaosw/eshell-prompt-extras"
+                 '(:tag "eshell"))
+(vendle:register "syohex/emacs-smeargle"
+                 '(:tag "highlight"))
+(vendle:register "abo-abo/ace-link"
+                 '(:deps ( "winterTTr/ace-jump-mode"
+                          "nicferrier/emacs-noflet")))
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
@@ -322,7 +327,8 @@
                    :compile nil
                    :tag "evil"))
 (vendle:register "syl20bnr/evil-escape"
-                 '(:tag "evil"))
+                 '(:tag "evil"
+                   :deps ("emacsmirror/key-chord")))
 (vendle:register "gridaphobe/evil-god-state"
                  '(:tag "evil"
                    :deps ( "chrisdone/god-mode" )))
@@ -395,6 +401,7 @@
 (vendle:register-theme "bruce/emacs-spacegray-theme")
 (vendle:register-theme "juba/color-theme-tangotango")
 (vendle:register-theme "ccann/badger-theme")
+(vendle:register-theme "xzerocode/hipster-theme")
 
 
 ;;;;; local packages
@@ -532,8 +539,8 @@
 (vendle:fetch "bosko/boem")
 (vendle:fetch "jceb/vim-orgmode"
               '(:tag ("vim" "org")))
-(vendle:fetch "borntorock/UI-toolkit-using-orgmode"
-              '(:tag ("org")))
+;; (vendle:fetch "borntorock/UI-toolkit-using-orgmode"
+;;               '(:tag ("org")))
 (vendle:fetch "bodil/emacs.d")
 (vendle:fetch "jixiuf/emacs_conf"
               '(:tag ("evil")))
@@ -554,6 +561,10 @@
 (vendle:fetch "avendael/dotemacs"
               '(:tag ("evil")))
 (vendle:fetch "VincentToups/emacs-utils")
+(vendle:fetch "bamos/dotfiles")
+(vendle:fetch "bradyt/basic-computing-notes"
+              '(:tag ("org")))
+(vendle:fetch "Fuco1/.emacs.d")
 
 (provide 'init-vendle-registers)
 
