@@ -383,7 +383,7 @@
   (liby 'nssh
     (auto (nssh nssh-all) "nssh"))
 
-  (req 'init-popwin)
+  ;; (req 'init-popwin)
 
   (req 'init-tumblesocks)
 
@@ -455,6 +455,9 @@
 
   (req 'init-elisp-slime-nav)
 
+  (req 'ace-link
+    (ace-link-setup-default))
+
   ;; (req 'vi-tilde-fringe
   ;;   (add-hook 'prog-mode-hook 'vi-tilde-fringe-mode))
 
@@ -499,7 +502,7 @@
     (cl-remove-if-not
      (lambda (p)
        (cl-find-if (lambda (v) (equalp (vendle:package-name v)
-                                  p))
+                                       p))
                    *vendle-package-list*))
      (cl-mapcar
       (lambda (p) (format "%s" p))
