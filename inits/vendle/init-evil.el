@@ -4,10 +4,33 @@
 
 (require 'init-evil-leader "init-evil/leader")
 (require 'init-evil-escape "init-evil/escape")
+(require 'init-evil-surround "init-evil/surround")
+(require 'init-evil-nerd-commenter "init-evil/nerd-commenter")
+(require 'init-evil-lisp-state "init-evil/lisp-state")
+(require 'init-evil-linewise "init-evil/linewise")
+(require 'init-evil-matchit "init-evil/matchit")
+(require 'init-evil-exchange "init-evil/exchange")
+(require 'init-evil-operator-comment "init-evil/operator-comment")
+(require 'init-evil-search-highlight-persist "init-evil/search-highlight-persist")
+(require 'init-evil-jumper "init-evil/jumper")
+(require 'init-evil-visualstar "init-evil/visualstar")
 
 
-(liby 'evil
-  (req 'goto-chg)
+(cl-defun muki:init-evil-plugins ()
+  (muki:init-evil-leader)
+  ;; (muki:init-evil-escape)
+  (muki:init-evil-lisp-state)
+  (muki:init-evil-nerd-commenter)
+  (muki:init-evil-surround)
+  (muki:init-evil-linewise)
+  (muki:init-evil-matchit)
+  (muki:init-evil-exchange)
+  (muki:init-evil-operator-comment)
+  (muki:init-evil-jumper)
+  (muki:init-evil-visualstar)
+  (muki:init-evil-search-highlight-persist))
+
+(cl-defun muki:init-evil-mode-generals ()
   (set-option evil-toggle-key "C-`")
 
   (set-option evil-emacs-state-cursor '("red" box)
@@ -30,13 +53,10 @@
     (when evil-want-C-u-scroll
       (add-global-key "M-u" 'universal-argument)
       (after "evil"
-          (add-key evil-normal-state-map "M-u" 'universal-argument))))
+          (add-key evil-normal-state-map "M-u" 'universal-argument)))))
 
-  (req 'evil)
 
-  (init-evil-leader)
-
-  (enable-mode evil-mode)
+(cl-defun muki:init-evil-mode-mappings ()
   ;; [[http://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/]]
   ;; (defadvice evil-search-next (after advice-for-evil-ex-search-next activate)
   ;;   (evil-scroll-line-to-center (line-number-at-pos)))
@@ -83,10 +103,13 @@
   (add-key evil-ex-completion-map
     "M-p" 'previous-complete-history-element
     "M-n" 'next-complete-history-element)
+  )
 
+(cl-defun muki:init-evil-mode-helm ()
   (liby 'helm
-    (evil-ex-define-cmd "e[dit]" 'helm-find-files))
+    (evil-ex-define-cmd "e[dit]" 'helm-find-files)))
 
+(cl-defun muki:init-evil-mode-org ()
   ;; org
   ;; normal state shortcuts
   (evil-define-key 'motion org-mode-map
@@ -102,19 +125,22 @@
     "<<" 'org-shiftmetaleft
     ">>" 'org-shiftmetaright
     "<[[" 'org-metaleft
-    ">]]" 'org-metaright)
+    ">]]" 'org-metaright))
 
+(cl-defun muki:init-evil-mode-eww ()
   ;; eww
   (evil-define-key 'motion eww-mode-map
-    "<TAB>" 'shr-next-link)
+    "<TAB>" 'shr-next-link))
 
+(cl-defun muki:init-evil-mode-smartparens ()
   ;; smartparen
   (liby 'smartparens
     (with-eval-after-load 'smartparens
       ;; (add-key evil-normal-state-map ")" 'sp-up-sexp)
       ;; (add-key evil-normal-state-map "(" 'sp-backward-up-sexp)
-      ))
+      )))
 
+(cl-defun muki:init-evil-mode-multiple-cursors ()
   ;; multiple-cursors
   (after 'multiple-cursors
       (setq mc/cmds-to-run-for-all
@@ -134,37 +160,15 @@
          evil-insert
          evil-next-line
          evil-normal-state
-         evil-previous-line)))
+         evil-previous-line))))
 
+(cl-defun muki:init-evil-mode-elisp-slime-nav ()
   ;; elisp-slime-nav
   (after 'elisp-slime-nav
       (evil-define-key 'normal emacs-lisp-mode-map (kbd "K")
-                       'elisp-slime-nav-describe-elisp-thing-at-point))
+                       'elisp-slime-nav-describe-elisp-thing-at-point)))
 
-
-  (muki:init-evil-escape)
-
-  (cl-loop for (mode . state) in '((git-commit-mode . insert)
-                                   (git-rebase-mode . emacs)
-                                   (help-mode . emacs)
-                                   (ebib-entry-mode              . emacs)
-                                   (ebib-index-mode              . emacs)
-                                   (ebib-log-mode                . emacs)
-                                   (elfeed-show-mode             . emacs)
-                                   (elfeed-search-mode           . emacs)
-                                   (navi2ch-message-mode           . emacs)
-                                   (navi2ch-board-mode           . emacs)
-                                   (navi2ch-article-mode           . emacs)
-                                   (navi2ch-bookmark-mode           . emacs)
-                                   (navi2ch-list-mode           . emacs)
-                                   (dired-mode . emacs))
-     do (evil-set-initial-state mode state))
-
-
-  ;; advice for evil search
-  (advice-add 'evil-ex-search-next :after 'recenter)
-  (advice-add 'evil-ex-search-previous :after 'recenter)
-
+(cl-defun muki:init-evil-mode-skk ()
   (liby 'skk
     ;; [[http://d.hatena.ne.jp/tarao/20130304/evil_config]]
     (defadvice evil-ex-search-update-pattern
@@ -179,68 +183,60 @@ is a kind of temporary one which is not confirmed yet."
     (if (boundp 'skk-mode)
         (defun-add-hook muki:evil-disable-skk (evil-normal-state-entry-hook)
           (if skk-mode
-              (skk-mode-off)))))
+              (skk-mode-off))))))
+
+(cl-defun muki:init-evil-initial-state ()
+  (cl-loop for (mode . state) in '((git-commit-mode . insert)
+                                   (git-rebase-mode . emacs)
+                                   (help-mode . emacs)
+                                   (ebib-entry-mode              . emacs)
+                                   (ebib-index-mode              . emacs)
+                                   (ebib-log-mode                . emacs)
+                                   (elfeed-show-mode             . emacs)
+                                   (elfeed-search-mode           . emacs)
+                                   (navi2ch-message-mode           . emacs)
+                                   (navi2ch-board-mode           . emacs)
+                                   (navi2ch-article-mode           . emacs)
+                                   (navi2ch-bookmark-mode           . emacs)
+                                   (navi2ch-list-mode           . emacs)
+                                   (dired-mode . emacs))
+     do (evil-set-initial-state mode state)))
+
+(liby 'evil
+  (req 'goto-chg)
+
+  (muki:init-evil-mode-generals)
+
+  (muki:init-evil-plugins)
+
+  (req 'evil)
+
+  (enable-mode evil-mode)
+
+  (muki:init-evil-mode-mappings)
+
+  (muki:init-evil-mode-helm)
+  (muki:init-evil-mode-org)
+  (muki:init-evil-mode-eww)
+  (muki:init-evil-mode-smartparens)
+  (muki:init-evil-mode-multiple-cursors)
+  (muki:init-evil-mode-elisp-slime-nav)
+
+  (muki:init-evil-initial-state)
+
+  ;; advice for evil search
+  (advice-add 'evil-ex-search-next :after 'recenter)
+  (advice-add 'evil-ex-search-previous :after 'recenter)
+
+  (muki:init-evil-mode-skk)
   )
-
-
-
-(liby 'evil-nerd-commenter
-  ;; (set-opton evilnc-hotkey-comment-operator ",,")
-  (req 'evil-nerd-commenter
-    (add-key evil-normal-state-map ",ci" 'evilnc-comment-or-uncomment-lines)
-    (add-key evil-normal-state-map ",cl" 'evilnc-comment-or-uncomment-to-the-line)
-    (add-key evil-normal-state-map ",cc" 'evilnc-copy-and-comment-lines)
-    (add-key evil-normal-state-map ",cp" 'evilnc-comment-or-uncomment-paragraphs)
-    (add-key evil-normal-state-map ",cr" 'comment-or-uncomment-region)))
-
-(req 'evil-surround
-  (enable-mode global-evil-surround-mode)
-  (cl-defun muki:evil-surround-replace-pairs (new old)
-    (set-option evil-surround-pairs-alist
-                (cl-subst new old evil-surround-pairs-alist
-                          :test 'cl-equalp)))
-  (muki:evil-surround-replace-pairs '(?\( . ("(" . ")")) '(?\( . ("( " . " )")))
-  (muki:evil-surround-replace-pairs '(?\) . ("(" . ")")) '(?\) . ("( " . " )")))
-  (muki:evil-surround-replace-pairs '(?\[ . ("[" . "]")) '(?\[ . ("[ " . " ]")))
-  (muki:evil-surround-replace-pairs '(?\] . ("[" . "]")) '(?\] . ("[ " . " ]")))
-
-  )
-
-(req 'evil-matchit
-  (enable-mode global-evil-matchit-mode))
-
-(req 'evil-exchange
-  (evil-exchange-install))
 
 ;; (req 'evil-org)
 
 
 
-(req 'evil-visualstar)
-
-(req 'evil-operator-comment
-  (global-evil-operator-comment-mode 1))
-
-;; "[ SPC" 'evil-linewise-blank-lines-above
-;; "] SPC" 'evil-linewise-blank-lines-below
-;; "[ e" 'evil-linewise-move-text-up
-;; "] e" 'evil-linewise-move-text-down
-;; "[ p" 'evil-linewise-paste-newline-above
-;; "] p" 'evil-linewise-paste-newline-below
-(req 'evil-linewise)
-
 (liby 'smartparens
   (req 'evil-smartparens))
-
-(req 'evil-search-highlight-persist
-  (enable-mode global-evil-search-highlight-persist))
-
-
-(req 'evil-lisp-state
-  (add-key evil-normal-state-map "L" 'evil-lisp-state)
-  (add-key evil-lisp-state-map "C-g" 'evil-normal-state))
-
-(req 'evil-jumper)
 
 
 (provide 'init-evil)

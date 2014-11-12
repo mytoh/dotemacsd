@@ -2,7 +2,7 @@
 
 ;;; Code:
 
-(cl-defun init-evil-leader ()
+(cl-defun muki:init-evil-leader ()
   (req 'evil-leader
     (global-evil-leader-mode)
     (evil-leader/set-leader ",")
