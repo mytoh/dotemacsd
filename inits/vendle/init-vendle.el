@@ -383,7 +383,7 @@
   (liby 'nssh
     (auto (nssh nssh-all) "nssh"))
 
-  ;; (req 'init-popwin)
+  (req 'init-popwin)
 
   (req 'init-tumblesocks)
 
