@@ -7,8 +7,8 @@
   (setq git-gutter:disabled-modes '(image-mode eshell-mode))
   (global-git-gutter-mode t)
   (after "diminish"
-      (eval-after-load "git-gutter"
-        '(diminish 'git-gutter-mode "")))
+      (after 'git-gutter
+          (diminish 'git-gutter-mode "")))
   )
 
 (provide 'init-git-gutter)

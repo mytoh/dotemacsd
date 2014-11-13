@@ -5,7 +5,7 @@
   (hook 'emacs-lisp-mode-hook   'rainbow-delimiters-mode)
   (hook 'clojure-mode-hook   'rainbow-delimiters-mode)
   ;; (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-  ;; (with-eval-after-load "rainbow-delimiters"
+  ;; (after "rainbow-delimiters"
   ;;   (set-face-attribute 'rainbow-delimiters-depth-1-face nil :inherit 'font-lock-builtin-face)
   ;;   (set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "dodger blue")
   ;;   (set-face-attribute 'rainbow-delimiters-depth-3-face nil :foreground "orange")
