@@ -272,6 +272,7 @@
                           "nicferrier/emacs-noflet")))
 (vendle:register "kenoss/erfi"
                  '(:tag ("scheme" "srfi")))
+(vendle:register "nicferrier/eshell-manual")
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
@@ -567,6 +568,7 @@
 (vendle:fetch "bradyt/basic-computing-notes"
               '(:tag ("org")))
 (vendle:fetch "Fuco1/.emacs.d")
+(vendle:fetch "nlamirault/scame")
 
 (provide 'init-vendle-registers)
 
