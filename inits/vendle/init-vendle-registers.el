@@ -270,6 +270,8 @@
 (vendle:register "abo-abo/ace-link"
                  '(:deps ( "winterTTr/ace-jump-mode"
                           "nicferrier/emacs-noflet")))
+(vendle:register "kenoss/erfi"
+                 '(:tag ("scheme" "srfi")))
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
