@@ -191,8 +191,7 @@
 (req 'ox-pandoc)
 (req 'org-protocol)
 
-(req 'org-eldoc
-  (org-eldoc-hook-setup))
+(req 'org-eldoc)
 
 (req 'org-hlc)
 
