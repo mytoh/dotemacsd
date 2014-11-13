@@ -110,7 +110,7 @@
 (when (string-equal system-type "berkeley-unix")
   (muki:eshell-add-alias "pcheck" "sudo portmaster -PBiydav && sudo portaudit -Fdav && sudo portmaster --clean-packages --clean-distfiles" )
   (muki:eshell-add-alias "pfetch" "sudo make fetch-recursive" )
-  (muki:eshell-add-alias "pinst" "sudo make -s clean reinstall clean distclean; rehash")
+  (muki:eshell-add-alias "pinst" "sudo make -s clean reinstall clean distclean")
   (muki:eshell-add-alias "pconf" "sudo make config")
   (muki:eshell-add-alias "pconfr" "sudo make config-recursive")
   (muki:eshell-add-alias "pclean" "sudo make clean "         )
