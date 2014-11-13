@@ -41,7 +41,7 @@
     [remap eshell-pcomplete]  'helm-esh-pcomplete)
 (define-key eshell-mode-map (kbd "C-p") 'eshell-previous-matching-input-from-input)
 (define-key eshell-mode-map (kbd "C-n") 'eshell-next-matching-input-from-input)
-(req 'evil
+(liby 'evil
   (evil-define-key 'normal eshell-mode-map (kbd "C-p") 'eshell-previous-prompt)
   (evil-define-key 'normal eshell-mode-map (kbd "C-n") 'eshell-next-prompt))
 
