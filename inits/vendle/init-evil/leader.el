@@ -37,6 +37,9 @@
     (liby 'helm-ypv
       (evil-leader/set-key "e y" 'helm-ypv))
 
+    (liby 'helm-alku
+      (evil-leader/set-key "e n" 'helm-alku-vihko))
+
     (liby 'vendle
       (evil-leader/set-key "e v u" 'vendle-update
         "e v k" 'vendle-check
