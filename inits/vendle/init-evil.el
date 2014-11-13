@@ -14,6 +14,7 @@
 (require 'init-evil-search-highlight-persist "init-evil/search-highlight-persist")
 (require 'init-evil-jumper "init-evil/jumper")
 (require 'init-evil-visualstar "init-evil/visualstar")
+(require 'init-evil-smartparens "init-evil/smartparens")
 
 
 (cl-defun muki:init-evil-plugins ()
@@ -28,6 +29,7 @@
   (muki:init-evil-operator-comment)
   (muki:init-evil-jumper)
   (muki:init-evil-visualstar)
+  (muki:init-evil-smartparens)
   (muki:init-evil-search-highlight-persist))
 
 (cl-defun muki:init-evil-mode-generals ()
@@ -135,10 +137,10 @@
 (cl-defun muki:init-evil-mode-smartparens ()
   ;; smartparen
   (liby 'smartparens
-    (with-eval-after-load 'smartparens
-      ;; (add-key evil-normal-state-map ")" 'sp-up-sexp)
-      ;; (add-key evil-normal-state-map "(" 'sp-backward-up-sexp)
-      )))
+    (after 'smartparens
+        ;; (add-key evil-normal-state-map ")" 'sp-up-sexp)
+        ;; (add-key evil-normal-state-map "(" 'sp-backward-up-sexp)
+        )))
 
 (cl-defun muki:init-evil-mode-multiple-cursors ()
   ;; multiple-cursors
@@ -232,11 +234,6 @@ is a kind of temporary one which is not confirmed yet."
   )
 
 ;; (req 'evil-org)
-
-
-
-(liby 'smartparens
-  (req 'evil-smartparens))
 
 
 (provide 'init-evil)
