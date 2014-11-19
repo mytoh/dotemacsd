@@ -30,9 +30,9 @@
     (liby 'eshell-session
       (evil-leader/set-key
           "z z" 'eshell-session:switch
-        "z c" 'eshell-session:new
-        "z n" 'eshell-session:next
-        "z p" 'eshell-session:prev))
+        "z c" 'eshell-session:buffer-new
+        "z n" 'eshell-session:buffer-next
+        "z p" 'eshell-session:buffer-prev))
 
     (liby 'helm-ypv
       (evil-leader/set-key "e y" 'helm-ypv))

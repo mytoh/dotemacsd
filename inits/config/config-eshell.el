@@ -28,9 +28,9 @@
 
 
 (autoload 'eshell-session:switch "eshell-session")
-(autoload 'eshell-session:next "eshell-session")
-(autoload 'eshell-session:prev "eshell-session")
-(autoload 'eshell-session:new "eshell-session")
+(autoload 'eshell-session:buffer-next "eshell-session")
+(autoload 'eshell-session:buffer-prev "eshell-session")
+(autoload 'eshell-session:buffer-new "eshell-session")
 
 (define-prefix-command 'muki:eshell-session-map)
 (add-global-key "C-z" 'muki:eshell-session-map)
@@ -39,9 +39,9 @@
 
 (cl-defun muki:eshell-mode-hook ()
   (add-key eshell-mode-map
-    "C-z C-n" 'eshell-session:next
-    "C-z C-p" 'eshell-session:prev
-    "C-z C-c" 'eshell-session:new))
+    "C-z C-n" 'eshell-session:buffer-next
+    "C-z C-p" 'eshell-session:buffer-prev
+    "C-z C-c" 'eshell-session:buffer-new))
 (add-hook 'eshell-mode-hook 'muki:eshell-mode-hook)
 
 (autoload 'helm-eshell-session "helm-eshell-session")
