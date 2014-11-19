@@ -458,6 +458,9 @@
   (req 'ace-link
     (ace-link-setup-default))
 
+  (liby 'esup
+    (auto (esup) "esup" ))
+
   ;; (req 'vi-tilde-fringe
   ;;   (add-hook 'prog-mode-hook 'vi-tilde-fringe-mode))
 
