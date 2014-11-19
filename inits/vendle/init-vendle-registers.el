@@ -103,7 +103,12 @@
 (vendle:register "company-mode/company-mode"
                  '(:tag "company"))
 (vendle:register "proofit404/company-edbi"
-                 '(:tag "company"))
+                 '(:tag "company"
+                   :deps ( "company-mode/company-mode")))
+(vendle:register "vspinu/company-math"
+                 '(:tag "company"
+                   :deps ( "company-mode/company-mode"
+                          "vspinu/symbols.el")))
 (vendle:register "syohex/emacs-git-gutter"
                  '(:tag "git"))
 (vendle:register "syohex/emacs-rebuildfm"
@@ -272,7 +277,27 @@
                           "nicferrier/emacs-noflet")))
 (vendle:register "kenoss/erfi"
                  '(:tag ("scheme" "srfi")))
-(vendle:register "nicferrier/eshell-manual")
+(vendle:register "nicferrier/eshell-manual"
+                 '(:load-path ("dist")
+                   :build ("gmake")
+                   :info "dist"
+                   :tag "eshell"))
+(vendle:register "jschaf/esup")
+(vendle:register "vermiculus/stack-mode")
+(vendle:register "nlamirault/emacs-travis"
+                 '(:deps '( "magnars/s.el"
+                           ("magnars/dash.el" :compile nil)
+                           "lunaryorn/pkg-info.el"
+                           "tkf/emacs-request")
+                   :tag ("travis")))
+(vendle:register "aJchemist/linkmap.el")
+(vendle:register "alezost/mana.el"
+                 '(:tag ("manaplus")))
+(vendle:register "ichibeikatura/nipposi")
+(vendle:register "clarete/hackernews.el")
+(vendle:register "kkholst/SuperMan"
+                 '(:tag ("org")
+                   :load-path ("lisp")))
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
@@ -302,8 +327,9 @@
                  '(:tag "evil"))
 (vendle:register "AshleyMoni/evil-sneak"
                  '(:tag "evil"))
-(vendle:register "juanjux/evil-search-highlight-persist"
-                 '(:tag "evil"))
+;;(vendle:register "juanjux/evil-search-highlight-persist"
+;;                 '(:tag "evil"
+;;                   :deps ("emacsmirror/highlight")))
 (vendle:register "sunesimonsen/evil-walk-on-the-edge"
                  '(:tag "evil"))
 (vendle:register "bling/evil-jumper"
@@ -335,8 +361,9 @@
 (vendle:register "gridaphobe/evil-god-state"
                  '(:tag "evil"
                    :deps ( "chrisdone/god-mode" )))
-(vendle:register "vermiculus/stack-mode")
 (vendle:register "tarleb/evil-scout")
+(vendle:register "PythonNut/evil-easymotion"
+                 '(:tag "evil"))
 
 
 ;;;;; org
@@ -379,8 +406,6 @@
 (vendle:register-theme "nishikawasasaki/ns-milk-theme")
 (vendle:register-theme "tiborsimko/ostrich-theme-el")
 (vendle:register-theme "michaelparenteau/parenteau-theme")
-(vendle:register-theme "emacsfodder/emacs-purple-haze-theme")
-(vendle:register-theme "emacsfodder/emacs-clues-theme")
 (vendle:register-theme "gchp/flatland-emacs")
 (vendle:register-theme "mswift42/busybee-theme")
 (vendle:register-theme "byels/emacs-cherry-blossom-theme")
@@ -400,12 +425,26 @@
 (vendle:register-theme "hbin/molokai-theme")
 (vendle:register-theme "jordonbiondo/ample-theme")
 (vendle:register-theme "mjwall/ample-zen")
-(vendle:register-theme "emacsfodder/emacs-soothe-theme")
 (vendle:register-theme "bruce/emacs-spacegray-theme")
 (vendle:register-theme "juba/color-theme-tangotango")
 (vendle:register-theme "ccann/badger-theme")
 (vendle:register-theme "xzerocode/hipster-theme")
-
+(vendle:register-theme "fommil/darcula-theme-emacs")
+(vendle:register-theme "emacsfodder/emacs-waher-theme")
+(vendle:register-theme "emacsfodder/emacs-purple-haze-theme")
+(vendle:register-theme "emacsfodder/emacs-clues-theme")
+(vendle:register-theme "emacsfodder/emacs-soothe-theme")
+(vendle:register-theme  "emacsfodder/emacs-slime-theme" )
+(vendle:register-theme  "emacsfodder/emacs-peacock-theme" )
+(vendle:register-theme  "emacsfodder/emacs-mustard-theme" )
+(vendle:register-theme  "emacsfodder/emacs-mellow-theme" )
+(vendle:register-theme  "emacsfodder/emacs-lavender-theme" )
+(vendle:register-theme  "emacsfodder/emacs-firecode-theme" )
+(vendle:register-theme  "emacsfodder/emacs-dark-krystal-theme" )
+(vendle:register-theme  "emacsfodder/emacs-colonoscopy-theme" )
+(vendle:register-theme  "emacsfodder/emacs-boron-theme" )
+(vendle:register-theme  "emacsfodder/emacs-bliss-theme" )
+(vendle:register-theme  "emacsfodder/emacs-flatland-black-theme" )
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -569,6 +608,11 @@
               '(:tag ("org")))
 (vendle:fetch "Fuco1/.emacs.d")
 (vendle:fetch "nlamirault/scame")
+(vendle:fetch "dtan4/dot.emacs.d")
+(vendle:fetch "jimm/elisp")
+(vendle:fetch "magnars/.emacs.d")
+(vendle:fetch "steventlamb/lamb-horned-beast")
+(vendle:fetch "Bruce-Connor/emacs-online-documentation")
 
 (provide 'init-vendle-registers)
 
