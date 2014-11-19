@@ -1,9 +1,12 @@
 
 (cl-defun muki:magit-highlights ()
-  (set-face-attribute 'magit-diff-add nil :foreground "#40ff40" :background nil)
-  (set-face-attribute 'magit-diff-del nil :foreground "#ff4040" :background nil)
+  (set-face-attribute 'magit-diff-add nil :foreground "green3" :background nil)
+  (set-face-attribute 'diff-refine-added nil :foreground "green3" :background nil :inherit nil)
+  (set-face-attribute 'magit-diff-del nil :foreground "red3" :background nil)
+  (set-face-attribute 'diff-refine-removed nil :foreground "red3"  :background nil :inherit nil)
   (set-face-attribute 'magit-diff-file-header nil :foreground "#4040ff" :background nil)
   ;; (set-face-attribute 'magit-item-highlight nil :foreground nil)
+  (set-face-background 'magit-item-highlight "#121212")
   )
 
 (after "magit"
