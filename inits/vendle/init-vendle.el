@@ -15,7 +15,7 @@
   (req 'init-vendle-registers)
 
   ;; ** install packages
-  (vendle:check-packages)
+  ;; (vendle:check-packages)
 
   (vendle:turn-on-font-lock)
 
@@ -460,6 +460,15 @@
 
   (liby 'esup
     (auto (esup) "esup" ))
+
+  (req 'context-coloring
+    (add-hook 'js-mode-hook 'context-coloring-mode))
+
+  (liby 'stumpwm-mode
+    (auto (stumpwm-mode) "stumpwm-mode")
+    (mode ".stumpwmrc.d/conf" 'stumpwm-mode))
+
+  ;; (req 'travis)
 
   ;; (req 'vi-tilde-fringe
   ;;   (add-hook 'prog-mode-hook 'vi-tilde-fringe-mode))
