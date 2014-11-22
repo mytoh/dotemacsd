@@ -285,10 +285,11 @@
 (vendle:register "jschaf/esup")
 (vendle:register "vermiculus/stack-mode")
 (vendle:register "nlamirault/emacs-travis"
-                 '(:deps '( "magnars/s.el"
-                           ("magnars/dash.el" :compile nil)
-                           "lunaryorn/pkg-info.el"
-                           "tkf/emacs-request")
+                 '(:deps ( "magnars/s.el"
+                          ("magnars/dash.el" :compile nil)
+                          ( "lunaryorn/pkg-info.el"
+                           :deps ("cask/epl"))
+                          "tkf/emacs-request")
                    :tag ("travis")))
 (vendle:register "aJchemist/linkmap.el")
 (vendle:register "alezost/mana.el"
@@ -298,6 +299,10 @@
 (vendle:register "kkholst/SuperMan"
                  '(:tag ("org")
                    :load-path ("lisp")))
+(vendle:register "jacksonrayhamilton/context-coloring"
+                 '(:tag ("javascript")
+                   :build ("npm install")))
+(vendle:register "emacsattic/spaces")
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
@@ -469,6 +474,8 @@
   ((file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
    (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk")))
 
+(vendle:register-local "~/.stumpwm.d/modules/util/swm-emacs")
+
 ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
 ;;;;; not library
@@ -541,6 +548,10 @@
               '(:tag "vim"))
 (vendle:fetch "gmarik/Vundle.vim"
               '(:tag "vim"))
+(vendle:fetch "guns/vim-sexp"
+              '(:tag "vim"))
+(vendle:fetch "tpope/vim-sexp-mappings-for-regular-people"
+              '(:tag "vim"))
 (vendle:fetch "kovan/dopemacs")
 (vendle:fetch "AshleyMoni/dotfiles"
               '(:tag ( "evil" "dotfiles" )))
@@ -581,8 +592,8 @@
 (vendle:fetch "bosko/boem")
 (vendle:fetch "jceb/vim-orgmode"
               '(:tag ("vim" "org")))
-;; (vendle:fetch "borntorock/UI-toolkit-using-orgmode"
-;;               '(:tag ("org")))
+(vendle:fetch "borntorock/UI-toolkit-using-orgmode"
+              '(:tag ("org")))
 (vendle:fetch "bodil/emacs.d")
 (vendle:fetch "jixiuf/emacs_conf"
               '(:tag ("evil")))
@@ -613,6 +624,10 @@
 (vendle:fetch "magnars/.emacs.d")
 (vendle:fetch "steventlamb/lamb-horned-beast")
 (vendle:fetch "Bruce-Connor/emacs-online-documentation")
+(vendle:fetch "unbalancedparentheses/lunfardo")
+(vendle:fetch "emacsimize/org-admin"
+              '(:tag ("org" "server")))
+(vendle:fetch "garaud/foggycowinn")
 
 (provide 'init-vendle-registers)
 
