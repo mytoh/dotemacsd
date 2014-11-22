@@ -292,7 +292,13 @@
 ;; (set-option url-proxy-services '(("http" . "192.168.1.22:8080")))
 
 ;;;; info
-(set-option Info-additional-directory-list (list (expand-file-name "~/huone/työkaluvaja/info")))
+(cl-mapc
+ (lambda (dir)
+   (add-to-list 'Info-additional-directory-list dir))
+ (cl-remove-if-not
+  (lambda (dir) (and (file-directory-p dir)
+                (file-exists-p dir)))
+  (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+")))
 
 ;;;; file type and external program list used for helm and sunrise
 (defvar muki:external-programs-associations nil)
