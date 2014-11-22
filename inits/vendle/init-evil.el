@@ -42,9 +42,10 @@
               evil-replace-state-cursor '("red" bar)
               evil-operator-state-cursor '("red" hollow))
   (set-option evil-search-module 'evil-search
-              evil-magic 'very-magic)
+              evil-magic 'very-magic
+              evil-want-fine-undo 'very-fine
+              )
   (enable-option evil-cross-lines
-                 evil-want-fine-undo
                  evil-cjk-emacs-word-boundary
                  )
   (disable-option evil-move-cursor-back)

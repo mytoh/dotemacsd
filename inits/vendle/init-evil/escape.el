@@ -3,8 +3,10 @@
 ;;; Code:
 
 (cl-defun muki:init-evil-escape ()
-  (req 'evil-escape
-    (evil-escape-mode)))
+  (liby 'evil-escape
+    (set-option evil-escape-key-sequence (kbd "ESC"))
+    (req 'evil-escape
+      (evil-escape-mode))))
 
 (cl-defun muki:init-evil-escape-w/o-lib ()
   ;; [[https://github.com/davvil/.emacs.d/blob/master/init.el]]
