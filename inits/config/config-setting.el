@@ -269,8 +269,8 @@
 (defvar muki:x-theme 'soothe)
 (defvar muki:term-theme 'flatland)
 
-(enable-option x-select-enable-clipboard
-               x-select-enable-primary)
+(enable-option select-enable-clipboard
+               select-enable-primary)
 
 ;;;; browse web
 (set-option browse-url-generic-program "conkeror")
