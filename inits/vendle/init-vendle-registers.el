@@ -375,7 +375,7 @@
 (vendle:register "git://orgmode.org/org-mode.git"
                  '(:load-path ("lisp" "contrib/lisp")
                    :compile nil
-                   :build ("gmake" "gmake doc")
+                   :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
                    :info "doc"
                    :tag "org"))
 (vendle:register "tj64/org-hlc")
@@ -450,6 +450,7 @@
 (vendle:register-theme  "emacsfodder/emacs-boron-theme" )
 (vendle:register-theme  "emacsfodder/emacs-bliss-theme" )
 (vendle:register-theme  "emacsfodder/emacs-flatland-black-theme" )
+(vendle:register-theme "emacsfodder/emacs-mbo70s-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -464,7 +465,8 @@
   (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
   (add-project-root "emacs-eshell-session" '(:tag "eshell"))
   (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
-  (add-project-root "helm-project-buffer" '(:tag "helm")))
+  (add-project-root "helm-project-buffer" '(:tag "helm"))
+  (add-project-root "emacs-eshellar" '(:tag ( "eshell" "shellar" ))))
 
 (cond
   ((file-directory-p (muki:user-emacs-directory "vendle/ddskk"))
@@ -628,6 +630,8 @@
 (vendle:fetch "emacsimize/org-admin"
               '(:tag ("org" "server")))
 (vendle:fetch "garaud/foggycowinn")
+(vendle:fetch "ardumont/org"
+              '(:tag ("org")))
 
 (provide 'init-vendle-registers)
 
