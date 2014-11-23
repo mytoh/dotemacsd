@@ -1,3 +1,0 @@
-## -*- mode: eshell-script -*-
-
-(load "~/.emacs.d/eshell/init.el")
