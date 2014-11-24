@@ -89,7 +89,7 @@
 (vendle:register "osener/emms-soundcloud"
                  '(:tag ("emms" "soundcloud")))
 (vendle:register "r0man/soundklaus.el"
-                 '(:deps (("magnars/dash.el" :compile nil)
+                 '(:deps (("magnars/dash.el" ( :compile nil))
                           "magnars/s.el"
                           "kiwanami/emacs-deferred")
                    :tag "soundcloud"))
@@ -100,6 +100,11 @@
                  '(:build ("gmake lisp docs")
                    :info "."
                    :tag "git"))
+(vendle:register "magit/orgit"
+                 '(:deps (("magit/magit"
+			   (:build ("gmake lisp docs")
+						 :info "."
+						 :tag "git")))))
 (vendle:register "company-mode/company-mode"
                  '(:tag "company"))
 (vendle:register "proofit404/company-edbi"
@@ -115,7 +120,7 @@
                  '(:tag "radio"))
 (vendle:register "syohex/emacs-anzu" '(:compile nil))
 (vendle:register "Fuco1/smartparens"
-                 '(:compile nil :deps (("magnars/dash.el" :compile nil))))
+                 '(:compile nil :deps (("magnars/dash.el" ( :compile nil)))))
 (vendle:register "magnars/expand-region.el")
 (vendle:register "magnars/multiple-cursors.el")
 (vendle:register "Fuco1/org-pretty-table"
@@ -286,9 +291,9 @@
 (vendle:register "vermiculus/stack-mode")
 (vendle:register "nlamirault/emacs-travis"
                  '(:deps ( "magnars/s.el"
-                          ("magnars/dash.el" :compile nil)
+                          ("magnars/dash.el" ( :compile nil))
                           ( "lunaryorn/pkg-info.el"
-                           :deps ("cask/epl"))
+                           (:deps ("cask/epl")))
                           "tkf/emacs-request")
                    :tag ("travis")))
 (vendle:register "aJchemist/linkmap.el")
@@ -303,6 +308,10 @@
                  '(:tag ("javascript")
                    :build ("npm install")))
 (vendle:register "emacsattic/spaces")
+(vendle:register "jeremy-compostella/project-manager"
+                 '(:tag ("project")))
+(vendle:register "Fuco1/better-jump"
+                 '(:tag ("ace-jump")))
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
