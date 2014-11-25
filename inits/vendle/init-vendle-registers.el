@@ -102,9 +102,11 @@
                    :tag "git"))
 (vendle:register "magit/orgit"
                  '(:deps (("magit/magit"
-			   (:build ("gmake lisp docs")
-						 :info "."
-						 :tag "git")))))
+                           (:build ("gmake lisp docs")
+                                   :info "."
+                                   :tag ("git" )))
+                          ("magnars/dash.el" ( :compile nil)))
+                   :tag ("git" "org" "magit")))
 (vendle:register "company-mode/company-mode"
                  '(:tag "company"))
 (vendle:register "proofit404/company-edbi"
@@ -116,6 +118,14 @@
                           "vspinu/symbols.el")))
 (vendle:register "syohex/emacs-git-gutter"
                  '(:tag "git"))
+(vendle:register "syohex/emacs-git-gutter-fringe"
+                 '(:tag ("git")
+                   :deps ( "syohex/emacs-git-gutter"
+                          "nschum/fringe-helper.el")))
+(vendle:register "nonsequitur/git-gutter-fringe-plus"
+                 '(:tag ("git")
+                   :deps ( "nonsequitur/git-gutter-plus"
+                          "nschum/fringe-helper.el")))
 (vendle:register "syohex/emacs-rebuildfm"
                  '(:tag "radio"))
 (vendle:register "syohex/emacs-anzu" '(:compile nil))
@@ -276,7 +286,10 @@
 (vendle:register "kaihaosw/eshell-prompt-extras"
                  '(:tag "eshell"))
 (vendle:register "syohex/emacs-smeargle"
-                 '(:tag "highlight"))
+                 '(:tag ("git" "highlight" )))
+(vendle:register "syohex/emacs-git-messenger"
+                 '(:tag ("git")
+                   :deps ("auto-complete/popup-el")))
 (vendle:register "abo-abo/ace-link"
                  '(:deps ( "winterTTr/ace-jump-mode"
                           "nicferrier/emacs-noflet")))
@@ -311,7 +324,8 @@
 (vendle:register "jeremy-compostella/project-manager"
                  '(:tag ("project")))
 (vendle:register "Fuco1/better-jump"
-                 '(:tag ("ace-jump")))
+                 '(:tag ("ace-jump")
+                   :deps ("ShingoFukuyama/ov.el")))
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
@@ -603,8 +617,8 @@
 (vendle:fetch "bosko/boem")
 (vendle:fetch "jceb/vim-orgmode"
               '(:tag ("vim" "org")))
-(vendle:fetch "borntorock/UI-toolkit-using-orgmode"
-              '(:tag ("org")))
+;; (vendle:fetch "borntorock/UI-toolkit-using-orgmode"
+;;               '(:tag ("org")))
 (vendle:fetch "bodil/emacs.d")
 (vendle:fetch "jixiuf/emacs_conf"
               '(:tag ("evil")))
@@ -641,6 +655,9 @@
 (vendle:fetch "garaud/foggycowinn")
 (vendle:fetch "ardumont/org"
               '(:tag ("org")))
+(vendle:fetch "TheBB/dotfiles"
+              '(:tag ("evil" "org")
+                :desc "https://github.com/TheBB/dotfiles/blob/master/emacs/init.el#L841-975"))
 
 (provide 'init-vendle-registers)
 
