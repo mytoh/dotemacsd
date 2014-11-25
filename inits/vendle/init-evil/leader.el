@@ -60,6 +60,15 @@
         "h s"   'helm-swoop
         "h t"  'helm-themes))
 
+    (liby 'paradox
+      (evil-leader/set-key
+          "e p" 'paradox-list-packages))
+
+    (liby 'eww
+      (evil-leader/set-key
+          "e w" 'muki:eww
+        "e W" 'eww))
+
 
     (defun-add-hook muki:evil-ace-jump-mode-setup (after-init-hook)
       (when (and (featurep 'evil) (featurep 'evil-leader))
