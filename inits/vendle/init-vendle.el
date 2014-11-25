@@ -468,6 +468,12 @@
     (auto (stumpwm-mode) "stumpwm-mode")
     (mode ".stumpwmrc.d/conf" 'stumpwm-mode))
 
+  (req 'smeargle)
+
+  ;; (req 'git-gutter-fringe+
+  ;;   ;; Optional: Activate minimal skin
+  ;;   (git-gutter-fr+-minimal))
+
   ;; (req 'travis)
 
   ;; (req 'vi-tilde-fringe
