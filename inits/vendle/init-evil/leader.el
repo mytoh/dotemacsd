@@ -38,7 +38,10 @@
       (evil-leader/set-key "e y" 'helm-ypv))
 
     (liby 'helm-alku
-      (evil-leader/set-key "e n" 'helm-alku-vihko))
+      (evil-leader/set-key
+          "e h" 'helm-alku
+        "e c" 'helm-alku-program
+        "e n" 'helm-alku-vihko))
 
     (liby 'vendle
       (evil-leader/set-key "e v u" 'vendle-update
@@ -68,6 +71,10 @@
       (evil-leader/set-key
           "e w" 'muki:eww
         "e W" 'eww))
+
+    (liby 'helm-git-grep
+      (evil-leader/set-key
+          "e r" 'helm-git-grep))
 
 
     (defun-add-hook muki:evil-ace-jump-mode-setup (after-init-hook)
