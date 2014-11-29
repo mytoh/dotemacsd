@@ -107,6 +107,10 @@
                                    :tag ("git" )))
                           ("magnars/dash.el" ( :compile nil)))
                    :tag ("git" "org" "magit")))
+(vendle:register "mickesv/magit-overview"
+                 '(:tag ("magit")
+                   :deps (("magit/magit"
+                           (:build ("gmake lisp docs") :info "." :tag "git")))))
 (vendle:register "company-mode/company-mode"
                  '(:tag "company"))
 (vendle:register "proofit404/company-edbi"
@@ -301,7 +305,8 @@
                    :info "dist"
                    :tag "eshell"))
 (vendle:register "jschaf/esup")
-(vendle:register "vermiculus/stack-mode")
+(vendle:register "vermiculus/sx.el"
+                 '(:deps ("git://jblevins.org/git/markdown-mode.git")))
 (vendle:register "nlamirault/emacs-travis"
                  '(:deps ( "magnars/s.el"
                           ("magnars/dash.el" ( :compile nil))
@@ -326,6 +331,9 @@
 (vendle:register "Fuco1/better-jump"
                  '(:tag ("ace-jump")
                    :deps ("ShingoFukuyama/ov.el")))
+(vendle:register "kentaro/auto-save-buffers-enhanced")
+(vendle:register "cosmicexplorer/js-beautify-emacs"
+                 '(:tag ("javascript")))
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
@@ -474,6 +482,7 @@
 (vendle:register-theme  "emacsfodder/emacs-bliss-theme" )
 (vendle:register-theme  "emacsfodder/emacs-flatland-black-theme" )
 (vendle:register-theme "emacsfodder/emacs-mbo70s-theme")
+(vendle:register-theme "uwabami/darkpastel-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -544,7 +553,6 @@
 (vendle:fetch "lukaszkorecki/cult-leader")
 (vendle:fetch "ahmadseleem/ViMacs"
               '(:tag ("evil" "dotifles")))
-(vendle:fetch "lunaryorn/.emacs.d")
 (vendle:fetch "febuiles/dotemacs")
 (vendle:fetch "git://orgmode.org/worg.git")
 (vendle:fetch "roman/emacs.d")
@@ -571,12 +579,16 @@
 (vendle:fetch "11111000000/emacs-d")
 (vendle:fetch "Shougo/neobundle.vim"
               '(:tag "vim"))
+(vendle:fetch "Shougo/vimshell.vim"
+              '(:tag ("vim" "shell")))
 (vendle:fetch "gmarik/Vundle.vim"
               '(:tag "vim"))
 (vendle:fetch "guns/vim-sexp"
               '(:tag "vim"))
 (vendle:fetch "tpope/vim-sexp-mappings-for-regular-people"
               '(:tag "vim"))
+(vendle:fetch "kovisoft/paredit"
+              '(:tag ("vim" "paredit")))
 (vendle:fetch "kovan/dopemacs")
 (vendle:fetch "AshleyMoni/dotfiles"
               '(:tag ( "evil" "dotfiles" )))
@@ -658,6 +670,10 @@
 (vendle:fetch "TheBB/dotfiles"
               '(:tag ("evil" "org")
                 :desc "https://github.com/TheBB/dotfiles/blob/master/emacs/init.el#L841-975"))
+(vendle:fetch "grettke/home"
+              '(:tag ("org")))
+(vendle:fetch "lunaryorn/.emacs.d"
+              '(:tag ("smartparens")))
 
 (provide 'init-vendle-registers)
 
