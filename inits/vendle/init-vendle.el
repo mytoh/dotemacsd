@@ -171,6 +171,7 @@
 
   (req 'init-magit)
   (req 'init-git-modes)
+  (req 'magit-overview)
 
   (req 'init-company-mode)
 
@@ -469,6 +470,19 @@
     (mode ".stumpwmrc.d/conf" 'stumpwm-mode))
 
   (req 'smeargle)
+
+  (req 'sx)
+
+  ;; (req 'js-beautify
+  ;;   (add-hook 'js-mode-hook 'js-beautify-init)
+  ;;   (add-hook 'html-mode-hook 'js-beautify-init)
+  ;;   (add-hook 'css-mode-hook 'js-beautify-init))
+
+
+  ;;   (req 'auto-save-buffers-enhanced
+  ;; ;;   ;; If you're using CVS or Subversion or git
+  ;;   (auto-save-buffers-enhanced-include-only-checkout-path t)
+  ;;   (auto-save-buffers-enhanced t))
 
   ;; (req 'git-gutter-fringe+
   ;;   ;; Optional: Activate minimal skin
