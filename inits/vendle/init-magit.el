@@ -8,8 +8,7 @@
   (set-face-attribute 'diff-refine-removed nil :foreground "red3"  :background nil :inherit nil)
   (set-face-attribute 'magit-diff-file-header nil :foreground "#4040ff" :background nil)
   ;; (set-face-attribute 'magit-item-highlight nil :foreground nil)
-  (set-face-background 'magit-item-highlight "#121212")
-  )
+  (set-face-background 'magit-item-highlight "#121212"))
 
 (after "magit"
     (muki:magit-highlights))
@@ -28,6 +27,5 @@
 
 (liby 'magit
   (muki:magit-setup))
-
 
 (provide 'init-magit)

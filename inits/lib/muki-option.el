@@ -33,5 +33,13 @@
             (cl-psetq ,option nil)
             (disable-option ,@(cdr body))))))
 
+(defvar muki:*options-list* '())
+
+(cl-defmacro set-option-update (option value)
+  `(cl-letf ((prev-value ,option))
+     (cl-pushnew (list ',option prev-value ,value)
+                 muki:*options-list*)
+     (cl-psetq ,option ,value)))
+
 (provide 'muki-option)
 ;;; muki-option.el ends here

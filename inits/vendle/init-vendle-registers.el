@@ -72,14 +72,13 @@
 (vendle:register "kenoss/debug-print")
 ;; (vendle:register "emacsmirror/mew")
 (vendle:register "ober/zone-matrix")
-(vendle:register "mytoh/fish-mode")
+;; (vendle:register "mytoh/fish-mode")
+(vendle:register "wwwjfy/emacs-fish")
 (vendle:register "thierryvolpiatto/emacs-bmk-ext")
 (vendle:register "kawabata/aozora-view")
 (vendle:register "tomoya/fuzzyjump.el")
 (vendle:register "omouse/emacs-sos")
 (vendle:register "davexunit/yon-chan")
-(vendle:register "omouse/org-doing"
-                 '(:tag "org"))
 (vendle:register "git://git.sv.gnu.org/emms.git"
                  '(:name "emms" :load-path "lisp"
                    :build ("gmake lisp docs emms-print-metadata")
@@ -137,8 +136,6 @@
                  '(:compile nil :deps (("magnars/dash.el" ( :compile nil)))))
 (vendle:register "magnars/expand-region.el")
 (vendle:register "magnars/multiple-cursors.el")
-(vendle:register "Fuco1/org-pretty-table"
-                 '(:compile nil :tag "org"))
 (vendle:register "haskell/haskell-mode"
                  '(:tag "haskell"
                    :compile nil
@@ -153,7 +150,6 @@
 (vendle:register "re5et/itail")
 (vendle:register "syohex/emacs-quickrun")
 (vendle:register "fxbois/web-mode" '(:compile nil))
-(vendle:register "m00natic/eww-lnum")
 (vendle:register "emacsmirror/auto-highlight-symbol")
 (vendle:register "nschum/highlight-symbol.el")
 (vendle:register "emacsmirror/rainbow-mode")
@@ -334,6 +330,20 @@
 (vendle:register "kentaro/auto-save-buffers-enhanced")
 (vendle:register "cosmicexplorer/js-beautify-emacs"
                  '(:tag ("javascript")))
+(vendle:register "josteink/csharp-mode"
+                 '(:tag ("C#")))
+(vendle:register "Bruce-Connor/camcorder.el"
+                 '(:tag ("screencast")
+                   :deps ("Bruce-Connor/names")))
+(vendle:register "matthewlmcclure/dircmp-mode")
+(vendle:register "agpchil/url-preview.el"
+                 '(:deps (("magnars/dash.el" ( :compile nil)))))
+(vendle:register "emacsfodder/kurecolor"
+                 '(:deps ("magnars/s.el")))
+(vendle:register "cmpitg/emnode")
+(vendle:register "wasamasa/shackle"
+                 '(:compile nil))
+(vendle:register "sabof/stripe-buffer")
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
@@ -414,7 +424,17 @@
                                    :tag ("org" "outline")))
 (vendle:register "tj64/outorg" '(:compile nil
                                  :tag ("org" "outline")))
-;; (vendle:register "jleechpe/outorg-export")
+(vendle:register "omouse/org-doing"
+                 '(:tag "org"))
+(vendle:register "Fuco1/org-pretty-table"
+                 '(:compile nil :tag "org"))
+(vendle:register "rlister/org-present"
+                 '(:deps (("git://orgmode.org/org-mode.git"
+                           (:load-path ("lisp" "contrib/lisp")
+                                       :compile nil
+                                       :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
+                                       :info "doc"
+                                       :tag "org")))))
 ;; (vendle:register "jleechpe/outorg-export")
 (vendle:register "tj64/navi"
                  '(:tag ("org" "outline")))
@@ -483,6 +503,7 @@
 (vendle:register-theme  "emacsfodder/emacs-flatland-black-theme" )
 (vendle:register-theme "emacsfodder/emacs-mbo70s-theme")
 (vendle:register-theme "uwabami/darkpastel-theme")
+(vendle:register-theme "dev-plvlml/zenburn-care")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -674,6 +695,13 @@
               '(:tag ("org")))
 (vendle:fetch "lunaryorn/.emacs.d"
               '(:tag ("smartparens")))
+(vendle:fetch "fgallina/dotemacs")
+(vendle:fetch "ghoseb/dotemacs")
+(vendle:fetch "meteor1113/dotemacs")
+(vendle:fetch "bzg/dotemacs")
+(vendle:fetch "CestDiego/spacemacs_conf")
+(vendle:fetch "waymondo/hemacs")
+(vendle:fetch "davidvilla/emacs-pills")
 
 (provide 'init-vendle-registers)
 

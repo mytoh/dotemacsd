@@ -182,7 +182,7 @@ buffer is not visiting a file."
                 "*init log*" "*Ibuffer*" "*scratch*"
                 "*MULTI-TERM-DEDICATED*"))
          (interested-buffers
-          (cl-remove-if-not
+          (filter
            (lambda (buffer)
              (and
               ;; donk kill buffers who has the windows displayed in

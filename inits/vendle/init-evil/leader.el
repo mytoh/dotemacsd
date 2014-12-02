@@ -77,12 +77,12 @@
           "e r" 'helm-git-grep))
 
 
-    (defun-add-hook muki:evil-ace-jump-mode-setup (after-init-hook)
-      (when (and (featurep 'evil) (featurep 'evil-leader))
-        (evil-leader/set-key
-            "<SPC>c" 'evil-ace-jump-char-mode
-          "<SPC>w" 'evil-ace-jump-word-mode
-          "<SPC>l" 'evil-ace-jump-line-mode)))
+    ;; (defun-add-hook muki:evil-ace-jump-mode-setup (after-init-hook)
+    ;;   (when (and (featurep 'evil) (featurep 'evil-leader))
+    ;;     (evil-leader/set-key
+    ;;         "<SPC>c" 'evil-ace-jump-char-mode
+    ;;       "<SPC>w" 'evil-ace-jump-word-mode
+    ;;       "<SPC>l" 'evil-ace-jump-line-mode)))
 
     ))
 

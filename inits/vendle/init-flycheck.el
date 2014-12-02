@@ -3,7 +3,20 @@
 (req 'flycheck
   ;; (add-hook 'after-init-hook #'global-flycheck-mode)
   (add-hook 'emacs-lisp-mode-hook 'flycheck-mode)
-  (set-option flycheck-check-syntax-automatically '(save new-line)))
+  (set-option flycheck-check-syntax-automatically '(save new-line))
+
+  ;; (flycheck-define-checker javascript-jslint-reporter
+  ;;   "A JavaScript syntax and style checker based on JSLint Reporter.
+
+  ;;                             See URL `https://github.com/FND/jslint-reporter'."
+  ;;   :command ("~/.emacs.d/jslint-reporter" source)
+  ;;   :error-patterns
+  ;;   ((error line-start (1+ nonl) ":" line ":" column ":" (message) line-end))
+  ;;   :modes (js-mode js2-mode js3-mode))
+  ;; (add-hook 'js-mode-hook (lambda ()
+  ;;                           (flycheck-select-checker 'javascript-jslint-reporter)
+  ;;                           (flycheck-mode)))
+  )
 
 (liby 'flycheck-pos-tip
   (when (display-graphic-p (selected-frame))

@@ -15,6 +15,7 @@
 (require 'init-evil-jumper "init-evil/jumper")
 (require 'init-evil-visualstar "init-evil/visualstar")
 (require 'init-evil-smartparens "init-evil/smartparens")
+(require 'init-evil-easymotion "init-evil/easymotion")
 
 
 (cl-defun muki:init-evil-plugins ()
@@ -30,7 +31,9 @@
   (muki:init-evil-jumper)
   (muki:init-evil-visualstar)
   (muki:init-evil-smartparens)
-  (muki:init-evil-search-highlight-persist))
+  (muki:init-evil-search-highlight-persist)
+  ;; (muki:init-evil-easymotion)
+  )
 
 (cl-defun muki:init-evil-mode-generals ()
   (set-option evil-toggle-key "C-`")

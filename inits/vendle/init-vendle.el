@@ -385,6 +385,7 @@
     (auto (nssh nssh-all) "nssh"))
 
   (req 'init-popwin)
+  ;; (req 'init-shackle)
 
   (req 'init-tumblesocks)
 
@@ -441,14 +442,14 @@
   ;;   (enable-option  aria2-add-evil-quirks))
 
 
-  (liby 'eww-lnum
-    (auto (eww-lnum-follow eww-lnum-universal) "eww-lnum")
-    (after "eww"
-        (define-key eww-mode-map "f" 'eww-lnum-follow)
-      (define-key eww-mode-map "F" 'eww-lnum-universal))
-    (after "eww-lnum"
-        (set-face-attribute 'eww-lnum-number nil
-         :foreground "#3355bb")))
+  ;; (liby 'eww-lnum
+  ;;   (auto (eww-lnum-follow eww-lnum-universal) "eww-lnum")
+  ;;   (after "eww"
+  ;;       (define-key eww-mode-map "f" 'eww-lnum-follow)
+  ;;     (define-key eww-mode-map "F" 'eww-lnum-universal))
+  ;;   (after "eww-lnum"
+  ;;       (set-face-attribute 'eww-lnum-number nil
+  ;;        :foreground "#3355bb")))
 
   (req 'yaml-mode)
 
@@ -472,6 +473,20 @@
   (req 'smeargle)
 
   (req 'sx)
+
+  (req 'csharp-mode)
+
+  (req 'dircmp)
+
+  (req 'url-preview
+    (req 'url-preview-image
+      (url-preview-module-enable "image")))
+
+  (req 'stripe-buffer
+    (add-hook 'dired-mode-hook 'stripe-listify-buffer)
+    (add-hook 'org-mode-hook 'turn-on-stripe-table-mode))
+
+  ;; (req 'camcorder)
 
   ;; (req 'js-beautify
   ;;   (add-hook 'js-mode-hook 'js-beautify-init)
@@ -531,10 +546,10 @@
 
   ;;; util
   (cl-defun vendle-find-duplicate-packages ()
-    (cl-remove-if-not
+    (filter
      (lambda (p)
        (cl-find-if (lambda (v) (equalp (vendle:package-name v)
-                                       p))
+                                  p))
                    *vendle-package-list*))
      (cl-mapcar
       (lambda (p) (format "%s" p))

@@ -116,6 +116,7 @@
      org-toc
      org-collector
      org-eww
+     org-eshell
      ))
  (cl-mapc (lambda (m) (add-to-list 'org-modules m))
           my-org-modules)
@@ -181,6 +182,20 @@
       (set-face-underline 'org-link nil)
     (set-face-underline 'org-link t))
   (iimage-mode 'toggle))
+
+;; [[http://www.wisdomandwonder.com/link/9352/easily-check-src-block-correctness-in-org-mode]]
+(defun gcr/src-block-check ()
+  (interactive)
+  (org-element-map (org-element-parse-buffer 'element) 'src-block
+    (lambda (src-block)
+      (let ((language (org-element-property :language src-block)))
+        (cond ((null language)
+               (error "Missing language at position %d"
+                      (org-element-property :post-affiliated src-block)))
+              ((not (assoc-string language org-babel-load-languages))
+               (error "Unknown language at position %d"
+                      (org-element-property :post-affiliated src-block)))))))
+  (message "Source blocks checked in %s." (buffer-name (buffer-base-buffer))))
 
 (req 'org-bullets
   (cl-defun enable-org-bullets ()

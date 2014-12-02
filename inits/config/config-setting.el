@@ -2,6 +2,7 @@
 
 ;;; requires
 (require 'muki)
+(require 'subr-x)
 
 ;;; settings
 ;;;; user elisps
@@ -265,8 +266,8 @@
 
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
-;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham
-(defvar muki:x-theme 'soothe)
+;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe
+(defvar muki:x-theme 'spolsky)
 (defvar muki:term-theme 'flatland)
 
 (enable-option select-enable-clipboard
@@ -295,7 +296,7 @@
 (cl-mapc
  (lambda (dir)
    (add-to-list 'Info-additional-directory-list dir))
- (cl-remove-if-not
+ (filter
   (lambda (dir) (and (file-directory-p dir)
                 (file-exists-p dir)))
   (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+")))
