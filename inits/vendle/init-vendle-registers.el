@@ -350,6 +350,7 @@
                  '(:build ("gmake")))
 (vendle:register "promethial/paxedit"
                  '(:deps ("http://mumble.net/~campbell/git/paredit.git")))
+(vendle:register "ellerh/xref")
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
