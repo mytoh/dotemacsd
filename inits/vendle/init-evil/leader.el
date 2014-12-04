@@ -106,9 +106,9 @@
             "P" 'muki:paradox-list-packages)))
 
     (liby 'eww
-      (evil-leader/set-key
-          "e w" 'muki:eww
-        "e W" 'eww))
+      (muki:evil-leader-prefix-set-keys 'application
+        "w" 'muki:eww
+        "W" 'eww))
 
     (liby 'helm-git-grep
       (muki:evil-leader-prefix-set-keys 'git
