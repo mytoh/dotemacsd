@@ -15,7 +15,7 @@
   (req 'init-vendle-registers)
 
   ;; ** install packages
-  ;; (vendle:check-packages)
+  (vendle:check-packages)
 
   (vendle:turn-on-font-lock)
 
@@ -78,7 +78,9 @@
   (req 'init-flatline)
 
   ;; fish-mode
-  (req 'fish-mode)
+  (req 'fish-mode
+    (add-to-list 'auto-mode-alist '("\\.fish\\'" . fish-mode))
+    (add-to-list 'interpreter-mode-alist '("fish" . fish-mode)))
 
   ;; zone matrix
   ;; (req 'zone-settings)
@@ -549,7 +551,7 @@
     (filter
      (lambda (p)
        (cl-find-if (lambda (v) (equalp (vendle:package-name v)
-                                  p))
+                                       p))
                    *vendle-package-list*))
      (cl-mapcar
       (lambda (p) (format "%s" p))
