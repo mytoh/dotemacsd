@@ -72,7 +72,6 @@
 (vendle:register "kenoss/debug-print")
 ;; (vendle:register "emacsmirror/mew")
 (vendle:register "ober/zone-matrix")
-;; (vendle:register "mytoh/fish-mode")
 (vendle:register "wwwjfy/emacs-fish")
 (vendle:register "thierryvolpiatto/emacs-bmk-ext")
 (vendle:register "kawabata/aozora-view")
@@ -230,7 +229,10 @@
 (vendle:register "winterTTr/ace-jump-mode" )
 (vendle:register "ieure/nssh-el")
 (vendle:register "mhayashi1120/japanlaw.el")
-(vendle:register "roman/navorski.el")
+(vendle:register "roman/navorski.el"
+                 '(:deps ("magnars/s.el"
+                          ("magnars/dash.el" ( :compile nil))
+                          "emacsmirror/multi-term")))
 (vendle:register "febuiles/lyricwiki.el")
 (vendle:register "sabof/svg-mode-line-themes"
                  '(:deps ("philjackson/xmlgen")))
@@ -344,6 +346,10 @@
 (vendle:register "wasamasa/shackle"
                  '(:compile nil))
 (vendle:register "sabof/stripe-buffer")
+(vendle:register "chrisbarrett/skeletor.el"
+                 '(:build ("gmake")))
+(vendle:register "promethial/paxedit"
+                 '(:deps ("http://mumble.net/~campbell/git/paredit.git")))
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
@@ -613,8 +619,8 @@
 (vendle:fetch "kovan/dopemacs")
 (vendle:fetch "AshleyMoni/dotfiles"
               '(:tag ( "evil" "dotfiles" )))
-(vendle:fetch "EricGebhart/emacs-setup"
-              '(:tag ( "evil" "dotfiles" )))
+;; (vendle:fetch "EricGebhart/emacs-setup"
+;;               '(:tag ( "evil" "dotfiles" )))
 (vendle:fetch "nadavspi/dotfiles"
               '(:tag ( "evil" "dotfiles" )))
 (vendle:fetch "gridaphobe/dotfiles"
@@ -702,6 +708,7 @@
 (vendle:fetch "CestDiego/spacemacs_conf")
 (vendle:fetch "waymondo/hemacs")
 (vendle:fetch "davidvilla/emacs-pills")
+(vendle:fetch "cdlm/vitamined-mode-line")
 
 (provide 'init-vendle-registers)
 
