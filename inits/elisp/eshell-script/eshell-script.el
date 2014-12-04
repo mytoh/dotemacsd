@@ -10,10 +10,8 @@
 
 (define-derived-mode eshell-script-mode emacs-lisp-mode "Esh"
                      "Major mode for editing eshell scripts."
-                     (setq-local comment-start "#")
-                     (setq-local comment-end   "")
-                     (setq-local comment-start-skip "#+*")
-                     )
+                     (setq-local comment-start "# ")
+                     (setq-local comment-start-skip "#+[\t ]*"))
 
 (provide 'eshell-script)
 
