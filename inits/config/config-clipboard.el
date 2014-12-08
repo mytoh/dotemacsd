@@ -15,8 +15,8 @@
 (cl-defun muki:activate-clipboard ()
   (when (and (not window-system)
              (executable-find "xclip"))
-    (setq interprogram-cut-function 'muki:cut-function)
-    (setq interprogram-paste-function 'muki:paste-function)))
+    (setq interprogram-cut-function #'muki:cut-function)
+    (setq interprogram-paste-function #'muki:paste-function)))
 
 (muki:activate-clipboard)
 

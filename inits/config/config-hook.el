@@ -1,8 +1,9 @@
 ;;; config-hook.el  -*- lexical-binding: t -*-
 
 (cl-defun muki:after-init-hook ()
-  ;; (setq debug-on-error t))
-  (add-hook 'after-init-hook 'muki:after-init-hook))
+  (setq debug-on-error t)
+  )
+;; (add-hook 'after-init-hook #'muki:after-init-hook)
 
 (cl-defun muki:after-save-hook ()
   (if (string-match (rx (or "config" "package" "init" "lang") "-" (* anything) "el" eol)
@@ -56,13 +57,13 @@
   (set-mouse-position (selected-frame) 1000 1000))
 (cl-defun my-focus-in-hook ()
   (banish))
-(add-hook 'focus-in-hook 'my-focus-in-hook)
+(add-hook 'focus-in-hook #'my-focus-in-hook)
 
 ;; CamelCase awere editing
 ;; enable just in ruby-mode
-(add-hook 'ruby-mode-hook 'subword-mode)
+(add-hook 'ruby-mode-hook #'subword-mode)
 ;; enable for all programming modes
-(add-hook 'prog-mode-hook 'subword-mode)
+(add-hook 'prog-mode-hook #'subword-mode)
 
 
 

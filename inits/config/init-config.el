@@ -18,6 +18,6 @@
     config-tramp
     ))
 
-(mapc 'require init-configs)
+(mapc #'require init-configs)
 
 (provide 'init-config)

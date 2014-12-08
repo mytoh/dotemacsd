@@ -15,7 +15,7 @@
   (req 'init-vendle-registers)
 
   ;; ** install packages
-  (vendle:check-packages)
+  ;; (vendle:check-packages)
 
   (vendle:turn-on-font-lock)
 
@@ -162,6 +162,8 @@
     (auto (sos) "sos"))
 
   ;; (req 'eshell-alias)
+
+  (req 'eshell-session)
 
   (req 'emacs-color-themes)
 
@@ -548,7 +550,7 @@
 
   ;;; util
   (cl-defun vendle-find-duplicate-packages ()
-    (filter
+    (cl-remove-if-not
      (lambda (p)
        (cl-find-if (lambda (v) (equalp (vendle:package-name v)
                                        p))

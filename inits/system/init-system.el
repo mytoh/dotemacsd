@@ -4,6 +4,6 @@
     system-freebsd))
 
 
-(mapc 'require init-systems)
+(mapc #'require init-systems)
 
 (provide 'init-system)

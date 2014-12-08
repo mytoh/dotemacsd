@@ -21,31 +21,31 @@
     (command-execute 'eshell)
     (bury-buffer)
     (message "eshell started")))
-(add-hook 'emacs-startup-hook 'muki:eshell-startup-hook)
+(add-hook 'emacs-startup-hook #'muki:eshell-startup-hook)
 
 ;; load prompt settings
 (require 'config-eshell-prompt)
 
 
-(autoload 'eshell-session:switch "eshell-session")
-(autoload 'eshell-session:buffer-next "eshell-session")
-(autoload 'eshell-session:buffer-prev "eshell-session")
-(autoload 'eshell-session:buffer-new "eshell-session")
+(autoload #'eshell-switch:switch "eshell-switch")
+(autoload #'eshell-switch:buffer-next "eshell-switch")
+(autoload #'eshell-switch:buffer-prev "eshell-switch")
+(autoload #'eshell-switch:buffer-new "eshell-switch")
 
-(define-prefix-command 'muki:eshell-session-map)
-(add-global-key "C-z" 'muki:eshell-session-map)
+(define-prefix-command 'muki:eshell-switch-map)
+(add-global-key "C-z" 'muki:eshell-switch-map)
 
-(add-global-key "C-z C-z" 'eshell-session:switch)
+(add-global-key "C-z C-z" 'eshell-switch:switch)
 
 (cl-defun muki:eshell-mode-hook ()
   (add-key eshell-mode-map
-    "C-z C-n" 'eshell-session:buffer-next
-    "C-z C-p" 'eshell-session:buffer-prev
-    "C-z C-c" 'eshell-session:buffer-new))
-(add-hook 'eshell-mode-hook 'muki:eshell-mode-hook)
+    "C-z C-n" 'eshell-switch:buffer-next
+    "C-z C-p" 'eshell-switch:buffer-prev
+    "C-z C-c" 'eshell-switch:buffer-new))
+(add-hook 'eshell-mode-hook #'muki:eshell-mode-hook)
 
-(autoload 'helm-eshell-session "helm-eshell-session")
-(add-global-key "C-z h" 'helm-eshell-session)
+;; (autoload 'helm-eshell-switch "helm-eshell-switch")
+;; (add-global-key "C-z h" 'helm-eshell-switch)
 
 (defun eshell/clear ()
   "Clears the shell buffer."
@@ -54,6 +54,6 @@
     (erase-buffer)))
 
 (add-hook 'eshell-preoutput-filter-functions
-          'ansi-color-filter-apply)
+          #'ansi-color-filter-apply)
 
 (provide 'config-eshell)

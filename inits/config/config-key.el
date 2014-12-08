@@ -12,9 +12,11 @@
 
 (add-global-key "C-<tab>" 'other-window)
 
+(global-set-key (kbd "M-/") 'hippie-expand)
+
 ;; (muki:define-launcher-key "p" 'package-list-packages)
 
-;;;; default compose mail
+;;;; disable compose mail
 (global-unset-key (kbd "C-x m"))
 
 (defun muki:dont-kill-emacs ()

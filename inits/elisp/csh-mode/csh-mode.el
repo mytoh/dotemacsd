@@ -223,14 +223,14 @@ insert a tab.")
    ;; Keywords.
    (cons (concat
           "\\(\\<"
-          (mapconcat 'identity csh-keywords "\\>\\|\\<")
+          (mapconcat #'identity csh-keywords "\\>\\|\\<")
           "\\>\\)")
          1)
 
    ;; expression keywords
    (cons (concat
           "\\(\\<"
-          (mapconcat 'identity csh-expression-keywords "\\>\\|\\<")
+          (mapconcat #'identity csh-expression-keywords "\\>\\|\\<")
           "\\>\\)")
          (list 1 font-lock-builtin-face))
    ))
@@ -393,66 +393,66 @@ into consideration keywords and other nesting constructs."
                (setq fence-post (save-excursion (end-of-line) (point)))
                (save-excursion
                  (cond
-                  ;;
-                  ;; Check if we are in a continued statement
-                  ((and (looking-at csh-multiline-re)
-                        (save-excursion
-                          (goto-line (1- start-line))
-                          (looking-at csh-multiline-re)))
-                   (if (looking-at ".*[\'\"]\\\\")
-                       ;; If this is a continued string, indent under
-                       ;; opening quote.
-                       (progn
-                         (re-search-forward "[\'\"]")
-                         (forward-char -1))
-                     (if (looking-at ".*([^\)\n]*\\\\")
-                         ;; Else if this is a continued parenthesized
-                         ;; list, indent after paren.
-                         (re-search-forward "(" fence-post t)
-                       ;; Else, indent after whitespace after first word.
-                       (re-search-forward "[^ \t]+[ \t]+" fence-post t)))
-                   (current-column))
+                   ;;
+                   ;; Check if we are in a continued statement
+                   ((and (looking-at csh-multiline-re)
+                         (save-excursion
+                           (goto-line (1- start-line))
+                           (looking-at csh-multiline-re)))
+                    (if (looking-at ".*[\'\"]\\\\")
+                        ;; If this is a continued string, indent under
+                        ;; opening quote.
+                        (progn
+                          (re-search-forward "[\'\"]")
+                          (forward-char -1))
+                      (if (looking-at ".*([^\)\n]*\\\\")
+                          ;; Else if this is a continued parenthesized
+                          ;; list, indent after paren.
+                          (re-search-forward "(" fence-post t)
+                        ;; Else, indent after whitespace after first word.
+                        (re-search-forward "[^ \t]+[ \t]+" fence-post t)))
+                    (current-column))
 
-                  ;; In order to locate the column of the keyword,
-                  ;; which might be embedded within a case-item,
-                  ;; it is necessary to use re-search-forward.
-                  ;; Search by literal case, since shell is
-                  ;; case-sensitive.
-                  ((re-search-forward csh-keywords-re fence-post t)
-                   (goto-char (match-beginning 1))
-                   (if (looking-at csh-switch-re)
-                       (+ (current-indentation) csh-case-item-offset)
-                     (+ (current-indentation)
-                        (if (null csh-indent)
-                            2 csh-indent))))
-                  ((re-search-forward csh-case-default-re fence-post t)
-                   (if (null csh-indent)
-                       (progn
-                         (goto-char (match-end 1))
-                         (+ (current-indentation) 1))
-                     (progn
-                       (goto-char (match-beginning 1))
-                       (+ (current-indentation) csh-indent))))
-                  ;;
-                  ;; Now detect first statement under a case item
-                  ((looking-at csh-case-item-re)
-                   (if (null csh-case-indent)
-                       (progn
-                         (re-search-forward csh-case-item-re fence-post t)
-                         (goto-char (match-end 1))
-                         (+ (current-column) 1))
-                     (+ (current-indentation) csh-case-indent)))
+                   ;; In order to locate the column of the keyword,
+                   ;; which might be embedded within a case-item,
+                   ;; it is necessary to use re-search-forward.
+                   ;; Search by literal case, since shell is
+                   ;; case-sensitive.
+                   ((re-search-forward csh-keywords-re fence-post t)
+                    (goto-char (match-beginning 1))
+                    (if (looking-at csh-switch-re)
+                        (+ (current-indentation) csh-case-item-offset)
+                      (+ (current-indentation)
+                         (if (null csh-indent)
+                             2 csh-indent))))
+                   ((re-search-forward csh-case-default-re fence-post t)
+                    (if (null csh-indent)
+                        (progn
+                          (goto-char (match-end 1))
+                          (+ (current-indentation) 1))
+                      (progn
+                        (goto-char (match-beginning 1))
+                        (+ (current-indentation) csh-indent))))
+                   ;;
+                   ;; Now detect first statement under a case item
+                   ((looking-at csh-case-item-re)
+                    (if (null csh-case-indent)
+                        (progn
+                          (re-search-forward csh-case-item-re fence-post t)
+                          (goto-char (match-end 1))
+                          (+ (current-column) 1))
+                      (+ (current-indentation) csh-case-indent)))
 
-                  ;;
-                  ;; If this is the first statement under a control-flow
-                  ;; label, indent one level.
-                  ((csh-looking-at-label)
-                   (+ (current-indentation) csh-indent))
+                   ;;
+                   ;; If this is the first statement under a control-flow
+                   ;; label, indent one level.
+                   ((csh-looking-at-label)
+                    (+ (current-indentation) csh-indent))
 
-                  ;; This is hosed when using current-column
-                  ;; and there is a multi-command expression as the
-                  ;; nester.
-                  (t (current-indentation))))))))))
+                   ;; This is hosed when using current-column
+                   ;; and there is a multi-command expression as the
+                   ;; nester.
+                   (t (current-indentation))))))))))
 
 (cl-defun csh-indent-command ()
   "Indent current line relative to containing block and allow for
@@ -585,7 +585,7 @@ the minibuffer"
 
 ;;;###autoload
 (define-derived-mode csh-mode  prog-mode "Csh"
-  "csh-mode 2.0 - Major mode for editing csh and tcsh scripts.
+                     "csh-mode 2.0 - Major mode for editing csh and tcsh scripts.
 Special key bindings and commands:
 \\{csh-mode-map}
 Variables controlling indentation style:
@@ -619,9 +619,9 @@ Style Guide.
     The following style is obtained:
 
     if [ -z $foo ]
-	    then
-		    bar    # <-- csh-group-offset is additive to csh-indent
-		    foo
+        then
+            bar    # <-- csh-group-offset is additive to csh-indent
+            foo
     fi
 
  By setting
@@ -632,8 +632,8 @@ Style Guide.
 
     if [ -z $foo ]
     then
-	    bar
-	    foo
+        bar
+        foo
     fi
 
  By setting
@@ -679,31 +679,31 @@ Installation:
          (setq csh-indent 8)
          (setq csh-tab-always-indent t)
          (setq csh-match-and-tell t)
-         (setq csh-align-to-keyword t)	;; Turn on keyword alignment
-	 )))"
-  :syntax-table csh-mode-syntax-table
-  :abbrev-table csh-mode-abbrev-table
-  (use-local-map csh-mode-map)
-  (make-local-variable 'indent-line-function)
-  (setq indent-line-function 'csh-indent-line)
-  (make-local-variable 'indent-region-function)
-  (setq indent-region-function 'csh-indent-region)
-  (make-local-variable 'comment-start)
-  (setq comment-start "# ")
-  (make-local-variable 'comment-end)
-  (setq comment-end "")
-  (make-local-variable 'comment-column)
-  (setq comment-column 32)
-  (make-local-variable 'comment-start-skip)
-  (setq comment-start-skip "#+ *")
-  ;;
-  ;; config font-lock mode
-  (make-local-variable 'font-lock-defaults)
-  (setq font-lock-defaults
-        (list
-         csh-font-lock-keywords
-         t t nil nil))
-  )
+         (setq csh-align-to-keyword t)  ;; Turn on keyword alignment
+     )))"
+                     :syntax-table csh-mode-syntax-table
+                     :abbrev-table csh-mode-abbrev-table
+                     (use-local-map csh-mode-map)
+                     (make-local-variable 'indent-line-function)
+                     (setq indent-line-function 'csh-indent-line)
+                     (make-local-variable 'indent-region-function)
+                     (setq indent-region-function 'csh-indent-region)
+                     (make-local-variable 'comment-start)
+                     (setq comment-start "# ")
+                     (make-local-variable 'comment-end)
+                     (setq comment-end "")
+                     (make-local-variable 'comment-column)
+                     (setq comment-column 32)
+                     (make-local-variable 'comment-start-skip)
+                     (setq comment-start-skip "#+ *")
+                     ;;
+                     ;; config font-lock mode
+                     (make-local-variable 'font-lock-defaults)
+                     (setq font-lock-defaults
+                           (list
+                            csh-font-lock-keywords
+                            t t nil nil))
+                     )
 
 ;; Completion code supplied by Haavard Rue <hrue@imf.unit.no>.
 ;;
@@ -726,11 +726,11 @@ Installation:
   (cl-letf* ((case-fold-search)
              (end (point))
              (beg (unwind-protect
-                      (save-excursion
-                        (backward-sexp 1)
-                        (while (= (char-syntax (following-char)) ?\')
-                          (forward-char 1))
-                        (point))))
+                       (save-excursion
+                         (backward-sexp 1)
+                         (while (= (char-syntax (following-char)) ?\')
+                           (forward-char 1))
+                         (point))))
              (pattern (buffer-substring beg end))
              (predicate
               ;;
@@ -746,7 +746,7 @@ Installation:
                        (backward-char 2)
                        (looking-at "\\$(")))
                     (function (lambda (sym)
-                                (equal (cdr sym) csh-completion-type-function)))
+                      (equal (cdr sym) csh-completion-type-function)))
                   ;;
                   ;; a $, ${ or ${# mark a variable
                   ;;
@@ -761,8 +761,8 @@ Installation:
                          (backward-char 3)
                          (looking-at "\\${#")))
                       (function (lambda (sym)
-                                  (equal (cdr sym)
-                                         csh-completion-type-var)))
+                        (equal (cdr sym)
+                               csh-completion-type-var)))
                     ;;
                     ;; don't know. use 'em all
                     ;;

@@ -58,6 +58,13 @@
                           "magnars/dash.el"
                           "rejeep/f.el")
                    :tag ("helm" "bibtex")))
+(vendle:register "k1LoW/helm-dirset"
+                 '(:deps ("rejeep/f.el"
+                          "magnars/s.el"
+                          ( "emacs-helm/helm"
+                           (:build ("gmake")
+                                   :deps ("jwiegley/emacs-async")
+                                   :tag "helm")))))
 
 ;;;;;  general packages
 (vendle:register "magnars/s.el")
@@ -71,6 +78,7 @@
 (vendle:register "moriyamahiroshi/seijiseikana-el")
 (vendle:register "kenoss/debug-print")
 ;; (vendle:register "emacsmirror/mew")
+(vendle:register "kazu-yamamoto/Mew")
 (vendle:register "ober/zone-matrix")
 (vendle:register "wwwjfy/emacs-fish")
 (vendle:register "thierryvolpiatto/emacs-bmk-ext")
@@ -241,7 +249,8 @@
 (vendle:register "purcell/elisp-slime-nav")
 (vendle:register "gcr/tumblesocks"
                  '(:deps ( "psanford/emacs-oauth"
-                          "git://jblevins.org/git/markdown-mode.git")
+                          "git://jblevins.org/git/markdown-mode.git"
+                          "emacsmirror/htmlize")
                    :tag "tumblr"))
 (vendle:register "thomblake/js3-mode")
 (vendle:register "jd/google-maps.el")
@@ -351,6 +360,12 @@
 (vendle:register "promethial/paxedit"
                  '(:deps ("http://mumble.net/~campbell/git/paredit.git")))
 (vendle:register "ellerh/xref")
+(vendle:register "tlh/workgroups.el"
+                 '(:tag ("window")))
+(vendle:register "wasamasa/eyebrowse"
+                 '(:deps (("magnars/dash.el" ( :compile nil)))))
+(vendle:register "idomagal/Tabula-Rasa"
+                 '(:tag ("writing")))
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
@@ -416,7 +431,17 @@
                    :deps ( "chrisdone/god-mode" )))
 (vendle:register "tarleb/evil-scout")
 (vendle:register "PythonNut/evil-easymotion"
-                 '(:tag "evil"))
+                 '(:tag "evil"
+                   :deps ( "winterTTr/ace-jump-mode"
+                          "nicferrier/emacs-noflet")))
+(vendle:register "hlissner/evil-snipe"
+                 '(:tag "evil"
+                   :deps (( "git://gitorious.org/evil/evil.git"
+                           (:build ("gmake doc all")
+                                   :info "doc"
+                                   :deps ("emacsmirror/goto-chg"
+                                          "http://www.dr-qubit.org/git/undo-tree.git")
+                                   :tag "evil")))))
 
 
 ;;;;; org
@@ -523,6 +548,7 @@
   (add-project-root "emacs-lehtifile-mode")
   (add-project-root "helm-alku" '(:tag ("helm")))
   (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
+  (add-project-root "emacs-eshell-switch" '(:tag "eshell"))
   (add-project-root "emacs-eshell-session" '(:tag "eshell"))
   (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
   (add-project-root "helm-project-buffer" '(:tag "helm"))
@@ -617,6 +643,10 @@
               '(:tag "vim"))
 (vendle:fetch "kovisoft/paredit"
               '(:tag ("vim" "paredit")))
+(vendle:fetch "goldfeld/vim-seek"
+              '(:tag ("vim")))
+(vendle:fetch "justinmk/vim-sneak"
+              '(:tag ("vim")))
 (vendle:fetch "kovan/dopemacs")
 (vendle:fetch "AshleyMoni/dotfiles"
               '(:tag ( "evil" "dotfiles" )))
@@ -710,6 +740,14 @@
 (vendle:fetch "waymondo/hemacs")
 (vendle:fetch "davidvilla/emacs-pills")
 (vendle:fetch "cdlm/vitamined-mode-line")
+(vendle:fetch "wasamasa/dotemacs")
+(vendle:fetch "hlissner/emacs.d")
+(vendle:fetch "fniessen/orgmk"
+              '(:tag ("org")))
+(vendle:fetch "fniessen/org-macros"
+              '(:tag ("org")))
+(vendle:fetch "fniessen/refcard-org-babel"
+              '(:tag ("org")))
 
 (provide 'init-vendle-registers)
 

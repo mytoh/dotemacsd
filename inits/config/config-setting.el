@@ -52,10 +52,10 @@
 ;;;; use space instead of tab
 (setq-default tab-width 4
               indent-tabs-mode nil)
-(set-option indent-line-function 'indent-relative-maybe)
+(set-option indent-line-function #'indent-relative-maybe)
 
 ;;;; mouse
-(set-option mouse-avoidance-mode 'banish)
+(set-option mouse-avoidance-mode #'banish)
 
 ;;;; show info on mode-line
 (enable-option display-time-24hr-format
@@ -65,7 +65,7 @@
 (enable-mode column-number-mode)
 
 ;;;; change yes-no to y-n
-(fset 'yes-or-no-p 'y-or-n-p)
+(fset 'yes-or-no-p #'y-or-n-p)
 
 ;;;; show images
 (auto-image-file-mode 1)
@@ -94,7 +94,7 @@
 (cl-defun muki:set-hl-line-face ()
   (set-face-attribute 'hl-line nil :foreground nil :background "Gray20"))
 
-(add-hook 'after-init-hook 'muki:set-hl-line-face)
+(add-hook 'after-init-hook #'muki:set-hl-line-face)
 
 ;;;; display keys
 (set-option echo-keystrokes 0.1)
@@ -220,9 +220,9 @@
 
 ;;;; ediff
 ;; コントロール用のバッファを同一フレーム内に表示
-(set-option ediff-window-setup-function 'ediff-setup-windows-plain)
+(set-option ediff-window-setup-function #'ediff-setup-windows-plain)
 ;; diffのバッファを上下ではなく左右に並べる
-(set-option ediff-split-window-function 'split-window-horizontally)
+(set-option ediff-split-window-function #'split-window-horizontally)
 
 
 ;;;; scratch
@@ -275,7 +275,7 @@
 
 ;;;; browse web
 (set-option browse-url-generic-program "conkeror")
-(set-option browse-url-browser-function 'browse-url-generic)
+(set-option browse-url-browser-function #'browse-url-generic)
 
 ;;;; prettify symbols
 (enable-mode global-prettify-symbols-mode)
@@ -296,7 +296,7 @@
 (cl-mapc
  (lambda (dir)
    (add-to-list 'Info-additional-directory-list dir))
- (filter
+ (cl-remove-if-not
   (lambda (dir) (and (file-directory-p dir)
                 (file-exists-p dir)))
   (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+")))

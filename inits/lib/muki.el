@@ -182,7 +182,7 @@ buffer is not visiting a file."
                 "*init log*" "*Ibuffer*" "*scratch*"
                 "*MULTI-TERM-DEDICATED*"))
          (interested-buffers
-          (filter
+          (cl-remove-if-not
            (lambda (buffer)
              (and
               ;; donk kill buffers who has the windows displayed in
@@ -204,7 +204,7 @@ buffer is not visiting a file."
                           (mapcar (lambda (buffer-name)
                                     (get-buffer buffer-name))
                                   no-kill-buffer-names))))
-    (mapc 'kill-buffer buffers-to-kill)))
+    (mapc #'kill-buffer buffers-to-kill)))
 
 
 ;; github.com/gabriel-laddel/masamune-os

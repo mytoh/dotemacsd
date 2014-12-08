@@ -1,6 +1,6 @@
 ;;;; brouse-url
 ;; open url like string by press 'C-x m'
-(setq brouse-url-browser-function 'w3m-browse-url)
+(setq brouse-url-browser-function #'w3m-browse-url)
 ;;(autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
 ;;(global-set-key "\C-xm" 'browser-url-at-point)
 ;;;; home page

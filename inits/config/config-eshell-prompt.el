@@ -21,7 +21,7 @@
   (cl-letf ((curbr (car (vc-git-branches))))
     (if (null curbr)
         ""
-        curbr)))
+      curbr)))
 
 (cl-defun muki:eshell-prompt-function ()
   (concat
@@ -36,7 +36,7 @@
 ;; remove highlight, must be set
 (setq eshell-highlight-prompt nil)
 
-(setq eshell-prompt-function 'muki:eshell-prompt-function
+(setq eshell-prompt-function #'muki:eshell-prompt-function
       eshell-prompt-regexp
       (concat "^\\([^\n]+\n\\|#; \\)"))
 

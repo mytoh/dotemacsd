@@ -9,11 +9,12 @@
       '(("a" .  application)
         ("av" . application-vendle)
         ("b" .  buffer)
+        ("e" . eval)
         ("g" .  git)
         ("hi" . help-info)
         ("hd" . help-describe)
         ("T" .  theme)
-        ("z" .  eshell-session)))
+        ("z" .  eshell-switch)))
 
 (cl-defun muki:evil-leader-prefix-set-key (category key def)
   (cl-letf* ((found (cl-find-if (lambda (x) (cl-equalp category (cdr x)))
@@ -44,6 +45,10 @@
       "q" 'evil-quit
       )
 
+    (muki:evil-leader-prefix-set-keys 'eval
+      "e" 'eval-last-sexp
+      "x" 'eval-defun)
+
     (muki:evil-leader-prefix-set-keys 'help-describe
       "f" 'describe-function
       "k" 'describe-key
@@ -61,12 +66,12 @@
       "p"  'switch-to-prev-buffer
       "s" 'switch-to-scratch-buffer)
 
-    (liby 'eshell-session
-      (muki:evil-leader-prefix-set-keys 'eshell-session
-        "z" 'eshell-session:switch
-        "c" 'eshell-session:buffer-new
-        "n" 'eshell-session:buffer-next
-        "p" 'eshell-session:buffer-prev))
+    (liby 'eshell-switch
+      (muki:evil-leader-prefix-set-keys 'eshell-switch
+        "z" 'eshell-switch:switch
+        "c" 'eshell-switch:buffer-new
+        "n" 'eshell-switch:buffer-next
+        "p" 'eshell-switch:buffer-prev))
 
     (liby 'helm-ypv
       (muki:evil-leader-prefix-set-keys 'application
