@@ -1,25 +1,25 @@
 ;; init-vendle.el -*- lexical-binding: t; -*-
 
-;; * requires
+;;;  requires
 (require 'muki)
 
-;; * setup
+;;;  setup
 (muki:add-to-load-path  "~/huone/projektit/emacs-vendle")
 
 (req 'vendle
-  ;; ** initialize vendle
+  ;;;; initialize vendle
   (cl-letf ((muki:vendle-directory
              (muki:user-emacs-directory (file-name-as-directory "vendle"))))
     (vendle:initialize muki:vendle-directory))
 
   (req 'init-vendle-registers)
 
-  ;; ** install packages
+  ;;;; install packages
   ;; (vendle:check-packages)
 
   (vendle:turn-on-font-lock)
 
-  ;; ** vendle keymap
+  ;;;; vendle keymap
   (muki:define-launcher-key "v u" 'vendle-update)
   (muki:define-launcher-key "v k" 'vendle-check)
   (muki:define-launcher-key "v c" 'vendle-clean)
@@ -28,7 +28,7 @@
     (auto (helm-vendle) "helm-vendle")
     (muki:define-launcher-key "v l" 'helm-vendle))
 
-  ;; ** package requires
+  ;;;; package requires
 
   (req 'init-migemo)
 
@@ -396,6 +396,8 @@
   (req 'init-rainbow-mode)
 
   (req 'markdown-mode
+    (mode "\\.md\\'" 'gfm-mode)
+    (mode "\\.markdown\\'" 'gfm-mode)
     (mode "README\\.md\\'"  'gfm-mode))
 
   (req 'init-google-translate)
@@ -490,6 +492,25 @@
     (add-hook 'dired-mode-hook 'stripe-listify-buffer)
     (add-hook 'org-mode-hook 'turn-on-stripe-table-mode))
 
+  (liby 'free-keys
+    (auto (free-keys) "free-keys"))
+
+  (liby 'better-jump
+    (auto (bjump-char-jump-line
+           bjump-word-jump
+           bjump-word-jump-line
+           bjump-word-jump-paragraph
+           bjump-window-jump
+           bjump-window-delete
+           bjump-help-link-jump
+           bjump-info-link-jump
+           bjump-dired-jump)
+          "better-jump"))
+
+  (liby 'tabula-rasa
+    (auto (tabula-rasa-mode) "tabula-rasa")
+    (set-option tabula-rasa-widith 130))
+
   ;; (req 'camcorder)
 
   ;; (req 'js-beautify
@@ -525,14 +546,14 @@
   ;;   (add-to-list 'auto-mode-alist '("\\.js\\'" . js3-mode))
   ;;   )
 
-  ;; ** yasnippet
+  ;;;; yasnippet
   ;; (req 'yasnippet
   ;;   (yas-global-mode 1))
 
-  ;; ** evil
+  ;;;; evil
   (req 'init-evil)
 
-  ;; ** helm
+  ;;;; helm
   (req 'init-helm)
   (req 'init-helm-ypv)
   (req 'init-helm-alku)
@@ -553,7 +574,7 @@
     (cl-remove-if-not
      (lambda (p)
        (cl-find-if (lambda (v) (equalp (vendle:package-name v)
-                                       p))
+                                  p))
                    *vendle-package-list*))
      (cl-mapcar
       (lambda (p) (format "%s" p))
