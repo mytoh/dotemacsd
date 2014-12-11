@@ -13,6 +13,7 @@
         ("g" .  git)
         ("hi" . help-info)
         ("hd" . help-describe)
+        ("m" . emms)
         ("T" .  theme)
         ("z" .  eshell-switch)))
 
@@ -42,7 +43,7 @@
       "v e" 'pp-eval-last-sexp
       "w" 'evil-write
       "Q" 'evil-quit-all
-      "q" 'evil-quit
+      "q" 'kill-buffer-and-window
       )
 
     (muki:evil-leader-prefix-set-keys 'eval
@@ -102,8 +103,9 @@
       (evil-leader/set-key
           ";" 'helm-M-x
         "?" 'helm-descbinds
-        "h s"   'helm-swoop
-        "h t"  'helm-themes))
+        "h s"   'helm-swoop)
+      (muki:evil-leader-prefix-set-keys 'theme
+        "h" 'helm-themes))
 
     (liby 'paradox
       (after 'init-paradox
@@ -119,6 +121,17 @@
       (muki:evil-leader-prefix-set-keys 'git
         "r" 'helm-git-grep))
 
+    (liby 'emms
+      (muki:evil-leader-prefix-set-keys 'emms
+        "P" 'emms-player-mpd-pause
+        "s" 'emms-player-mpd-stop
+        "p" 'emms-player-mpd-previous
+        "n" 'emms-player-mpd-next
+        "b" 'emms-smart-browse
+        "a f" 'emms-add-file
+        "a d" 'emms-add-directory-tree
+        "+" 'emms-volume-raise
+        "-" 'emms-volume-lower))
 
     ;; (defun-add-hook muki:evil-ace-jump-mode-setup (after-init-hook)
     ;;   (when (and (featurep 'evil) (featurep 'evil-leader))
