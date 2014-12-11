@@ -9,6 +9,8 @@
                  '(:build ("gmake")
                    :deps ("jwiegley/emacs-async")
                    :tag "helm"))
+(vendle:fetch "emacs-helm/helm.wiki"
+              '(:tag ("helm" "wiki")))
 (vendle:register "thierryvolpiatto/pcomplete-extension")
 (vendle:register "yuutayamada/helm-ag-r"
                  '(:tag ("helm" "ag")))
@@ -65,6 +67,12 @@
                            (:build ("gmake")
                                    :deps ("jwiegley/emacs-async")
                                    :tag "helm")))))
+(vendle:register "pronobis/helm-words"
+                 '(:deps (( "emacs-helm/helm"
+                           (:build ("gmake")
+                                   :deps ("jwiegley/emacs-async")
+                                   :tag "helm")))
+                   :tag ("helm" "dictionary")))
 
 ;;;;;  general packages
 (vendle:register "magnars/s.el")
@@ -178,7 +186,8 @@
 (vendle:register "gongo/yamada-el")
 (vendle:register "jiyoo/flyparens")
 (vendle:register "flycheck/flycheck"
-                 '(:deps ("magnars/dash.el")
+                 '(:deps ("magnars/dash.el"
+                          "cask/shut-up")
                    :info "."))
 (vendle:register "flycheck/flycheck-pos-tip"
                  '(:deps ("auto-complete/popup-el")))
@@ -296,6 +305,8 @@
 (vendle:register "emacsmirror/info-plus" )
 (vendle:register "kaihaosw/eshell-prompt-extras"
                  '(:tag "eshell"))
+(vendle:register "yuutayamada/eshell-better-prompt"
+                 '(:tag "eshell"))
 (vendle:register "syohex/emacs-smeargle"
                  '(:tag ("git" "highlight" )))
 (vendle:register "syohex/emacs-git-messenger"
@@ -338,6 +349,9 @@
 (vendle:register "Fuco1/better-jump"
                  '(:tag ("ace-jump")
                    :deps ("ShingoFukuyama/ov.el")))
+(vendle:register "Fuco1/free-keys")
+(vendle:register "Fuco1/banana.el"
+                 '(:tag ("monad")))
 (vendle:register "kentaro/auto-save-buffers-enhanced")
 (vendle:register "cosmicexplorer/js-beautify-emacs"
                  '(:tag ("javascript")))
@@ -366,6 +380,12 @@
                  '(:deps (("magnars/dash.el" ( :compile nil)))))
 (vendle:register "idomagal/Tabula-Rasa"
                  '(:tag ("writing")))
+(vendle:register "vspinu/image-transform"
+                 '(:tag "image"))
+(vendle:register "gongo/json-reformat"
+                 '(:tag "json"))
+;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
+;;                  '(:tag ("flim" "luna")))
 ;; (vendle:register "capitaomorte/yasnippet")
 
 ;;;;; evil
@@ -474,6 +494,8 @@
                  '(:deps ("Wilfred/ht.el"
                           "magnars/dash.el")
                    :tag ( "org" "pandoc" )))
+(vendle:register "bastibe/org-journal"
+                 '(:tag ("org")))
 
 ;;;;; themes
 (vendle:register "owainlewis/emacs-color-themes")
@@ -552,7 +574,9 @@
   (add-project-root "emacs-eshell-session" '(:tag "eshell"))
   (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
   (add-project-root "helm-project-buffer" '(:tag "helm"))
-  (add-project-root "emacs-eshellar" '(:tag ( "eshell" "shellar" ))))
+  (add-project-root "emacs-eshellar" '(:tag ( "eshell" "shellar" )))
+  (add-project-root "emacs-vendle" '(:load-path nil
+                                     :tag ( "package" ))))
 
 (cond
   ((file-directory-p (muki:user-emacs-directory "vendle/ddskk"))
@@ -670,7 +694,22 @@
 (vendle:fetch "yangchenyun/emacs-prelude"
               '(:tag ( "dotfiles" "evil" )))
 (vendle:fetch "gabriel-laddel/masamune-os"
-              '(:tag ( "lisp" "nix" "stumpwm")))
+              '(:tag ( "common_lisp" "nix" "stumpwm")))
+(vendle:fetch "stumpwm/stumpwm"
+              '(:tag ("common_lisp" "stumpwm")))
+(vendle:fetch "stumpwm/stumpwm-contrib"
+              '(:tag ("common_lisp" "stumpwm")))
+(vendle:fetch "stumpwm/stumpwm.wiki"
+              '(:tag ("common_lisp" "stumpwm")))
+(vendle:fetch "deepfire/cl-org-mode"
+              '(:tag ("common_lisp" "org")))
+(vendle:fetch "Ramarren/cl-parser-combinators"
+              '(:tag ("common_lisp" "parser")))
+(vendle:fetch "git://common-lisp.net/projects/alexandria/alexandria.git"
+              '(:tag ("common_lisp" )))
+(vendle:fetch "robert-strandh/SICL"
+              '(:tag ("common_lisp" )))
+
 (vendle:fetch "gabriel-laddel/masamune")
 (vendle:fetch "Fanael/init.el"
               '(:tag "dotfiles"))
@@ -748,6 +787,17 @@
               '(:tag ("org")))
 (vendle:fetch "fniessen/refcard-org-babel"
               '(:tag ("org")))
+(vendle:fetch "git://gitorious.org/org-cook/org-cook.git"
+              '(:tag ("org" "cooking")))
+(vendle:fetch "git://gitorious.org/org-brew/org-brew"
+              '(:tag ("org" "brewing")))
+(vendle:fetch "krisajenkins/EvilBegins"
+              '(:tag ("evil")))
+(vendle:fetch "bzg/org-mode-rr"
+              '(:tag ("org" "reproducible_research")))
+(vendle:fetch "jkitchin/jmax"
+              '(:tag ("org")))
+
 
 (provide 'init-vendle-registers)
 
