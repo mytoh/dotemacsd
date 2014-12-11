@@ -298,7 +298,7 @@
    (add-to-list 'Info-additional-directory-list dir))
  (cl-remove-if-not
   (lambda (dir) (and (file-directory-p dir)
-                (file-exists-p dir)))
+                     (file-exists-p dir)))
   (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+")))
 
 ;;;; file type and external program list used for helm and sunrise
@@ -357,7 +357,7 @@
 (enable-option window-combination-resize)
 
 ;; limit on depth in eval, appyl and funcall
-(set-option max-lisp-eval-depth (* 10 max-lisp-eval-depth))
+(set-option max-lisp-eval-depth (* 5 max-lisp-eval-depth))
 
 ;; instantly display current keystrokes in mini buffer
 (setq echo-keystrokes 0.02)
