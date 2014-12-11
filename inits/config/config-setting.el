@@ -367,8 +367,15 @@
 ;; file revert time
 (set-option auto-revert-interval 1)
 
+;; desktop
+(dolist (symbol (apropos-internal "\\`[^:]*-history\\'" 'boundp))
+  (add-to-list 'desktop-globals-to-save symbol))
+(desktop-save-mode 1)
+
+
+
 ;; heap size
-(set-option gc-cons-percentage 0.5) ; 0.1
+;; (set-option gc-cons-percentage 0.5) ; 0.1
 
 (provide 'config-setting)
 
