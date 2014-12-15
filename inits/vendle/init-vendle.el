@@ -491,10 +491,11 @@
   ;;;;; leerzeichen-mode
   (liby 'leerzeichen
     (auto (leerzeichen-mode) "leerzeichen")
-    (set-face-attribute 'leerzeichen nil
-                        :foreground
-                        (color-lighten-name (face-attribute 'default :background)
-                                            20)))
+    (after "leerzeichen"
+      (set-face-attribute 'leerzeichen nil
+                          :foreground
+                          (color-lighten-name (face-attribute 'default :background)
+                                              20))))
 
   ;;;;; emacs-refactor
   (liby 'emr
