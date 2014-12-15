@@ -20,6 +20,9 @@
 
   (after 'helm-mode
       (diminish 'helm-mode))
+
+  (after 'mesh-mode
+      (diminish 'mesh-mode " 𐄳"))
   )
 
 (provide 'init-diminish)

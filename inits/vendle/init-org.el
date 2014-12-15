@@ -81,7 +81,10 @@
    '((emacs-lisp . t)
      (shell . t)
      (scheme . t)
-     (lisp . t))))
+     (lisp . t)
+     (ditaa . t)
+     (dot . t)
+     (R . t))))
 
 (cl-defun muki:org-mode-hook-function ()
   (muki:org-general-options)

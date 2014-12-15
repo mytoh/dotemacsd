@@ -11,6 +11,10 @@
 
 (cl-defun set-ascii-font ()
   (cond ((eq window-system nil) nil)
+        ((font-exists-p "Comic Sans MS")
+         (set-fontset-font nil 'ascii (font-spec :name  "Comic Sans MS" )))
+        ((font-exists-p "-Comic Neue Angular")
+         (set-fontset-font nil 'ascii (font-spec :name  "Comic Neue Angular"  :weight 'regular)))
         ((font-exists-p "Fira Mono")
          (set-fontset-font nil 'ascii (font-spec :name "Fira Mono" :weight 'normal)))
         ((font-exists-p "Ricty Diminished")

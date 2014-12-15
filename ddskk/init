@@ -9,6 +9,8 @@
                                               user-emacs-directory)
                             'euc))
 ;; (setq skk-large-jisyo "/usr/local/share/skk/SKK-JISYO.L")
+;;;;; cdb
+(setq skk-cdb-large-jisyo "/usr/local/share/skk/SKK-JISYO.L.cdb")
 
 ;;;; use act for dvorak
 (setq skk-use-act t)

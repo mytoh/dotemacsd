@@ -4,8 +4,7 @@
 
 (cl-defun muki:init-evil-snipe ()
   (req 'evil-snipe
-    (global-evil-snipe-mode)
-    (evil-snipe-override-surround)))
+    (global-evil-snipe-mode)))
 
 (provide 'init-evil-snipe)
 

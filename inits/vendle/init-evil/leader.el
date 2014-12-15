@@ -15,7 +15,8 @@
         ("hd" . help-describe)
         ("m" . emms)
         ("T" .  theme)
-        ("z" .  eshell-switch)))
+        ;; ("z" .  eshell-switch)
+        ("z" .  mesh)))
 
 (cl-defun muki:evil-leader-prefix-set-key (category key def)
   (cl-letf* ((found (cl-find-if (lambda (x) (cl-equalp category (cdr x)))
@@ -67,12 +68,27 @@
       "p"  'switch-to-prev-buffer
       "s" 'switch-to-scratch-buffer)
 
-    (liby 'eshell-switch
-      (muki:evil-leader-prefix-set-keys 'eshell-switch
-        "z" 'eshell-switch:switch
-        "c" 'eshell-switch:buffer-new
-        "n" 'eshell-switch:buffer-next
-        "p" 'eshell-switch:buffer-prev))
+    ;; (liby 'eshell-switch
+    ;;   (muki:evil-leader-prefix-set-keys 'eshell-switch
+    ;;     "z" 'eshell-switch:switch
+    ;;     "c" 'eshell-switch:buffer-new
+    ;;     "n" 'eshell-switch:buffer-next
+    ;;     "p" 'eshell-switch:buffer-prev))
+
+    (liby 'mesh
+      (muki:evil-leader-prefix-set-keys 'mesh
+        "z" 'mesh:switch)
+      (evil-leader/set-key-for-mode 'eshell-mode
+          "zc" 'mesh:new-tab
+          "zn" 'mesh:next-tab
+          "zp" 'mesh:prev-tab
+          "zs" 'mesh:split-tab
+          "zS" 'mesh:vsplit-tab
+          "zx" 'mesh:kill-pane
+          "z)" 'mesh:next-session
+          "z(" 'mesh:prev-session
+          "zC" 'mesh:new-session
+          "z <tab>" 'mesh:next-pane))
 
     (liby 'helm-ypv
       (muki:evil-leader-prefix-set-keys 'application

@@ -66,6 +66,7 @@ Otherwise goto the end of minibuffer."
 
   (enable-option helm-M-x-always-save-history
                  helm-split-window-in-side-p ; open helm buffer inside current window, not occupy whole other window
+                 helm-buffer-skip-remote-checking
                  )
   (disable-option enable-recursive-minibuffers
                   helm-quick-update

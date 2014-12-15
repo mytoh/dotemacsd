@@ -58,7 +58,8 @@
                  '(:deps ("joostkremers/ebib"
                           "magnars/s.el"
                           "magnars/dash.el"
-                          "rejeep/f.el")
+                          "rejeep/f.el"
+                          "joostkremers/parsebib")
                    :tag ("helm" "bibtex")))
 (vendle:register "k1LoW/helm-dirset"
                  '(:deps ("rejeep/f.el"
@@ -379,11 +380,37 @@
 (vendle:register "wasamasa/eyebrowse"
                  '(:deps (("magnars/dash.el" ( :compile nil)))))
 (vendle:register "idomagal/Tabula-Rasa"
-                 '(:tag ("writing")))
+                 '(:tag ("writing" "distraction free")))
+(vendle:register "capitaomorte/darkroom"
+                 '(:tag ("writing" "distraction free")))
 (vendle:register "vspinu/image-transform"
                  '(:tag "image"))
 (vendle:register "gongo/json-reformat"
                  '(:tag "json"))
+(vendle:register "hchbaw/bqlist-lock.el")
+(vendle:register "fgeller/leerzeichen.el"
+                 '(:tag ("whitespace" "highlight")))
+(vendle:register "abo-abo/anon"
+                 '(:tag ("namespace")))
+(vendle:register "chrisbarrett/emacs-refactor"
+                 '(:tag ("refactoring")
+                   :deps (("magnars/dash.el" (:compile nil))
+                          "rolandwalker/list-utils"
+                          "http://mumble.net/~campbell/git/paredit.git"
+                          "auto-complete/popup-el"
+                          ("bbatsov/projectile"
+                           (:deps ("magnars/s.el"
+                                   "rejeep/f.el"
+                                   ("magnars/dash.el" (:compile nil))
+                                   ("lunaryorn/pkg-info.el"
+                                    (:deps ("cask/epl"))))))
+                          "emacsmirror/redshank"
+                          "magnars/s.el")))
+(vendle:register "rakete/pixel-mode"
+                 '(:tag ("pixel_art")))
+
+;; (vendle:register "politza/pdf-tools"
+;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
 ;;                  '(:tag ("flim" "luna")))
 ;; (vendle:register "capitaomorte/yasnippet")
@@ -496,6 +523,8 @@
                    :tag ( "org" "pandoc" )))
 (vendle:register "bastibe/org-journal"
                  '(:tag ("org")))
+(vendle:register "calvinwyoung/org-autolist"
+                 '(:tag ("org")))
 
 ;;;;; themes
 (vendle:register "owainlewis/emacs-color-themes")
@@ -558,6 +587,8 @@
 (vendle:register-theme "emacsfodder/emacs-mbo70s-theme")
 (vendle:register-theme "uwabami/darkpastel-theme")
 (vendle:register-theme "dev-plvlml/zenburn-care")
+(vendle:register-theme "idleberg/Hopscotch"
+                       '(:load-path "Emacs"))
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -571,7 +602,7 @@
   (add-project-root "helm-alku" '(:tag ("helm")))
   (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
   (add-project-root "emacs-eshell-switch" '(:tag "eshell"))
-  (add-project-root "emacs-eshell-session" '(:tag "eshell"))
+  (add-project-root "emacs-mesh" '(:tag "eshell"))
   (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
   (add-project-root "helm-project-buffer" '(:tag "helm"))
   (add-project-root "emacs-eshellar" '(:tag ( "eshell" "shellar" )))
@@ -742,7 +773,6 @@
               '(:tag ("evil")))
 (vendle:fetch "takaxp/emacs.d")
 (vendle:fetch "senny/cabbage")
-(vendle:fetch "tsu-nera/dotfiles")
 (vendle:fetch "capitaomorte/holy"
               '(:tag ("stumpwm")))
 (vendle:fetch "avendael/dotemacs"
@@ -797,8 +827,18 @@
               '(:tag ("org" "reproducible_research")))
 (vendle:fetch "jkitchin/jmax"
               '(:tag ("org")))
-
+(vendle:fetch "ihodes/emacs.org"
+              '(:tag ("org")))
+(vendle:fetch "tsu-nera/dotfiles"
+              '(:tag ("org")))
+(vendle:fetch "roman/birdseye.el"
+              '(:tag ("configuration")))
+(vendle:fetch "tonini/owl.el"
+              '(:tag ("documentation")))
+(vendle:fetch "JarrodCTaylor/monster"
+              '(:tag ("evil")))
 
 (provide 'init-vendle-registers)
 
 ;;; init-vendle-registers.el ends here
+;;

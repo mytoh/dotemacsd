@@ -266,8 +266,8 @@
 
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
-;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe
-(defvar muki:x-theme 'spolsky)
+;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky
+(defvar muki:x-theme 'gotham)
 (defvar muki:term-theme 'flatland)
 
 (enable-option select-enable-clipboard
@@ -293,13 +293,14 @@
 ;; (set-option url-proxy-services '(("http" . "192.168.1.22:8080")))
 
 ;;;; info
-(cl-mapc
- (lambda (dir)
-   (add-to-list 'Info-additional-directory-list dir))
- (cl-remove-if-not
-  (lambda (dir) (and (file-directory-p dir)
-                     (file-exists-p dir)))
-  (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+")))
+(after 'info
+    (cl-mapc
+     (lambda (dir)
+       (add-to-list 'Info-additional-directory-list dir))
+     (cl-remove-if-not
+      (lambda (dir) (and (file-directory-p dir)
+                    (file-exists-p dir)))
+      (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
 (defvar muki:external-programs-associations nil)
@@ -368,11 +369,9 @@
 (set-option auto-revert-interval 1)
 
 ;; desktop
-(dolist (symbol (apropos-internal "\\`[^:]*-history\\'" 'boundp))
-  (add-to-list 'desktop-globals-to-save symbol))
-(desktop-save-mode 1)
-
-
+;; (desktop-save-mode 1)
+;; (dolist (symbol (apropos-internal "\\`[^:]*-history\\'" 'boundp))
+;;   (add-to-list 'desktop-globals-to-save symbol))
 
 ;; heap size
 ;; (set-option gc-cons-percentage 0.5) ; 0.1

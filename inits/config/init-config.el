@@ -12,7 +12,7 @@
     config-whitespace
     config-autoinsert
     config-dired
-    config-eww
+    ;; config-eww
     config-newsticker
     config-rcirc
     config-tramp
