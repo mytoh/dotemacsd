@@ -7,41 +7,41 @@
   ;; keys
 
   (add-key sp-keymap
-           "C-M-f"       'sp-forward-sexp ;; navigation
-           "C-M-b"       'sp-backward-sexp
-           "C-M-u"       'sp-backward-up-sexp
-           "C-M-d"       'sp-down-sexp
-           "C-M-p"        'sp-previous-sexp
-           "C-M-a"        'sp-beginning-of-sexp
-           "C-M-e" 'sp-end-of-sexp
-           "C-M-n"       'sp-next-sexp
-           "M-s"         'sp-splice-sexp ;; depth-changing commands
-           "M-<up>"      'sp-splice-sexp-killing-backward
-           "M-<down>"    'sp-splice-sexp-killing-forward
-           "M-r"         'sp-splice-sexp-killing-around
-           "C-)"         'sp-forward-slurp-sexp ;; barf/slurp
-           "C-<right>"   'sp-forward-slurp-sexp
-           "C-}"         'sp-forward-barf-sexp
-           "C-<left>"    'sp-forward-barf-sexp
-           "C-("         'sp-backward-slurp-sexp
-           "C-M-<left>"  'sp-backward-slurp-sexp
-           "C-{"         'sp-backward-barf-sexp
-           "C-M-<right>" 'sp-backward-barf-sexp
-           "M-S"         'sp-split-sexp ;; misc
-           )
+    "C-M-f"       'sp-forward-sexp ;; navigation
+    "C-M-b"       'sp-backward-sexp
+    "C-M-u"       'sp-backward-up-sexp
+    "C-M-d"       'sp-down-sexp
+    "C-M-p"        'sp-previous-sexp
+    "C-M-a"        'sp-beginning-of-sexp
+    "C-M-e" 'sp-end-of-sexp
+    "C-M-n"       'sp-next-sexp
+    "M-s"         'sp-splice-sexp ;; depth-changing commands
+    "M-<up>"      'sp-splice-sexp-killing-backward
+    "M-<down>"    'sp-splice-sexp-killing-forward
+    "M-r"         'sp-splice-sexp-killing-around
+    "C-)"         'sp-forward-slurp-sexp ;; barf/slurp
+    "C-<right>"   'sp-forward-slurp-sexp
+    "C-}"         'sp-forward-barf-sexp
+    "C-<left>"    'sp-forward-barf-sexp
+    "C-("         'sp-backward-slurp-sexp
+    "C-M-<left>"  'sp-backward-slurp-sexp
+    "C-{"         'sp-backward-barf-sexp
+    "C-M-<right>" 'sp-backward-barf-sexp
+    "M-S"         'sp-split-sexp ;; misc
+    )
 
 
   ;; added
   (add-key sp-keymap
-           "M-f"   'sp-forward-whitespace
-           "M-b"   'sp-backward-symbol
-           "C-M-k" 'sp-kill-sexp)
+    "M-f"   'sp-forward-whitespace
+    "M-b"   'sp-backward-symbol
+    "C-M-k" 'sp-kill-sexp)
 
   (add-key sp-keymap
-           "C-]"   'sp-select-next-thing-exchange
-           "C-M-]" 'sp-select-next-thing
-           "M-S" 'sp-split-sexp
-           "M-J" 'sp-join-sexp)
+    "C-]"   'sp-select-next-thing-exchange
+    "C-M-]" 'sp-select-next-thing
+    "M-S" 'sp-split-sexp
+    "M-J" 'sp-join-sexp)
 
 
   ;; from wiki/Tips-and-tricks
@@ -69,7 +69,7 @@
     (sp-local-pair "(" nil :bind "M-("))
 
   (cl-defun muki:smartparens-setup-strict-modes ()
-    (cl-mapc
+    (seq-each
      (lambda (mode)
        (let ((hook (intern (format "%s-hook" (symbol-name mode)))))
          (add-hook hook 'smartparens-strict-mode)))

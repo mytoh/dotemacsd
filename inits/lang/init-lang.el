@@ -1,4 +1,5 @@
 
+(require 'seq)
 
 ;; (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
@@ -13,6 +14,6 @@
     lang-c
     ))
 
-(mapc #'require init-langs)
+(seq-each #'require init-langs)
 
 (provide 'init-lang)

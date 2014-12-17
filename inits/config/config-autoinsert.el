@@ -2,6 +2,7 @@
 
 ;;;; [[http://d.hatena.ne.jp/higepon/20080731/1217491155]]
 (require 'autoinsert)
+(require 'seq)
 
 ;; テンプレートのディレクトリ
 (setq auto-insert-directory (expand-file-name "inits/insert" user-emacs-directory))
@@ -24,31 +25,31 @@
 
 (defun muki:elisp-template ()
   (time-stamp)
-  (mapc (lambda(c)
-          (cl-locally
-              (goto-char (point-min))
-            (replace-string (car c) (funcall (cdr c)) nil)))
-        template-replacements-alists)
+  (seq-each (lambda(c)
+              (cl-locally
+                  (goto-char (point-min))
+                (replace-string (car c) (funcall (cdr c)) nil)))
+            template-replacements-alists)
   (goto-char (point-max))
   (message "done."))
 
 (defun muki:scheme-template ()
   (time-stamp)
-  (mapc (lambda(c)
-          (cl-locally
-              (goto-char (point-min))
-            (replace-string (car c) (funcall (cdr c)) nil)))
-        template-replacements-alists)
+  (seq-each (lambda(c)
+              (cl-locally
+                  (goto-char (point-min))
+                (replace-string (car c) (funcall (cdr c)) nil)))
+            template-replacements-alists)
   (goto-char (point-max))
   (message "done."))
 
 (defun muki:shell-template ()
   (time-stamp)
-  (mapc (lambda(c)
-          (cl-locally
-              (goto-char (point-min))
-            (replace-string (car c) (funcall (cdr c)) nil)))
-        template-replacements-alists)
+  (seq-each (lambda(c)
+              (cl-locally
+                  (goto-char (point-min))
+                (replace-string (car c) (funcall (cdr c)) nil)))
+            template-replacements-alists)
   (goto-char (point-max))
   (message "done."))
 

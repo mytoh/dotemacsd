@@ -1,5 +1,7 @@
 ;;; -*- mode: emacs-lisp;lexical-binding: t -*-
 
+(require 'seq)
+
 ;;; ddskk init
 
 ;;;; large dict
@@ -57,7 +59,7 @@
 (defun muki:add-skk-jisyo (dicts)
   (cl-letf ((dict-directory (expand-file-name "ddskk/dic"
                                               user-emacs-directory)))
-    (cl-mapc
+    (seq-each
      (lambda (d)
        (cl-letf ((elem (if (listp d)
                            (cons (expand-file-name (car d) dict-directory)

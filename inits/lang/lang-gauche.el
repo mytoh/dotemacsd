@@ -1,4 +1,7 @@
  ;;; -*- coding: utf-8 -*-
+
+(req 'seq)
+
 ;; http://practical-scheme.net/wiliki/wiliki.cgi?Gauche%3aEditingWithEmacs
 ;;  gauche
 (setq process-coding-system-alist
@@ -71,19 +74,19 @@
 
 ;; function from http://emacswiki.org/emacs/AddKeywords
 (cl-defun muki:gauche-add-keywords (face-name keyword-rules)
-  (let* ((keyword-list (mapcar (lambda (x)
-                                 (symbol-name (cdr x)))
-                               keyword-rules))
+  (let* ((keyword-list (seq-map (lambda (x)
+                                  (symbol-name (cdr x)))
+                                keyword-rules))
          (keyword-regexp (concat "(\\("
                                  (regexp-opt keyword-list)
                                  "\\)[ \n]")))
     (font-lock-add-keywords 'scheme-mode
                             `((,keyword-regexp 1 ',face-name))))
-  (mapc (lambda (x)
-          (put (cdr x)
-               'scheme-indent-function
-               (car x)))
-        keyword-rules))
+  (seq-each (lambda (x)
+              (put (cdr x)
+                   'scheme-indent-function
+                   (car x)))
+            keyword-rules))
 
 (muki:gauche-add-keywords
  'muki:font-lock-scheme-syntax-face

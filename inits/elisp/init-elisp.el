@@ -1,4 +1,6 @@
 
+(req 'seq)
+
 (add-subdirs-to-load-path (muki:user-emacs-directory "inits/elisp"))
 
 ;; (req 'csh-mode
@@ -13,9 +15,9 @@
 ;;      (add-to-list 'auto-mode-alist '("\\.tcshrc\\'" . csh-mode)))
 
 (cl-defun muki:csh-add-keywords (face-name keyword-rules)
-  (cl-letf* ((keyword-list (mapcar (lambda (x)
-                                     (symbol-name (cdr x)))
-                                   keyword-rules))
+  (cl-letf* ((keyword-list (seq-map (lambda (x)
+                                      (symbol-name (cdr x)))
+                                    keyword-rules))
              (keyword-regexp (concat "(\\("
                                      (regexp-opt keyword-list)
                                      "\\)[ \n]")))
@@ -25,6 +27,6 @@
 (req 'ninja-mode)
 
 (req 'eshell-script
-     (add-to-list 'auto-mode-alist '("\\.esh\\'" . eshell-script-mode)))
+  (add-to-list 'auto-mode-alist '("\\.esh\\'" . eshell-script-mode)))
 
 (provide 'init-elisp)

@@ -2,6 +2,7 @@
 
 ;;;  requires
 (require 'muki)
+(require 'seq)
 
 ;;;  setup
 (muki:add-to-load-path  "~/huone/projektit/emacs-vendle")
@@ -32,6 +33,11 @@
     (muki:define-launcher-key "v l" 'helm-vendle))
 
   ;;;; package requires
+
+  ;; (req 'initchart
+  ;;   (initchart-record-execution-time-of load file)
+  ;;   (initchart-record-execution-time-of require feature))
+
 
     ;;;;; migemo
   (req 'init-migemo)
@@ -68,7 +74,8 @@
   (req 'init-flatline)
 
     ;;;;; fish-mode
-  (req 'fish-mode
+  (liby 'fish-mode
+    (auto (fish-mode) "fish-mode")
     (add-to-list 'auto-mode-alist '("\\.fish\\'" . fish-mode))
     (add-to-list 'interpreter-mode-alist '("fish" . fish-mode)))
 
@@ -250,10 +257,6 @@
   (req 'oniisama
     (imouto))
 
-    ;;;;; eww
-  (liby 'eew
-    (auto (eew) "eew"))
-
     ;;;;; sunrise-commander
   (req 'init-sunrise-commander)
 
@@ -354,7 +357,8 @@
   (req 'init-rainbow-mode)
 
   ;;;;; markdown
-  (req 'markdown-mode
+  (liby 'markdown-mode
+    (auto (gfm-mode markdown-mode) "markdown-mode")
     (mode "\\.md\\'" 'gfm-mode)
     (mode "\\.markdown\\'" 'gfm-mode)
     (mode "README\\.md\\'"  'gfm-mode))
@@ -457,7 +461,8 @@
       (url-preview-module-enable "image")))
 
   ;;;;; stripe-buffer
-  (req 'stripe-buffer
+  (liby 'stripe-buffer
+    (auto (stripe-listify-buffer turn-on-stripe-table-mode) "stripe-buffer")
     (add-hook 'dired-mode-hook 'stripe-listify-buffer)
     (add-hook 'org-mode-hook 'turn-on-stripe-table-mode))
 
@@ -492,10 +497,10 @@
   (liby 'leerzeichen
     (auto (leerzeichen-mode) "leerzeichen")
     (after "leerzeichen"
-      (set-face-attribute 'leerzeichen nil
-                          :foreground
-                          (color-lighten-name (face-attribute 'default :background)
-                                              20))))
+        (set-face-attribute 'leerzeichen nil
+         :foreground
+         (color-lighten-name (face-attribute 'default :background)
+                             20))))
 
   ;;;;; emacs-refactor
   (liby 'emr
@@ -525,12 +530,12 @@
 
   ;;; util
   (cl-defun vendle-find-duplicate-packages ()
-    (cl-remove-if-not
+    (seq-filter
      (lambda (p)
        (cl-find-if (lambda (v) (equalp (vendle:package-name v)
                                   p))
                    *vendle-package-list*))
-     (cl-mapcar
+     (seq-map
       (lambda (p) (format "%s" p))
       package-activated-list)))
 

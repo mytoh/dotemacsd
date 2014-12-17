@@ -2,6 +2,8 @@
 
 ;;; Code:
 
+(req 'seq)
+
 (require 'init-evil-leader "init-evil/leader")
 (require 'init-evil-escape "init-evil/escape")
 (require 'init-evil-surround "init-evil/surround")
@@ -93,9 +95,9 @@
   (evil-swap-key evil-motion-state-map "k" "gk")
 
   ;; [[http://stackoverflow.com/questions/8483182/evil-mode-best-practice]]
-  (cl-mapc
+  (seq-each
    (lambda (l)
-     (cl-mapc
+     (seq-each
       (lambda (m)
         (add-key m (car l) (cdr l)))
       (list evil-insert-state-map

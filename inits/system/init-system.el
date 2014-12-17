@@ -1,9 +1,11 @@
 
+(require 'seq)
+
 (defvar init-systems
   '(system-darwin
     system-freebsd))
 
 
-(mapc #'require init-systems)
+(seq-each #'require init-systems)
 
 (provide 'init-system)

@@ -1,5 +1,7 @@
 ;;; init-sunrise-commander.el -*- lexical-binding: t -*-
 
+(req 'seq)
+
 ;;;; Highlighting files with inappropriate permissions.
 ;;;; [[http://www.emacswiki.org/emacs/Sunrise_Commander_Tips]]
 ;; The sr-rainbow macro allows to easily manipulate the font locking of file and directory names in
@@ -45,8 +47,8 @@
   (cl-letf* ((cvalues '(1 2 3 4 5 6 7 8 9 a b c d e f))
              (len (length cvalues))
              (lst (make-list 6 0))
-             (nums (cl-mapcar (lambda (_) (cl-nth-value (cl-random len) cvalues))
-                              lst)))
+             (nums (seq-map (lambda (_) (cl-nth-value (cl-random len) cvalues))
+                            lst)))
     (concat "#"
             (mapconcat
              (lambda (x)

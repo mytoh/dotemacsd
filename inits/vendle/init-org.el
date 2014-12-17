@@ -1,5 +1,6 @@
 ;;; init-org.el -*- lexical-binding: t; -*-
 (req 'org)
+(req 'seq)
 
 (defface org-block-background
     '((t (:background "#2b2948")))
@@ -121,8 +122,8 @@
      org-eww
      org-eshell
      ))
- (cl-mapc (lambda (m) (add-to-list 'org-modules m))
-          my-org-modules)
+ (seq-each (lambda (m) (add-to-list 'org-modules m))
+           my-org-modules)
  (when (executable-find "a2ps")
    (add-to-list 'org-modules 'org-checklist))
  (add-hook 'before-save-hook
@@ -131,20 +132,20 @@
 (cl-defun muki:org-insert-book-drawer ()
   (interactive)
   (insert "\n")
-  (cl-mapc (lambda (s) (insert s)
-              (insert "\n"))
-           '("   :properties:"
-             "   :title: "
-             "   :btype: book"
-             "   :author: "
-             "   :journal: "
-             "   :isbn: "
-             "   :publisher: "
-             "   :year: "
-             "   :month: "
-             "   :volume: "
-             "   :url: "
-             "   :end:")))
+  (seq-each (lambda (s) (insert s)
+               (insert "\n"))
+            '("   :properties:"
+              "   :title: "
+              "   :btype: book"
+              "   :author: "
+              "   :journal: "
+              "   :isbn: "
+              "   :publisher: "
+              "   :year: "
+              "   :month: "
+              "   :volume: "
+              "   :url: "
+              "   :end:")))
 
 (add-hook 'org-mode-hook
           (lambda ()

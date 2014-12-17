@@ -1,4 +1,5 @@
 
+(req 'seq)
 
 (cl-defun pretty-scheme-add-function-keywords (mode keywords)
   "Add pretty character KEYWORDS to MODE
@@ -10,14 +11,14 @@ form (REGEXP . CHAR). REGEXP will be replaced with CHAR in the
 relevant buffer(s)."
   (font-lock-add-keywords
    mode
-   (mapcar (lambda (kw) `(,(concat "(\\("
-                                   (car kw)
-                                   "\\)[) \t\n]")
-                          (0 (prog1 nil
-                               (compose-region (match-beginning 1)
-                                               (match-end 1)
-                                               ,(cdr kw))))))
-           keywords)))
+   (seq-map (lambda (kw) `(,(concat "(\\("
+                               (car kw)
+                               "\\)[) \t\n]")
+                       (0 (prog1 nil
+                            (compose-region (match-beginning 1)
+                                            (match-end 1)
+                                            ,(cdr kw))))))
+            keywords)))
 
 (defvar pretty-scheme-function-keywords
   '(("not" . "¬")

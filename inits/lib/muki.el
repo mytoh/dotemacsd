@@ -5,6 +5,8 @@
   (require 'subr-x)
   (require 'color))
 
+(require 'seq)
+
 (cl-defmacro muki:log (&rest messages)
   (declare (debug t))
   `(cl-locally
@@ -33,7 +35,7 @@
   `(cl-locally
        (cl-defun ,hookfunc ()
          ,@body)
-     ,@(cl-mapcar
+     ,@(seq-map
         (lambda (name)
           `(add-hook ',name (quote ,hookfunc)))
         hooknames)))
@@ -43,7 +45,7 @@
 ;; (cl-defmacro lazyload (funcs lib)
 ;;   (declare (debug t))
 ;;   `(cl-locally
-;;        ,@(cl-mapcar (lambda (f) `(autoload ',f ,lib nil t))
+;;        ,@(seq-map (lambda (f) `(autoload ',f ,lib nil t))
 ;;                     funcs)))
 
 ;; (append-to-list exec-path
@@ -182,7 +184,7 @@ buffer is not visiting a file."
                 "*init log*" "*Ibuffer*" "*scratch*"
                 "*MULTI-TERM-DEDICATED*"))
          (interested-buffers
-          (cl-remove-if-not
+          (seq-filter
            (lambda (buffer)
              (and
               ;; donk kill buffers who has the windows displayed in
@@ -201,10 +203,10 @@ buffer is not visiting a file."
            (buffer-list)))
          (buffers-to-kill
           (set-difference interested-buffers
-                          (mapcar (lambda (buffer-name)
-                                    (get-buffer buffer-name))
-                                  no-kill-buffer-names))))
-    (mapc #'kill-buffer buffers-to-kill)))
+                          (seq-map (lambda (buffer-name)
+                                     (get-buffer buffer-name))
+                                   no-kill-buffer-names))))
+    (seq-each #'kill-buffer buffers-to-kill)))
 
 
 ;; github.com/gabriel-laddel/masamune-os

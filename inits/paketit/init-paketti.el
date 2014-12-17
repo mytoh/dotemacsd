@@ -467,7 +467,7 @@
     ))
 ;; (append-to-list init-paketit muki:paketit-list-org)
 
-;; (mapc 'require init-paketit)
+;; (seq-each 'require init-paketit)
 
 
 ;; ;; egg

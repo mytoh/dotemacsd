@@ -2,6 +2,9 @@
 
 ;;; Code:
 
+(req 'seq)
+(req 'cl-lib)
+
 (cl-defun helm-librefm-stream ()
   (interactive)
   (helm :sources '(helm-source-librefm-stream)
@@ -28,7 +31,7 @@
     helm-librefm-stream-global-tags)))
 
 (cl-defun helm-librefm-stream-station-tag (tags)
-  (cl-mapcar
+  (seq-map
    (lambda (tag)
      (cons
       tag

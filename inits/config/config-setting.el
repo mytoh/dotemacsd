@@ -3,6 +3,7 @@
 ;;; requires
 (require 'muki)
 (require 'subr-x)
+(require 'seq)
 
 ;;; settings
 ;;;; user elisps
@@ -294,10 +295,10 @@
 
 ;;;; info
 (after 'info
-    (cl-mapc
+    (seq-each
      (lambda (dir)
        (add-to-list 'Info-additional-directory-list dir))
-     (cl-remove-if-not
+     (seq-filter
       (lambda (dir) (and (file-directory-p dir)
                     (file-exists-p dir)))
       (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+"))))

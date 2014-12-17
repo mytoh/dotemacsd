@@ -1,21 +1,23 @@
 ;;; lang-elisp.el -*- lexical-binding: t -*-
 
+(req 'seq)
+
 (add-to-list 'auto-mode-alist '("\\.emacs-w3m\\'" .  emacs-lisp-mode))
 
 (cl-defun muki:elisp-add-keywords (face-name keyword-rules)
-  (cl-letf* ((keyword-list (cl-mapcar (lambda (x)
-                                        (symbol-name (cdr x)))
-                                      keyword-rules))
+  (cl-letf* ((keyword-list (seq-map (lambda (x)
+                                      (symbol-name (cdr x)))
+                                    keyword-rules))
              (keyword-regexp (concat "(\\("
                                      (regexp-opt keyword-list)
                                      "\\)[ \n]")))
     (font-lock-add-keywords  'emacs-lisp-mode
                              `((,keyword-regexp 1 ',face-name))))
-  (cl-mapc (lambda (x)
-             (put (cdr x)
-                  'scheme-indent-function
-                  (car x)))
-           keyword-rules))
+  (seq-each (lambda (x)
+              (put (cdr x)
+                   'scheme-indent-function
+                   (car x)))
+            keyword-rules))
 
 
 (muki:elisp-add-keywords

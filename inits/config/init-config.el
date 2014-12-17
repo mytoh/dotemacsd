@@ -1,4 +1,7 @@
 ;;; init-config.el  -*- lexical-binding: t -*-
+
+(require 'seq)
+
 (defvar init-configs
   '(config-setting
     config-key
@@ -18,6 +21,6 @@
     config-tramp
     ))
 
-(mapc #'require init-configs)
+(seq-each #'require init-configs)
 
 (provide 'init-config)

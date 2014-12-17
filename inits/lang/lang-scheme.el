@@ -1,11 +1,15 @@
 ;;; lang-scheme.el -*- coding: utf-8; lexical-binding: t -*-
+
+(req 'seq)
+
 ;;;; keymap
 ;; (define-key emacs-lisp-mode-map (kbd "C-m") 'newline-and-indent)
 
+
 (cl-defun muki:scheme-add-keywords (face-name keyword-rules)
-  (cl-letf* ((keyword-list (mapcar (lambda (x)
-                                     (symbol-name (cdr x)))
-                                   keyword-rules))
+  (cl-letf* ((keyword-list (seq-map (lambda (x)
+                                      (symbol-name (cdr x)))
+                                    keyword-rules))
              (keyword-regexp (concat "(\\("
                                      (regexp-opt keyword-list)
                                      "\\)[ \n]")))
@@ -14,11 +18,11 @@
               " on scheme mode")
     (font-lock-add-keywords 'scheme-mode
                             `((,keyword-regexp 1 ',face-name))))
-  (cl-mapc (lambda (x)
-             (put (cdr x)
-                  'scheme-indent-function
-                  (car x)))
-           keyword-rules))
+  (seq-each (lambda (x)
+              (put (cdr x)
+                   'scheme-indent-function
+                   (car x)))
+            keyword-rules))
 
 ;; (setq process-coding-system-alist
 ;;       (cons '("mosh" utf-8 . utf-8) process-coding-system-alist))
