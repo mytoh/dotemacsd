@@ -326,7 +326,7 @@
 (cl-defun muki:paketti-update ()
   (unless package-archive-contents
     (package-refresh-contents))
-  (cl-dolist (p muki:paketti-list)
+  (seq-doseq (p muki:paketti-list)
     (unless (package-installed-p p)
       (message "installing %s"  p)
       (package-install p))))

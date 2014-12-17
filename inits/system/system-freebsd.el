@@ -8,7 +8,7 @@
          (setenv "PATH" (shell-command-to-string "tcsh -c 'echo $PATH'"))
          (cl-letf ((my-paths (seq-map #'expand-file-name '(  "~/huone/bin" "~/.config/lehti/bin"
                                                            "~/.config/loitsu/bin"))))
-           (cl-dolist (dir my-paths)
+           (seq-doseq (dir my-paths)
              ;; sakito.jp/emacs/emacsshell.html
              (when (and (file-directory-p dir) (not (member dir exec-path)))
                (setenv "PATH" (concat dir ":" (getenv "PATH")))
@@ -16,7 +16,7 @@
         (t
          (cl-letf ((my-paths (seq-map #'expand-file-name '(  "~/huone/bin" "~/.config/lehti/bin"
                                                            "~/.config/loitsu/bin"))))
-           (cl-dolist (dir my-paths)
+           (seq-doseq (dir my-paths)
              ;; sakito.jp/emacs/emacsshell.html
              (when (and (file-directory-p dir) (not (member dir exec-path)))
                (setenv "PATH" (concat dir ":" (getenv "PATH")))

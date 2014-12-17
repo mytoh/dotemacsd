@@ -4,7 +4,7 @@
 ;; (cl-letf ((shellenv (muki:user-emacs-directory "shellenv.el")))
 ;;   (when (file-exists-p shellenv)
 ;;     (load-file shellenv)
-;;     (cl-dolist (shpath (reverse (split-string (getenv "PATH") ":")))
+;;     (seq-doseq (shpath (reverse (split-string (getenv "PATH") ":")))
 ;;       (add-to-list 'exec-path shpath))))
 
 (cl-defun set-exec-path-from-shell-PATH (shell)

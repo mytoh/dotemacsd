@@ -17,8 +17,8 @@
 (cl-defun add-kernel-mode (name)
   (add-to-list 'auto-mode-alist `(,(concat "\\" name "\\'") . kernel-mode)))
 
-(dolist (e '("MYKERNEL"
-             "GENERIC"))
+(seq-doseq (e '("MYKERNEL"
+                "GENERIC"))
   (add-kernel-mode e))
 
 

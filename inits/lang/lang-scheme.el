@@ -51,7 +51,7 @@
 
 (cl-defun muki:scheme-mode-hook ()
   (add-key scheme-mode-map "C-c C-s" 'muki:scheme-other-window)
-  (cl-dolist (f '(muki:lisp-cleanup
+  (seq-doseq (f '(muki:lisp-cleanup
                   whitespace-cleanup
                   muki:lisp-before-save-hook))
     (add-hook 'before-save-hook f nil t))
@@ -83,7 +83,7 @@
 (cl-defun muki:add-scheme-mode (ext)
   (add-to-list 'auto-mode-alist `(,(concat "\\." ext "\\'") . scheme-mode)))
 
-(cl-dolist (e '("lehspec"
+(seq-doseq (e '("lehspec"
                 "sps"
                 "sls"
                 "sld"

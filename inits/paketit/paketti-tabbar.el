@@ -7,10 +7,10 @@
   (set-option tabbar-separator '(0.2)) ;; space between tabs
   (tabbar-mode t)
   ;; disbale buttons on left side
-  (dolist (btn '(tabbar-home-button
-                 tabbar-buffer-home-button
-                 tabbar-scroll-right-button
-                 tabbar-scroll-left-button))
+  (seq-doseq (btn '(tabbar-home-button
+                    tabbar-buffer-home-button
+                    tabbar-scroll-right-button
+                    tabbar-scroll-left-button))
     (set btn (cons (cons "" nil)
                    (cons "" nil))))
   ;; face

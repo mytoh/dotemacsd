@@ -102,7 +102,7 @@
 (cl-defun add-subdirs-to-load-path (parent-dir)
   "add all first level `parent-dir' subdirs to the
 emacs load path"
-  (cl-dolist (f (directory-files parent-dir))
+  (seq-doseq (f (directory-files parent-dir))
     (cl-letf ((name (expand-file-name f parent-dir)))
       (and (file-directory-p name)
            (not (equal f ".."))
@@ -114,7 +114,7 @@ emacs load path"
   "kill all buffers but the current on.
 Don't mess with special buffers."
   (interactive)
-  (cl-dolist (buffer (buffer-list))
+  (seq-doseq (buffer (buffer-list))
     (unless (or (eql buffer (current-buffer))
                 (not (buffer-file-name buffer)))
       (kill-buffer buffer))))
