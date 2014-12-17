@@ -408,7 +408,8 @@
                           "magnars/s.el")))
 (vendle:register "rakete/pixel-mode"
                  '(:tag ("pixel_art")))
-
+(vendle:register "yuttie/initchart")
+(vendle:register "bburns/clipmon")
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -489,6 +490,8 @@
                                    :deps ("emacsmirror/goto-chg"
                                           "http://www.dr-qubit.org/git/undo-tree.git")
                                    :tag "evil")))))
+(vendle:register "linktohack/evil-commentary"
+                 '(:tag "evil"))
 
 
 ;;;;; org
@@ -837,6 +840,17 @@
               '(:tag ("documentation")))
 (vendle:fetch "JarrodCTaylor/monster"
               '(:tag ("evil")))
+(vendle:fetch "http://git.randomsample.de/cedet.git"
+              '(:tag ("eieio" "cedet")))
+(vendle:fetch "scymtym/rudel"
+              '(:tag ("eieio")))
+(vendle:fetch "scymtym/moped")
+(vendle:fetch "scymtym/zencoding")
+(vendle:fetch "kiwanami/emacs-elroutine"
+              '(:tag ("process")))
+(vendle:fetch "holtzermann17/metaca"
+              '(:tag ("automata")))
+
 
 (provide 'init-vendle-registers)
 
