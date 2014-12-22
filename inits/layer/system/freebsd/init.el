@@ -19,5 +19,3 @@
              (when (and (file-directory-p dir) (not (member dir exec-path)))
                (setenv "PATH" (concat dir ":" (getenv "PATH")))
                (add-to-list 'exec-path dir)))))))
-
-(message "fuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuucccccccccccccccckkkkkkkkkkkkk")
