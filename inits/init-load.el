@@ -19,7 +19,24 @@
 (require 'init-vendle)
 
 ;;;;; config
-(require 'init-config)
+(muki:layer-load-layers 'config
+  '(setting
+    key
+    hook
+    path
+    face
+    clipboard
+    font
+    erc
+    eshell
+    eshell-prompt
+    whitespace
+    autoinsert
+    dired
+    ;; eww
+    newsticker
+    rcirc
+    tramp))
 
 ;;;;; packages
 (require 'init-paketti)
