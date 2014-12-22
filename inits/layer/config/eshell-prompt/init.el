@@ -39,5 +39,3 @@
 (setq eshell-prompt-function #'muki:eshell-prompt-function
       eshell-prompt-regexp
       (concat "^\\([^\n]+\n\\|#; \\)"))
-
-(provide 'config-eshell-prompt)

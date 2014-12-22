@@ -23,10 +23,6 @@
     (message "eshell started")))
 ;; (add-hook 'emacs-startup-hook #'muki:eshell-startup-hook)
 
-;; load prompt settings
-(require 'config-eshell-prompt)
-
-
 ;; (autoload #'eshell-switch:switch "eshell-switch")
 ;; (autoload #'eshell-switch:buffer-next "eshell-switch")
 ;; (autoload #'eshell-switch:buffer-prev "eshell-switch")
