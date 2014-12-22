@@ -1,7 +1,5 @@
 ;;; -*- mode: emacs-lisp;lexical-binding: t -*-
 
-(require 'seq)
-
 ;;; ddskk init
 
 ;;;; large dict
@@ -56,6 +54,12 @@
 ;;;; か行をcで入れるときに辞書の送りがなをちゃんとする。
 ;; (setq skk-okuri-char-alist '((\"c\" . \"k\")))
 
+(cl-defun muki:skk-dic-path (path)
+  (expand-file-name
+   path
+   (expand-file-name "ddskk/dic"
+                     user-emacs-directory)))
+
 (defun muki:add-skk-jisyo (dicts)
   (cl-letf ((dict-directory (expand-file-name "ddskk/dic"
                                               user-emacs-directory)))
@@ -92,6 +96,8 @@
 ;;    ;; "SKK-JISYO.emoji.utf8"
 ;;    ))
 
+;;;; itaiji
+(setq skk-itaiji-jisyo (muki:skk-dic-path "SKK-JISYO.itaiji"))
 
 ;;;; utf-8
 ;; this line should put on last
