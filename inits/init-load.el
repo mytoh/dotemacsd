@@ -3,13 +3,17 @@
 ;;;;; cl-lib
 (eval-when-compile
   (require 'cl-lib))
+(require 'seq)
 
 ;;;;; libs
 (eval-when-compile (require 'init-lib "lib/init-lib"))
 (add-subdirs-to-load-path (muki:user-emacs-directory "inits"))
 
+(require 'muki)
+
 ;;;;; system
-(require 'init-system)
+(muki:layer-load-layers 'system
+  '(freebsd darwin))
 
 ;;;;; vendle
 (require 'init-vendle)
