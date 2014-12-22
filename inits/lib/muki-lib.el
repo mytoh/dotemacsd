@@ -2,8 +2,6 @@
 
 ;;; Code:
 
-(require 'seq)
-
 ;; http://e-arrows.sakura.ne.jp/2010/03/macros-in-emacs-el.html
 (cl-defmacro req (lib &rest body)
   "load library if file is exits"

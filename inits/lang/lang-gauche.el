@@ -1,7 +1,5 @@
  ;;; -*- coding: utf-8 -*-
 
-(req 'seq)
-
 ;; http://practical-scheme.net/wiliki/wiliki.cgi?Gauche%3aEditingWithEmacs
 ;;  gauche
 (setq process-coding-system-alist

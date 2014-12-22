@@ -1,6 +1,4 @@
 
-(req 'seq)
-
 (cl-defun pretty-scheme-add-function-keywords (mode keywords)
   "Add pretty character KEYWORDS to MODE
 

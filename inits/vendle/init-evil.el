@@ -2,8 +2,6 @@
 
 ;;; Code:
 
-(req 'seq)
-
 (require 'init-evil-leader "init-evil/leader")
 (require 'init-evil-escape "init-evil/escape")
 (require 'init-evil-surround "init-evil/surround")

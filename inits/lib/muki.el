@@ -5,8 +5,6 @@
   (require 'subr-x)
   (require 'color))
 
-(require 'seq)
-
 (cl-defmacro muki:log (&rest messages)
   (declare (debug t))
   `(cl-locally
@@ -217,6 +215,7 @@ buffer is not visiting a file."
 (require 'muki-option)
 (require 'muki-mode)
 (require 'muki-lib)
+(require 'muki-layer)
 
 (provide 'muki)
 

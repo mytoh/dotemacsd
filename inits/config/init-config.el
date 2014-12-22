@@ -1,7 +1,5 @@
 ;;; init-config.el  -*- lexical-binding: t -*-
 
-(require 'seq)
-
 (defvar init-configs
   '(config-setting
     config-key

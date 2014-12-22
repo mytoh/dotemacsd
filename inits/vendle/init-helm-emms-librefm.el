@@ -2,7 +2,6 @@
 
 ;;; Code:
 
-(req 'seq)
 (req 'cl-lib)
 
 (cl-defun helm-librefm-stream ()

@@ -1,6 +1,5 @@
 ;;; init-org.el -*- lexical-binding: t; -*-
 (req 'org)
-(req 'seq)
 
 (defface org-block-background
     '((t (:background "#2b2948")))
@@ -73,10 +72,13 @@
                 ("a" "#+ascii: ")
                 ("i" "#+index: ?")
                 ("i" "#+include: %file ?")))
-  (disable-mode whitespace-mode))
+  (disable-mode whitespace-mode)
+  )
 
 (cl-defun muki:org-babel-options ()
-  (disable-option org-confirm-babel-evaluate)
+  (disable-option org-confirm-babel-evaluate
+                  org-confirm-elisp-link-function
+                  org-confirm-shell-link-function)
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((emacs-lisp . t)
@@ -87,12 +89,40 @@
      (dot . t)
      (R . t))))
 
+(cl-defun muki:org-set-modules ()
+  (defvar my-org-modules
+    '(org-bbdb
+      org-gnus
+      org-drill
+      org-info
+      org-habits
+      org-irc
+      org-mouse
+      org-annotate-file
+      org-eval
+      org-expiry
+      org-man
+      org-panel
+      org-screen
+      org-toc
+      org-collector
+      org-eww
+      org-eshell
+      ))
+  (seq-each (lambda (m) (add-to-list 'org-modules m))
+            my-org-modules)
+  (when (executable-find "a2ps")
+    (add-to-list 'org-modules 'org-checklist))
+  (set-option org-modules
+              (cl-remove 'org-docview org-modules)))
+
 (cl-defun muki:org-mode-hook-function ()
   (muki:org-general-options)
   (muki:org-startup-options)
   (muki:org-html-export-options)
   (muki:org-babel-options)
-  (muki:org-set-faces))
+  (muki:org-set-faces)
+  (muki:org-set-modules))
 
 (after 'org
     (muki:org-mode-hook-function))
@@ -103,29 +133,6 @@
 (after'org
  ;; Problems while trying to load feature `org-interactive-query'
  ;; Problems while trying to load feature `org-jsinfo'
- (defvar my-org-modules
-   '(org-bbdb
-     org-gnus
-     org-drill
-     org-info
-     org-habit
-     org-irc
-     org-mouse
-     org-annotate-file
-     org-eval
-     org-expiry
-     org-man
-     org-panel
-     org-screen
-     org-toc
-     org-collector
-     org-eww
-     org-eshell
-     ))
- (seq-each (lambda (m) (add-to-list 'org-modules m))
-           my-org-modules)
- (when (executable-find "a2ps")
-   (add-to-list 'org-modules 'org-checklist))
  (add-hook 'before-save-hook
            'muki:org-mode-before-save-hook))
 

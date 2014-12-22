@@ -2,7 +2,6 @@
 
 ;;;; [[http://d.hatena.ne.jp/higepon/20080731/1217491155]]
 (require 'autoinsert)
-(require 'seq)
 
 ;; テンプレートのディレクトリ
 (setq auto-insert-directory (expand-file-name "inits/insert" user-emacs-directory))

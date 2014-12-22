@@ -1,6 +1,4 @@
 
-(require 'seq)
-
 ;; (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
 (defvar init-langs

@@ -1,7 +1,5 @@
 ;;; lang-scheme.el -*- coding: utf-8; lexical-binding: t -*-
 
-(req 'seq)
-
 ;;;; keymap
 ;; (define-key emacs-lisp-mode-map (kbd "C-m") 'newline-and-indent)
 

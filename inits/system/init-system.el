@@ -1,6 +1,4 @@
 
-(require 'seq)
-
 (defvar init-systems
   '(system-darwin
     system-freebsd))

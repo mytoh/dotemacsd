@@ -1,7 +1,5 @@
 ;;; lang-elisp.el -*- lexical-binding: t -*-
 
-(req 'seq)
-
 (add-to-list 'auto-mode-alist '("\\.emacs-w3m\\'" .  emacs-lisp-mode))
 
 (cl-defun muki:elisp-add-keywords (face-name keyword-rules)

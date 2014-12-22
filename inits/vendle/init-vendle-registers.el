@@ -155,7 +155,7 @@
 (vendle:register "haskell/haskell-mode"
                  '(:tag "haskell"
                    :compile nil
-                   :build ("gmake all")))
+                   :build ("gmake clean all")))
 (vendle:register "Bruce-Connor/paradox")
 (vendle:register "Bruce-Connor/aggressive-indent-mode"
                  '(:deps ( "Bruce-Connor/names")))
@@ -192,6 +192,8 @@
                    :info "."))
 (vendle:register "flycheck/flycheck-pos-tip"
                  '(:deps ("auto-complete/popup-el")))
+(vendle:register "purcell/flycheck-package"
+                 '(:tag ("flycheck")))
 (vendle:register "zenozeng/css-eldoc")
 (vendle:register "yasuyk/web-beautify")
 (vendle:register "mhayashi1120/Emacs-slideview")
@@ -267,7 +269,7 @@
 (vendle:register "atykhonov/google-translate")
 (vendle:register "lateau/charmap")
 (vendle:register "bling/pt.el")
-(vendle:register "emacsmirror/goto-last-change")
+(vendle:register "camdez/goto-last-change.el")
 (vendle:register "dimitri/switch-window")
 (vendle:register "rnkn/olivetti")
 (vendle:register "emacsmirror/diminish")
@@ -410,6 +412,18 @@
                  '(:tag ("pixel_art")))
 (vendle:register "yuttie/initchart")
 (vendle:register "bburns/clipmon")
+(vendle:register "purcell/whitespace-cleanup-mode"
+                 '(:tag ("whitespace")))
+(vendle:register "emacsmirror/emoticons")
+(vendle:register "zonuexe/pixiv-novel-mode.el")
+(vendle:register "jhgorrell/ssh-config-mode-el"
+                 '(:tag "ssh"))
+(vendle:register "dtaht/comics-el"
+                 '(:tag ("comic")))
+(vendle:register "kljohann/clang-format.el"
+                 '(:tag "clang"))
+(vendle:register "saintaardvark/meleme"
+                 '(:tag ("modeline")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -592,6 +606,13 @@
 (vendle:register-theme "dev-plvlml/zenburn-care")
 (vendle:register-theme "idleberg/Hopscotch"
                        '(:load-path "Emacs"))
+(vendle:register-theme "pronobis/material-linux-theme"
+                       '(:load-path "out"))
+(vendle:register-theme "jd/naquadah-theme")
+(vendle:register-theme "rexim/gruber-darker-theme")
+(vendle:register-theme "developernotes/twilight-theme")
+(vendle:register-theme "steckerhalter/grandshell-theme")
+(vendle:register-theme "CQQL/xresources-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -612,13 +633,21 @@
   (add-project-root "emacs-vendle" '(:load-path nil
                                      :tag ( "package" ))))
 
-(cond
-  ((file-directory-p (muki:user-emacs-directory "vendle/ddskk"))
-   (vendle:register-local (muki:user-emacs-directory "vendle/ddskk")
-                          '(:build ("gmake elc info")
-                            :info "info")))
-  ((file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
-   (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk")))
+;;;;;; skk
+(vendle:register "skk-dev/ddskk"
+                 '(:build ("gmake clean elc info")
+                   :info "info"
+                   :load-path ("." "experimental")))
+(vendle:fetch "skk-dev/skktools"
+              '(:build ("./configure" "gmake")))
+
+;; (cond
+;;   ((file-directory-p (muki:user-emacs-directory "vendle/ddskk"))
+;;    (vendle:register-local (muki:user-emacs-directory "vendle/ddskk")
+;;                           '(:build ("gmake elc info")
+;;                             :info "info")))
+;;   ((file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
+;;    (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk")))
 
 (vendle:register-local "~/.stumpwm.d/modules/util/swm-emacs")
 
@@ -850,7 +879,18 @@
               '(:tag ("process")))
 (vendle:fetch "holtzermann17/metaca"
               '(:tag ("automata")))
-
+(vendle:fetch "Prismatic/plumbing"
+              '(:tag "clojure"))
+(vendle:fetch "jkitchin/org-ref"
+              '(:tag ("org" "bibtex")))
+(vendle:fetch "emacsmirror/eoops"
+              '(:tag ("oop")))
+(vendle:fetch "git://git.savannah.gnu.org/tramp.git"
+              '(:tag ("tramp" "ssh")))
+(vendle:fetch "WildCarrot/OrgThings"
+              '(:tag ("org")))
+(vendle:fetch "kiwanami/emacs-widget-mvc"
+              '(:tug ("widget" "gui")))
 
 (provide 'init-vendle-registers)
 

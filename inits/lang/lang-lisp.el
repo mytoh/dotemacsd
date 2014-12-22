@@ -43,4 +43,7 @@
 
     ))
 
+(cl-defun muki:add-lisp-mode ()
+  (mode "\\.lisp\\'" 'common-lisp-mode))
+
 (provide 'lang-lisp)

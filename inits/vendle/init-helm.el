@@ -60,7 +60,7 @@ Otherwise goto the end of minibuffer."
               helm-raise-command                         "wmctrl -xa %s"
               )
 
-  (set-option helm-boring-file-regexp-list '("\\.git\\'" "\\.hg\\'" "\\.svn\\'" "\\.CVS\\'" "\\._darcs\\'" "\\.la\\'" "\\.o\\'" "\\.i\\'"))
+  (set-option helm-boring-file-regexp-list '("/\\.git\\'" "\\.hg\\'" "\\.svn\\'" "\\.CVS\\'" "\\._darcs\\'" "\\.la\\'" "\\.o\\'" "\\.i\\'"))
 
   (add-to-list 'helm-boring-file-regexp-list  "\\.git/COMMIT_EDITMSG\\'")
 
