@@ -135,6 +135,9 @@
                  '(:tag "company"
                    :deps ( "company-mode/company-mode"
                           "vspinu/symbols.el")))
+(vendle:register "iquiw/company-restclient"
+                 '(:tag "company"
+                   :deps ( "company-mode/company-mode")))
 (vendle:register "syohex/emacs-git-gutter"
                  '(:tag "git"))
 (vendle:register "syohex/emacs-git-gutter-fringe"
