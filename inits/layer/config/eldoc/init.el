@@ -5,5 +5,3 @@
   (hook 'emacs-lisp-mode-hook #'eldoc-mode)
   (hook 'lisp-interaction-mode-hook #'eldoc-mode)
   (hook 'ielm-mode-hook #'eldoc-mode))
-
-(provide 'config-eldoc)

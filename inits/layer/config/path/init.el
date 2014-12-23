@@ -23,5 +23,3 @@
     (setq exec-path (split-string path-from-shell path-separator))))
 
 (set-exec-path-from-shell-PATH (getenv "SHELL"))
-
-(provide 'config-path)

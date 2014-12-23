@@ -16,7 +16,47 @@
   '(freebsd darwin))
 
 ;;;;; vendle
-(require 'init-vendle)
+(muki:layer-load-layers 'vendle
+  '(boot
+    register
+    package))
+
+;;;;; package
+(muki:layer-load-layers 'evil
+  '(leader
+    escape
+    surround
+    nerd-commenter
+    lisp-state
+    linewise
+    matchit
+    exchange
+    operator-comment
+    search-highlight-persist
+    jumper
+    visualstar
+    smartparens
+    easymotion
+    textobj-between
+    extra-operator
+    snipe
+    evil
+    ))
+
+(muki:layer-load-layers 'helm
+  '(helm
+    helm-ypv
+    helm-alku
+    helm-project-buffer
+    helm-ag-r
+    helm-ag
+    helm-swoop
+    helm-commands
+    wgrep-helm
+    helm-css-scss
+    helm-bibtex
+    ))
+
 
 ;;;;; config
 (muki:layer-load-layers 'config

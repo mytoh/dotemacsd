@@ -53,5 +53,3 @@
   (message "done."))
 
 (add-hook 'find-file-not-found-hooks #'auto-insert)
-
-(provide 'config-autoinsert)

@@ -5,5 +5,3 @@
         ("TechCrunch" "http://feeds.feedburner.com/TechCrunch")
         ("Linux.com" "http://www.linux.com/feature?theme=rss")
         ("hatena_vim" "http://b.hatena.ne.jp/search/tag?safe=on&q=vim&users=1&mode=rss")))
-
-(provide 'config-newsticker)

@@ -19,5 +19,3 @@
     (setq interprogram-paste-function #'muki:paste-function)))
 
 (muki:activate-clipboard)
-
-(provide 'config-clipboard)

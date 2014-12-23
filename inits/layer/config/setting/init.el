@@ -299,7 +299,7 @@
        (add-to-list 'Info-additional-directory-list dir))
      (seq-filter
       (lambda (dir) (and (file-directory-p dir)
-                    (file-exists-p dir)))
+                         (file-exists-p dir)))
       (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
@@ -376,6 +376,5 @@
 ;; heap size
 ;; (set-option gc-cons-percentage 0.5) ; 0.1
 
-(provide 'config-setting)
 
 ;;; config-setting.el ends here

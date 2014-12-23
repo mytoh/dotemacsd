@@ -8,5 +8,4 @@
             '(("irc.freenode.net" :port 6697 :encryption tls
                :channels ("#rcirc" "#emacs" "#emacswiki" "#scheme"))))
 
-(provide 'config-rcirc)
 ;;; config-rcirc.el ends here

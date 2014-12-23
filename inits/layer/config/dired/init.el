@@ -62,6 +62,3 @@
                           "gif")
                       line-end)
                  "kuva.sh")))
-
-
-(provide 'config-dired)

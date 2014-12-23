@@ -6,6 +6,4 @@
 (global-set-key [(f12)] 'bs-cycle-next)
 (setq bs-cycle-configuration-name "files-and-scratch")  ; *scratch*バッファも表示候補に入れる
 
-(provide 'config-bs)
-
 ;;; config-bs.el ends here

@@ -43,5 +43,3 @@
 
 ;; デフォルトで視覚化を有効にする。
 (global-whitespace-mode 1)
-
-(provide 'config-whitespace)

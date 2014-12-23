@@ -28,5 +28,3 @@
     (setq erc-kill-server-buffer-on-quit t))
 
   )
-
-(provide 'config-erc)

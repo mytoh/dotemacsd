@@ -102,5 +102,3 @@
 
 (add-global-key "C-x 2" 'muki:vsplit-last-buffer)
 (add-global-key "C-x 3" 'muki:hsplit-last-buffer)
-
-(provide 'config-key)

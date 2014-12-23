@@ -145,5 +145,3 @@
      (set-japanese-font))))
 
 (muki:set-font 'bitmap)
-
-(provide 'config-font)

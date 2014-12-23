@@ -52,5 +52,3 @@
 ;; (add-hook 'eshell-preoutput-filter-functions
 ;;           #'ansi-color-filter-apply)
 (add-hook 'eshell-mode-hook 'ansi-color-for-comint-mode-on)
-
-(provide 'config-eshell)

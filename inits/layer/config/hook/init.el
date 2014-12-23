@@ -64,7 +64,3 @@
 (add-hook 'ruby-mode-hook #'subword-mode)
 ;; enable for all programming modes
 (add-hook 'prog-mode-hook #'subword-mode)
-
-
-
-(provide 'config-hook)
