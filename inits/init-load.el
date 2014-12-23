@@ -19,7 +19,8 @@
 (muki:layer-load-layers 'vendle
   '(boot
     register
-    package))
+    package
+    ssh-config-mode))
 
 ;;;;; package
 (muki:layer-load-layers 'evil
