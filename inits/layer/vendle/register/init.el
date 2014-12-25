@@ -622,6 +622,7 @@
 (vendle:register-theme "steckerhalter/grandshell-theme")
 (vendle:register-theme "CQQL/xresources-theme")
 (vendle:register-theme "apnsngr/iceberg-emacs")
+(vendle:register-theme "4lex1v/sirthias-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
