@@ -20,7 +20,45 @@
   '(boot
     register
     package
-    ssh-config-mode))
+    ssh-config-mode
+    emacs-refactor
+    artbollocks-mode
+    leerzeichen
+    darkroom
+    tabula-rasa
+    better-jump
+    free-keys
+    stripe-buffer
+    url-preview
+    dircmp
+    sx
+    smeargle
+    stumpwm-mode
+    context-coloring
+    dircmp
+    esup
+    ace-link
+    info-plus
+    elisp-slime-nav
+    yaml-mode
+    httprepl
+    highlight-defined
+    rich-minority
+    cat-mode
+    vimrc-mode
+    emoji-cheat-sheet
+    olivetti
+    rainbow-mode
+    tumblesocks
+    flatline
+    navi2ch
+    navi2ch-file-mode
+    ;; emms
+    emms-mpd
+    magit
+    magit-overview
+    git-modes
+    skk))
 
 ;;;;; package
 (muki:layer-load-layers 'evil
