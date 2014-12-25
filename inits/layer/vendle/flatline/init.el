@@ -88,8 +88,6 @@
   (enable-mode flatline-mode)
   )
 
-(provide 'init-flatline)
-
 ;; Local Variables:
 ;; coding: utf-8
 ;; indent-tabs-mode: nil

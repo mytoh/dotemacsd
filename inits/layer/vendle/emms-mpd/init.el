@@ -67,7 +67,4 @@
 
     ))
 
-
-(provide 'init-emms-mpd)
-
 ;;; init-emms-mpd.el ends here

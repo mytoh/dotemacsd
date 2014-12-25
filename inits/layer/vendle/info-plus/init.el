@@ -1,4 +1,4 @@
-;;; init-info-plus -*- lexical-binding: t; coding: utf-8; -*-
+;;; init -*- lexical-binding: t; coding: utf-8; -*-
 
 ;;; Code:
 
@@ -9,6 +9,4 @@
   (set-face-attribute 'info-reference-item nil
                       :background "#333333"))
 
-(provide 'init-info-plus)
-
-;;; init-info-plus.el ends here
+;;; init.el ends here

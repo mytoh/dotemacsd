@@ -147,6 +147,3 @@ controls, run `mixer' in a shell."
  (emms-player-for '(*track* (type . file)
                     (name . "test.flac")))
  )
-
-
-(provide 'init-emms)

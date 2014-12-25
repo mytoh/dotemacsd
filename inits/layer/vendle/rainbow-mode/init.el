@@ -1,5 +1,8 @@
+
 ;; rainbow-mode
-(req 'rainbow-mode
+
+(liby 'rainbow-mode
+  (auto (rainbow-mode) "rainbow-mode")
   (hook 'emacs-lisp-mode-hook 'rainbow-mode)
   (hook 'lisp-mode-hook 'rainbow-mode)
   (hook 'scheme-mode-hook 'rainbow-mode)
