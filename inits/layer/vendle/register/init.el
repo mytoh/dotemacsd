@@ -137,7 +137,9 @@
                           "vspinu/symbols.el")))
 (vendle:register "iquiw/company-restclient"
                  '(:tag "company"
-                   :deps ( "company-mode/company-mode")))
+                   :deps ( "company-mode/company-mode"
+                          ("for-GET/know-your-http-well"
+                           (:load-path "emacs")))))
 (vendle:register "syohex/emacs-git-gutter"
                  '(:tag "git"))
 (vendle:register "syohex/emacs-git-gutter-fringe"
@@ -427,6 +429,10 @@
                  '(:tag "clang"))
 (vendle:register "saintaardvark/meleme"
                  '(:tag ("modeline")))
+(vendle:register "10sr/shell-split-string-el"
+                 '(:tag "shell"))
+(vendle:register "kiwanami/emacs-kovlive"
+                 '(:deps ("kiwanami/emacs-deferred")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -616,6 +622,7 @@
 (vendle:register-theme "developernotes/twilight-theme")
 (vendle:register-theme "steckerhalter/grandshell-theme")
 (vendle:register-theme "CQQL/xresources-theme")
+(vendle:register-theme "apnsngr/iceberg-emacs")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -775,7 +782,10 @@
               '(:tag ("common_lisp" )))
 (vendle:fetch "robert-strandh/SICL"
               '(:tag ("common_lisp" )))
-
+(vendle:fetch "robert-strandh/Second-Climacs"
+              '(:tag ("common_lisp" "climacs" "clim" )))
+(vendle:fetch "robert-strandh/CLIMatis"
+              '(:tag ("common_lisp" "climacs" "clim" )))
 (vendle:fetch "gabriel-laddel/masamune")
 (vendle:fetch "Fanael/init.el"
               '(:tag "dotfiles"))
@@ -894,6 +904,8 @@
               '(:tag ("org")))
 (vendle:fetch "kiwanami/emacs-widget-mvc"
               '(:tug ("widget" "gui")))
+(vendle:fetch "vapniks/org-dotemacs"
+              '(:tag ("org" "configuration")))
 
 ;;; init-vendle-registers.el ends here
 ;;
