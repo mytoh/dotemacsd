@@ -381,7 +381,6 @@
                  '(:build ("gmake")))
 (vendle:register "promethial/paxedit"
                  '(:deps ("http://mumble.net/~campbell/git/paredit.git")))
-(vendle:register "ellerh/xref")
 (vendle:register "tlh/workgroups.el"
                  '(:tag ("window")))
 (vendle:register "wasamasa/eyebrowse"
@@ -906,6 +905,7 @@
               '(:tug ("widget" "gui")))
 (vendle:fetch "vapniks/org-dotemacs"
               '(:tag ("org" "configuration")))
+(vendle:fetch "ellerh/xref")
 
 ;;; init-vendle-registers.el ends here
 ;;
