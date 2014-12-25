@@ -38,7 +38,3 @@
   ;;   (add-to-list 'company-backends 'company-scheme-backend t))
 
   )
-
-
-
-(provide 'init-company-mode)

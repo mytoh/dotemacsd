@@ -98,9 +98,6 @@
   (liby 'yon-chan
     (auto (yon-chan) "yon-chan"))
 
-;;;;; company
-  (req 'init-company-mode)
-
 ;;;;; anzu
   (req 'init-anzu)
 
@@ -141,9 +138,6 @@
     (mode "\\.mustache\\'"  'web-mode)
     (mode "\\.djhtml\\'"  'web-mode)
     (mode "\\.html?\\'"  'web-mode))
-
-;;;;; paradox
-  (req 'init-paradox)
 
 ;;;;; spray
   ;; (req 'spray)
@@ -303,10 +297,6 @@
   (liby 'nssh
     (auto (nssh nssh-all) "nssh"))
 
-;;;;; popwin
-  (req 'init-popwin)
-  ;; (req 'init-shackle)
-
 ;;;;; markdown
   (liby 'markdown-mode
     (auto (gfm-mode markdown-mode) "markdown-mode")
@@ -342,7 +332,7 @@
     (seq-filter
      (lambda (p)
        (cl-find-if (lambda (v) (equalp (vendle:package-name v)
-                                       p))
+                                  p))
                    *vendle-package-list*))
      (seq-map
       (lambda (p) (format "%s" p))

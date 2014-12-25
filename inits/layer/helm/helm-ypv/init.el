@@ -21,7 +21,7 @@
                  ;; (event "eventyp.xrea.jp")
                  (message "peercast.takami98.net/message-yp")))
 
-  ;; (helm-migemize-command helm-ypv)
+  ;; (helm-migemize-command 'helm-ypv)
   )
 
 ;; Local Variables:

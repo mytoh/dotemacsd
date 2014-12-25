@@ -1,6 +1,10 @@
 
 (liby 'helm-swoop
-  (auto (helm-swoop) "helm-swoop")
+  (auto (helm-swoop
+         helm-swoop-back-to-last-point
+         helm-multi-swoop
+         helm-multi-swoop-all)
+        "helm-swoop")
 
   (req 'helm-migemo)
 

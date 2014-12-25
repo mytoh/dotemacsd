@@ -23,10 +23,6 @@
           (setq paradox-github-token (if (functionp paradox-token)
                                          (funcall paradox-token)
                                        paradox-token)))))
-    (paradox-list-packages nil))
-
-  )
-
-(provide 'init-paradox)
+    (paradox-list-packages nil)))
 
 ;;; init-paradox.el ends here

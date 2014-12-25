@@ -9,5 +9,3 @@
           ("*guide-key*" :position bottom)
           ("*Man" :regexp t :stick t)
           ("*ag*" :noselect t) ("*diff*"))))
-
-(provide 'init-popwin)

@@ -58,7 +58,10 @@
     magit
     magit-overview
     git-modes
-    skk))
+    skk
+    popwin
+    shackle
+    company))
 
 ;;;;; package
 (muki:layer-load-layers 'evil
