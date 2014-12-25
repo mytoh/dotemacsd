@@ -1,5 +1,8 @@
 
-(req 'helm-swoop
+(liby 'helm-swoop
+  (auto (helm-swoop) "helm-swoop")
+
+  (req 'helm-migemo)
 
   ;; キーバインドはお好みで
   (add-global-key "M-i" 'helm-swoop
