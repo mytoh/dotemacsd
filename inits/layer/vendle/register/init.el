@@ -432,6 +432,10 @@
                  '(:tag "shell"))
 (vendle:register "kiwanami/emacs-kovlive"
                  '(:deps ("kiwanami/emacs-deferred")))
+(vendle:register "ieure/ssh-el"
+                 '(:tag "ssh"))
+(vendle:register "tarsius/hl-todo"
+                 '(:tag ("highlight" "font-lock")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -744,6 +748,8 @@
               '(:tag ("vim")))
 (vendle:fetch "justinmk/vim-sneak"
               '(:tag ("vim")))
+(vendle:fetch "miripiruni/vimi"
+              '(:tag ("vim")))
 (vendle:fetch "kovan/dopemacs")
 (vendle:fetch "AshleyMoni/dotfiles"
               '(:tag ( "evil" "dotfiles" )))
@@ -907,6 +913,8 @@
 (vendle:fetch "vapniks/org-dotemacs"
               '(:tag ("org" "configuration")))
 (vendle:fetch "ellerh/xref")
+(vendle:fetch "kelvinh/org-page"
+              '(:tag ("org")))
 
 ;;; init-vendle-registers.el ends here
 ;;
