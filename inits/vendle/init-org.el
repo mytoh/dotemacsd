@@ -95,7 +95,7 @@
       org-gnus
       org-drill
       org-info
-      org-habits
+      ;; org-habits
       org-irc
       org-mouse
       org-annotate-file
@@ -116,13 +116,51 @@
   (set-option org-modules
               (cl-remove 'org-docview org-modules)))
 
+(cl-defun muki:org-set-face ()
+  ;; bigger font for org headlines
+  ;; taken from monokai
+  ;; [[github.com/oneKelvinSmith/monokai-emacs/]]
+  (cl-labels ((if-unspecified (default-face fall-back)
+                (pcase (face-attribute default-face :foreground)
+                  (`unspecified (face-attribute fall-back :foreground))
+                  (_ (face-attribute default-face :foreground)))))
+    (set-face-attribute 'org-level-1 nil
+                        :inherit 'variable-pitch
+                        :height 1.3
+                        :foreground (if-unspecified 'org-level-1 'font-lock-function-name-face))
+    (set-face-attribute 'org-level-2 nil
+                        :inherit 'variable-pitch
+                        :height 1.2
+                        :foreground (if-unspecified 'org-level-2 'font-lock-variable-name-face))
+    (set-face-attribute 'org-level-3 nil
+                        :inherit 'variable-pitch
+                        :height 1.15
+                        :foreground (if-unspecified 'org-level-3 'font-lock-keyword-face))
+    (set-face-attribute 'org-level-4 nil
+                        :inherit 'variable-pitch
+                        :height 1.1
+                        :foreground (if-unspecified 'org-level-4 'font-lock-comment-face))
+    (set-face-attribute 'org-level-5 nil
+                        :inherit 'variable-pitch
+                        :foreground (if-unspecified 'org-level-5 'font-lock-type-face))
+    (set-face-attribute 'org-level-6 nil
+                        :inherit 'variable-pitch
+                        :foreground (if-unspecified 'org-level-6 'font-lock-constant-face))
+    (set-face-attribute 'org-level-7 nil
+                        :inherit 'variable-pitch
+                        :foreground (if-unspecified 'org-level-7 'font-lock-builtin-face))
+    (set-face-attribute 'org-level-8 nil
+                        :inherit 'variable-pitch
+                        :foreground (if-unspecified 'org-level-8 'font-lock-string-face))))
+
 (cl-defun muki:org-mode-hook-function ()
   (muki:org-general-options)
   (muki:org-startup-options)
   (muki:org-html-export-options)
   (muki:org-babel-options)
   (muki:org-set-faces)
-  (muki:org-set-modules))
+  (muki:org-set-modules)
+  (muki:org-set-face))
 
 (after 'org
     (muki:org-mode-hook-function))
