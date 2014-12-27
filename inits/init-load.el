@@ -60,8 +60,10 @@
     git-modes
     skk
     popwin
-    shackle
-    company))
+    ;; shackle
+    company
+    paradox
+    hl-todo))
 
 ;;;;; package
 (muki:layer-load-layers 'evil
@@ -115,7 +117,7 @@
     whitespace
     autoinsert
     dired
-    ;; eww
+    eww
     newsticker
     rcirc
     tramp))
