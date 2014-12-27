@@ -436,6 +436,7 @@
                  '(:tag "ssh"))
 (vendle:register "tarsius/hl-todo"
                  '(:tag ("highlight" "font-lock")))
+(vendle:register "ifree/emacs-code-playground")
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -678,6 +679,8 @@
 (vendle:fetch "juanjux/emacs-dotfiles")
 (vendle:fetch "redguardtoo/emacs.d")
 (vendle:fetch "sachac/.emacs.d")
+(vendle:fetch "sachac/sharing"
+              '(:tag ("org")))
 (vendle:fetch "serras/emacs-haskell-tutorial")
 (vendle:fetch "supermomonga/dot-emacs")
 (vendle:fetch "thierryvolpiatto/emacs-tv-config")
