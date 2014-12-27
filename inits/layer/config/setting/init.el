@@ -358,7 +358,7 @@
 (enable-option window-combination-resize)
 
 ;; limit on depth in eval, appyl and funcall
-(set-option max-lisp-eval-depth (* 5 max-lisp-eval-depth))
+(set-option max-lisp-eval-depth (* 10 max-lisp-eval-depth))
 
 ;; instantly display current keystrokes in mini buffer
 (setq echo-keystrokes 0.02)
