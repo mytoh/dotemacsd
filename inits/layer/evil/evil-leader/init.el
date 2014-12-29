@@ -123,9 +123,8 @@
         "h" 'helm-themes))
 
     (liby 'paradox
-      (after 'init-paradox
-          (muki:evil-leader-prefix-set-keys 'application
-            "P" 'muki:paradox-list-packages)))
+      (muki:evil-leader-prefix-set-keys 'application
+        "P" #'muki:paradox-list-packages))
 
     (liby 'eww
       (muki:evil-leader-prefix-set-keys 'application
