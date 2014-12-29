@@ -167,7 +167,9 @@
                  '(:tag "haskell"
                    :compile nil
                    :build ("gmake clean all")))
-(vendle:register "Bruce-Connor/paradox")
+(vendle:register "Bruce-Connor/paradox"
+                 '(:deps ("magnars/dash.el"
+                          "jwiegley/emacs-async")))
 (vendle:register "Bruce-Connor/aggressive-indent-mode"
                  '(:deps ( "Bruce-Connor/names")))
 (vendle:register "Bruce-Connor/rich-minority")
@@ -460,6 +462,8 @@
                  '(:tag ("aumix" "audio")))
 (vendle:register "kuanyui/writing-utils.el"
                  '(:tag ("writing")))
+(vendle:register "joodland/bm"
+                 '(:tag ("bookmark")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -948,6 +952,8 @@
               '(:tag "clipboard"))
 (vendle:fetch "emacsmirror/uni-confusables"
               '(:tag "unicode"))
+(vendle:fetch "funcool/cats"
+              '(:tag ("clojure" "monad")))
 
 ;;; init-vendle-registers.el ends here
 ;;
