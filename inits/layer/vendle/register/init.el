@@ -920,8 +920,9 @@
               '(:tag ("documentation")))
 (vendle:fetch "JarrodCTaylor/monster"
               '(:tag ("evil")))
-(vendle:fetch "http://git.randomsample.de/cedet.git"
-              '(:tag ("eieio" "cedet")))
+(vendle:fetch "git://git.code.sf.net/p/cedet/git"
+              '(:name "cedet"
+                :tag ("eieio" "cedet")))
 (vendle:fetch "scymtym/rudel"
               '(:tag ("eieio")))
 (vendle:fetch "scymtym/moped")
