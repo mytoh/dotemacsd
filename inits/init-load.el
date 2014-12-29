@@ -23,7 +23,6 @@
 
 (muki:layer-load-layers 'vendle
   '(vendle
-    migemo
     diminish))
 
 (muki:layer-load-layers 'org
@@ -35,7 +34,7 @@
     ))
 
 (muki:layer-load-layers 'vendle
-  '(package
+  '(migemo
     ssh-config-mode
     emacs-refactor
     artbollocks-mode
@@ -113,6 +112,65 @@
     highlight-parenthesis
     go-mode
     lua-mode
+    bm
+    rotate
+    git-timemachine
+    flappymacs
+    yamada
+    css-eldoc
+    web-beautify
+    direx
+    oniisama
+    guide-key
+    guide-key-tip
+    clojure-mode
+    bqlist-lock
+    lorem-ipsum
+    emacs-color-themes
+    sly
+    twittering-mode
+    coffee-mode
+    color-theme-approximate
+    google-this
+    nssh
+    markdown-mode
+    charmap
+    pt
+    switch-window
+    highlight-sexp
+    undohist
+    ;; eshell-alias
+    ;; aozora-view
+    ;; yascroll
+    ;; nyan-mode
+    ;; aria2
+    ;; fill-column-indicator
+    ;; ids-edit
+    ;; recycle
+    ;; image-plus
+    ;; slideview
+    ;; command-dwim-2
+    ;; moe-theme
+    ;; indent-guide
+    ;; highlight-stages
+    ;; smooth-scroll
+    ;; fuzzyjump
+    ;; zone-settings
+    ;; emux
+    ;; yasnippet
+    ;; js3-mode
+    ;; highlight-indentation
+    ;; aggressive-indent
+    ;; vi-tilde-fringe
+    ;; travis
+    ;; git-gutter-fringe-plus
+    ;; auto-save-buffer-enhanced
+    ;; js-beatify
+    ;; camcorder
+    ;; init-chart
+    ;; spray
+    ;; csharp-mode
+    ;; golden-ratio
     ;; writing-utils
     ;; elnode
     ;; auto-highlight-symbol
