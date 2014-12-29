@@ -127,7 +127,8 @@ Otherwise goto the end of minibuffer."
   )
 
 ;; helm-themes
-(req 'helm-themes)
+(liby 'helm-themes
+  (auto (helm-themes) "helm-themes"))
 
 ;; helm-c-yasnippet (req 'helm-c-yasnippet)
 
@@ -144,7 +145,8 @@ Otherwise goto the end of minibuffer."
 (req 'helm-descbinds (helm-descbinds-mode))
 
 ;; cmd-t
-(req 'helm-cmd-t
+(liby 'helm-cmd-t
+  (auto (helm-cmd-t) "helm-cmd-t")
   (add-global-key "M-t" 'helm-cmd-t))
 ;; (req 'helm-C-x-b
 ;;      (add-key global-map [remap switch-to-buffer] 'helm-C-x-b))
@@ -164,6 +166,7 @@ Otherwise goto the end of minibuffer."
   (auto (helm-git-grep) "helm-git-grep")
   (muki:define-launcher-key "r" 'helm-git-grep))
 
-(req 'helm-mode-manager)
+(liby 'helm-mode-manager
+  (auto (helm-modo-manager) "helm-mode-manager"))
 
 ;;; init-helm.el ends here

@@ -368,6 +368,10 @@
 ;; file revert time
 (set-option auto-revert-interval 1)
 
+;; There is some request to the window manager that is not sending a response back to emacs. This line fixed the problem for me.
+;; [[http://ubuntuforums.org/showthread.php?t=183638]]
+(modify-frame-parameters nil '((wait-for-wm . nil)))
+
 ;; desktop
 ;; (desktop-save-mode 1)
 ;; (dolist (symbol (apropos-internal "\\`[^:]*-history\\'" 'boundp))

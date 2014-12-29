@@ -2,6 +2,7 @@
 
 ;;; Code:
 
-(req 'helm-bibtex)
+(liby 'helm-bibtex
+  (auto (helm-bibtex) "helm-bibtex"))
 
 ;;; init.el ends here

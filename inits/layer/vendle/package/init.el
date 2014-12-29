@@ -5,158 +5,14 @@
 
 (req 'vendle
 
-  ;;;; install packages
-  (vendle:check-packages)
-
-  (vendle:turn-on-font-lock)
-
-  ;; update plugins
-  ;; (vendle:update-packages)
-
-  ;;;; vendle keymap
-  (muki:define-launcher-key "v u" 'vendle-update)
-  (muki:define-launcher-key "v k" 'vendle-check)
-  (muki:define-launcher-key "v c" 'vendle-clean)
-
-  (liby 'helm-vendle
-    (auto (helm-vendle) "helm-vendle")
-    (muki:define-launcher-key "v l" 'helm-vendle))
-
   ;;;; package requires
 
   ;; (req 'initchart
   ;;   (initchart-record-execution-time-of load file)
   ;;   (initchart-record-execution-time-of require feature))
 
-
-;;;;; migemo
-  (req 'init-migemo)
-
-;;;;; diminish
-  (req 'init-diminish)
-
-    ;;;; org
-;;;;; outshine
-  (req 'init-outshine)
-
-;;;;; navi
-  ;; (req 'navi-mode)
-
-;;;;; org-autolist
-  (liby 'org-autolist
-    (auto (org-autolist-mode) "org-autolist")
-    (add-hook 'org-mode-hook (lambda () (org-autolist-mode))))
-
-  (req 'init-org)
-  ;; (req 'org-pretty-table
-  ;;   (add-hook 'org-mode-hook
-  ;;             'turn-on-org-pretty-table-mode))
-;;;;;
-
-;;;;; scheme-keywords
-  (liby 'scheme-keywords
-    (auto (scheme-keywords-mode) "scheme-keywords")
-    (add-hook 'scheme-mode-hook 'scheme-keywords-mode))
-
-;;;;; seijiseikana
-  (req 'seijiseikana)
-
-
-;;;;; fish-mode
-  (liby 'fish-mode
-    (auto (fish-mode) "fish-mode")
-    (add-to-list 'auto-mode-alist '("\\.fish\\'" . fish-mode))
-    (add-to-list 'interpreter-mode-alist '("fish" . fish-mode)))
-
-;;;;; debug-print
-  (req 'debug-print
-    (debug-print-init)
-    (add-global-key "C-x C-e" 'debug-print-eval-last-sexp))
-
-;;;;; bookmark-extensions
-  (req 'bookmark-extensions)
-
-;;;;; lehtifile-mode
-  (liby 'lehtifile-mode
-    (autoload 'lehtifile-mode "lehtifile-mode")
-    (mode "/Lehtifile\\'"  'lehtifile-mode))
-
-;;;;; rebuildfm
-  (liby 'rebuildfm
-    (auto (rebuildfm) "rebuildfm"))
-
-;;;;; sos
-  (liby 'sos
-    (auto (sos) "sos"))
-
-;;;;; eshell
-  ;; (req 'eshell-session)
-  (req 'mesh
-    (turn-on-mesh-mode))
-
-;;;;; yon-chan
-  (liby 'yon-chan
-    (auto (yon-chan) "yon-chan"))
-
-;;;;; anzu
-  (req 'init-anzu)
-
-;;;;; smartparens
-  (req 'init-smartparens)
-
-;;;;; haskell
-  (req 'init-haskell-mode)
-
-;;;;; itail
-  (liby 'itail
-    (auto (itail) "itail"))
-
-;;;;; quickrun
-  (req 'quickrun
-    (cl-defun quickrun-sc (start end)
-      (interactive "r")
-      (if mark-active
-          (quickrun :start start :end end)
-        (quickrun)))
-    (add-global-key "<f5>" 'quickrun-sc)
-    (after "popwin"
-        (push '("*quickrun*") popwin:special-display-config))
-    (quickrun-add-command "scheme/gosh-r7rs"
-                          '((:command . "gosh")
-                            (:exec    . "%c -r7 %s"))
-                          :default "scheme"
-                          :mode 'scheme-mode))
-
-;;;;; web-mode
-  (liby 'web-mode
-    (auto (web-mode) "web-mode")
-    (mode "\\.phtml\\'"  'web-mode)
-    (mode "\\.tpl\\.php\\'"  'web-mode)
-    (mode "\\.[gj]sp\\'"  'web-mode)
-    (mode "\\.as[cp]x\\'"  'web-mode)
-    (mode "\\.erb\\'"  'web-mode)
-    (mode "\\.mustache\\'"  'web-mode)
-    (mode "\\.djhtml\\'"  'web-mode)
-    (mode "\\.html?\\'"  'web-mode))
-
 ;;;;; spray
   ;; (req 'spray)
-
-;;;;; highlight-parentheses
-  (req 'highlight-parentheses
-    (global-highlight-parentheses-mode))
-
-;;;;; go-mode
-  (req 'go-mode)
-
-;;;;; expand-region
-  (req 'init-expand-region)
-
-;;;;; lua-mode
-  (liby 'lua-mode
-    (auto (lua-mode) "lua-mode" )
-    (mode "\\.lua$" 'lua-mode)
-    (add-to-list 'interpreter-mode-alist '("lua" . lua-mode)))
 
 ;;;;; rotate
   (liby 'rotate
@@ -200,18 +56,10 @@
            direx:jump-to-directory-other-window)
           "direx"))
 
-;;;;; e2wm
-  (req 'init-e2wm)
-
 ;;;;; oniisama
   (req 'oniisama
     (imouto))
 
-;;;;; sunrise-commander
-  (req 'init-sunrise-commander)
-
-;;;;; tabbar
-  ;; (req 'init-tabbar)
 
 ;;;;; guide-key
   (req 'guide-key
@@ -232,37 +80,19 @@
   (req 'clojure-mode
     (req 'clojure-mode-extra-font-locking))
 
-;;;;; rainbow-delimiters
-  (req 'init-rainbow-delimiters)
-
 ;;;;; bqlist-lock
   (liby 'bqlist-lock
     (auto (bqlist-lock-enable) "bqlist-lock")
     (hook 'emacs-lisp-mode-hook 'bqlist-lock-enable))
 
-;;;;; elfeed
-  (req 'init-elfeed)
 
 ;;;;; lorem-ipsum
   (liby 'lorem-ipsum
     (auto (lorem-ipsum) "lorem-ipsum"))
 
-;;;;; flycheck
-  (liby 'flycheck-package
-    (auto (flycheck-package-setup) "flycheck-package")
-    (after 'flycheck
-        (flycheck-package-setup)))
-
-  (req 'init-flycheck)
-
   ;; ;;;;; emacs-color-themes
   (req 'emacs-color-themes)
 
-;;;;; multiple-cursors
-  (req 'init-multiple-cursors)
-
-;;;;; highlight-symbol
-  (req 'init-highlight-symbol)
 
 ;;;;; sly
   (req 'sly-autoloads
@@ -304,8 +134,6 @@
     (mode "\\.markdown\\'" 'gfm-mode)
     (mode "README\\.md\\'"  'gfm-mode))
 
-;;;;; google-translate
-  (req 'init-google-translate)
 
 ;;;;; charmap
   (liby 'charmap
@@ -332,7 +160,7 @@
     (seq-filter
      (lambda (p)
        (cl-find-if (lambda (v) (equalp (vendle:package-name v)
-                                  p))
+                                       p))
                    *vendle-package-list*))
      (seq-map
       (lambda (p) (format "%s" p))
@@ -450,7 +278,6 @@
 
   ;; (req 'eshell-alias)
 
-  ;; (req 'init-flyparens)
 
   ;; (req 'moe-theme
   ;;   ;; org-modeで見出しごとにフォントの大きさを変える
@@ -468,7 +295,6 @@
   ;;   (add-hook 'scheme-mode-hook 'indent-guide-mode)
   ;;   (set-option indent-guide-char "|"))
 
-  ;; (req 'init-elnode)
 
   ;; (liby 'highlight-stages
   ;;   (auto (highlight-stages-mode)
@@ -479,7 +305,6 @@
   ;; (req 'comment-dwim-2
   ;;   (add-global-key  "M-;" 'comment-dwim-2))
 
-  ;; (req 'init-auto-highlight-symbol)
 
   ;; (liby 'slideview
   ;;       (add-hook 'image-mode-hook 'slideview-mode))
@@ -501,15 +326,6 @@
 
   ;; (req 'aria2
   ;;   (enable-option  aria2-add-evil-quirks))
-
-  ;; (liby 'eww-lnum
-  ;;   (auto (eww-lnum-follow eww-lnum-universal) "eww-lnum")
-  ;;   (after "eww"
-  ;;       (define-key eww-mode-map "f" 'eww-lnum-follow)
-  ;;     (define-key eww-mode-map "F" 'eww-lnum-universal))
-  ;;   (after "eww-lnum"
-  ;;       (set-face-attribute 'eww-lnum-number nil
-  ;;        :foreground "#3355bb")))
 
 
 

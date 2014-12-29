@@ -19,7 +19,23 @@
 (muki:layer-load-layers 'vendle
   '(boot
     register
-    package
+    check))
+
+(muki:layer-load-layers 'vendle
+  '(vendle
+    migemo
+    diminish))
+
+(muki:layer-load-layers 'org
+  '(outshine
+    ;; navi
+    org-autolist
+    org
+    org-pretty-table
+    ))
+
+(muki:layer-load-layers 'vendle
+  '(package
     ssh-config-mode
     emacs-refactor
     artbollocks-mode
@@ -63,32 +79,72 @@
     ;; shackle
     company
     paradox
-    hl-todo))
+    hl-todo
+    hl-indent
+    rainbow-delimiters
+    anzu
+    smartparens
+    expand-region
+    e2wm
+    elfeed
+    haskell-mode
+    sunrise-commander
+    flycheck-package
+    flycheck
+    multiple-cursors
+    highlight-symbol
+    google-translate
+    form-feed
+    aumix-mode
+    scheme-keywords
+    seijiseikana
+    fish-mode
+    debug-print
+    bookmark-extensions
+    lehtifile-mode
+    rebuildfm
+    sos
+    mesh
+    eww-lnum
+    yon-chan
+    itail
+    quickrun
+    web-mode
+    highlight-parenthesis
+    go-mode
+    lua-mode
+    ;; writing-utils
+    ;; elnode
+    ;; auto-highlight-symbol
+    ;; tabbar
+    ;; flyparens
+    ))
 
 ;;;;; package
 (muki:layer-load-layers 'evil
-  '(leader
-    escape
-    surround
-    nerd-commenter
-    lisp-state
-    linewise
-    matchit
-    exchange
-    operator-comment
-    search-highlight-persist
-    jumper
-    visualstar
-    smartparens
-    easymotion
-    textobj-between
-    extra-operator
-    snipe
+  '(evil-leader
+    evil-escape
+    evil-surround
+    evil-nerd-commenter
+    evil-lisp-state
+    evil-linewise
+    evil-matchit
+    evil-exchange
+    evil-operator-comment
+    evil-search-highlight-persist
+    evil-jumper
+    evil-visualstar
+    evil-smartparens
+    evil-easymotion
+    evil-textobj-between
+    evil-extra-operator
+    evil-snipe
     evil
     ))
 
 (muki:layer-load-layers 'helm
   '(helm
+    helm-vendle
     helm-ypv
     helm-alku
     helm-project-buffer
@@ -99,6 +155,10 @@
     wgrep-helm
     helm-css-scss
     helm-bibtex
+    helm-dictionary
+    helm-emms-librefm
+    ;; helm-company
+    ;; helm-delicious
     ))
 
 
@@ -126,7 +186,15 @@
 (require 'init-paketti)
 
 ;;;;; lang
-(require 'init-lang)
+(muki:layer-load-layers 'lang
+  '(lisp
+    elisp
+    scheme
+    common-lisp
+    ;; kernel-mode
+    shell
+    cpp
+    c))
 
 ;;;;; elisp
 (require 'init-elisp)

@@ -1,7 +1,8 @@
 ;;; init-helm-ag.el -*- lexical-binding: t -*-
 
 ;; ag
-(req 'helm-ag
+(liby 'helm-ag
+  (auto (helm-do-ag) "helm-ag")
   (set-option helm-ag-source-type 'file-line)
   (muki:define-launcher-key "a" 'helm-do-ag))
 

@@ -16,7 +16,7 @@
   (muki:init-evil-visualstar)
   (muki:init-evil-smartparens)
   (muki:init-evil-search-highlight-persist)
-  (muki:init-evil-easymotion)
+  ;; (muki:init-evil-easymotion)
   (muki:init-evil-textobj-between)
   (muki:init-evil-extra-operator)
   (muki:init-evil-snipe))

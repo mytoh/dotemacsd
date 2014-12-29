@@ -292,8 +292,9 @@
                  '(:deps ("larsmagne/pvr.el"
                           "larsmagne/imdb.el")
                    :desc "http://lars.ingebrigtsen.no/2011/04/12/emacs-movie-browser" ))
-(vendle:register "larsmagne/csid"
-                 '(:desc "http://lars.ingebrigtsen.no/2013/09/crowdsourcing-is-dead.html"))
+;; csid make eww unusable because of dom.el
+;; (vendle:register "larsmagne/csid"
+;;                  '(:desc "http://lars.ingebrigtsen.no/2013/09/crowdsourcing-is-dead.html"))
 (vendle:register "gregsexton/httprepl.el"
                  '(:tag ("http" "repl")))
 (vendle:register "nicferrier/emacs-twaddle"
@@ -390,7 +391,8 @@
 (vendle:register "capitaomorte/darkroom"
                  '(:tag ("writing" "distraction free")))
 (vendle:register "vspinu/image-transform"
-                 '(:tag "image"))
+                 '(:tag "image"
+                   :compile nil))
 (vendle:register "gongo/json-reformat"
                  '(:tag "json"))
 (vendle:register "hchbaw/bqlist-lock.el")
@@ -437,6 +439,21 @@
 (vendle:register "tarsius/hl-todo"
                  '(:tag ("highlight" "font-lock")))
 (vendle:register "ifree/emacs-code-playground")
+(vendle:register "ikirill/hl-indent"
+                 '(:tag ("highlight" "indentation")))
+(vendle:register "AeroFengBlade/typewriter-mode")
+(vendle:register "ahyatt/emacs-websocket"
+                 '(:tag ("websocket")))
+(vendle:register "tkf/emacs-ipython-notebook"
+                 '(:tag ("python")))
+(vendle:register "syohex/emacs-realtime-markdown-viewer"
+                 '(:tag "markdown"))
+(vendle:register "jscheid/kite")
+(vendle:register "wasamasa/form-feed")
+(vendle:register "emacsmirror/aumix-mode"
+                 '(:tag ("aumix" "audio")))
+(vendle:register "kuanyui/writing-utils.el"
+                 '(:tag ("writing")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -795,6 +812,8 @@
               '(:tag ("common_lisp" "climacs" "clim" )))
 (vendle:fetch "robert-strandh/CLIMatis"
               '(:tag ("common_lisp" "climacs" "clim" )))
+(vendle:fetch "edicl/cl-unicode"
+              '(:tag ("common_lisp" "unicode")))
 (vendle:fetch "gabriel-laddel/masamune")
 (vendle:fetch "Fanael/init.el"
               '(:tag "dotfiles"))
@@ -918,6 +937,11 @@
 (vendle:fetch "ellerh/xref")
 (vendle:fetch "kelvinh/org-page"
               '(:tag ("org")))
+(vendle:fetch "abedra/emacs.d")
+(vendle:fetch "emacsmirror/xclip"
+              '(:tag "clipboard"))
+(vendle:fetch "emacsmirror/uni-confusables"
+              '(:tag "unicode"))
 
 ;;; init-vendle-registers.el ends here
 ;;
