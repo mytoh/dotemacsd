@@ -74,6 +74,12 @@
                                    :deps ("jwiegley/emacs-async")
                                    :tag "helm")))
                    :tag ("helm" "dictionary")))
+(vendle:register "emacs-helm/helm-orgcard"
+                 '(:tag ("helm" "org")
+                   :deps (( "emacs-helm/helm"
+                           (:build ("gmake")
+                                   :deps ("jwiegley/emacs-async")
+                                   :tag "helm")))))
 
 ;;;;;  general packages
 (vendle:register "magnars/s.el")
