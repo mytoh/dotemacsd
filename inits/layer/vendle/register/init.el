@@ -132,6 +132,10 @@
                  '(:tag ("magit")
                    :deps (("magit/magit"
                            (:build ("gmake lisp docs") :info "." :tag "git")))))
+(vendle:register "magit/magit-filenotify"
+                 '(:tag ("magit")
+                   :deps (("magit/magit"
+                           (:build ("gmake lisp docs") :info "." :tag "git")))))
 (vendle:register "company-mode/company-mode"
                  '(:tag "company"))
 (vendle:register "proofit404/company-edbi"
@@ -277,7 +281,10 @@
                           "git://jblevins.org/git/markdown-mode.git"
                           "emacsmirror/htmlize")
                    :tag "tumblr"))
-(vendle:register "thomblake/js3-mode")
+(vendle:register "thomblake/js3-mode"
+                 '(:tag "javascript"))
+(vendle:register "mooz/js2-mode"
+                 '(:tag "javascript"))
 (vendle:register "jd/google-maps.el")
 (vendle:register "atykhonov/google-translate")
 (vendle:register "lateau/charmap")
@@ -464,6 +471,8 @@
                  '(:tag ("writing")))
 (vendle:register "joodland/bm"
                  '(:tag ("bookmark")))
+(vendle:register "mhayashi1120/Emacs-image-archive"
+                 '(:tag ("image" "archive")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -955,6 +964,13 @@
               '(:tag "unicode"))
 (vendle:fetch "funcool/cats"
               '(:tag ("clojure" "monad")))
+(vendle:fetch "jonnay/emagicians-starter-kit"
+              '(:tag ("org" "configuration")))
+(vendle:fetch "julfy/scopid")
+(vendle:fetch "holomorph/transmission"
+              '(:tag ("transmisson")))
+(vendle:fetch "tromey/emacs-module"
+              '(:tag ("module")))
 
 ;;; init-vendle-registers.el ends here
 ;;
