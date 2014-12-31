@@ -13,6 +13,7 @@
         ("hi" . help-info)
         ("hd" . help-describe)
         ("m" . emms)
+        ("s" . search)
         ("T" .  theme)
         ;; ("z" .  eshell-switch)
         ("z" .  mesh)))
@@ -132,8 +133,12 @@
         "W" #'eww))
 
     (liby 'helm-git-grep
-      (muki:evil-leader-prefix-set-keys 'git
-        "r" #'helm-git-grep))
+      (muki:evil-leader-prefix-set-keys 'search
+        "g" #'helm-git-grep))
+
+    (liby 'helm-ag
+      (muki:evil-leader-prefix-set-keys 'search
+        "a" #'helm-do-ag))
 
     (liby 'emms
       (muki:evil-leader-prefix-set-keys 'emms
