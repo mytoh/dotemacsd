@@ -299,7 +299,7 @@
        (add-to-list 'Info-additional-directory-list dir))
      (seq-filter
       (lambda (dir) (and (file-directory-p dir)
-                    (file-exists-p dir)))
+                         (file-exists-p dir)))
       (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
@@ -372,10 +372,27 @@
 ;; [[http://ubuntuforums.org/showthread.php?t=183638]]
 (modify-frame-parameters nil '((wait-for-wm . nil)))
 
+;; dont support bidi
+(setq-default bidi-display-reordering nil)
+
+;; delete duplication in history
+(enable-option history-delete-duplicates)
+
+;; decrease gc cycle
+(set-option gc-cons-threshold (* 10 gc-cons-threshold))
+
+;; message log line counts
+(set-option message-log-max 10000)
+
 ;; desktop
-;; (desktop-save-mode 1)
+(setq desktop-globals-to-save '(extended-command-history
+                                helm-ff-history
+                                helm-external-command-history))
+(setq desktop-files-not-to-save "")
 ;; (dolist (symbol (apropos-internal "\\`[^:]*-history\\'" 'boundp))
 ;;   (add-to-list 'desktop-globals-to-save symbol))
+(desktop-save-mode 1)
+
 
 ;; heap size
 ;; (set-option gc-cons-percentage 0.5) ; 0.1
