@@ -10,22 +10,23 @@
 (add-subdirs-to-load-path (muki:user-emacs-directory "inits"))
 
 (require 'muki)
+(require 'muki-layer)
 
 ;;;;; system
-(muki:layer-load-layers 'system
+(muki-layer:load-layers 'system
   '(freebsd darwin))
 
 ;;;;; vendle
-(muki:layer-load-layers 'vendle
+(muki-layer:load-layers 'vendle
   '(boot
     register
     check))
 
-(muki:layer-load-layers 'vendle
+(muki-layer:load-layers 'vendle
   '(vendle
     diminish))
 
-(muki:layer-load-layers 'org
+(muki-layer:load-layers 'org
   '(outshine
     ;; navi
     org-autolist
@@ -33,7 +34,7 @@
     org-pretty-table
     ))
 
-(muki:layer-load-layers 'vendle
+(muki-layer:load-layers 'vendle
   '(migemo
     ssh-config-mode
     emacs-refactor
@@ -52,7 +53,7 @@
     context-coloring
     dircmp
     esup
-    ace-link
+
     info-plus
     elisp-slime-nav
     yaml-mode
@@ -139,6 +140,9 @@
     switch-window
     highlight-sexp
     undohist
+    image-archive
+    js2-mode
+    ;; ace-link
     ;; eshell-alias
     ;; aozora-view
     ;; yascroll
@@ -179,7 +183,7 @@
     ))
 
 ;;;;; package
-(muki:layer-load-layers 'evil
+(muki-layer:load-layers 'evil
   '(evil-leader
     evil-escape
     evil-surround
@@ -200,7 +204,7 @@
     evil
     ))
 
-(muki:layer-load-layers 'helm
+(muki-layer:load-layers 'helm
   '(helm
     helm-vendle
     helm-ypv
@@ -221,7 +225,7 @@
 
 
 ;;;;; config
-(muki:layer-load-layers 'config
+(muki-layer:load-layers 'config
   '(setting
     key
     hook
@@ -238,13 +242,14 @@
     eww
     newsticker
     rcirc
-    tramp))
+    tramp
+    eieio))
 
 ;;;;; packages
 (require 'init-paketti)
 
 ;;;;; lang
-(muki:layer-load-layers 'lang
+(muki-layer:load-layers 'lang
   '(lisp
     elisp
     scheme
