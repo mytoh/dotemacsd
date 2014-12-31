@@ -215,7 +215,7 @@ buffer is not visiting a file."
 (require 'muki-option)
 (require 'muki-mode)
 (require 'muki-lib)
-(require 'muki-layer)
+
 
 (provide 'muki)
 
