@@ -6,7 +6,8 @@
          helm-alku-program
          helm-alku-directory
          helm-alku-vihko
-         helm-alku-ääliö)
+         helm-alku-ääliö
+         helm-alku-layer)
         "helm-alku")
 
   (after 'helm-alku
