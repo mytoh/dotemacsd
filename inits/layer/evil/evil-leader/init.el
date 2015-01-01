@@ -15,7 +15,6 @@
         ("m" . emms)
         ("s" . search)
         ("T" .  theme)
-        ;; ("z" .  eshell-switch)
         ("z" .  mesh)))
 
 (cl-defun muki:evil-leader-prefix-set-key (category key def)
