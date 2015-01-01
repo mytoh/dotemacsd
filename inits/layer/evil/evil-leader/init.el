@@ -98,7 +98,9 @@
       (muki:evil-leader-prefix-set-keys 'application
         "h" #'helm-alku
         "c" #'helm-alku-program
-        "n" #'helm-alku-vihko))
+        "n" #'helm-alku-vihko
+        "ä" #'helm-alku-ääliö
+        "l" #'helm-alku-layer))
 
     (liby 'vendle
       (muki:evil-leader-prefix-set-keys 'application-vendle
