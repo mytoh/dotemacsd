@@ -88,6 +88,7 @@
     e2wm
     elfeed
     haskell-mode
+    hi2
     sunrise-commander
     flycheck-package
     flycheck
@@ -142,7 +143,7 @@
     undohist
     image-archive
     js2-mode
-    ;; ace-link
+    ace-link
     ;; eshell-alias
     ;; aozora-view
     ;; yascroll
@@ -202,6 +203,10 @@
     evil-extra-operator
     evil-snipe
     evil
+    ))
+
+(muki-layer:load-layers 'evil
+  '(eww
     ))
 
 (muki-layer:load-layers 'helm
