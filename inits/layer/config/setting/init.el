@@ -385,13 +385,13 @@
 (set-option message-log-max 10000)
 
 ;; desktop
-(setq desktop-globals-to-save '(extended-command-history
-                                helm-ff-history
-                                helm-external-command-history))
-(setq desktop-files-not-to-save "")
+;; (setq desktop-globals-to-save '(extended-command-history
+;;                                 helm-ff-history
+;;                                 helm-external-command-history))
+;; (setq desktop-files-not-to-save "")
 ;; (dolist (symbol (apropos-internal "\\`[^:]*-history\\'" 'boundp))
 ;;   (add-to-list 'desktop-globals-to-save symbol))
-(desktop-save-mode 1)
+;; (desktop-save-mode 1)
 
 
 ;; heap size
