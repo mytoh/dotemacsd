@@ -171,6 +171,8 @@
                  '(:tag "haskell"
                    :compile nil
                    :build ("gmake clean all")))
+(vendle:register "nilcons/hi2"
+                 '(:tag "haskell"))
 (vendle:register "Bruce-Connor/paradox"
                  '(:deps ("magnars/dash.el"
                           "jwiegley/emacs-async")))
@@ -473,6 +475,14 @@
                  '(:tag ("bookmark")))
 (vendle:register "mhayashi1120/Emacs-image-archive"
                  '(:tag ("image" "archive")))
+(vendle:register "zk-phi/download-region"
+                 '(:tag ("download")
+                   :desc "simple in-buffer download manager for Emacs"))
+(vendle:register "knu/dired-fdclone.el"
+                 '(:tag ("dired" "fclone")))
+(vendle:register "syohex/emacs-literate-coffee-mode"
+                 '(:deps ( "defunkt/coffee-mode")
+                   :tag ("coffeescript")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
