@@ -48,7 +48,8 @@
 
     (muki:evil-leader-prefix-set-keys 'eval
       "e" #'eval-last-sexp
-      "x" #'eval-defun)
+      "x" #'eval-defun
+      "b" #'eval-buffer)
 
     (muki:evil-leader-prefix-set-keys 'help-describe
       "f" #'describe-function
