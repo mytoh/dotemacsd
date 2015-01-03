@@ -95,7 +95,10 @@
 ;; (vendle:register "emacsmirror/mew")
 (vendle:register "kazu-yamamoto/Mew")
 (vendle:register "ober/zone-matrix")
-(vendle:register "wwwjfy/emacs-fish")
+(vendle:register "wwwjfy/emacs-fish"
+                 '(:tag "fish"))
+(vendle:register "jramnani/fish-mode"
+                 '(:tag "fish"))
 (vendle:register "thierryvolpiatto/emacs-bmk-ext")
 (vendle:register "kawabata/aozora-view")
 (vendle:register "tomoya/fuzzyjump.el")
@@ -173,6 +176,9 @@
                    :build ("gmake clean all")))
 (vendle:register "nilcons/hi2"
                  '(:tag "haskell"))
+(vendle:register "kazu-yamamoto/ghc-mod"
+                 '(:tag ("ghc" "haskell")
+                   :load-path "elisp"))
 (vendle:register "Bruce-Connor/paradox"
                  '(:deps ("magnars/dash.el"
                           "jwiegley/emacs-async")))
@@ -260,7 +266,8 @@
 (vendle:register "kawabata/ids-edit")
 (vendle:register "gbalats/autodisass-llvm-bitcode")
 (vendle:register "sachac/artbollocks-mode")
-(vendle:register "alpaker/Fill-Column-Indicator")
+(vendle:register "alpaker/Fill-Column-Indicator"
+                 '(:desc "Graphically indicate the fill column"))
 (vendle:register "tungd/color-theme-approximate")
 (vendle:register "http://www.dr-qubit.org/git/undo-tree.git")
 (vendle:register "Bruce-Connor/emacs-google-this")
@@ -379,8 +386,6 @@
 (vendle:register "Fuco1/banana.el"
                  '(:tag ("monad")))
 (vendle:register "kentaro/auto-save-buffers-enhanced")
-(vendle:register "cosmicexplorer/js-beautify-emacs"
-                 '(:tag ("javascript")))
 (vendle:register "josteink/csharp-mode"
                  '(:tag ("C#")))
 (vendle:register "Bruce-Connor/camcorder.el"
@@ -461,8 +466,6 @@
 (vendle:register "AeroFengBlade/typewriter-mode")
 (vendle:register "ahyatt/emacs-websocket"
                  '(:tag ("websocket")))
-(vendle:register "tkf/emacs-ipython-notebook"
-                 '(:tag ("python")))
 (vendle:register "syohex/emacs-realtime-markdown-viewer"
                  '(:tag "markdown"))
 (vendle:register "jscheid/kite")
@@ -483,6 +486,32 @@
 (vendle:register "syohex/emacs-literate-coffee-mode"
                  '(:deps ( "defunkt/coffee-mode")
                    :tag ("coffeescript")))
+(vendle:register "tarsius/elx"
+                 '(:desc "Extract information from Emacs Lisp libraries"))
+(vendle:register "thisirs/state"
+                 '(:tag ("workspace")
+                   :desc "Quick navigation between workspaces in emacs"))
+(vendle:register "lunaryorn/fancy-battery.el"
+                 '(:tag ("appearance" "modeline")))
+(vendle:register "csrhodes/iplayer-el"
+                 '(:tag ("bbc")
+                   :desc "Emacs interface to the BBC's iPlayer (uses get_iplayer)"))
+(vendle:register "sigma/marshal.el"
+                 '(:tag ("eieio")
+                   :desc " eieio extension for automatic (un)marshalling"))
+(vendle:register "zk-phi/phi-grep"
+                 '(:tag ("grep")
+                   :desc "Interactively-editable recursive grep implementation in elisp"))
+(vendle:register "tarsius/packed"
+                 '(:tag ("package")
+                   :desc "package manager agnostic Emacs Lisp package utilities"))
+(vendle:register "ainame/smart-newline.el"
+                 '( :site "http://ainame.hateblo.jp/entry/2013/12/08/162032"))
+(vendle:register "xuchunyang/one.el"
+                 '(:desc "Read several news sources within Emacs"))
+(vendle:register "rakete/pixel-mode"
+                 '(:desc "Make pixel art in emacs buffers."
+                   :tag ("pixel_art")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -565,6 +594,8 @@
                                    :tag "evil")))))
 (vendle:register "linktohack/evil-commentary"
                  '(:tag "evil"))
+(vendle:register "syl20bnr/evil-tutor"
+                 '(:tag ("evil" "tutorial")))
 
 
 ;;;;; org
@@ -601,6 +632,15 @@
                  '(:tag ("org")))
 (vendle:register "calvinwyoung/org-autolist"
                  '(:tag ("org")))
+(vendle:register "krisajenkins/ob-browser"
+                 '(:tag ("org" "org-babel" "html" "phantomjs")
+                   :desc "Render HTML inside Emacs' org-mode"))
+(vendle:register "thisirs/org-context"
+                 '(:tag ("org" "org-agenda" "org-capture")
+                   :desc "Contextual agenda and capture for Org-mode"))
+(vendle:register "woudshoo/html-2-org"
+                 '(:tag ("org" "html")
+                   :desc "Attempts to undo the html export of org"))
 
 ;;;;; themes
 (vendle:register "owainlewis/emacs-color-themes")
@@ -727,26 +767,35 @@
 (vendle:fetch "sachac/.emacs.d")
 (vendle:fetch "sachac/sharing"
               '(:tag ("org")))
+(vendle:fetch "sachac/sketched-books"
+              '(:tag ("org")))
 (vendle:fetch "serras/emacs-haskell-tutorial")
 (vendle:fetch "supermomonga/dot-emacs")
 (vendle:fetch "thierryvolpiatto/emacs-tv-config")
 (vendle:fetch "xiaohanyu/oh-my-emacs")
 (vendle:fetch "bling/emacs-evil-bootstrap")
 (vendle:fetch "capdevc/dotfiles-cc")
-(vendle:fetch "siancu/evilmode-pack")
+(vendle:fetch "siancu/evilmode-pack"
+              '(:recursive nil))
 (vendle:fetch "emacs-tw/awesome-emacs")
-(vendle:fetch "syl20bnr/spacemacs")
+(vendle:fetch "syl20bnr/spacemacs"
+              '(:recursive nil))
 (vendle:fetch "bbatsov/prelude")
 (vendle:fetch "bling/dotemacs")
-(vendle:fetch "cofi/dotfiles")
-(vendle:fetch "tarao/dotfiles")
+(vendle:fetch "cofi/dotfiles"
+              '(:recursive nil))
+(vendle:fetch "tarao/dotfiles"
+              '(:recursive nil))
 (vendle:fetch "fukamachi/emacs-config")
 (vendle:fetch "mikio/dotfiles")
-(vendle:fetch "yukihr/dotfiles")
+(vendle:fetch "yukihr/dotfiles"
+              '(:recursive nil))
 (vendle:fetch "handlename/dot-emacs")
 (vendle:fetch "seven1m/.emacs.d")
-(vendle:fetch "gongo/elfactory")
-(vendle:fetch "rdallasgray/graphene")
+(vendle:fetch "gongo/elfactory"
+              '(:recursive nil))
+(vendle:fetch "rdallasgray/graphene"
+              '(:recursive nil))
 (vendle:fetch "mgill25/emacs")
 (vendle:fetch "nikki93/.emacs.d")
 (vendle:fetch "davvil/.emacs.d")
@@ -754,7 +803,8 @@
 (vendle:fetch "jcf/emacs.d")
 (vendle:fetch "jcf/previous-emacs.d")
 (vendle:fetch "nathantypanski/emacs.d")
-(vendle:fetch "lukaszkorecki/cult-leader")
+(vendle:fetch "lukaszkorecki/cult-leader"
+              '(:recursive nil))
 (vendle:fetch "ahmadseleem/ViMacs"
               '(:tag ("evil" "dotifles")))
 (vendle:fetch "febuiles/dotemacs")
@@ -762,7 +812,8 @@
 (vendle:fetch "roman/emacs.d")
 (vendle:fetch "iconpin/dotemacs")
 (vendle:fetch "jpace121/evil-ed")
-(vendle:fetch "edwtjo/evil-ed")
+(vendle:fetch "edwtjo/evil-ed"
+              '(:recursive nil))
 (vendle:fetch "sunesimonsen/evil-config")
 (vendle:fetch "gbarta/evil-my-shims")
 (vendle:fetch "novoid/Memacs")
@@ -773,8 +824,10 @@
 (vendle:fetch "alexander-yakushev/.emacs.d")
 (vendle:fetch "LukeSwart/.emacs.d")
 (vendle:fetch "romanoaugusto88/.emacs.d")
-(vendle:fetch "jirkamarsik/sonic-screwdriver")
-(vendle:fetch "defunkt/emacs")
+(vendle:fetch "jirkamarsik/sonic-screwdriver"
+              '(:recursive nil))
+(vendle:fetch "defunkt/emacs"
+              '(:recursive nil))
 (vendle:fetch "rejeep/emacs")
 (vendle:fetch "dragonwasrobot/dot-emacs")
 (vendle:fetch "jhamrick/emacs")
@@ -802,10 +855,11 @@
 (vendle:fetch "kovan/dopemacs")
 (vendle:fetch "AshleyMoni/dotfiles"
               '(:tag ( "evil" "dotfiles" )))
-;; (vendle:fetch "EricGebhart/emacs-setup"
-;;               '(:tag ( "evil" "dotfiles" )))
-(vendle:fetch "nadavspi/dotfiles"
+(vendle:fetch "EricGebhart/emacs-setup"
               '(:tag ( "evil" "dotfiles" )))
+(vendle:fetch "nadavspi/dotfiles"
+              '(:tag ( "evil" "dotfiles" )
+                :recursive nil))
 (vendle:fetch "gridaphobe/dotfiles"
               '(:tag ("evil" "dotifles")))
 (vendle:fetch "farisnasution/.evil-pack"
@@ -821,8 +875,6 @@
               '(:tag ("evil")))
 (vendle:fetch "yangchenyun/emacs-prelude"
               '(:tag ( "dotfiles" "evil" )))
-(vendle:fetch "gabriel-laddel/masamune-os"
-              '(:tag ( "common_lisp" "nix" "stumpwm")))
 (vendle:fetch "stumpwm/stumpwm"
               '(:tag ("common_lisp" "stumpwm")))
 (vendle:fetch "stumpwm/stumpwm-contrib"
@@ -851,7 +903,8 @@
 (vendle:fetch "zhen-qin/.emacs.d"
               '(:tag ("dotfiles" "evil")))
 (vendle:fetch "LeifAndersen/Emacs")
-(vendle:fetch "uwabami/emacs-config")
+(vendle:fetch "uwabami/emacs-config"
+              '(:recursive nil))
 (vendle:fetch "farseer90718/dotemacs")
 (vendle:fetch "bixuanzju/emacs.d")
 (vendle:fetch "mahinshaw/emacsd"
@@ -874,9 +927,11 @@
 (vendle:fetch "wcsmith/dotemacs"
               '(:tag ("evil")))
 (vendle:fetch "takaxp/emacs.d")
-(vendle:fetch "senny/cabbage")
+(vendle:fetch "senny/cabbage"
+              '(:recursive nil))
 (vendle:fetch "capitaomorte/holy"
-              '(:tag ("stumpwm")))
+              '(:tag ("stumpwm")
+                :recursive nil))
 (vendle:fetch "avendael/dotemacs"
               '(:tag ("evil")))
 (vendle:fetch "VincentToups/emacs-utils")
@@ -887,7 +942,8 @@
 (vendle:fetch "nlamirault/scame")
 (vendle:fetch "dtan4/dot.emacs.d")
 (vendle:fetch "jimm/elisp")
-(vendle:fetch "magnars/.emacs.d")
+(vendle:fetch "magnars/.emacs.d"
+              '(:recursive nil))
 (vendle:fetch "steventlamb/lamb-horned-beast")
 (vendle:fetch "Bruce-Connor/emacs-online-documentation")
 (vendle:fetch "unbalancedparentheses/lunfardo")
@@ -898,7 +954,8 @@
               '(:tag ("org")))
 (vendle:fetch "TheBB/dotfiles"
               '(:tag ("evil" "org")
-                :desc "https://github.com/TheBB/dotfiles/blob/master/emacs/init.el#L841-975"))
+                :desc "https://github.com/TheBB/dotfiles/blob/master/emacs/init.el#L841-975"
+                :recursive nil))
 (vendle:fetch "grettke/home"
               '(:tag ("org")))
 (vendle:fetch "lunaryorn/.emacs.d"
@@ -928,7 +985,8 @@
 (vendle:fetch "bzg/org-mode-rr"
               '(:tag ("org" "reproducible_research")))
 (vendle:fetch "jkitchin/jmax"
-              '(:tag ("org")))
+              '(:tag ("org")
+                :recursive nil))
 (vendle:fetch "ihodes/emacs.org"
               '(:tag ("org")))
 (vendle:fetch "tsu-nera/dotfiles"
@@ -981,6 +1039,14 @@
               '(:tag ("transmisson")))
 (vendle:fetch "tromey/emacs-module"
               '(:tag ("module")))
+(vendle:fetch "vikasrawal/orgpaper"
+              '(:tag ("org")))
+(vendle:fetch "shellhead/org-docs"
+              '(:tag ("org")))
+(vendle:fetch "tuhdo/emacs-c-ide-demo")
+(vendle:fetch "tkf/emacs-ipython-notebook"
+              '(:tag ("python")
+                :recursive nil))
 
 ;;; init-vendle-registers.el ends here
 ;;
