@@ -89,6 +89,7 @@
     elfeed
     haskell-mode
     hi2
+    ghc
     sunrise-commander
     flycheck-package
     flycheck
@@ -144,12 +145,14 @@
     image-archive
     js2-mode
     ace-link
+    phi-grep
+    smart-newline
+    fill-column-indicator
     ;; eshell-alias
     ;; aozora-view
     ;; yascroll
     ;; nyan-mode
     ;; aria2
-    ;; fill-column-indicator
     ;; ids-edit
     ;; recycle
     ;; image-plus
@@ -240,7 +243,7 @@
     font
     erc
     eshell
-    eshell-prompt
+    ;; eshell-prompt
     whitespace
     autoinsert
     dired
