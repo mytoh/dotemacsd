@@ -6,4 +6,7 @@
   "o" #'ace-link-eww
   "q" #'quit-window)
 
+(evil-define-key 'normal eww-link-keymap
+  "o" #'ace-link-eww)
+
 ;;; init.el ends here
