@@ -142,7 +142,11 @@
     (modify-face 'org-level-7 'font-lock-builtin-face)
     (modify-face 'org-level-8 'font-lock-string-face)
     (set-face-attribute 'org-done nil
-                        :weight 'bold)))
+                        :weight 'bold)
+    (set-face-attribute 'org-block-begin-line nil
+                        :height 0.8)
+    (set-face-attribute 'org-block-end-line nil
+                        :height 0.8)))
 
 (cl-defun muki:org-mode-hook-function ()
   (muki:org-general-options)

@@ -4,7 +4,11 @@
 (require 'muki)
 (require 'subr-x)
 
+
+
 ;;; settings
+
+
 ;;;; user elisps
 (muki:add-to-load-path (muki:user-emacs-directory (file-name-as-directory "elisp")))
 
@@ -76,6 +80,9 @@
               (if (image-multi-frame-p image)
                   (image-toggle-animation)))))
 ;; (set-option image-transform-resize 'fit-height)
+
+;;;; imagemagick
+(set-option imagemagick-render-type 1) ; default 0
 
 ;;;; highlight region
 (transient-mark-mode 1)
@@ -396,6 +403,17 @@
 
 ;; heap size
 ;; (set-option gc-cons-percentage 0.5) ; 0.1
+
+
+;; [[https://www.reddit.com/r/emacs/comments/2r5xb4/vim_tilde_behavior/]]
+;;use tilde's like Vim
+(define-fringe-bitmap 'tilde [0 0 0 113 219 142 0 0] nil nil 'center)
+(setcdr (assq 'empty-line fringe-indicator-alist) 'tilde)
+(set-fringe-bitmap-face 'tilde 'font-lock-comment-face)
+(cl-defun muki:enable-indicate-empty-lines ()
+  (setq indicate-empty-lines t))
+(add-hook 'prog-mode-hook #'muki:enable-indicate-empty-lines)
+
 
 
 ;;; config-setting.el ends here

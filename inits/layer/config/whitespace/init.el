@@ -29,6 +29,8 @@
 
 (set-face-background 'whitespace-space-after-tab
                      "#444033")
+(set-face-foreground 'whitespace-line
+                     (face-foreground 'default))
 (set-face-background 'whitespace-line
                      "#331212")
 (set-face-foreground 'whitespace-space

@@ -148,6 +148,7 @@
     phi-grep
     smart-newline
     fill-column-indicator
+    ipretty
     ;; eshell-alias
     ;; aozora-view
     ;; yascroll
@@ -265,7 +266,8 @@
     ;; kernel-mode
     shell
     cpp
-    c))
+    c
+    csh-mode))
 
 ;;;;; elisp
 (require 'init-elisp)

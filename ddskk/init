@@ -47,8 +47,9 @@
 (defface muki:skk-tooltip
     '((t (:foreground "#93b8bb"
           :background "#232323"
-          :bok nil)))
-  "face for skk tooltip")
+          :bold nil)))
+  "face for skk tooltip"
+  :group 'skk-tooltip)
 (setq skk-tooltip-face 'muki:skk-tooltip)
 
 ;;;; か行をcで入れるときに辞書の送りがなをちゃんとする。
@@ -102,3 +103,17 @@
 ;;;; utf-8
 ;; this line should put on last
 (setq skk-jisyo-code 'utf-8)
+
+;;;; github emoji
+
+;; o 補完
+(cl-letf ((jisyo-path (expand-file-name
+                       "github.com/tkita/SKK-JISYO/SKK-JISYO.GitHub-emojis"
+                       vendle-directory)))
+  (setq skk-extra-jisyo-file-list
+        (cons `(,jisyo-path . utf-8)
+              skk-extra-jisyo-file-list))
+  ;; o 変換
+  (setq skk-completion-prog-list
+        (cons `(skk-comp-from-jisyo '(,jisyo-path . utf-8))
+              skk-completion-prog-list)))

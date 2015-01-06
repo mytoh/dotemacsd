@@ -80,6 +80,12 @@
                            (:build ("gmake")
                                    :deps ("jwiegley/emacs-async")
                                    :tag "helm")))))
+(vendle:register "lins05/helm-org-files"
+                 '(:tag ("helm" "org")
+                   :deps (( "emacs-helm/helm"
+                           (:build ("gmake")
+                                   :deps ("jwiegley/emacs-async")
+                                   :tag "helm")))))
 
 ;;;;;  general packages
 (vendle:register "magnars/s.el")
@@ -112,6 +118,9 @@
                  '(:tag "emms"))
 (vendle:register "osener/emms-soundcloud"
                  '(:tag ("emms" "soundcloud")))
+(vendle:register "vapniks/emms-mark-ext"
+                 '(:tag ("emms")
+                   :desc "Extra functions for tagging tracks in emms mode in emacs. "))
 (vendle:register "r0man/soundklaus.el"
                  '(:deps (("magnars/dash.el" ( :compile nil))
                           "magnars/s.el"
@@ -483,6 +492,7 @@
                    :desc "simple in-buffer download manager for Emacs"))
 (vendle:register "knu/dired-fdclone.el"
                  '(:tag ("dired" "fclone")))
+(vendle:register "Fuco1/dired-hacks")
 (vendle:register "syohex/emacs-literate-coffee-mode"
                  '(:deps ( "defunkt/coffee-mode")
                    :tag ("coffeescript")))
@@ -512,6 +522,25 @@
 (vendle:register "rakete/pixel-mode"
                  '(:desc "Make pixel art in emacs buffers."
                    :tag ("pixel_art")))
+(vendle:register "bmag/purpose"
+                 '(:tag ("workspace")))
+(vendle:register "ajsquared/env-var-import"
+                 '(:desc "Import shell environment variables in GUI Emacs "))
+(vendle:register "emacsmirror/ob-speak"
+                 '(:tag ("org" "espeak" "org-babel")
+                   :desc "espeak speech synthesis for org-babel blocks"))
+(vendle:register "vapniks/syslog-mode"
+                 '(:tag ("log")
+                   :deps ("vapniks/hide-lines")
+                   :desc "Emacs major-mode for viewing log files "))
+(vendle:register "chrisbarrett/skeletor.el"
+                 '(:desc "Powerful project skeletons for Emacs"))
+(vendle:register "steckerhalter/emacs-fasd"
+                 '(:tag ("fasd")
+                   :deps ("d11wtq/grizzl")
+                   :desc "An Emacs extension to integrate Fasd"))
+(vendle:register "steckerhalter/ipretty"
+                 '(:desc "Interactive Emacs Lisp pretty-printing "))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -641,6 +670,10 @@
 (vendle:register "woudshoo/html-2-org"
                  '(:tag ("org" "html")
                    :desc "Attempts to undo the html export of org"))
+;; (vendle:register "https://bitbucket.org/eeeickythump/org-player"
+;;                  '(:tag ("org" "bongo" "music")
+;;                    :deps ("dbrock/bongo")
+;;                    :type hg))
 
 ;;;;; themes
 (vendle:register "owainlewis/emacs-color-themes")
@@ -741,6 +774,8 @@
                    :load-path ("." "experimental")))
 (vendle:fetch "skk-dev/skktools"
               '(:build ("./configure" "gmake")))
+(vendle:fetch "tkita/SKK-JISYO"
+              '(:tag ("skk" "skk-jisyo")))
 
 ;; (cond
 ;;   ((file-directory-p (muki:user-emacs-directory "vendle/ddskk"))
@@ -817,6 +852,8 @@
 (vendle:fetch "sunesimonsen/evil-config")
 (vendle:fetch "gbarta/evil-my-shims")
 (vendle:fetch "novoid/Memacs")
+(vendle:fetch "novoid/dot-emacs"
+              '(:tag ("org")))
 (vendle:fetch "terhechte/emacs.d")
 (vendle:fetch "echosa/emacs.d")
 (vendle:fetch "wataken44/dot.emacs.d2")
@@ -1047,6 +1084,24 @@
 (vendle:fetch "tkf/emacs-ipython-notebook"
               '(:tag ("python")
                 :recursive nil))
+(vendle:fetch "ryzzn/sydi-site"
+              '(:tag ("org" "html")))
+(vendle:fetch "tonini/emacs.d")
+(vendle:fetch "Lindydancer/e2ansi"
+              '(:tag ("terminal" "escape_sequence")
+                :desc "Syntax highlighting support for terminals, powered by Emacs"))
+(vendle:fetch "mlf176f2/EmacsMate")
+(vendle:fetch "https://gitlab.com/emacs-stuff/fasd-shell.git"
+              '(:tag ("fasd" "shell" "ido")
+                :desc "Use ido completion for the fasd utility in an emacs shell."))
+(vendle:fetch "coldnew/eshell-autojump"
+              '(:tag ("eshell" "autojump")))
+(vendle:fetch "impaktor/unison-mode"
+              '(:tag ("unison")))
+(vendle:fetch "Sodaware/beeminder.el"
+              '(:tag ("beeminder" "org")))
+(vendle:fetch "skwp/dotfiles"
+              '(:tag ("tmux" "vim" "zsh")))
 
 ;;; init-vendle-registers.el ends here
 ;;

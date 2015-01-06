@@ -1,17 +1,6 @@
 
 (add-subdirs-to-load-path (muki:user-emacs-directory "inits/elisp"))
 
-;; (req 'csh-mode
-;;      (setq csh-mode-hook
-;;            (lambda ()
-;;              (font-lock-mode 1)             ;; font-lock the buffer
-;;              (setq csh-indent 4)
-;;              (setq csh-tab-always-indent t)
-;;              (setq csh-match-and-tell t)
-;;              (setq csh-align-to-keyword t)))
-;;      (add-to-list 'auto-mode-alist '("\\.tcsh\\'" . csh-mode))
-;;      (add-to-list 'auto-mode-alist '("\\.tcshrc\\'" . csh-mode)))
-
 (cl-defun muki:csh-add-keywords (face-name keyword-rules)
   (cl-letf* ((keyword-list (seq-map (lambda (x)
                                       (symbol-name (cdr x)))

@@ -111,15 +111,15 @@ Otherwise goto the end of minibuffer."
 
   (enable-option helm-bookmark-show-location)
 
-  (set-face-attribute  'helm-bookmark-directory nil
-                       :foreground "#97cfe0"
-                       :background "#4f4f37")
+  ;; (set-face-attribute  'helm-bookmark-directory nil
+  ;;                      :foreground "#97cfe0"
+  ;;                      :background "#4f4f37")
 
-  (set-face-attribute 'helm-source-header nil
-                      :background "#324262")
+  ;; (set-face-attribute 'helm-source-header nil
+  ;;                     :background "#324262")
 
-  (set-face-attribute 'helm-selection nil
-                      :background "#236765")
+  ;; (set-face-attribute 'helm-selection nil
+  ;;                     :background "#236765")
 
       ;;;; helm-grep
   (setq helm-grep-default-command "env LANG=C grep -a -d skip %e -n%cH -e %p %f")
