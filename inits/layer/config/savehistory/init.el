@@ -4,7 +4,15 @@
 
 ;;;; save minibuffer history
 (set-option savehist-additional-variables
-            '(kill-ring mark-ring global-mark-ring search-ring regexp-search-ring extended-command-history))
+            '(kill-ring
+              mark-ring
+              global-mark-ring
+              search-ring
+              regexp-search-ring
+              extended-command-history
+              helm-ff-history
+              helm-external-command-history
+              ))
 (savehist-mode 1)
 
 ;;; init.el ends here
