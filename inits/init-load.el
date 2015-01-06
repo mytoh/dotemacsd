@@ -252,7 +252,8 @@
     newsticker
     rcirc
     tramp
-    eieio))
+    eieio
+    savehist))
 
 ;;;;; packages
 (require 'init-paketti)
