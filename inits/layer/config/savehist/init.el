@@ -10,9 +10,10 @@
               search-ring
               regexp-search-ring
               extended-command-history
-              helm-ff-history
-              helm-external-command-history
               ))
+;; add helm history
+(seq-doseq (symbol (apropos-internal "\\`helm.*-history\\'" 'boundp))
+  (add-to-list 'savehist-additional-variables symbol))
 (savehist-mode 1)
 
 ;;; init.el ends here

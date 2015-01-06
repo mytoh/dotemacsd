@@ -19,10 +19,12 @@
 
 (cl-defun muki-layer:load-layers (category names)
   (declare (indent 1))
+  (setq debug-on-error t)
   (seq-each
    (lambda (n)
      (muki-layer:load category n))
    names)
+  (setq debug-on-error nil)
   t)
 
 (provide 'muki-layer)

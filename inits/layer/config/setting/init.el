@@ -59,7 +59,7 @@
 (set-option indent-line-function #'indent-relative-maybe)
 
 ;;;; mouse
-(set-option mouse-avoidance-mode #'banish)
+(set-option mouse-avoidance-mode #'proteus)
 
 ;;;; show info on mode-line
 (enable-option display-time-24hr-format
@@ -302,7 +302,7 @@
        (add-to-list 'Info-additional-directory-list dir))
      (seq-filter
       (lambda (dir) (and (file-directory-p dir)
-                    (file-exists-p dir)))
+                         (file-exists-p dir)))
       (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
@@ -410,6 +410,7 @@
   (setq indicate-empty-lines t))
 (add-hook 'prog-mode-hook #'muki:enable-indicate-empty-lines)
 
-
+;; Make M-z stop minimizing frames
+(defun iconify-or-deiconify-frame nil)
 
 ;;; config-setting.el ends here
