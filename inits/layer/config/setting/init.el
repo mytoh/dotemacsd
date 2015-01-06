@@ -254,10 +254,6 @@
 
 ;;;; recursive minibuffer
 (enable-option enable-recursive-minibuffers)
-;;;; save minibuffer history
-(set-option savehist-additional-variables
-            '(kill-ring mark-ring global-mark-ring search-ring regexp-search-ring extended-command-history))
-(savehist-mode 1)
 (set-option history-length 99999999999)
 
 ;;;; macro print level
@@ -306,7 +302,7 @@
        (add-to-list 'Info-additional-directory-list dir))
      (seq-filter
       (lambda (dir) (and (file-directory-p dir)
-                         (file-exists-p dir)))
+                    (file-exists-p dir)))
       (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
