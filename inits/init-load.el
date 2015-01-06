@@ -267,10 +267,12 @@
     shell
     cpp
     c
-    csh-mode))
+    ))
 
 ;;;;; elisp
 (require 'init-elisp)
+(muki-layer:load-layers 'elisp
+  '(csh-mode))
 
 
 ;;;;; el-get
