@@ -7,6 +7,8 @@
 (require 'csh-mode)
 (add-to-list 'auto-mode-alist '("\\.csh\\'" . csh-mode))
 (add-to-list 'auto-mode-alist '("\\.cshrc\\'" . csh-mode))
+(add-to-list 'auto-mode-alist '("\\.tcsh\\'" . csh-mode))
+(add-to-list 'auto-mode-alist '("\\.tcshrc\\'" . csh-mode))
 (dolist (elt interpreter-mode-alist)
   (when (member (car elt) (list "csh" "tcsh"))
     (setcdr elt 'csh-mode)))
@@ -19,8 +21,6 @@
 ;;              (setq csh-tab-always-indent t)
 ;;              (setq csh-match-and-tell t)
 ;;              (setq csh-align-to-keyword t)))
-;;      (add-to-list 'auto-mode-alist '("\\.tcsh\\'" . csh-mode))
-;;      (add-to-list 'auto-mode-alist '("\\.tcshrc\\'" . csh-mode)))
 
 
 ;;; init.el ends here
