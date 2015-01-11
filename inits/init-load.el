@@ -32,6 +32,7 @@
     org-autolist
     org
     org-pretty-table
+    orgit
     ))
 
 (muki-layer:load-layers 'vendle
@@ -127,7 +128,6 @@
     guide-key
     guide-key-tip
     clojure-mode
-    bqlist-lock
     lorem-ipsum
     emacs-color-themes
     sly
@@ -149,6 +149,11 @@
     smart-newline
     fill-column-indicator
     ipretty
+    vim-empty-lines-mode
+    csharp-mode
+    bytecomp-simplify
+    ;; highlight-backquotes-mode
+    ;; bqlist-lock
     ;; eshell-alias
     ;; aozora-view
     ;; yascroll
@@ -178,7 +183,6 @@
     ;; camcorder
     ;; init-chart
     ;; spray
-    ;; csharp-mode
     ;; golden-ratio
     ;; writing-utils
     ;; elnode
@@ -206,6 +210,7 @@
     evil-textobj-between
     evil-extra-operator
     evil-snipe
+    ;; evil-anzu
     evil
     ))
 
@@ -213,24 +218,24 @@
   '(eww
     ))
 
-(muki-layer:load-layers 'helm
-  '(helm
-    helm-vendle
-    helm-ypv
-    helm-alku
-    helm-project-buffer
-    helm-ag-r
-    helm-ag
-    helm-swoop
-    helm-commands
-    wgrep-helm
-    helm-css-scss
-    helm-bibtex
-    helm-dictionary
-    helm-emms-librefm
-    ;; helm-company
-    ;; helm-delicious
-    ))
+;; (muki-layer:load-layers 'helm
+;;   '(helm
+;;     helm-vendle
+;;     helm-ypv
+;;     helm-alku
+;;     helm-project-buffer
+;;     helm-ag-r
+;;     helm-ag
+;;     helm-swoop
+;;     helm-commands
+;;     wgrep-helm
+;;     helm-css-scss
+;;     helm-bibtex
+;;     helm-dictionary
+;;     helm-emms-librefm
+;;     ;; helm-company
+;;     ;; helm-delicious
+;;     ))
 
 
 ;;;;; config
@@ -253,7 +258,8 @@
     rcirc
     tramp
     eieio
-    savehist))
+    savehist
+    recentf))
 
 ;;;;; packages
 (require 'init-paketti)

@@ -1,6 +1,9 @@
 
 (require 'muki)
 
+(defalias 'class-slot-initarg
+    'eieio--class-slot-initarg)
+
 ;; helm
 (liby 'helm
   (require 'helm-config)
@@ -56,7 +59,7 @@ Otherwise goto the end of minibuffer."
               helm-buffers-favorite-modes (append helm-buffers-favorite-modes
                                                   '(picture-mode artist-mode))
               ;; helm-buffer-max-length 50x
-              helm-candidate-number-limit 200
+              helm-candidate-number-limit 100
               helm-raise-command                         "wmctrl -xa %s"
               )
 

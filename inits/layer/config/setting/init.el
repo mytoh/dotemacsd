@@ -179,19 +179,6 @@
 ;; (set-option auto-save-file-name-transforms
 ;;             `((".*" ,autosave-directory t)))
 
-;;;; recentf
-;; save more recent files
-(set-option recentf-max-saved-items nil)
-(defvar muki:recentf-exclude `(,(rx  "\\.el\\.gz\\'" string-end)
-                                "archive-contents\\'"
-                                "-autoloads\\.el\\'"))
-(set-option recentf-exclude muki:recentf-exclude)
-;; (set-option recentf-auto-cleanup 10)
-
-;;;;; exclude tramp files
-;; [[http://d.hatena.ne.jp/daimatz/20110529/1306602969]]
-(set-option recentf-exclude '("^/[^/:]+:"))
-
 ;;;; don't record symbolic link file name
 (enable-option find-file-visit-truename)
 
@@ -302,7 +289,7 @@
        (add-to-list 'Info-additional-directory-list dir))
      (seq-filter
       (lambda (dir) (and (file-directory-p dir)
-                         (file-exists-p dir)))
+                    (file-exists-p dir)))
       (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
@@ -403,14 +390,21 @@
 
 ;; [[https://www.reddit.com/r/emacs/comments/2r5xb4/vim_tilde_behavior/]]
 ;;use tilde's like Vim
-(define-fringe-bitmap 'tilde [0 0 0 113 219 142 0 0] nil nil 'center)
-(setcdr (assq 'empty-line fringe-indicator-alist) 'tilde)
-(set-fringe-bitmap-face 'tilde 'font-lock-comment-face)
-(cl-defun muki:enable-indicate-empty-lines ()
-  (setq indicate-empty-lines t))
-(add-hook 'prog-mode-hook #'muki:enable-indicate-empty-lines)
+;; (define-fringe-bitmap 'tilde [0 0 0 113 219 142 0 0] nil nil 'center)
+;; (setcdr (assq 'empty-line fringe-indicator-alist) 'tilde)
+;; (set-fringe-bitmap-face 'tilde 'font-lock-comment-face)
+;; (cl-defun muki:enable-indicate-empty-lines ()
+;;   (setq indicate-empty-lines t))
+;; (add-hook 'prog-mode-hook #'muki:enable-indicate-empty-lines)
 
 ;; Make M-z stop minimizing frames
 (defun iconify-or-deiconify-frame nil)
+
+;; [[http://writequit.org/org/settings.html]]
+;; Allow font-lock-mode to do background parsing
+;; (setq jit-lock-stealth-time 1
+;;       jit-lock-stealth-load 100
+;;       jit-lock-chunk-size 1000
+;;       jit-lock-defer-time 0.01)
 
 ;;; config-setting.el ends here

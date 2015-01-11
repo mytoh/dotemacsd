@@ -3,7 +3,6 @@
 ;;; Code:
 
 ;;;;  register packages
-
 ;;;;; helm
 (vendle:register "emacs-helm/helm"
                  '(:build ("gmake")
@@ -95,7 +94,7 @@
 (vendle:register "TeMPOraL/nyan-mode")
 (vendle:register "daimrod/highlight-sexp")
 (vendle:register "m2ym/undohist-el")
-(vendle:register "m2ym/emux-el")
+;; (vendle:register "m2ym/emux-el")
 (vendle:register "moriyamahiroshi/seijiseikana-el")
 (vendle:register "kenoss/debug-print")
 ;; (vendle:register "emacsmirror/mew")
@@ -148,6 +147,8 @@
                  '(:tag ("magit")
                    :deps (("magit/magit"
                            (:build ("gmake lisp docs") :info "." :tag "git")))))
+(vendle:register "YoungFrog/git-overview"
+                 '(:tag ("git" "org")))
 (vendle:register "company-mode/company-mode"
                  '(:tag "company"))
 (vendle:register "proofit404/company-edbi"
@@ -175,6 +176,15 @@
 (vendle:register "syohex/emacs-rebuildfm"
                  '(:tag "radio"))
 (vendle:register "syohex/emacs-anzu" '(:compile nil))
+(vendle:register "syohex/emacs-evil-anzu"
+                 '(:tag ("evil" "anzu")
+                   :deps (("syohex/emacs-anzu" (:compile nil))
+                          ( "git://gitorious.org/evil/evil.git"
+                           (:build ("gmake doc all")
+                                   :info "doc"
+                                   :deps ("emacsmirror/goto-chg"
+                                          "http://www.dr-qubit.org/git/undo-tree.git")
+                                   :tag "evil")))))
 (vendle:register "Fuco1/smartparens"
                  '(:compile nil :deps (("magnars/dash.el" ( :compile nil)))))
 (vendle:register "magnars/expand-region.el")
@@ -207,7 +217,7 @@
                  '(:tag "rss"))
 (vendle:register "remyhonig/elfeed-org"
                  '(:deps ("skeeto/elfeed")
-                   :tag "rss"))
+                   :tag ("org" "rss")))
 (vendle:register "zk-phi/spray")
 (vendle:register "nschum/highlight-parentheses.el")
 (vendle:register "dominikh/go-mode.el")
@@ -258,9 +268,9 @@
 ;;                  '(:build ("./configure" "gmake")
 ;;                    :load-path ("lisp" "contrib")))
 (vendle:register "dholm/tabbar")
-(vendle:register "aki2o/guide-key-tip"
-                 '(:deps ("kbkbkbkb1/guide-key"
-                          "emacsmirror/pos-tip")))
+;;(vendle:register "aki2o/guide-key-tip"
+;;                 '(:deps ("kbkbkbkb1/guide-key"
+;;                          "emacsmirror/pos-tip")))
 (vendle:register "clojure-emacs/clojure-mode")
 (vendle:register "Fanael/rainbow-delimiters")
 (vendle:register "zk-phi/highlight-stages")
@@ -319,6 +329,9 @@
 (vendle:register "mugijiru/cat-mode")
 (vendle:register "syl20bnr/vi-tilde-fringe"
                  '(:tag "vi"))
+(vendle:register "jmickelin/vim-empty-lines-mode"
+                 '(:tag "vim"
+                   :desc " Vim-like empty line indicator at end of files for Emacs. "))
 (vendle:register "Fanael/highlight-defined")
 (vendle:register "Bruce-Connor/conkeror-minor-mode")
 (vendle:register "larsmagne/movie.el"
@@ -396,7 +409,8 @@
                  '(:tag ("monad")))
 (vendle:register "kentaro/auto-save-buffers-enhanced")
 (vendle:register "josteink/csharp-mode"
-                 '(:tag ("C#")))
+                 '(:tag ("C#")
+                   :compile nil))
 (vendle:register "Bruce-Connor/camcorder.el"
                  '(:tag ("screencast")
                    :deps ("Bruce-Connor/names")))
@@ -541,6 +555,24 @@
                    :desc "An Emacs extension to integrate Fasd"))
 (vendle:register "steckerhalter/ipretty"
                  '(:desc "Interactive Emacs Lisp pretty-printing "))
+(vendle:register "tarao/bundle-el"
+                 '(:tag ("el-get" "package_manager")))
+(vendle:register "Bruce-Connor/fancy-narrow"
+                 '(:tag ("narrowing")))
+(vendle:register "DalekBaldwin/highlight-backquotes-mode"
+                 '(:tag ("highlight")))
+(vendle:register "vibhavp/emacs-xkcd"
+                 '(:tag ("xkcd" "comic")
+                   :desc "Implementation of an xkcd (http://xkcd.com/) reader for Emacs."))
+(vendle:register "emacsmirror/bytecomp-simplify"
+                 '(:tag ("bytecomp")
+                   :desc "byte compile warnings for simplifications"))
+(vendle:register "Lindydancer/lisp-extra-font-lock"
+                 '(:tag ("highlight")))
+(vendle:register "xuchunyang/youdao-dictionary.el"
+                 '(:tag ("chinese")
+                   :deps ("auto-complete/popup-el"
+                          "xuchunyang/chinese-word-at-point.el")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -747,11 +779,12 @@
 (vendle:register-theme "CQQL/xresources-theme")
 (vendle:register-theme "apnsngr/iceberg-emacs")
 (vendle:register-theme "4lex1v/sirthias-theme")
+(vendle:register-theme "sellout/emacs-color-theme-solarized")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
-              (vendle:register-local (expand-file-name path "~/huone/projektit")
-                                     option)))
+              (vendle:register (expand-file-name path "~/huone/projektit")
+                               option)))
   (add-project-root  "emacs-flatline")
   (add-project-root "helm-ypv" '(:tag "helm"))
   (add-project-root "company-scheme" '(:tag ("company" "scheme")))
@@ -759,13 +792,15 @@
   (add-project-root "emacs-lehtifile-mode")
   (add-project-root "helm-alku" '(:tag ("helm")))
   (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
-  (add-project-root "emacs-eshell-switch" '(:tag "eshell"))
+  ;; (add-project-root "emacs-eshell-switch" '(:tag "eshell"))
   (add-project-root "emacs-mesh" '(:tag "eshell"))
   (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
   (add-project-root "helm-project-buffer" '(:tag "helm"))
   (add-project-root "emacs-eshellar" '(:tag ( "eshell" "shellar" )))
   (add-project-root "emacs-vendle" '(:load-path nil
-                                     :tag ( "package" ))))
+                                     :tag ( "package" )))
+  (add-project-root "helm-features" '(:tag ( "emacs-lisp" )))
+  (add-project-root "helm-eww-bookmark" '(:tag ("helm" "eww" ))))
 
 ;;;;;; skk
 (vendle:register "skk-dev/ddskk"
@@ -773,7 +808,7 @@
                    :info "info"
                    :load-path ("." "experimental")))
 (vendle:fetch "skk-dev/skktools"
-              '(:build ("./configure" "gmake")))
+              '(:build ("./configure" "gmake clean" "gmake")))
 (vendle:fetch "tkita/SKK-JISYO"
               '(:tag ("skk" "skk-jisyo")))
 
@@ -785,7 +820,7 @@
 ;;   ((file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
 ;;    (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk")))
 
-(vendle:register-local "~/.stumpwm.d/modules/util/swm-emacs")
+(vendle:register "~/.stumpwm.d/modules/util/swm-emacs")
 
 ;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
@@ -889,6 +924,12 @@
               '(:tag ("vim")))
 (vendle:fetch "miripiruni/vimi"
               '(:tag ("vim")))
+(vendle:fetch "junegunn/vim-plug"
+              '(:tag ("vim")))
+(vendle:fetch "bling/vim-airline"
+              '(:tag ("vim" "statusline")))
+(vendle:fetch "itchyny/lightline.vim"
+              '(:tag("vim" "statusline")))
 (vendle:fetch "kovan/dopemacs")
 (vendle:fetch "AshleyMoni/dotfiles"
               '(:tag ( "evil" "dotfiles" )))
@@ -1059,14 +1100,14 @@
               '(:tug ("widget" "gui")))
 (vendle:fetch "vapniks/org-dotemacs"
               '(:tag ("org" "configuration")))
-(vendle:fetch "ellerh/xref")
+;; (vendle:fetch "ellerh/xref")
 (vendle:fetch "kelvinh/org-page"
               '(:tag ("org")))
 (vendle:fetch "abedra/emacs.d")
 (vendle:fetch "emacsmirror/xclip"
               '(:tag "clipboard"))
-(vendle:fetch "emacsmirror/uni-confusables"
-              '(:tag "unicode"))
+;;(vendle:fetch "emacsmirror/uni-confusables"
+;;              '(:tag "unicode"))
 (vendle:fetch "funcool/cats"
               '(:tag ("clojure" "monad")))
 (vendle:fetch "jonnay/emagicians-starter-kit"
@@ -1102,6 +1143,36 @@
               '(:tag ("beeminder" "org")))
 (vendle:fetch "skwp/dotfiles"
               '(:tag ("tmux" "vim" "zsh")))
+(vendle:fetch "https://gitorious.org/guix/guix.git"
+              '(:tag ("guix" "package_manager")
+                :site "http://www.gnu.org/software/guix/"
+                :desc "This is Guix! Purely functional package manager for GNU, and distribution of the GNU system."))
+(vendle:fetch "eschulte/org-scraps"
+              '(:tag ("org")))
+(vendle:fetch "yuratomo/w3m.vim"
+              '(:tag ("vim" "w3m")))
+(vendle:fetch "johanclaesson/picpocket"
+              '(:tag ("image_viewer")))
+(vendle:fetch "flexibeast/ewmctrl"
+              '(:tag ("wmctrl")))
+(vendle:fetch "abo-abo/org-fu"
+              '(:tag ("org")))
+(vendle:fetch "tumashu/chinese-fonts-setup"
+              '(tag ("chinese" "font")))
+(vendle:fetch "aoksh/weblauncher"
+              '(:tag ("web" "bookmark")))
+(vendle:fetch "git://git01.fort.kickass.systems/fsem.git"
+              '(:tag ("org")
+                :site "http://doc.rix.si/org/fsem.html"))
+(vendle:fetch "emacsmirror/windows"
+              '(:tag ("window_management")
+                :desc "Window manager for GNU Emacs."))
+(vendle:fetch "emacsmirror/mpg123"
+              '(:tag ("mpg123")))
+(vendle:fetch "thartman83/org-filer"
+              '(:tag ("org")))
+(vendle:fetch "chrisdone/elisp-guide"
+              '(:tag ("elisp" "programming")))
 
 ;;; init-vendle-registers.el ends here
 ;;

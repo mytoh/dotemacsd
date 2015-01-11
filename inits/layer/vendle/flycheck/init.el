@@ -1,6 +1,7 @@
 ;;; init-flycheck.el -*- lexical-binding: t; -*-
 
-(req 'flycheck
+(liby 'flycheck
+  (auto (flycheck-mode global-flycheck-mode) "flycheck")
   ;; (add-hook 'after-init-hook #'global-flycheck-mode)
   (add-hook 'emacs-lisp-mode-hook 'flycheck-mode)
   (set-option flycheck-check-syntax-automatically '(save new-line))
