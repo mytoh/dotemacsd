@@ -152,6 +152,8 @@
     vim-empty-lines-mode
     csharp-mode
     bytecomp-simplify
+    bijin-tokei
+    seethru
     ;; highlight-backquotes-mode
     ;; bqlist-lock
     ;; eshell-alias
@@ -218,24 +220,26 @@
   '(eww
     ))
 
-;; (muki-layer:load-layers 'helm
-;;   '(helm
-;;     helm-vendle
-;;     helm-ypv
-;;     helm-alku
-;;     helm-project-buffer
-;;     helm-ag-r
-;;     helm-ag
-;;     helm-swoop
-;;     helm-commands
-;;     wgrep-helm
-;;     helm-css-scss
-;;     helm-bibtex
-;;     helm-dictionary
-;;     helm-emms-librefm
-;;     ;; helm-company
-;;     ;; helm-delicious
-;;     ))
+(muki-layer:load-layers 'helm
+  '(helm
+    helm-vendle
+    helm-ypv
+    helm-alku
+    helm-project-buffer
+    helm-ag-r
+    helm-ag
+    helm-swoop
+    helm-commands
+    wgrep-helm
+    helm-css-scss
+    helm-bibtex
+    helm-dictionary
+    helm-emms-librefm
+    helm-features
+    helm-eww-bookmark
+    ;; helm-company
+    ;; helm-delicious
+    ))
 
 
 ;;;;; config

@@ -573,6 +573,16 @@
                  '(:tag ("chinese")
                    :deps ("auto-complete/popup-el"
                           "xuchunyang/chinese-word-at-point.el")))
+(vendle:register "xuchunyang/google-translate-chinese.el"
+                 '(:tag ("chinese" "translation")
+                   :desp ("auto-complete/popup-el"
+                          "xuchunyang/chinese-word-at-point.el")))
+(vendle:register "rolandwalker/unicode-fonts"
+                 '(:tag ("font" "unicode")))
+(vendle:register "sanryuu/emacs-bijin-tokei")
+(vendle:register "Benaiah/seethru"
+                 '(:tag ("appearance" "transparency")
+                   :desc "seethru.el - easily change Emacs transparency "))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -702,6 +712,8 @@
 (vendle:register "woudshoo/html-2-org"
                  '(:tag ("org" "html")
                    :desc "Attempts to undo the html export of org"))
+(vendle:register "abo-abo/org-download"
+                 '(:tag ("org")))
 ;; (vendle:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ("org" "bongo" "music")
 ;;                    :deps ("dbrock/bongo")
@@ -780,6 +792,9 @@
 (vendle:register-theme "apnsngr/iceberg-emacs")
 (vendle:register-theme "4lex1v/sirthias-theme")
 (vendle:register-theme "sellout/emacs-color-theme-solarized")
+(vendle:register-theme "Trevoke/color-theme-mejelly-light")
+(vendle:register-theme "aurelienbottazini/tronesque"
+                       '(:load-path "themes"))
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1161,9 +1176,10 @@
               '(tag ("chinese" "font")))
 (vendle:fetch "aoksh/weblauncher"
               '(:tag ("web" "bookmark")))
-(vendle:fetch "git://git01.fort.kickass.systems/fsem.git"
-              '(:tag ("org")
-                :site "http://doc.rix.si/org/fsem.html"))
+;;; repository not working
+;; (vendle:fetch "git://git01.fort.kickass.systems/fsem.git"
+;;               '(:tag ("org")
+;;                 :site "http://doc.rix.si/org/fsem.html"))
 (vendle:fetch "emacsmirror/windows"
               '(:tag ("window_management")
                 :desc "Window manager for GNU Emacs."))
@@ -1173,6 +1189,12 @@
               '(:tag ("org")))
 (vendle:fetch "chrisdone/elisp-guide"
               '(:tag ("elisp" "programming")))
+(vendle:fetch "baohaojun/system-config"
+              '(:tag ("chinese" "font")))
+(vendle:fetch "emacsmirror/swbuff-x"
+              '(:tag ("buffer")))
+(vendle:fetch "alezost/emacs-utils"
+              '(:tag ("utility")))
 
 ;;; init-vendle-registers.el ends here
 ;;

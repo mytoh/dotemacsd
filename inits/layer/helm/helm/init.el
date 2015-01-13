@@ -1,8 +1,9 @@
 
 (require 'muki)
 
-(defalias 'class-slot-initarg
-    'eieio--class-slot-initarg)
+;; (unless (fboundp 'class-slot-initarg)
+;;   (defun class-slot-initarg (class-name slot)
+;;     (eieio--class-slot-initarg (eieio--class-v class-name) slot)))
 
 ;; helm
 (liby 'helm
@@ -170,6 +171,9 @@ Otherwise goto the end of minibuffer."
   (muki:define-launcher-key "r" 'helm-git-grep))
 
 (liby 'helm-mode-manager
-  (auto (helm-modo-manager) "helm-mode-manager"))
+  (auto (helm-switch-major-mode
+         helm-enable-minor-mode
+         helm-disable-minor-mode)
+        "helm-mode-manager"))
 
 ;;; init-helm.el ends here
