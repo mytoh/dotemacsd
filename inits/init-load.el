@@ -237,6 +237,7 @@
     helm-emms-librefm
     helm-features
     helm-eww-bookmark
+    helm-mode-manager
     ;; helm-company
     ;; helm-delicious
     ))

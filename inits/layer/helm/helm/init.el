@@ -170,10 +170,5 @@ Otherwise goto the end of minibuffer."
   (auto (helm-git-grep) "helm-git-grep")
   (muki:define-launcher-key "r" 'helm-git-grep))
 
-(liby 'helm-mode-manager
-  (auto (helm-switch-major-mode
-         helm-enable-minor-mode
-         helm-disable-minor-mode)
-        "helm-mode-manager"))
 
 ;;; init-helm.el ends here
