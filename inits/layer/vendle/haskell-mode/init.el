@@ -3,11 +3,11 @@
   (req 'haskell-cabal)
   ;; (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
   (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-  (add-to-list 'Info-default-directory-list
-               (muki:user-emacs-directory (file-name-as-directory "vendle/haskell-mode")))
+  (cl-pushnew (muki:user-emacs-directory (file-name-as-directory "vendle/haskell-mode"))
+              Info-default-directory-list)
 
   (setenv "PATH" (concat "~/.cabal/bin:" (getenv "PATH")))
-  (add-to-list 'exec-path "~/.cabal/bin")
+  (cl-pushnew "~/.cabal/bin" exec-path)
   (when (executable-find "hasktags")
     (enable-option haskell-tags-on-save)
     (add-hook 'haskell-mode-hook

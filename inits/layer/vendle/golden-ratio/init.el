@@ -5,9 +5,9 @@
 ;;;;; golden-ratio
 (req 'golden-ratio
   (enable-mode golden-ratio-mode)
-  (add-to-list 'golden-ratio-exclude-modes 'eshell-mode)
-  (add-to-list 'golden-ratio-exclude-modes 'magit-status-mode)
-  (add-to-list 'golden-ratio-exclude-modes 'magit-log-mode)
-  (add-to-list 'golden-ratio-exclude-modes 'magit-mode))
+  (cl-pushnew 'eshell-mode golden-ratio-exclude-modes)
+  (cl-pushnew 'magit-status-mode golden-ratio-exclude-modes)
+  (cl-pushnew 'magit-log-mode golden-ratio-exclude-modes)
+  (cl-pushnew 'magit-mode golden-ratio-exclude-modes))
 
 ;;; init.el ends here

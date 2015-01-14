@@ -5,8 +5,8 @@
 ;;;;; fish-mode
 (liby 'fish-mode
   (auto (fish-mode) "fish-mode")
-  (add-to-list 'auto-mode-alist '("\\.fish\\'" . fish-mode))
-  (add-to-list 'interpreter-mode-alist '("fish" . fish-mode)))
+  (cl-pushnew '("\\.fish\\'" . fish-mode) auto-mode-alist)
+  (cl-pushnew '("fish" . fish-mode) interpreter-mode-alist))
 
 
 ;;; init.el ends here

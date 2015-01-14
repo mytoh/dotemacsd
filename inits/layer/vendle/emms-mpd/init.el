@@ -34,7 +34,7 @@
 
     ;; To get track info from MusicPD, do the following.
     ;;
-    (add-to-list 'emms-info-functions 'emms-info-mpd)
+    (cl-pushnew 'emms-info-mpd emms-info-functions)
 
     ;; To change the volume using MusicPD, do the following.
     ;;
@@ -42,7 +42,7 @@
 
     ;; Add 'emms-player-mpd to the top of `emms-player-list'.
 
-    (add-to-list 'emms-player-list 'emms-player-mpd)
+    (cl-pushnew 'emms-player-mpd emms-player-list)
 
     (enable-option emms-player-mpd-sync-playlist)
 

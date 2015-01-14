@@ -4,7 +4,7 @@
 
 (liby 'yaml-mode
   (auto (yaml-mode) "yaml-mode")
-  (add-to-list 'auto-mode-alist '("\\.ya?ml$" . #'yaml-mode)))
+  (mode "\\.ya?ml$"  #'yaml-mode))
 
 
 ;;; init.el ends here

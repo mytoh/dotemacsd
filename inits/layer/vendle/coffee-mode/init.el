@@ -9,7 +9,7 @@
   (mode "\\.iced\\'"  #'coffee-mode)
   (mode "Cakefile\\'"  #'coffee-mode)
   (mode "\\.cson\\'" #'coffee-mode)
-  (add-to-list 'interpreter-mode-alist '("coffee" . coffee-mode)))
+  (cl-pushnew  '("coffee" . coffee-mode) interpreter-mode-alist))
 
 
 ;;; init.el ends here

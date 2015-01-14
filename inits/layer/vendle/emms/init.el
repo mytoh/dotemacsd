@@ -49,14 +49,14 @@
     (define-emms-simple-player mikmod '(file)
       regexp-file-music-mikmod
       "mikmod" "-q" "-p" "1" "-X")
-    (add-to-list 'emms-player-list 'emms-player-mikmod)
+    (cl-pushnew 'emms-player-mikmod emms-player-list)
 
     ;; sox
     (define-emms-simple-player sox
         '(file)
       regexp-file-music-general
       "play" "--volume" "0.5" "--no-show-progress")
-    (add-to-list 'emms-player-list 'emms-player-sox)
+    (cl-pushnew 'emms-player-sox emms-player-list)
 
     ;; mplayer2
     (define-emms-simple-player mplayer2 '(file url)
@@ -64,19 +64,19 @@
                       "\\`\\(http\\|mms\\)://\\|"
                       regexp-file-video)
       "mplayer" "--slave" "--really-quiet")
-    (add-to-list 'emms-player-list 'emms-player-mplayer2)
+    (cl-pushnew 'emms-player-mplayer2 emms-player-list)
 
     (define-emms-simple-player mplayer2-playlist '(streamlist)
       "\\`http://\\|"
       "mplayer" "--slave"  "--really-quiet" "--playlist")
-    (add-to-list 'emms-player-list 'emms-player-mplayer2-playlist)
+    (cl-pushnew 'emms-player-mplayer2-playlist emms-player-list)
 
     ;; mpv
     (define-emms-simple-player mpv
         '(file)
       regexp-file-video
       "mpv" "--framedrop=yes" "--softvol=auto" "--really-quiet")
-    (add-to-list 'emms-player-list 'emms-player-mpv)
+    (cl-pushnew 'emms-player-mpv emms-player-list)
 
     ;; (define-emms-simple-player mpv-playlist-file '(file)
     ;;   (emms-player-simple-regexp
@@ -114,10 +114,10 @@ controls, run `mixer' in a shell."
       (setq emms-info-functions '(emms-info-libtag))))
   (when (executable-find "mediainfo")
     (req 'emms-info-mediainfo
-      (add-to-list 'emms-info-functions 'emms-info-mediainfo)))
+      (cl-pushnew 'emms-info-mediainfo emms-info-functions)))
   (when (executable-find "metaflac")
     (req 'emms-info-metaflac
-      (add-to-list 'emms-info-functions 'emms-info-metaflac)))
+      (cl-pushnew 'emms-info-metaflac emms-info-functions)))
 
    ;;;; keymap
   (define-prefix-command 'muki:emms-map)
