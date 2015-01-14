@@ -154,6 +154,7 @@
     bytecomp-simplify
     bijin-tokei
     seethru
+    elisp-slime-expand
     ;; highlight-backquotes-mode
     ;; bqlist-lock
     ;; eshell-alias

@@ -583,6 +583,8 @@
 (vendle:register "Benaiah/seethru"
                  '(:tag ("appearance" "transparency")
                    :desc "seethru.el - easily change Emacs transparency "))
+(vendle:register "russell/elisp-slime-expand"
+                 '(:tag ("emacs_lisp" "macro")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
