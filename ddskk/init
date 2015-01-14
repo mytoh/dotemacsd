@@ -71,8 +71,7 @@
                                  (cdr d))
                          (expand-file-name d dict-directory))))
          (when (file-exists-p (if (listp elem) (car elem) elem))
-           (add-to-list 'skk-extra-jisyo-file-list
-                        elem))))
+           (cl-pushnew elem skk-extra-jisyo-file-list))))
      dicts)))
 
 (muki:add-skk-jisyo
