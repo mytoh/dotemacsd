@@ -3,6 +3,6 @@
 ;;; Code:
 
 (req 'js3-mode
-  (mode "\\.js\\'"  js3-mode))
+  (mode "\\.js\\'"  #'js3-mode))
 
 ;;; init.el ends here
