@@ -3,8 +3,8 @@
 ;;; faces
 ;;;; colour-theme
 (cl-defun muki:load-theme ()
-  (add-to-list 'custom-theme-load-path
-               (muki:user-emacs-directory "inits/themes"))
+  (cl-pushnew (muki:user-emacs-directory "inits/themes")
+              custom-theme-load-path)
   (cond ((window-system)
          ;; make the fringe stand out from the background
          (enable-option solarized-distinct-fringe-background)
@@ -17,11 +17,11 @@
          (setq solarized-termcolors 256)
          (defvar monokai-add-font-lock-keywords t)
          (load-theme muki:term-theme 'no-confirm))))
-(add-to-list 'after-init-hook 'muki:load-theme)
+(cl-pushnew 'muki:load-theme after-init-hook)
 ;;(add-to-list 'before-make-frame-hook 'muki:load-theme)
 
 ;;;; cursor shape
-(add-to-list 'default-frame-alist '(cursor-type . box))
+(cl-pushnew '(cursor-type . box) default-frame-alist)
 (set-cursor-color (muki:colour-hsl-to-hex 127 55 39))
 
 ;;;; terminal colors

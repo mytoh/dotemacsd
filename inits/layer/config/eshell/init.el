@@ -9,8 +9,8 @@
 (require 'esh-util)
 
 ;;; modules
-(add-to-list 'eshell-modules-list 'eshell-rebind)
-(add-to-list 'eshell-modules-list 'eshell-xtra)
+(cl-pushnew 'eshell-rebind eshell-modules-list)
+(cl-pushnew 'eshell-xtra eshell-modules-list)
 
 ;;; prefer lisp function
 (enable-option eshell-prefer-lisp-functions)

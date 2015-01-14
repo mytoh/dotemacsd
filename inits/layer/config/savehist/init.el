@@ -13,7 +13,7 @@
               ))
 ;; add helm history
 (seq-doseq (symbol (apropos-internal "\\`helm.*-history\\'" 'boundp))
-  (add-to-list 'savehist-additional-variables symbol))
+  (cl-pushnew symbol savehist-additional-variables))
 (savehist-mode 1)
 
 ;;; init.el ends here

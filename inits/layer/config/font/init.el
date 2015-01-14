@@ -97,7 +97,7 @@
       (set 'han k10)
       (set 'symbol symbola))
 
-    (add-to-list 'default-frame-alist `(font . ,fontset))
+    (cl-pushnew `(font . ,fontset) default-frame-alist)
     ))
 
 
@@ -124,7 +124,7 @@
       (set 'han k10)
       (set 'symbol symbola))
 
-    (add-to-list 'default-frame-alist `(font . ,fontset))
+    (cl-pushnew `(font . ,fontset) default-frame-alist)
     ))
 
 (cl-defun muki:set-font (type)

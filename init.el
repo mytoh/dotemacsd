@@ -1,9 +1,13 @@
 ;;; -*- coding: utf-8 -*-
 
+(eval-when-compile
+  (require 'cl-lib))
+
 ;;;; gc
 (setq gc-cons-threshold (* 1024 1024 1024))
 
-(add-to-list 'load-path (concat user-emacs-directory "inits"))
+(cl-pushnew (concat user-emacs-directory "inits")
+            load-path)
 (require 'init-load)
 (put 'downcase-region 'disabled nil)
 

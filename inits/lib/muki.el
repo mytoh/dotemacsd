@@ -55,8 +55,9 @@
 
 (cl-defun muki:add-to-load-path (path)
   (and (file-exists-p path)
-       (add-to-list 'load-path (expand-file-name
-                                (file-name-as-directory path)))))
+       (cl-pushnew (expand-file-name
+                    (file-name-as-directory path))
+                   load-path)))
 
 (cl-defmacro muki:expand-file-names (&rest names)
   (cl-labels ((rec (l ns)
@@ -105,7 +106,7 @@ emacs load path"
       (and (file-directory-p name)
            (not (equal f ".."))
            (not (equal f "."))
-           (add-to-list 'load-path name)))))
+           (cl-pushnew name load-path)))))
 
 ;; kill other buffers
 (cl-defun kill-other-buffers ()

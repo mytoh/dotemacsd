@@ -286,10 +286,10 @@
 (after 'info
     (seq-each
      (lambda (dir)
-       (add-to-list 'Info-additional-directory-list dir))
+       (cl-pushnew dir Info-additional-directory-list))
      (seq-filter
       (lambda (dir) (and (file-directory-p dir)
-                         (file-exists-p dir)))
+                    (file-exists-p dir)))
       (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
