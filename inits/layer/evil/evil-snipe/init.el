@@ -4,6 +4,15 @@
 
 (cl-defun muki:init-evil-snipe ()
   (req 'evil-snipe
-    (global-evil-snipe-mode)))
+
+    (enable-mode global-evil-snipe-mode)
+
+    ;; Optional!
+    (evil-snipe-replace-evil) ;; replaces evil-mode's f/F/t/T/;/, with snipe
+    ;; (evil-snipe-enable-nN)    ;; enable repeating with n/N (not implemented)
+
+    ;; not necessary if using (evil-snipe-replace-evil)
+    (evil-snipe-enable-sS)    ;; enable repeating with s/S
+    ))
 
 ;;; snipe.el ends here

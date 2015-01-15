@@ -7,8 +7,7 @@
   (rich-minority-mode 1)
   (cl-pushnew " mesh"  rm-blacklist)
   (cl-pushnew '("Golden" 'face 'font-lock-variable-face)
-              rm-text-properties)
-  )
+              rm-text-properties))
 
 
 ;;; init.el ends here

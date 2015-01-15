@@ -585,6 +585,11 @@
                    :desc "seethru.el - easily change Emacs transparency "))
 (vendle:register "russell/elisp-slime-expand"
                  '(:tag ("emacs_lisp" "macro")))
+(vendle:register "tam17aki/summarye")
+(vendle:register "emacsmirror/top-mode"
+                 '(:tag ("top")))
+(vendle:register "dbrock/bongo"
+                 '(:tag ("music" "bongo")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -1178,7 +1183,7 @@
               '(tag ("chinese" "font")))
 (vendle:fetch "aoksh/weblauncher"
               '(:tag ("web" "bookmark")))
-;;; repository not working
+;; repository not working
 ;; (vendle:fetch "git://git01.fort.kickass.systems/fsem.git"
 ;;               '(:tag ("org")
 ;;                 :site "http://doc.rix.si/org/fsem.html"))
@@ -1197,6 +1202,8 @@
               '(:tag ("buffer")))
 (vendle:fetch "alezost/emacs-utils"
               '(:tag ("utility")))
+(vendle:fetch "defaultxr/tracker.el"
+              '(:tag ("osc" "music" "tracker")))
 
 ;;; init-vendle-registers.el ends here
 ;;

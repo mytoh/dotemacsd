@@ -155,6 +155,7 @@
     bijin-tokei
     seethru
     elisp-slime-expand
+    top-mode
     ;; highlight-backquotes-mode
     ;; bqlist-lock
     ;; eshell-alias
