@@ -156,6 +156,7 @@
     seethru
     elisp-slime-expand
     top-mode
+    eww-hatebu
     ;; highlight-backquotes-mode
     ;; bqlist-lock
     ;; eshell-alias

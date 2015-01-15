@@ -590,6 +590,9 @@
                  '(:tag ("top")))
 (vendle:register "dbrock/bongo"
                  '(:tag ("music" "bongo")))
+(vendle:register "syohex/emacs-eww-hatebu"
+                 '(:tag ("eww" "hatena_bookmark")
+                   :desc "Hatena bookmark count in mode-line"))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
