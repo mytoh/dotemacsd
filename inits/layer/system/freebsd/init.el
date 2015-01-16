@@ -10,7 +10,7 @@
              ;; sakito.jp/emacs/emacsshell.html
              (when (and (file-directory-p dir) (not (member dir exec-path)))
                (setenv "PATH" (concat dir ":" (getenv "PATH")))
-               (add-to-list 'exec-path dir)))))
+               (cl-pushnew dir 'exec-path)))))
         (t
          (cl-letf ((my-paths (seq-map #'expand-file-name '(  "~/huone/bin" "~/.config/lehti/bin"
                                                            "~/.config/loitsu/bin"))))

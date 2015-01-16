@@ -5,10 +5,10 @@
 ;; [[http://www.opensource.apple.com/source/tcsh/tcsh-27.1/tcsh/csh-mode.el][csh-mode]]
 ;; [[http://www.reddit.com/r/emacs/comments/2rem6w/configuring_shellscript_mode_for_tcsh/?utm_source=dlvr.it&utm_medium=twitter][reddit]]
 (require 'csh-mode)
-(add-to-list 'auto-mode-alist '("\\.csh\\'" . csh-mode))
-(add-to-list 'auto-mode-alist '("\\.cshrc\\'" . csh-mode))
-(add-to-list 'auto-mode-alist '("\\.tcsh\\'" . csh-mode))
-(add-to-list 'auto-mode-alist '("\\.tcshrc\\'" . csh-mode))
+(mode "\\.csh\\'"  #'csh-mode)
+(mode "\\.cshrc\\'"  #'csh-mode)
+(mode "\\.tcsh\\'"  #'csh-mode)
+(mode "\\.tcshrc\\'"  #'csh-mode)
 (dolist (elt interpreter-mode-alist)
   (when (member (car elt) (list "csh" "tcsh"))
     (setcdr elt 'csh-mode)))

@@ -14,6 +14,6 @@
 (req 'ninja-mode)
 
 (req 'eshell-script
-  (add-to-list 'auto-mode-alist '("\\.esh\\'" . eshell-script-mode)))
+  (mode "\\.esh\\'"  #'eshell-script-mode))
 
 (provide 'init-elisp)

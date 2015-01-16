@@ -7,7 +7,7 @@
       (when (and (file-directory-p dir) (not (member dir exec-path)))
         (setenv "PATH" (concat dir ":" (getenv "PATH")))
         (seq-doseq (p dir)
-          (add-to-list 'exec-path p)))))
+          (cl-pushnew p 'exec-path)))))
   (define-key global-map (kbd "<s-return>") 'darwin-toggle-fullscreen)
   ;; command to meta
   (setq mac-command-modifier 'meta)

@@ -596,6 +596,8 @@
 (vendle:register "nlamirault/dionysos"
                  '(:tag ("music")
                    :desc "A music player for Emacs "))
+(vendle:register "thisirs/vc-check-status"
+                 '(:tag ("vcs" "git")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"

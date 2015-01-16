@@ -19,7 +19,9 @@
   ;; (muki:init-evil-easymotion)
   (muki:init-evil-textobj-between)
   (muki:init-evil-extra-operator)
-  (muki:init-evil-snipe))
+  (muki:init-evil-snipe)
+  ;; (muki:init-evil-visual-mark-mode)
+  )
 
 (cl-defun muki:init-evil-mode-generals ()
   (set-option evil-toggle-key "C-`")
