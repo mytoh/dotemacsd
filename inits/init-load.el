@@ -33,6 +33,7 @@
     org
     org-pretty-table
     orgit
+    org-download
     ))
 
 (muki-layer:load-layers 'vendle
@@ -215,6 +216,7 @@
     evil-textobj-between
     evil-extra-operator
     evil-snipe
+    evil-visual-mark-mode
     ;; evil-anzu
     evil
     ))
