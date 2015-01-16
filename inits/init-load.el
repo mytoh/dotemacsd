@@ -158,6 +158,7 @@
     elisp-slime-expand
     top-mode
     eww-hatebu
+    vc-check-status
     ;; highlight-backquotes-mode
     ;; bqlist-lock
     ;; eshell-alias
