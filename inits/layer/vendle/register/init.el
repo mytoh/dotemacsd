@@ -593,6 +593,9 @@
 (vendle:register "syohex/emacs-eww-hatebu"
                  '(:tag ("eww" "hatena_bookmark")
                    :desc "Hatena bookmark count in mode-line"))
+(vendle:register "nlamirault/dionysos"
+                 '(:tag ("music")
+                   :desc "A music player for Emacs "))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -677,7 +680,8 @@
                  '(:tag "evil"))
 (vendle:register "syl20bnr/evil-tutor"
                  '(:tag ("evil" "tutorial")))
-
+(vendle:register "roman/evil-visual-mark-mode"
+                 '(:tag ("evil")))
 
 ;;;;; org
 (vendle:register "git://orgmode.org/org-mode.git"
@@ -723,7 +727,8 @@
                  '(:tag ("org" "html")
                    :desc "Attempts to undo the html export of org"))
 (vendle:register "abo-abo/org-download"
-                 '(:tag ("org")))
+                 '(:tag ("org")
+                   :deps ("jwiegley/emacs-async")))
 ;; (vendle:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ("org" "bongo" "music")
 ;;                    :deps ("dbrock/bongo")
