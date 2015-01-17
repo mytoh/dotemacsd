@@ -34,6 +34,7 @@
     org-pretty-table
     orgit
     org-download
+    outline-magic
     ))
 
 (muki-layer:load-layers 'vendle
@@ -140,7 +141,6 @@
     markdown-mode
     charmap
     pt
-    switch-window
     highlight-sexp
     undohist
     image-archive
@@ -159,9 +159,11 @@
     top-mode
     eww-hatebu
     vc-check-status
+    gitignore
     ;; highlight-backquotes-mode
     ;; bqlist-lock
     ;; eshell-alias
+    ;; switch-window
     ;; aozora-view
     ;; yascroll
     ;; nyan-mode
@@ -244,6 +246,8 @@
     helm-features
     helm-eww-bookmark
     helm-mode-manager
+    helm-pages
+    helm-xmms2
     ;; helm-company
     ;; helm-delicious
     ))

@@ -85,12 +85,20 @@
                            (:build ("gmake")
                                    :deps ("jwiegley/emacs-async")
                                    :tag "helm")))))
+(vendle:register "yuutayamada/helm-shell-history"
+                 '(:tag ("helm" "term")))
+(vendle:register "david-christiansen/helm-pages"
+                 '(:tag ("helm")))
+(vendle:register "vanicat/helm-xmms2"
+                 '(:tag ("helm" "xmms2")))
 
 ;;;;;  general packages
 (vendle:register "magnars/s.el")
 (vendle:register "jonathanchu/emacs-powerline")
 (vendle:register "raugturi/powerline-evil"
                  '(:tag ("evil" "modeline")))
+(vendle:register "milkypostman/powerline"
+                 '(:tag ("modeline")))
 (vendle:register "TeMPOraL/nyan-mode")
 (vendle:register "daimrod/highlight-sexp")
 (vendle:register "m2ym/undohist-el")
@@ -598,6 +606,8 @@
                    :desc "A music player for Emacs "))
 (vendle:register "thisirs/vc-check-status"
                  '(:tag ("vcs" "git")))
+(vendle:register "syohex/emacs-gitignore"
+                 '(:tag ("git" "gitignore")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -1224,6 +1234,9 @@
               '(:tag ("configuration" "quelpa")))
 (vendle:fetch "DamienCassou/unify-opening"
               '(:desc "Emacs package to make everything use the same mechanism to open files"))
+(vendle:fetch "steckerhalter/steckemacs"
+              '(:tag ("org" "org-babel")))
+(vendle:fetch "atykhonov/dtc.el")
 
 ;;; init-vendle-registers.el ends here
 ;;
