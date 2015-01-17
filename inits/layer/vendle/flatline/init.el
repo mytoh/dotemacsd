@@ -71,13 +71,20 @@
 
   (flatline:set-theme 'solarized-dark)
 
+  (cl-defun test-active-p ()
+    (if (flatline:active-p)
+        "active"
+      "inactive"))
+
   (setq flatline:mode-line '())
+  (flatline:add 'test-active-p)
   (flatline:add 'flatline:evil-tag)
   (flatline:add 'muki:flatline:major-mode)
   (flatline:add 'muki:flatline:buffer-name)
   (flatline:add '(muki:flatline:vc-mode . flatline:face-vc-mode))
   (flatline:add '(flatline:buffer-directory . middle))
-  (flatline:add '(fill . middle))
+  ;; (flatline:add '(fill . middle))
+  (flatline:add 'fill)
   (flatline:add '(flatline:eol-desc . middle))
   (flatline:add '("<" . middle))
   (flatline:add '(muki:flatline:coding-system . middle))
