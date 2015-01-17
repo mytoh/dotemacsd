@@ -3,14 +3,15 @@
 ;;; Code:
 
 (liby 'outline-magic
+  (auto (outline-cycle) "outline-magic")
+
   (add-hook 'outline-mode-hook
             (lambda ()
-              (require 'outline-cycle)))
-
+              (define-key outline-minor-mode-map [(f10)] #'outline-cycle)))
   (add-hook 'outline-minor-mode-hook
             (lambda ()
-              (require 'outline-magic)
-              (define-key outline-minor-mode-map [(f10)] 'outline-cycle))))
+              (define-key outline-minor-mode-map [(f10)] #'outline-cycle))))
 
+(req 'outline-magic)
 
 ;;; init.el ends here
