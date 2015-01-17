@@ -697,6 +697,8 @@
                                    :tag ("org" "outline")))
 (vendle:register "tj64/outorg" '(:compile nil
                                  :tag ("org" "outline")))
+(vendle:register "tj64/outline-magic"
+                 '(:tag ("org" "outline")))
 (vendle:register "omouse/org-doing"
                  '(:tag "org"))
 (vendle:register "Fuco1/org-pretty-table"
