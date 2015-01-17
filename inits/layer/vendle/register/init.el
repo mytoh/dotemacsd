@@ -731,6 +731,10 @@
 (vendle:register "abo-abo/org-download"
                  '(:tag ("org")
                    :deps ("jwiegley/emacs-async")))
+(vendle:register "brettviren/org-pub"
+                 '(:tag ("org" "web" "html")))
+(vendle:register "tj64/org-dp"
+                 '(:tag ("org")))
 ;; (vendle:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ("org" "bongo" "music")
 ;;                    :deps ("dbrock/bongo")
@@ -1214,6 +1218,10 @@
               '(:tag ("utility")))
 (vendle:fetch "defaultxr/tracker.el"
               '(:tag ("osc" "music" "tracker")))
+(vendle:fetch "steckerhalter/steckemacs.el"
+              '(:tag ("configuration" "quelpa")))
+(vendle:fetch "DamienCassou/unify-opening"
+              '(:desc "Emacs package to make everything use the same mechanism to open files"))
 
 ;;; init-vendle-registers.el ends here
 ;;
