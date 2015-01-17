@@ -140,20 +140,19 @@
 (cl-defun muki:org-insert-book-drawer ()
   (interactive)
   (insert "\n")
-  (seq-each (lambda (s) (insert s)
-               (insert "\n"))
-            '("   :properties:"
-              "   :title: "
-              "   :btype: book"
-              "   :author: "
-              "   :journal: "
-              "   :isbn: "
-              "   :publisher: "
-              "   :year: "
-              "   :month: "
-              "   :volume: "
-              "   :url: "
-              "   :end:")))
+  ;; http://emacs.stackexchange.com/questions/2869/turn-a-list-or-data-structure-into-an-org-document/
+  (insert (org-element-interpret-data
+           '((property-drawer nil
+              ((node-property (:key "title" :value ""))
+               (node-property (:key "btype" :value "book"))
+               (node-property (:key "author" :value ""))
+               (node-property (:key "journal" :value ""))
+               (node-property (:key "isbn" :value ""))
+               (node-property (:key "publisher" :value ""))
+               (node-property (:key "year" :value ""))
+               (node-property (:key "month" :value ""))
+               (node-property (:key "volume" :value ""))
+               (node-property (:key "url" :value ""))))))))
 
 (add-hook 'org-mode-hook
           (lambda ()
