@@ -160,6 +160,7 @@
     eww-hatebu
     vc-check-status
     gitignore
+    region-bindings-mode
     ;; highlight-backquotes-mode
     ;; bqlist-lock
     ;; eshell-alias
@@ -220,7 +221,7 @@
     evil-extra-operator
     evil-snipe
     evil-visual-mark-mode
-    ;; evil-anzu
+    evil-anzu
     evil
     ))
 
