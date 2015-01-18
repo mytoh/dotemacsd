@@ -608,6 +608,8 @@
                  '(:tag ("vcs" "git")))
 (vendle:register "syohex/emacs-gitignore"
                  '(:tag ("git" "gitignore")))
+(vendle:register "fgallina/region-bindings-mode"
+                 '(:tag ("region")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -1237,6 +1239,7 @@
 (vendle:fetch "steckerhalter/steckemacs"
               '(:tag ("org" "org-babel")))
 (vendle:fetch "atykhonov/dtc.el")
+(vendle:fetch "nsaeki/dotemacs")
 
 ;;; init-vendle-registers.el ends here
 ;;
