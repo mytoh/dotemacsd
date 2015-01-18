@@ -448,6 +448,10 @@
                    :compile nil))
 (vendle:register "gongo/json-reformat"
                  '(:tag "json"))
+(vendle:register "joshwnj/json-mode"
+                 '(:tag "json"
+                   :deps ("Sterlingg/json-snatcher"
+                          "gongo/json-reformat")))
 (vendle:register "hchbaw/bqlist-lock.el")
 (vendle:register "fgeller/leerzeichen.el"
                  '(:tag ("whitespace" "highlight")))
