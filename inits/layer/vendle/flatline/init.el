@@ -71,13 +71,7 @@
 
   (flatline:set-theme 'solarized-dark)
 
-  (cl-defun test-active-p ()
-    (if (flatline:active-p)
-        "active"
-      "inactive"))
-
   (setq flatline:mode-line '())
-  (flatline:add 'test-active-p)
   (flatline:add 'flatline:evil-tag)
   (flatline:add 'muki:flatline:major-mode)
   (flatline:add 'muki:flatline:buffer-name)
