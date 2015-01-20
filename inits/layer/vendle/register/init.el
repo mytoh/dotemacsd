@@ -700,6 +700,9 @@
                  '(:tag ("evil" "tutorial")))
 (vendle:register "roman/evil-visual-mark-mode"
                  '(:tag ("evil")))
+(vendle:register "bcarrell/evil-lispy"
+                 '(:tag ("evil" "lispy")
+                   :deps ("abo-abo/lispy")))
 
 ;;;;; org
 (vendle:register "git://orgmode.org/org-mode.git"
@@ -752,6 +755,8 @@
 (vendle:register "brettviren/org-pub"
                  '(:tag ("org" "web" "html")))
 (vendle:register "tj64/org-dp"
+                 '(:tag ("org")))
+(vendle:register "p-m/org-notify"
                  '(:tag ("org")))
 ;; (vendle:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ("org" "bongo" "music")
@@ -834,6 +839,7 @@
 (vendle:register-theme "Trevoke/color-theme-mejelly-light")
 (vendle:register-theme "aurelienbottazini/tronesque"
                        '(:load-path "themes"))
+(vendle:register-theme "edran/hc-zenburn-emacs")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1243,6 +1249,8 @@
 (vendle:fetch "steckerhalter/steckemacs"
               '(:tag ("org" "org-babel")))
 (vendle:fetch "atykhonov/dtc.el")
+(vendle:fetch "hillgreen012/xinix"
+              '(:tag ("configuration")))
 (vendle:fetch "nsaeki/dotemacs")
 
 ;;; init-vendle-registers.el ends here

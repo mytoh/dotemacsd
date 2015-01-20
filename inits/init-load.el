@@ -221,7 +221,7 @@
     evil-extra-operator
     evil-snipe
     evil-visual-mark-mode
-    evil-anzu
+    ;; evil-anzu
     evil
     ))
 
