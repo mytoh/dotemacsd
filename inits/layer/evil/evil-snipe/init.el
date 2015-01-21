@@ -13,6 +13,10 @@
 
     ;; not necessary if using (evil-snipe-replace-evil)
     (evil-snipe-enable-sS)    ;; enable repeating with s/S
+
+    (setq evil-snipe-enable-highlight t)
+    (setq evil-snipe-enable-incremental-highlight t)
+
     ))
 
 ;;; snipe.el ends here
