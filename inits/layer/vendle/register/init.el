@@ -34,7 +34,8 @@
 (vendle:register "syohex/emacs-helm-themes"
                  '(:tag ("helm" "theme")))
 (vendle:register "syohex/emacs-helm-open-github"
-                 '(:tag ("helm" "github")))
+                 '(:tag ("helm" "github")
+                   :desp ("sigma/gh.el")))
 (vendle:register "istib/helm-mode-manager"
                  '(:tag ("helm")))
 (vendle:register "tkf/emacs-pinot-search"
@@ -150,7 +151,9 @@
 (vendle:register "mickesv/magit-overview"
                  '(:tag ("magit")
                    :deps (("magit/magit"
-                           (:build ("gmake lisp docs") :info "." :tag "git")))))
+                           (:build ("gmake lisp docs")
+                                   :info "."
+                                   :tag "git")))))
 (vendle:register "magit/magit-filenotify"
                  '(:tag ("magit")
                    :deps (("magit/magit"
