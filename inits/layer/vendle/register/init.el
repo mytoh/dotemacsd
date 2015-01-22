@@ -373,6 +373,8 @@
                  '(:tag "eshell"))
 (vendle:register "yuutayamada/eshell-better-prompt"
                  '(:tag "eshell"))
+(vendle:register "syohex/emacs-eshellutil"
+                 '(:tag ("eshell")))
 (vendle:register "syohex/emacs-smeargle"
                  '(:tag ("git" "highlight" )))
 (vendle:register "syohex/emacs-git-messenger"
@@ -1255,6 +1257,11 @@
 (vendle:fetch "hillgreen012/xinix"
               '(:tag ("configuration")))
 (vendle:fetch "nsaeki/dotemacs")
+(vendle:fetch "lambdasakura/emacs")
+(vendle:fetch "julienchastang/dotemacs"
+              '(:tag ("org")))
+(vendle:fetch "howardabrams/dot-files"
+              '(:tag ("org")))
 
 ;;; init-vendle-registers.el ends here
 ;;

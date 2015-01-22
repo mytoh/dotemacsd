@@ -142,7 +142,7 @@
     charmap
     pt
     highlight-sexp
-    undohist
+    ;; undohist
     image-archive
     js2-mode
     ace-link
@@ -221,7 +221,7 @@
     evil-extra-operator
     evil-snipe
     evil-visual-mark-mode
-    ;; evil-anzu
+    evil-anzu
     evil
     ))
 
