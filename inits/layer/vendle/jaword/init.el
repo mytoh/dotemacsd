@@ -2,6 +2,8 @@
 
 ;;; Code:
 
-(req 'jaword)
+(req 'jaword
+  (after "org-mode"
+      (add-hook 'org-mode-hook 'jaword-mode)))
 
 ;;; init.el ends here
