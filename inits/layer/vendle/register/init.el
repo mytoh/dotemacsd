@@ -621,6 +621,10 @@
                  '(:tag ("git" "gitignore")))
 (vendle:register "fgallina/region-bindings-mode"
                  '(:tag ("region")))
+(vendle:register "zk-phi/jaword"
+                 '(:tag ("japanese" "movement")
+                   :deps (("myuhe/tinysegmenter.el"
+                           :tag ("japanese")))))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"

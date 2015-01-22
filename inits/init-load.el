@@ -162,6 +162,7 @@
     vc-check-status
     gitignore
     region-bindings-mode
+    jaword
     ;; highlight-backquotes-mode
     ;; bqlist-lock
     ;; eshell-alias
