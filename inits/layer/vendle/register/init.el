@@ -624,7 +624,9 @@
 (vendle:register "zk-phi/jaword"
                  '(:tag ("japanese" "movement")
                    :deps (("myuhe/tinysegmenter.el"
-                           :tag ("japanese")))))
+                           (:tag ("japanese"))))))
+(vendle:register "xahlee/xah-elisp-mode"
+                 '(:tag ("emacs-lisp")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
