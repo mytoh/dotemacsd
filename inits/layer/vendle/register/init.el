@@ -158,6 +158,8 @@
                  '(:tag ("magit")
                    :deps (("magit/magit"
                            (:build ("gmake lisp docs") :info "." :tag "git")))))
+(vendle:register "dholm/magit-idle-breadcrumbs"
+                 '(:tag ("magit")))
 (vendle:register "YoungFrog/git-overview"
                  '(:tag ("git" "org")))
 (vendle:register "company-mode/company-mode"

@@ -76,6 +76,7 @@
     emms-mpd
     magit
     magit-overview
+    magit-idle-breadcrumbs
     git-modes
     skk
     popwin
