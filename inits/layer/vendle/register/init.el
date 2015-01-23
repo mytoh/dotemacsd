@@ -1276,6 +1276,7 @@
               '(:tag ("org")))
 (vendle:fetch "ikame/dotfiles"
               '(:tag ("org" "conkeror")))
+(vendle:fetch "kuanyui/.emacs.d")
 
 ;;; init-vendle-registers.el ends here
 ;;
