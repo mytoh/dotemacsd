@@ -7,7 +7,6 @@
 (cl-defun set-default-font-size ()
   (set-face-attribute 'default nil :height 75))
 
-(set-default-font-size)
 
 (cl-defun set-ascii-font ()
   (cond ((eq window-system nil) nil)
@@ -127,6 +126,19 @@
     (cl-pushnew `(font . ,fontset) default-frame-alist)
     ))
 
+(cl-defun set-ricty-font ()
+  ;; [[http://mgi.hatenablog.com/entry/2014/02/11/085108]]
+  (set-fontset-font (frame-parameter nil 'font)
+                    'japanese-jisx0208
+                    (cons "Ricty Discord" "iso10646-1"))
+  (set-fontset-font (frame-parameter nil 'font)
+                    'japanese-jisx0212
+                    (cons "Ricty Discord" "iso10646-1"))
+  (set-fontset-font (frame-parameter nil 'font)
+                    'katakana-jisx0201
+                    (cons "Ricty Discord" "iso10646-1"))
+  (set-face-attribute 'default nil :family "Inconsolata" :height 90))
+
 (cl-defun muki:set-font (type)
   (cond
     ((cl-equalp type 'bitmap)
@@ -144,4 +156,6 @@
      (set-cyrillic-font)
      (set-japanese-font))))
 
-(muki:set-font 'bitmap)
+;; (set-default-font-size)
+;; (muki:set-font 'bitmap)
+(set-ricty-font)
