@@ -137,7 +137,7 @@
   (set-fontset-font (frame-parameter nil 'font)
                     'katakana-jisx0201
                     (cons "Ricty Discord" "iso10646-1"))
-  (set-face-attribute 'default nil :family "Inconsolata" :height 90))
+  (set-face-attribute 'default nil :family "Inconsolata" :height 80))
 
 (cl-defun muki:set-font (type)
   (cond
@@ -159,3 +159,5 @@
 ;; (set-default-font-size)
 ;; (muki:set-font 'bitmap)
 (set-ricty-font)
+
+;; [[http://nya-0.hatenablog.com/entry/2014/03/17/174309]]
