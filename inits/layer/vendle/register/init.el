@@ -627,6 +627,8 @@
                            (:tag ("japanese"))))))
 (vendle:register "xahlee/xah-elisp-mode"
                  '(:tag ("emacs-lisp")))
+(vendle:register "asok/peep-dired"
+                 '(:tag ("dired")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -1003,6 +1005,8 @@
               '(:tag ("vim" "statusline")))
 (vendle:fetch "itchyny/lightline.vim"
               '(:tag("vim" "statusline")))
+(vendle:fetch "yuratomo/w3m.vim"
+              '(:tag ("vim" "browser" "web")))
 (vendle:fetch "kovan/dopemacs")
 (vendle:fetch "AshleyMoni/dotfiles"
               '(:tag ( "evil" "dotfiles" )))
@@ -1270,6 +1274,8 @@
               '(:tag ("org")))
 (vendle:fetch "howardabrams/dot-files"
               '(:tag ("org")))
+(vendle:fetch "ikame/dotfiles"
+              '(:tag ("org" "conkeror")))
 
 ;;; init-vendle-registers.el ends here
 ;;
