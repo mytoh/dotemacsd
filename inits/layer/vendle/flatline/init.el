@@ -75,7 +75,7 @@
   (flatline:add 'flatline:evil-tag)
   (flatline:add 'muki:flatline:major-mode)
   (flatline:add 'muki:flatline:buffer-name)
-  (flatline:add '(muki:flatline:vc-mode . flatline:face-vc-mode))
+  (flatline:add 'muki:flatline:vc-mode)
   (flatline:add '(flatline:buffer-directory . middle))
   ;; (flatline:add '(fill . middle))
   (flatline:add 'fill)
