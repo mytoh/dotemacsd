@@ -202,6 +202,8 @@
                  '(:compile nil :deps (("magnars/dash.el" ( :compile nil)))))
 (vendle:register "magnars/expand-region.el")
 (vendle:register "magnars/multiple-cursors.el")
+(vendle:register "knu/mc-extras.el"
+                 '(:tag (:multiple-cursors)))
 (vendle:register "haskell/haskell-mode"
                  '(:tag "haskell"
                    :compile nil
