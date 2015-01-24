@@ -203,7 +203,7 @@
 (vendle:register "magnars/expand-region.el")
 (vendle:register "magnars/multiple-cursors.el")
 (vendle:register "knu/mc-extras.el"
-                 '(:tag (:multiple-cursors)))
+                 '(:tag ("multiple-cursors")))
 (vendle:register "haskell/haskell-mode"
                  '(:tag "haskell"
                    :compile nil
@@ -1279,6 +1279,8 @@
 (vendle:fetch "ikame/dotfiles"
               '(:tag ("org" "conkeror")))
 (vendle:fetch "kuanyui/.emacs.d")
+(vendle:fetch "emacsmirror/disptime")
+(vendle:fetch "xahlee/xah_emacs_init")
 
 ;;; init-vendle-registers.el ends here
 ;;
