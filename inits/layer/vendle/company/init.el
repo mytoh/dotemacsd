@@ -7,9 +7,9 @@
   ;; (setq company-echo-delay 0)
   ;; (setq company-auto-complete nil)
   (add-hook 'after-init-hook 'global-company-mode)
-  (cl-pushnew #'company-dabbrev company-backends)
-  (cl-pushnew #'company-ispell company-backends)
-  (cl-pushnew #'company-files  company-backends)
+  (cl-pushnew 'company-dabbrev company-backends)
+  (cl-pushnew 'company-ispell company-backends)
+  (cl-pushnew 'company-files  company-backends)
 
   (add-key company-active-map
     "C-n" 'company-select-next
