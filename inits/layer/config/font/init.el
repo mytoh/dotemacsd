@@ -137,7 +137,8 @@
   (set-fontset-font (frame-parameter nil 'font)
                     'katakana-jisx0201
                     (cons "Ricty Discord" "iso10646-1"))
-  (set-face-attribute 'default nil :family "Inconsolata" :height 80))
+  (set-face-attribute 'default nil :family "Inconsolata" :height 80)
+  (set-fontset-font t 'symbol "Symbola" nil 'prepend))
 
 (cl-defun muki:set-font (type)
   (cond
