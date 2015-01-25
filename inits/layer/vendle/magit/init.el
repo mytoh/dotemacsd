@@ -10,7 +10,7 @@
   ;; (set-face-attribute 'magit-item-highlight nil :foreground nil)
   (set-face-background 'magit-item-highlight "#121212"))
 
-(after "magit"
+(after 'magit
     (muki:magit-highlights))
 
 (cl-defun muki:magit-setup ()

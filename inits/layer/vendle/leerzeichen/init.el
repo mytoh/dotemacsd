@@ -5,7 +5,7 @@
 ;;;;; leerzeichen-mode
 (liby 'leerzeichen
   (auto (leerzeichen-mode) "leerzeichen")
-  (after "leerzeichen"
+  (after 'leerzeichen
       (set-face-attribute 'leerzeichen nil
        :foreground
        (color-lighten-name (face-attribute 'default :background)

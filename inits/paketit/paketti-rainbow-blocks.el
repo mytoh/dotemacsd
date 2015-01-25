@@ -5,7 +5,7 @@
   (add-hook 'lisp-mode-hook         'rainbow-blocks-mode)
   (add-hook 'emacs-lisp-mode-hook   'rainbow-blocks-mode)
   (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-  (after "rainbow-blocks"
+  (after 'rainbow-blocks
       (set-face-attribute 'rainbow-blocks-depth-1-face nil :inherit 'font-lock-builtin-face)
     (set-face-attribute 'rainbow-blocks-depth-2-face nil :foreground "dodger blue")
     (set-face-attribute 'rainbow-blocks-depth-3-face nil :foreground "orange")

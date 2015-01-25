@@ -3,7 +3,7 @@
 ;;; Code:
 
 (req 'jaword
-  (after "org-mode"
+  (after 'org-mode
       (add-hook 'org-mode-hook 'jaword-mode)))
 
 ;;; init.el ends here

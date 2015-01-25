@@ -6,7 +6,7 @@
   (setq git-gutter:deleted-sign "☂")
   (setq git-gutter:disabled-modes '(image-mode eshell-mode))
   (global-git-gutter-mode t)
-  (after "diminish"
+  (after 'diminish
       (after 'git-gutter
           (diminish 'git-gutter-mode "")))
   )

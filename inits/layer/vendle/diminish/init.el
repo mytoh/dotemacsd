@@ -3,19 +3,19 @@
 ;;; Code:
 
 (req 'diminish
-  (after "guide-key"
+  (after 'guide-key
       (diminish 'guide-key-mode " ⓘ"))
-  (after "eldoc"
+  (after 'eldoc
       (diminish 'eldoc-mode " ⎎"))
-  (after "highlight-parentheses"
+  (after 'highlight-parentheses
       (diminish 'highlight-parentheses-mode " ❪❫"))
-  (after "highlight-symbol"
+  (after 'highlight-symbol
       (diminish 'highlight-symbol-mode " ✩"))
-  (after "flycheck"
+  (after 'flycheck
       (diminish 'flycheck-mode " ✔"))
-  (after "outline"
+  (after 'outline
       (diminish 'outline-minor-mode " 📇"))
-  (after "golden-ratio"
+  (after 'golden-ratio
       (diminish 'golden-ratio-mode " ⊞"))
 
   (after 'helm-mode

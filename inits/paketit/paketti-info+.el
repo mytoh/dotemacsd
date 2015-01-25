@@ -1,5 +1,5 @@
 ;; ;; info+
-(after "info"
+(after 'info
     (req 'info+)
   (set-face-attribute 'info-function-ref-item nil
                       :background "#222222")

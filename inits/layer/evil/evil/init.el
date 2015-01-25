@@ -47,7 +47,7 @@
       (enable-option evil-want-C-u-scroll)
     (when evil-want-C-u-scroll
       (add-global-key "M-u" 'universal-argument)
-      (after "evil"
+      (after 'evil
           (add-key evil-normal-state-map "M-u" 'universal-argument)))))
 
 

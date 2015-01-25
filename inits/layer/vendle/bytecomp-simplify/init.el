@@ -2,7 +2,7 @@
 
 ;;; Code:
 (liby 'bytecomp-simplify
-  (after "bytecomp"
+  (after 'bytecomp
       (require 'bytecomp-simplify)))
 
 ;;; init.el ends here

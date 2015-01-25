@@ -4,7 +4,7 @@
   (erc-autojoin-mode 1)
 
   ;;(erc :server "chat.freenode.net" :port 6667 :nick "teask")
-  (after "erc"
+  (after 'erc
       (setq erc-autojoin-channels-alist
        '(("chat.freenode.net"
           "#emacs"

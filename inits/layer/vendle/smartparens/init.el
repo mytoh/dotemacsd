@@ -86,8 +86,8 @@
   ;;                     :background "#fdf6e3"
   ;;                     :foreground "#073642")
 
-  (after "diminish"
-      (after "smartparens"
+  (after 'diminish
+      (after 'smartparens
           (diminish 'smartparens-mode " ⚖")))
 
   (smartparens-global-mode)
