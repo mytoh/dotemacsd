@@ -256,7 +256,7 @@
 
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
-;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky
+;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson
 (defvar muki:x-theme 'iceberg)
 (defvar muki:term-theme 'flatland)
 
@@ -289,7 +289,7 @@
        (cl-pushnew dir Info-additional-directory-list))
      (seq-filter
       (lambda (dir) (and (file-directory-p dir)
-                         (file-exists-p dir)))
+                    (file-exists-p dir)))
       (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise

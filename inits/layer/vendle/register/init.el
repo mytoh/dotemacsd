@@ -257,6 +257,8 @@
 (vendle:register "yasuyk/web-beautify")
 (vendle:register "mhayashi1120/Emacs-slideview")
 (vendle:register "mhayashi1120/Emacs-imagex")
+(vendle:register "mhayashi1120/Emacs-image-diredx"
+                 '(:tag ("dired" "image")))
 (vendle:register "kiwanami/emacs-window-manager"
                  '(:deps ("kiwanami/emacs-window-layout")))
 (vendle:register "m2ym/direx-el"
@@ -631,6 +633,8 @@
                  '(:tag ("emacs-lisp")))
 (vendle:register "asok/peep-dired"
                  '(:tag ("dired")))
+(vendle:register "aaronbieber/sunshine.el"
+                 '(:tag ("weather" "forecast")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"

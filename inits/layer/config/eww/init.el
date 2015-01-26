@@ -1,5 +1,29 @@
 ;;; config-eww.el -*- lexical-binding: t -*-
 
+
+(cl-defun eww-disable-colours ()
+  ;; [[http://rubikitch.com/2014/11/19/eww-nocolor/]]
+;;; [2014-11-17 Mon]背景・文字色を無効化する
+  (defvar eww-disable-colorize t)
+  (defun shr-colorize-region--disable (orig start end fg &optional bg &rest _)
+    (unless eww-disable-colorize
+      (funcall orig start end fg)))
+  (advice-add 'shr-colorize-region :around 'shr-colorize-region--disable)
+  (advice-add 'eww-colorize-region :around 'shr-colorize-region--disable)
+  (defun eww-disable-color ()
+    "ewwで文字色を反映させない"
+    (interactive)
+    (setq-local eww-disable-colorize t)
+    (eww-reload))
+  (defun eww-enable-color ()
+    "ewwで文字色を反映させる"
+    (interactive)
+    (setq-local eww-disable-colorize nil)
+    (eww-reload)))
+
+(after 'eww
+    (eww-disable-colours))
+
 (liby 'eww
   (auto (eww) "eww")
   ;; (set-option url-user-agent  "Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0")
@@ -26,7 +50,9 @@
       (eww url)))
 
   (muki:define-launcher-key "w" 'muki:eww)
+
   )
+
 
 ;; (replace-string "\221" "`" nil (point-min) (point-max))  ; opening single quote
 ;; (replace-string "\222" "'" nil (point-min) (point-max))  ; closing single quote
