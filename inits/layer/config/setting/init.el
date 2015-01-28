@@ -353,8 +353,6 @@
 ;; instantly display current keystrokes in mini buffer
 (setq echo-keystrokes 0.02)
 
-(set-option message-log-max)
-
 ;; file revert time
 (set-option auto-revert-interval 1)
 
