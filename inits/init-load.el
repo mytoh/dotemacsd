@@ -252,6 +252,7 @@
     helm-mode-manager
     helm-pages
     helm-xmms2
+    helm-recoll
     ;; helm-company
     ;; helm-delicious
     ))
