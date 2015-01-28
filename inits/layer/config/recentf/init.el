@@ -19,6 +19,6 @@
 
 ;;;;; exclude tramp files
 ;; [[http://d.hatena.ne.jp/daimatz/20110529/1306602969]]
-(set-option recentf-exclude '("^/[^/:]+:"))
+(cl-pushnew "^/[^/:]+:" recentf-exclude)
 
 ;;; init.el ends here
