@@ -140,6 +140,21 @@
   (set-face-attribute 'default nil :family "Inconsolata" :height 80)
   (set-fontset-font t 'symbol "Symbola" nil 'prepend))
 
+
+(cl-defun set-ricty-diminished-font ()
+  ;; [[http://mgi.hatenablog.com/entry/2014/02/11/085108]]
+  (set-fontset-font (frame-parameter nil 'font)
+                    'japanese-jisx0208
+                    (cons "Ricty Diminished Discord" "iso10646-1"))
+  (set-fontset-font (frame-parameter nil 'font)
+                    'japanese-jisx0212
+                    (cons "Ricty Diminished Discord"  "iso10646-1"))
+  (set-fontset-font (frame-parameter nil 'font)
+                    'katakana-jisx0201
+                    (cons "Ricty Diminished Discord" "iso10646-1"))
+  (set-face-attribute 'default nil :family "Ricty Diminished Discord" :height 80)
+  (set-fontset-font t 'symbol "Symbola" nil 'prepend))
+
 (cl-defun muki:set-font (type)
   (cond
     ((cl-equalp type 'bitmap)
@@ -159,6 +174,7 @@
 
 ;; (set-default-font-size)
 ;; (muki:set-font 'bitmap)
-(set-ricty-font)
+;; (set-ricty-font)
+(set-ricty-diminished-font)
 
 ;; [[http://nya-0.hatenablog.com/entry/2014/03/17/174309]]
