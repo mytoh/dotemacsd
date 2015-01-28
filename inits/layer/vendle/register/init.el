@@ -639,6 +639,8 @@
                  '(:tag ("ascii")))
 (vendle:register "nex3/perspective-el"
                  '(:tag ("workspace")))
+(vendle:register "niku/realtime-preview.el"
+                 '(:tag ("html" "preview" "markdown")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -886,7 +888,8 @@
   (add-project-root "emacs-vendle" '(:load-path nil
                                      :tag ( "package" )))
   (add-project-root "helm-features" '(:tag ( "emacs-lisp" )))
-  (add-project-root "helm-eww-bookmark" '(:tag ("helm" "eww" ))))
+  (add-project-root "helm-eww-bookmark" '(:tag ("helm" "eww" )))
+  (add-project-root "helm-eww-history" '(:tag ("helm" "eww" ))))
 
 ;;;;;; skk
 (vendle:register "skk-dev/ddskk"
