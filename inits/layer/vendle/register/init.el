@@ -635,6 +635,10 @@
                  '(:tag ("dired")))
 (vendle:register "aaronbieber/sunshine.el"
                  '(:tag ("weather" "forecast")))
+(vendle:register "Dewdrops/visual-ascii-mode"
+                 '(:tag ("ascii")))
+(vendle:register "nex3/perspective-el"
+                 '(:tag ("workspace")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -861,6 +865,7 @@
 (vendle:register-theme "aurelienbottazini/tronesque"
                        '(:load-path "themes"))
 (vendle:register-theme "edran/hc-zenburn-emacs")
+(vendle:register-theme "Soren-Nordstrom/motoko-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1285,6 +1290,8 @@
 (vendle:fetch "kuanyui/.emacs.d")
 (vendle:fetch "emacsmirror/disptime")
 (vendle:fetch "xahlee/xah_emacs_init")
+(vendle:fetch "lisp/de.setf.utility"
+              '(:tag ("common_lisp")))
 
 ;;; init-vendle-registers.el ends here
 ;;
