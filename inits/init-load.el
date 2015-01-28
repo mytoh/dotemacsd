@@ -249,6 +249,7 @@
     helm-emms-librefm
     helm-features
     helm-eww-bookmark
+    helm-eww-history
     helm-mode-manager
     helm-pages
     helm-xmms2
