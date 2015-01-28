@@ -159,10 +159,11 @@
     elisp-slime-expand
     top-mode
     eww-hatebu
-    vc-check-status
+    ;; vc-check-status
     gitignore
     region-bindings-mode
     jaword
+    visual-ascii-mode
     ;; highlight-backquotes-mode
     ;; bqlist-lock
     ;; eshell-alias
