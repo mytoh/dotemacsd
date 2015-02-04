@@ -5,7 +5,7 @@
 ;;;;; highlight-defined
 (liby 'highlight-defined
   (auto (highlight-defined-mode) "highlight-defined")
-  (add-hook 'emacs-lisp-mode-hook 'highlight-defined-mode))
+  (add-hook 'emacs-lisp-mode-hook #'highlight-defined-mode))
 
 
 ;;; init.el ends here

@@ -7,4 +7,4 @@
   )
 
 (add-hook 'haskell-mode-hook
-          'muki:haskell-mode-hook)
+          #'muki:haskell-mode-hook)

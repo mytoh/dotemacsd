@@ -6,7 +6,7 @@
   (autoload 'image-archive "image-archive" nil t)
   (autoload 'image-archive-marked-files "image-archive" nil t)
   (autoload 'image-archive-auto-thumbnails "image-archive" nil t)
-  (add-hook 'archive-mode-hook 'image-archive-auto-thumbnails))
+  (add-hook 'archive-mode-hook #'image-archive-auto-thumbnails))
 
 
 ;;; init.el ends here

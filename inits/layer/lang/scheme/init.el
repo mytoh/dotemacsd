@@ -52,15 +52,15 @@
   (seq-doseq (f '(muki:lisp-cleanup
                   whitespace-cleanup
                   muki:lisp-before-save-hook))
-    (add-hook 'before-save-hook f nil t))
+    (add-hook #'before-save-hook f nil t))
   ;; (setq mode-name " ☯ ")
   )
-(add-hook 'scheme-mode-hook 'muki:scheme-mode-hook)
+(add-hook 'scheme-mode-hook #'muki:scheme-mode-hook)
 
 ;; (cl-defun muki:inferior-scheme-mode-hook ()
 ;;   (local-set-key (kbd "C-p") #'comint-previous-input)
 ;;   (local-set-key (kbd "C-n") #'comint-next-line))
-;; (add-hook 'inferior-scheme-mode-hook 'muki:inferior-scheme-mode-hook)
+;; (add-hook 'inferior-scheme-mode-hook #'muki:inferior-scheme-mode-hook)
 
 
 

@@ -12,8 +12,8 @@
 
   (mode "\\/*conkerorrc/*.js\\'"  'conkeror-minor-mode)
 
-  ;; (add-hook 'js-mode-hook 'muki:enable-conkeror-minor-mode)
-  ;; (add-hook 'js3-mode-hook 'muki:enable-conkeror-minor-mode)
+  ;; (add-hook 'js-mode-hook #'muki:enable-conkeror-minor-mode)
+  ;; (add-hook 'js3-mode-hook #'muki:enable-conkeror-minor-mode)
   )
 
 (provide 'paketti-conkeror-minor-mode)

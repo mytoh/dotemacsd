@@ -3,7 +3,7 @@
 (liby 'flycheck
   (auto (flycheck-mode global-flycheck-mode) "flycheck")
   ;; (add-hook 'after-init-hook #'global-flycheck-mode)
-  (add-hook 'emacs-lisp-mode-hook 'flycheck-mode)
+  (add-hook 'emacs-lisp-mode-hook #'flycheck-mode)
   (set-option flycheck-check-syntax-automatically '(save new-line))
 
   ;; (flycheck-define-checker javascript-jslint-reporter
@@ -23,4 +23,4 @@
   (when (display-graphic-p (selected-frame))
     (after 'flycheck
         (req 'flycheck-pos-tip
-          (setq flycheck-display-errors-function 'flycheck-pos-tip-error-messages)))))
+          (setq flycheck-display-errors-function #'flycheck-pos-tip-error-messages)))))

@@ -3,6 +3,6 @@
 ;;; Code:
 
 (liby 'slideview
-  (add-hook 'image-mode-hook 'slideview-mode))
+  (add-hook 'image-mode-hook #'slideview-mode))
 
 ;;; init.el ends here

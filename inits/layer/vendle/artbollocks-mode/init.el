@@ -5,7 +5,7 @@
   ;;;;; artbollocks
 (liby 'artbollocks-mode
   (auto (artbollocks-mode) "artbollocks-mode")
-  (add-hook 'text-mode-hook 'artbollocks-mode)
+  (add-hook 'text-mode-hook #'artbollocks-mode)
   (after 'artbollocks-mode
       (set-face-attribute 'artbollocks-lexical-illusions-face
        nil

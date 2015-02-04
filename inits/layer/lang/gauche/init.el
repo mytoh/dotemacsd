@@ -24,13 +24,13 @@
 (cl-defun muki:scheme-mode-hook ()
   (define-key scheme-mode-map (kbd "C-s") 'muki:scheme-other-window)
   (local-set-key (kbd "C-m") 'newline-and-indent)
-  (add-hook 'before-save-hook 'muki:lisp-before-save-hook nil t))
-(add-hook 'scheme-mode-hook 'muki:scheme-mode-hook)
+  (add-hook 'before-save-hook #'muki:lisp-before-save-hook nil t))
+(add-hook 'scheme-mode-hook #'muki:scheme-mode-hook)
 
 (cl-defun muki:inferior-scheme-mode-hook ()
-  (local-set-key (kbd "C-p") 'comint-previous-input)
-  (local-set-key (kbd "C-n") 'comint-next-line))
-(add-hook 'inferior-scheme-mode-hook 'muki:inferior-scheme-mode-hook)
+  (local-set-key (kbd "C-p") #'comint-previous-input)
+  (local-set-key (kbd "C-n") #'comint-next-line))
+(add-hook 'inferior-scheme-mode-hook #'muki:inferior-scheme-mode-hook)
 
 (cl-defmacro muki:scheme-make-face (face fore)
   `(progn

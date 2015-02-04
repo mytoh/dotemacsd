@@ -129,13 +129,13 @@
     (muki:org-mode-hook-function))
 
 ;; (add-hook 'org-mode-hook
-;;           'muki:org-mode-hook-function)
+;;           #'muki:org-mode-hook-function)
 
 (after'org
  ;; Problems while trying to load feature `org-interactive-query'
  ;; Problems while trying to load feature `org-jsinfo'
  (add-hook 'before-save-hook
-           'muki:org-mode-before-save-hook))
+           #'muki:org-mode-before-save-hook))
 
 (cl-defun muki:org-insert-book-drawer ()
   (interactive)

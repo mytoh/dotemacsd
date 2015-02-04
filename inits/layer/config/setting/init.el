@@ -289,7 +289,7 @@
        (cl-pushnew dir Info-additional-directory-list))
      (seq-filter
       (lambda (dir) (and (file-directory-p dir)
-                    (file-exists-p dir)))
+                         (file-exists-p dir)))
       (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
@@ -407,7 +407,7 @@
 
 ;;; automatically make script executable
 (add-hook 'after-save-hook
-          'executable-make-buffer-file-executable-if-script-p)
+          #'executable-make-buffer-file-executable-if-script-p)
 
 ;;;
 (set-option max-specpdl-size (* 10 max-specpdl-size))

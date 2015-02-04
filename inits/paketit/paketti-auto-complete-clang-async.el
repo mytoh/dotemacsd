@@ -8,8 +8,8 @@
     (ac-clang-launch-completion-process))
 
   (cl-defun muki:ac-config ()
-    (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
-    (add-hook 'auto-complete-mode-hook 'ac-common-setup)
+    (add-hook 'c-mode-common-hook #'ac-cc-mode-setup)
+    (add-hook 'auto-complete-mode-hook #'ac-common-setup)
     (global-auto-complete-mode t))
 
   (muki:ac-config))

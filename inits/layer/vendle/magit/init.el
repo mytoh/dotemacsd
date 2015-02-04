@@ -23,7 +23,7 @@
           (turn-on-auto-fill))))
 
 (auto (magit-status) "magit")
-(muki:define-launcher-key "g" 'magit-status)
+(muki:define-launcher-key "g" #'magit-status)
 
 (liby 'magit
   (muki:magit-setup))

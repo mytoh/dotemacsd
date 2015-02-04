@@ -17,8 +17,8 @@
          (setq solarized-termcolors 256)
          (defvar monokai-add-font-lock-keywords t)
          (load-theme muki:term-theme 'no-confirm))))
-(add-hook 'after-init-hook 'muki:load-theme)
-;;(add-to-list 'before-make-frame-hook 'muki:load-theme)
+(add-hook 'after-init-hook #'muki:load-theme)
+;;(add-to-list 'before-make-frame-hook #'muki:load-theme)
 
 ;;;; cursor shape
 (cl-pushnew '(cursor-type . box) default-frame-alist)

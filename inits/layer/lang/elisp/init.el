@@ -58,16 +58,16 @@
      (1 'font-lock-function-name-face))))
 
 (cl-defun muki:elisp-buffer-enable-reindent ()
-  (add-hook 'before-save-hook 'muki:lisp-cleanup nil t)
-  (add-hook 'before-save-hook 'muki:indent-buffer nil t))
+  (add-hook 'before-save-hook #'muki:lisp-cleanup nil t)
+  (add-hook 'before-save-hook #'muki:indent-buffer nil t))
 
 (cl-defun muki:elisp-check-parens ()
-  (add-hook 'after-save-hook 'check-parens))
+  (add-hook 'after-save-hook #'check-parens))
 
-(add-hook 'emacs-lisp-mode-hook 'muki:elisp-buffer-enable-reindent)
-(add-hook 'emacs-lisp-mode-hook 'muki:elisp-check-parens)
-(add-hook 'emacs-lisp-mode-hook 'checkdoc-minor-mode)
-(add-hook 'emacs-lisp-mode-hook 'eldoc-mode)
+(add-hook 'emacs-lisp-mode-hook #'muki:elisp-buffer-enable-reindent)
+(add-hook 'emacs-lisp-mode-hook #'muki:elisp-check-parens)
+(add-hook 'emacs-lisp-mode-hook #'checkdoc-minor-mode)
+(add-hook 'emacs-lisp-mode-hook #'eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
             (setq mode-name " ξ ")))
@@ -75,7 +75,7 @@
 (defun-add-hook muki:elisp-pretty-symbols (emacs-lisp-mode-hook)
   (push '(">=" . ?≥) prettify-symbols-alist))
 
-(setq lisp-indent-function 'common-lisp-indent-function)
+(setq lisp-indent-function #'common-lisp-indent-function)
 
 ;;;; keymap
 (add-key emacs-lisp-mode-map "C-m" #'newline-and-indent)

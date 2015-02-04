@@ -6,14 +6,14 @@
   (setq company-minimum-prefix-length 2)
   ;; (setq company-echo-delay 0)
   ;; (setq company-auto-complete nil)
-  (add-hook 'after-init-hook 'global-company-mode)
+  (add-hook 'after-init-hook #'global-company-mode)
   (cl-pushnew 'company-dabbrev company-backends)
   (cl-pushnew 'company-ispell company-backends)
   (cl-pushnew 'company-files  company-backends)
 
   (add-key company-active-map
-    "C-n" 'company-select-next
-    "C-p" 'company-select-previous)
+    "C-n" #'company-select-next
+    "C-p" #'company-select-previous)
 
   (set-face-attribute 'company-tooltip-selection nil
                       :background (muki:colour-hsl-to-hex 19 60 50))

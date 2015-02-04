@@ -11,7 +11,7 @@
       (save-excursion
         (byte-compile-file (buffer-file-name)))))
 ;;(add-hook 'after-save-hook
-;;      'muki:after-save-hook)
+;;      #'muki:after-save-hook)
 
 
 ;;; notify reverting
@@ -24,7 +24,7 @@
                           :x 1100
                           :y 100
                           :timeout -1)))
-;; (add-hook 'after-revert-hook 'muki:after-revert-hook)
+;; (add-hook 'after-revert-hook #'muki:after-revert-hook)
 
 (cl-defun muki:init-finish-notify ()
   (when window-system
@@ -34,7 +34,7 @@
                           :x 1100
                           :y 100
                           :timeout 5000)))
-;; (add-hook 'after-init-hook 'muki:init-finish-notify)
+;; (add-hook 'after-init-hook #'muki:init-finish-notify)
 
 ;; make read only when file under certain directory
 ;; (add-hook 'find-file-hook

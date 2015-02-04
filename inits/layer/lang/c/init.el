@@ -19,4 +19,4 @@
 
 (add-hook 'c-mode-common-hook
           (lambda ()
-            (add-hook 'before-save-hook 'muki:c-indent-buffer nil t)))
+            (add-hook 'before-save-hook #'muki:c-indent-buffer nil t)))

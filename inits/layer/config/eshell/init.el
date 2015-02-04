@@ -31,7 +31,7 @@
 
 ;; (add-hook 'eshell-preoutput-filter-functions
 ;;           #'ansi-color-filter-apply)
-(add-hook 'eshell-mode-hook 'ansi-color-for-comint-mode-on)
+(add-hook 'eshell-mode-hook #'ansi-color-for-comint-mode-on)
 
 ;; disable undo
 (add-hook 'eshell-mode-hook #'buffer-disable-undo)
