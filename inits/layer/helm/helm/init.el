@@ -36,22 +36,22 @@ Otherwise goto the end of minibuffer."
                    (interactive)
                    (helm-select-nth-action ,n))))
 
-  (add-global-key "M-x" 'helm-M-x
-                  "C-c C-m" 'helm-M-x
-                  "M-y" 'helm-show-kill-ring
-                  "C-M-z" 'helm-resume
-                  [remap find-file] 'helm-find-files
-                  [remap occur] 'helm-occur
-                  [remap list-buffers] 'helm-buffers-list
-                  [remap jump-to-register] 'helm-register
-                  [remap dabbrev-expand]   'helm-dabbrev
-                  [remap find-tag]         'helm-etags-select)
+  (add-global-key "M-x" #'helm-M-x
+                  "C-c C-m" #'helm-M-x
+                  "M-y" #'helm-show-kill-ring
+                  "C-M-z" #'helm-resume
+                  [remap find-file] #'helm-find-files
+                  [remap occur] #'helm-occur
+                  [remap list-buffers] #'helm-buffers-list
+                  [remap jump-to-register] #'helm-register
+                  [remap dabbrev-expand]   #'helm-dabbrev
+                  [remap find-tag]         #'helm-etags-select)
 
   (add-key helm-map
-    "C-M-n" 'helm-next-source
-    "C-M-p" 'helm-previous-source)
-  (add-key helm-read-file-map "C-h" 'delete-backward-char)
-  ;; (add-key helm-read-file-map "TAB" 'helm-execute-persistent-action)
+    "C-M-n" #'helm-next-source
+    "C-M-p" #'helm-previous-source)
+  (add-key helm-read-file-map "C-h" #'delete-backward-char)
+  ;; (add-key helm-read-file-map "TAB" #'helm-execute-persistent-action)
 
   (set-option helm-idle-delay          0.01
               helm-input-idle-delay    0.01
@@ -64,7 +64,8 @@ Otherwise goto the end of minibuffer."
               helm-raise-command                         "wmctrl -xa %s"
               )
 
-  (set-option helm-boring-file-regexp-list '("/\\.git\\'" "\\.hg\\'" "\\.svn\\'" "\\.CVS\\'" "\\._darcs\\'" "\\.la\\'" "\\.o\\'" "\\.i\\'"))
+  (set-option helm-boring-file-regexp-list
+              '("/\\.git\\'" "\\.hg\\'" "\\.svn\\'" "\\.CVS\\'" "\\._darcs\\'" "\\.la\\'" "\\.o\\'" "\\.i\\'"))
 
   (cl-pushnew "\\.git/COMMIT_EDITMSG\\'" helm-boring-file-regexp-list)
 
@@ -99,6 +100,8 @@ Otherwise goto the end of minibuffer."
                 ("zip" . "mcomix")
                 ("rar" . "mcomix")
                 ("pdf" . "mcomix")
+                ("7z" . "mcomix")
+                ("tar.gz" . "mcomix")
                 ("jpg" . "pikkukivi kuva")
                 ("JPG" . "pikkukivi kuva")
                 ("png" . "pikkukivi kuva")
@@ -151,24 +154,24 @@ Otherwise goto the end of minibuffer."
 ;; cmd-t
 (liby 'helm-cmd-t
   (auto (helm-cmd-t) "helm-cmd-t")
-  (add-global-key "M-t" 'helm-cmd-t))
+  (add-global-key "M-t" #'helm-cmd-t))
 ;; (req 'helm-C-x-b
-;;      (add-key global-map [remap switch-to-buffer] 'helm-C-x-b))
+;;      (add-key global-map [remap switch-to-buffer] #'helm-C-x-b))
 
 ;; helm-ls-git
 (liby 'helm-ls-git
   (auto (helm-ls-git-ls) "helm-ls-git")
-  (muki:define-launcher-key "f" 'helm-ls-git-ls))
+  (muki:define-launcher-key "f" #'helm-ls-git-ls))
 
 ;; elisp-package
 (liby 'helm-elisp-package
   (auto (helm-list-elisp-packages) "helm-elisp-package")
-  (muki:define-launcher-key "P" 'helm-list-elisp-packages))
+  (muki:define-launcher-key "P" #'helm-list-elisp-packages))
 
 ;; helm-git-grep
 (liby 'helm-git-grep
   (auto (helm-git-grep) "helm-git-grep")
-  (muki:define-launcher-key "r" 'helm-git-grep))
+  (muki:define-launcher-key "r" #'helm-git-grep))
 
 
 ;;; init-helm.el ends here

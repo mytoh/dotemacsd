@@ -9,7 +9,7 @@
     (if mark-active
         (quickrun :start start :end end)
       (quickrun)))
-  (add-global-key "<f5>" 'quickrun-sc)
+  (add-global-key "<f5>" #'quickrun-sc)
   (after 'popwin
       (push '("*quickrun*") popwin:special-display-config))
   (quickrun-add-command "scheme/gosh-r7rs"

@@ -4,6 +4,6 @@
 
 (liby 'helm-project-buffer
   (auto (helm-project-buffer) "helm-project-buffer")
-  (add-global-key "C-x b" 'helm-project-buffer))
+  (add-global-key "C-x b" #'helm-project-buffer))
 
 ;;; init.el ends here

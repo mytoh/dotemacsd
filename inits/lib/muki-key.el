@@ -4,8 +4,8 @@
 ;; (defvar global-keys-minor-mode-map (make-sparse-keymap)
 ;;   "global-keys-minor-mode keymap.")
 
-;; (define-key global-keys-minor-mode-map "\C-c\C-r" 'revert-buffer)
-;; (define-key global-keys-minor-mode-map (kbd "C-;") 'insert-date)
+;; (define-key global-keys-minor-mode-map "\C-c\C-r" #'revert-buffer)
+;; (define-key global-keys-minor-mode-map (kbd "C-;") #'insert-date)
 
 ;; Now define a minor mode that will use that keymap. You'll use that minor mode for basically everything.
 

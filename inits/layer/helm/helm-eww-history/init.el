@@ -6,6 +6,6 @@
   (auto (helm-eww-history) "helm-eww-history")
   (after 'eww
       (add-key eww-mode-map
-        "H" 'helm-eww-history)))
+        "H" #'helm-eww-history)))
 
 ;;; init.el ends here

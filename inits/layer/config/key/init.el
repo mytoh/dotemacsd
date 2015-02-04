@@ -1,18 +1,18 @@
 ;;; config-key.el  -*- lexical-binding: t -*-
 
 ;;;; indent
-(add-key lisp-interaction-mode-map "C-m" 'newline-and-indent)
+(add-key lisp-interaction-mode-map "C-m" #'newline-and-indent)
 
 ;;;; help
-(define-key global-map "\M-?" 'help-for-help) ; ヘルプ
+(define-key global-map "\M-?" #'help-for-help) ; ヘルプ
 
-(add-global-key "C-w" 'kill-region-or-backward-kill-word)
+(add-global-key "C-w" #'kill-region-or-backward-kill-word)
 
-(add-global-key [remap kill-whole-line] 'smart-kill-whole-line)
+(add-global-key [remap kill-whole-line] #'smart-kill-whole-line)
 
-(add-global-key "C-<tab>" 'other-window)
+(add-global-key "C-<tab>" #'other-window)
 
-(global-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "M-/") #'hippie-expand)
 
 ;; (muki:define-launcher-key "p" 'package-list-packages)
 
@@ -23,28 +23,28 @@
   (interactive)
   (error (substitute-command-keys "To exit emacs: \\[kill-emacs]")))
 
-(add-global-key "C-x C-c" 'muki:dont-kill-emacs)
-(add-global-key "C-x C-z" 'muki:dont-kill-emacs)
+(add-global-key "C-x C-c" #'muki:dont-kill-emacs)
+(add-global-key "C-x C-z" #'muki:dont-kill-emacs)
 
 ;;;; http://d.hatena.ne.jp/mooz/20100119/p1
 ;; C-q をプリフィックスキー化
 (add-global-key "C-q" (make-sparse-keymap))
 
 ;; quoted-insert は C-q C-q へ割り当て
-(add-global-key "C-q C-q" 'quoted-insert)
+(add-global-key "C-q C-q" #'quoted-insert)
 
 ;; window-resizer は C-q C-r (resize) で
-(add-global-key "C-q C-r" 'muki:window-resizer)
+(add-global-key "C-q C-r" #'muki:window-resizer)
 
 ;;; font
-(add-global-key "C-+" 'text-scale-adjust)
-(add-global-key "C--" 'text-scale-adjust)
+(add-global-key "C-+" #'text-scale-adjust)
+(add-global-key "C--" #'text-scale-adjust)
 
 ;; C-x o にはもううんざり
-(add-global-key "C-q l" 'windmove-right)
-(add-global-key "C-q h" 'windmove-left)
-(add-global-key "C-q j" 'windmove-down)
-(add-global-key "C-q k" 'windmove-up)
+(add-global-key "C-q l" #'windmove-right)
+(add-global-key "C-q h" #'windmove-left)
+(add-global-key "C-q j" #'windmove-down)
+(add-global-key "C-q k" #'windmove-up)
 
 ;; http://d.hatena.ne.jp/khiker/20100119/window_resize
 (defun muki:window-resizer ()
@@ -100,5 +100,5 @@
   (other-window 1 nil)
   (unless prefix (switch-to-next-buffer)))
 
-(add-global-key "C-x 2" 'muki:vsplit-last-buffer)
-(add-global-key "C-x 3" 'muki:hsplit-last-buffer)
+(add-global-key "C-x 2" #'muki:vsplit-last-buffer)
+(add-global-key "C-x 3" #'muki:hsplit-last-buffer)

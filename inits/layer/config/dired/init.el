@@ -28,12 +28,12 @@
 
   ;; RET 標準の dired-find-file では dired バッファが複数作られるので
   ;; dired-find-alternate-file を代わりに使う
-  (define-key dired-mode-map (kbd "C-m") 'dired-open-in-accordance-with-situation)
-  (define-key dired-mode-map (kbd "a") 'dired-find-file)
+  (define-key dired-mode-map (kbd "C-m") #'dired-open-in-accordance-with-situation)
+  (define-key dired-mode-map (kbd "a") #'dired-find-file)
 
   ;; ディレクトリの移動キーを追加(wdired 中は無効)
-  (define-key dired-mode-map (kbd "<left>") 'dired-up-directory)
-  (define-key dired-mode-map (kbd "<right>") 'dired-open-in-accordance-with-situation))
+  (define-key dired-mode-map (kbd "<left>") #'dired-up-directory)
+  (define-key dired-mode-map (kbd "<right>") #'dired-open-in-accordance-with-situation))
 
 ;; (req 'find-dired
 ;;      (set-option find-ls-option '("-print0 | xargs -0 ls -ld" . "-ld")))

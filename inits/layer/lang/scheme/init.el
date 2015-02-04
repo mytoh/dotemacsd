@@ -48,7 +48,7 @@
      (get-buffer-create buf-name))))
 
 (cl-defun muki:scheme-mode-hook ()
-  (add-key scheme-mode-map "C-c C-s" 'muki:scheme-other-window)
+  (add-key scheme-mode-map "C-c C-s" #'muki:scheme-other-window)
   (seq-doseq (f '(muki:lisp-cleanup
                   whitespace-cleanup
                   muki:lisp-before-save-hook))
@@ -58,8 +58,8 @@
 (add-hook 'scheme-mode-hook 'muki:scheme-mode-hook)
 
 ;; (cl-defun muki:inferior-scheme-mode-hook ()
-;;   (local-set-key (kbd "C-p") 'comint-previous-input)
-;;   (local-set-key (kbd "C-n") 'comint-next-line))
+;;   (local-set-key (kbd "C-p") #'comint-previous-input)
+;;   (local-set-key (kbd "C-n") #'comint-next-line))
 ;; (add-hook 'inferior-scheme-mode-hook 'muki:inferior-scheme-mode-hook)
 
 

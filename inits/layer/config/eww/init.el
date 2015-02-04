@@ -34,7 +34,7 @@
       (set-option eww-download-directory "~/huone/lataukset")
     ;; (set-option eww-search-prefix "https://duckduckgo.com/html/?q=!g+")
     (setq eww-search-prefix "http://www.google.co.jp/search?q=")
-    (add-key eww-mode-map "C-i" 'shr-next-link))
+    (add-key eww-mode-map "C-i" #'shr-next-link))
 
   ;; [[http://www.cman.jp/network/support/go_access.cgi]]
   ;;; (eww "http://www.cman.jp/network/support/go_access.cgi")

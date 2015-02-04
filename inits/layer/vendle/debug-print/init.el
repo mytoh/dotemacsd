@@ -5,6 +5,6 @@
 ;;;;; debug-print
 (req 'debug-print
   (debug-print-init)
-  (add-global-key "C-x C-e" 'debug-print-eval-last-sexp))
+  (add-global-key "C-x C-e" #'debug-print-eval-last-sexp))
 
 ;;; init.el ends here

@@ -78,4 +78,4 @@
 (setq lisp-indent-function 'common-lisp-indent-function)
 
 ;;;; keymap
-(add-key emacs-lisp-mode-map "C-m" 'newline-and-indent)
+(add-key emacs-lisp-mode-map "C-m" #'newline-and-indent)

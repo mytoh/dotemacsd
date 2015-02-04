@@ -6,6 +6,6 @@
   (auto (helm-eww-bookmark) "helm-eww-bookmark")
   (after 'eww
       (add-key eww-mode-map
-        "B" 'helm-eww-bookmark)))
+        "B" #'helm-eww-bookmark)))
 
 ;;; init.el ends here

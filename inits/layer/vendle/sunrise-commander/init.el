@@ -61,10 +61,10 @@
       (req 'sunrise-x-modeline
         (enable-option sr-modeline-use-utf8-marks))
     (req 'sunrise-x-tabs
-      (add-key sr-tabs-mode-map "C-n"  'dired-next-line)
-      (add-key sr-tabs-mode-map "C-p"  'dired-previous-line)
-      (add-key sr-tabs-mode-map "M-n" 'sr-tabs-next)
-      (add-key sr-tabs-mode-map "M-p" 'sr-tabs-prev))
+      (add-key sr-tabs-mode-map "C-n"  #'dired-next-line)
+      (add-key sr-tabs-mode-map "C-p"  #'dired-previous-line)
+      (add-key sr-tabs-mode-map "M-n" #'sr-tabs-next)
+      (add-key sr-tabs-mode-map "M-p" #'sr-tabs-prev))
     (req 'sunrise-x-popviewer))
 
   (auto (sunrise) "sunrise-commander")
@@ -74,8 +74,8 @@
     (sunrise)
     (sr-popviewer-mode 1))
 
-  (muki:define-launcher-key "x" 'muki:sunrise)
-  (muki:define-launcher-key "X" 'sunrise-cd)
+  (muki:define-launcher-key "x" #'muki:sunrise)
+  (muki:define-launcher-key "X" #'sunrise-cd)
 
   (defvar muki:sunrise-external-programs-associations
     '(("cbz" . "mcomix")
@@ -111,9 +111,9 @@
         (message "can't find associated program!"))))
 
   (after 'sunrise-commander
-      (add-key sr-mode-map "C-c C-x" 'muki:sunrise-open-external)
-    (add-key sr-mode-map "C-n" 'dired-next-line)
-    (add-key sr-mode-map "C-p" 'dired-previous-line))
+      (add-key sr-mode-map "C-c C-x" #'muki:sunrise-open-external)
+    (add-key sr-mode-map "C-n" #'dired-next-line)
+    (add-key sr-mode-map "C-p" #'dired-previous-line))
 
   )
 

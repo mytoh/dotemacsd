@@ -46,9 +46,9 @@
   (cl-locally
       (enable-option evil-want-C-u-scroll)
     (when evil-want-C-u-scroll
-      (add-global-key "M-u" 'universal-argument)
+      (add-global-key "M-u" #'universal-argument)
       (after 'evil
-          (add-key evil-normal-state-map "M-u" 'universal-argument)))))
+          (add-key evil-normal-state-map "M-u" #'universal-argument)))))
 
 
 (cl-defun muki:init-evil-mode-mappings ()
@@ -90,50 +90,50 @@
      ("C-f" . evil-forward-char)
      ("C-b" . evil-backward-char)))
 
-  (add-key evil-normal-state-map  "C-r" 'isearch-backward)
-  (add-key evil-motion-state-map ";" 'evil-ex)
-  (add-key evil-insert-state-map  "C-c" 'evil-normal-state)
-  (add-key evil-visual-state-map  "C-c" 'evil-exit-visual-state)
+  (add-key evil-normal-state-map  "C-r" #'isearch-backward)
+  (add-key evil-motion-state-map ";" #'evil-ex)
+  (add-key evil-insert-state-map  "C-c" #'evil-normal-state)
+  (add-key evil-visual-state-map  "C-c" #'evil-exit-visual-state)
 
   (add-key evil-ex-completion-map
-    "M-p" 'previous-complete-history-element
-    "M-n" 'next-complete-history-element)
+    "M-p" #'previous-complete-history-element
+    "M-n" #'next-complete-history-element)
 
   )
 
 (cl-defun muki:init-evil-mode-helm ()
   (liby 'helm
-    (evil-ex-define-cmd "e[dit]" 'helm-find-files)))
+    (evil-ex-define-cmd "e[dit]" #'helm-find-files)))
 
 (cl-defun muki:init-evil-mode-org ()
   ;; org
   ;; normal state shortcuts
   (evil-define-key 'motion org-mode-map
-    "]]" 'org-forward-same-level
-    "[[" 'org-backward-same-level
-    "{" 'outline-previous-heading
-    "}" 'outline-next-heading
-    "g{" 'outline-up-heading
-    "g}" 'outline-next-heading
-    (kbd "TAB") 'org-cycle)
+    "]]" #'org-forward-same-level
+    "[[" #'org-backward-same-level
+    "{" #'outline-previous-heading
+    "}" #'outline-next-heading
+    "g{" #'outline-up-heading
+    "g}" #'outline-next-heading
+    (kbd "TAB") #'org-cycle)
 
   (evil-define-key 'normal org-mode-map
-    "<<" 'org-shiftmetaleft
-    ">>" 'org-shiftmetaright
-    "<[[" 'org-metaleft
-    ">]]" 'org-metaright))
+    "<<" #'org-shiftmetaleft
+    ">>" #'org-shiftmetaright
+    "<[[" #'org-metaleft
+    ">]]" #'org-metaright))
 
 (cl-defun muki:init-evil-mode-eww ()
   ;; eww
   (evil-define-key 'motion eww-mode-map
-    "<TAB>" 'shr-next-link))
+    "<TAB>" #'shr-next-link))
 
 (cl-defun muki:init-evil-mode-smartparens ()
   ;; smartparen
   (liby 'smartparens
     (after 'smartparens
-        ;; (add-key evil-normal-state-map ")" 'sp-up-sexp)
-        ;; (add-key evil-normal-state-map "(" 'sp-backward-up-sexp)
+        ;; (add-key evil-normal-state-map ")" #'sp-up-sexp)
+        ;; (add-key evil-normal-state-map "(" #'sp-backward-up-sexp)
         )))
 
 (cl-defun muki:init-evil-mode-multiple-cursors ()
@@ -162,7 +162,7 @@
   ;; elisp-slime-nav
   (after 'elisp-slime-nav
       (evil-define-key 'normal emacs-lisp-mode-map (kbd "K")
-                       'elisp-slime-nav-describe-elisp-thing-at-point)))
+                       #'elisp-slime-nav-describe-elisp-thing-at-point)))
 
 (cl-defun muki:init-evil-mode-skk ()
   (liby 'skk
@@ -184,7 +184,6 @@ is a kind of temporary one which is not confirmed yet."
 (cl-defun muki:init-evil-initial-state ()
   (cl-loop for (mode . state) in '((git-commit-mode . insert)
                                    (git-rebase-mode . emacs)
-                                   (help-mode . emacs)
                                    (ebib-entry-mode              . emacs)
                                    (ebib-index-mode              . emacs)
                                    (ebib-log-mode                . emacs)
@@ -221,8 +220,8 @@ is a kind of temporary one which is not confirmed yet."
   (muki:init-evil-initial-state)
 
   ;; advice for evil search
-  (advice-add 'evil-ex-search-next :after 'recenter)
-  (advice-add 'evil-ex-search-previous :after 'recenter)
+  (advice-add 'evil-ex-search-next :after #'recenter)
+  (advice-add 'evil-ex-search-previous :after #'recenter)
 
   (muki:init-evil-mode-skk)
   )

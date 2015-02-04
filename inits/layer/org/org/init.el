@@ -2,7 +2,7 @@
 (req 'org)
 
 (defface org-block-background
-    '((t (:background "#2b2948")))
+  '((t (:background "#2b2948")))
   "Face used for the source block background")
 
 (cl-defun muki:org-set-faces ()
@@ -157,28 +157,28 @@
 (add-hook 'org-mode-hook
           (lambda ()
             (add-key org-mode-map
-              "C-c o o" 'helm-org-headlines
-              "C-c o b" 'muki:org-insert-book-drawer)))
+              "C-c o o" #'helm-org-headlines
+              "C-c o b" #'muki:org-insert-book-drawer)))
 
 ;;;; Viewing, navigating, and editing the Org tree
 ;;     I often cut and paste subtrees. This makes it easier to cut
 ;;     something and paste it elsewhere in the hierarchy.
 ;;     #+begin_src emacs-lisp
 (after 'org
-    (add-key org-mode-map "C-c k" 'org-cut-subtree)
+    (add-key org-mode-map "C-c k" #'org-cut-subtree)
   (setq org-yank-adjusted-subtrees t))
 
 (add-hook 'org-mode-hook
           (lambda ()
-            (local-set-key (kbd "M-n") 'outline-next-visible-heading)
-            (local-set-key (kbd "M-p") 'outline-previous-visible-heading)
-            (local-set-key (kbd "M-u") 'outline-up-heading)
+            (local-set-key (kbd "M-n") #'outline-next-visible-heading)
+            (local-set-key (kbd "M-p") #'outline-previous-visible-heading)
+            (local-set-key (kbd "M-u") #'outline-up-heading)
             ;; table
-            (local-set-key (kbd "M-C-w") 'org-table-copy-region)
-            (local-set-key (kbd "M-C-y") 'org-table-paste-rectangle)
-            (local-set-key (kbd "M-C-l") 'org-table-sort-lines)
+            (local-set-key (kbd "M-C-w") #'org-table-copy-region)
+            (local-set-key (kbd "M-C-y") #'org-table-paste-rectangle)
+            (local-set-key (kbd "M-C-l") #'org-table-sort-lines)
             ;; display images
-            (local-set-key (kbd "M-I") 'org-toggle-iimage-in-org)))
+            (local-set-key (kbd "M-I") #'org-toggle-iimage-in-org)))
 
 
 (require 'iimage)
@@ -221,7 +221,7 @@
 
 (req 'org-hlc)
 
-(add-hook 'org-mode-hook 'turn-off-auto-fill)
+(add-hook 'org-mode-hook #'turn-off-auto-fill)
 
 (provide 'init-org)
 
