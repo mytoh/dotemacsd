@@ -82,6 +82,7 @@
     popwin
     ;; shackle
     company
+    company-quickhelp
     paradox
     hl-todo
     hl-indent
@@ -164,6 +165,7 @@
     region-bindings-mode
     jaword
     visual-ascii-mode
+    itunes-bgm
     ;; highlight-backquotes-mode
     ;; bqlist-lock
     ;; eshell-alias
