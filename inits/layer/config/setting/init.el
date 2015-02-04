@@ -75,10 +75,10 @@
 (auto-image-file-mode 1)
 (enable-option image-animate-loop)
 (add-hook 'image-mode-hook
-          (lambda ()
-            (cl-letf ((image (image-get-display-property)))
-              (if (image-multi-frame-p image)
-                  (image-toggle-animation)))))
+          (clambda ()
+                   (cl-letf ((image (image-get-display-property)))
+                     (if (image-multi-frame-p image)
+                         (image-toggle-animation)))))
 ;; (set-option image-transform-resize 'fit-height)
 
 ;;;; imagemagick
@@ -285,11 +285,11 @@
 ;;;; info
 (after 'info
     (seq-each
-     (lambda (dir)
-       (cl-pushnew dir Info-additional-directory-list))
+     (clambda (dir)
+              (cl-pushnew dir Info-additional-directory-list))
      (seq-filter
-      (lambda (dir) (and (file-directory-p dir)
-                         (file-exists-p dir)))
+      (clambda (dir) (and (file-directory-p dir)
+                          (file-exists-p dir)))
       (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
