@@ -176,6 +176,9 @@
                    :deps ( "company-mode/company-mode"
                           ("for-GET/know-your-http-well"
                            (:load-path "emacs")))))
+(vendle:register "expez/company-quickhelp"
+                 '(:tag ("company")
+                   :deps ("pitkali/pos-tip")))
 (vendle:register "syohex/emacs-git-gutter"
                  '(:tag "git"))
 (vendle:register "syohex/emacs-git-gutter-fringe"
@@ -633,6 +636,8 @@
                  '(:tag ("emacs-lisp")))
 (vendle:register "asok/peep-dired"
                  '(:tag ("dired")))
+(vendle:register "jixiuf/dired-filetype-face"
+                 '(:tag ("dired")))
 (vendle:register "aaronbieber/sunshine.el"
                  '(:tag ("weather" "forecast")))
 (vendle:register "Dewdrops/visual-ascii-mode"
@@ -641,6 +646,37 @@
                  '(:tag ("workspace")))
 (vendle:register "niku/realtime-preview.el"
                  '(:tag ("html" "preview" "markdown")))
+(vendle:register "zk-phi/symon"
+                 '(:tag ("system" "monitor")))
+(vendle:register "wanderlust/wanderlust"
+                 '(:tag ("mail")
+                   :build ("gmake")
+                   :deps ( "wanderlust/flim"
+                          "wanderlust/semi"
+                          "wanderlust/apel")))
+(vendle:register "syohex/emacs-itunes-bgm"
+                 '(:tag ("music" "itunes")))
+(vendle:register "andyetitmoves/libmpdee"
+                 '(:tag ("mpd" "music")))
+(vendle:register "osanai3/eshell-tree"
+                 '(:tag ("eshell")))
+(vendle:register "ChillarAnand/real-auto-save"
+                 '(:tag ("buffer" "auto-Save")))
+(vendle:register "nobrowser/dig-browser"
+                 '(:tag ("dig" "dns")))
+(vendle:register "hagleitn/unicode-emoticons"
+                 '(:tag ("unicode" "emoticon")))
+(vendle:register "ryuslash/kaarvok"
+                 '(:tag ("project" "template")))
+(vendle:register "bmag/emacs-purpose"
+                 '(:tag ("window" "layout")))
+(vendle:register "git://git.savannah.gnu.org/tramp.git"
+                 '(:tag ("tramp" "ssh")
+                   :build ("autoconf" "./configure" "gmake")
+                   :load-path ("lisp")
+                   :info "info"))
+(vendle:register "ataka/emacs-wget"
+                 '(:tag ("wget")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -868,6 +904,7 @@
                        '(:load-path "themes"))
 (vendle:register-theme "edran/hc-zenburn-emacs")
 (vendle:register-theme "Soren-Nordstrom/motoko-theme")
+(vendle:register-theme "rashack/solarized-grey")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -894,7 +931,7 @@
 ;;;;;; skk
 (vendle:register "skk-dev/ddskk"
                  '(:build ("gmake clean elc info")
-                   :info "info"
+                   :info "doc"
                    :load-path ("." "experimental")))
 (vendle:fetch "skk-dev/skktools"
               '(:build ("./configure" "gmake clean" "gmake")))
@@ -1183,8 +1220,6 @@
               '(:tag ("org" "bibtex")))
 (vendle:fetch "emacsmirror/eoops"
               '(:tag ("oop")))
-(vendle:fetch "git://git.savannah.gnu.org/tramp.git"
-              '(:tag ("tramp" "ssh")))
 (vendle:fetch "WildCarrot/OrgThings"
               '(:tag ("org")))
 (vendle:fetch "kiwanami/emacs-widget-mvc"
@@ -1295,6 +1330,16 @@
 (vendle:fetch "xahlee/xah_emacs_init")
 (vendle:fetch "lisp/de.setf.utility"
               '(:tag ("common_lisp")))
+(vendle:fetch "tarao/el-get-cli"
+              '(:tag ("el-get" "cli")))
+(vendle:fetch "coldasparagus/face-schemes"
+              '(:tag ("face" "font")))
+(vendle:fetch "kiwanami/emacs-anything-books"
+              '(:tag ("anything" "book")))
+(vendle:fetch "sbcl/specializable"
+              '(:tag ("common_lisp" "clos")))
+(vendle:fetch "jave/xwidget-aux"
+              '(:tag ("xwidget")))
 
 ;;; init-vendle-registers.el ends here
 ;;
