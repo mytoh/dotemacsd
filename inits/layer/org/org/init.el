@@ -74,6 +74,9 @@
                 ("i" "#+index: ?")
                 ("i" "#+include: %file ?")))
   (disable-mode whitespace-mode)
+  ;; http://qiita.com/takaxp/items/f583dbf89cc217b0c41c
+  ;; this option needed to resize images in org buffer.
+  ;; if it's a numebr in list, use #ATTR_* :width setting insteaad if exists
   (setq org-image-actual-width '(256))
   )
 
