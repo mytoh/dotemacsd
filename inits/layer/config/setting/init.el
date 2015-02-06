@@ -81,6 +81,11 @@
                          (image-toggle-animation)))))
 ;; (set-option image-transform-resize 'fit-height)
 
+;;;; add file types
+(add-to-list 'image-file-name-extensions "jp2")
+(add-to-list 'image-file-name-extensions "bmp")
+(add-to-list 'image-file-name-extensions "psd")
+
 ;;;; imagemagick
 (set-option imagemagick-render-type 1) ; default 0
 
