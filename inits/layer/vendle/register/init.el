@@ -129,6 +129,10 @@
 (vendle:register "vapniks/emms-mark-ext"
                  '(:tag ("emms")
                    :desc "Extra functions for tagging tracks in emms mode in emacs. "))
+(vendle:register "dochang/emms-player-mpv"
+                 '(:tag ("emms" "mpv")))
+(vendle:register "momomo5717/emms-player-mpv-volume"
+                 '(:tag ("emms" "mpv" )))
 (vendle:register "r0man/soundklaus.el"
                  '(:deps (("magnars/dash.el" ( :compile nil))
                           "magnars/s.el"
@@ -677,6 +681,7 @@
                    :info "info"))
 (vendle:register "ataka/emacs-wget"
                  '(:tag ("wget")))
+
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -905,6 +910,7 @@
 (vendle:register-theme "edran/hc-zenburn-emacs")
 (vendle:register-theme "Soren-Nordstrom/motoko-theme")
 (vendle:register-theme "rashack/solarized-grey")
+(vendle:register-theme "vurmux/crazyfruits-color-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1340,6 +1346,15 @@
               '(:tag ("common_lisp" "clos")))
 (vendle:fetch "jave/xwidget-aux"
               '(:tag ("xwidget")))
+(vendle:fetch "tomoyuki28jp/stumpwm"
+              '(:tag ("stumpwm")))
+(vendle:fetch "joelagnel/stumpwm-goodies"
+              '(:tag ("stumpwm")))
+(vendle:fetch "eggcaker/pelm"
+              '(:tag ("org")))
+;; (vendle:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
+;;               '(:tag ("common_lisp")
+;;                 :type hg))
 
 ;;; init-vendle-registers.el ends here
 ;;
