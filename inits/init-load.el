@@ -74,6 +74,8 @@
     navi2ch-file-mode
     ;; emms
     emms-mpd
+    ;; emms-player-mpv
+    ;; emms-player-mpv-volume
     magit
     magit-overview
     magit-idle-breadcrumbs
