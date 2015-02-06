@@ -74,6 +74,7 @@
                 ("i" "#+index: ?")
                 ("i" "#+include: %file ?")))
   (disable-mode whitespace-mode)
+  (setq org-image-actual-width '(256))
   )
 
 (cl-defun muki:org-babel-options ()
