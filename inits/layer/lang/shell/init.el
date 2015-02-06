@@ -10,6 +10,19 @@
   (delete-trailing-whitespace)
   (indent-region (point-min) (point-max)))
 
+
+;; (add-hook 'js-mode-hook (lambda ()
+;;                           (flycheck-select-checker 'javascript-jslint-reporter)
+;;                           (flycheck-mode)))
+
+(cl-defun muki:shell-set-flycheck-checker ()
+  (liby 'flycheck
+    (flycheck-mode)
+    (flycheck-select-checker 'sh-shellcheck)))
+
+(add-hook 'sh-mode-hook
+          #'muki:shell-set-flycheck-checker)
+
 (add-hook 'sh-mode-hook
           (lambda ()
             (add-hook 'before-save-hook 'muki:shell-indent-buffer nil t)))
