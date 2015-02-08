@@ -4,7 +4,7 @@
 
 (req 'vendle
   ;;;; install packages
-  (vendle:check-packages)
+  ;; (vendle:check-packages)
 
   (vendle:turn-on-font-lock)
 

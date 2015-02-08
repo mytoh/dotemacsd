@@ -30,7 +30,7 @@
   '(outshine
     ;; navi
     org-autolist
-    org
+    ;; org
     org-pretty-table
     orgit
     org-download

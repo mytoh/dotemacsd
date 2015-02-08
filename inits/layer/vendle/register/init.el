@@ -932,7 +932,8 @@
                                      :tag ( "package" )))
   (add-project-root "helm-features" '(:tag ( "emacs-lisp" )))
   (add-project-root "helm-eww-bookmark" '(:tag ("helm" "eww" )))
-  (add-project-root "helm-eww-history" '(:tag ("helm" "eww" ))))
+  (add-project-root "helm-eww-history" '(:tag ("helm" "eww" )))
+  (add-project-root "helm-eshell-jump" '(:tag ("helm" "eshell"))))
 
 ;;;;;; skk
 (vendle:register "skk-dev/ddskk"
@@ -1214,7 +1215,8 @@
                 :tag ("eieio" "cedet")))
 (vendle:fetch "scymtym/rudel"
               '(:tag ("eieio")))
-(vendle:fetch "scymtym/moped")
+(vendle:fetch "scymtym/moped"
+              '(:tag ("clos" "eieio")))
 (vendle:fetch "scymtym/zencoding")
 (vendle:fetch "kiwanami/emacs-elroutine"
               '(:tag ("process")))
@@ -1352,6 +1354,7 @@
               '(:tag ("stumpwm")))
 (vendle:fetch "eggcaker/pelm"
               '(:tag ("org")))
+(vendle:fetch "bodil/ohai-emacs")
 ;; (vendle:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
 ;;               '(:tag ("common_lisp")
 ;;                 :type hg))
