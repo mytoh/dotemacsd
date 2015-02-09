@@ -311,7 +311,7 @@
 
 ;;;;; themem
 (muki-layer:load-layers 'theme
-  '(color-theme-sanityinc-tomorro))
+  '(color-theme-sanityinc-tomorrow))
 
 ;;;;; el-get
 ;; (require 'init-el-get)
