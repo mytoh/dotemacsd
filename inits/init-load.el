@@ -262,6 +262,7 @@
     helm-xmms2
     helm-recoll
     helm-lobste.rs
+    helm-hackernews
     ;; helm-company
     ;; helm-delicious
     ))
