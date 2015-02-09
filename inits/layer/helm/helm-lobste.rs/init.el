@@ -2,6 +2,7 @@
 
 ;;; Code:
 
-(req 'helm-lobste.rs)
+(liby 'helm-lobste.rs
+  (auto (helm-lobste.rs) "helm-lobste.rs"))
 
 ;;; init.el ends here
