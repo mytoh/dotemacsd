@@ -94,6 +94,8 @@
                  '(:tag ("helm" "xmms2")))
 (vendle:register "julienXX/helm-lobste.rs"
                  '(:tag ("helm" "lobste.rs" "news" "web")))
+(vendle:register "syohex/emacs-helm-hackernews"
+                 '(:tag ("helm" "hackernews" "news" "web")))
 (vendle:register "Fuco1/sallet"
                  '(:tag ("helm")
                    :deps ("lewang/flx")))
