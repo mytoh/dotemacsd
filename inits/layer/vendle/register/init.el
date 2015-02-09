@@ -920,6 +920,7 @@
 (vendle:register-theme "Soren-Nordstrom/motoko-theme")
 (vendle:register-theme "rashack/solarized-grey")
 (vendle:register-theme "vurmux/crazyfruits-color-theme")
+(vendle:register-theme "purcell/color-theme-sanityinc-tomorrow")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
