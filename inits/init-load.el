@@ -170,7 +170,7 @@
     itunes-bgm
     imagex
     browse-at-remote
-    real-auto-save
+    ;; real-auto-save
     ;; highlight-backquotes-mode
     ;; bqlist-lock
     ;; eshell-alias
