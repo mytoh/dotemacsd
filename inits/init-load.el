@@ -233,7 +233,7 @@
     ))
 
 (muki-layer:load-layers 'evil
-  '(eww
+  '(eww-mode
     ))
 
 (muki-layer:load-layers 'helm
