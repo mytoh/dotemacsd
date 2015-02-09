@@ -686,6 +686,8 @@
                    :info "info"))
 (vendle:register "ataka/emacs-wget"
                  '(:tag ("wget")))
+(vendle:register "rmuslimov/browse-at-remote"
+                 '(:tag ("github" "bitbucket" "git")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
