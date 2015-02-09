@@ -234,6 +234,7 @@
 
 (muki-layer:load-layers 'evil
   '(eww-mode
+    image-mode
     ))
 
 (muki-layer:load-layers 'helm
