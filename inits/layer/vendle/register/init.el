@@ -669,8 +669,6 @@
                  '(:tag ("mpd" "music")))
 (vendle:register "osanai3/eshell-tree"
                  '(:tag ("eshell")))
-(vendle:register "ChillarAnand/real-auto-save"
-                 '(:tag ("buffer" "auto-Save")))
 (vendle:register "nobrowser/dig-browser"
                  '(:tag ("dig" "dns")))
 (vendle:register "hagleitn/unicode-emoticons"
