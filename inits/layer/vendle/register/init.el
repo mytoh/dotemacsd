@@ -687,7 +687,9 @@
 (vendle:register "ataka/emacs-wget"
                  '(:tag ("wget")))
 (vendle:register "rmuslimov/browse-at-remote"
-                 '(:tag ("github" "bitbucket" "git")))
+                 '(:tag ("github" "bitbucket" "git")
+                   :deps ("magnars/s.el"
+                          "rejeep/f.el")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
