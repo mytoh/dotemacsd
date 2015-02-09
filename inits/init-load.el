@@ -169,6 +169,8 @@
     visual-ascii-mode
     itunes-bgm
     imagex
+    browse-at-remote
+    real-auto-save
     ;; highlight-backquotes-mode
     ;; bqlist-lock
     ;; eshell-alias
