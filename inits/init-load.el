@@ -170,6 +170,7 @@
     itunes-bgm
     imagex
     browse-at-remote
+    auto-save-buffers-enhanced
     ;; real-auto-save
     ;; highlight-backquotes-mode
     ;; bqlist-lock
@@ -197,7 +198,6 @@
     ;; vi-tilde-fringe
     ;; travis
     ;; git-gutter-fringe-plus
-    ;; auto-save-buffer-enhanced
     ;; js-beatify
     ;; camcorder
     ;; init-chart
