@@ -92,6 +92,9 @@
                  '(:tag ("helm")))
 (vendle:register "vanicat/helm-xmms2"
                  '(:tag ("helm" "xmms2")))
+(vendle:register "Fuco1/sallet"
+                 '(:tag ("helm")
+                   :deps ("lewang/flx")))
 
 ;;;;;  general packages
 (vendle:register "magnars/s.el")
@@ -112,6 +115,8 @@
 (vendle:register "wwwjfy/emacs-fish"
                  '(:tag "fish"))
 (vendle:register "jramnani/fish-mode"
+                 '(:tag "fish"))
+(vendle:register "d12frosted/fish-mode"
                  '(:tag "fish"))
 (vendle:register "thierryvolpiatto/emacs-bmk-ext")
 (vendle:register "kawabata/aozora-view")
