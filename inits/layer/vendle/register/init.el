@@ -690,6 +690,8 @@
                  '(:tag ("github" "bitbucket" "git")
                    :deps ("magnars/s.el"
                           "rejeep/f.el")))
+(vendle:register "chillaranand/real-auto-save"
+                 '(:tag ("autosave")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
