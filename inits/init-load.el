@@ -309,6 +309,9 @@
 (muki-layer:load-layers 'elisp
   '(csh-mode))
 
+;;;;; themem
+(muki-layer:load-layers 'theme
+  '(color-theme-sanityinc-tomorro))
 
 ;;;;; el-get
 ;; (require 'init-el-get)
