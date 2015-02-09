@@ -4,6 +4,7 @@
 (liby 'helm-ag
   (auto (helm-do-ag) "helm-ag")
   (set-option helm-ag-source-type 'file-line)
+  (setq helm-ag-insert-at-point 'symbol)
   (muki:define-launcher-key "a" 'helm-do-ag))
 
 ;; Local Variables:
