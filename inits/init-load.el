@@ -30,7 +30,7 @@
   '(outshine
     ;; navi
     org-autolist
-    ;; org
+    org
     org-pretty-table
     orgit
     org-download
@@ -168,6 +168,7 @@
     jaword
     visual-ascii-mode
     itunes-bgm
+    imagex
     ;; highlight-backquotes-mode
     ;; bqlist-lock
     ;; eshell-alias
@@ -178,7 +179,6 @@
     ;; aria2
     ;; ids-edit
     ;; recycle
-    ;; image-plus
     ;; slideview
     ;; command-dwim-2
     ;; moe-theme
