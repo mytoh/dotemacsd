@@ -438,7 +438,6 @@
 (vendle:register "Fuco1/free-keys")
 (vendle:register "Fuco1/banana.el"
                  '(:tag ("monad")))
-(vendle:register "kentaro/auto-save-buffers-enhanced")
 (vendle:register "josteink/csharp-mode"
                  '(:tag ("C#")
                    :compile nil))
@@ -690,6 +689,7 @@
                           "rejeep/f.el")))
 (vendle:register "chillaranand/real-auto-save"
                  '(:tag ("autosave")))
+(vendle:register "kentaro/auto-save-buffers-enhanced")
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
