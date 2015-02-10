@@ -10,6 +10,7 @@
               search-ring
               regexp-search-ring
               extended-command-history
+              eww-history
               ))
 ;; add helm history
 (seq-doseq (symbol (apropos-internal "\\`helm.*-history\\'" 'boundp))
