@@ -694,6 +694,7 @@
 (vendle:register "chillaranand/real-auto-save"
                  '(:tag ("autosave")))
 (vendle:register "kentaro/auto-save-buffers-enhanced")
+(vendle:register "m2ym/compilation-highlight-el")
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
