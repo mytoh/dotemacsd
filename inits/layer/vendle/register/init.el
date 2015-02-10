@@ -1369,6 +1369,7 @@
 (vendle:fetch "eggcaker/pelm"
               '(:tag ("org")))
 (vendle:fetch "bodil/ohai-emacs")
+(vendle:fetch "jwiegley/dot-emacs")
 ;; (vendle:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
 ;;               '(:tag ("common_lisp")
 ;;                 :type hg))
