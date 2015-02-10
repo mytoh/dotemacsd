@@ -154,8 +154,10 @@
                     (cons "Ricty Diminished Discord" "iso10646-1"))
   (set-fontset-font (frame-parameter nil 'font)
                     'unicode
-                    (cons "Ricty Diminished Discord" "iso10646-1"))
+                    (font-spec :name "Ricty Diminished Discord"
+                               :registry  "iso10646-1"))
   (set-face-attribute 'default nil :family "Ricty Diminished Discord" :height 80)
+  (set-face-attribute 'variable-pitch nil :family "Ricty Diminished Discord" )
   (set-fontset-font t 'symbol "Symbola" nil 'prepend))
 
 (cl-defun muki:set-font (type)
