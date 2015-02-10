@@ -171,6 +171,7 @@
     imagex
     browse-at-remote
     auto-save-buffers-enhanced
+    compilation-highlight
     ;; real-auto-save
     ;; highlight-backquotes-mode
     ;; bqlist-lock
