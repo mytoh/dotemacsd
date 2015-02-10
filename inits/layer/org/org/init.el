@@ -78,6 +78,10 @@
   ;; this option needed to resize images in org buffer.
   ;; if it's a numebr in list, use #ATTR_* :width setting insteaad if exists
   (setq org-image-actual-width '(256))
+
+  ;; Use a real ellipsis to render an ellipsis for =org= stuff like showing that a
+  ;; header is collapsed.
+  (set-option org-ellipsis "…")
   )
 
 (cl-defun muki:org-babel-options ()
