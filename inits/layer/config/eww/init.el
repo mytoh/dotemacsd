@@ -24,6 +24,15 @@
 (after 'eww
     (eww-disable-colours))
 
+(cl-defun muki:eww-turn-on-shr-fonts ()
+  "use monospaced or font-enabled layouts."
+  (interactive)
+  (setq shr-use-fonts t)
+  (message "Fonts are now on")
+  (eww-reload))
+
+(add-hook 'eww-mode-hook #'muki:eww-turn-on-shr-fonts)
+
 (liby 'eww
   (auto (eww) "eww")
   ;; (set-option url-user-agent  "Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0")
