@@ -152,6 +152,9 @@
   (set-fontset-font (frame-parameter nil 'font)
                     'katakana-jisx0201
                     (cons "Ricty Diminished Discord" "iso10646-1"))
+  (set-fontset-font (frame-parameter nil 'font)
+                    'unicode
+                    (cons "Ricty Diminished Discord" "iso10646-1"))
   (set-face-attribute 'default nil :family "Ricty Diminished Discord" :height 80)
   (set-fontset-font t 'symbol "Symbola" nil 'prepend))
 
