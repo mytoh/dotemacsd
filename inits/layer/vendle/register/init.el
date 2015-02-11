@@ -86,6 +86,10 @@
                            (:build ("gmake")
                                    :deps ("jwiegley/emacs-async")
                                    :tag "helm")))))
+(vendle:register "abo-abo/helm-org-wiki"
+                 '(:tag ("helm" "org")))
+(vendle:register "csantosb/helm-perso-wiki"
+                 '(:tag ("helm" "wiki" "org")))
 (vendle:register "yuutayamada/helm-shell-history"
                  '(:tag ("helm" "term")))
 (vendle:register "david-christiansen/helm-pages"
@@ -839,6 +843,8 @@
 (vendle:register "tj64/org-dp"
                  '(:tag ("org")))
 (vendle:register "p-m/org-notify"
+                 '(:tag ("org")))
+(vendle:register "vapniks/org-gather"
                  '(:tag ("org")))
 ;; (vendle:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ("org" "bongo" "music")

@@ -21,17 +21,8 @@
     (setq-local eww-disable-colorize nil)
     (eww-reload)))
 
-(after 'eww
-    (eww-disable-colours))
-
-(cl-defun muki:eww-turn-on-shr-fonts ()
-  "use monospaced or font-enabled layouts."
-  (interactive)
-  (setq shr-use-fonts t)
-  (message "Fonts are now on")
-  (eww-reload))
-
-(add-hook 'eww-mode-hook #'muki:eww-turn-on-shr-fonts)
+;; (after 'eww
+;;     (eww-disable-colours))
 
 (liby 'eww
   (auto (eww) "eww")
@@ -39,6 +30,7 @@
   ;; (set-option browse-url-browser-function 'eww-browse-url)
   (set-option eww-home-url "file:///home/mytoh/.org/etusivu/etusivu.html")
   (disable-option shr-image-animate)
+  (enable-option shr-use-fonts)
   (after 'eww
       (set-option eww-download-directory "~/huone/lataukset")
     ;; (set-option eww-search-prefix "https://duckduckgo.com/html/?q=!g+")
