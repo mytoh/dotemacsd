@@ -102,7 +102,8 @@
                  '(:tag ("helm" "hackernews" "news" "web")))
 (vendle:register "Fuco1/sallet"
                  '(:tag ("helm")
-                   :deps ("lewang/flx")))
+                   :deps ("lewang/flx"
+                          ("magnars/dash.el" ( :compile nil)))))
 
 ;;;;;  general packages
 (vendle:register "magnars/s.el")
@@ -846,6 +847,8 @@
                  '(:tag ("org")))
 (vendle:register "vapniks/org-gather"
                  '(:tag ("org")))
+(vendle:register "markus1189/org-pdfview"
+                 '(:tag ("org" "pdf")))
 ;; (vendle:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ("org" "bongo" "music")
 ;;                    :deps ("dbrock/bongo")
@@ -932,6 +935,7 @@
 (vendle:register-theme "rashack/solarized-grey")
 (vendle:register-theme "vurmux/crazyfruits-color-theme")
 (vendle:register-theme "purcell/color-theme-sanityinc-tomorrow")
+(vendle:register-theme "purcell/color-theme-sanityinc-solarized")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
