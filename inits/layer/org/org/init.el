@@ -43,7 +43,7 @@
   (disable-option org-descriptive-links)
   (set-option org-cycle-separator-lines 0)
   (set-option org-use-speed-commands
-              (lambda () (and (looking-at org-outline-regexp) (looking-back "^\**"))))
+              (clambda () (and (looking-at org-outline-regexp) (looking-back "^\**"))))
   (set-option org-catch-invisible-edits 'smart)
   (cl-pushnew  '("N" org-narrow-to-subtree) org-speed-commands-user)
   (cl-pushnew  '("W" widen) org-speed-commands-user)
@@ -118,7 +118,7 @@
       org-eww
       org-eshell
       ))
-  (seq-each (lambda (m) (cl-pushnew m org-modules))
+  (seq-each (clambda (m) (cl-pushnew m org-modules))
             my-org-modules)
   (when (executable-find "a2ps")
     (cl-pushnew  'org-checklist org-modules))
@@ -163,10 +163,10 @@
                (node-property (:key "url" :value ""))))))))
 
 (add-hook 'org-mode-hook
-          (lambda ()
-            (add-key org-mode-map
-              "C-c o o" #'helm-org-headlines
-              "C-c o b" #'muki:org-insert-book-drawer)))
+          (clambda ()
+              (add-key org-mode-map
+                "C-c o o" #'helm-org-headlines
+                "C-c o b" #'muki:org-insert-book-drawer)))
 
 ;;;; Viewing, navigating, and editing the Org tree
 ;;     I often cut and paste subtrees. This makes it easier to cut
@@ -177,8 +177,8 @@
   (setq org-yank-adjusted-subtrees t))
 
 (add-hook 'org-mode-hook
-          (lambda ()
-            (local-set-key (kbd "M-n") #'outline-next-visible-heading)
+          (clambda ()
+              (local-set-key (kbd "M-n") #'outline-next-visible-heading)
             (local-set-key (kbd "M-p") #'outline-previous-visible-heading)
             (local-set-key (kbd "M-u") #'outline-up-heading)
             ;; table
@@ -206,14 +206,14 @@
 (defun gcr/src-block-check ()
   (interactive)
   (org-element-map (org-element-parse-buffer 'element) 'src-block
-    (lambda (src-block)
-      (let ((language (org-element-property :language src-block)))
-        (cond ((null language)
-               (error "Missing language at position %d"
-                      (org-element-property :post-affiliated src-block)))
-              ((not (assoc-string language org-babel-load-languages))
-               (error "Unknown language at position %d"
-                      (org-element-property :post-affiliated src-block)))))))
+    (clambda (src-block)
+        (let ((language (org-element-property :language src-block)))
+          (cond ((null language)
+                 (error "Missing language at position %d"
+                        (org-element-property :post-affiliated src-block)))
+                ((not (assoc-string language org-babel-load-languages))
+                 (error "Unknown language at position %d"
+                        (org-element-property :post-affiliated src-block)))))))
   (message "Source blocks checked in %s." (buffer-name (buffer-base-buffer))))
 
 (req 'org-bullets

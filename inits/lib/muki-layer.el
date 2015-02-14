@@ -2,6 +2,8 @@
 
 ;;; Code:
 
+(require 'muki)
+
 (defcustom muki-layer:root
   (expand-file-name "inits/layer"
                     user-emacs-directory)
@@ -21,8 +23,8 @@
   (declare (indent 1))
   (setq debug-on-error t)
   (seq-each
-   (lambda (n)
-     (muki-layer:load category n))
+   (clambda (n)
+       (muki-layer:load category n))
    names)
   (setq debug-on-error nil)
   t)

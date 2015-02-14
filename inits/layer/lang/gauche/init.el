@@ -72,18 +72,18 @@
 
 ;; function from http://emacswiki.org/emacs/AddKeywords
 (cl-defun muki:gauche-add-keywords (face-name keyword-rules)
-  (let* ((keyword-list (seq-map (lambda (x)
-                                  (symbol-name (cdr x)))
+  (let* ((keyword-list (seq-map (clambda (x)
+                                    (symbol-name (cdr x)))
                                 keyword-rules))
          (keyword-regexp (concat "(\\("
                                  (regexp-opt keyword-list)
                                  "\\)[ \n]")))
     (font-lock-add-keywords 'scheme-mode
                             `((,keyword-regexp 1 ',face-name))))
-  (seq-each (lambda (x)
-              (put (cdr x)
-                   'scheme-indent-function
-                   (car x)))
+  (seq-each (clambda (x)
+                (put (cdr x)
+                 'scheme-indent-function
+                 (car x)))
             keyword-rules))
 
 (muki:gauche-add-keywords
@@ -4266,10 +4266,10 @@
 ;; scheme-mode-hook
 (defvar ac-source-scheme
   '((candidates
-     (lambda ()
-       (req 'scheme-complete)
+     (clambda ()
+         (req 'scheme-complete)
        (all-completions ac-target (car (scheme-current-env))))))
   "Source for scheme keywords.")
 (add-hook 'scheme-mode-hook
-          (lambda ()
-            (add-to-list 'ac-sources 'ac-source-scheme)))
+          (clambda ()
+              (add-to-list 'ac-sources 'ac-source-scheme)))

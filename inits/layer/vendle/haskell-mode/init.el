@@ -11,7 +11,7 @@
   (when (executable-find "hasktags")
     (enable-option haskell-tags-on-save)
     (add-hook 'haskell-mode-hook
-              (lambda () (define-key haskell-mode-map (kbd "M-.") #'haskell-mode-jump-to-def-or-tag))))
+              (clambda () (define-key haskell-mode-map (kbd "M-.") #'haskell-mode-jump-to-def-or-tag))))
 
   (enable-option haskell-process-suggest-remove-import-lines
                  haskell-process-auto-import-loaded-modules

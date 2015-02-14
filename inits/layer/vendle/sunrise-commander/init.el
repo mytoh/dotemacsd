@@ -45,15 +45,15 @@
   (cl-letf* ((cvalues '(1 2 3 4 5 6 7 8 9 a b c d e f))
              (len (length cvalues))
              (lst (make-list 6 0))
-             (nums (seq-map (lambda (_) (cl-nth-value (cl-random len) cvalues))
+             (nums (seq-map (clambda (_) (cl-nth-value (cl-random len) cvalues))
                             lst)))
     (concat "#"
             (mapconcat
-             (lambda (x)
-               (cond ((numberp x)
-                      (number-to-string x))
-                     ((symbolp x)
-                      (symbol-name x))))
+             (clambda (x)
+                 (cond ((numberp x)
+                        (number-to-string x))
+                       ((symbolp x)
+                        (symbol-name x))))
              nums ""))))
 
 (liby 'sunrise-commander

@@ -11,7 +11,7 @@
   (indent-region (point-min) (point-max)))
 
 
-;; (add-hook 'js-mode-hook (lambda ()
+;; (add-hook 'js-mode-hook (clambda ()
 ;;                           (flycheck-select-checker 'javascript-jslint-reporter)
 ;;                           (flycheck-mode)))
 
@@ -24,5 +24,5 @@
           #'muki:shell-set-flycheck-checker)
 
 (add-hook 'sh-mode-hook
-          (lambda ()
-            (add-hook 'before-save-hook 'muki:shell-indent-buffer nil t)))
+          (clambda ()
+              (add-hook 'before-save-hook 'muki:shell-indent-buffer nil t)))

@@ -4,19 +4,19 @@
             auto-mode-alist)
 
 (cl-defun muki:elisp-add-keywords (face-name keyword-rules)
-          (cl-letf* ((keyword-list (seq-map (lambda (x)
-                                              (symbol-name (cdr x)))
-                                            keyword-rules))
-                     (keyword-regexp (concat "(\\("
-                                             (regexp-opt keyword-list)
-                                             "\\)[ \n]")))
-                    (font-lock-add-keywords  'emacs-lisp-mode
-                                             `((,keyword-regexp 1 ',face-name))))
-          (seq-each (lambda (x)
-                      (put (cdr x)
-                           'scheme-indent-function
-                           (car x)))
-                    keyword-rules))
+  (cl-letf* ((keyword-list (seq-map (clambda (x)
+                                        (symbol-name (cdr x)))
+                                    keyword-rules))
+             (keyword-regexp (concat "(\\("
+                                     (regexp-opt keyword-list)
+                                     "\\)[ \n]")))
+    (font-lock-add-keywords  'emacs-lisp-mode
+                             `((,keyword-regexp 1 ',face-name))))
+  (seq-each (clambda (x)
+                (put (cdr x)
+                 'scheme-indent-function
+                 (car x)))
+            keyword-rules))
 
 
 (muki:elisp-add-keywords
@@ -58,19 +58,19 @@
      (1 'font-lock-function-name-face))))
 
 (cl-defun muki:elisp-buffer-enable-reindent ()
-          (add-hook 'before-save-hook #'muki:lisp-cleanup nil t)
-          (add-hook 'before-save-hook #'muki:indent-buffer nil t))
+  (add-hook 'before-save-hook #'muki:lisp-cleanup nil t)
+  (add-hook 'before-save-hook #'muki:indent-buffer nil t))
 
 (cl-defun muki:elisp-check-parens ()
-          (add-hook 'after-save-hook #'check-parens))
+  (add-hook 'after-save-hook #'check-parens))
 
 (add-hook 'emacs-lisp-mode-hook #'muki:elisp-buffer-enable-reindent)
 (add-hook 'emacs-lisp-mode-hook #'muki:elisp-check-parens)
 (add-hook 'emacs-lisp-mode-hook #'checkdoc-minor-mode)
 (add-hook 'emacs-lisp-mode-hook #'eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook
-          (lambda ()
-            (setq mode-name " ξ ")))
+          (clambda ()
+              (setq mode-name " ξ ")))
 
 (defun-add-hook muki:elisp-pretty-symbols (emacs-lisp-mode-hook)
   (push '(">=" . ?≥) prettify-symbols-alist))
@@ -83,4 +83,4 @@
 
 ;;; flycheck
 (liby 'flycheck
-      (add-hook 'emacs-lisp-mode-hook #'flycheck-mode))
+  (add-hook 'emacs-lisp-mode-hook #'flycheck-mode))

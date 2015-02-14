@@ -5,8 +5,8 @@
 
 
 (cl-defun muki:scheme-add-keywords (face-name keyword-rules)
-  (cl-letf* ((keyword-list (seq-map (lambda (x)
-                                      (symbol-name (cdr x)))
+  (cl-letf* ((keyword-list (seq-map (clambda (x)
+                                        (symbol-name (cdr x)))
                                     keyword-rules))
              (keyword-regexp (concat "(\\("
                                      (regexp-opt keyword-list)
@@ -16,10 +16,10 @@
               " on scheme mode")
     (font-lock-add-keywords 'scheme-mode
                             `((,keyword-regexp 1 ',face-name))))
-  (seq-each (lambda (x)
-              (put (cdr x)
-                   'scheme-indent-function
-                   (car x)))
+  (seq-each (clambda (x)
+                (put (cdr x)
+                 'scheme-indent-function
+                 (car x)))
             keyword-rules))
 
 ;; (setq process-coding-system-alist
@@ -68,12 +68,12 @@
 ;; scheme-mode-hook
 (defvar ac-source-scheme
   '((candidates
-     (lambda ()
-       (req 'scheme-complete)
+     (clambda ()
+         (req 'scheme-complete)
        (all-completions ac-target (car (scheme-current-env))))))
   "Source for scheme keywords.")
 ;; (add-hook 'scheme-mode-hook
-;;           (lambda ()
+;;           (clambda ()
 ;;               (make-local-variable 'ac-sources)
 ;;               (add-to-list 'ac-sources 'ac-source-scheme)))
 

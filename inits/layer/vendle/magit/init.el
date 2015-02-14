@@ -18,8 +18,8 @@
   (set-option magit-repo-dirs '("~/huone/projektit"))
   ;; auto fill
   (hook 'magit-log-edit-mode-hook
-        (lambda ()
-          (set (make-local-variable 'fill-column) 72)
+        (clambda ()
+            (set (make-local-variable 'fill-column) 72)
           (turn-on-auto-fill))))
 
 (auto (magit-status) "magit")

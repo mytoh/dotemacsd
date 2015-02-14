@@ -17,12 +17,12 @@
   (add-hook 'message-mode-hook #'outline-minor-mode)
 
   (add-hook 'org-mode-hook
-            (lambda ()
-              ;; Redefine arrow keys, since promoting/demoting and moving
-              ;; subtrees up and down are less frequent tasks then
-              ;; navigation and visibility cycling
-              (org-defkey org-mode-map
-                          (kbd "M-<left>") #'outline-hide-more)
+            (clambda ()
+                ;; Redefine arrow keys, since promoting/demoting and moving
+                ;; subtrees up and down are less frequent tasks then
+                ;; navigation and visibility cycling
+                (org-defkey org-mode-map
+                 (kbd "M-<left>") #'outline-hide-more)
               (org-defkey org-mode-map
                           (kbd "M-<right>") #'outline-show-more)
               (org-defkey org-mode-map

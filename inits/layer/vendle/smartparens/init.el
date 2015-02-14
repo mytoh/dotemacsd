@@ -70,9 +70,9 @@
 
   (cl-defun muki:smartparens-setup-strict-modes ()
     (seq-each
-     (lambda (mode)
-       (let ((hook (intern (format "%s-hook" (symbol-name mode)))))
-         (add-hook hook #'smartparens-strict-mode)))
+     (clambda (mode)
+         (let ((hook (intern (format "%s-hook" (symbol-name mode)))))
+           (add-hook hook #'smartparens-strict-mode)))
      muki:lisp-modes))
 
   (muki:smartparens-setup-strict-modes)
