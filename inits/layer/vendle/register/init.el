@@ -700,6 +700,9 @@
                  '(:tag ("autosave")))
 (vendle:register "kentaro/auto-save-buffers-enhanced")
 (vendle:register "m2ym/compilation-highlight-el")
+(vendle:register "ongaeshi/auto-shell-command"
+                 '(:deps ("kiwanami/emacs-deferred")
+                   :desc "Run the shell command **asynchronously** that you specified when you save the file."))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
@@ -749,8 +752,10 @@
                  '(:tag "evil"))
 (vendle:register "linktohack/evil-space"
                  '(:tag "evil"))
-(vendle:register "jschaf/evil-smartparens"
-                 '(:tag "evil"))
+;; (vendle:register "jschaf/evil-smartparens"
+;;                  '(:tag "evil"))
+(vendle:register "expez/evil-smartparens"
+                 '(:tag ("evil" "smartparens")))
 (vendle:register "edwtjo/evil-projectile"
                  '(:tag "evil"))
 (vendle:register "nadavspi/evil-linewise"
@@ -936,6 +941,7 @@
 (vendle:register-theme "vurmux/crazyfruits-color-theme")
 (vendle:register-theme "purcell/color-theme-sanityinc-tomorrow")
 (vendle:register-theme "purcell/color-theme-sanityinc-solarized")
+(vendle:register-theme "bbatsov/solarized-emacs")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1381,6 +1387,8 @@
               '(:tag ("org")))
 (vendle:fetch "bodil/ohai-emacs")
 (vendle:fetch "jwiegley/dot-emacs")
+(vendle:fetch "expez/.emacs.d")
+;; (vendle:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 ;; (vendle:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
 ;;               '(:tag ("common_lisp")
 ;;                 :type hg))
