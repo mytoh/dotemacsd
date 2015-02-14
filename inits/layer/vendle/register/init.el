@@ -703,6 +703,8 @@
 (vendle:register "ongaeshi/auto-shell-command"
                  '(:deps ("kiwanami/emacs-deferred")
                    :desc "Run the shell command **asynchronously** that you specified when you save the file."))
+(vendle:register "chumpage/chumpy-windows"
+                 '(:tag ("window" "layout")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
