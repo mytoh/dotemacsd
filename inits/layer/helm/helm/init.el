@@ -32,9 +32,9 @@ Otherwise goto the end of minibuffer."
   ;; bind C-1 to C-9 to actions
   (cl-loop for n from 0 to 8 do
        (add-key helm-map (format "C-%s" (1+ n))
-                `(clambda ()
-                          (interactive)
-                          (helm-select-nth-action ,n))))
+                `(lambda ()
+                   (interactive)
+                   (helm-select-nth-action ,n))))
 
   (add-global-key "M-x" #'helm-M-x
                   "C-c C-m" #'helm-M-x
