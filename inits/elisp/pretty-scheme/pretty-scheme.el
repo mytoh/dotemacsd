@@ -9,13 +9,13 @@ form (REGEXP . CHAR). REGEXP will be replaced with CHAR in the
 relevant buffer(s)."
   (font-lock-add-keywords
    mode
-   (seq-map (lambda (kw) `(,(concat "(\\("
-                               (car kw)
-                               "\\)[) \t\n]")
-                       (0 (prog1 nil
-                            (compose-region (match-beginning 1)
-                                            (match-end 1)
-                                            ,(cdr kw))))))
+   (seq-map (clambda (kw) `(,(concat "(\\("
+                                     (car kw)
+                                     "\\)[) \t\n]")
+                             (0 (prog1 nil
+                                  (compose-region (match-beginning 1)
+                                                  (match-end 1)
+                                                  ,(cdr kw))))))
             keywords)))
 
 (defvar pretty-scheme-function-keywords

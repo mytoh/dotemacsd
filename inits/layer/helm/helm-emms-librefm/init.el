@@ -31,12 +31,12 @@
 
 (cl-defun helm-librefm-stream-station-tag (tags)
   (seq-map
-   (lambda (tag)
-     (cons
-      tag
-      (cl-concatenate 'string
-                      "librefm://globaltags/"
-                      tag)))
+   (clambda (tag)
+            (cons
+             tag
+             (cl-concatenate 'string
+                             "librefm://globaltags/"
+                             tag)))
    tags))
 
 (defvar helm-librefm-stream-global-tags

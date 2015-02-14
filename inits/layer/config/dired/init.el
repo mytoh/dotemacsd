@@ -53,7 +53,7 @@
 
 ;; dired
 (add-hook 'dired-load-hook
-          (lambda () (load "dired-x")))
+          (clambda () (load "dired-x")))
 (set-option dired-guess-shell-alist-user
             `(( ,(rx  "."
                       (or "jpg"

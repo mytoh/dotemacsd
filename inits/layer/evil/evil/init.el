@@ -16,7 +16,7 @@
   (muki:init-evil-visualstar)
   (muki:init-evil-smartparens)
   (muki:init-evil-search-highlight-persist)
-  ;; (muki:init-evil-easymotion)
+  (muki:init-evil-easymotion)
   (muki:init-evil-textobj-between)
   (muki:init-evil-extra-operator)
   (muki:init-evil-snipe)
@@ -58,11 +58,11 @@
 
   ;; [[https://github.com/supermomonga/dot-emacs/blob/master/package-config/evil.el]]
   (add-key evil-normal-state-map  "C-h"
-           (lambda ()
-             (interactive)
-             (evil-insert-state)
-             (insert-string " ")
-             (evil-normal-state)))
+           (clambda ()
+                    (interactive)
+                    (evil-insert-state)
+                    (insert-string " ")
+                    (evil-normal-state)))
 
   ;; 物理行移動と論理行移動を入れ替え
   ;; http://d.hatena.ne.jp/tarao/20130304/evil_config#misc-physical-line
@@ -78,12 +78,12 @@
 
   ;; [[http://stackoverflow.com/questions/8483182/evil-mode-best-practice]]
   (seq-each
-   (lambda (l)
-     (seq-each
-      (lambda (m)
-        (add-key m (car l) (cdr l)))
-      (list evil-insert-state-map
-            evil-motion-state-map)))
+   (clambda (l)
+            (seq-each
+             (clambda (m)
+                      (add-key m (car l) (cdr l)))
+             (list evil-insert-state-map
+                   evil-motion-state-map)))
    '(("C-e" . evil-end-of-line)
      ("C-n" . evil-next-line)
      ("C-p" . evil-previous-line)

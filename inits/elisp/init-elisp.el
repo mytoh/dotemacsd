@@ -2,8 +2,8 @@
 (add-subdirs-to-load-path (muki:user-emacs-directory "inits/elisp"))
 
 (cl-defun muki:csh-add-keywords (face-name keyword-rules)
-  (cl-letf* ((keyword-list (seq-map (lambda (x)
-                                      (symbol-name (cdr x)))
+  (cl-letf* ((keyword-list (seq-map (clambda (x)
+                                             (symbol-name (cdr x)))
                                     keyword-rules))
              (keyword-regexp (concat "(\\("
                                      (regexp-opt keyword-list)

@@ -38,7 +38,7 @@
 
 ;; make read only when file under certain directory
 ;; (add-hook 'find-file-hook
-;;           (lambda ()
+;;           (clambda ()
 ;;             (if (and buffer-file-name
 ;;                                 (string-match (regexp-opt `(,(expand-file-name (cl-concatenate 'string user-emacs-directory "elpa"))))
 ;;                                               buffer-file-name)

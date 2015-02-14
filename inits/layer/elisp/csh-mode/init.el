@@ -15,7 +15,7 @@
 
 ;; (req 'csh-mode
 ;;      (setq csh-mode-hook
-;;            (lambda ()
+;;            (clambda ()
 ;;              (font-lock-mode 1)             ;; font-lock the buffer
 ;;              (setq csh-indent 4)
 ;;              (setq csh-tab-always-indent t)
