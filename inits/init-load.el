@@ -232,6 +232,7 @@
     evil-snipe
     evil-visual-mark-mode
     evil-anzu
+    evil-smartparens
     evil
     ))
 
@@ -314,7 +315,8 @@
 
 ;;;;; themem
 (muki-layer:load-layers 'theme
-  '(color-theme-sanityinc-tomorrow))
+  '(color-theme-sanityinc-tomorrow
+    color-theme-sanityinc-solarized))
 
 ;;;;; el-get
 ;; (require 'init-el-get)

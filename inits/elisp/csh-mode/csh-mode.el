@@ -585,7 +585,7 @@ the minibuffer"
 
 ;;;###autoload
 (define-derived-mode csh-mode  prog-mode "Csh"
-                     "csh-mode 2.0 - Major mode for editing csh and tcsh scripts.
+  "csh-mode 2.0 - Major mode for editing csh and tcsh scripts.
 Special key bindings and commands:
 \\{csh-mode-map}
 Variables controlling indentation style:
@@ -681,29 +681,29 @@ Installation:
          (setq csh-match-and-tell t)
          (setq csh-align-to-keyword t)  ;; Turn on keyword alignment
      )))"
-                     :syntax-table csh-mode-syntax-table
-                     :abbrev-table csh-mode-abbrev-table
-                     (use-local-map csh-mode-map)
-                     (make-local-variable 'indent-line-function)
-                     (setq indent-line-function 'csh-indent-line)
-                     (make-local-variable 'indent-region-function)
-                     (setq indent-region-function 'csh-indent-region)
-                     (make-local-variable 'comment-start)
-                     (setq comment-start "# ")
-                     (make-local-variable 'comment-end)
-                     (setq comment-end "")
-                     (make-local-variable 'comment-column)
-                     (setq comment-column 32)
-                     (make-local-variable 'comment-start-skip)
-                     (setq comment-start-skip "#+ *")
-                     ;;
-                     ;; config font-lock mode
-                     (make-local-variable 'font-lock-defaults)
-                     (setq font-lock-defaults
-                           (list
-                            csh-font-lock-keywords
-                            t t nil nil))
-                     )
+  :syntax-table csh-mode-syntax-table
+  :abbrev-table csh-mode-abbrev-table
+  (use-local-map csh-mode-map)
+  (make-local-variable 'indent-line-function)
+  (setq indent-line-function 'csh-indent-line)
+  (make-local-variable 'indent-region-function)
+  (setq indent-region-function 'csh-indent-region)
+  (make-local-variable 'comment-start)
+  (setq comment-start "# ")
+  (make-local-variable 'comment-end)
+  (setq comment-end "")
+  (make-local-variable 'comment-column)
+  (setq comment-column 32)
+  (make-local-variable 'comment-start-skip)
+  (setq comment-start-skip "#+ *")
+  ;;
+  ;; config font-lock mode
+  (make-local-variable 'font-lock-defaults)
+  (setq font-lock-defaults
+        (list
+         csh-font-lock-keywords
+         t t nil nil))
+  )
 
 ;; Completion code supplied by Haavard Rue <hrue@imf.unit.no>.
 ;;

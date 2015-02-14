@@ -41,7 +41,7 @@
   ;;; (eww "http://www.cman.jp/network/support/go_access.cgi")
   (require 'url-http)
   ;; (defvar url-user-agent-string "w3m/0.5.3")
-  (defvar url-user-agent-string  "Mozilla/5.0 (X11; FreeBSD amd64; rv:31.0) Gecko/20100101 Firefox/31.0 conkeror/1.0pre1")
+  (setq url-user-agent-string  "Mozilla/5.0 (X11; FreeBSD amd64; rv:31.0) Gecko/20100101 Firefox/31.0 conkeror/1.0pre1")
   (cl-defun url-user-agent ()
     (format "User-Agent: %s\r\n" url-user-agent-string))
 

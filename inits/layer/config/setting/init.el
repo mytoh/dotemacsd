@@ -76,9 +76,9 @@
 (enable-option image-animate-loop)
 (add-hook 'image-mode-hook
           (clambda ()
-                   (cl-letf ((image (image-get-display-property)))
-                     (if (image-multi-frame-p image)
-                         (image-toggle-animation)))))
+              (cl-letf ((image (image-get-display-property)))
+                (if (image-multi-frame-p image)
+                    (image-toggle-animation)))))
 ;; (set-option image-transform-resize 'fit-height)
 
 ;;;; add file types
@@ -262,7 +262,7 @@
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
 ;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson
-(defvar muki:x-theme 'sanityinc-tomorrow-night)
+(defvar muki:x-theme 'solarized-dark)
 (defvar muki:term-theme 'flatland)
 
 (enable-option select-enable-clipboard
@@ -291,10 +291,10 @@
 (after 'info
     (seq-each
      (clambda (dir)
-              (cl-pushnew dir Info-additional-directory-list))
+         (cl-pushnew dir Info-additional-directory-list))
      (seq-filter
       (clambda (dir) (and (file-directory-p dir)
-                          (file-exists-p dir)))
+                      (file-exists-p dir)))
       (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
