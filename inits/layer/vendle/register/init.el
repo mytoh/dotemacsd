@@ -1390,6 +1390,10 @@
 (vendle:fetch "bodil/ohai-emacs")
 (vendle:fetch "jwiegley/dot-emacs")
 (vendle:fetch "expez/.emacs.d")
+(vendle:fetch "fjyuu/dotfiles")
+(vendle:fetch "wasamasa/xbm-life")
+(vendle:fetch "bodil/microkanrens"
+              '(:tag ("logic" "kanren")))
 ;; (vendle:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 ;; (vendle:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
 ;;               '(:tag ("common_lisp")

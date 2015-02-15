@@ -19,35 +19,35 @@
 
 ;; ここが腕の見せ所
 (defvar template-replacements-alists
-  '(("%file-base%" . (clambda () (file-name-base (file-name-nondirectory (buffer-file-name)))))
-    ("%file%"             . (clambda () (file-name-nondirectory (buffer-file-name))))))
+  '(("%file-base%" . (lambda () (file-name-base (file-name-nondirectory (buffer-file-name)))))
+    ("%file%"             . (lambda () (file-name-nondirectory (buffer-file-name))))))
 
 (defun muki:elisp-template ()
   (time-stamp)
-  (seq-each (clambda (c)
-                     (cl-locally
-                         (goto-char (point-min))
-                       (replace-string (car c) (funcall (cdr c)) nil)))
+  (seq-each (lambda (c)
+              (cl-locally
+                  (goto-char (point-min))
+                (replace-string (car c) (funcall (cdr c)) nil)))
             template-replacements-alists)
   (goto-char (point-max))
   (message "done."))
 
 (defun muki:scheme-template ()
   (time-stamp)
-  (seq-each (clambda (c)
-                     (cl-locally
-                         (goto-char (point-min))
-                       (replace-string (car c) (funcall (cdr c)) nil)))
+  (seq-each (lambda (c)
+              (cl-locally
+                  (goto-char (point-min))
+                (replace-string (car c) (funcall (cdr c)) nil)))
             template-replacements-alists)
   (goto-char (point-max))
   (message "done."))
 
 (defun muki:shell-template ()
   (time-stamp)
-  (seq-each (clambda (c)
-                     (cl-locally
-                         (goto-char (point-min))
-                       (replace-string (car c) (funcall (cdr c)) nil)))
+  (seq-each (lambda (c)
+              (cl-locally
+                  (goto-char (point-min))
+                (replace-string (car c) (funcall (cdr c)) nil)))
             template-replacements-alists)
   (goto-char (point-max))
   (message "done."))

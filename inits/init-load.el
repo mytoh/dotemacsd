@@ -172,6 +172,7 @@
     browse-at-remote
     auto-save-buffers-enhanced
     compilation-highlight
+    conkeror-minor-mode
     ;; real-auto-save
     ;; highlight-backquotes-mode
     ;; bqlist-lock
@@ -239,6 +240,7 @@
 (muki-layer:load-layers 'evil
   '(eww-mode
     image-mode
+    paradox-mode
     ))
 
 (muki-layer:load-layers 'helm
