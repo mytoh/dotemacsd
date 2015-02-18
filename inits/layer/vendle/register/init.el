@@ -705,6 +705,16 @@
                    :desc "Run the shell command **asynchronously** that you specified when you save the file."))
 (vendle:register "chumpage/chumpy-windows"
                  '(:tag ("window" "layout")))
+(vendle:register "kljohann/mpv.el"
+                 '(:deps ( "Bruce-Connor/names"
+                          ( "git://orgmode.org/org-mode.git"
+                           (:load-path ("lisp" "contrib/lisp")
+                                       :compile nil
+                                       :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
+                                       :info "doc"
+                                       :tag "org")))))
+(vendle:register "danielsz/Palimpsest")
+(vendle:register "rolandwalker/ignoramus")
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
@@ -944,6 +954,9 @@
 (vendle:register-theme "purcell/color-theme-sanityinc-tomorrow")
 (vendle:register-theme "purcell/color-theme-sanityinc-solarized")
 (vendle:register-theme "bbatsov/solarized-emacs")
+(vendle:register-theme "matteobanerjee/orpheus-theme")
+(vendle:register-theme "yveszoundi/emacs-rimero-theme")
+(vendle:register-theme "holomorph/emacs-zenburn")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1394,6 +1407,10 @@
 (vendle:fetch "wasamasa/xbm-life")
 (vendle:fetch "bodil/microkanrens"
               '(:tag ("logic" "kanren")))
+(vendle:fetch "emacs-pe/cookiecutter-emacs"
+              '(:tag ("cookiecutter" "template")))
+(vendle:fetch "edrx/eev"
+              '(:site "http://angg.twu.net/#eev"))
 ;; (vendle:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 ;; (vendle:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
 ;;               '(:tag ("common_lisp")
