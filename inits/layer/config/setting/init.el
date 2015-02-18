@@ -208,8 +208,11 @@
 ;;;; display buffer end
 (enable-option indicate-empty-lines)
 
+;;;; electric layout
+(disable-option electric-layout-mode)
+
 ;;;; electric indent
-(enable-option electric-layout-mode)
+(disable-option electric-indent-mode)
 
 ;;;; add newline to end of file
 (enable-option require-final-newline)
