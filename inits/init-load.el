@@ -173,6 +173,7 @@
     auto-save-buffers-enhanced
     compilation-highlight
     conkeror-minor-mode
+    mpv
     ;; real-auto-save
     ;; highlight-backquotes-mode
     ;; bqlist-lock
