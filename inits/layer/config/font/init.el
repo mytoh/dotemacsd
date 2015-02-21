@@ -177,9 +177,10 @@
      (set-cyrillic-font)
      (set-japanese-font))))
 
-;; (set-default-font-size)
-;; (muki:set-font 'bitmap)
-;; (set-ricty-font)
-(set-ricty-diminished-font)
+(if (display-graphic-p)
+    ;; (set-default-font-size)
+    ;; (muki:set-font 'bitmap)
+    ;; (set-ricty-font)
+    (set-ricty-diminished-font))
 
 ;; [[http://nya-0.hatenablog.com/entry/2014/03/17/174309]]
