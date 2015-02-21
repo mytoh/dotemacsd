@@ -125,13 +125,20 @@
   (set-option org-modules
               (cl-remove 'org-docview org-modules)))
 
+(cl-defun muki:org-capture-setting ()
+  (setq org-capture-templates
+        '(("t" "Todo" entry (file+headline "~/.org/gtd.org" "Tasks")
+           "* TODO %?\n  %i\n  %a")
+          ("i" "Inbox" entry (file+datetree "~/.org/inbox.org")
+           "* %?\nEntered on %U\n  %i\n  %a"))))
 
 (cl-defun muki:org-mode-hook-function ()
   (muki:org-general-options)
   (muki:org-startup-options)
   (muki:org-html-export-options)
   (muki:org-babel-options)
-  (muki:org-set-modules))
+  (muki:org-set-modules)
+  (muki:org-capture-setting))
 
 (after 'org
     (muki:org-mode-hook-function))
