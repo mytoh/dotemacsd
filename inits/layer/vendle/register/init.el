@@ -317,7 +317,10 @@
 (vendle:register "remyferre/comment-dwim-2")
 (vendle:register "capitaomorte/sly"
                  '(:build ("gmake compile contrib-compile")))
-(vendle:register "hayamiz/twittering-mode")
+(vendle:register "hayamiz/twittering-mode"
+                 '(:tag ("twitter")))
+(vendle:register "mhayashi1120/Emacs-twittering-stream"
+                 '(:tag ("twitter")))
 (vendle:register "defunkt/coffee-mode")
 (vendle:register "fbkante/recycle")
 (vendle:register "kawabata/ids-edit")
@@ -957,6 +960,8 @@
 (vendle:register-theme "matteobanerjee/orpheus-theme")
 (vendle:register-theme "yveszoundi/emacs-rimero-theme")
 (vendle:register-theme "holomorph/emacs-zenburn")
+(vendle:register-theme "darrik/zenesque-theme")
+(vendle:register-theme "Corsair/emacs-flatui-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1411,10 +1416,12 @@
               '(:tag ("cookiecutter" "template")))
 (vendle:fetch "edrx/eev"
               '(:site "http://angg.twu.net/#eev"))
+(vendle:fetch "laynor/smotitah"
+              '(:tag ("configuration")))
+(vendle:fetch "snosov1/dot-emacs")
+(vendle:fetch "pierre-lecocq/emacs.d")
 ;; (vendle:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
-;; (vendle:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
-;;               '(:tag ("common_lisp")
-;;                 :type hg))
 
+;;                 :type hg))
 ;;; init-vendle-registers.el ends here
 ;;
