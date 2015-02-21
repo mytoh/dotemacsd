@@ -39,9 +39,11 @@
                      "cyan")
 
 (whitespace-newline-mode)
-(set-face-foreground 'whitespace-newline
-                     (color-lighten-name (face-background 'default)
-                                         30))
+(add-hook 'after-init-hook
+          (lambda ()
+            (set-face-foreground 'whitespace-newline
+                                 (color-lighten-name (face-background 'default)
+                                                     30))))
 
 ;; デフォルトで視覚化を有効にする。
 (global-whitespace-mode 1)
