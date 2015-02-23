@@ -21,6 +21,9 @@
                  ;; (event "eventyp.xrea.jp")
                  (message "peercast.takami98.net/message-yp")))
 
+  ;; (set-option helm-ypv-player-type 'mpv)
+  (set-option helm-ypv-default-protocol "http")
+
   ;; (helm-migemize-command 'helm-ypv)
   )
 

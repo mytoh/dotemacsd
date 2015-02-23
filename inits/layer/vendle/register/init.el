@@ -718,6 +718,13 @@
                                        :tag "org")))))
 (vendle:register "danielsz/Palimpsest")
 (vendle:register "rolandwalker/ignoramus")
+(vendle:register "anler/centered-window-mode"
+                 '(:tag ("writing")))
+(vendle:register "milkypostman/hl-sentence"
+                 '(:tag ("writing" "reading" "highlight")))
+(vendle:register "joostkremers/writeroom-mode"
+                 '(:tag ("writing")
+                   :deps ("joostkremers/visual-fill-column")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
@@ -1420,6 +1427,7 @@
               '(:tag ("configuration")))
 (vendle:fetch "snosov1/dot-emacs")
 (vendle:fetch "pierre-lecocq/emacs.d")
+(vendle:fetch "meteor1113/dotemacs")
 ;; (vendle:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;;                 :type hg))

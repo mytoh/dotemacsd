@@ -160,6 +160,26 @@
   (set-face-attribute 'variable-pitch nil :family "Ricty Diminished Discord" )
   (set-fontset-font t 'symbol "Symbola" nil 'prepend))
 
+
+(cl-defun set-myrica-font ()
+  ;; [[http://mgi.hatenablog.com/entry/2014/02/11/085108]]
+  (set-fontset-font (frame-parameter nil 'font)
+                    'japanese-jisx0208
+                    (cons "Myrica M" "iso10646-1"))
+  (set-fontset-font (frame-parameter nil 'font)
+                    'japanese-jisx0212
+                    (cons "Myrica M"  "iso10646-1"))
+  (set-fontset-font (frame-parameter nil 'font)
+                    'katakana-jisx0201
+                    (cons "Myrica M" "iso10646-1"))
+  (set-fontset-font (frame-parameter nil 'font)
+                    'unicode
+                    (font-spec :name "Myrica M"
+                               :registry  "iso10646-1"))
+  (set-face-attribute 'default nil :family "Myrica M" :height 90)
+  (set-face-attribute 'variable-pitch nil :family "Myrica M" )
+  (set-fontset-font t 'symbol "Symbola" nil 'prepend))
+
 (cl-defun muki:set-font (type)
   (cond
     ((cl-equalp type 'bitmap)
@@ -181,6 +201,8 @@
     ;; (set-default-font-size)
     ;; (muki:set-font 'bitmap)
     ;; (set-ricty-font)
-    (set-ricty-diminished-font))
+    (set-ricty-diminished-font)
+  ;; (set-myrica-font)
+  )
 
 ;; [[http://nya-0.hatenablog.com/entry/2014/03/17/174309]]

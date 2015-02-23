@@ -174,6 +174,9 @@
     compilation-highlight
     conkeror-minor-mode
     mpv
+    writeroom-mode
+    ;; hl-sentence
+    ;; centered-window-mode
     ;; real-auto-save
     ;; highlight-backquotes-mode
     ;; bqlist-lock
