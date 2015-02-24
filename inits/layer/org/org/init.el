@@ -223,6 +223,18 @@
                         (org-element-property :post-affiliated src-block)))))))
   (message "Source blocks checked in %s." (buffer-name (buffer-base-buffer))))
 
+(cl-defun org-find-duplicate-drawers ()
+  ;; [[http://lists.gnu.org/archive/html/emacs-orgmode/2015-02/msg00807.html]]
+  (interactive)
+  (org-element-map (org-element-parse-buffer 'element) 'headline
+    (lambda (h)
+      (and (org-element-map h 'drawer
+             (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
+             nil t 'headline)
+           (let ((begin (org-element-property :begin h)))
+             (message "Entry with erroneous properties drawer at %d" begin)
+             begin)))))
+
 (req 'org-bullets
   (cl-defun enable-org-bullets ()
     (org-bullets-mode 1))

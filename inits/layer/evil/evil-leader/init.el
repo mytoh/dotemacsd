@@ -13,6 +13,8 @@
         ("hi" . help-info)
         ("hd" . help-describe)
         ("m" . emms)
+        ("o" . org)
+        ("f" . file)
         ("s" . search)
         ("T" .  theme)
         ("z" .  mesh)))
@@ -153,6 +155,13 @@
         "a d" #'emms-add-directory-tree
         "+" #'emms-volume-raise
         "-" #'emms-volume-lower))
+
+    (muki:evil-leader-prefix-set-keys 'file
+      "f" #'helm-find-files
+      "g" #'helm-ls-git-ls)
+
+    (muki:evil-leader-prefix-set-keys 'org
+      "c" #'org-capture)
 
     ;; (defun-add-hook muki:evil-ace-jump-mode-setup (after-init-hook)
     ;;   (when (and (featurep 'evil) (featurep 'evil-leader))

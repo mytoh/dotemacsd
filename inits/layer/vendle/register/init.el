@@ -725,6 +725,9 @@
 (vendle:register "joostkremers/writeroom-mode"
                  '(:tag ("writing")
                    :deps ("joostkremers/visual-fill-column")))
+(vendle:register "gongo/emacs-ikku"
+                 '(:tag ("haiku" "mecab" "japanese")
+                   :deps ("magnars/dash.el")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))

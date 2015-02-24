@@ -158,10 +158,6 @@ Otherwise goto the end of minibuffer."
 ;; (req 'helm-C-x-b
 ;;      (add-key global-map [remap switch-to-buffer] #'helm-C-x-b))
 
-;; helm-ls-git
-(liby 'helm-ls-git
-  (auto (helm-ls-git-ls) "helm-ls-git")
-  (muki:define-launcher-key "f" #'helm-ls-git-ls))
 
 ;; elisp-package
 (liby 'helm-elisp-package
