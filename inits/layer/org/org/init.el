@@ -195,6 +195,9 @@
             ;; display images
             (local-set-key (kbd "M-I") #'org-toggle-iimage-in-org)))
 
+(add-hook 'org-mode-hook
+          #'auto-fill-mode)
+
 
 (require 'iimage)
 (cl-pushnew (cons (concat "\\[\\[file:\\(~?" iimage-mode-image-filename-regex

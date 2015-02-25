@@ -972,6 +972,7 @@
 (vendle:register-theme "holomorph/emacs-zenburn")
 (vendle:register-theme "darrik/zenesque-theme")
 (vendle:register-theme "Corsair/emacs-flatui-theme")
+(vendle:register-theme "stafu/noctilux-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)

@@ -34,6 +34,7 @@
                   "caja_no_desktop.sh"
                   "nemo_no_desktop.sh"
                   "qcomicbook"
+                  "mlterm"
                   "xombrero")))
 
   (muki:define-launcher-key "c"  #'helm-alku-program)

@@ -5,9 +5,9 @@
 
 (after 'image
     (req 'image+
-      (after 'image+
-          (when (require 'hydra nil t)
-            (hydra-create "C-x C-l" imagex-hydra-default-heads)))
-      (imagex-auto-adjust-mode 1)))
+      (when (require 'hydra nil t)
+        (hydra-create "C-x C-l" imagex-hydra-default-heads))
+      (imagex-global-sticky-mode)
+      (imagex-auto-adjust-mode)))
 
 ;;; init.el ends here
