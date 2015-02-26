@@ -104,6 +104,8 @@
                  '(:tag ("helm")
                    :deps ("lewang/flx"
                           ("magnars/dash.el" ( :compile nil)))))
+(vendle:register "Sliim/helm-github-stars"
+                 '(:tag ("helm" "github")))
 
 ;;;;;  general packages
 (vendle:register "magnars/s.el")
@@ -453,6 +455,7 @@
 (vendle:register "josteink/csharp-mode"
                  '(:tag ("C#")
                    :compile nil))
+(vendle:register "sensorflo/sln-mode")
 (vendle:register "Bruce-Connor/camcorder.el"
                  '(:tag ("screencast")
                    :deps ("Bruce-Connor/names")))
@@ -920,6 +923,7 @@
 (vendle:register-theme "neil477/base16-emacs")
 (vendle:register-theme "oneKelvinSmith/monokai-emacs")
 (vendle:register-theme "hbin/molokai-theme")
+(vendle:register-theme "hos/molokai-emacs")
 (vendle:register-theme "jordonbiondo/ample-theme")
 (vendle:register-theme "mjwall/ample-zen")
 (vendle:register-theme "bruce/emacs-spacegray-theme")
@@ -1432,6 +1436,8 @@
 (vendle:fetch "snosov1/dot-emacs")
 (vendle:fetch "pierre-lecocq/emacs.d")
 (vendle:fetch "meteor1113/dotemacs")
+(vendle:fetch "jeffgran/elscreen-bg"
+              '(:desc "defadvice"))
 ;; (vendle:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;;                 :type hg))

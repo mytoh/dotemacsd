@@ -129,8 +129,8 @@
   (setq org-capture-templates
         '(("t" "Todo" entry (file+headline "~/.org/gtd.org" "Tasks")
            "* TODO %?\n  %i\n  %a")
-          ("i" "Inbox" entry (file+datetree "~/.org/inbox.org")
-           "* %?\nEntered on %U\n  %i\n  %a"))))
+          ("i" "Inbox" entry (file "~/.org/inbox.org")
+           "* %?\n%U"))))
 
 (cl-defun muki:org-mode-hook-function ()
   (muki:org-general-options)
