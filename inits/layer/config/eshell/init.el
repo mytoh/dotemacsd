@@ -1,10 +1,9 @@
 ;;; config-eshell.el -*- lexical-binding: t -*-
 ;; eshell
 
-(eval-when-compile
-  (require 'cl-lib)
-  (require 'esh-mode)
-  (require 'eshell))
+(require 'cl-lib)
+(require 'esh-mode)
+(require 'eshell)
 
 (require 'esh-util)
 

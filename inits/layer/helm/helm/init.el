@@ -114,7 +114,8 @@ Otherwise goto the end of minibuffer."
                 ("mkv" . "mpv")
                 ("mp4" . "mpv")
                 ("wmv" . "mpv")
-                ("webm" . "mpv")))
+                ("webm" . "mpv")
+                ("pdf" . "mupdf")))
 
   (enable-option helm-bookmark-show-location)
 

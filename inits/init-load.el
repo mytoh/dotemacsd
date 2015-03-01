@@ -1,8 +1,7 @@
 ;;; init-load.el  -*- lexical-binding: t -*-
 ;;;; initialize
 ;;;;; cl-lib
-(eval-when-compile
-  (require 'cl-lib))
+(require 'cl-lib)
 (require 'seq)
 
 ;;;;; libs

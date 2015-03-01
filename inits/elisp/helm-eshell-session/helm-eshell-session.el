@@ -1,6 +1,6 @@
 ;;; helm-eshell-session.el -*- lexical-binding: t -*-
 
-(eval-when-compile (require 'cl-lib))
+(require 'cl-lib)
 (require 'helm)
 (require 'helm-buffers)
 (require 'eshell-session)

@@ -1,7 +1,6 @@
 ;;; -*- coding: utf-8 -*-
 
-(eval-when-compile
-  (require 'cl-lib))
+(require 'cl-lib)
 
 ;;;; gc
 (setq gc-cons-threshold (* 1024 1024 1024))

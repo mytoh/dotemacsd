@@ -1,0 +1,25 @@
+#!/bin/sh
+":"; exec emacs --quick --script "$0" -- "$@" # -*- mode: emacs-lisp; lexical-binding: t; -*-
+
+(pop argv)  ; Remove the -- separator
+
+(add-to-list 'load-path  "~/huone/projektit/emacs-vendle")
+(require 'vendle)
+
+(defun main ()
+  (cl-letf ((muki:vendle-directory
+             (expand-file-name (file-name-as-directory "vendle")
+                               user-emacs-directory)))
+    (vendle:initialize muki:vendle-directory))
+
+  (load "~/.emacs.d/inits/layer/vendle/register/init.el")
+
+  (pcase (car argv)
+    ("update"
+     (vendle-update))
+    ("check"
+     (vendle-check))))
+
+(main)
+
+(kill-emacs 0)

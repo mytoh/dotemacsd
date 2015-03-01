@@ -1,9 +1,8 @@
 ;;; lib-util.el  -*- lexical-binding: t -*-
 
-(eval-when-compile
-  (require 'cl-lib)
-  (require 'subr-x)
-  (require 'color))
+(require 'cl-lib)
+(require 'subr-x)
+(require 'color)
 
 (cl-defmacro muki:log (&rest messages)
   (declare (debug t))

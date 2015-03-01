@@ -45,8 +45,7 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(eval-when-compile
-  (require 'cl-lib))
+(require 'cl-lib)
 
 
 (defconst csh-mode-version "1.2"

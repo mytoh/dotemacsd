@@ -731,6 +731,9 @@
 (vendle:register "gongo/emacs-ikku"
                  '(:tag ("haiku" "mecab" "japanese")
                    :deps ("magnars/dash.el")))
+(vendle:register "ThibautVerron/echo-sth.el")
+(vendle:register "10sr/git-command-el"
+                 '(:tag ("git")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
