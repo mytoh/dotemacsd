@@ -194,7 +194,8 @@
 ;;;; reload buffer
 (global-auto-revert-mode 1)
 ;; (set-option auto-revert-interval 5)
-(enable-option auto-revert-check-vc-info)
+(req 'vc
+  (enable-option auto-revert-check-vc-info))
 (enable-option global-auto-revert-non-file-buffers)
 (disable-option auto-revert-verbose)
 (set-option revert-without-query '(".*\\.scm\\'" ".*\\.el\\'" ".*\\.tcsh\\'"))

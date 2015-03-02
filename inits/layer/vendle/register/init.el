@@ -111,9 +111,9 @@
 (vendle:register "magnars/s.el")
 (vendle:register "jonathanchu/emacs-powerline")
 (vendle:register "raugturi/powerline-evil"
-                 '(:tag ("evil" "modeline")))
+                 '(:tag ("evil" "mode-line")))
 (vendle:register "milkypostman/powerline"
-                 '(:tag ("modeline")))
+                 '(:tag ("mode-line")))
 (vendle:register "TeMPOraL/nyan-mode")
 (vendle:register "daimrod/highlight-sexp")
 (vendle:register "m2ym/undohist-el")
@@ -523,7 +523,7 @@
 (vendle:register "kljohann/clang-format.el"
                  '(:tag "clang"))
 (vendle:register "saintaardvark/meleme"
-                 '(:tag ("modeline")))
+                 '(:tag ("mode-line")))
 (vendle:register "10sr/shell-split-string-el"
                  '(:tag "shell"))
 (vendle:register "kiwanami/emacs-kovlive"
@@ -565,7 +565,7 @@
                  '(:tag ("workspace")
                    :desc "Quick navigation between workspaces in emacs"))
 (vendle:register "lunaryorn/fancy-battery.el"
-                 '(:tag ("appearance" "modeline")))
+                 '(:tag ("appearance" "mode-line")))
 (vendle:register "csrhodes/iplayer-el"
                  '(:tag ("bbc")
                    :desc "Emacs interface to the BBC's iPlayer (uses get_iplayer)"))
@@ -885,6 +885,9 @@
                  '(:tag ("org")))
 (vendle:register "markus1189/org-pdfview"
                  '(:tag ("org" "pdf")))
+(vendle:register "HKey/omboo"
+                 '(:tag ("org" "bookmark")
+                   :desc "Org-mode as BOOkmark"))
 ;; (vendle:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ("org" "bongo" "music")
 ;;                    :deps ("dbrock/bongo")
@@ -980,6 +983,7 @@
 (vendle:register-theme "darrik/zenesque-theme")
 (vendle:register-theme "Corsair/emacs-flatui-theme")
 (vendle:register-theme "stafu/noctilux-theme")
+(vendle:register-theme "yveszoundi/emacs-rimero-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1441,6 +1445,8 @@
 (vendle:fetch "meteor1113/dotemacs")
 (vendle:fetch "jeffgran/elscreen-bg"
               '(:desc "defadvice"))
+(vendle:fetch "Idorobots/mode-line-stats"
+              '(:tag ("mode-line")))
 ;; (vendle:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;;                 :type hg))
