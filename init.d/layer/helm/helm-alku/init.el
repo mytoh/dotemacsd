@@ -18,7 +18,7 @@
          ("4chan" . "~/huone/kuvat/sivusto/4chan")
          ("lainchan" . "~/huone/kuvat/sivusto/lainchan")
          ("futaba" . "~/huone/kuvat/sivusto/futaba")
-         ("paketti" . ,(muki:user-emacs-directory "inits/paketit"))
+         ("paketti" . ,(muki:user-emacs-directory "init.d/paketit"))
          ("vendle" . ,(muki:user-emacs-directory "vendle"))
          ("elpa" . ,(muki:user-emacs-directory "elpa"))))
     (helm-alku-directory-add-subdirectories "~/huone/projektit")

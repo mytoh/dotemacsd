@@ -6,7 +6,7 @@
 
 ;;;;; libs
 (eval-when-compile (require 'init-lib "lib/init-lib"))
-(add-subdirs-to-load-path (muki:user-emacs-directory "inits"))
+(add-subdirs-to-load-path (muki:user-emacs-directory "init.d"))
 
 (require 'muki)
 (require 'muki-layer)

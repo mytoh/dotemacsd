@@ -12,7 +12,7 @@
                                user-emacs-directory)))
     (vendle:initialize muki:vendle-directory))
 
-  (load "~/.emacs.d/inits/layer/vendle/register/init.el")
+  (load "~/.emacs.d/init.d/layer/vendle/register/init.el")
 
   (pcase (car argv)
     ("update"

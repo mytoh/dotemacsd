@@ -4,11 +4,7 @@
 (require 'muki)
 (require 'subr-x)
 
-
-
 ;;; settings
-
-
 ;;;; user elisps
 (muki:add-to-load-path (muki:user-emacs-directory (file-name-as-directory "elisp")))
 
@@ -128,7 +124,7 @@
 
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
 
-(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+(setq mouse-wheel-follow-mouse t) ;; scroll window under mouse
 
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 

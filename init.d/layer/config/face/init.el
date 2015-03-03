@@ -3,7 +3,7 @@
 ;;; faces
 ;;;; colour-theme
 (cl-defun muki:load-theme ()
-  (cl-pushnew (muki:user-emacs-directory "inits/themes")
+  (cl-pushnew (muki:user-emacs-directory "init.d/themes")
               custom-theme-load-path)
   (cond ((window-system)
          ;; make the fringe stand out from the background

@@ -5,7 +5,7 @@
 (require 'muki)
 
 (defcustom muki-layer:root
-  (expand-file-name "inits/layer"
+  (expand-file-name "init.d/layer"
                     user-emacs-directory)
   "layer root directory")
 
