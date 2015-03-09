@@ -106,6 +106,8 @@
                           ("magnars/dash.el" ( :compile nil)))))
 (vendle:register "Sliim/helm-github-stars"
                  '(:tag ("helm" "github")))
+(vendle:register "ralesi/helm-pt"
+                 '(:tag ("helm" "pt")))
 
 ;;;;;  general packages
 (vendle:register "magnars/s.el")
@@ -113,6 +115,8 @@
 (vendle:register "raugturi/powerline-evil"
                  '(:tag ("evil" "mode-line")))
 (vendle:register "milkypostman/powerline"
+                 '(:tag ("mode-line")))
+(vendle:register "unic0rn/powerline"
                  '(:tag ("mode-line")))
 (vendle:register "TeMPOraL/nyan-mode")
 (vendle:register "daimrod/highlight-sexp")
@@ -734,6 +738,10 @@
 (vendle:register "ThibautVerron/echo-sth.el")
 (vendle:register "10sr/git-command-el"
                  '(:tag ("git")))
+(vendle:register "purcell/default-text-scale"
+                 '(:tag ("font")))
+(vendle:register "theBlackDragon/fvwm-mode"
+                 '(:tag ("fvwm")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
@@ -984,6 +992,9 @@
 (vendle:register-theme "Corsair/emacs-flatui-theme")
 (vendle:register-theme "stafu/noctilux-theme")
 (vendle:register-theme "yveszoundi/emacs-rimero-theme")
+(vendle:register-theme "darrik/erosiond-theme")
+(vendle:register-theme "zk-phi/lenlen-theme"
+                       '(:deps ( "sellout/emacs-color-theme-solarized")))
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1006,6 +1017,7 @@
   (add-project-root "helm-features" '(:tag ( "emacs-lisp" )))
   (add-project-root "helm-eww-bookmark" '(:tag ("helm" "eww" )))
   (add-project-root "helm-eww-history" '(:tag ("helm" "eww" )))
+  (add-project-root "helm-eww-search-engine" '(:tag ("helm" "eww" )))
   (add-project-root "helm-eshell-jump" '(:tag ("helm" "eshell"))))
 
 ;;;;;; skk
@@ -1447,6 +1459,10 @@
               '(:desc "defadvice"))
 (vendle:fetch "Idorobots/mode-line-stats"
               '(:tag ("mode-line")))
+(vendle:fetch "dz/dotfiles")
+(vendle:fetch "git://gist.github.com/5264829.git"
+              '(:tag ("emms" "sabof" "gist")))
+
 ;; (vendle:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;;                 :type hg))

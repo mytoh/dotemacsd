@@ -1,6 +1,6 @@
 ;; emms
 
-(muki:load "~/.emms")
+;; (muki:load "~/.emms")
 
 (req 'emms-setup
   (emms-devel)
@@ -17,10 +17,12 @@
   (enable-option emms-repeat-playlist)
   (enable-option emms-info-asynchronously)
   (enable-option emms-info-auto-update)
-  (set-option emms-lastfm-server "http://turtle.libre.fm/")
+  ;; (set-option emms-lastfm-server "http://turtle.libre.fm/")
   (set-option emms-browser-info-title-format "%cS%i%n")
   (set-option emms-browser-playlist-info-title-format
               emms-browser-info-title-format)
+  (set-option emms-browser-covers)
+  '("cover_small.png" "cover_med.png" "cover_large.png")
 
 
   ;; (emms-default-players)
@@ -32,7 +34,7 @@
        "MED" "MTM" "OKT" "S3M" "STM" "STX" "ULT"
        "APUN" "XM" "MOD" "amf" "dsm" "far" "gdm"
        "it" "imf" "mod" "med" "mtm" "okt" "s3m"
-       "stm" "stx" "ult" "apun" "xm" "mod" "MOD"))
+       "stm" "stx" "ult" "apun" "xm" "mod") "MOD")
 
     (defvar regexp-file-music-general
       (emms-player-simple-regexp
@@ -132,9 +134,9 @@ controls, run `mixer' in a shell."
   (muki:define-emms-key "b" 'emms-smart-browse)
   (muki:define-emms-key "a f" 'emms-add-file)
   (muki:define-emms-key "a d" 'emms-add-directory-tree)
-  (muki:define-emms-key "+" 'emms-volume-raise)
-  (muki:define-emms-key "-" 'emms-volume-lower)
-  )
+  (muki:define-emms-key "+" 'emms-volume-raise))
+(muki:define-emms-key "-" 'emms-volume-lower)
+
 
 (req 'init-helm-emms-librefm)
 

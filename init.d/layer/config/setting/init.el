@@ -55,7 +55,7 @@
 (set-option indent-line-function #'indent-relative-maybe)
 
 ;;;; mouse
-(set-option mouse-avoidance-mode #'proteus)
+(set-option mouse-avoidance-mode 'proteus)
 
 ;;;; show info on mode-line
 (enable-option display-time-24hr-format
@@ -119,6 +119,11 @@
 (set-option scroll-conservatively 9999
             scroll-preserve-screen-position t)
 
+(setq scroll-step 1) ;; keyboard scroll one line at a time
+
+(setq scroll-up-aggressively 0.0)
+(setq scroll-down-aggressively 0.0)
+
 ;;;; scroll one line at a time (less "jumpy" than defaults)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
 
@@ -126,7 +131,6 @@
 
 (setq mouse-wheel-follow-mouse t) ;; scroll window under mouse
 
-(setq scroll-step 1) ;; keyboard scroll one line at a time
 
 ;;;; disable bars
 (if (fboundp 'menu-bar-mode) (disable-mode menu-bar-mode))
@@ -227,6 +231,7 @@
 ;;;; scratch
 (set-option initial-scratch-message
             ";;
+;;
 ;;　　　＿_
 ;;　　　｀ヽ,　｀ヽ
 ;;　　　　,.' -─-ヽ.
@@ -261,8 +266,8 @@
 
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
-;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson, noctilux
-(defvar muki:x-theme 'monokai)
+;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson, noctilux, erosiond
+(defvar muki:x-theme 'flatland)
 (defvar muki:term-theme 'flatland)
 
 (enable-option select-enable-clipboard

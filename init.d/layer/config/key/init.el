@@ -102,3 +102,6 @@
 
 (add-global-key "C-x 2" #'muki:vsplit-last-buffer)
 (add-global-key "C-x 3" #'muki:hsplit-last-buffer)
+
+;; disable right click
+(global-unset-key [mouse-3] )

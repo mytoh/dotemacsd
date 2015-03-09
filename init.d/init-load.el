@@ -71,8 +71,8 @@
     flatline
     navi2ch
     navi2ch-file-mode
-    ;; emms
-    emms-mpd
+    emms
+    ;; emms-mpd
     ;; emms-player-mpv
     ;; emms-player-mpv-volume
     magit
@@ -174,6 +174,7 @@
     conkeror-minor-mode
     mpv
     writeroom-mode
+    default-text-scale
     ;; hl-sentence
     ;; centered-window-mode
     ;; real-auto-save
@@ -264,6 +265,7 @@
     helm-features
     helm-eww-bookmark
     helm-eww-history
+    helm-eww-search-engine
     helm-mode-manager
     helm-pages
     helm-xmms2
