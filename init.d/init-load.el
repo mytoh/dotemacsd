@@ -175,6 +175,7 @@
     mpv
     writeroom-mode
     default-text-scale
+    fvwm-mode
     ;; hl-sentence
     ;; centered-window-mode
     ;; real-auto-save
