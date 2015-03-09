@@ -274,6 +274,7 @@
     helm-lobste.rs
     helm-hackernews
     helm-ls-git
+    helm-pt
     ;; helm-company
     ;; helm-delicious
     ))
