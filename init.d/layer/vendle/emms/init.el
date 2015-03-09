@@ -1,7 +1,5 @@
 ;; emms
 
-;; (muki:load "~/.emms")
-
 (req 'emms-setup
   (emms-devel)
   ;; mode-line
