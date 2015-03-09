@@ -19,8 +19,8 @@
   (set-option emms-browser-info-title-format "%cS%i%n")
   (set-option emms-browser-playlist-info-title-format
               emms-browser-info-title-format)
-  (set-option emms-browser-covers)
-  '("cover_small.png" "cover_med.png" "cover_large.png")
+  ;; (set-option emms-browser-covers)
+  ;; '("cover_small.png" "cover_med.png" "cover_large.png")
 
 
   ;; (emms-default-players)
