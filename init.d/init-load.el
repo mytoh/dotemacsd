@@ -256,7 +256,6 @@
     helm-project-buffer
     helm-ag-r
     helm-ag
-    helm-swoop
     helm-commands
     wgrep-helm
     helm-css-scss
@@ -276,6 +275,7 @@
     helm-ls-git
     helm-pt
     swiper
+    ;; helm-swoop
     ;; helm-company
     ;; helm-delicious
     ))
