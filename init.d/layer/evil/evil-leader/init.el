@@ -144,6 +144,10 @@
       (muki:evil-leader-prefix-set-keys 'search
         "a" #'helm-do-ag))
 
+    (liby 'swiper
+      (muki:evil-leader-prefix-set-keys 'search
+        "i" #'swiper))
+
     (liby 'emms
       (muki:evil-leader-prefix-set-keys 'emms
         "P" #'emms-player-mpd-pause
