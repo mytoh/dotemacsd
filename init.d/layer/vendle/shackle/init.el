@@ -7,15 +7,13 @@
         '(;; *compilation*は下部に2割の大きさで表示
           (compilation-mode :align below :ratio 0.2)
           ;; let helm handle help buffer
-          ;; ("*Help*" :align above)
+          ("*Help*" :select t)
           ;; 補完バッファは下部に3割の大きさで表示
           ("*Completions*" :align below :ratio 0.3)
           ;; M-x helm-miniは下部に7割の大きさで表示
           ("*helm mini*" :align below :ratio 0.7)
-          ;; 他のhelmコマンドは右側に表示 (バッファ名の正規表現マッチ)
           ("\*helm" :regexp t :align bottom)
-          ("\*Man" :regexp t
-           :select t)))
+          (Man-mode :select t)))
   (shackle-mode 1)
   (setq shackle-lighter "")
 
