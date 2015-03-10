@@ -275,6 +275,7 @@
     helm-hackernews
     helm-ls-git
     helm-pt
+    swiper
     ;; helm-company
     ;; helm-delicious
     ))
