@@ -108,6 +108,9 @@
                  '(:tag ("helm" "github")))
 (vendle:register "ralesi/helm-pt"
                  '(:tag ("helm" "pt")))
+(vendle:register "abo-abo/swiper"
+                 '(:tag ("helm" "isearch")
+                   :desc "Isearch with an overview. Oh, man! "))
 
 ;;;;;  general packages
 (vendle:register "magnars/s.el")
@@ -742,6 +745,9 @@
                  '(:tag ("font")))
 (vendle:register "theBlackDragon/fvwm-mode"
                  '(:tag ("fvwm")))
+(vendle:register "tjim/nevermore"
+                 '(:tag ("mail" "notmuch")
+                   :deps ("emacsmirror/peg")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
