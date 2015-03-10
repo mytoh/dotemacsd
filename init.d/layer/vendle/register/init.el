@@ -103,7 +103,10 @@
 (vendle:register "Fuco1/sallet"
                  '(:tag ("helm")
                    :deps ("lewang/flx"
-                          ("magnars/dash.el" ( :compile nil)))))
+                          ("magnars/dash.el" ( :compile nil))
+                          "magnars/s.el"
+                          "jwiegley/emacs-async"
+                          "cask/shut-up")))
 (vendle:register "Sliim/helm-github-stars"
                  '(:tag ("helm" "github")))
 (vendle:register "ralesi/helm-pt"
