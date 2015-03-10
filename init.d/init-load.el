@@ -80,8 +80,10 @@
     magit-idle-breadcrumbs
     git-modes
     skk
-    popwin
-    ;; shackle
+
+    ;; popwin
+    shackle
+
     company
     company-quickhelp
     paradox
