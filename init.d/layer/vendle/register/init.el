@@ -1474,6 +1474,10 @@
 
 ;; (vendle:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
-;;                 :type hg))
+;; (vendle:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
+;; '(:tag ("common_lisp")
+;; :type hg))
+
+
 ;;; init-vendle-registers.el ends here
 ;;
