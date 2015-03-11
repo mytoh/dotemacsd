@@ -178,6 +178,7 @@
     writeroom-mode
     default-text-scale
     fvwm-mode
+    sallet
     ;; hl-sentence
     ;; centered-window-mode
     ;; real-auto-save
