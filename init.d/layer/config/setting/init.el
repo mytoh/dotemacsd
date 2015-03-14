@@ -12,7 +12,7 @@
 (enable-option inhibit-startup-screen)
 
 ;; startup splash
-;; (set-option fancy-splash-image (muki:user-emacs-directory "splash/splash.xpm"))
+;; (set-option fancy-splash-image (muki:user-emacs-directory "splash/splash.png"))
 
 ;;;; parens
 (enable-mode show-paren-mode)

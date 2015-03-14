@@ -114,6 +114,8 @@
 (vendle:register "abo-abo/swiper"
                  '(:tag ("helm" "isearch")
                    :desc "Isearch with an overview. Oh, man! "))
+(vendle:register "emacs-helm/helm-emms"
+                 '(:tag ("helm" "emms")))
 
 ;;;;;  general packages
 (vendle:register "magnars/s.el")
@@ -751,7 +753,12 @@
 (vendle:register "tjim/nevermore"
                  '(:tag ("mail" "notmuch")
                    :deps ("emacsmirror/peg")))
-
+(vendle:register "syohex/emacs-import-popwin"
+                 '(:tag ("popwin")))
+(vendle:register "johanclaesson/picpocket"
+                 '(:tag ("image_viewer")))
+(vendle:register "kakakaya/random-splash-image"
+                 '(:tag ("splash")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -905,6 +912,8 @@
 (vendle:register "HKey/omboo"
                  '(:tag ("org" "bookmark")
                    :desc "Org-mode as BOOkmark"))
+(vendle:register "rexim/org-cliplink"
+                 '(:tag ("org" "clipboard")))
 ;; (vendle:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ("org" "bongo" "music")
 ;;                    :deps ("dbrock/bongo")
@@ -945,7 +954,7 @@
 (vendle:register-theme "wasamasa/gotham-theme")
 (vendle:register-theme "neil477/base16-emacs")
 (vendle:register-theme "oneKelvinSmith/monokai-emacs")
-(vendle:register-theme "hbin/molokai-theme")
+;; (vendle:register-theme "hbin/molokai-theme")
 (vendle:register-theme "hos/molokai-emacs")
 (vendle:register-theme "jordonbiondo/ample-theme")
 (vendle:register-theme "mjwall/ample-zen")
@@ -1379,8 +1388,7 @@
               '(:tag ("org")))
 (vendle:fetch "yuratomo/w3m.vim"
               '(:tag ("vim" "w3m")))
-(vendle:fetch "johanclaesson/picpocket"
-              '(:tag ("image_viewer")))
+
 (vendle:fetch "flexibeast/ewmctrl"
               '(:tag ("wmctrl")))
 (vendle:fetch "abo-abo/org-fu"

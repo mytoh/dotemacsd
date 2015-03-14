@@ -34,6 +34,7 @@
     orgit
     org-download
     outline-magic
+    org-cliplink
     ))
 
 (muki-layer:load-layers 'vendle
@@ -179,6 +180,8 @@
     default-text-scale
     fvwm-mode
     sallet
+    git-messenger
+    ;; random-splash-image
     ;; hl-sentence
     ;; centered-window-mode
     ;; real-auto-save
@@ -277,6 +280,7 @@
     helm-hackernews
     helm-ls-git
     helm-pt
+    helm-emms
     swiper
     ;; helm-swoop
     ;; helm-company
@@ -293,7 +297,7 @@
     face
     clipboard
     font
-    erc
+    ;; erc
     eshell
     ;; eshell-prompt
     whitespace

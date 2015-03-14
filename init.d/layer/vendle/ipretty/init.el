@@ -2,7 +2,9 @@
 
 ;;; Code:
 
-(req 'ipretty
-  (ipretty-mode))
+(liby 'ipretty
+  (auto (ipretty-mode) "ipretty" )
+  (add-hook 'emacs-lisp-mode-hook 'ipretty-mode)
+  (add-hook 'lisp-interaction-mode-hook 'ipretty-mode))
 
 ;;; init.el ends here
