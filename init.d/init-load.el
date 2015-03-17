@@ -85,8 +85,10 @@
     ;; popwin
     shackle
 
-    company
-    company-quickhelp
+    ;; company
+    ;; company-quickhelp
+    bbyac
+
     paradox
     hl-todo
     hl-indent
@@ -103,7 +105,6 @@
     flycheck-package
     flycheck
     multiple-cursors
-    highlight-symbol
     google-translate
     form-feed
     aumix-mode
@@ -221,6 +222,13 @@
     ;; auto-highlight-symbol
     ;; tabbar
     ;; flyparens
+    ))
+
+;;;; highlight
+(muki-layer:load-layers 'vendle
+  '(
+    ;; highlight-symbol
+    highlight-thing
     ))
 
 ;;;;; package

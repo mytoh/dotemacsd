@@ -34,12 +34,11 @@
               evil-replace-state-cursor '("blue" bar)
               evil-operator-state-cursor '("cyan" hollow))
   (set-option evil-search-module 'evil-search
+              evil-ex-search-vim-style-regexp t
               evil-magic 'very-magic
-              evil-want-fine-undo 'very-fine
-              )
+              evil-want-fine-undo 'very-fine)
   (enable-option evil-cross-lines
-                 evil-cjk-emacs-word-boundary
-                 )
+                 evil-cjk-emacs-word-boundary)
   (disable-option evil-move-cursor-back)
   (set-option evil-esc-delay 0.001)
 
@@ -59,10 +58,10 @@
   ;; [[https://github.com/supermomonga/dot-emacs/blob/master/package-config/evil.el]]
   (add-key evil-normal-state-map  "C-h"
            (clambda ()
-                    (interactive)
-                    (evil-insert-state)
-                    (insert-string " ")
-                    (evil-normal-state)))
+               (interactive)
+             (evil-insert-state)
+             (insert-string " ")
+             (evil-normal-state)))
 
   ;; 物理行移動と論理行移動を入れ替え
   ;; http://d.hatena.ne.jp/tarao/20130304/evil_config#misc-physical-line
@@ -79,11 +78,11 @@
   ;; [[http://stackoverflow.com/questions/8483182/evil-mode-best-practice]]
   (seq-each
    (clambda (l)
-            (seq-each
-             (clambda (m)
-                      (add-key m (car l) (cdr l)))
-             (list evil-insert-state-map
-                   evil-motion-state-map)))
+       (seq-each
+        (clambda (m)
+            (add-key m (car l) (cdr l)))
+        (list evil-insert-state-map
+              evil-motion-state-map)))
    '(("C-e" . evil-end-of-line)
      ("C-n" . evil-next-line)
      ("C-p" . evil-previous-line)
@@ -101,9 +100,6 @@
 
   )
 
-(cl-defun muki:init-evil-mode-helm ()
-  (liby 'helm
-    (evil-ex-define-cmd "e[dit]" #'helm-find-files)))
 
 (cl-defun muki:init-evil-mode-org ()
   ;; org
@@ -182,20 +178,24 @@ is a kind of temporary one which is not confirmed yet."
               (skk-mode-off))))))
 
 (cl-defun muki:init-evil-initial-state ()
-  (cl-loop for (mode . state) in '((git-commit-mode . insert)
-                                   (git-rebase-mode . emacs)
-                                   (ebib-entry-mode              . emacs)
-                                   (ebib-index-mode              . emacs)
-                                   (ebib-log-mode                . emacs)
-                                   (elfeed-show-mode             . emacs)
-                                   (elfeed-search-mode           . emacs)
-                                   (navi2ch-message-mode           . emacs)
-                                   (navi2ch-board-mode           . emacs)
-                                   (navi2ch-article-mode           . emacs)
-                                   (navi2ch-bookmark-mode           . emacs)
-                                   (navi2ch-list-mode           . emacs)
-                                   (dired-mode . emacs))
+  (cl-loop for (mode . state)
+     in '((git-commit-mode . insert)
+          (git-rebase-mode . emacs)
+          (ebib-entry-mode              . emacs)
+          (ebib-index-mode              . emacs)
+          (ebib-log-mode                . emacs)
+          (elfeed-show-mode             . emacs)
+          (elfeed-search-mode           . emacs)
+          (navi2ch-message-mode           . emacs)
+          (navi2ch-board-mode           . emacs)
+          (navi2ch-article-mode           . emacs)
+          (navi2ch-bookmark-mode           . emacs)
+          (navi2ch-list-mode           . emacs)
+          (dired-mode . emacs))
      do (evil-set-initial-state mode state)))
+
+(cl-defun muki:init-evil-modify-syntax-table ()
+  (modify-syntax-entry ?_ "w" (standard-syntax-table)))
 
 (liby 'evil
   (req 'goto-chg)
@@ -210,7 +210,6 @@ is a kind of temporary one which is not confirmed yet."
 
   (muki:init-evil-mode-mappings)
 
-  (muki:init-evil-mode-helm)
   (muki:init-evil-mode-org)
   (muki:init-evil-mode-eww)
   (muki:init-evil-mode-smartparens)
@@ -224,6 +223,7 @@ is a kind of temporary one which is not confirmed yet."
   (advice-add 'evil-ex-search-previous :after #'recenter)
 
   (muki:init-evil-mode-skk)
+  (muki:init-evil-modify-syntax-table)
   )
 
 ;; (req 'evil-org)

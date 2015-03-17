@@ -79,7 +79,7 @@
 (cl-defun muki:lisp-before-save-hook ()
   (save-excursion
     (goto-char (point-min))
-    (delete-trailing-whitespace)
+    (muki:delete-trailing-whitespace)
     (while (re-search-forward (rx (submatch (syntax close-parenthesis))
                                   (submatch (one-or-more (in  " \t")))
                                   (submatch (syntax close-parenthesis))) nil t)
@@ -194,9 +194,9 @@ buffer is not visiting a file."
               ;; dont kill buffers who have running processes
               (let ((proc (get-buffer-process buffer)))
                 (if proc
-                    (equal 'exit
-                           (process-status
-                            (get-buffer-process buffer)))
+                    (eq 'exit
+                        (process-status
+                         (get-buffer-process buffer)))
                   t))))
            (buffer-list)))
          (buffers-to-kill
@@ -224,6 +224,48 @@ buffer is not visiting a file."
              (/= (cadr orig-alpha) 100))
         (set-frame-parameter nil 'alpha '(100 100))
       (set-frame-parameter nil 'alpha '(85 50)))))
+
+(cl-defun muki:delete-trailing-whitespace (&optional start end)
+  "Delete trailing whitespace between START and END.
+If called interactively, START and END are the start/end of the
+region if the mark is active, or of the buffer's accessible
+portion if the mark is inactive.
+
+This command deletes whitespace characters after the last
+non-whitespace character in each line between START and END.  It
+does not consider formfeed characters to be whitespace.
+
+If this command acts on the entire buffer (i.e. if called
+interactively with the mark inactive, or called from Lisp with
+END nil), it also deletes all trailing lines at the end of the
+buffer if the variable `delete-trailing-lines' is non-nil."
+  (interactive (progn
+                 (barf-if-buffer-read-only)
+                 (if (use-region-p)
+                     (list (region-beginning) (region-end))
+                   (list nil nil))))
+  (save-match-data
+    (save-excursion
+      (let ((end-marker (copy-marker (or end (point-max))))
+            (start (or start (point-min))))
+        (goto-char start)
+        (while (ignore-errors (re-search-forward "\\s-$" end-marker t))
+          (skip-syntax-backward "-" (line-beginning-position))
+          ;; Don't delete formfeeds, even if they are considered whitespace.
+          (if (looking-at-p ".*\f")
+              (goto-char (match-end 0)))
+          (delete-region (point) (match-end 0)))
+        ;; Delete trailing empty lines.
+        (goto-char end-marker)
+        (when (and (not end)
+                   delete-trailing-lines
+                   ;; Really the end of buffer.
+                   (= (point-max) (1+ (buffer-size)))
+                   (<= (skip-chars-backward "\n") -2))
+          (delete-region (1+ (point)) end-marker))
+        (set-marker end-marker nil))))
+  ;; Return nil for the benefit of `write-file-functions'.
+  nil)
 
 (require 'muki-key)
 (require 'muki-option)

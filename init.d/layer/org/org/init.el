@@ -19,7 +19,7 @@
   (message "Done with code block"))
 
 (cl-defun muki:org-mode-before-save-hook ()
-  (delete-trailing-whitespace)
+  (muki:delete-trailing-whitespace)
   (untabify (point-min) (point-max)))
 
 (cl-defun muki:org-startup-options ()
