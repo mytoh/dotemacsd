@@ -10,7 +10,6 @@
   (require 'helm-config)
   (enable-mode helm-mode)
   (enable-mode helm-adaptative-mode)
-  (enable-mode helm-match-plugin-mode)
 
   (defun-add-hook muki:helm-set-face (after-init-hook)
     (cl-letf ((background
