@@ -5,7 +5,7 @@
   (setq git-gutter:added-sign "☀")
   (setq git-gutter:deleted-sign "☂")
   (setq git-gutter:disabled-modes '(image-mode eshell-mode))
-  (global-git-gutter-mode t)
+  (add-hook 'emacs-lisp-mode-hook #'git-gutter-mode)
   (after 'diminish
       (after 'git-gutter
           (diminish 'git-gutter-mode "")))

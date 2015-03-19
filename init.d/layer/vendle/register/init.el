@@ -779,6 +779,10 @@
 (vendle:register "baohaojun/bbyac"
                  '(:tag ("completion")
                    :deps ("browse-kill-ring/browse-kill-ring")))
+(vendle:register "jorgenschaefer/emacs-buttercup"
+                 '(:tag ("testing")))
+(vendle:register "dgutov/diff-hl"
+                 '(:tag ("git")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -1034,6 +1038,7 @@
                        '(:deps ( "sellout/emacs-color-theme-solarized")))
 (vendle:register-theme "emacsfodder/emacs-theme-darktooth")
 (vendle:register-theme "melisgl/color-theme-mgl")
+(vendle:register-theme "BrianHicks/emacs-themes")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)

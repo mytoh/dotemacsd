@@ -14,6 +14,9 @@
 ;;; prefer lisp function
 (enable-option eshell-prefer-lisp-functions)
 
+;;; history
+(setq eshell-history-size 100000)
+
 ;;; start eshell after startup
 (cl-defun muki:eshell-startup-hook ()
   (let ((default-directory (getenv "HOME")))

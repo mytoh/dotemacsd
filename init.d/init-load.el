@@ -182,6 +182,7 @@
     fvwm-mode
     sallet
     git-messenger
+    git-gutter
     ;; random-splash-image
     ;; hl-sentence
     ;; centered-window-mode
