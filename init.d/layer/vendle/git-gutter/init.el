@@ -8,9 +8,6 @@
 
   (add-hook 'emacs-lisp-mode-hook #'git-gutter-mode)
 
-  ;; diff information is updated at hooks in git-gutter:update-hooks.
-  (add-to-list 'git-gutter:update-hooks 'focus-in-hook)
-  (add-to-list 'git-gutter:update-hooks 'evil-insert-state-exit-hook)
   ;; diff information is updated after command in git-gutter:update-commands executed.
   (add-to-list 'git-gutter:update-commands #'other-window)
 

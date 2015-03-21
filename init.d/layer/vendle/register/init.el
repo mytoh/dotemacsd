@@ -1039,6 +1039,7 @@
 (vendle:register-theme "emacsfodder/emacs-theme-darktooth")
 (vendle:register-theme "melisgl/color-theme-mgl")
 (vendle:register-theme "BrianHicks/emacs-themes")
+(vendle:register-theme "mrsipan/sipan-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
