@@ -1040,6 +1040,7 @@
 (vendle:register-theme "melisgl/color-theme-mgl")
 (vendle:register-theme "BrianHicks/emacs-themes")
 (vendle:register-theme "mrsipan/sipan-theme")
+(vendle:register-theme "cmack/emacs-planet-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)

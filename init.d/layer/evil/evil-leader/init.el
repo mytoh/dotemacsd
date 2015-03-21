@@ -12,7 +12,7 @@
         ("g" .  git)
         ("hi" . help-info)
         ("hd" . help-describe)
-        ("m" . emms)
+        ("am" . emms)
         ("o" . org)
         ("f" . file)
         ("s" . search)
