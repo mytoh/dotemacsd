@@ -113,6 +113,7 @@
 
     (liby 'magit
       (muki:evil-leader-prefix-set-keys 'git
+        "l" #'magit-log
         "s" #'magit-status))
 
     (liby 'helm-project-buffer
@@ -150,10 +151,10 @@
 
     (liby 'emms
       (muki:evil-leader-prefix-set-keys 'emms
-        "P" #'emms-player-mpd-pause
-        "s" #'emms-player-mpd-stop
-        "p" #'emms-player-mpd-previous
-        "n" #'emms-player-mpd-next
+        "P" #'emms-pause
+        "s" #'emms-stop
+        "p" #'emms-previous
+        "n" #'emms-next
         "b" #'emms-smart-browse
         "a f" #'emms-add-file
         "a d" #'emms-add-directory-tree
