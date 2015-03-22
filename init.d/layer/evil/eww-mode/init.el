@@ -3,7 +3,7 @@
 ;;; Code:
 
 (evil-define-key 'normal eww-mode-map
-  "<TAB>" #'shr-next-link
+  "C-i" #'shr-next-link
   "S-<TAB>" #'shr-previous-link
   "o" #'ace-link-eww
   "q" #'quit-window)
