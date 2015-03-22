@@ -261,6 +261,7 @@
   '(eww-mode
     image-mode
     paradox-mode
+    emms-mode
     ))
 
 (muki-layer:load-layers 'helm
