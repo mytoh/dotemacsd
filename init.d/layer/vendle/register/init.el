@@ -121,9 +121,11 @@
 (vendle:register "ralesi/helm-pt"
                  '(:tag ("helm" "pt")))
 (vendle:register "abo-abo/swiper"
-                 '(:tag ("helm" "isearch")
+                 '(:tag ("isearch")
                    ;; :deps ("abo-abo/ivy") ; not yet created
                    :desc "Isearch with an overview. Oh, man! "))
+(vendle:register "abo-abo/swiper-helm"
+                 '(:tag ("helm" "search")))
 (vendle:register "emacs-helm/helm-emms"
                  '(:tag ("helm" "emms")))
 
