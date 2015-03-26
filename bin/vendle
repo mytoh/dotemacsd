@@ -43,7 +43,7 @@
 (cl-defun vendle-update-async ()
   (interactive)
   (cl-letf ((pkgs (seq-partition
-                   *vendle-package-list*
+                   vendle:*packages*
                    2)))
     (seq-each
      (lambda (ps)

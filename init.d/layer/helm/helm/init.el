@@ -86,6 +86,9 @@ Otherwise goto the end of minibuffer."
   ;; disable auto completion
   ;; (setq helm-ff-auto-update-initial-value nil)
 
+  ;; helm-org
+  (enable-option helm-org-headings-fontify)
+
   ;; match plugin
   (set-option helm-mp-highlight-delay 0.2)
 

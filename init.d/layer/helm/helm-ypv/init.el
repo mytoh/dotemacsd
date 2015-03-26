@@ -16,13 +16,14 @@
                  (tp  "temp.orz.hm/yp")
                  ;; (dp  "dp.prgrssv.net")
                  (hktv "games.himitsukichi.com/hktv")
-                 (turf-page "peercast.takami98.net/turf-page")
+                 ;; (turf-page "peercast.takami98.net/turf-page")
                  ;; (oekaki "oekakiyp.appspot.com")
                  ;; (event "eventyp.xrea.jp")
-                 (message "peercast.takami98.net/message-yp")))
+                 ;; (message "peercast.takami98.net/message-yp")
+                 ))
 
-  ;; (set-option helm-ypv-player-type 'mpv)
-  (set-option helm-ypv-default-protocol "http")
+  (set-option helm-ypv-player-type 'mpv)
+  (set-option helm-ypv-default-protocol "mmshttp")
 
   ;; (helm-migemize-command 'helm-ypv)
   )
