@@ -121,6 +121,8 @@
 
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
+(setq auto-window-vscroll nil)
+
 (setq scroll-up-aggressively 0.0)
 (setq scroll-down-aggressively 0.0)
 
