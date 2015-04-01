@@ -255,6 +255,7 @@
     evil-visual-mark-mode
     evil-anzu
     evil-smartparens
+    evil-rsi
     evil
     ))
 
