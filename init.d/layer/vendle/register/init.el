@@ -948,6 +948,8 @@
                    :desc "Org-mode as BOOkmark"))
 (vendle:register "rexim/org-cliplink"
                  '(:tag ("org" "clipboard")))
+(vendle:register "tarsius/orglink"
+                 '(:tag ("org")))
 ;; (vendle:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ("org" "bongo" "music")
 ;;                    :depends ("dbrock/bongo")

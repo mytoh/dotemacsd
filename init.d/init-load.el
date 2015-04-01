@@ -35,6 +35,7 @@
     org-download
     outline-magic
     org-cliplink
+    orglink
     ))
 
 (muki-layer:load-layers 'vendle
