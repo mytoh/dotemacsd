@@ -275,6 +275,9 @@
 (enable-option select-enable-clipboard
                select-enable-primary)
 
+;; kill-ring and clipboard are same now!
+;; (set-option save-interprogram-paste-before-kill t)
+
 ;;;; browse web
 (set-option browse-url-generic-program "conkeror")
 (set-option browse-url-browser-function #'browse-url-generic)

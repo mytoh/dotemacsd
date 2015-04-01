@@ -262,6 +262,7 @@
     image-mode
     paradox-mode
     emms-mode
+    emacs-lisp-mode
     ))
 
 (muki-layer:load-layers 'helm

@@ -6,7 +6,7 @@
 ;;;;; helm
 (vendle:register "emacs-helm/helm"
                  '(:build ("gmake")
-                   :deps ("jwiegley/emacs-async")
+                   :depends ("jwiegley/emacs-async")
                    :tag "helm"))
 (vendle:fetch "emacs-helm/helm.wiki"
               '(:tag ("helm" "wiki")))
@@ -35,7 +35,7 @@
                  '(:tag ("helm" "theme")))
 (vendle:register "syohex/emacs-helm-open-github"
                  '(:tag ("helm" "github")
-                   :deps ("sigma/gh.el")))
+                   :depends ("sigma/gh.el")))
 (vendle:register "istib/helm-mode-manager"
                  '(:tag ("helm")))
 (vendle:register "tkf/emacs-pinot-search"
@@ -45,7 +45,7 @@
 (vendle:register "emacs-helm/helm-descbinds"
                  '(:tag ("helm")))
 (vendle:register "yasuyk/helm-company"
-                 '(:deps ("rejeep/f.el")
+                 '(:depends ("rejeep/f.el")
                    :tag ("helm" "company")))
 (vendle:register "emacs-helm/helm-dictionary"
                  '(:tag ("helm")))
@@ -55,50 +55,50 @@
 (vendle:register "ShingoFukuyama/helm-css-scss"
                  '(:tag ("helm" "css")))
 (vendle:register "tmalsburg/helm-bibtex"
-                 '(:deps ("joostkremers/ebib"
-                          "magnars/s.el"
-                          "magnars/dash.el"
-                          "rejeep/f.el"
-                          "joostkremers/parsebib")
+                 '(:depends ("joostkremers/ebib"
+                             "magnars/s.el"
+                             "magnars/dash.el"
+                             "rejeep/f.el"
+                             "joostkremers/parsebib")
                    :tag ("helm" "bibtex")))
 (vendle:register "k1LoW/helm-dirset"
-                 '(:deps ("rejeep/f.el"
-                          "magnars/s.el"
-                          ( "emacs-helm/helm"
-                           (:build ("gmake")
-                            :deps ("jwiegley/emacs-async")
-                            :tag "helm")))))
+                 '(:depends ("rejeep/f.el"
+                             "magnars/s.el"
+                             ( "emacs-helm/helm"
+                              (:build ("gmake")
+                                      :depends ("jwiegley/emacs-async")
+                                      :tag "helm")))))
 (vendle:register "pronobis/helm-words"
-                 '(:deps (( "emacs-helm/helm"
-                           (:build ("gmake")
-                            :deps ("jwiegley/emacs-async")
-                            :tag "helm")))
+                 '(:depends (( "emacs-helm/helm"
+                              (:build ("gmake")
+                                      :depends ("jwiegley/emacs-async")
+                                      :tag "helm")))
                    :tag ("helm" "dictionary")))
 (vendle:register "emacs-helm/helm-orgcard"
                  '(:tag ("helm" "org")
-                   :deps (( "emacs-helm/helm"
-                           (:build ("gmake")
-                            :deps ("jwiegley/emacs-async")
-                            :tag "helm")))))
+                   :depends (( "emacs-helm/helm"
+                              (:build ("gmake")
+                                      :depends ("jwiegley/emacs-async")
+                                      :tag "helm")))))
 (vendle:register "lins05/helm-org-files"
                  '(:tag ("helm" "org")
-                   :deps (( "emacs-helm/helm"
-                           (:build ("gmake")
-                            :deps ("jwiegley/emacs-async")
-                            :tag "helm")))))
+                   :depends (( "emacs-helm/helm"
+                              (:build ("gmake")
+                                      :depends ("jwiegley/emacs-async")
+                                      :tag "helm")))))
 (vendle:register "abo-abo/helm-org-wiki"
                  '(:tag ("helm" "org")))
 (vendle:register "csantosb/helm-perso-wiki"
                  '(:tag ("helm" "wiki" "org")
-                   :deps ("git://jblevins.org/git/deft.git"
-                          ("bbatsov/projectile"
-                           (:deps ("magnars/s.el"
-                                   "rejeep/f.el"
-                                   ("magnars/dash.el" (:compile nil))
-                                   ("lunaryorn/pkg-info.el"
-                                    (:deps ("cask/epl"))))))
-                          "nex3/perspective-el"
-                          "Bruce-Connor/names")))
+                   :depends ("git://jblevins.org/git/deft.git"
+                             ("bbatsov/projectile"
+                              (:depends ("magnars/s.el"
+                                         "rejeep/f.el"
+                                         ("magnars/dash.el" (:compile nil))
+                                         ("lunaryorn/pkg-info.el"
+                                          (:depends ("cask/epl"))))))
+                             "nex3/perspective-el"
+                             "Bruce-Connor/names")))
 (vendle:register "yuutayamada/helm-shell-history"
                  '(:tag ("helm" "term")))
 (vendle:register "david-christiansen/helm-pages"
@@ -111,18 +111,18 @@
                  '(:tag ("helm" "hackernews" "news" "web")))
 (vendle:register "Fuco1/sallet"
                  '(:tag ("helm")
-                   :deps ("lewang/flx"
-                          ("magnars/dash.el" ( :compile nil))
-                          "magnars/s.el"
-                          "jwiegley/emacs-async"
-                          "cask/shut-up")))
+                   :depends ("lewang/flx"
+                             ("magnars/dash.el" ( :compile nil))
+                             "magnars/s.el"
+                             "jwiegley/emacs-async"
+                             "cask/shut-up")))
 (vendle:register "Sliim/helm-github-stars"
                  '(:tag ("helm" "github")))
 (vendle:register "ralesi/helm-pt"
                  '(:tag ("helm" "pt")))
 (vendle:register "abo-abo/swiper"
                  '(:tag ("isearch")
-                   ;; :deps ("abo-abo/ivy") ; not yet created
+                   ;; :depends ("abo-abo/ivy") ; not yet created
                    :desc "Isearch with an overview. Oh, man! "))
 (vendle:register "abo-abo/swiper-helm"
                  '(:tag ("helm" "search")))
@@ -130,7 +130,7 @@
                  '(:tag ("helm" "emms")))
 (vendle:register "michael-heerdegen/helm-browse"
                  '(:tag ("helm")
-                   :deps ("michael-heerdegen/iterators.el")))
+                   :depends ("michael-heerdegen/iterators.el")))
 
 ;;;;;  general packages
 (vendle:register "magnars/s.el")
@@ -179,9 +179,9 @@
 (vendle:register "alezost/emms-status.el"
                  '(:tag ("emms")))
 (vendle:register "r0man/soundklaus.el"
-                 '(:deps (("magnars/dash.el" ( :compile nil))
-                          "magnars/s.el"
-                          "kiwanami/emacs-deferred")
+                 '(:depends (("magnars/dash.el" ( :compile nil))
+                             "magnars/s.el"
+                             "kiwanami/emacs-deferred")
                    :tag "soundcloud"))
 
 (vendle:register "magit/git-modes"
@@ -191,22 +191,22 @@
                    :info "."
                    :tag "git"))
 (vendle:register "magit/orgit"
-                 '(:deps (("magit/magit"
-                           (:build ("gmake lisp docs")
-                            :info "."
-                            :tag ("git" )))
-                          ("magnars/dash.el" ( :compile nil)))
+                 '(:depends (("magit/magit"
+                              (:build ("gmake lisp docs")
+                                      :info "."
+                                      :tag ("git" )))
+                             ("magnars/dash.el" ( :compile nil)))
                    :tag ("git" "org" "magit")))
 (vendle:register "mickesv/magit-overview"
                  '(:tag ("magit")
-                   :deps (("magit/magit"
-                           (:build ("gmake lisp docs")
-                            :info "."
-                            :tag "git")))))
+                   :depends (("magit/magit"
+                              (:build ("gmake lisp docs")
+                                      :info "."
+                                      :tag "git")))))
 (vendle:register "magit/magit-filenotify"
                  '(:tag ("magit")
-                   :deps (("magit/magit"
-                           (:build ("gmake lisp docs") :info "." :tag "git")))))
+                   :depends (("magit/magit"
+                              (:build ("gmake lisp docs") :info "." :tag "git")))))
 (vendle:register "dholm/magit-idle-breadcrumbs"
                  '(:tag ("magit")))
 (vendle:register "YoungFrog/git-overview"
@@ -215,43 +215,43 @@
                  '(:tag "company"))
 (vendle:register "proofit404/company-edbi"
                  '(:tag "company"
-                   :deps ( "company-mode/company-mode")))
+                   :depends ( "company-mode/company-mode")))
 (vendle:register "vspinu/company-math"
                  '(:tag "company"
-                   :deps ( "company-mode/company-mode"
-                          "vspinu/symbols.el")))
+                   :depends ( "company-mode/company-mode"
+                             "vspinu/symbols.el")))
 (vendle:register "iquiw/company-restclient"
                  '(:tag "company"
-                   :deps ( "company-mode/company-mode"
-                          ("for-GET/know-your-http-well"
-                           (:load-path "emacs")))))
+                   :depends ( "company-mode/company-mode"
+                             ("for-GET/know-your-http-well"
+                              (:load-path "emacs")))))
 (vendle:register "expez/company-quickhelp"
                  '(:tag ("company")
-                   :deps ("pitkali/pos-tip")))
+                   :depends ("pitkali/pos-tip")))
 (vendle:register "syohex/emacs-git-gutter"
                  '(:tag "git"))
 (vendle:register "syohex/emacs-git-gutter-fringe"
                  '(:tag ("git")
-                   :deps ( "syohex/emacs-git-gutter"
-                          "nschum/fringe-helper.el")))
+                   :depends ( "syohex/emacs-git-gutter"
+                             "nschum/fringe-helper.el")))
 (vendle:register "nonsequitur/git-gutter-fringe-plus"
                  '(:tag ("git")
-                   :deps ( "nonsequitur/git-gutter-plus"
-                          "nschum/fringe-helper.el")))
+                   :depends ( "nonsequitur/git-gutter-plus"
+                             "nschum/fringe-helper.el")))
 (vendle:register "syohex/emacs-rebuildfm"
                  '(:tag "radio"))
 (vendle:register "syohex/emacs-anzu" '(:compile nil))
 (vendle:register "syohex/emacs-evil-anzu"
                  '(:tag ("evil" "anzu")
-                   :deps (("syohex/emacs-anzu" (:compile nil))
-                          ( "https://gitorious.org/evil/evil.git"
-                           (:build ("gmake doc all")
-                            :info "doc"
-                            :deps ("emacsmirror/goto-chg"
-                                   "http://www.dr-qubit.org/git/undo-tree.git")
-                            :tag "evil")))))
+                   :depends (("syohex/emacs-anzu" (:compile nil))
+                             ( "https://gitorious.org/evil/evil.git"
+                              (:build ("gmake doc all")
+                                      :info "doc"
+                                      :depends ("emacsmirror/goto-chg"
+                                                "http://www.dr-qubit.org/git/undo-tree.git")
+                                      :tag "evil")))))
 (vendle:register "Fuco1/smartparens"
-                 '(:compile nil :deps (("magnars/dash.el" ( :compile nil)))))
+                 '(:compile nil :depends (("magnars/dash.el" ( :compile nil)))))
 (vendle:register "magnars/expand-region.el")
 (vendle:register "magnars/multiple-cursors.el")
 (vendle:register "knu/mc-extras.el"
@@ -266,10 +266,11 @@
                  '(:tag ("ghc" "haskell")
                    :load-path "elisp"))
 (vendle:register "Bruce-Connor/paradox"
-                 '(:deps ("magnars/dash.el"
-                          "jwiegley/emacs-async")))
+                 '(:depends ("magnars/dash.el"
+                             "jwiegley/emacs-async"
+                             "Malabarba/spinner.el")))
 (vendle:register "Bruce-Connor/aggressive-indent-mode"
-                 '(:deps ( "Bruce-Connor/names")))
+                 '(:depends ( "Bruce-Connor/names")))
 (vendle:register "Bruce-Connor/rich-minority")
 (vendle:register "steckerhalter/google-el")
 (vendle:register "daemianmack/magit-cheatsheet"
@@ -283,7 +284,7 @@
 (vendle:register "skeeto/elfeed"
                  '(:tag "rss"))
 (vendle:register "remyhonig/elfeed-org"
-                 '(:deps ("skeeto/elfeed")
+                 '(:depends ("skeeto/elfeed")
                    :tag ("org" "rss")))
 (vendle:register "zk-phi/spray")
 (vendle:register "nschum/highlight-parentheses.el")
@@ -298,11 +299,11 @@
 (vendle:register "gongo/yamada-el")
 (vendle:register "jiyoo/flyparens")
 (vendle:register "flycheck/flycheck"
-                 '(:deps ("magnars/dash.el"
-                          "cask/shut-up")
+                 '(:depends ("magnars/dash.el"
+                             "cask/shut-up")
                    :info "."))
 (vendle:register "flycheck/flycheck-pos-tip"
-                 '(:deps ("auto-complete/popup-el")))
+                 '(:depends ("auto-complete/popup-el")))
 (vendle:register "purcell/flycheck-package"
                  '(:tag ("flycheck")))
 (vendle:register "zenozeng/css-eldoc")
@@ -312,24 +313,24 @@
 (vendle:register "mhayashi1120/Emacs-image-diredx"
                  '(:tag ("dired" "image")))
 (vendle:register "kiwanami/emacs-window-manager"
-                 '(:deps ("kiwanami/emacs-window-layout")))
+                 '(:depends ("kiwanami/emacs-window-layout")))
 (vendle:register "m2ym/direx-el"
-                 '(:deps ("m2ym/popwin-el")))
+                 '(:depends ("m2ym/popwin-el")))
 (vendle:register "aki2o/e2wm-direx"
-                 '(:deps ("kiwanami/emacs-window-manager"
-                          "m2ym/direx-el")))
+                 '(:depends ("kiwanami/emacs-window-manager"
+                             "m2ym/direx-el")))
 (vendle:register "yu-i9/oniisama")
 (vendle:register "nicferrier/emacs-web"
-                 '(:deps ("magnars/dash.el"
-                          "magnars/s.el")))
+                 '(:depends ("magnars/dash.el"
+                             "magnars/s.el")))
 (vendle:register "nicferrier/elnode"
-                 '(:deps ("nicferrier/emacs-fakir"
-                          "nicferrier/emacs-kv"
-                          "nicferrier/emacs-db"
-                          "nicferrier/emacs-noflet"
-                          )))
+                 '(:depends ("nicferrier/emacs-fakir"
+                             "nicferrier/emacs-kv"
+                             "nicferrier/emacs-db"
+                             "nicferrier/emacs-noflet"
+                             )))
 (vendle:register "nicferrier/emacs-web"
-                 '(:deps ("nicferrier/elnode")))
+                 '(:depends ("nicferrier/elnode")))
 (vendle:register "syohex/emacs-eew")
 (vendle:register "escherdragon/sunrise-commander"
                  '(:compile nil))
@@ -338,7 +339,7 @@
 ;;                    :load-path ("lisp" "contrib")))
 (vendle:register "dholm/tabbar")
 ;;(vendle:register "aki2o/guide-key-tip"
-;;                 '(:deps ("kbkbkbkb1/guide-key"
+;;                 '(:depends ("kbkbkbkb1/guide-key"
 ;;                          "emacsmirror/pos-tip")))
 (vendle:register "clojure-emacs/clojure-mode")
 (vendle:register "Fanael/rainbow-delimiters")
@@ -367,19 +368,19 @@
 (vendle:register "ieure/nssh-el")
 (vendle:register "mhayashi1120/japanlaw.el")
 (vendle:register "roman/navorski.el"
-                 '(:deps ("magnars/s.el"
-                          ("magnars/dash.el" ( :compile nil))
-                          "emacsmirror/multi-term")))
+                 '(:depends ("magnars/s.el"
+                             ("magnars/dash.el" ( :compile nil))
+                             "emacsmirror/multi-term")))
 (vendle:register "febuiles/lyricwiki.el")
 (vendle:register "sabof/svg-mode-line-themes"
-                 '(:deps ("philjackson/xmlgen")))
+                 '(:depends ("philjackson/xmlgen")))
 (vendle:register "naota/navi2ch"
                  '(:build ("./configure" "gmake")))
 (vendle:register "purcell/elisp-slime-nav")
 (vendle:register "gcr/tumblesocks"
-                 '(:deps ( "psanford/emacs-oauth"
-                          "git://jblevins.org/git/markdown-mode.git"
-                          "emacsmirror/htmlize")
+                 '(:depends ( "psanford/emacs-oauth"
+                             "git://jblevins.org/git/markdown-mode.git"
+                             "emacsmirror/htmlize")
                    :tag "tumblr"))
 (vendle:register "thomblake/js3-mode"
                  '(:tag "javascript"))
@@ -407,8 +408,8 @@
 (vendle:register "Fanael/highlight-defined")
 (vendle:register "Bruce-Connor/conkeror-minor-mode")
 (vendle:register "larsmagne/movie.el"
-                 '(:deps ("larsmagne/pvr.el"
-                          "larsmagne/imdb.el")
+                 '(:depends ("larsmagne/pvr.el"
+                             "larsmagne/imdb.el")
                    :desc "http://lars.ingebrigtsen.no/2011/04/12/emacs-movie-browser" ))
 ;; csid make eww unusable because of dom.el
 ;; (vendle:register "larsmagne/csid"
@@ -417,12 +418,12 @@
                  '(:tag ("http" "repl")))
 (vendle:register "nicferrier/emacs-twaddle"
                  '(:tag ("twitter")
-                   :deps ("VincentToups/shadchen-el"
-                          "nicferrier/emacs-kv"
-                          "magnars/dash.el"
-                          "nicferrier/emacs-web"
-                          "nicferrier/emacs-noflet"
-                          "nicferrier/elnode")))
+                   :depends ("VincentToups/shadchen-el"
+                             "nicferrier/emacs-kv"
+                             "magnars/dash.el"
+                             "nicferrier/emacs-web"
+                             "nicferrier/emacs-noflet"
+                             "nicferrier/elnode")))
 (vendle:register "https://bitbucket.org/ukaszg/aria2.git"
                  '(:tag "aria2" ))
 (vendle:register "m00natic/eww-lnum"
@@ -440,10 +441,10 @@
                  '(:tag ("git" "highlight" )))
 (vendle:register "syohex/emacs-git-messenger"
                  '(:tag ("git")
-                   :deps ("auto-complete/popup-el")))
+                   :depends ("auto-complete/popup-el")))
 (vendle:register "abo-abo/ace-link"
-                 '(:deps ( "winterTTr/ace-jump-mode"
-                          "nicferrier/emacs-noflet")))
+                 '(:depends ( "winterTTr/ace-jump-mode"
+                             "nicferrier/emacs-noflet")))
 (vendle:register "kenoss/erfi"
                  '(:tag ("scheme" "srfi")))
 (vendle:register "nicferrier/eshell-manual"
@@ -453,13 +454,13 @@
                    :tag "eshell"))
 (vendle:register "jschaf/esup")
 (vendle:register "vermiculus/sx.el"
-                 '(:deps ("git://jblevins.org/git/markdown-mode.git")))
+                 '(:depends ("git://jblevins.org/git/markdown-mode.git")))
 (vendle:register "nlamirault/emacs-travis"
-                 '(:deps ( "magnars/s.el"
-                          ("magnars/dash.el" ( :compile nil))
-                          ( "lunaryorn/pkg-info.el"
-                           (:deps ("cask/epl")))
-                          "tkf/emacs-request")
+                 '(:depends ( "magnars/s.el"
+                             ("magnars/dash.el" ( :compile nil))
+                             ( "lunaryorn/pkg-info.el"
+                              (:depends ("cask/epl")))
+                             "tkf/emacs-request")
                    :tag ("travis")))
 (vendle:register "aJchemist/linkmap.el")
 (vendle:register "alezost/mana.el"
@@ -477,7 +478,7 @@
                  '(:tag ("project")))
 (vendle:register "Fuco1/better-jump"
                  '(:tag ("ace-jump")
-                   :deps ("ShingoFukuyama/ov.el")))
+                   :depends ("ShingoFukuyama/ov.el")))
 (vendle:register "Fuco1/free-keys")
 (vendle:register "Fuco1/banana.el"
                  '(:tag ("monad")))
@@ -487,12 +488,12 @@
 (vendle:register "sensorflo/sln-mode")
 (vendle:register "Bruce-Connor/camcorder.el"
                  '(:tag ("screencast")
-                   :deps ("Bruce-Connor/names")))
+                   :depends ("Bruce-Connor/names")))
 (vendle:register "matthewlmcclure/dircmp-mode")
 (vendle:register "agpchil/url-preview.el"
-                 '(:deps (("magnars/dash.el" ( :compile nil)))))
+                 '(:depends (("magnars/dash.el" ( :compile nil)))))
 (vendle:register "emacsfodder/kurecolor"
-                 '(:deps ("magnars/s.el")))
+                 '(:depends ("magnars/s.el")))
 (vendle:register "cmpitg/emnode")
 (vendle:register "wasamasa/shackle"
                  '(:compile nil))
@@ -500,11 +501,11 @@
 (vendle:register "chrisbarrett/skeletor.el"
                  '(:build ("gmake")))
 (vendle:register "promethial/paxedit"
-                 '(:deps ("http://mumble.net/~campbell/git/paredit.git")))
+                 '(:depends ("http://mumble.net/~campbell/git/paredit.git")))
 (vendle:register "tlh/workgroups.el"
                  '(:tag ("window")))
 (vendle:register "wasamasa/eyebrowse"
-                 '(:deps (("magnars/dash.el" ( :compile nil)))))
+                 '(:depends (("magnars/dash.el" ( :compile nil)))))
 (vendle:register "idomagal/Tabula-Rasa"
                  '(:tag ("writing" "distraction free")))
 (vendle:register "capitaomorte/darkroom"
@@ -514,11 +515,11 @@
                    :compile nil))
 (vendle:register "gongo/json-reformat"
                  '(:tag "json"
-                   :deps ("sviridov/undercover.el")))
+                   :depends ("sviridov/undercover.el")))
 (vendle:register "joshwnj/json-mode"
                  '(:tag "json"
-                   :deps ("Sterlingg/json-snatcher"
-                          "gongo/json-reformat")))
+                   :depends ("Sterlingg/json-snatcher"
+                             "gongo/json-reformat")))
 (vendle:register "hchbaw/bqlist-lock.el")
 (vendle:register "fgeller/leerzeichen.el"
                  '(:tag ("whitespace" "highlight")))
@@ -526,18 +527,18 @@
                  '(:tag ("namespace")))
 (vendle:register "chrisbarrett/emacs-refactor"
                  '(:tag ("refactoring")
-                   :deps (("magnars/dash.el" (:compile nil))
-                          "rolandwalker/list-utils"
-                          "http://mumble.net/~campbell/git/paredit.git"
-                          "auto-complete/popup-el"
-                          ("bbatsov/projectile"
-                           (:deps ("magnars/s.el"
-                                   "rejeep/f.el"
-                                   ("magnars/dash.el" (:compile nil))
-                                   ("lunaryorn/pkg-info.el"
-                                    (:deps ("cask/epl"))))))
-                          "emacsmirror/redshank"
-                          "magnars/s.el")))
+                   :depends (("magnars/dash.el" (:compile nil))
+                             "rolandwalker/list-utils"
+                             "http://mumble.net/~campbell/git/paredit.git"
+                             "auto-complete/popup-el"
+                             ("bbatsov/projectile"
+                              (:depends ("magnars/s.el"
+                                         "rejeep/f.el"
+                                         ("magnars/dash.el" (:compile nil))
+                                         ("lunaryorn/pkg-info.el"
+                                          (:depends ("cask/epl"))))))
+                             "emacsmirror/redshank"
+                             "magnars/s.el")))
 (vendle:register "rakete/pixel-mode"
                  '(:tag ("pixel_art")))
 (vendle:register "yuttie/initchart")
@@ -557,7 +558,7 @@
 (vendle:register "10sr/shell-split-string-el"
                  '(:tag "shell"))
 (vendle:register "kiwanami/emacs-kovlive"
-                 '(:deps ("kiwanami/emacs-deferred")))
+                 '(:depends ("kiwanami/emacs-deferred")))
 (vendle:register "ieure/ssh-el"
                  '(:tag "ssh"))
 (vendle:register "tarsius/hl-todo"
@@ -587,7 +588,7 @@
                  '(:tag ("dired" "fclone")))
 (vendle:register "Fuco1/dired-hacks")
 (vendle:register "syohex/emacs-literate-coffee-mode"
-                 '(:deps ( "defunkt/coffee-mode")
+                 '(:depends ( "defunkt/coffee-mode")
                    :tag ("coffeescript")))
 (vendle:register "tarsius/elx"
                  '(:desc "Extract information from Emacs Lisp libraries"))
@@ -624,14 +625,14 @@
                    :desc "espeak speech synthesis for org-babel blocks"))
 (vendle:register "vapniks/syslog-mode"
                  '(:tag ("log")
-                   :deps ("vapniks/hide-lines")
+                   :depends ("vapniks/hide-lines")
                    :desc "Emacs major-mode for viewing log files "))
 (vendle:register "chrisbarrett/skeletor.el"
                  '(:desc "Powerful project skeletons for Emacs"
-                   :deps ("sviridov/undercover.el")))
+                   :depends ("sviridov/undercover.el")))
 (vendle:register "steckerhalter/emacs-fasd"
                  '(:tag ("fasd")
-                   :deps ("d11wtq/grizzl")
+                   :depends ("d11wtq/grizzl")
                    :desc "An Emacs extension to integrate Fasd"))
 (vendle:register "steckerhalter/ipretty"
                  '(:desc "Interactive Emacs Lisp pretty-printing "))
@@ -651,12 +652,12 @@
                  '(:tag ("highlight")))
 (vendle:register "xuchunyang/youdao-dictionary.el"
                  '(:tag ("chinese")
-                   :deps ("auto-complete/popup-el"
-                          "xuchunyang/chinese-word-at-point.el")))
+                   :depends ("auto-complete/popup-el"
+                             "xuchunyang/chinese-word-at-point.el")))
 (vendle:register "xuchunyang/google-translate-chinese.el"
                  '(:tag ("chinese" "translation")
-                   :deps ("auto-complete/popup-el"
-                          "xuchunyang/chinese-word-at-point.el")))
+                   :depends ("auto-complete/popup-el"
+                             "xuchunyang/chinese-word-at-point.el")))
 (vendle:register "rolandwalker/unicode-fonts"
                  '(:tag ("font" "unicode")))
 (vendle:register "sanryuu/emacs-bijin-tokei")
@@ -684,8 +685,8 @@
                  '(:tag ("region")))
 (vendle:register "zk-phi/jaword"
                  '(:tag ("japanese" "movement")
-                   :deps (("myuhe/tinysegmenter.el"
-                           (:tag ("japanese"))))))
+                   :depends (("myuhe/tinysegmenter.el"
+                              (:tag ("japanese"))))))
 (vendle:register "xahlee/xah-elisp-mode"
                  '(:tag ("emacs-lisp")))
 (vendle:register "asok/peep-dired"
@@ -705,9 +706,9 @@
 (vendle:register "wanderlust/wanderlust"
                  '(:tag ("mail")
                    :build ("gmake")
-                   :deps ( "wanderlust/flim"
-                          "wanderlust/semi"
-                          "wanderlust/apel")))
+                   :depends ( "wanderlust/flim"
+                             "wanderlust/semi"
+                             "wanderlust/apel")))
 (vendle:register "syohex/emacs-itunes-bgm"
                  '(:tag ("music" "itunes")))
 (vendle:register "andyetitmoves/libmpdee"
@@ -731,25 +732,25 @@
                  '(:tag ("wget")))
 (vendle:register "rmuslimov/browse-at-remote"
                  '(:tag ("github" "bitbucket" "git")
-                   :deps ("magnars/s.el"
-                          "rejeep/f.el")))
+                   :depends ("magnars/s.el"
+                             "rejeep/f.el")))
 (vendle:register "chillaranand/real-auto-save"
                  '(:tag ("autosave")))
 (vendle:register "kentaro/auto-save-buffers-enhanced")
 (vendle:register "m2ym/compilation-highlight-el")
 (vendle:register "ongaeshi/auto-shell-command"
-                 '(:deps ("kiwanami/emacs-deferred")
+                 '(:depends ("kiwanami/emacs-deferred")
                    :desc "Run the shell command **asynchronously** that you specified when you save the file."))
 (vendle:register "chumpage/chumpy-windows"
                  '(:tag ("window" "layout")))
 (vendle:register "kljohann/mpv.el"
-                 '(:deps ( "Bruce-Connor/names"
-                          ( "git://orgmode.org/org-mode.git"
-                           (:load-path ("lisp" "contrib/lisp")
-                            :compile nil
-                            :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
-                            :info "doc"
-                            :tag "org")))))
+                 '(:depends ( "Bruce-Connor/names"
+                             ( "git://orgmode.org/org-mode.git"
+                              (:load-path ("lisp" "contrib/lisp")
+                                          :compile nil
+                                          :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
+                                          :info "doc"
+                                          :tag "org")))))
 (vendle:register "danielsz/Palimpsest")
 (vendle:register "rolandwalker/ignoramus")
 (vendle:register "anler/centered-window-mode"
@@ -758,11 +759,11 @@
                  '(:tag ("writing" "reading" "highlight")))
 (vendle:register "joostkremers/writeroom-mode"
                  '(:tag ("writing")
-                   :deps ("joostkremers/visual-fill-column")))
+                   :depends ("joostkremers/visual-fill-column")))
 (vendle:register "gongo/emacs-ikku"
                  '(:tag ("haiku" "mecab" "japanese")
-                   :deps ("magnars/dash.el"
-                          "sviridov/undercover.el")))
+                   :depends ("magnars/dash.el"
+                             "sviridov/undercover.el")))
 (vendle:register "ThibautVerron/echo-sth.el")
 (vendle:register "10sr/git-command-el"
                  '(:tag ("git")))
@@ -772,7 +773,7 @@
                  '(:tag ("fvwm")))
 (vendle:register "tjim/nevermore"
                  '(:tag ("mail" "notmuch")
-                   :deps ("emacsmirror/peg")))
+                   :depends ("emacsmirror/peg")))
 (vendle:register "syohex/emacs-import-popwin"
                  '(:tag ("popwin")))
 (vendle:register "johanclaesson/picpocket"
@@ -783,12 +784,15 @@
                  '(:tag ("highlight")))
 (vendle:register "baohaojun/bbyac"
                  '(:tag ("completion")
-                   :deps ("browse-kill-ring/browse-kill-ring")))
+                   :depends ("browse-kill-ring/browse-kill-ring")))
 (vendle:register "jorgenschaefer/emacs-buttercup"
                  '(:tag ("testing")))
 (vendle:register "dgutov/diff-hl"
                  '(:tag ("git")))
 (vendle:register "Bruce-Connor/elisp-bug-hunter")
+(vendle:register "lokedhs/em-translate"
+                 '(:tag ("google_translate")
+                   :depends ("emacsmirror/http-post-simple")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -799,8 +803,8 @@
 (vendle:register "https://gitorious.org/evil/evil.git"
                  '(:build ("gmake doc all")
                    :info "doc"
-                   :deps ("emacsmirror/goto-chg"
-                          "http://www.dr-qubit.org/git/undo-tree.git")
+                   :depends ("emacsmirror/goto-chg"
+                             "http://www.dr-qubit.org/git/undo-tree.git")
                    :tag "evil"))
 (vendle:register "cofi/evil-leader"
                  '(:tag "evil"))
@@ -824,7 +828,7 @@
                  '(:tag "evil"))
 ;;(vendle:register "juanjux/evil-search-highlight-persist"
 ;;                 '(:tag "evil"
-;;                   :deps ("emacsmirror/highlight")))
+;;                   :depends ("emacsmirror/highlight")))
 (vendle:register "sunesimonsen/evil-walk-on-the-edge"
                  '(:tag "evil"))
 (vendle:register "bling/evil-jumper"
@@ -842,33 +846,33 @@
 (vendle:register "expez/evil-smartparens"
                  '(:tag ("evil" "smartparens")))
 (vendle:register "nadavspi/evil-linewise"
-                 '(:deps ("emacsmirror/move-text")
+                 '(:depends ("emacsmirror/move-text")
                    :tag "evil"))
 (vendle:register "TheBB/evil-paragraph-textobject"
                  '(:tag "evil"))
 (vendle:register "syl20bnr/evil-lisp-state"
-                 '(:deps ("magnars/expand-region.el")
+                 '(:depends ("magnars/expand-region.el")
                    :compile nil
                    :tag "evil"))
 (vendle:register "syl20bnr/evil-escape"
                  '(:tag "evil"
-                   :deps ("emacsmirror/key-chord")))
+                   :depends ("emacsmirror/key-chord")))
 (vendle:register "gridaphobe/evil-god-state"
                  '(:tag "evil"
-                   :deps ( "chrisdone/god-mode" )))
+                   :depends ( "chrisdone/god-mode" )))
 (vendle:register "tarleb/evil-scout")
 (vendle:register "PythonNut/evil-easymotion"
                  '(:tag "evil"
-                   :deps ( "winterTTr/ace-jump-mode"
-                          "nicferrier/emacs-noflet")))
+                   :depends ( "winterTTr/ace-jump-mode"
+                             "nicferrier/emacs-noflet")))
 (vendle:register "hlissner/evil-snipe"
                  '(:tag "evil"
-                   :deps (( "https://gitorious.org/evil/evil.git"
-                           (:build ("gmake doc all")
-                            :info "doc"
-                            :deps ("emacsmirror/goto-chg"
-                                   "http://www.dr-qubit.org/git/undo-tree.git")
-                            :tag "evil")))))
+                   :depends (( "https://gitorious.org/evil/evil.git"
+                              (:build ("gmake doc all")
+                                      :info "doc"
+                                      :depends ("emacsmirror/goto-chg"
+                                                "http://www.dr-qubit.org/git/undo-tree.git")
+                                      :tag "evil")))))
 (vendle:register "linktohack/evil-commentary"
                  '(:tag "evil"))
 (vendle:register "syl20bnr/evil-tutor"
@@ -877,8 +881,9 @@
                  '(:tag ("evil")))
 (vendle:register "bcarrell/evil-lispy"
                  '(:tag ("evil" "lispy")
-                   :deps (("abo-abo/lispy"
-                           (:deps ("sviridov/undercover.el"))))))
+                   :depends (("abo-abo/lispy"
+                              (:depends ("sviridov/undercover.el"))))))
+(vendle:register "linktohack/evil-rsi")
 
 ;;;;; org
 (vendle:register "git://orgmode.org/org-mode.git"
@@ -899,18 +904,18 @@
 (vendle:register "Fuco1/org-pretty-table"
                  '(:compile nil :tag "org"))
 (vendle:register "rlister/org-present"
-                 '(:deps (("git://orgmode.org/org-mode.git"
-                           (:load-path ("lisp" "contrib/lisp")
-                            :compile nil
-                            :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
-                            :info "doc"
-                            :tag "org")))))
+                 '(:depends (("git://orgmode.org/org-mode.git"
+                              (:load-path ("lisp" "contrib/lisp")
+                                          :compile nil
+                                          :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
+                                          :info "doc"
+                                          :tag "org")))))
 ;; (vendle:register "jleechpe/outorg-export")
 (vendle:register "tj64/navi"
                  '(:tag ("org" "outline")))
 (vendle:register "kawabata/ox-pandoc"
-                 '(:deps ("Wilfred/ht.el"
-                          "magnars/dash.el")
+                 '(:depends ("Wilfred/ht.el"
+                             "magnars/dash.el")
                    :tag ( "org" "pandoc" )))
 (vendle:register "bastibe/org-journal"
                  '(:tag ("org")))
@@ -927,7 +932,7 @@
                    :desc "Attempts to undo the html export of org"))
 (vendle:register "abo-abo/org-download"
                  '(:tag ("org")
-                   :deps ("jwiegley/emacs-async")))
+                   :depends ("jwiegley/emacs-async")))
 (vendle:register "brettviren/org-pub"
                  '(:tag ("org" "web" "html")))
 (vendle:register "tj64/org-dp"
@@ -945,7 +950,7 @@
                  '(:tag ("org" "clipboard")))
 ;; (vendle:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ("org" "bongo" "music")
-;;                    :deps ("dbrock/bongo")
+;;                    :depends ("dbrock/bongo")
 ;;                    :type hg))
 
 ;;;;; themes
@@ -1041,37 +1046,40 @@
 (vendle:register-theme "yveszoundi/emacs-rimero-theme")
 (vendle:register-theme "darrik/erosiond-theme")
 (vendle:register-theme "zk-phi/lenlen-theme"
-                       '(:deps ( "sellout/emacs-color-theme-solarized")))
+                       '(:depends ( "sellout/emacs-color-theme-solarized")))
 (vendle:register-theme "emacsfodder/emacs-theme-darktooth")
 (vendle:register-theme "melisgl/color-theme-mgl")
 (vendle:register-theme "BrianHicks/emacs-themes")
 (vendle:register-theme "mrsipan/sipan-theme")
 (vendle:register-theme "cmack/emacs-planet-theme")
 (vendle:register-theme "cpaulik/emacs-material-theme")
+(vendle:register-theme "eglaysher/dark-forest-theme")
+(vendle:register-theme "waymondo/apropospriate-theme")
+(vendle:register-theme "john2x/plan9-theme.el")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
-                              (vendle:register (expand-file-name path "~/huone/projektit")
-                                               option)))
-           (add-project-root  "emacs-flatline")
-           (add-project-root "helm-ypv" '(:tag "helm"))
-           (add-project-root "company-scheme" '(:tag ("company" "scheme")))
-           (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
-           (add-project-root "emacs-lehtifile-mode")
-           (add-project-root "helm-alku" '(:tag ("helm")))
-           (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
-           ;; (add-project-root "emacs-eshell-switch" '(:tag "eshell"))
-           (add-project-root "emacs-mesh" '(:tag "eshell"))
-           (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
-           (add-project-root "helm-project-buffer" '(:tag "helm"))
-           (add-project-root "emacs-eshellar" '(:tag ( "eshell" "shellar" )))
-           (add-project-root "emacs-vendle" '(:load-path nil
-                                              :tag ( "package" )))
-           (add-project-root "helm-features" '(:tag ( "emacs-lisp" )))
-           (add-project-root "helm-eww-bookmark" '(:tag ("helm" "eww" )))
-           (add-project-root "helm-eww-history" '(:tag ("helm" "eww" )))
-           (add-project-root "helm-eww-search-engine" '(:tag ("helm" "eww" )))
-           (add-project-root "helm-eshell-jump" '(:tag ("helm" "eshell"))))
+              (vendle:register (expand-file-name path "~/huone/projektit")
+                               option)))
+  (add-project-root  "emacs-flatline")
+  (add-project-root "helm-ypv" '(:tag "helm"))
+  (add-project-root "company-scheme" '(:tag ("company" "scheme")))
+  (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
+  (add-project-root "emacs-lehtifile-mode")
+  (add-project-root "helm-alku" '(:tag ("helm")))
+  (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
+  ;; (add-project-root "emacs-eshell-switch" '(:tag "eshell"))
+  (add-project-root "emacs-mesh" '(:tag "eshell"))
+  (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
+  (add-project-root "helm-project-buffer" '(:tag "helm"))
+  (add-project-root "emacs-eshellar" '(:tag ( "eshell" "shellar" )))
+  (add-project-root "emacs-vendle" '(:load-path nil
+                                     :tag ( "package" )))
+  (add-project-root "helm-features" '(:tag ( "emacs-lisp" )))
+  (add-project-root "helm-eww-bookmark" '(:tag ("helm" "eww" )))
+  (add-project-root "helm-eww-history" '(:tag ("helm" "eww" )))
+  (add-project-root "helm-eww-search-engine" '(:tag ("helm" "eww" )))
+  (add-project-root "helm-eshell-jump" '(:tag ("helm" "eshell"))))
 
 ;;;;;; skk
 (vendle:register "skk-dev/ddskk"
@@ -1176,9 +1184,11 @@
 (vendle:fetch "emacs-tw/awesome-emacs")
 (vendle:fetch "11111000000/emacs-d")
 (vendle:fetch "Shougo/neobundle.vim"
-              '(:tag "vim"))
+              '(:tag "vim" "plugin_manager"))
 (vendle:fetch "Shougo/vimshell.vim"
               '(:tag ("vim" "shell")))
+(vendle:fetch "kamichidu/vim-hariti"
+              '(:tag ("vim" "plugin_manager")))
 (vendle:fetch "gmarik/Vundle.vim"
               '(:tag "vim"))
 (vendle:fetch "guns/vim-sexp"
@@ -1512,7 +1522,8 @@
               '(:tag ("emms" "sabof" "gist")))
 (vendle:fetch "NightBlues/deploy-framework"
               '(:tag ("deploy")
-                :deps ("sviridov/undercover.el")))
+                :depends ("sviridov/undercover.el")))
+(vendle:fetch "https://bitbucket.org/hoangtu/.emacs.d.git")
 
 ;; (vendle:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
