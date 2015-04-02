@@ -2,7 +2,7 @@
 
 ;;; Code:
 
-(rveq 'evil-rsi
+(req 'evil-rsi
       (evil-rsi-mode))
 
 ;;; init.el ends here
