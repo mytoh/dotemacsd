@@ -1060,6 +1060,7 @@
 (vendle:register-theme "eglaysher/dark-forest-theme")
 (vendle:register-theme "waymondo/apropospriate-theme")
 (vendle:register-theme "john2x/plan9-theme.el")
+(vendle:register-theme "TheQZ/emerald-emacs")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
