@@ -256,8 +256,8 @@
     evil-visual-mark-mode
     evil-anzu
     evil-smartparens
-    evil-rsi
     evil
+    evil-rsi ; after evil
     ))
 
 (muki-layer:load-layers 'evil
