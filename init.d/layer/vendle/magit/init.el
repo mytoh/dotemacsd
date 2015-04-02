@@ -26,4 +26,5 @@
 (muki:define-launcher-key "g" #'magit-status)
 
 (liby 'magit
+  (setq magit-last-seen-setup-instructions "1.4.0")
   (muki:magit-setup))
