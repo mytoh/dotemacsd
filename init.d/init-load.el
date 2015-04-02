@@ -184,6 +184,7 @@
     sallet
     git-messenger
     git-gutter
+    cycle-themes
     ;; random-splash-image
     ;; hl-sentence
     ;; centered-window-mode

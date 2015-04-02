@@ -793,6 +793,8 @@
 (vendle:register "lokedhs/em-translate"
                  '(:tag ("google_translate")
                    :depends ("emacsmirror/http-post-simple")))
+(vendle:register "toroidal-code/cycle-themes.el"
+                 '(:tag ("theme")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
