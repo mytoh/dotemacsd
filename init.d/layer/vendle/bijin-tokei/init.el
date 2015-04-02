@@ -3,6 +3,6 @@
 ;;; Code:
 
 (req 'bijin-tokei
-  (auto (bijin-tokei-start) "bijin-tokei"))
+  (command (bijin-tokei-start) "bijin-tokei"))
 
 ;;; init.el ends here

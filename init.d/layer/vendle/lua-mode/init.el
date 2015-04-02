@@ -4,7 +4,7 @@
 
 ;;;;; lua-mode
 (liby 'lua-mode
-  (auto (lua-mode) "lua-mode" )
+  (command (lua-mode) "lua-mode" )
   (mode "\\.lua$" 'lua-mode)
   (cl-pushnew '("lua" . lua-mode) interpreter-mode-alist))
 

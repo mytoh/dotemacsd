@@ -4,6 +4,6 @@
 
 ;;;;; smeargle
 (liby 'smeargle
-  (auto (smeargle-clear smeargle smeargle-commits) "smeargle"))
+  (command (smeargle-clear smeargle smeargle-commits) "smeargle"))
 
 ;;; init.el ends here

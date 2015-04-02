@@ -4,7 +4,7 @@
 
 ;;;;; web-mode
 (liby 'web-mode
-  (auto (web-mode) "web-mode")
+  (command (web-mode) "web-mode")
   (mode "\\.phtml\\'"  'web-mode)
   (mode "\\.tpl\\.php\\'"  'web-mode)
   (mode "\\.[gj]sp\\'"  'web-mode)

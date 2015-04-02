@@ -3,6 +3,6 @@
 ;;; Code:
 
 (liby 'helm-lobste.rs
-  (auto (helm-lobste.rs) "helm-lobste.rs"))
+  (command (helm-lobste.rs) "helm-lobste.rs"))
 
 ;;; init.el ends here

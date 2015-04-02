@@ -3,6 +3,6 @@
 ;;; Code:
 
 (liby 'helm-features
-  (auto (helm-features) "helm-features"))
+  (command (helm-features) "helm-features"))
 
 ;;; init.el ends here

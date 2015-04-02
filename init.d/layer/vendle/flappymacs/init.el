@@ -4,6 +4,6 @@
 
 ;;;;; flappymacs
 (liby 'flappymacs
-  (auto (flappymacs) "flappymacs"))
+  (command (flappymacs) "flappymacs"))
 
 ;;; init.el ends here

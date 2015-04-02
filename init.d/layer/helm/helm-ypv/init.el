@@ -1,8 +1,8 @@
 ;;; init-helm-ypv.el -*- lexical-binding: t -*-
 
 (liby 'helm-ypv
-  (auto (helm-ypv helm-ypv-bookmarks helm-ypv-channels)
-        "helm-ypv")
+  (command (helm-ypv helm-ypv-bookmarks helm-ypv-channels)
+           "helm-ypv")
 
   (after 'helm-ypv
       ;; (set-option helm-ypv-local-address "localhost:7144")

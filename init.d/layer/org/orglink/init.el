@@ -3,7 +3,7 @@
 ;;; Code:
 
 (liby 'orglink
-  (auto (orglink-mode) "orglink")
+  (command (orglink-mode) "orglink")
   (set-option orglink-activate-links '(bracket))
   (hook 'emacs-lisp-mode-hook #'orglink-mode))
 

@@ -3,6 +3,6 @@
 ;;; Code:
 
 (liby 'helm-hackernews
-  (auto (helm-hackernews) "helm-hackernews"))
+  (command (helm-hackernews) "helm-hackernews"))
 
 ;;; init.el ends here

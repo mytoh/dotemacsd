@@ -4,7 +4,7 @@
 
 ;;;;; bqlist-lock
 (liby 'bqlist-lock
-  (auto (bqlist-lock-enable) "bqlist-lock")
+  (command (bqlist-lock-enable) "bqlist-lock")
   (hook 'emacs-lisp-mode-hook #'bqlist-lock-enable))
 
 

@@ -3,7 +3,7 @@
 ;;; Code:
 
 (liby 'helm-eww-history
-  (auto (helm-eww-history) "helm-eww-history")
+  (command (helm-eww-history) "helm-eww-history")
   (after 'eww
       (add-key eww-mode-map
         "H" #'helm-eww-history)))

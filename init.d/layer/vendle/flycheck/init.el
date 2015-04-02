@@ -1,7 +1,7 @@
 ;;; init-flycheck.el -*- lexical-binding: t; -*-
 
 (liby 'flycheck
-  (auto (flycheck-mode global-flycheck-mode) "flycheck")
+  (command (flycheck-mode global-flycheck-mode) "flycheck")
   ;; (add-hook 'after-init-hook #'global-flycheck-mode)
   (set-option flycheck-check-syntax-automatically '(save new-line))
 

@@ -2,13 +2,13 @@
 
 (liby 'helm-alku
 
-  (auto (helm-alku
-         helm-alku-program
-         helm-alku-directory
-         helm-alku-vihko
-         helm-alku-ääliö
-         helm-alku-layer)
-        "helm-alku")
+  (command (helm-alku
+            helm-alku-program
+            helm-alku-directory
+            helm-alku-vihko
+            helm-alku-ääliö
+            helm-alku-layer)
+           "helm-alku")
 
   (after 'helm-alku
       (set-option helm-alku-directory-list

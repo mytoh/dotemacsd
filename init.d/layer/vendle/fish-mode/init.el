@@ -4,7 +4,7 @@
 
 ;;;;; fish-mode
 (liby 'fish-mode
-  (auto (fish-mode) "fish-mode")
+  (command (fish-mode) "fish-mode")
   (cl-pushnew '("\\.fish\\'" . fish-mode) auto-mode-alist)
   (cl-pushnew '("fish" . fish-mode) interpreter-mode-alist))
 

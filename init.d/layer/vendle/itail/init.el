@@ -4,6 +4,6 @@
 
 ;;;;; itail
 (liby 'itail
-  (auto (itail) "itail"))
+  (command (itail) "itail"))
 
 ;;; init.el ends here

@@ -4,6 +4,6 @@
 
 ;;;;; nssh
 (liby 'nssh
-  (auto (nssh nssh-all) "nssh"))
+  (command (nssh nssh-all) "nssh"))
 
 ;;; init.el ends here

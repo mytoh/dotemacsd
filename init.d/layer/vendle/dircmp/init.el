@@ -4,7 +4,7 @@
 
 ;;;;; dircmp
 (liby 'dircmp
-  (auto (compare-directories) "dircmp"))
+  (command (compare-directories) "dircmp"))
 
 
 ;;; init.el ends here

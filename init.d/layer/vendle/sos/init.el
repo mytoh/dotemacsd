@@ -4,6 +4,6 @@
 
 ;;;;; sos
 (liby 'sos
-  (auto (sos) "sos"))
+  (command (sos) "sos"))
 
 ;;; init.el ends here

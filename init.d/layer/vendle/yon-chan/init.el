@@ -4,7 +4,7 @@
 
 ;;;;; yon-chan
 (liby 'yon-chan
-  (auto (yon-chan) "yon-chan"))
+  (command (yon-chan) "yon-chan"))
 
 
 ;;; init.el ends here

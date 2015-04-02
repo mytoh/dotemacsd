@@ -4,7 +4,7 @@
 
 ;;;;; web-beatify
 (liby 'web-beautify
-  (auto (web-beautify-css-buffer) "web-beautify")
+  (command (web-beautify-css-buffer) "web-beautify")
   (after 'css-mode
       (add-hook 'css-mode-hook
        (clambda ()

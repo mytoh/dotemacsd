@@ -4,7 +4,7 @@
 
 ;;;;; olivetti
 (liby 'olivetti
-  (auto (olivetti-mode) "olivetti"))
+  (command (olivetti-mode) "olivetti"))
 
 
 ;;; init.el ends here

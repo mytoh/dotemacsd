@@ -1,3 +1,3 @@
 
 (liby 'helm-orgcard
-  (auto (helm-orgcard) "helm-orgcard"))
+  (command (helm-orgcard) "helm-orgcard"))

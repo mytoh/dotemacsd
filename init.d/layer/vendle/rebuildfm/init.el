@@ -4,6 +4,6 @@
 
 ;;;;; rebuildfm
 (liby 'rebuildfm
-  (auto (rebuildfm) "rebuildfm"))
+  (command (rebuildfm) "rebuildfm"))
 
 ;;; init.el ends here

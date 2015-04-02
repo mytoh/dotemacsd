@@ -4,7 +4,7 @@
 
 ;;;;; context-coloring
 (liby 'context-coloring
-  (auto (context-coloring-mode) "context-coloring")
+  (command (context-coloring-mode) "context-coloring")
   (add-hook 'js-mode-hook #'context-coloring-mode))
 
 ;;; init.el ends here

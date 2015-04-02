@@ -4,6 +4,6 @@
 
 ;;;;; cat-mode
 (liby 'cat-mode
-  (auto (cat-mode) "cat-mode"))
+  (command (cat-mode) "cat-mode"))
 
 ;;; init.el ends here

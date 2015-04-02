@@ -2,7 +2,7 @@
 
 (liby 'elfeed
 
-  (auto (elfeed) "elfeed")
+  (command (elfeed) "elfeed")
   (muki:define-launcher-key "l" 'elfeed)
 
   (muki:load "~/.elfeed-feeds")

@@ -4,7 +4,7 @@
 
 ;;;;; esup
 (liby 'esup
-  (auto (esup) "esup" ))
+  (command (esup) "esup" ))
 
 
 ;;; init.el ends here

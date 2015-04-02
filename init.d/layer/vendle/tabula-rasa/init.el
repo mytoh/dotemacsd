@@ -4,7 +4,7 @@
 
 ;;;;; tabula-rasa
 (liby 'tabula-rasa
-  (auto (tabula-rasa-mode) "tabula-rasa")
+  (command (tabula-rasa-mode) "tabula-rasa")
   (set-option tabula-rasa-widith 130))
 
 

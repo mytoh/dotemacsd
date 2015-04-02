@@ -4,7 +4,7 @@
 
 ;;;;; coffee
 (liby 'coffee-mode
-  (auto (coffee-mode) "coffee-mode")
+  (command (coffee-mode) "coffee-mode")
   (mode "\\.coffee\\'"  #'coffee-mode)
   (mode "\\.iced\\'"  #'coffee-mode)
   (mode "Cakefile\\'"  #'coffee-mode)

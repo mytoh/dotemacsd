@@ -3,7 +3,7 @@
 ;;; Code:
 
 (liby 'yaml-mode
-  (auto (yaml-mode) "yaml-mode")
+  (command (yaml-mode) "yaml-mode")
   (mode "\\.ya?ml$"  #'yaml-mode))
 
 

@@ -3,6 +3,6 @@
 ;;; Code:
 
 (liby 'helm-bibtex
-  (auto (helm-bibtex) "helm-bibtex"))
+  (command (helm-bibtex) "helm-bibtex"))
 
 ;;; init.el ends here

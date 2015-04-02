@@ -4,7 +4,7 @@
 
 ;;;;; yamada
 (liby 'yamada
-  (auto (yamada) "yamada")
+  (command (yamada) "yamada")
 
   ;; (add-global-key "C-c C-c C-y" #'yamada-dancing)
 

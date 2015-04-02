@@ -4,6 +4,6 @@
 
 ;;;;; free-keys
 (liby 'free-keys
-  (auto (free-keys) "free-keys"))
+  (command (free-keys) "free-keys"))
 
 ;;; init.el ends here

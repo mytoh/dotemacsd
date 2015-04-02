@@ -4,7 +4,7 @@
 
 ;;;;; markdown
 (liby 'markdown-mode
-  (auto (gfm-mode markdown-mode) "markdown-mode")
+  (command (gfm-mode markdown-mode) "markdown-mode")
   (mode "\\.md\\'" 'gfm-mode)
   (mode "\\.markdown\\'" 'gfm-mode)
   (mode "README\\.md\\'"  'gfm-mode))

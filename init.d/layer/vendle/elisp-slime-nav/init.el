@@ -3,7 +3,7 @@
 ;;; Code:
 
 (liby 'elisp-slime-nav
-  (auto (turn-on-elisp-slime-nav-mode) "elisp-slime-nav")
+  (command (turn-on-elisp-slime-nav-mode) "elisp-slime-nav")
   (seq-doseq (hook '(emacs-lisp-mode-hook ielm-mode-hook))
     (add-hook hook #'turn-on-elisp-slime-nav-mode)))
 

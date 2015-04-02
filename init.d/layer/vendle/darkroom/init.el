@@ -4,7 +4,7 @@
 
 ;;;;; darkroom
 (liby 'darkroom
-  (auto (darkroom-mode darkroom-tentative-mode)
-        "darkroom"))
+  (command (darkroom-mode darkroom-tentative-mode)
+           "darkroom"))
 
 ;;; init.el ends here

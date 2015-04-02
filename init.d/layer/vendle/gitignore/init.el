@@ -3,6 +3,6 @@
 ;;; Code:
 
 (liby 'gitignore
-  (auto (gitignore) "gitignore"))
+  (command (gitignore) "gitignore"))
 
 ;;; init.el ends here

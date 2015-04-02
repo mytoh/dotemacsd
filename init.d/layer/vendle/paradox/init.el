@@ -3,7 +3,7 @@
 ;;; Code:
 
 (liby 'paradox
-  (auto (paradox-list-packages) "paradox")
+  (command (paradox-list-packages) "paradox")
 
   ;; [[github.com/syl20bnr/spacemacs/contrib/paradox]]
   (cl-defun muki:paradox-list-packages ()

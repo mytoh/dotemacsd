@@ -3,6 +3,6 @@
 ;;; Code:
 
 (liby 'helm-pages
-  (auto (helm-pages) "helm-pages"))
+  (command (helm-pages) "helm-pages"))
 
 ;;; init.el ends here

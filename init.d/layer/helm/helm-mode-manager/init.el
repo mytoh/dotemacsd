@@ -3,9 +3,9 @@
 ;;; Code:
 
 (liby 'helm-mode-manager
-  (auto (helm-switch-major-mode
-         helm-enable-minor-mode
-         helm-disable-minor-mode)
-        "helm-mode-manager"))
+  (command (helm-switch-major-mode
+            helm-enable-minor-mode
+            helm-disable-minor-mode)
+           "helm-mode-manager"))
 
 ;;; init.el ends here

@@ -3,8 +3,8 @@
 ;;; Code:
 
 (liby 'sallet
-  (auto (sallet-buffer
-         sallet-occur)
-        "sallet"))
+  (command (sallet-buffer
+            sallet-occur)
+           "sallet"))
 
 ;;; init.el ends here

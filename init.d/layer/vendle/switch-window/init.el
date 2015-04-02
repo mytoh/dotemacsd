@@ -4,7 +4,7 @@
 
 ;;;;; switch-window
 (liby 'switch-window
-  (auto (switch-window) "switch-window")
+  (command (switch-window) "switch-window")
   (global-set-key (kbd "C-x o") 'switch-window)
   (set-option switch-window-shortcut-style 'qwerty)
   (set-option switch-window-qwerty-shortcuts

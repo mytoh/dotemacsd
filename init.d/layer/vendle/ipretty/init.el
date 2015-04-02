@@ -3,7 +3,7 @@
 ;;; Code:
 
 (liby 'ipretty
-  (auto (ipretty-mode) "ipretty" )
+  (command (ipretty-mode) "ipretty" )
   (add-hook 'emacs-lisp-mode-hook 'ipretty-mode)
   (add-hook 'lisp-interaction-mode-hook 'ipretty-mode))
 

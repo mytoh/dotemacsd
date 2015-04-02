@@ -3,6 +3,6 @@
 ;;; Code:
 
 (liby 'top-mode
-  (auto (top) "top-mode"))
+  (command (top) "top-mode"))
 
 ;;; init.el ends here

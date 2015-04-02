@@ -3,7 +3,7 @@
 ;;; Code:
 
 (liby 'outline-magic
-  (auto (outline-cycle) "outline-magic")
+  (command (outline-cycle) "outline-magic")
 
   (add-hook 'outline-mode-hook
             (clambda ()

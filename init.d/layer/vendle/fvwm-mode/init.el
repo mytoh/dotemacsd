@@ -3,7 +3,7 @@
 ;;; Code:
 
 (liby 'fvwm-mode
-  (auto (fvwm-mode) "fvwm-mode")
+  (command (fvwm-mode) "fvwm-mode")
   (dolist (pattern '("/home/[^/]*/\\.fvwm/config\\'"
                      "/home/[^/]*\\(/\\|\\/.fvwm/\\).fvwm2rc\\'" "\\.fvwm\\'"
                      "/ConfigFvwm" "/FvwmScript-" "/FvwmForm-" "/FvwmTabs-"))

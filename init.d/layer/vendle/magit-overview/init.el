@@ -3,6 +3,6 @@
 ;;; Code:
 
 (liby 'magit-overview
-  (auto (magit-overview) "magit-overview"))
+  (command (magit-overview) "magit-overview"))
 
 ;;; init.el ends here

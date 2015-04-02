@@ -4,6 +4,6 @@
 
 ;;;;; pt
 (liby 'pt
-  (auto (pt-regexp) "pt"))
+  (command (pt-regexp) "pt"))
 
 ;;; init.el ends here

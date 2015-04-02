@@ -4,7 +4,7 @@
 
 ;;;;; org-autolist
 (liby 'org-autolist
-  (auto (org-autolist-mode) "org-autolist")
+  (command (org-autolist-mode) "org-autolist")
   (add-hook 'org-mode-hook #'org-autolist-mode))
 
 ;;; init.el ends here

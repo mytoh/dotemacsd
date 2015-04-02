@@ -67,7 +67,7 @@
       (add-key sr-tabs-mode-map "M-p" #'sr-tabs-prev))
     (req 'sunrise-x-popviewer))
 
-  (auto (sunrise) "sunrise-commander")
+  (command (sunrise) "sunrise-commander")
 
   (cl-defun muki:sunrise ()
     (interactive)

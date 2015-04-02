@@ -4,7 +4,7 @@
 
 ;;;;; google-this
 (liby 'google-this
-  (auto (google-this) "google-this"))
+  (command (google-this) "google-this"))
 
 
 ;;; init.el ends here

@@ -4,7 +4,7 @@
 
 ;;;;; lorem-ipsum
 (liby 'lorem-ipsum
-  (auto (lorem-ipsum) "lorem-ipsum"))
+  (command (lorem-ipsum) "lorem-ipsum"))
 
 
 ;;; init.el ends here

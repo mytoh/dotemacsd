@@ -3,6 +3,6 @@
 ;;; Code:
 
 (liby 'helm-pt
-  (auto (helm-do-pt helm-projectile-pt) "helm-pt"))
+  (command (helm-do-pt helm-projectile-pt) "helm-pt"))
 
 ;;; init.el ends here

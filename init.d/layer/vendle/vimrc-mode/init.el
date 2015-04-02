@@ -4,7 +4,7 @@
 
 ;;;;; vimrc
 (liby 'vimrc-mode
-  (auto (vimrc-mode) "vimrc-mode")
+  (command (vimrc-mode) "vimrc-mode")
   (mode "\\.vim\\'" 'vimrc-mode)
   (mode "[._]?g?vimrc\\'"  'vimrc-mode)
   (mode "\\.exrc\\'"  'vimrc-mode))

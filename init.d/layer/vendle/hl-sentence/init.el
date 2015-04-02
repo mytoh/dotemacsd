@@ -3,7 +3,7 @@
 ;;; Code:
 
 (liby 'hl-sentence
-  (auto (hl-sentence-mode) "hl-sentence")
+  (command (hl-sentence-mode) "hl-sentence")
   (add-hook 'org-mode-hook 'hl-sentence-mode)
   (after 'hl-sentence
       (set-face-attribute 'hl-sentence-face nil

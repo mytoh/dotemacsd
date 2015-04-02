@@ -25,7 +25,7 @@
 ;;     (eww-disable-colours))
 
 (liby 'eww
-  (auto (eww) "eww")
+  (command (eww) "eww")
   ;; (set-option url-user-agent  "Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0")
   ;; (set-option browse-url-browser-function 'eww-browse-url)
   (set-option eww-home-url "file:///home/mytoh/.org/etusivu/etusivu.html")

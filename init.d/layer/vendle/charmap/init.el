@@ -4,7 +4,7 @@
 
 ;;;;; charmap
 (liby 'charmap
-  (auto (charmap) "charmap")
+  (command (charmap) "charmap")
   (setq charmap-text-scale-adjust 2))
 
 

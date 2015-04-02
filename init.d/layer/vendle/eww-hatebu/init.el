@@ -3,7 +3,7 @@
 ;;; Code:
 
 (liby 'eww-hatebu
-  (auto (eww-hatebu-setup) "eww-hatebu")
+  (command (eww-hatebu-setup) "eww-hatebu")
   (with-eval-after-load 'eww
     (eww-hatebu-setup)
     (set-face-foreground 'eww-hatebu-bookmarks

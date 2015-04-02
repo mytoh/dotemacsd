@@ -4,7 +4,7 @@
 
 ;;;;; twittering-mode
 (liby 'twittering-mode
-  (auto (twit) "twittering-mode")
+  (command (twit) "twittering-mode")
   (setq twittering-use-master-password t)
   (setq twittering-allow-insecure-server-cert t))
 

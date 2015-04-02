@@ -3,7 +3,7 @@
 ;;; Code:
 
 (liby 'e2wm
-  (auto (e2wm:start-management) "e2wm")
+  (command (e2wm:start-management) "e2wm")
   (add-global-key "M-+" #'e2wm:start-management)
 
   (setq e2wm:def-plugin-clock-url "http://www.avtokei.jp/images/clocks/%H/%H%M.jpg\?1277461066")

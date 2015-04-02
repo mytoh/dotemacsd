@@ -3,6 +3,6 @@
 ;;; Code:
 
 (liby 'org-cliplink
-  (auto (org-cliplink) "org-cliplink"))
+  (command (org-cliplink) "org-cliplink"))
 
 ;;; init.el ends here

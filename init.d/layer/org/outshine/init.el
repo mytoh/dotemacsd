@@ -3,7 +3,7 @@
 (defvar outline-minor-mode-prefix (kbd "C-c"))
 
 (liby 'outshine
-  (auto (outshine-hook-function) "outshine")
+  (command (outshine-hook-function) "outshine")
   (add-hook 'outline-minor-mode-hook #'outshine-hook-function)
 
   ;; (defvar outline-minor-mode-prefix "\M-#")

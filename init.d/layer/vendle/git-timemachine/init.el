@@ -4,7 +4,7 @@
 
 ;;;;; git-timemachine
 (liby 'git-timemachine
-  (auto (git-timemachine) "git-timemachine"))
+  (command (git-timemachine) "git-timemachine"))
 
 
 ;;; init.el ends here

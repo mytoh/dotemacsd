@@ -40,7 +40,7 @@
       ,@body)
      (t (message "%s not found" (symbol-name ,library)))))
 
-(cl-defmacro auto (funcs lib)
+(cl-defmacro command (funcs lib)
   (declare (debug t))
   `(cl-locally
        ,@(seq-map (lambda (f) `(autoload ',f ,lib nil t))

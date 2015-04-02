@@ -4,8 +4,8 @@
 
 ;;;;; flycheck
 (liby 'flycheck-package
-  (auto (flycheck-package-setup) "flycheck-package")
-   (after 'flycheck
-        (flycheck-package-setup)))
+  (command (flycheck-package-setup) "flycheck-package")
+  (after 'flycheck
+      (flycheck-package-setup)))
 
 ;;; init.el ends here

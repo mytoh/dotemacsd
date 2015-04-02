@@ -4,7 +4,7 @@
 
 ;;;;; scheme-keywords
 (liby 'scheme-keywords
-  (auto (scheme-keywords-mode) "scheme-keywords")
+  (command (scheme-keywords-mode) "scheme-keywords")
   (add-hook 'scheme-mode-hook #'scheme-keywords-mode))
 
 ;;; init.el ends here

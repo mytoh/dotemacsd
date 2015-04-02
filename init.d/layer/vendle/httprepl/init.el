@@ -4,7 +4,7 @@
 
 ;;;;; httprepl
 (liby 'httprepl
-  (auto (httprepl) "httprepl"))
+  (command (httprepl) "httprepl"))
 
 
 ;;; init.el ends here

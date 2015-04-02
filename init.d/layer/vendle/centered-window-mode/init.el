@@ -3,6 +3,6 @@
 ;;; Code:
 
 (liby 'centered-window-mode
-  (auto (centered-window-mode) "centered-window-mode"))
+  (command (centered-window-mode) "centered-window-mode"))
 
 ;;; init.el ends here

@@ -4,7 +4,7 @@
 
 
 (liby 'conkeror-minor-mode
-  (auto (conkeror-minor-mode) "conkeror-minor-mode")
+  (command (conkeror-minor-mode) "conkeror-minor-mode")
 
   (cl-defun muki:enable-conkeror-minor-mode ()
     (when (save-match-data

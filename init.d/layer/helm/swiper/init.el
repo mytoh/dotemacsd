@@ -3,12 +3,12 @@
 ;;; Code:
 
 (liby 'swiper
-  (auto (swiper) "swiper")
+  (command (swiper) "swiper")
   (add-global-key "M-i" #'swiper)
   (after 'swiper
-    (set-face-attribute 'swiper-match-face-1 nil
-                        :foreground "yellow"
-                        :inherit 'isearch-lazy-highlight-face)
+      (set-face-attribute 'swiper-match-face-1 nil
+       :foreground "yellow"
+       :inherit 'isearch-lazy-highlight-face)
     (set-face-attribute 'swiper-match-face-2 nil
                         :foreground "orange"
                         :inherit 'isearch)

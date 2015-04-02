@@ -3,6 +3,6 @@
 ;;; Code:
 
 (liby 'fancy-narrow
-  (auto (fancy-narrow-to-region) "fancy-narrow"))
+  (command (fancy-narrow-to-region) "fancy-narrow"))
 
 ;;; init.el ends here

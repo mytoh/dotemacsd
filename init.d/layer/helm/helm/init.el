@@ -138,7 +138,7 @@ Otherwise goto the end of minibuffer."
 
 ;; helm-themes
 (liby 'helm-themes
-  (auto (helm-themes) "helm-themes"))
+  (command (helm-themes) "helm-themes"))
 
 ;; helm-c-yasnippet (req 'helm-c-yasnippet)
 
@@ -156,7 +156,7 @@ Otherwise goto the end of minibuffer."
 
 ;; cmd-t
 (liby 'helm-cmd-t
-  (auto (helm-cmd-t) "helm-cmd-t")
+  (command (helm-cmd-t) "helm-cmd-t")
   (add-global-key "M-t" #'helm-cmd-t))
 ;; (req 'helm-C-x-b
 ;;      (add-key global-map [remap switch-to-buffer] #'helm-C-x-b))
@@ -164,12 +164,12 @@ Otherwise goto the end of minibuffer."
 
 ;; elisp-package
 (liby 'helm-elisp-package
-  (auto (helm-list-elisp-packages) "helm-elisp-package")
+  (command (helm-list-elisp-packages) "helm-elisp-package")
   (muki:define-launcher-key "P" #'helm-list-elisp-packages))
 
 ;; helm-git-grep
 (liby 'helm-git-grep
-  (auto (helm-git-grep) "helm-git-grep")
+  (command (helm-git-grep) "helm-git-grep")
   (muki:define-launcher-key "r" #'helm-git-grep))
 
 
