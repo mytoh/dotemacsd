@@ -795,6 +795,12 @@
                    :depends ("emacsmirror/http-post-simple")))
 (vendle:register "toroidal-code/cycle-themes.el"
                  '(:tag ("theme")))
+(vendle:register "uk-ar/smart-region"
+                 '(:tag ("region" "mark")
+                   :depends ("magnars/expand-region.el"
+                             "magnars/multiple-cursors.el")))
+(vendle:register "sellout/emacs-unimode"
+                 '(:tag ("unicode" "mode-line")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -1239,6 +1245,7 @@
               '(:tag ("evil")))
 (vendle:fetch "yangchenyun/emacs-prelude"
               '(:tag ( "dotfiles" "evil" )))
+
 (vendle:fetch "stumpwm/stumpwm"
               '(:tag ("common_lisp" "stumpwm")))
 (vendle:fetch "stumpwm/stumpwm-contrib"
@@ -1259,6 +1266,9 @@
               '(:tag ("common_lisp" "climacs" "clim" )))
 (vendle:fetch "edicl/cl-unicode"
               '(:tag ("common_lisp" "unicode")))
+(vendle:fetch "edicl/cl-fad"
+              '(:tag ("common_lisp")))
+
 (vendle:fetch "gabriel-laddel/masamune")
 (vendle:fetch "Fanael/init.el"
               '(:tag "dotfiles"))
@@ -1529,6 +1539,8 @@
               '(:tag ("deploy")
                 :depends ("sviridov/undercover.el")))
 (vendle:fetch "https://bitbucket.org/hoangtu/.emacs.d.git")
+(vendle:fetch "wiedzmin/stumpwm-config"
+              '(:tag ("stumpwm")))
 
 ;; (vendle:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
