@@ -113,7 +113,9 @@
 
     (liby 'magit
       (muki:evil-leader-prefix-set-keys 'git
-        "l" #'magit-log
+        "l" (lambda ()
+              (interactive)
+              (magit-log '("HEAD")))
         "s" #'magit-status))
 
     (liby 'helm-project-buffer
