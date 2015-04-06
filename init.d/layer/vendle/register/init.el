@@ -349,6 +349,8 @@
 (vendle:register "remyferre/comment-dwim-2")
 (vendle:register "capitaomorte/sly"
                  '(:build ("gmake compile contrib-compile")))
+(vendle:register "capitaomorte/sly-company"
+                 '(:tag ("common_lisp" "completion" "company" "sly")))
 (vendle:register "hayamiz/twittering-mode"
                  '(:tag ("twitter")))
 (vendle:register "mhayashi1120/Emacs-twittering-stream"
