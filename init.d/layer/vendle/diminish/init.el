@@ -19,7 +19,7 @@
       (diminish 'golden-ratio-mode " ⊞"))
 
   (after 'helm-mode
-      (diminish 'helm-mode))
+      (diminish 'helm-mode " ⎈"))
 
   (after 'mesh-mode
       (diminish 'mesh-mode " 𐄳"))
