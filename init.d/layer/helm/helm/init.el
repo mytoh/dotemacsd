@@ -61,6 +61,7 @@ Otherwise goto the end of minibuffer."
               ;; helm-buffer-max-length 50x
               helm-candidate-number-limit 200
               helm-raise-command                         "wmctrl -xa %s"
+              helm-tramp-verbose 4
               )
 
   (set-option helm-boring-file-regexp-list

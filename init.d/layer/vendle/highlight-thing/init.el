@@ -3,8 +3,6 @@
 ;;; Code:
 
 (req 'highlight-thing
-  (setq highlight-thing-excluded-major-modes
-        '(eshell-mode org-mode eww-mode))
-  (highlight-thing-mode))
+  (add-hook 'emacs-lisp-mode-hook #'highlight-thing-mode))
 
 ;;; init.el ends here
