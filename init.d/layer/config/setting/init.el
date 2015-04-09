@@ -45,9 +45,9 @@
 
 ;;;; start server
 (req 'server
-     ;; (enable-option server-use-tcp)
-     (unless (server-running-p)
-       (server-start)))
+  ;; (enable-option server-use-tcp)
+  (unless (server-running-p)
+    (server-start)))
 
 ;;;; use space instead of tab
 (setq-default tab-width 4
@@ -72,9 +72,9 @@
 (enable-option image-animate-loop)
 (add-hook 'image-mode-hook
           (clambda ()
-                   (cl-letf ((image (image-get-display-property)))
-                            (if (image-multi-frame-p image)
-                                (image-toggle-animation)))))
+              (cl-letf ((image (image-get-display-property)))
+                (if (image-multi-frame-p image)
+                    (image-toggle-animation)))))
 ;; (set-option image-transform-resize 'fit-height)
 
 ;;;; add file types
@@ -100,7 +100,7 @@
 (global-hl-line-mode t) ; turn it on for all modes by default
 
 (cl-defun muki:set-hl-line-face ()
-          (set-face-attribute 'hl-line nil :foreground nil :background "Gray20"))
+  (set-face-attribute 'hl-line nil :foreground nil :background "Gray20"))
 
 (add-hook 'after-init-hook #'muki:set-hl-line-face)
 
@@ -197,7 +197,7 @@
 (global-auto-revert-mode 1)
 ;; (set-option auto-revert-interval 5)
 (req 'vc
-     (enable-option auto-revert-check-vc-info))
+  (enable-option auto-revert-check-vc-info))
 (enable-option global-auto-revert-non-file-buffers)
 (disable-option auto-revert-verbose)
 (set-option revert-without-query '(".*\\.scm\\'" ".*\\.el\\'" ".*\\.tcsh\\'"))
@@ -269,7 +269,7 @@
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
 ;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson, noctilux, erosiond, material
-(defvar muki:x-theme 'material)
+(defvar muki:x-theme 'zonokai)
 (defvar muki:term-theme 'flatland)
 
 (enable-option select-enable-clipboard
@@ -299,13 +299,13 @@
 
 ;;;; info
 (after 'info
-       (seq-each
-        (clambda (dir)
-                 (cl-pushnew dir Info-additional-directory-list))
-        (seq-filter
-         (clambda (dir) (and (file-directory-p dir)
-                             (file-exists-p dir)))
-         (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+"))))
+    (seq-each
+     (clambda (dir)
+         (cl-pushnew dir Info-additional-directory-list))
+     (seq-filter
+      (clambda (dir) (and (file-directory-p dir)
+                      (file-exists-p dir)))
+      (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
 (defvar muki:external-programs-associations nil)
@@ -343,7 +343,7 @@
 
 ;;;;; uniquify
 (req 'uniquify
-     (set-option uniquify-buffer-name-style 'post-forward-angle-brackets))
+  (set-option uniquify-buffer-name-style 'post-forward-angle-brackets))
 
 ;;;;; term/bobcat
 (load "term/bobcat")
@@ -356,8 +356,8 @@
 
 ;;;;; save cursor position
 (req 'saveplace
-     (setq save-place-file (concat user-emacs-directory "saveplace.el")) ; use standard emacs dir
-     (setq-default save-place t))
+  (setq save-place-file (concat user-emacs-directory "saveplace.el")) ; use standard emacs dir
+  (setq-default save-place t))
 
 ;; important for golden-ratio to better work
 (enable-option window-combination-resize)
