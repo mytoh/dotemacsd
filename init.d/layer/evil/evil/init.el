@@ -181,6 +181,7 @@ is a kind of temporary one which is not confirmed yet."
   (cl-loop for (mode . state)
      in '((git-commit-mode . insert)
           (git-rebase-mode . emacs)
+          (magit-popup-mode . emacs )
           (ebib-entry-mode              . emacs)
           (ebib-index-mode              . emacs)
           (ebib-log-mode                . emacs)
