@@ -269,7 +269,7 @@
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
 ;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson, noctilux, erosiond, material
-(defvar muki:x-theme 'zonokai)
+(defvar muki:x-theme 'zonokai-blue)
 (defvar muki:term-theme 'flatland)
 
 (enable-option select-enable-clipboard
