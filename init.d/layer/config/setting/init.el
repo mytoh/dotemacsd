@@ -430,4 +430,7 @@
 ;;;
 (set-option max-specpdl-size (* 10 max-specpdl-size))
 
+;;;;; undeline
+(enable-option x-underline-at-descent-line)
+
 ;;; config-setting.el ends here
