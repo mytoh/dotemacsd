@@ -185,6 +185,7 @@
     git-messenger
     git-gutter
     cycle-themes
+    firestarter
     ;; smart-newline
     ;; random-splash-image
     ;; hl-sentence
