@@ -805,6 +805,11 @@
                  '(:tag ("unicode" "mode-line")))
 (vendle:register "tuhdo/semantic-refactor"
                  '(:tag ("refactoring" "format")))
+(vendle:register "momomo5717/emms-player-mpv-jp-radio-settings"
+                 '(:tag ("radio" "emms" "mpv")))
+(vendle:register "momomo5717/emms-player-simple-mpv"
+                 '(:tag ("emms" "mpv")))
+(vendle:register  "wasamasa/firestarter")
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
@@ -1072,6 +1077,8 @@
 (vendle:register-theme "john2x/plan9-theme.el")
 (vendle:register-theme "TheQZ/emerald-emacs")
 (vendle:register-theme "ZehCnaS34/zonokai-emacs")
+(vendle:register-theme "whitlockjc/atom-dark-theme-emacs")
+(vendle:register-theme "zovt/pretty-emacs")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
