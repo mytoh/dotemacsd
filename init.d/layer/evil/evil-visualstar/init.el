@@ -4,7 +4,6 @@
 
 (cl-defun muki:init-evil-visualstar ()
   (req 'evil-visualstar
-    (advice-add 'evil-visualstar/begin-search-forward :after 'recenter)
-    (advice-add 'evil-visualstar/begin-search-backward :after 'recenter)))
+    (global-evil-visualstar-mode)))
 
 ;;; visual.el ends here
