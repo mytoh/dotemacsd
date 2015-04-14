@@ -4,18 +4,18 @@
             auto-mode-alist)
 
 (cl-defun muki:elisp-add-keywords (face-name keyword-rules)
-  (cl-letf* ((keyword-list (seq-map (clambda (x)
-                                        (symbol-name (cdr x)))
+  (cl-letf* ((keyword-list (seq-map (pcase-lambda (`(,_ . ,x))
+                                        (symbol-name x))
                                     keyword-rules))
              (keyword-regexp (concat "(\\("
                                      (regexp-opt keyword-list)
                                      "\\)[ \n]")))
     (font-lock-add-keywords  'emacs-lisp-mode
                              `((,keyword-regexp 1 ',face-name))))
-  (seq-each (clambda (x)
-                (put (cdr x)
+  (seq-each (pcase-lambda (`(,indent . ,keyword))
+                (put keyword
                  'scheme-indent-function
-                 (car x)))
+                 indent))
             keyword-rules))
 
 

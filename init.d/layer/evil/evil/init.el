@@ -77,10 +77,10 @@
 
   ;; [[http://stackoverflow.com/questions/8483182/evil-mode-best-practice]]
   (seq-each
-   (clambda (l)
+   (pcase-lambda (`(,key . ,fun))
        (seq-each
         (clambda (m)
-            (add-key m (car l) (cdr l)))
+            (add-key m key fun))
         (list evil-insert-state-map
               evil-motion-state-map)))
    '(("C-e" . evil-end-of-line)
@@ -181,7 +181,7 @@ is a kind of temporary one which is not confirmed yet."
   (cl-loop for (mode . state)
      in '((git-commit-mode . insert)
           (git-rebase-mode . emacs)
-          (magit-popup-mode . emacs )
+          (magit-popup-mode . emacs)
           (ebib-entry-mode              . emacs)
           (ebib-index-mode              . emacs)
           (ebib-log-mode                . emacs)

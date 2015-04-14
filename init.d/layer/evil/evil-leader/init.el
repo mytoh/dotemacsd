@@ -20,7 +20,7 @@
         ("z" .  mesh)))
 
 (cl-defun muki:evil-leader-prefix-set-key (category key def)
-  (cl-letf* ((found (cl-find-if (clambda (x) (cl-equalp category (cdr x)))
+  (cl-letf* ((found (cl-find-if (pcase-lambda (`(,_ . ,x)) (cl-equalp category x))
                                 muki:evil-leader-key-binding-prefixes))
              (prefix (if found (car found) nil)))
     (when found
