@@ -128,9 +128,9 @@
                  '(:tag ("helm" "search")))
 (vendle:register "emacs-helm/helm-emms"
                  '(:tag ("helm" "emms")))
-(vendle:register "michael-heerdegen/helm-browse"
-                 '(:tag ("helm")
-                   :depends ("michael-heerdegen/iterators.el")))
+;; (vendle:register "michael-heerdegen/helm-browse"
+;;                  '(:tag ("helm")
+;;                    :depends ("michael-heerdegen/iterators.el")))
 
 ;;;;;  general packages
 (vendle:register "magnars/s.el")
@@ -1079,6 +1079,7 @@
 (vendle:register-theme "ZehCnaS34/zonokai-emacs")
 (vendle:register-theme "whitlockjc/atom-dark-theme-emacs")
 (vendle:register-theme "zovt/pretty-emacs")
+(vendle:register-theme "toroidal-code/monokai-extended-theme.el")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
