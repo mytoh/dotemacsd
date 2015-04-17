@@ -106,9 +106,9 @@
 
     (liby 'vendle
       (muki:evil-leader-prefix-set-keys 'application-vendle
-        "u" #'vendle-update
-        "k" #'vendle-check
-        "c" #'vendle-clean
+        "u" #'vendle:update
+        "k" #'vendle:check
+        "c" #'vendle:clean
         "l" #'helm-vendle))
 
     (liby 'magit

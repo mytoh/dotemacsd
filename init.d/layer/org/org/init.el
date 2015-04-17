@@ -72,7 +72,9 @@
                 ("a" "#+begin_ascii\n?\n#+end_ascii")
                 ("a" "#+ascii: ")
                 ("i" "#+index: ?")
-                ("i" "#+include: %file ?")))
+                ("i" "#+include: %file ?")
+                ("el" "#+begin_src emacs-lisp\n?\n#+end_src" "<src lang=\"emacs-lisp\">\n?\n</src>")
+                ("sh" "#+begin_src sh\n?\n#+end_src" "<src lang=\"shell\">\n?\n</src>")))
   (disable-mode whitespace-mode)
   ;; http://qiita.com/takaxp/items/f583dbf89cc217b0c41c
   ;; this option needed to resize images in org buffer.

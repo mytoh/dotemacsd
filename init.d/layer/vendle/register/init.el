@@ -128,6 +128,8 @@
                  '(:tag ("helm" "search")))
 (vendle:register "emacs-helm/helm-emms"
                  '(:tag ("helm" "emms")))
+(vendle:register "cute-jumper/ace-jump-helm-line"
+                 '(:depends ("abo-abo/ace-window")))
 ;; (vendle:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ("helm")
 ;;                    :depends ("michael-heerdegen/iterators.el")))
@@ -468,7 +470,10 @@
 (vendle:register "alezost/mana.el"
                  '(:tag ("manaplus")))
 (vendle:register "ichibeikatura/nipposi")
-(vendle:register "clarete/hackernews.el")
+(vendle:register "clarete/hackernews.el"
+                 '(:tag ("hackernews")))
+(vendle:register "c41x/hnr.el"
+                 '(:tag ("hackernews")))
 (vendle:register "kkholst/SuperMan"
                  '(:tag ("org")
                    :load-path ("lisp")))

@@ -186,6 +186,7 @@
     git-gutter
     cycle-themes
     firestarter
+    hnr
     ;; smart-newline
     ;; random-splash-image
     ;; hl-sentence
@@ -298,6 +299,7 @@
     helm-pt
     helm-emms
     swiper
+    ace-jump-helm-line
     ;; helm-swoop
     ;; helm-company
     ;; helm-delicious
