@@ -70,13 +70,6 @@
       "s" #'switch-to-scratch-buffer
       "r" #'revert-buffer)
 
-    ;; (liby 'eshell-switch
-    ;;   (muki:evil-leader-prefix-set-keys 'eshell-switch
-    ;;     "z" #'eshell-switch:switch
-    ;;     "c" #'eshell-switch:buffer-new
-    ;;     "n" #'eshell-switch:buffer-next
-    ;;     "p" #'eshell-switch:buffer-prev))
-
     (liby 'mesh
       (muki:evil-leader-prefix-set-keys 'mesh
         "z" #'mesh:switch)
