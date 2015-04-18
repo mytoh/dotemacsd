@@ -41,8 +41,7 @@
     (enable-option evil-leader/in-all-states)
 
     (evil-leader/set-key
-        "v r" #'revert-buffer
-      "v e" #'pp-eval-last-sexp
+        "v e" #'pp-eval-last-sexp
       "w" #'evil-write
       "Q" #'evil-quit-all
       "q" #'kill-buffer-and-window
@@ -68,7 +67,8 @@
       "K"  #'muki:kill-other-buffers
       "n"  #'switch-to-next-buffer
       "p"  #'switch-to-prev-buffer
-      "s" #'switch-to-scratch-buffer)
+      "s" #'switch-to-scratch-buffer
+      "r" #'revert-buffer)
 
     ;; (liby 'eshell-switch
     ;;   (muki:evil-leader-prefix-set-keys 'eshell-switch
