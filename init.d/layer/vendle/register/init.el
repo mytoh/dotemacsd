@@ -815,6 +815,8 @@
 (vendle:register "momomo5717/emms-player-simple-mpv"
                  '(:tag ("emms" "mpv")))
 (vendle:register  "wasamasa/firestarter")
+(vendle:register "myTerminal/theme-looper"
+                 '(:tag ("theme")))
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"

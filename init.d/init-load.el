@@ -184,9 +184,10 @@
     sallet
     git-messenger
     git-gutter
-    cycle-themes
     firestarter
     hnr
+    theme-looper
+    ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image
     ;; hl-sentence
