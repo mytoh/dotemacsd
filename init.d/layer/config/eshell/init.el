@@ -25,12 +25,6 @@
     (message "eshell started")))
 ;; (add-hook 'emacs-startup-hook #'muki:eshell-startup-hook)
 
-(defun eshell/clear ()
-  "Clears the shell buffer."
-  (interactive)
-  (let ((inhibit-read-only t))
-    (erase-buffer)))
-
 ;; (add-hook 'eshell-preoutput-filter-functions
 ;;           #'ansi-color-filter-apply)
 (add-hook 'eshell-mode-hook #'ansi-color-for-comint-mode-on)
