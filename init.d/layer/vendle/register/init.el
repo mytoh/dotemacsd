@@ -817,6 +817,8 @@
 (vendle:register  "wasamasa/firestarter")
 (vendle:register "myTerminal/theme-looper"
                  '(:tag ("theme")))
+(vendle:register "djcb/sauron")
+
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
 ;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
