@@ -130,6 +130,8 @@
                  '(:tag ("helm" "emms")))
 (vendle:register "cute-jumper/ace-jump-helm-line"
                  '(:depends ("abo-abo/ace-window")))
+(vendle:register "shosti/helm-unicode"
+                 '(:tag ("helm" "unicode")))
 ;; (vendle:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ("helm")
 ;;                    :depends ("michael-heerdegen/iterators.el")))
