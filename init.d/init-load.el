@@ -123,7 +123,6 @@
     itail
     quickrun
     web-mode
-    highlight-parenthesis
     go-mode
     lua-mode
     bm
@@ -187,6 +186,7 @@
     firestarter
     hnr
     theme-looper
+    highlight-parentheses
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image

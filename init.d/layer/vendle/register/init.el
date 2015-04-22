@@ -291,7 +291,6 @@
                  '(:depends ("skeeto/elfeed")
                    :tag ("org" "rss")))
 (vendle:register "zk-phi/spray")
-(vendle:register "nschum/highlight-parentheses.el")
 (vendle:register "dominikh/go-mode.el")
 (vendle:register "immerrr/lua-mode")
 (vendle:register "daic-h/emacs-rotate")
@@ -820,6 +819,8 @@
 (vendle:register "myTerminal/theme-looper"
                  '(:tag ("theme")))
 (vendle:register "djcb/sauron")
+;; (vendle:register "nschum/highlight-parentheses.el")
+(vendle:register "tsdh/highlight-parentheses.el")
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
