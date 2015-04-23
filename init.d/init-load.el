@@ -187,6 +187,7 @@
     hnr
     theme-looper
     highlight-parentheses
+    column-enforce-mode
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image

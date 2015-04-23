@@ -6,9 +6,9 @@
 (setq whitespace-line-column 80)
 (setq whitespace-style '(face              ; faceを使って視覚化する。
                          trailing          ; 行末の空白を対象とする。
-                         lines-tail        ; 長すぎる行のうち
-                                        ; whitespace-line-column以降のみを
-                                        ; 対象とする。
+                         ;; lines-tail        ; 長すぎる行のうち
+                         ;;                ; whitespace-line-column以降のみを
+                         ;;                ; 対象とする。
                          tabs
                          indentation:tab
                          tab-mark
