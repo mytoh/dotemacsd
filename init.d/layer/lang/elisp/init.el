@@ -57,6 +57,28 @@
                           (syntax symbol)))))
      (1 'font-lock-function-name-face))))
 
+;; [[https://groups.google.com/forum/#!topic/gnu.emacs.help/3EoQjpr5Kfk]]
+;; [[http://user.it.uu.se/~embe8573/captain-mr-king.el]]
+(font-lock-add-keywords 'emacs-lisp-mode
+                        '(("font-lock-builtin-face"              .  font-lock-builtin-face)
+                          ("font-lock-comment-delimiter-face"    .  font-lock-comment-delimiter-face)
+                          ("font-lock-comment-face"              .  font-lock-comment-face)
+                          ("font-lock-constant-face"             .  font-lock-constant-face)
+                          ("font-lock-doc-face"                  .  font-lock-doc-face)
+                          ("font-lock-function-name-face"        .  font-lock-function-name-face)
+                          ("font-lock-keyword-face"              .  font-lock-keyword-face)
+                          ("font-lock-negation-char-face"        .  font-lock-negation-char-face)
+                          ("font-lock-preprocessor-face"         .  font-lock-preprocessor-face)
+                          ("font-lock-reference-face"            .  font-lock-reference-face)
+                          ("font-lock-string-face"               .  font-lock-string-face)
+                          ("font-lock-syntactic-face-function"   .  font-lock-syntactic-face-function)
+                          ("font-lock-type-face"                 .  font-lock-type-face)
+                          ("font-lock-variable-name-face"        .  font-lock-variable-name-face)
+                          ("font-lock-warning-face"              .  font-lock-warning-face)
+                          ("font-lock-regexp-grouping-construct" . 'font-lock-regexp-grouping-construct)
+                          ("font-lock-regexp-grouping-backslash" . 'font-lock-regexp-grouping-backslash))
+                        t) ; HOW (append to highlighting list, i.e., keep old
+
 (cl-defun muki:elisp-buffer-enable-reindent ()
   (add-hook 'before-save-hook #'muki:lisp-cleanup nil t)
   (add-hook 'before-save-hook #'muki:indent-buffer nil t))
