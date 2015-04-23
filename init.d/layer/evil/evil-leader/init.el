@@ -120,6 +120,7 @@
       (evil-leader/set-key
           ";" #'helm-M-x
         "?" #'helm-descbinds
+        "hl"  'helm-resume
         "h s"   #'helm-swoop)
       (muki:evil-leader-prefix-set-keys 'theme
         "h" #'helm-themes))
