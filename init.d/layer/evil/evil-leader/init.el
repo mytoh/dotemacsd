@@ -45,7 +45,8 @@
       "w" #'evil-write
       "Q" #'evil-quit-all
       "q" #'kill-buffer-and-window
-      )
+      ;; Universal argument ---------------------------------------------------------
+      "u" #'universal-argument)
 
     (muki:evil-leader-prefix-set-keys 'eval
       "e" #'eval-last-sexp
