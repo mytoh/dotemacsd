@@ -165,6 +165,11 @@
     (muki:evil-leader-prefix-set-keys 'org
       "c" #'org-capture)
 
+    (liby 'theme-looper
+      (muki:evil-leader-prefix-set-keys 'theme
+        "r" #'theme-looper-enable-random-theme
+        "n" #'theme-looper-enable-next-theme))
+
     ;; (defun-add-hook muki:evil-ace-jump-mode-setup (after-init-hook)
     ;;   (when (and (featurep 'evil) (featurep 'evil-leader))
     ;;     (evil-leader/set-key
