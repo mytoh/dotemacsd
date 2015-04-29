@@ -66,26 +66,26 @@
                              "magnars/s.el"
                              ( "emacs-helm/helm"
                               (:build ("gmake")
-                               :depends ("jwiegley/emacs-async")
-                               :tag "helm")))))
+                                      :depends ("jwiegley/emacs-async")
+                                      :tag "helm")))))
 (vendle:register "pronobis/helm-words"
                  '(:depends (( "emacs-helm/helm"
                               (:build ("gmake")
-                               :depends ("jwiegley/emacs-async")
-                               :tag "helm")))
+                                      :depends ("jwiegley/emacs-async")
+                                      :tag "helm")))
                    :tag ("helm" "dictionary")))
 (vendle:register "emacs-helm/helm-orgcard"
                  '(:tag ("helm" "org")
                    :depends (( "emacs-helm/helm"
                               (:build ("gmake")
-                               :depends ("jwiegley/emacs-async")
-                               :tag "helm")))))
+                                      :depends ("jwiegley/emacs-async")
+                                      :tag "helm")))))
 (vendle:register "lins05/helm-org-files"
                  '(:tag ("helm" "org")
                    :depends (( "emacs-helm/helm"
                               (:build ("gmake")
-                               :depends ("jwiegley/emacs-async")
-                               :tag "helm")))))
+                                      :depends ("jwiegley/emacs-async")
+                                      :tag "helm")))))
 (vendle:register "abo-abo/helm-org-wiki"
                  '(:tag ("helm" "org")))
 (vendle:register "csantosb/helm-perso-wiki"
@@ -109,7 +109,7 @@
                  '(:tag ("helm" "lobste.rs" "news" "web")))
 (vendle:register "syohex/emacs-helm-hackernews"
                  '(:tag ("helm" "hackernews" "news" "web")))
-(vendle:register "Fuco1/sallet"
+(vendle:register "https://github.com/tetracat/sallet"
                  '(:tag ("helm")
                    :depends ("lewang/flx"
                              ("magnars/dash.el" ( :compile nil))
@@ -197,16 +197,16 @@
 (vendle:register "magit/orgit"
                  '(:depends (("magit/magit"
                               (:build ("gmake lisp docs")
-                               :info "."
-                               :tag ("git" )))
+                                      :info "."
+                                      :tag ("git" )))
                              ("magnars/dash.el" ( :compile nil)))
                    :tag ("git" "org" "magit")))
 (vendle:register "mickesv/magit-overview"
                  '(:tag ("magit")
                    :depends (("magit/magit"
                               (:build ("gmake lisp docs")
-                               :info "."
-                               :tag "git")))))
+                                      :info "."
+                                      :tag "git")))))
 (vendle:register "magit/magit-filenotify"
                  '(:tag ("magit")
                    :depends (("magit/magit"
@@ -250,10 +250,10 @@
                    :depends (("syohex/emacs-anzu" (:compile nil))
                              ( "https://gitorious.org/evil/evil.git"
                               (:build ("gmake doc all")
-                               :info "doc"
-                               :depends ("emacsmirror/goto-chg"
-                                         "http://www.dr-qubit.org/git/undo-tree.git")
-                               :tag "evil")))))
+                                      :info "doc"
+                                      :depends ("emacsmirror/goto-chg"
+                                                "http://www.dr-qubit.org/git/undo-tree.git")
+                                      :tag "evil")))))
 (vendle:register "Fuco1/smartparens"
                  '(:compile nil :depends (("magnars/dash.el" ( :compile nil)))))
 (vendle:register "magnars/expand-region.el")
@@ -354,6 +354,8 @@
                  '(:build ("gmake compile contrib-compile")))
 (vendle:register "capitaomorte/sly-company"
                  '(:tag ("common_lisp" "completion" "company" "sly")))
+(vendle:register "PuercoPop/sly-repl-ansi-color"
+                 '(:tag ("sly")))
 (vendle:register "hayamiz/twittering-mode"
                  '(:tag ("twitter")))
 (vendle:register "mhayashi1120/Emacs-twittering-stream"
@@ -755,10 +757,10 @@
                  '(:depends ( "Bruce-Connor/names"
                              ( "git://orgmode.org/org-mode.git"
                               (:load-path ("lisp" "contrib/lisp")
-                               :compile nil
-                               :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
-                               :info "doc"
-                               :tag "org")))))
+                                          :compile nil
+                                          :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
+                                          :info "doc"
+                                          :tag "org")))))
 (vendle:register "danielsz/Palimpsest")
 (vendle:register "rolandwalker/ignoramus")
 (vendle:register "anler/centered-window-mode"
@@ -899,10 +901,10 @@
                  '(:tag "evil"
                    :depends (( "https://gitorious.org/evil/evil.git"
                               (:build ("gmake doc all")
-                               :info "doc"
-                               :depends ("emacsmirror/goto-chg"
-                                         "http://www.dr-qubit.org/git/undo-tree.git")
-                               :tag "evil")))))
+                                      :info "doc"
+                                      :depends ("emacsmirror/goto-chg"
+                                                "http://www.dr-qubit.org/git/undo-tree.git")
+                                      :tag "evil")))))
 (vendle:register "linktohack/evil-commentary"
                  '(:tag "evil"))
 (vendle:register "syl20bnr/evil-tutor"
@@ -936,10 +938,10 @@
 (vendle:register "rlister/org-present"
                  '(:depends (("git://orgmode.org/org-mode.git"
                               (:load-path ("lisp" "contrib/lisp")
-                               :compile nil
-                               :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
-                               :info "doc"
-                               :tag "org")))))
+                                          :compile nil
+                                          :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
+                                          :info "doc"
+                                          :tag "org")))))
 ;; (vendle:register "jleechpe/outorg-export")
 (vendle:register "tj64/navi"
                  '(:tag ("org" "outline")))
@@ -1093,30 +1095,32 @@
 (vendle:register-theme "whitlockjc/atom-dark-theme-emacs")
 (vendle:register-theme "zovt/pretty-emacs")
 (vendle:register-theme "toroidal-code/monokai-extended-theme.el")
+(vendle:register-theme "mattly/emacs-farmhouse-theme")
+(vendle:register-theme "evenhold/nerv-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
-                              (vendle:register (expand-file-name path "~/huone/projektit")
-                                               option)))
-           (add-project-root  "emacs-flatline")
-           (add-project-root "helm-ypv" '(:tag "helm"))
-           (add-project-root "company-scheme" '(:tag ("company" "scheme")))
-           (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
-           (add-project-root "emacs-lehtifile-mode")
-           (add-project-root "helm-alku" '(:tag ("helm")))
-           (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
-           ;; (add-project-root "emacs-eshell-switch" '(:tag "eshell"))
-           (add-project-root "emacs-mesh" '(:tag "eshell"))
-           (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
-           (add-project-root "helm-project-buffer" '(:tag "helm"))
-           (add-project-root "emacs-eshellar" '(:tag ( "eshell" "shellar" )))
-           (add-project-root "emacs-vendle" '(:load-path nil
-                                              :tag ( "package" )))
-           (add-project-root "helm-features" '(:tag ( "emacs-lisp" )))
-           (add-project-root "helm-eww-bookmark" '(:tag ("helm" "eww" )))
-           (add-project-root "helm-eww-history" '(:tag ("helm" "eww" )))
-           (add-project-root "helm-eww-search-engine" '(:tag ("helm" "eww" )))
-           (add-project-root "helm-eshell-jump" '(:tag ("helm" "eshell"))))
+              (vendle:register (expand-file-name path "~/huone/projektit")
+                               option)))
+  (add-project-root  "emacs-flatline")
+  (add-project-root "helm-ypv" '(:tag "helm"))
+  (add-project-root "company-scheme" '(:tag ("company" "scheme")))
+  (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
+  (add-project-root "emacs-lehtifile-mode")
+  (add-project-root "helm-alku" '(:tag ("helm")))
+  (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
+  ;; (add-project-root "emacs-eshell-switch" '(:tag "eshell"))
+  (add-project-root "emacs-mesh" '(:tag "eshell"))
+  (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
+  (add-project-root "helm-project-buffer" '(:tag "helm"))
+  (add-project-root "emacs-eshellar" '(:tag ( "eshell" "shellar" )))
+  (add-project-root "emacs-vendle" '(:load-path nil
+                                     :tag ( "package" )))
+  (add-project-root "helm-features" '(:tag ( "emacs-lisp" )))
+  (add-project-root "helm-eww-bookmark" '(:tag ("helm" "eww" )))
+  (add-project-root "helm-eww-history" '(:tag ("helm" "eww" )))
+  (add-project-root "helm-eww-search-engine" '(:tag ("helm" "eww" )))
+  (add-project-root "helm-eshell-jump" '(:tag ("helm" "eshell"))))
 
 ;;;;;; skk
 (vendle:register "skk-dev/ddskk"
@@ -1224,6 +1228,8 @@
               '(:tag "vim" "plugin_manager"))
 (vendle:fetch "Shougo/vimshell.vim"
               '(:tag ("vim" "shell")))
+(vendle:fetch "sunaku/vim-unbundle"
+              '(:tag ("vim" "plugin_manager")))
 (vendle:fetch "kamichidu/vim-hariti"
               '(:tag ("vim" "plugin_manager")))
 (vendle:fetch "gmarik/Vundle.vim"
@@ -1567,6 +1573,9 @@
 (vendle:fetch "https://bitbucket.org/hoangtu/.emacs.d.git")
 (vendle:fetch "wiedzmin/stumpwm-config"
               '(:tag ("stumpwm")))
+(vendle:fetch "abo-abo/oremacs"
+              '(:tag ("configuration" "org" "lispy" "hydra")))
+(vendle:fetch "inlinestyle/lifted.el")
 
 ;; (vendle:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 

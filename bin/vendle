@@ -6,8 +6,6 @@
 (add-to-list 'load-path  "~/huone/projektit/emacs-vendle")
 (require 'vendle)
 
-
-
 (cl-defmethod vendle:update-package-git-async ((package vendle:<package>))
   (cl-letf ((name (vendle:package-name package))
             (path (vendle:concat-path vendle-directory (vendle:package-origin package)))
@@ -40,6 +38,39 @@
         proc))))
 
 
+(cl-defmethod vendle:update-package-git-async-make-process ((package vendle:<package>))
+  (cl-letf ((name (vendle:package-name package))
+            (path (vendle:concat-path vendle-directory (vendle:package-origin package)))
+            (type (vendle:package-type package)))
+    (when (and (cl-equalp 'git type)
+               (not (file-symlink-p path)))
+      (cl-letf* ((proc-buf (get-buffer-create (format "vendle-git-%s" (vendle:package-origin package))))
+                 (proc-name (format "vendle-git-pull-%s" (vendle:package-origin package))))
+        (cl-labels ((sentinel-cb (process signal)
+                      (message signal)
+                      (cond
+                        ((equal signal "finished\n")
+                         (cl-letf ((result (with-current-buffer (process-buffer process)
+                                             (buffer-substring (point-min) (point-max)))))
+                           (vendle:message "updated package %s" name)
+                           (cond
+                             ((vendle:git-updatedp result)
+                              (vendle:message "compiling package %s" name)
+                              ;; (vendle:message "result: %s" result)
+                              (vendle:option-compile package path)
+                              (vendle:option-build package)))
+                           (kill-buffer (process-buffer process))))
+                        (t
+                         (message "got signal %s" signal)
+                         (display-buffer (process-buffer process))))))
+          (make-process
+           :name proc-name
+           :buffer proc-buf
+           :command (list "git" "-C" path "pull" )
+           :sentinel #'sentinel-cb))))))
+
+
+
 (cl-defun vendle-update-async ()
   (interactive)
   (cl-letf ((pkgs (seq-partition
@@ -54,6 +85,23 @@
          ps)))
      pkgs)))
 
+
+(cl-defun vendle-async-update-make-process ()
+  (interactive)
+  (cl-letf ((pkgs
+             ;; (seq-partition *vendle-package-list* 2)
+             (seq-partition
+              ;; (seq-take vendle:*packages* 10)
+              vendle:*packages*
+              2)))
+    (seq-each
+     (lambda (pkg)
+       (thread-last pkg
+         (seq-map #'vendle:update-package-git-async-make-process)
+         (seq-each #'accept-process-output)))
+     pkgs))
+  (message "update finished"))
+
 (defun main ()
   (cl-letf ((muki:vendle-directory
              (expand-file-name (file-name-as-directory "vendle")
@@ -65,8 +113,10 @@
   (pcase (car argv)
     ("update"
      (vendle-update))
-    ("update-async"
-     (vendle-update-async))
+    ;; ("update-async"
+    ;;  (vendle-update-async))
+    ("update-make-process"
+     (vendle-async-update-make-process))
     ("check"
      (vendle-check))))
 

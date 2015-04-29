@@ -103,5 +103,12 @@
 (add-global-key "C-x 2" #'muki:vsplit-last-buffer)
 (add-global-key "C-x 3" #'muki:hsplit-last-buffer)
 
+;; image-mode
+(after 'image-mode
+    (define-key image-mode-map (kbd "<wheel-up>")    'image-previous-line)
+  (define-key image-mode-map (kbd "<wheel-down>")  'image-next-line)
+  (define-key image-mode-map (kbd "<wheel-right>") 'image-forward-hscroll)
+  (define-key image-mode-map (kbd "<wheel-left>")  'image-backward-hscroll))
+
 ;; disable right click
 (global-unset-key [mouse-3] )

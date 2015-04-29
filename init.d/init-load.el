@@ -141,6 +141,7 @@
     emacs-color-themes
     sly
     sly-company
+    ;; sly-repl-ansi-color
     twittering-mode
     coffee-mode
     color-theme-approximate
