@@ -109,7 +109,7 @@
                  '(:tag ("helm" "lobste.rs" "news" "web")))
 (vendle:register "syohex/emacs-helm-hackernews"
                  '(:tag ("helm" "hackernews" "news" "web")))
-(vendle:register "https://github.com/tetracat/sallet"
+(vendle:register "tetracat/sallet"
                  '(:tag ("helm")
                    :depends ("lewang/flx"
                              ("magnars/dash.el" ( :compile nil))
