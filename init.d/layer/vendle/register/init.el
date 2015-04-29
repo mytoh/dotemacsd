@@ -916,6 +916,11 @@
                    :depends (("abo-abo/lispy"
                               (:depends ("sviridov/undercover.el"))))))
 (vendle:register "linktohack/evil-rsi")
+(vendle:register "luxbock/evil-cleverparens"
+                 '(:depends ("rejeep/drag-stuff.el"
+                             "http://mumble.net/~campbell/git/paredit.git"
+                             "promethial/paxedit"
+                             "Fuco1/smartparens")))
 
 ;;;;; org
 (vendle:register "git://orgmode.org/org-mode.git"
@@ -1097,6 +1102,7 @@
 (vendle:register-theme "toroidal-code/monokai-extended-theme.el")
 (vendle:register-theme "mattly/emacs-farmhouse-theme")
 (vendle:register-theme "evenhold/nerv-theme")
+(vendle:register-theme "mjhanninen/liquorice.el")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)

@@ -5,7 +5,6 @@
 (cl-defun muki:init-evil-plugins ()
   (muki:init-evil-leader)
   ;; (muki:init-evil-escape)
-  (muki:init-evil-lisp-state)
   (muki:init-evil-nerd-commenter)
   (muki:init-evil-surround)
   (muki:init-evil-linewise)
@@ -14,7 +13,6 @@
   (muki:init-evil-operator-comment)
   (muki:init-evil-jumper)
   (muki:init-evil-visualstar)
-  (muki:init-evil-smartparens)
   (muki:init-evil-search-highlight-persist)
   (muki:init-evil-easymotion)
   (muki:init-evil-textobj-between)
@@ -124,13 +122,6 @@
   (evil-define-key 'motion eww-mode-map
     "<TAB>" #'shr-next-link))
 
-(cl-defun muki:init-evil-mode-smartparens ()
-  ;; smartparen
-  (liby 'smartparens
-    (after 'smartparens
-        ;; (add-key evil-normal-state-map ")" #'sp-up-sexp)
-        ;; (add-key evil-normal-state-map "(" #'sp-backward-up-sexp)
-        )))
 
 (cl-defun muki:init-evil-mode-multiple-cursors ()
   ;; multiple-cursors
@@ -213,7 +204,6 @@ is a kind of temporary one which is not confirmed yet."
 
   (muki:init-evil-mode-org)
   (muki:init-evil-mode-eww)
-  (muki:init-evil-mode-smartparens)
   (muki:init-evil-mode-multiple-cursors)
   (muki:init-evil-mode-elisp-slime-nav)
 

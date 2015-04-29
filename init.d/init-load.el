@@ -246,7 +246,6 @@
     evil-escape
     evil-surround
     evil-nerd-commenter
-    evil-lisp-state
     evil-linewise
     evil-matchit
     evil-exchange
@@ -254,16 +253,17 @@
     evil-search-highlight-persist
     evil-jumper
     evil-visualstar
-    evil-smartparens
     evil-easymotion
     evil-textobj-between
     evil-extra-operator
     evil-snipe
     evil-visual-mark-mode
     evil-anzu
-    evil-smartparens
+    ;; evil-smartparens
+    ;; evil-lisp-state
     evil
     evil-rsi ; after evil
+    evil-cleverparens
     ))
 
 (muki-layer:load-layers 'evil
