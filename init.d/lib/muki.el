@@ -267,6 +267,11 @@ buffer if the variable `delete-trailing-lines' is non-nil."
   ;; Return nil for the benefit of `write-file-functions'.
   nil)
 
+(cl-defun muki:clean-lines (beg end)
+  (interactive "r")
+  (sort-lines nil beg end)
+  (delete-duplicate-lines beg end))
+
 (require 'muki-key)
 (require 'muki-option)
 (require 'muki-mode)
