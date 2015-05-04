@@ -824,6 +824,8 @@
 ;; (vendle:register "nschum/highlight-parentheses.el")
 (vendle:register "tsdh/highlight-parentheses.el")
 (vendle:register "jordonbiondo/column-enforce-mode")
+(vendle:register "wasamasa/svg-2048"
+                 '(:depends ("tali713/esxml")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
@@ -1103,6 +1105,7 @@
 (vendle:register-theme "mattly/emacs-farmhouse-theme")
 (vendle:register-theme "evenhold/nerv-theme")
 (vendle:register-theme "mjhanninen/liquorice.el")
+(vendle:register-theme "p-lambert/jellyburn-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
