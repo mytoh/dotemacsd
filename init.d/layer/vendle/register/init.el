@@ -1106,6 +1106,7 @@
 (vendle:register-theme "evenhold/nerv-theme")
 (vendle:register-theme "mjhanninen/liquorice.el")
 (vendle:register-theme "p-lambert/jellyburn-theme")
+(vendle:register-theme "cryon/subatomic")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1178,7 +1179,8 @@
               '(:recursive nil))
 (vendle:fetch "emacs-tw/awesome-emacs")
 (vendle:fetch "syl20bnr/spacemacs"
-              '(:recursive nil))
+              '(:recursive nil
+                :branch "develop"))
 (vendle:fetch "bbatsov/prelude")
 (vendle:fetch "bling/dotemacs")
 (vendle:fetch "cofi/dotfiles"

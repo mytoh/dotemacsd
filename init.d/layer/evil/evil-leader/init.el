@@ -8,7 +8,6 @@
       '(("a" .  application)
         ("av" . application-vendle)
         ("b" .  buffer)
-        ("e" . eval)
         ("g" .  git)
         ("hi" . help-info)
         ("hd" . help-describe)
@@ -41,17 +40,11 @@
     (enable-option evil-leader/in-all-states)
 
     (evil-leader/set-key
-        "v e" #'pp-eval-last-sexp
-      "w" #'evil-write
+        "w" #'evil-write
       "Q" #'evil-quit-all
       "q" #'kill-buffer-and-window
       ;; Universal argument ---------------------------------------------------------
       "u" #'universal-argument)
-
-    (muki:evil-leader-prefix-set-keys 'eval
-      "e" #'eval-last-sexp
-      "x" #'eval-defun
-      "b" #'eval-buffer)
 
     (muki:evil-leader-prefix-set-keys 'help-describe
       "f" #'describe-function
