@@ -10,8 +10,7 @@
 
 ;;;; initialize vendle
 (req 'vendle
-  (cl-letf ((muki:vendle-directory
-             (muki:user-emacs-directory (file-name-as-directory "vendle"))))
+  (cl-letf ((muki:vendle-directory (locate-user-emacs-file "vendle")))
     (vendle:initialize muki:vendle-directory)))
 
 ;;; boot.el ends here

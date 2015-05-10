@@ -3,7 +3,7 @@
 ;;; Code:
 
 (cl-defun muki:init-evil-snipe ()
-  (muki:init-evil-snipe-like-vim-sneak))
+  (muki:init-evil-snipe-normal))
 
 (cl-defun muki:init-evil-snipe-normal ()
   (req 'evil-snipe
@@ -11,7 +11,7 @@
     (enable-mode global-evil-snipe-mode)
 
     ;; Optional!
-    (evil-snipe-replace-evil) ;; replaces evil-mode's f/F/t/T/;/, with snipe
+    ;;(evil-snipe-replace-evil) ;; replaces evil-mode's f/F/t/T/;/, with snipe
     ;; (evil-snipe-enable-nN)    ;; enable repeating with n/N (not implemented)
 
     ;; not necessary if using (evil-snipe-replace-evil)
@@ -42,5 +42,7 @@
     (setq evil-snipe-count-scope 'vertical)  ;; not implemented yet
     (setq evil-snipe-enable-highlight t)
     (setq evil-snipe-enable-incremental-highlight t)))
+
+(muki:init-evil-snipe)
 
 ;;; snipe.el ends here

@@ -18,9 +18,9 @@
          ("4chan" . "~/huone/kuvat/sivusto/4chan")
          ("lainchan" . "~/huone/kuvat/sivusto/lainchan")
          ("futaba" . "~/huone/kuvat/sivusto/futaba")
-         ("paketti" . ,(muki:user-emacs-directory "init.d/paketit"))
-         ("vendle" . ,(muki:user-emacs-directory "vendle"))
-         ("elpa" . ,(muki:user-emacs-directory "elpa"))))
+         ("paketti" . ,(locate-user-emacs-file "init.d/paketit"))
+         ("vendle" . ,(locate-user-emacs-file "vendle"))
+         ("elpa" . ,(locate-user-emacs-file "elpa"))))
     (helm-alku-directory-add-subdirectories "~/huone/projektit")
     (set-option helm-alku-program-list
                 '("v2c"

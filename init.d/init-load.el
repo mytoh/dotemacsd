@@ -6,7 +6,7 @@
 
 ;;;;; libs
 (eval-when-compile (require 'init-lib "lib/init-lib"))
-(add-subdirs-to-load-path (muki:user-emacs-directory "init.d"))
+(add-subdirs-to-load-path (locate-user-emacs-file "init.d"))
 
 (require 'muki)
 (require 'muki-layer)
@@ -39,7 +39,8 @@
     ))
 
 (muki-layer:load-layers 'vendle
-  '(migemo
+  '(
+    migemo
     ssh-config-mode
     emacs-refactor
     artbollocks-mode
@@ -71,12 +72,15 @@
     rainbow-mode
     tumblesocks
     flatline
-    navi2ch
-    navi2ch-file-mode
+    git-gutter
+
     emms
     ;; emms-mpd
     ;; emms-player-mpv
     ;; emms-player-mpv-volume
+
+    navi2ch
+    navi2ch-file-mode
     magit
     magit-overview
     magit-idle-breadcrumbs
@@ -183,7 +187,6 @@
     fvwm-mode
     sallet
     git-messenger
-    git-gutter
     firestarter
     hnr
     theme-looper
@@ -256,14 +259,14 @@
     evil-easymotion
     evil-textobj-between
     evil-extra-operator
-    evil-snipe
     evil-visual-mark-mode
     evil-anzu
-    ;; evil-smartparens
     ;; evil-lisp-state
     evil
     evil-rsi ; after evil
     evil-cleverparens
+    ;; evil-smartparens
+    evil-snipe
     ))
 
 (muki-layer:load-layers 'evil
@@ -272,6 +275,7 @@
     paradox-mode
     emms-mode
     emacs-lisp-mode
+    org-mode
     ))
 
 (muki-layer:load-layers 'helm
@@ -329,8 +333,9 @@
     rcirc
     tramp
     eieio
-    savehist
-    recentf))
+    ;; savehist
+    recentf
+    ))
 
 ;;;;; packages
 (require 'init-paketti)

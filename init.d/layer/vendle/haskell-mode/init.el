@@ -3,7 +3,7 @@
   (req 'haskell-cabal)
   ;; (add-hook 'haskell-mode-hook #'turn-on-haskell-doc-mode)
   (add-hook 'haskell-mode-hook #'turn-on-haskell-indent)
-  (cl-pushnew (muki:user-emacs-directory (file-name-as-directory "vendle/haskell-mode"))
+  (cl-pushnew (locate-user-emacs-file "vendle/haskell-mode")
               Info-default-directory-list)
 
   (setenv "PATH" (concat "~/.cabal/bin:" (getenv "PATH")))

@@ -826,6 +826,7 @@
 (vendle:register "jordonbiondo/column-enforce-mode")
 (vendle:register "wasamasa/svg-2048"
                  '(:depends ("tali713/esxml")))
+(vendle:register "abo-abo/avy")
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))

@@ -15,7 +15,7 @@
 (enable-option eshell-prefer-lisp-functions)
 
 ;;; history
-(setq eshell-history-size 100000)
+(setq eshell-history-size 10000)
 
 ;;; start eshell after startup
 (cl-defun muki:eshell-startup-hook ()

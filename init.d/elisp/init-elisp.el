@@ -1,5 +1,5 @@
 
-(add-subdirs-to-load-path (muki:user-emacs-directory "init.d/elisp"))
+(add-subdirs-to-load-path (locate-user-emacs-file "init.d/elisp"))
 
 (cl-defun muki:csh-add-keywords (face-name keyword-rules)
   (cl-letf* ((keyword-list (seq-map (pcase-lambda (`(,_ . ,x))

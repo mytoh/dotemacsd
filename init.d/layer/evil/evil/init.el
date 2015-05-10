@@ -17,7 +17,6 @@
   (muki:init-evil-easymotion)
   (muki:init-evil-textobj-between)
   (muki:init-evil-extra-operator)
-  (muki:init-evil-snipe)
   (muki:init-evil-anzu)
   ;; (muki:init-evil-visual-mark-mode)
   )

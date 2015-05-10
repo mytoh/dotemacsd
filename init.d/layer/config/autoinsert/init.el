@@ -4,7 +4,7 @@
 (require 'autoinsert)
 
 ;; テンプレートのディレクトリ
-(setq auto-insert-directory (expand-file-name "init.d/insert" user-emacs-directory))
+(setq auto-insert-directory (locate-user-emacs-file "init.d/insert" ))
 
 ;; dont show prompt
 (setq auto-insert-query nil)

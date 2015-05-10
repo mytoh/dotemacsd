@@ -5,7 +5,7 @@
 ;;;; gc
 (setq gc-cons-threshold (* 1024 1024 1024))
 
-(cl-pushnew (concat user-emacs-directory "init.d")
+(cl-pushnew (locate-user-emacs-file "init.d")
             load-path)
 (require 'init-load)
 (put 'downcase-region 'disabled nil)

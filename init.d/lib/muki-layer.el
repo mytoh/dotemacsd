@@ -5,8 +5,7 @@
 (require 'muki)
 
 (defcustom muki-layer:root
-  (expand-file-name "init.d/layer"
-                    user-emacs-directory)
+  (locate-user-emacs-file "init.d/layer")
   "layer root directory")
 
 (cl-defun muki-layer:load (category name)

@@ -6,7 +6,7 @@
 
 ;;; settings
 ;;;; user elisps
-(muki:add-to-load-path (muki:user-emacs-directory (file-name-as-directory "elisp")))
+(muki:add-to-load-path (locate-user-emacs-file "elisp"))
 
 ;;disable startup message
 (enable-option inhibit-startup-screen)
@@ -177,7 +177,7 @@
 ;;disable auto save
 (disable-option auto-save-default)
 (enable-option delete-auto-save-files)
-(set-option backup-directory-alist (quote (("." . "~/.emacs.d/backups"))))
+(set-option backup-directory-alist `(("." . ,(locate-user-emacs-file "backups"))))
 ;; (defvar backup-directory (expand-file-name "backups" user-emacs-directory))
 ;; (defvar autosave-directory (expand-file-name "autosaves" user-emacs-directory))
 ;; (set-option backup-directory-alist
@@ -190,8 +190,8 @@
 (enable-option find-file-visit-truename)
 
 ;;;; undo
-(set-option undo-limit 100000
-            undo-string-limit 1300000)
+;; (set-option undo-limit 100000
+;;             undo-string-limit 1300000)
 
 ;;;; reload buffer
 (global-auto-revert-mode 1)
@@ -253,7 +253,7 @@
 
 ;;;; recursive minibuffer
 (enable-option enable-recursive-minibuffers)
-(set-option history-length 99999999999)
+(set-option history-length 10000)
 
 ;;;; macro print level
 (disable-option eval-expression-print-level)
@@ -333,7 +333,7 @@
 (set-option enable-local-variables :all)
 
 ;;; bookmark
-(set-option bookmark-default-file (muki:user-emacs-directory "bookmarks")
+(set-option bookmark-default-file (locate-user-emacs-file "bookmarks")
             bookmark-save-flag 1) ;; save after every change
 
 ;;;; builtins
@@ -356,7 +356,7 @@
 
 ;;;;; save cursor position
 (req 'saveplace
-  (setq save-place-file (concat user-emacs-directory "saveplace.el")) ; use standard emacs dir
+  (setq save-place-file (locate-user-emacs-file "saveplace.el")) ; use standard emacs dir
   (setq-default save-place t))
 
 ;; important for golden-ratio to better work
@@ -369,11 +369,11 @@
 (setq echo-keystrokes 0.02)
 
 ;; file revert time
-(set-option auto-revert-interval 1)
+(set-option auto-revert-interval 5)
 
 ;; There is some request to the window manager that is not sending a response back to emacs. This line fixed the problem for me.
 ;; [[http://ubuntuforums.org/showthread.php?t=183638]]
-(modify-frame-parameters nil '((wait-for-wm . nil)))
+;; (modify-frame-parameters nil '((wait-for-wm . nil)))
 
 ;; maximize screen
 ;; (set-frame-parameter nil  'fullscreen 'fullboth)
@@ -385,10 +385,10 @@
 (enable-option history-delete-duplicates)
 
 ;; decrease gc cycle
-(set-option gc-cons-threshold (* 10 gc-cons-threshold))
+;; (set-option gc-cons-threshold (* 10 gc-cons-threshold))
 
 ;; message log line counts
-(set-option message-log-max 10000)
+(set-option message-log-max 5000)
 
 ;; desktop
 ;; (setq desktop-globals-to-save '(extended-command-history

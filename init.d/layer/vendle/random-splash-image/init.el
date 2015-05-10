@@ -4,9 +4,7 @@
 
 (req 'random-splash-image
   (setq random-splash-image-dir
-        (expand-file-name
-         "splash"
-         user-emacs-directory))
+        (locate-user-emacs-file "splash"))
   (when (file-exists-p random-splash-image-dir)
     (random-splash-image-set)))
 

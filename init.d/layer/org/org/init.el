@@ -140,7 +140,9 @@
   (muki:org-html-export-options)
   (muki:org-babel-options)
   (muki:org-set-modules)
-  (muki:org-capture-setting))
+  (muki:org-capture-setting)
+  (add-hook 'before-save-hook
+            #'muki:org-mode-before-save-hook))
 
 (after 'org
     (muki:org-mode-hook-function))
@@ -148,11 +150,10 @@
 ;; (add-hook 'org-mode-hook
 ;;           #'muki:org-mode-hook-function)
 
-(after'org
- ;; Problems while trying to load feature `org-interactive-query'
- ;; Problems while trying to load feature `org-jsinfo'
- (add-hook 'before-save-hook
-           #'muki:org-mode-before-save-hook))
+;; (after'org
+;;  ;; Problems while trying to load feature `org-interactive-query'
+;;  ;; Problems while trying to load feature `org-jsinfo'
+;;  )
 
 (cl-defun muki:org-insert-book-drawer ()
   (interactive)
