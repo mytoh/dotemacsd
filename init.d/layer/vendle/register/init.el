@@ -1108,6 +1108,8 @@
 (vendle:register-theme "mjhanninen/liquorice.el")
 (vendle:register-theme "p-lambert/jellyburn-theme")
 (vendle:register-theme "cryon/subatomic")
+(vendle:register-theme "Gastove/rhombus")
+(vendle:register-theme "Fanael/colorsarenice-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)

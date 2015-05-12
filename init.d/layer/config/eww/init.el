@@ -47,10 +47,10 @@
 
   (cl-defun muki:eww (url)
     (interactive "sEnter URL or keywords: ")
-    (cl-letf* ((url-proxy-services '(("http" . "proxy.koti:8080"))))
+    (cl-letf* ((url-proxy-services '(("http" . "proxy.koti:3128"))))
       (eww url)))
 
-  (muki:define-launcher-key "w" 'muki:eww)
+  (muki:define-launcher-key "w" #'muki:eww)
 
   )
 

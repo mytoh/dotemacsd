@@ -2,6 +2,8 @@
 
 ;;; Code:
 
+(set-option savehist-additional-variables '())
+
 ;;;; save minibuffer history
 (set-option savehist-additional-variables
             '(kill-ring

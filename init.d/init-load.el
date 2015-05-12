@@ -158,7 +158,7 @@
     ;; undohist
     image-archive
     js2-mode
-    ace-link
+    ;; ace-link
     phi-grep
     fill-column-indicator
     ipretty
@@ -333,7 +333,7 @@
     rcirc
     tramp
     eieio
-    ;; savehist
+    savehist ; if history file become too large, delete file or disable mode
     recentf
     ))
 
