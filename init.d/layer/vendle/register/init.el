@@ -132,6 +132,8 @@
                  '(:depends ("abo-abo/ace-window")))
 (vendle:register "shosti/helm-unicode"
                  '(:tag ("helm" "unicode")))
+(vendle:register "jupl/helm-gitignore"
+                 '(:tag ("helm" "git" "gitignore")))
 ;; (vendle:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ("helm")
 ;;                    :depends ("michael-heerdegen/iterators.el")))
@@ -827,6 +829,8 @@
 (vendle:register "wasamasa/svg-2048"
                  '(:depends ("tali713/esxml")))
 (vendle:register "abo-abo/avy")
+(vendle:register "marcowahl/emacsshot"
+                 '(:tag ("screenshot")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
@@ -1110,6 +1114,8 @@
 (vendle:register-theme "cryon/subatomic")
 (vendle:register-theme "Gastove/rhombus")
 (vendle:register-theme "Fanael/colorsarenice-theme")
+(vendle:register-theme "aalpern/emacs-color-theme-green-phosphor")
+(vendle:register-theme "Alexander-Miller/morning-star-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
