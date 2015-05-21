@@ -1,3 +1,7 @@
+# Created by https://www.gitignore.io
+
+### Emacs ###
+# -*- mode: gitignore; -*-
 *~
 \#*\#
 /.emacs.desktop
@@ -6,6 +10,30 @@
 auto-save-list
 tramp
 .\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+# flymake-mode
+*_flymake.*
+
+# eshell files
+/eshell/history
+/eshell/lastdir
+
+# elpa packages
+/elpa/
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
+
+# cask packages
+.cask/
+
 
 # Org-mode
 .org-id-locations
