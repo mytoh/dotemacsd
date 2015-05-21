@@ -104,6 +104,15 @@
 
 (add-hook 'after-init-hook #'muki:set-hl-line-face)
 
+;; [[http://rubikitch.com/2015/05/14/global-hl-line-mode-timer/]]
+(defun global-hl-line-timer-function ()
+  (global-hl-line-unhighlight-all)
+  (let ((global-hl-line-mode t))
+    (global-hl-line-highlight)))
+(setq global-hl-line-timer
+      (run-with-idle-timer 0.1 t 'global-hl-line-timer-function))
+;; (cancel-timer global-hl-line-timer)
+
 ;;;; display keys
 (set-option echo-keystrokes 0.1)
 
@@ -432,5 +441,8 @@
 
 ;;;;; undeline
 (enable-option x-underline-at-descent-line)
+
+;; end sentence with single space
+(disable-option sentence-end-double-space)
 
 ;;; config-setting.el ends here
