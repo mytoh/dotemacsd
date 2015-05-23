@@ -9,6 +9,7 @@
 (liby 'helm
   (require 'helm-config)
 
+
   (req 'dired-async
     ;; enable dired-async
     (enable-mode dired-async-mode))
@@ -16,13 +17,15 @@
   (enable-mode helm-mode)
   (enable-mode helm-adaptative-mode)
 
-  (defun-add-hook muki:helm-set-face (after-init-hook)
+  (defun muki:helm-set-face ()
     (cl-letf ((background
                (face-background 'default))
               (percent 20))
       (set-face-attribute 'helm-selection nil
                           :background
                           (color-lighten-name background percent))))
+
+  (after 'helm (muki:helm-set-face))
 
   (defun helm-select-2nd-action-or-end-of-line ()
     "Select the 2nd action for the currently selected candidate.
@@ -33,12 +36,13 @@ Otherwise goto the end of minibuffer."
         (helm-select-nth-action 1)
       (end-of-line)))
 
-  ;; bind C-1 to C-9 to actions
-  (cl-loop for n from 0 to 8 do
-       (add-key helm-map (format "C-%s" (1+ n))
-                `(lambda ()
-                   (interactive)
-                   (helm-select-nth-action ,n))))
+  (after 'helm
+      ;; bind C-1 to C-9 to actions
+      (cl-loop for n from 0 to 8 do
+           (add-key helm-map (format "C-%s" (1+ n))
+                    `(lambda ()
+                       (interactive)
+                       (helm-select-nth-action ,n)))))
 
   (add-global-key "M-x" #'helm-M-x
                   "C-c C-m" #'helm-M-x
@@ -51,10 +55,12 @@ Otherwise goto the end of minibuffer."
                   [remap dabbrev-expand]   #'helm-dabbrev
                   [remap find-tag]         #'helm-etags-select)
 
-  (add-key helm-map
-    "C-M-n" #'helm-next-source
-    "C-M-p" #'helm-previous-source)
-  (add-key helm-read-file-map "C-h" #'delete-backward-char)
+  (after 'helm
+      (add-key helm-map
+        "C-M-n" #'helm-next-source
+        "C-M-p" #'helm-previous-source))
+  (after 'helm
+      (add-key helm-read-file-map "C-h" #'delete-backward-char))
   ;; (add-key helm-read-file-map "TAB" #'helm-execute-persistent-action)
 
   (set-option helm-idle-delay          0.01
@@ -68,6 +74,9 @@ Otherwise goto the end of minibuffer."
               helm-raise-command                         "wmctrl -xa %s"
               helm-tramp-verbose 4
               )
+
+  ;; disable helm for find-file
+  (cl-pushnew '(find-file . nil) helm-completing-read-handlers-alist)
 
   (set-option helm-boring-file-regexp-list
               '("/\\.git\\'" "\\.hg\\'" "\\.svn\\'" "\\.CVS\\'" "\\._darcs\\'" "\\.la\\'" "\\.o\\'" "\\.i\\'"))
