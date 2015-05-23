@@ -831,6 +831,10 @@
 (vendle:register "abo-abo/avy")
 (vendle:register "marcowahl/emacsshot"
                  '(:tag ("screenshot")))
+(vendle:register "n8willis/fontfile-modes"
+                 '(:tag ("font")))
+(vendle:register "atheriel/splash-buffer.el"
+                 '(:tag ("splash")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
