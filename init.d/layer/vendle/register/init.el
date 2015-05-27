@@ -835,6 +835,11 @@
                  '(:tag ("font")))
 (vendle:register "atheriel/splash-buffer.el"
                  '(:tag ("splash")))
+(vendle:register "rejeep/jq.el"
+                 '(:tag ("json" "jq")))
+(vendle:register "Fuco1/autobookmarks"
+                 '(:depends ("magnars/dash.el")
+                   :tag ("recentf" "bookmark")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
@@ -1120,6 +1125,8 @@
 (vendle:register-theme "Fanael/colorsarenice-theme")
 (vendle:register-theme "aalpern/emacs-color-theme-green-phosphor")
 (vendle:register-theme "Alexander-Miller/morning-star-theme")
+(vendle:register-theme "nhunzaker/emacs-ectoplasm-theme")
+(vendle:register-theme "ryter/emacs-metro-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
