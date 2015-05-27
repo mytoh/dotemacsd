@@ -21,9 +21,10 @@
     (cl-letf ((background
                (face-background 'default))
               (percent 20))
+             (when (display-graphic-p)
       (set-face-attribute 'helm-selection nil
                           :background
-                          (color-lighten-name background percent))))
+                          (color-lighten-name background percent)))))
 
   (after 'helm (muki:helm-set-face))
 
