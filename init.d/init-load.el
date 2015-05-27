@@ -192,6 +192,7 @@
     theme-looper
     highlight-parentheses
     column-enforce-mode
+    autobookmarks
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image
