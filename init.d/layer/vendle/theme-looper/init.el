@@ -4,7 +4,9 @@
 
 (req 'theme-looper
   (theme-looper-set-theme-set
-   '(comidia planet monokai molokai subatomic256 birds-of-paradise-plus firebelly gruvbox base16-tomorrow
-     odersky jazz purple-haze warm-night brin gotham soothe spolsky wilson noctilux erosiond material subatomic)))
+   '(comidia planet monokai molokai subatomic256 birds-of-paradise-plus
+     firebelly gruvbox base16-tomorrow odersky jazz purple-haze
+     warm-night brin gotham soothe spolsky wilson noctilux erosiond
+     material subatomic ectoplasm)))
 
 ;;; init.el ends here
