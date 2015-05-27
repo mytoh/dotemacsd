@@ -4,7 +4,7 @@
 
 (req 'auto-save-buffers-enhanced
   (set-option auto-save-buffers-enhanced-interval
-              10)
+              20)
   ;; exclude some files
   (set-option auto-save-buffers-enhanced-exclude-regexps
               '("COMMIT_EDITMSG\\'"
