@@ -838,8 +838,11 @@
 (vendle:register "rejeep/jq.el"
                  '(:tag ("json" "jq")))
 (vendle:register "Fuco1/autobookmarks"
-                 '(:depends ("magnars/dash.el")
+                 '(:depends ("magnars/dash.el"
+                             "emacsmirror/bookmark-plus")
                    :tag ("recentf" "bookmark")))
+(vendle:register "larstvei/Focus"
+                 '(:tag ("highlight" "narrowing")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
