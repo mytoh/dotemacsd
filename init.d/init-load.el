@@ -193,6 +193,7 @@
     highlight-parentheses
     column-enforce-mode
     autobookmarks
+    focus
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image
