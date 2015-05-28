@@ -7,7 +7,8 @@
             helm-alku-directory
             helm-alku-vihko
             helm-alku-ääliö
-            helm-alku-layer)
+            helm-alku-layer
+            helm-alku-twitch)
            "helm-alku")
 
   (after 'helm-alku
