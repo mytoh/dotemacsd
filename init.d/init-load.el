@@ -194,6 +194,7 @@
     column-enforce-mode
     autobookmarks
     focus
+    soundcloud
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image

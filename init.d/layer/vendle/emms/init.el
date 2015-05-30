@@ -59,17 +59,17 @@
     (cl-pushnew 'emms-player-sox emms-player-list)
 
     ;; mplayer2
-    (define-emms-simple-player mplayer2 '(file url)
-      (cl-concatenate 'string
-                      "\\`\\(http\\|mms\\)://\\|"
-                      regexp-file-video)
-      "mplayer" "--slave" "--really-quiet")
-    (cl-pushnew 'emms-player-mplayer2 emms-player-list)
+    ;; (define-emms-simple-player mplayer2 '(file url)
+    ;;   (cl-concatenate 'string
+    ;;                   "\\`\\(http\\|mms\\)://\\|"
+    ;;                   regexp-file-video)
+    ;;   "mplayer" "--slave" "--really-quiet")
+    ;; (cl-pushnew 'emms-player-mplayer2 emms-player-list)
 
-    (define-emms-simple-player mplayer2-playlist '(streamlist)
-      "\\`http://\\|"
-      "mplayer" "--slave"  "--really-quiet" "--playlist")
-    (cl-pushnew 'emms-player-mplayer2-playlist emms-player-list)
+    ;; (define-emms-simple-player mplayer2-playlist '(streamlist)
+    ;;   "\\`http://\\|"
+    ;;   "mplayer" "--slave"  "--really-quiet" "--playlist")
+    ;; (cl-pushnew 'emms-player-mplayer2-playlist emms-player-list)
 
     ;; mpv
     (define-emms-simple-player mpv
@@ -78,11 +78,11 @@
       "mpv" "--framedrop=yes" "--softvol=auto" "--really-quiet")
     (cl-pushnew 'emms-player-mpv emms-player-list)
 
-    ;; (define-emms-simple-player mpv-playlist-file '(file)
-    ;;   (emms-player-simple-regexp
-    ;;    "pls" "m3u")
-    ;;   "mpv" "--really-quiet" "--playlist")
-    ;; (add-to-list 'emms-player-list 'emms-player-mpv-playlist-file)
+    (define-emms-simple-player mpv-playlist-file '(file)
+      (emms-player-simple-regexp
+       "pls" "m3u" "\\`http://" "\\`https://" "\\`mms://" )
+      "mpv" "--really-quiet" "--playlist")
+    (add-to-list 'emms-player-list 'emms-player-mpv-playlist-file)
 
     )
 

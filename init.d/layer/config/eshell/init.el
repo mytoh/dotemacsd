@@ -12,7 +12,7 @@
 (cl-pushnew 'eshell-xtra eshell-modules-list)
 
 ;;; prefer lisp function
-(enable-option eshell-prefer-lisp-functions)
+;; (enable-option eshell-prefer-lisp-functions)
 
 ;;; history
 (setq eshell-history-size 10000)

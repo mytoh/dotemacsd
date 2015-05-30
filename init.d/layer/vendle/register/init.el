@@ -843,6 +843,11 @@
                    :tag ("recentf" "bookmark")))
 (vendle:register "larstvei/Focus"
                  '(:tag ("highlight" "narrowing")))
+(vendle:register "tthieman/soundcloud.el"
+                 '(:tag ("music" "soundcloud")
+                   :depends ("kiwanami/emacs-deferred"
+                             "rolandwalker/string-utils"
+                             "tkf/emacs-request")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
