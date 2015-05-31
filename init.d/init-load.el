@@ -195,6 +195,7 @@
     autobookmarks
     focus
     soundcloud
+    longlines-jp
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image
@@ -323,7 +324,7 @@
     hook
     path
     face
-    clipboard
+    ;;clipboard
     font
     ;; erc
     eshell
