@@ -134,6 +134,7 @@
                  '(:tag ("helm" "unicode")))
 (vendle:register "jupl/helm-gitignore"
                  '(:tag ("helm" "git" "gitignore")))
+(vendle:register "xuchunyang/helm-commandlinefu")
 ;; (vendle:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ("helm")
 ;;                    :depends ("michael-heerdegen/iterators.el")))
@@ -848,6 +849,7 @@
                    :depends ("kiwanami/emacs-deferred"
                              "rolandwalker/string-utils"
                              "tkf/emacs-request")))
+(vendle:register "emacsmirror/longlines-jp")
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
@@ -1135,6 +1137,7 @@
 (vendle:register-theme "Alexander-Miller/morning-star-theme")
 (vendle:register-theme "nhunzaker/emacs-ectoplasm-theme")
 (vendle:register-theme "ryter/emacs-metro-theme")
+(vendle:register-theme "PGGB/emacs-bluedrake-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
