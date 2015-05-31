@@ -311,6 +311,7 @@
     helm-emms
     swiper
     ace-jump-helm-line
+    helm-commandlinefu
     ;; helm-swoop
     ;; helm-company
     ;; helm-delicious
