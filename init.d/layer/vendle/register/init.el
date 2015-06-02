@@ -135,6 +135,7 @@
 (vendle:register "jupl/helm-gitignore"
                  '(:tag ("helm" "git" "gitignore")))
 (vendle:register "xuchunyang/helm-commandlinefu")
+(vendle:register "vapniks/helm-helm-commands")
 ;; (vendle:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ("helm")
 ;;                    :depends ("michael-heerdegen/iterators.el")))
@@ -434,8 +435,8 @@
                              "nicferrier/emacs-web"
                              "nicferrier/emacs-noflet"
                              "nicferrier/elnode")))
-(vendle:register "https://bitbucket.org/ukaszg/aria2.git"
-                 '(:tag "aria2" ))
+;; (vendle:register "https://bitbucket.org/ukaszg/aria2.git"
+;;                  '(:tag "aria2" ))
 (vendle:register "m00natic/eww-lnum"
                  '(:tag "eww"))
 (vendle:register "yoshiki/yaml-mode")
@@ -850,6 +851,9 @@
                              "rolandwalker/string-utils"
                              "tkf/emacs-request")))
 (vendle:register "emacsmirror/longlines-jp")
+(vendle:register "zonuexe/emoji-fontset.el"
+                 '(:tag ("font" "emoji" "unicode")))
+(vendle:register "purcell/exec-path-from-shell")
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))

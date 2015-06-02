@@ -36,7 +36,8 @@
                   "nemo_no_desktop.sh"
                   "qcomicbook"
                   "mlterm"
-                  "xombrero")))
+                  "xombrero"
+                  "lxappearance")))
 
   (muki:define-launcher-key "c"  #'helm-alku-program)
   (muki:define-launcher-key "n" #'helm-alku-vihko)
