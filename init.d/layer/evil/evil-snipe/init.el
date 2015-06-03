@@ -8,8 +8,7 @@
 (cl-defun muki:init-evil-snipe-normal ()
   (req 'evil-snipe
 
-    (enable-mode global-evil-snipe-mode)
-
+    (add-hook 'prog-mode-hook #'evil-snipe-mode)
     ;; Optional!
     ;;(evil-snipe-replace-evil) ;; replaces evil-mode's f/F/t/T/;/, with snipe
     ;; (evil-snipe-enable-nN)    ;; enable repeating with n/N (not implemented)
