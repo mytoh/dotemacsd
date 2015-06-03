@@ -1142,6 +1142,8 @@
 (vendle:register-theme "nhunzaker/emacs-ectoplasm-theme")
 (vendle:register-theme "ryter/emacs-metro-theme")
 (vendle:register-theme "PGGB/emacs-bluedrake-theme")
+(vendle:register-theme "kostafey/organic-green-theme")
+(vendle:register-theme "nashamri/spacemacs-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
