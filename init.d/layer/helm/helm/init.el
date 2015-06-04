@@ -21,10 +21,10 @@
     (cl-letf ((background
                (face-background 'default))
               (percent 20))
-             (when (display-graphic-p)
-      (set-face-attribute 'helm-selection nil
-                          :background
-                          (color-lighten-name background percent)))))
+      (when (display-graphic-p)
+        (set-face-attribute 'helm-selection nil
+                            :background
+                            (color-lighten-name background percent)))))
 
   (after 'helm (muki:helm-set-face))
 
@@ -73,7 +73,7 @@ Otherwise goto the end of minibuffer."
               ;; helm-buffer-max-length 50x
               helm-candidate-number-limit 200
               helm-raise-command                         "wmctrl -xa %s"
-              helm-tramp-verbose 4
+              helm-tramp-verbose 6
               )
 
   ;; disable helm for find-file
