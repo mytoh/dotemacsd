@@ -7,6 +7,6 @@
    '(comidia planet monokai molokai subatomic256 firebelly
      gruvbox base16-tomorrow odersky jazz purple-haze
      warm-night brin gotham soothe spolsky wilson noctilux erosiond
-     material subatomic ectoplasm)))
+     material subatomic ectoplasm spacemacs-dark)))
 
 ;;; init.el ends here
