@@ -68,6 +68,7 @@
     cat-mode
     vimrc-mode
     emoji-cheat-sheet
+    emoji-cheat-sheet-plus
     olivetti
     rainbow-mode
     tumblesocks
@@ -267,8 +268,8 @@
     evil-anzu
     ;; evil-lisp-state
     evil
-    evil-rsi ; after evil
-    evil-cleverparens
+    ;; evil-rsi ; after evil
+    ;; evil-cleverparens
     ;; evil-smartparens
     evil-snipe
     ))

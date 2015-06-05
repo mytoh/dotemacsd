@@ -405,7 +405,10 @@
 (vendle:register "dimitri/switch-window")
 (vendle:register "rnkn/olivetti")
 (vendle:register "emacsmirror/diminish")
-(vendle:register "ShingoFukuyama/emacs-emoji-cheat-sheet")
+(vendle:register "ShingoFukuyama/emacs-emoji-cheat-sheet"
+                 '(:tag "emoji"))
+(vendle:register "syl20bnr/emacs-emoji-cheat-sheet-plus"
+                 '(:tag "emoji"))
 (vendle:register "antonj/Highlight-Indentation-for-Emacs")
 (vendle:register "mcandre/vimrc-mode" '(:tag "vim"))
 (vendle:register "victorhge/iedit")
@@ -1144,6 +1147,7 @@
 (vendle:register-theme "PGGB/emacs-bluedrake-theme")
 (vendle:register-theme "kostafey/organic-green-theme")
 (vendle:register-theme "nashamri/spacemacs-theme")
+(vendle:register-theme "timrichardt/zendyke")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
