@@ -3,7 +3,7 @@
 ;;; Code:
 
 (cl-defun muki:init-evil-snipe ()
-  (muki:init-evil-snipe-normal))
+  (muki:init-evil-snipe-spacemacs))
 
 (cl-defun muki:init-evil-snipe-normal ()
   (req 'evil-snipe
@@ -41,6 +41,19 @@
     (setq evil-snipe-count-scope 'vertical)  ;; not implemented yet
     (setq evil-snipe-enable-highlight t)
     (setq evil-snipe-enable-incremental-highlight t)))
+
+(cl-defun muki:init-evil-snipe-spacemacs ()
+  (req  'evil-snipe
+    (setq evil-snipe-scope 'whole-buffer
+          evil-snipe-enable-highlight t
+          evil-snipe-enable-incremental-highlight t
+          evil-snipe-enable-half-cursor nil
+          evil-snipe-show-prompt nil
+          evil-snipe-smart-case t)
+    (setq evil-snipe-repeat-scope 'whole-buffer
+          evil-snipe-override-evil t)
+    (add-hook 'prog-mode-hook 'evil-snipe-mode)
+    (add-hook 'text-mode-hook 'evil-snipe-mode)))
 
 (muki:init-evil-snipe)
 
