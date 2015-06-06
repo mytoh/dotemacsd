@@ -43,7 +43,7 @@
     migemo
     ssh-config-mode
     emacs-refactor
-    artbollocks-mode
+    ;; artbollocks-mode
     leerzeichen
     darkroom
     tabula-rasa
@@ -66,7 +66,6 @@
     highlight-defined
     rich-minority
     cat-mode
-    vimrc-mode
     emoji-cheat-sheet
     emoji-cheat-sheet-plus
     olivetti
@@ -163,7 +162,6 @@
     phi-grep
     fill-column-indicator
     ipretty
-    vim-empty-lines-mode
     csharp-mode
     bytecomp-simplify
     bijin-tokei
@@ -249,7 +247,7 @@
     ))
 
 ;;;;; package
-(muki-layer:load-layers 'evil
+(muki-layer:load-layers 'vim
   '(evil-leader
     evil-escape
     evil-surround
@@ -274,7 +272,11 @@
     evil-snipe
     ))
 
-(muki-layer:load-layers 'evil
+(muki-layer:load-layers 'vim
+  '(vim-empty-lines-mode
+    vimrc-mode))
+
+(muki-layer:load-layers 'vim
   '(eww-mode
     image-mode
     paradox-mode

@@ -5,9 +5,9 @@
 ;;;;; vimrc
 (liby 'vimrc-mode
   (command (vimrc-mode) "vimrc-mode")
-  (mode "\\.vim\\'" 'vimrc-mode)
-  (mode "[._]?g?vimrc\\'"  'vimrc-mode)
-  (mode "\\.exrc\\'"  'vimrc-mode))
+  (mode "\\.vim\\'" #'vimrc-mode)
+  (mode "[._]?g?vimrc\\'"  #'vimrc-mode)
+  (mode "\\.exrc\\'"  #'vimrc-mode))
 
 
 ;;; init.el ends here

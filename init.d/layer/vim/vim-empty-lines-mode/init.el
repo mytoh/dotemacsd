@@ -1,7 +1,8 @@
 ;;; init -*- lexical-binding: t; coding: utf-8; -*-
 
 ;;; Code:
-(req 'vim-empty-lines-mode
+(liby 'vim-empty-lines-mode
+  (command (vim-empty-lines-mode) "vim-empty-lines-mode")
   (add-hook 'prog-mode-hook #'vim-empty-lines-mode))
 
 ;;; init.el ends here
