@@ -857,6 +857,10 @@
 (vendle:register "zonuexe/emoji-fontset.el"
                  '(:tag ("font" "emoji" "unicode")))
 (vendle:register "purcell/exec-path-from-shell")
+(vendle:register "myuhe/imgur.el"
+                 '(:tag "imgur" "anything"))
+(vendle:register "gongo/emacs-gimei"
+                 '(:tag ("japanese")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
