@@ -1634,6 +1634,8 @@
 (vendle:fetch "inlinestyle/lifted.el")
 (vendle:fetch "luxbock/spacemacs-luxbock"
               '(:tag ("spacemacs" "evil" "evil-cleverparens")))
+(vendle:fetch "emacsmirror/minibuffer-line"
+              '(:tag ("minibuffer" "timer")))
 
 ;; (vendle:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
