@@ -3,26 +3,23 @@
 ;;; Code:
 
 (cl-defun muki:init-evil-snipe ()
-  (muki:init-evil-snipe-spacemacs))
+  (muki:init-evil-snipe-normal))
 
 (cl-defun muki:init-evil-snipe-normal ()
-  (req 'evil-snipe
-
-    (add-hook 'prog-mode-hook #'evil-snipe-mode)
-    ;; Optional!
-    ;;(evil-snipe-replace-evil) ;; replaces evil-mode's f/F/t/T/;/, with snipe
-    ;; (evil-snipe-enable-nN)    ;; enable repeating with n/N (not implemented)
-
-    ;; not necessary if using (evil-snipe-replace-evil)
-    (setq evil-snipe-repeat-keys t)    ;; enable repeating with s/S
-
-    (setq evil-snipe-enable-highlight t)
-    (setq evil-snipe-enable-incremental-highlight t)
-    ))
+  (req  'evil-snipe
+    (setq evil-snipe-scope 'whole-visible
+          evil-snipe-enable-highlight t
+          evil-snipe-enable-incremental-highlight t
+          evil-snipe-enable-half-cursor nil
+          evil-snipe-show-prompt nil
+          evil-snipe-smart-case t)
+    (setq evil-snipe-repeat-scope 'whole-buffer
+          evil-snipe-override-evil t)
+    (add-hook 'prog-mode-hook 'evil-snipe-mode)
+    (add-hook 'text-mode-hook 'evil-snipe-mode)))
 
 (cl-defun muki:init-evil-snipe-like-vim-seek ()
   (req 'evil-snipe
-
     (setq evil-snipe-scope 'line)
     (setq evil-snipe-repeat-scope 'whole-line)
     (setq evil-snipe-count-scope nil)
