@@ -863,6 +863,9 @@
                  '(:tag ("japanese")))
 (vendle:register "emacs-pe/ssh-modes"
                  '(:tag ("ssh")))
+(vendle:register "sensorflo/adoc-mode"
+                 '(:tag ("asciidoc")
+                   :depends ("sensorflo/markup-faces")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
