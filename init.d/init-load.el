@@ -195,6 +195,7 @@
     focus
     soundcloud
     longlines-jp
+    ssh-modes
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image

@@ -861,6 +861,8 @@
                  '(:tag "imgur" "anything"))
 (vendle:register "gongo/emacs-gimei"
                  '(:tag ("japanese")))
+(vendle:register "emacs-pe/ssh-modes"
+                 '(:tag ("ssh")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
