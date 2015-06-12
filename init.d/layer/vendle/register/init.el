@@ -866,6 +866,8 @@
 (vendle:register "sensorflo/adoc-mode"
                  '(:tag ("asciidoc")
                    :depends ("sensorflo/markup-faces")))
+(vendle:register "syohex/emacs-fontawesome"
+                 '(:tag ("font" "fontawesome" "icon")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
