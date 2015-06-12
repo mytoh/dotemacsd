@@ -123,7 +123,8 @@
 (vendle:register "abo-abo/swiper"
                  '(:tag ("isearch")
                    ;; :depends ("abo-abo/ivy") ; not yet created
-                   :desc "Isearch with an overview. Oh, man! "))
+                   :desc "Isearch with an overview. Oh, man! "
+                   :depends ( "abo-abo/hydra")))
 (vendle:register "abo-abo/swiper-helm"
                  '(:tag ("helm" "search")))
 (vendle:register "emacs-helm/helm-emms"
