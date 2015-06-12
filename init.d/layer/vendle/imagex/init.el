@@ -6,7 +6,7 @@
 (after 'image
     (req 'image+
       (liby 'hydra
-        (defhydra imagex-sticky-binding (global-map "C-x C-l")
+        (defhydra imagex-sticky-binding (image-mode-map "C-x C-l")
           "Manipulating Image"
           ("+" imagex-sticky-zoom-in "zoom in")
           ("-" imagex-sticky-zoom-out "zoom out")
