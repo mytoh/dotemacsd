@@ -88,8 +88,7 @@
         "h" #'helm-alku
         "c" #'helm-alku-program
         "n" #'helm-alku-vihko
-        "ä" #'helm-alku-ääliö
-        "l" #'helm-alku-layer))
+        "ä" #'helm-alku-ääliö))
 
     (liby 'vendle
       (muki:evil-leader-prefix-set-keys 'application-vendle
@@ -153,7 +152,10 @@
 
     (muki:evil-leader-prefix-set-keys 'file
       "f" #'helm-find-files
-      "g" #'helm-ls-git-ls)
+      "g" #'helm-ls-git-ls
+      "s" #'evil-write
+      "eh" #'helm-alku-layer)
+
 
     (muki:evil-leader-prefix-set-keys 'org
       "c" #'org-capture)
