@@ -873,6 +873,8 @@
                  '(:tag ("org" "http")))
 (vendle:register "bastibe/annotate.el"
                  '(:tag ("annotation" "note" "memo" "text-property")))
+(vendle:register "emacsmirror/csv-mode"
+                 '(:tag ("csv")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
