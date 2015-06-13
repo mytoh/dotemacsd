@@ -196,6 +196,7 @@
     soundcloud
     longlines-jp
     ssh-modes
+    csv-mode
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image
