@@ -40,8 +40,7 @@
     (enable-option evil-leader/in-all-states)
 
     (evil-leader/set-key
-        "w" #'evil-write
-      "Q" #'evil-quit-all
+        "Q" #'evil-quit-all
       "q" #'kill-buffer-and-window
       ;; Universal argument ---------------------------------------------------------
       "u" #'universal-argument)
