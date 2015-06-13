@@ -16,12 +16,12 @@
   '(freebsd darwin))
 
 ;;;;; vendle
-(muki-layer:load-layers 'vendle
+(muki-layer:load-layers 'package
   '(boot
     register
     check))
 
-(muki-layer:load-layers 'vendle
+(muki-layer:load-layers 'package
   '(vendle
     diminish))
 
@@ -38,7 +38,7 @@
     orglink
     ))
 
-(muki-layer:load-layers 'vendle
+(muki-layer:load-layers 'package
   '(
     migemo
     ssh-config-mode
@@ -241,7 +241,7 @@
     ))
 
 ;;;; highlight
-(muki-layer:load-layers 'vendle
+(muki-layer:load-layers 'package
   '(
     ;; highlight-symbol
     highlight-thing

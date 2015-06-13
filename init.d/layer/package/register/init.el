@@ -869,6 +869,10 @@
                    :depends ("sensorflo/markup-faces")))
 (vendle:register "syohex/emacs-fontawesome"
                  '(:tag ("font" "fontawesome" "icon")))
+(vendle:register "zweifisch/ob-http"
+                 '(:tag ("org" "http")))
+(vendle:register "bastibe/annotate.el"
+                 '(:tag ("annotation" "note" "memo" "text-property")))
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
