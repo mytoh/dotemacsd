@@ -197,6 +197,8 @@
     longlines-jp
     ssh-modes
     csv-mode
+    fontawesome
+    adoc-mode
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image
