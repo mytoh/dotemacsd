@@ -16,6 +16,7 @@
 
   (enable-mode helm-mode)
   (enable-mode helm-adaptative-mode)
+  (enable-mode helm-push-mark-mode)
 
   (defun muki:helm-set-face ()
     (cl-letf ((background
