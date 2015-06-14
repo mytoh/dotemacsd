@@ -152,7 +152,7 @@
     (muki:evil-leader-prefix-set-keys 'file
       "f" #'helm-find-files
       "g" #'helm-ls-git-ls
-      "s" #'evil-write
+      "w" 'evil-write
       "eh" #'helm-alku-layer)
 
 
