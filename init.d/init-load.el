@@ -199,6 +199,7 @@
     csv-mode
     fontawesome
     adoc-mode
+    creole-mode
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image
