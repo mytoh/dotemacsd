@@ -875,6 +875,7 @@
                  '(:tag ("annotation" "note" "memo" "text-property")))
 (vendle:register "emacsmirror/csv-mode"
                  '(:tag ("csv")))
+(vendle:register "nicferrier/creole-mode")
 
 ;; (vendle:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
