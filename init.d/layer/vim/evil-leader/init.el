@@ -36,7 +36,7 @@
 (cl-defun muki:init-evil-leader ()
   (req 'evil-leader
     (global-evil-leader-mode)
-    (evil-leader/set-leader ",")
+    (evil-leader/set-leader "<SPC>")
     (enable-option evil-leader/in-all-states)
 
     (evil-leader/set-key
