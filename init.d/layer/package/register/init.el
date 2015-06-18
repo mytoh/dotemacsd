@@ -973,6 +973,8 @@
                              "http://mumble.net/~campbell/git/paredit.git"
                              "promethial/paxedit"
                              "Fuco1/smartparens")))
+(vendle:register "lotabout/evil-mc"
+                 '(:tag ("evil" "multiple-cursor")))
 
 ;;;;; org
 (vendle:register "git://orgmode.org/org-mode.git"
@@ -1651,6 +1653,12 @@
               '(:tag ("spacemacs" "evil" "evil-cleverparens")))
 (vendle:fetch "emacsmirror/minibuffer-line"
               '(:tag ("minibuffer" "timer")))
+(vendle:fetch "uwabami/el-get-deb-package"
+              '(:tag ("el-get" "debian")))
+(vendle:fetch "dfeich/org-babel-examples"
+              '(:tag ("org" "org-babel" )))
+(vendle:fetch "renard/o-blog"
+              '(:tag ("org" "blog")))
 
 ;; (vendle:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
