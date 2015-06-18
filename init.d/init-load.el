@@ -191,7 +191,7 @@
     theme-looper
     highlight-parentheses
     column-enforce-mode
-    autobookmarks
+    ;; autobookmarks
     focus
     soundcloud
     longlines-jp
