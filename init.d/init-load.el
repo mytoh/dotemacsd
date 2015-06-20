@@ -135,7 +135,7 @@
     flappymacs
     yamada
     css-eldoc
-    web-beautify
+    ;; web-beautify
     direx
     oniisama
     guide-key
