@@ -1659,6 +1659,8 @@
               '(:tag ("org" "org-babel" )))
 (vendle:fetch "renard/o-blog"
               '(:tag ("org" "blog")))
+(vendle:fetch "tuhdo/tuhdo.github.io"
+              '(:tag ("org" "emacs-tutor")))
 
 ;; (vendle:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
