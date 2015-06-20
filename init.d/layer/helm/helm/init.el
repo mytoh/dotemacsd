@@ -18,6 +18,11 @@
   (enable-mode helm-adaptative-mode)
   (enable-mode helm-push-mark-mode)
 
+  (enable-mode helm-autoresize-mode)
+
+  (setq helm-autoresize-max-height 35)
+  (setq helm-autoresize-min-height 35)
+
   (defun muki:helm-set-face ()
     (cl-letf ((background
                (face-background 'default))
