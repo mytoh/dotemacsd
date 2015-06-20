@@ -49,6 +49,11 @@
 ;; あさきゆめみし　ゑひもせす
 (cl-defun set-japanese-font ()
   (cond ((eq window-system nil) nil)
+        ((font-exists-p "Source Han Code JP")
+         (set-fontset-font nil 'japanese-jisx0208
+                           (font-spec :name  "Source Han Code JP" :size 9 :weight 'normal))
+         (set-fontset-font nil 'han
+                           (font-spec :name  "Source Han Code JP" :size 9 :weight 'light)))
         ((font-exists-p "Ricty Diminished")
          (set-fontset-font nil 'japanese-jisx0208
                            (font-spec :name "Ricty Diminished" )))
@@ -180,6 +185,26 @@
   (set-face-attribute 'variable-pitch nil :family "Myrica M" )
   (set-fontset-font t 'symbol "Symbola" nil 'prepend))
 
+
+(cl-defun set-source-han-code-jp ()
+  ;; [[http://mgi.hatenablog.com/entry/2014/02/11/085108]]
+  (set-fontset-font (frame-parameter nil 'font)
+                    'japanese-jisx0208
+                    (cons  "Source Han Code JP" "iso10646-1"))
+  (set-fontset-font (frame-parameter nil 'font)
+                    'japanese-jisx0212
+                    (cons  "Source Han Code JP" "iso10646-1"))
+  (set-fontset-font (frame-parameter nil 'font)
+                    'katakana-jisx0201
+                    (cons  "Source Han Code JP" "iso10646-1"))
+  (set-fontset-font (frame-parameter nil 'font)
+                    'unicode
+                    (font-spec :name "Source Han Code JP"
+                               :registry  "iso10646-1"))
+  (set-face-attribute 'default nil :family   "Source Han Code JP" :height 70)
+  (set-face-attribute 'variable-pitch nil :family  "Source Han Code JP" )
+  (set-fontset-font t 'symbol "Symbola" nil 'prepend))
+
 (cl-defun muki:set-font (type)
   (cond
     ((cl-equalp type 'bitmap)
@@ -201,8 +226,9 @@
     ;; (set-default-font-size)
     ;; (muki:set-font 'bitmap)
     ;; (set-ricty-font)
-    (set-ricty-diminished-font)
-  ;; (set-myrica-font)
+    ;; (set-ricty-diminished-font)
+    ;; (set-myrica-font)
+    (set-source-han-code-jp)
   )
 
 ;; [[http://nya-0.hatenablog.com/entry/2014/03/17/174309]]
