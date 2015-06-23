@@ -10,9 +10,9 @@
   (require 'helm-config)
 
 
-  (req 'dired-async
-    ;; enable dired-async
-    (enable-mode dired-async-mode))
+  ;; (req 'dired-async
+  ;;   ;; enable dired-async
+  ;;   (enable-mode dired-async-mode))
 
   (enable-mode helm-mode)
   (enable-mode helm-adaptative-mode)
