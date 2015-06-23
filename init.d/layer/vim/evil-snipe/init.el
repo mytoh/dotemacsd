@@ -13,8 +13,7 @@
           evil-snipe-enable-half-cursor nil
           evil-snipe-show-prompt nil
           evil-snipe-smart-case t)
-    (setq evil-snipe-repeat-scope 'whole-buffer
-          evil-snipe-override-evil t)
+    (setq evil-snipe-repeat-scope 'whole-buffer)
 
     (add-hook 'prog-mode-hook 'evil-snipe-mode)
     (add-hook 'text-mode-hook 'evil-snipe-mode)
