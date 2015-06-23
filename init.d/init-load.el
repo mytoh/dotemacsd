@@ -15,14 +15,13 @@
 (muki-layer:load-layers 'system
   '(freebsd darwin))
 
-;;;;; vendle
 (muki-layer:load-layers 'package
   '(boot
     register
     check))
 
 (muki-layer:load-layers 'package
-  '(vendle
+  '(hoarder
     diminish))
 
 (muki-layer:load-layers 'org
@@ -292,7 +291,7 @@
 
 (muki-layer:load-layers 'helm
   '(helm
-    helm-vendle
+    helm-hoarder
     helm-ypv
     helm-alku
     helm-project-buffer

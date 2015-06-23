@@ -6,11 +6,11 @@
 (require 'muki)
 
 ;;;  setup
-(muki:add-to-load-path  "~/huone/projektit/emacs-vendle")
+(muki:add-to-load-path  "~/huone/projektit/emacs-hoarder")
 
-;;;; initialize vendle
-(req 'vendle
-  (cl-letf ((muki:vendle-directory (locate-user-emacs-file "vendle")))
-    (vendle:initialize muki:vendle-directory)))
+;;;; initialize hoarder
+(req 'hoarder
+  (cl-letf ((muki:hoarder-directory (locate-user-emacs-file "hoarder")))
+    (hoarder:initialize muki:hoarder-directory)))
 
 ;;; boot.el ends here

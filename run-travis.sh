@@ -7,12 +7,12 @@ install_dotemacsd() {
     ln -sfv /tmp/dotemacsd /home/travis/.emacs.d
 }
 
-install_vendle() {
-    git clone git://github.com/mytoh/emacs-vendle /home/travis/huone/projektit/emacs-vendle
+install_hoarder() {
+    git clone git://github.com/mytoh/emacs-hoarder /home/travis/huone/projektit/emacs-hoarder
 }
 
 install_dotemacsd
-install_vendle
+install_hoarder
 
 ${EMACS} --version
 ${EMACS} --batch --debug-init --load /home/travis/.emacs.d/init.el

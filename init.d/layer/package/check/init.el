@@ -2,14 +2,14 @@
 
 ;;; Code:
 
-(req 'vendle
+(req 'hoarder
   ;;;; install packages
-  (vendle:check-packages)
+  (hoarder:check-packages)
 
-  (vendle:turn-on-font-lock)
+  (hoarder:turn-on-font-lock)
 
   ;; update plugins
-  ;; (vendle:update-packages)
+  ;; (hoarder:update-packages)
   )
 
 

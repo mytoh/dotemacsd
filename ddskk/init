@@ -103,7 +103,7 @@
 ;; o 補完
 (cl-letf ((jisyo-path (expand-file-name
                        "github.com/tkita/SKK-JISYO/SKK-JISYO.GitHub-emojis"
-                       vendle-directory)))
+                       hoarder-directory)))
   (setq skk-extra-jisyo-file-list
         (cons `(,jisyo-path . utf-8)
               skk-extra-jisyo-file-list))

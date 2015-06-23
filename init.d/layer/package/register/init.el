@@ -1,94 +1,94 @@
-;;; init-vendle-registers -*- lexical-binding: t; coding: utf-8; -*-
+;;; init-hoarder-registers -*- lexical-binding: t; coding: utf-8; -*-
 
 ;;; Code:
 
 ;;;;  register packages
 ;;;;; helm
-(vendle:register "emacs-helm/helm"
+(hoarder:register "emacs-helm/helm"
                  '(:build ("gmake")
                    :depends ("jwiegley/emacs-async")
                    :tag "helm"))
-(vendle:fetch "emacs-helm/helm.wiki"
+(hoarder:fetch "emacs-helm/helm.wiki"
               '(:tag ("helm" "wiki")))
-(vendle:register "thierryvolpiatto/pcomplete-extension")
-(vendle:register "yuutayamada/helm-ag-r"
+(hoarder:register "thierryvolpiatto/pcomplete-extension")
+(hoarder:register "yuutayamada/helm-ag-r"
                  '(:tag ("helm" "ag")))
-(vendle:register "yasuyk/helm-git-grep"
+(hoarder:register "yasuyk/helm-git-grep"
                  '(:tag ("helm" "git")))
-(vendle:register "emacs-helm/helm-migemo"
+(hoarder:register "emacs-helm/helm-migemo"
                  '(:tag ("helm" "migemo")))
-(vendle:register "emacs-helm/helm-ls-git"
+(hoarder:register "emacs-helm/helm-ls-git"
                  '(:tag ("helm" "git")))
-(vendle:register "emacs-helm/helm-cmd-t"
+(hoarder:register "emacs-helm/helm-cmd-t"
                  '(:tag ("helm")))
-(vendle:register "ShingoFukuyama/helm-swoop"
+(hoarder:register "ShingoFukuyama/helm-swoop"
                  '(:tag ("helm")))
-(vendle:register "steckerhalter/helm-google"
+(hoarder:register "steckerhalter/helm-google"
                  '(:tag ("helm" "google")))
-(vendle:register "syohex/emacs-helm-ag"
+(hoarder:register "syohex/emacs-helm-ag"
                  '(:tag ("helm" "ag")))
-(vendle:register "markus1189/helm-hoogle"
+(hoarder:register "markus1189/helm-hoogle"
                  '(:tag ("helm" "haskell")))
-(vendle:register "jixiuf/helm-etags-plus"
+(hoarder:register "jixiuf/helm-etags-plus"
                  '(:tag ("helm")))
-(vendle:register "syohex/emacs-helm-themes"
+(hoarder:register "syohex/emacs-helm-themes"
                  '(:tag ("helm" "theme")))
-(vendle:register "syohex/emacs-helm-open-github"
+(hoarder:register "syohex/emacs-helm-open-github"
                  '(:tag ("helm" "github")
                    :depends ("sigma/gh.el")))
-(vendle:register "istib/helm-mode-manager"
+(hoarder:register "istib/helm-mode-manager"
                  '(:tag ("helm")))
-(vendle:register "tkf/emacs-pinot-search"
+(hoarder:register "tkf/emacs-pinot-search"
                  '(:tag ("helm")))
-(vendle:register "yasuyk/helm-flycheck"
+(hoarder:register "yasuyk/helm-flycheck"
                  '(:tag ("helm" "flycheck")))
-(vendle:register "emacs-helm/helm-descbinds"
+(hoarder:register "emacs-helm/helm-descbinds"
                  '(:tag ("helm")))
-(vendle:register "yasuyk/helm-company"
+(hoarder:register "yasuyk/helm-company"
                  '(:depends ("rejeep/f.el")
                    :tag ("helm" "company")))
-(vendle:register "emacs-helm/helm-dictionary"
+(hoarder:register "emacs-helm/helm-dictionary"
                  '(:tag ("helm")))
-(vendle:register "emacs-helm/helm-recoll"
+(hoarder:register "emacs-helm/helm-recoll"
                  '(:tag ("helm")))
-(vendle:register "mhayashi1120/Emacs-wgrep")
-(vendle:register "ShingoFukuyama/helm-css-scss"
+(hoarder:register "mhayashi1120/Emacs-wgrep")
+(hoarder:register "ShingoFukuyama/helm-css-scss"
                  '(:tag ("helm" "css")))
-(vendle:register "tmalsburg/helm-bibtex"
+(hoarder:register "tmalsburg/helm-bibtex"
                  '(:depends ("joostkremers/ebib"
                              "magnars/s.el"
                              "magnars/dash.el"
                              "rejeep/f.el"
                              "joostkremers/parsebib")
                    :tag ("helm" "bibtex")))
-(vendle:register "k1LoW/helm-dirset"
+(hoarder:register "k1LoW/helm-dirset"
                  '(:depends ("rejeep/f.el"
                              "magnars/s.el"
                              ( "emacs-helm/helm"
                               (:build ("gmake")
                                       :depends ("jwiegley/emacs-async")
                                       :tag "helm")))))
-(vendle:register "pronobis/helm-words"
+(hoarder:register "pronobis/helm-words"
                  '(:depends (( "emacs-helm/helm"
                               (:build ("gmake")
                                       :depends ("jwiegley/emacs-async")
                                       :tag "helm")))
                    :tag ("helm" "dictionary")))
-(vendle:register "emacs-helm/helm-orgcard"
+(hoarder:register "emacs-helm/helm-orgcard"
                  '(:tag ("helm" "org")
                    :depends (( "emacs-helm/helm"
                               (:build ("gmake")
                                       :depends ("jwiegley/emacs-async")
                                       :tag "helm")))))
-(vendle:register "lins05/helm-org-files"
+(hoarder:register "lins05/helm-org-files"
                  '(:tag ("helm" "org")
                    :depends (( "emacs-helm/helm"
                               (:build ("gmake")
                                       :depends ("jwiegley/emacs-async")
                                       :tag "helm")))))
-(vendle:register "abo-abo/helm-org-wiki"
+(hoarder:register "abo-abo/helm-org-wiki"
                  '(:tag ("helm" "org")))
-(vendle:register "csantosb/helm-perso-wiki"
+(hoarder:register "csantosb/helm-perso-wiki"
                  '(:tag ("helm" "wiki" "org")
                    :depends ("git://jblevins.org/git/deft.git"
                              ("bbatsov/projectile"
@@ -99,158 +99,158 @@
                                           (:depends ("cask/epl"))))))
                              "nex3/perspective-el"
                              "Bruce-Connor/names")))
-(vendle:register "yuutayamada/helm-shell-history"
+(hoarder:register "yuutayamada/helm-shell-history"
                  '(:tag ("helm" "term")))
-(vendle:register "david-christiansen/helm-pages"
+(hoarder:register "david-christiansen/helm-pages"
                  '(:tag ("helm")))
-(vendle:register "vanicat/helm-xmms2"
+(hoarder:register "vanicat/helm-xmms2"
                  '(:tag ("helm" "xmms2")))
-(vendle:register "julienXX/helm-lobste.rs"
+(hoarder:register "julienXX/helm-lobste.rs"
                  '(:tag ("helm" "lobste.rs" "news" "web")))
-(vendle:register "syohex/emacs-helm-hackernews"
+(hoarder:register "syohex/emacs-helm-hackernews"
                  '(:tag ("helm" "hackernews" "news" "web")))
-(vendle:register "tetracat/sallet"
+(hoarder:register "tetracat/sallet"
                  '(:tag ("helm")
                    :depends ("lewang/flx"
                              ("magnars/dash.el" ( :compile nil))
                              "magnars/s.el"
                              "jwiegley/emacs-async"
                              "cask/shut-up")))
-(vendle:register "Sliim/helm-github-stars"
+(hoarder:register "Sliim/helm-github-stars"
                  '(:tag ("helm" "github")))
-(vendle:register "ralesi/helm-pt"
+(hoarder:register "ralesi/helm-pt"
                  '(:tag ("helm" "pt")))
-(vendle:register "abo-abo/swiper"
+(hoarder:register "abo-abo/swiper"
                  '(:tag ("isearch")
                    ;; :depends ("abo-abo/ivy") ; not yet created
                    :desc "Isearch with an overview. Oh, man! "
                    :depends ( "abo-abo/hydra")))
-(vendle:register "abo-abo/swiper-helm"
+(hoarder:register "abo-abo/swiper-helm"
                  '(:tag ("helm" "search")))
-(vendle:register "emacs-helm/helm-emms"
+(hoarder:register "emacs-helm/helm-emms"
                  '(:tag ("helm" "emms")))
-(vendle:register "cute-jumper/ace-jump-helm-line"
+(hoarder:register "cute-jumper/ace-jump-helm-line"
                  '(:depends ("abo-abo/ace-window")))
-(vendle:register "shosti/helm-unicode"
+(hoarder:register "shosti/helm-unicode"
                  '(:tag ("helm" "unicode")))
-(vendle:register "jupl/helm-gitignore"
+(hoarder:register "jupl/helm-gitignore"
                  '(:tag ("helm" "git" "gitignore")))
-(vendle:register "xuchunyang/helm-commandlinefu")
-(vendle:register "vapniks/helm-helm-commands")
-;; (vendle:register "michael-heerdegen/helm-browse"
+(hoarder:register "xuchunyang/helm-commandlinefu")
+(hoarder:register "vapniks/helm-helm-commands")
+;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ("helm")
 ;;                    :depends ("michael-heerdegen/iterators.el")))
 
 ;;;;;  general packages
-(vendle:register "magnars/s.el")
-(vendle:register "jonathanchu/emacs-powerline")
-(vendle:register "raugturi/powerline-evil"
+(hoarder:register "magnars/s.el")
+(hoarder:register "jonathanchu/emacs-powerline")
+(hoarder:register "raugturi/powerline-evil"
                  '(:tag ("evil" "mode-line")))
-(vendle:register "milkypostman/powerline"
+(hoarder:register "milkypostman/powerline"
                  '(:tag ("mode-line")))
-(vendle:register "unic0rn/powerline"
+(hoarder:register "unic0rn/powerline"
                  '(:tag ("mode-line")))
-(vendle:register "TeMPOraL/nyan-mode")
-(vendle:register "daimrod/highlight-sexp")
-(vendle:register "m2ym/undohist-el")
-;; (vendle:register "m2ym/emux-el")
-(vendle:register "moriyamahiroshi/seijiseikana-el")
-(vendle:register "kenoss/debug-print")
-;; (vendle:register "emacsmirror/mew")
-(vendle:register "kazu-yamamoto/Mew")
-(vendle:register "ober/zone-matrix")
-(vendle:register "wwwjfy/emacs-fish"
+(hoarder:register "TeMPOraL/nyan-mode")
+(hoarder:register "daimrod/highlight-sexp")
+(hoarder:register "m2ym/undohist-el")
+;; (hoarder:register "m2ym/emux-el")
+(hoarder:register "moriyamahiroshi/seijiseikana-el")
+(hoarder:register "kenoss/debug-print")
+;; (hoarder:register "emacsmirror/mew")
+(hoarder:register "kazu-yamamoto/Mew")
+(hoarder:register "ober/zone-matrix")
+(hoarder:register "wwwjfy/emacs-fish"
                  '(:tag "fish"))
-(vendle:register "jramnani/fish-mode"
+(hoarder:register "jramnani/fish-mode"
                  '(:tag "fish"))
-(vendle:register "d12frosted/fish-mode"
+(hoarder:register "d12frosted/fish-mode"
                  '(:tag "fish"))
-(vendle:register "thierryvolpiatto/emacs-bmk-ext")
-(vendle:register "kawabata/aozora-view")
-(vendle:register "tomoya/fuzzyjump.el")
-(vendle:register "omouse/emacs-sos")
-(vendle:register "davexunit/yon-chan")
-(vendle:register "git://git.sv.gnu.org/emms.git"
+(hoarder:register "thierryvolpiatto/emacs-bmk-ext")
+(hoarder:register "kawabata/aozora-view")
+(hoarder:register "tomoya/fuzzyjump.el")
+(hoarder:register "omouse/emacs-sos")
+(hoarder:register "davexunit/yon-chan")
+(hoarder:register "git://git.sv.gnu.org/emms.git"
                  '(:name "emms" :load-path "lisp"
                    :build ("gmake lisp docs emms-print-metadata")
                    :tag "emms"))
-(vendle:register "fgallina/emms-info-mediainfo"
+(hoarder:register "fgallina/emms-info-mediainfo"
                  '(:tag "emms"))
-(vendle:register "osener/emms-soundcloud"
+(hoarder:register "osener/emms-soundcloud"
                  '(:tag ("emms" "soundcloud")))
-(vendle:register "vapniks/emms-mark-ext"
+(hoarder:register "vapniks/emms-mark-ext"
                  '(:tag ("emms")
                    :desc "Extra functions for tagging tracks in emms mode in emacs. "))
-(vendle:register "dochang/emms-player-mpv"
+(hoarder:register "dochang/emms-player-mpv"
                  '(:tag ("emms" "mpv")))
-(vendle:register "momomo5717/emms-player-mpv-volume"
+(hoarder:register "momomo5717/emms-player-mpv-volume"
                  '(:tag ("emms" "mpv" )))
-(vendle:register "alezost/emms-status.el"
+(hoarder:register "alezost/emms-status.el"
                  '(:tag ("emms")))
-(vendle:register "r0man/soundklaus.el"
+(hoarder:register "r0man/soundklaus.el"
                  '(:depends (("magnars/dash.el" ( :compile nil))
                              "magnars/s.el"
                              "kiwanami/emacs-deferred")
                    :tag "soundcloud"))
 
-(vendle:register "magit/git-modes"
+(hoarder:register "magit/git-modes"
                  '(:tag "git"))
-(vendle:register "magit/magit"
+(hoarder:register "magit/magit"
                  '(:build ("gmake lisp docs")
                    :info "."
                    :tag "git"))
-(vendle:register "magit/orgit"
+(hoarder:register "magit/orgit"
                  '(:depends (("magit/magit"
                               (:build ("gmake lisp docs")
                                       :info "."
                                       :tag ("git" )))
                              ("magnars/dash.el" ( :compile nil)))
                    :tag ("git" "org" "magit")))
-(vendle:register "mickesv/magit-overview"
+(hoarder:register "mickesv/magit-overview"
                  '(:tag ("magit")
                    :depends (("magit/magit"
                               (:build ("gmake lisp docs")
                                       :info "."
                                       :tag "git")))))
-(vendle:register "magit/magit-filenotify"
+(hoarder:register "magit/magit-filenotify"
                  '(:tag ("magit")
                    :depends (("magit/magit"
                               (:build ("gmake lisp docs") :info "." :tag "git")))))
-(vendle:register "dholm/magit-idle-breadcrumbs"
+(hoarder:register "dholm/magit-idle-breadcrumbs"
                  '(:tag ("magit")))
-(vendle:register "YoungFrog/git-overview"
+(hoarder:register "YoungFrog/git-overview"
                  '(:tag ("git" "org")))
-(vendle:register "company-mode/company-mode"
+(hoarder:register "company-mode/company-mode"
                  '(:tag "company"))
-(vendle:register "proofit404/company-edbi"
+(hoarder:register "proofit404/company-edbi"
                  '(:tag "company"
                    :depends ( "company-mode/company-mode")))
-(vendle:register "vspinu/company-math"
+(hoarder:register "vspinu/company-math"
                  '(:tag "company"
                    :depends ( "company-mode/company-mode"
                              "vspinu/symbols.el")))
-(vendle:register "iquiw/company-restclient"
+(hoarder:register "iquiw/company-restclient"
                  '(:tag "company"
                    :depends ( "company-mode/company-mode"
                              ("for-GET/know-your-http-well"
                               (:load-path "emacs")))))
-(vendle:register "expez/company-quickhelp"
+(hoarder:register "expez/company-quickhelp"
                  '(:tag ("company")
                    :depends ("pitkali/pos-tip")))
-(vendle:register "syohex/emacs-git-gutter"
+(hoarder:register "syohex/emacs-git-gutter"
                  '(:tag "git"))
-(vendle:register "syohex/emacs-git-gutter-fringe"
+(hoarder:register "syohex/emacs-git-gutter-fringe"
                  '(:tag ("git")
                    :depends ( "syohex/emacs-git-gutter"
                              "nschum/fringe-helper.el")))
-(vendle:register "nonsequitur/git-gutter-fringe-plus"
+(hoarder:register "nonsequitur/git-gutter-fringe-plus"
                  '(:tag ("git")
                    :depends ( "nonsequitur/git-gutter-plus"
                              "nschum/fringe-helper.el")))
-(vendle:register "syohex/emacs-rebuildfm"
+(hoarder:register "syohex/emacs-rebuildfm"
                  '(:tag "radio"))
-(vendle:register "syohex/emacs-anzu" '(:compile nil))
-(vendle:register "syohex/emacs-evil-anzu"
+(hoarder:register "syohex/emacs-anzu" '(:compile nil))
+(hoarder:register "syohex/emacs-evil-anzu"
                  '(:tag ("evil" "anzu")
                    :depends (("syohex/emacs-anzu" (:compile nil))
                              ( "https://gitorious.org/evil/evil.git"
@@ -259,179 +259,179 @@
                                       :depends ("emacsmirror/goto-chg"
                                                 "http://www.dr-qubit.org/git/undo-tree.git")
                                       :tag "evil")))))
-(vendle:register "Fuco1/smartparens"
+(hoarder:register "Fuco1/smartparens"
                  '(:compile nil :depends (("magnars/dash.el" ( :compile nil)))))
-(vendle:register "magnars/expand-region.el")
-(vendle:register "magnars/multiple-cursors.el")
-(vendle:register "knu/mc-extras.el"
+(hoarder:register "magnars/expand-region.el")
+(hoarder:register "magnars/multiple-cursors.el")
+(hoarder:register "knu/mc-extras.el"
                  '(:tag ("multiple-cursors")))
-(vendle:register "haskell/haskell-mode"
+(hoarder:register "haskell/haskell-mode"
                  '(:tag "haskell"
                    :compile nil
                    :build ("gmake clean all")))
-(vendle:register "nilcons/hi2"
+(hoarder:register "nilcons/hi2"
                  '(:tag "haskell"))
-(vendle:register "kazu-yamamoto/ghc-mod"
+(hoarder:register "kazu-yamamoto/ghc-mod"
                  '(:tag ("ghc" "haskell")
                    :load-path "elisp"))
-(vendle:register "Bruce-Connor/paradox"
+(hoarder:register "Bruce-Connor/paradox"
                  '(:depends ("magnars/dash.el"
                              "jwiegley/emacs-async"
                              "Malabarba/spinner.el")))
-(vendle:register "Bruce-Connor/aggressive-indent-mode"
+(hoarder:register "Bruce-Connor/aggressive-indent-mode"
                  '(:depends ( "Bruce-Connor/names")))
-(vendle:register "Bruce-Connor/rich-minority")
-(vendle:register "steckerhalter/google-el")
-(vendle:register "daemianmack/magit-cheatsheet"
+(hoarder:register "Bruce-Connor/rich-minority")
+(hoarder:register "steckerhalter/google-el")
+(hoarder:register "daemianmack/magit-cheatsheet"
                  '(:tag "magit"))
-(vendle:register "re5et/itail")
-(vendle:register "syohex/emacs-quickrun")
-(vendle:register "fxbois/web-mode" '(:compile nil))
-(vendle:register "emacsmirror/auto-highlight-symbol")
-(vendle:register "nschum/highlight-symbol.el")
-(vendle:register "emacsmirror/rainbow-mode")
-(vendle:register "skeeto/elfeed"
+(hoarder:register "re5et/itail")
+(hoarder:register "syohex/emacs-quickrun")
+(hoarder:register "fxbois/web-mode" '(:compile nil))
+(hoarder:register "emacsmirror/auto-highlight-symbol")
+(hoarder:register "nschum/highlight-symbol.el")
+(hoarder:register "emacsmirror/rainbow-mode")
+(hoarder:register "skeeto/elfeed"
                  '(:tag "rss"))
-(vendle:register "remyhonig/elfeed-org"
+(hoarder:register "remyhonig/elfeed-org"
                  '(:depends ("skeeto/elfeed")
                    :tag ("org" "rss")))
-(vendle:register "zk-phi/spray")
-(vendle:register "dominikh/go-mode.el")
-(vendle:register "immerrr/lua-mode")
-(vendle:register "daic-h/emacs-rotate")
-(vendle:register "pidu/git-timemachine")
-(vendle:register "k-talo/smooth-scroll.el")
-(vendle:register "m2ym/yascroll-el")
-(vendle:register "emacs-jp/migemo")
-(vendle:register "taksatou/flappymacs")
-(vendle:register "gongo/yamada-el")
-(vendle:register "jiyoo/flyparens")
-(vendle:register "flycheck/flycheck"
+(hoarder:register "zk-phi/spray")
+(hoarder:register "dominikh/go-mode.el")
+(hoarder:register "immerrr/lua-mode")
+(hoarder:register "daic-h/emacs-rotate")
+(hoarder:register "pidu/git-timemachine")
+(hoarder:register "k-talo/smooth-scroll.el")
+(hoarder:register "m2ym/yascroll-el")
+(hoarder:register "emacs-jp/migemo")
+(hoarder:register "taksatou/flappymacs")
+(hoarder:register "gongo/yamada-el")
+(hoarder:register "jiyoo/flyparens")
+(hoarder:register "flycheck/flycheck"
                  '(:depends ("magnars/dash.el"
                              "cask/shut-up")
                    :info "."))
-(vendle:register "flycheck/flycheck-pos-tip"
+(hoarder:register "flycheck/flycheck-pos-tip"
                  '(:depends ("auto-complete/popup-el")))
-(vendle:register "purcell/flycheck-package"
+(hoarder:register "purcell/flycheck-package"
                  '(:tag ("flycheck")))
-(vendle:register "zenozeng/css-eldoc")
-(vendle:register "yasuyk/web-beautify")
-(vendle:register "mhayashi1120/Emacs-slideview")
-(vendle:register "mhayashi1120/Emacs-imagex")
-(vendle:register "mhayashi1120/Emacs-image-diredx"
+(hoarder:register "zenozeng/css-eldoc")
+(hoarder:register "yasuyk/web-beautify")
+(hoarder:register "mhayashi1120/Emacs-slideview")
+(hoarder:register "mhayashi1120/Emacs-imagex")
+(hoarder:register "mhayashi1120/Emacs-image-diredx"
                  '(:tag ("dired" "image")))
-(vendle:register "kiwanami/emacs-window-manager"
+(hoarder:register "kiwanami/emacs-window-manager"
                  '(:depends ("kiwanami/emacs-window-layout")))
-(vendle:register "m2ym/direx-el"
+(hoarder:register "m2ym/direx-el"
                  '(:depends ("m2ym/popwin-el")))
-(vendle:register "aki2o/e2wm-direx"
+(hoarder:register "aki2o/e2wm-direx"
                  '(:depends ("kiwanami/emacs-window-manager"
                              "m2ym/direx-el")))
-(vendle:register "yu-i9/oniisama")
-(vendle:register "nicferrier/emacs-web"
+(hoarder:register "yu-i9/oniisama")
+(hoarder:register "nicferrier/emacs-web"
                  '(:depends ("magnars/dash.el"
                              "magnars/s.el")))
-(vendle:register "nicferrier/elnode"
+(hoarder:register "nicferrier/elnode"
                  '(:depends ("nicferrier/emacs-fakir"
                              "nicferrier/emacs-kv"
                              "nicferrier/emacs-db"
                              "nicferrier/emacs-noflet"
                              )))
-(vendle:register "nicferrier/emacs-web"
+(hoarder:register "nicferrier/emacs-web"
                  '(:depends ("nicferrier/elnode")))
-(vendle:register "syohex/emacs-eew")
-(vendle:register "escherdragon/sunrise-commander"
+(hoarder:register "syohex/emacs-eew")
+(hoarder:register "escherdragon/sunrise-commander"
                  '(:compile nil))
-;; (vendle:register "http://git.gnus.org/gnus.git"
+;; (hoarder:register "http://git.gnus.org/gnus.git"
 ;;                  '(:build ("./configure" "gmake")
 ;;                    :load-path ("lisp" "contrib")))
-(vendle:register "dholm/tabbar")
-;;(vendle:register "aki2o/guide-key-tip"
+(hoarder:register "dholm/tabbar")
+;;(hoarder:register "aki2o/guide-key-tip"
 ;;                 '(:depends ("kbkbkbkb1/guide-key"
 ;;                          "emacsmirror/pos-tip")))
-(vendle:register "clojure-emacs/clojure-mode")
-(vendle:register "Fanael/rainbow-delimiters")
-(vendle:register "zk-phi/highlight-stages")
-(vendle:register "zk-phi/indent-guide")
-(vendle:register "jschaf/emacs-lorem-ipsum")
-(vendle:register "remyferre/comment-dwim-2")
-(vendle:register "capitaomorte/sly"
+(hoarder:register "clojure-emacs/clojure-mode")
+(hoarder:register "Fanael/rainbow-delimiters")
+(hoarder:register "zk-phi/highlight-stages")
+(hoarder:register "zk-phi/indent-guide")
+(hoarder:register "jschaf/emacs-lorem-ipsum")
+(hoarder:register "remyferre/comment-dwim-2")
+(hoarder:register "capitaomorte/sly"
                  '(:build ("gmake compile contrib-compile")))
-(vendle:register "capitaomorte/sly-company"
+(hoarder:register "capitaomorte/sly-company"
                  '(:tag ("common_lisp" "completion" "company" "sly")))
-(vendle:register "PuercoPop/sly-repl-ansi-color"
+(hoarder:register "PuercoPop/sly-repl-ansi-color"
                  '(:tag ("sly")))
-(vendle:register "hayamiz/twittering-mode"
+(hoarder:register "hayamiz/twittering-mode"
                  '(:tag ("twitter")))
-(vendle:register "mhayashi1120/Emacs-twittering-stream"
+(hoarder:register "mhayashi1120/Emacs-twittering-stream"
                  '(:tag ("twitter")))
-(vendle:register "defunkt/coffee-mode")
-(vendle:register "fbkante/recycle")
-(vendle:register "kawabata/ids-edit")
-(vendle:register "gbalats/autodisass-llvm-bitcode")
-(vendle:register "sachac/artbollocks-mode")
-(vendle:register "alpaker/Fill-Column-Indicator"
+(hoarder:register "defunkt/coffee-mode")
+(hoarder:register "fbkante/recycle")
+(hoarder:register "kawabata/ids-edit")
+(hoarder:register "gbalats/autodisass-llvm-bitcode")
+(hoarder:register "sachac/artbollocks-mode")
+(hoarder:register "alpaker/Fill-Column-Indicator"
                  '(:desc "Graphically indicate the fill column"))
-(vendle:register "tungd/color-theme-approximate")
-(vendle:register "http://www.dr-qubit.org/git/undo-tree.git")
-(vendle:register "Bruce-Connor/emacs-google-this")
-(vendle:register "roman/golden-ratio.el")
-(vendle:register "winterTTr/ace-jump-mode" )
-(vendle:register "ieure/nssh-el")
-(vendle:register "mhayashi1120/japanlaw.el")
-(vendle:register "roman/navorski.el"
+(hoarder:register "tungd/color-theme-approximate")
+(hoarder:register "http://www.dr-qubit.org/git/undo-tree.git")
+(hoarder:register "Bruce-Connor/emacs-google-this")
+(hoarder:register "roman/golden-ratio.el")
+(hoarder:register "winterTTr/ace-jump-mode" )
+(hoarder:register "ieure/nssh-el")
+(hoarder:register "mhayashi1120/japanlaw.el")
+(hoarder:register "roman/navorski.el"
                  '(:depends ("magnars/s.el"
                              ("magnars/dash.el" ( :compile nil))
                              "emacsmirror/multi-term")))
-(vendle:register "febuiles/lyricwiki.el")
-(vendle:register "sabof/svg-mode-line-themes"
+(hoarder:register "febuiles/lyricwiki.el")
+(hoarder:register "sabof/svg-mode-line-themes"
                  '(:depends ("philjackson/xmlgen")))
-(vendle:register "naota/navi2ch"
+(hoarder:register "naota/navi2ch"
                  '(:build ("./configure" "gmake")))
-(vendle:register "purcell/elisp-slime-nav")
-(vendle:register "gcr/tumblesocks"
+(hoarder:register "purcell/elisp-slime-nav")
+(hoarder:register "gcr/tumblesocks"
                  '(:depends ( "psanford/emacs-oauth"
                              "git://jblevins.org/git/markdown-mode.git"
                              "emacsmirror/htmlize")
                    :tag "tumblr"))
-(vendle:register "thomblake/js3-mode"
+(hoarder:register "thomblake/js3-mode"
                  '(:tag "javascript"))
-(vendle:register "mooz/js2-mode"
+(hoarder:register "mooz/js2-mode"
                  '(:tag "javascript"))
-(vendle:register "jd/google-maps.el")
-(vendle:register "atykhonov/google-translate")
-(vendle:register "lateau/charmap")
-(vendle:register "bling/pt.el")
-(vendle:register "camdez/goto-last-change.el")
-(vendle:register "dimitri/switch-window")
-(vendle:register "rnkn/olivetti")
-(vendle:register "emacsmirror/diminish")
-(vendle:register "ShingoFukuyama/emacs-emoji-cheat-sheet"
+(hoarder:register "jd/google-maps.el")
+(hoarder:register "atykhonov/google-translate")
+(hoarder:register "lateau/charmap")
+(hoarder:register "bling/pt.el")
+(hoarder:register "camdez/goto-last-change.el")
+(hoarder:register "dimitri/switch-window")
+(hoarder:register "rnkn/olivetti")
+(hoarder:register "emacsmirror/diminish")
+(hoarder:register "ShingoFukuyama/emacs-emoji-cheat-sheet"
                  '(:tag "emoji"))
-(vendle:register "syl20bnr/emacs-emoji-cheat-sheet-plus"
+(hoarder:register "syl20bnr/emacs-emoji-cheat-sheet-plus"
                  '(:tag "emoji"))
-(vendle:register "antonj/Highlight-Indentation-for-Emacs")
-(vendle:register "mcandre/vimrc-mode" '(:tag "vim"))
-(vendle:register "victorhge/iedit")
-(vendle:register "gaudecker/mip-mode")
-(vendle:register "mugijiru/cat-mode")
-(vendle:register "syl20bnr/vi-tilde-fringe"
+(hoarder:register "antonj/Highlight-Indentation-for-Emacs")
+(hoarder:register "mcandre/vimrc-mode" '(:tag "vim"))
+(hoarder:register "victorhge/iedit")
+(hoarder:register "gaudecker/mip-mode")
+(hoarder:register "mugijiru/cat-mode")
+(hoarder:register "syl20bnr/vi-tilde-fringe"
                  '(:tag "vi"))
-(vendle:register "jmickelin/vim-empty-lines-mode"
+(hoarder:register "jmickelin/vim-empty-lines-mode"
                  '(:tag "vim"
                    :desc " Vim-like empty line indicator at end of files for Emacs. "))
-(vendle:register "Fanael/highlight-defined")
-(vendle:register "Bruce-Connor/conkeror-minor-mode")
-(vendle:register "larsmagne/movie.el"
+(hoarder:register "Fanael/highlight-defined")
+(hoarder:register "Bruce-Connor/conkeror-minor-mode")
+(hoarder:register "larsmagne/movie.el"
                  '(:depends ("larsmagne/pvr.el"
                              "larsmagne/imdb.el")
                    :desc "http://lars.ingebrigtsen.no/2011/04/12/emacs-movie-browser" ))
 ;; csid make eww unusable because of dom.el
-;; (vendle:register "larsmagne/csid"
+;; (hoarder:register "larsmagne/csid"
 ;;                  '(:desc "http://lars.ingebrigtsen.no/2013/09/crowdsourcing-is-dead.html"))
-(vendle:register "gregsexton/httprepl.el"
+(hoarder:register "gregsexton/httprepl.el"
                  '(:tag ("http" "repl")))
-(vendle:register "nicferrier/emacs-twaddle"
+(hoarder:register "nicferrier/emacs-twaddle"
                  '(:tag ("twitter")
                    :depends ("VincentToups/shadchen-el"
                              "nicferrier/emacs-kv"
@@ -439,111 +439,111 @@
                              "nicferrier/emacs-web"
                              "nicferrier/emacs-noflet"
                              "nicferrier/elnode")))
-;; (vendle:register "https://bitbucket.org/ukaszg/aria2.git"
+;; (hoarder:register "https://bitbucket.org/ukaszg/aria2.git"
 ;;                  '(:tag "aria2" ))
-(vendle:register "m00natic/eww-lnum"
+(hoarder:register "m00natic/eww-lnum"
                  '(:tag "eww"))
-(vendle:register "yoshiki/yaml-mode")
-(vendle:register "ijp/mbe.el")
-(vendle:register "emacsmirror/info-plus" )
-(vendle:register "kaihaosw/eshell-prompt-extras"
+(hoarder:register "yoshiki/yaml-mode")
+(hoarder:register "ijp/mbe.el")
+(hoarder:register "emacsmirror/info-plus" )
+(hoarder:register "kaihaosw/eshell-prompt-extras"
                  '(:tag "eshell"))
-(vendle:register "yuutayamada/eshell-better-prompt"
+(hoarder:register "yuutayamada/eshell-better-prompt"
                  '(:tag "eshell"))
-(vendle:register "syohex/emacs-eshellutil"
+(hoarder:register "syohex/emacs-eshellutil"
                  '(:tag ("eshell")))
-(vendle:register "syohex/emacs-smeargle"
+(hoarder:register "syohex/emacs-smeargle"
                  '(:tag ("git" "highlight" )))
-(vendle:register "syohex/emacs-git-messenger"
+(hoarder:register "syohex/emacs-git-messenger"
                  '(:tag ("git")
                    :depends ("auto-complete/popup-el")))
-(vendle:register "abo-abo/ace-link"
+(hoarder:register "abo-abo/ace-link"
                  '(:depends ( "winterTTr/ace-jump-mode"
                              "nicferrier/emacs-noflet")))
-(vendle:register "kenoss/erfi"
+(hoarder:register "kenoss/erfi"
                  '(:tag ("scheme" "srfi")))
-(vendle:register "nicferrier/eshell-manual"
+(hoarder:register "nicferrier/eshell-manual"
                  '(:load-path ("dist")
                    :build ("gmake")
                    :info "dist"
                    :tag "eshell"))
-(vendle:register "jschaf/esup")
-(vendle:register "vermiculus/sx.el"
+(hoarder:register "jschaf/esup")
+(hoarder:register "vermiculus/sx.el"
                  '(:depends ("git://jblevins.org/git/markdown-mode.git")))
-(vendle:register "nlamirault/emacs-travis"
+(hoarder:register "nlamirault/emacs-travis"
                  '(:depends ( "magnars/s.el"
                              ("magnars/dash.el" ( :compile nil))
                              ( "lunaryorn/pkg-info.el"
                               (:depends ("cask/epl")))
                              "tkf/emacs-request")
                    :tag ("travis")))
-(vendle:register "aJchemist/linkmap.el")
-(vendle:register "alezost/mana.el"
+(hoarder:register "aJchemist/linkmap.el")
+(hoarder:register "alezost/mana.el"
                  '(:tag ("manaplus")))
-(vendle:register "ichibeikatura/nipposi")
-(vendle:register "clarete/hackernews.el"
+(hoarder:register "ichibeikatura/nipposi")
+(hoarder:register "clarete/hackernews.el"
                  '(:tag ("hackernews")))
-(vendle:register "c41x/hnr.el"
+(hoarder:register "c41x/hnr.el"
                  '(:tag ("hackernews")))
-(vendle:register "kkholst/SuperMan"
+(hoarder:register "kkholst/SuperMan"
                  '(:tag ("org")
                    :load-path ("lisp")))
-(vendle:register "jacksonrayhamilton/context-coloring"
+(hoarder:register "jacksonrayhamilton/context-coloring"
                  '(:tag ("javascript")
                    :build ("npm install")))
-(vendle:register "emacsattic/spaces")
-(vendle:register "jeremy-compostella/project-manager"
+(hoarder:register "emacsattic/spaces")
+(hoarder:register "jeremy-compostella/project-manager"
                  '(:tag ("project")))
-(vendle:register "Fuco1/better-jump"
+(hoarder:register "Fuco1/better-jump"
                  '(:tag ("ace-jump")
                    :depends ("ShingoFukuyama/ov.el")))
-(vendle:register "Fuco1/free-keys")
-(vendle:register "Fuco1/banana.el"
+(hoarder:register "Fuco1/free-keys")
+(hoarder:register "Fuco1/banana.el"
                  '(:tag ("monad")))
-(vendle:register "josteink/csharp-mode"
+(hoarder:register "josteink/csharp-mode"
                  '(:tag ("C#")
                    :compile nil))
-(vendle:register "sensorflo/sln-mode")
-(vendle:register "Bruce-Connor/camcorder.el"
+(hoarder:register "sensorflo/sln-mode")
+(hoarder:register "Bruce-Connor/camcorder.el"
                  '(:tag ("screencast")
                    :depends ("Bruce-Connor/names")))
-(vendle:register "matthewlmcclure/dircmp-mode")
-(vendle:register "agpchil/url-preview.el"
+(hoarder:register "matthewlmcclure/dircmp-mode")
+(hoarder:register "agpchil/url-preview.el"
                  '(:depends (("magnars/dash.el" ( :compile nil)))))
-(vendle:register "emacsfodder/kurecolor"
+(hoarder:register "emacsfodder/kurecolor"
                  '(:depends ("magnars/s.el")))
-(vendle:register "cmpitg/emnode")
-(vendle:register "wasamasa/shackle"
+(hoarder:register "cmpitg/emnode")
+(hoarder:register "wasamasa/shackle"
                  '(:compile nil))
-(vendle:register "sabof/stripe-buffer")
-(vendle:register "chrisbarrett/skeletor.el"
+(hoarder:register "sabof/stripe-buffer")
+(hoarder:register "chrisbarrett/skeletor.el"
                  '(:build ("gmake")))
-(vendle:register "promethial/paxedit"
+(hoarder:register "promethial/paxedit"
                  '(:depends ("http://mumble.net/~campbell/git/paredit.git")))
-(vendle:register "tlh/workgroups.el"
+(hoarder:register "tlh/workgroups.el"
                  '(:tag ("window")))
-(vendle:register "wasamasa/eyebrowse"
+(hoarder:register "wasamasa/eyebrowse"
                  '(:depends (("magnars/dash.el" ( :compile nil)))))
-(vendle:register "idomagal/Tabula-Rasa"
+(hoarder:register "idomagal/Tabula-Rasa"
                  '(:tag ("writing" "distraction free")))
-(vendle:register "capitaomorte/darkroom"
+(hoarder:register "capitaomorte/darkroom"
                  '(:tag ("writing" "distraction free")))
-(vendle:register "vspinu/image-transform"
+(hoarder:register "vspinu/image-transform"
                  '(:tag "image"
                    :compile nil))
-(vendle:register "gongo/json-reformat"
+(hoarder:register "gongo/json-reformat"
                  '(:tag "json"
                    :depends ("sviridov/undercover.el")))
-(vendle:register "joshwnj/json-mode"
+(hoarder:register "joshwnj/json-mode"
                  '(:tag "json"
                    :depends ("Sterlingg/json-snatcher"
                              "gongo/json-reformat")))
-(vendle:register "hchbaw/bqlist-lock.el")
-(vendle:register "fgeller/leerzeichen.el"
+(hoarder:register "hchbaw/bqlist-lock.el")
+(hoarder:register "fgeller/leerzeichen.el"
                  '(:tag ("whitespace" "highlight")))
-(vendle:register "abo-abo/anon"
+(hoarder:register "abo-abo/anon"
                  '(:tag ("namespace")))
-(vendle:register "chrisbarrett/emacs-refactor"
+(hoarder:register "chrisbarrett/emacs-refactor"
                  '(:tag ("refactoring")
                    :depends (("magnars/dash.el" (:compile nil))
                              "rolandwalker/list-utils"
@@ -557,211 +557,211 @@
                                           (:depends ("cask/epl"))))))
                              "emacsmirror/redshank"
                              "magnars/s.el")))
-(vendle:register "rakete/pixel-mode"
+(hoarder:register "rakete/pixel-mode"
                  '(:tag ("pixel_art")))
-(vendle:register "yuttie/initchart")
-(vendle:register "bburns/clipmon")
-(vendle:register "purcell/whitespace-cleanup-mode"
+(hoarder:register "yuttie/initchart")
+(hoarder:register "bburns/clipmon")
+(hoarder:register "purcell/whitespace-cleanup-mode"
                  '(:tag ("whitespace")))
-(vendle:register "emacsmirror/emoticons")
-(vendle:register "zonuexe/pixiv-novel-mode.el")
-(vendle:register "jhgorrell/ssh-config-mode-el"
+(hoarder:register "emacsmirror/emoticons")
+(hoarder:register "zonuexe/pixiv-novel-mode.el")
+(hoarder:register "jhgorrell/ssh-config-mode-el"
                  '(:tag "ssh"))
-(vendle:register "dtaht/comics-el"
+(hoarder:register "dtaht/comics-el"
                  '(:tag ("comic")))
-(vendle:register "kljohann/clang-format.el"
+(hoarder:register "kljohann/clang-format.el"
                  '(:tag "clang"))
-(vendle:register "saintaardvark/meleme"
+(hoarder:register "saintaardvark/meleme"
                  '(:tag ("mode-line")))
-(vendle:register "10sr/shell-split-string-el"
+(hoarder:register "10sr/shell-split-string-el"
                  '(:tag "shell"))
-(vendle:register "kiwanami/emacs-kovlive"
+(hoarder:register "kiwanami/emacs-kovlive"
                  '(:depends ("kiwanami/emacs-deferred")))
-(vendle:register "ieure/ssh-el"
+(hoarder:register "ieure/ssh-el"
                  '(:tag "ssh"))
-(vendle:register "tarsius/hl-todo"
+(hoarder:register "tarsius/hl-todo"
                  '(:tag ("highlight" "font-lock")))
-(vendle:register "ifree/emacs-code-playground")
-(vendle:register "ikirill/hl-indent"
+(hoarder:register "ifree/emacs-code-playground")
+(hoarder:register "ikirill/hl-indent"
                  '(:tag ("highlight" "indentation")))
-(vendle:register "AeroFengBlade/typewriter-mode")
-(vendle:register "ahyatt/emacs-websocket"
+(hoarder:register "AeroFengBlade/typewriter-mode")
+(hoarder:register "ahyatt/emacs-websocket"
                  '(:tag ("websocket")))
-(vendle:register "syohex/emacs-realtime-markdown-viewer"
+(hoarder:register "syohex/emacs-realtime-markdown-viewer"
                  '(:tag "markdown"))
-(vendle:register "jscheid/kite")
-(vendle:register "wasamasa/form-feed")
-(vendle:register "emacsmirror/aumix-mode"
+(hoarder:register "jscheid/kite")
+(hoarder:register "wasamasa/form-feed")
+(hoarder:register "emacsmirror/aumix-mode"
                  '(:tag ("aumix" "audio")))
-(vendle:register "kuanyui/writing-utils.el"
+(hoarder:register "kuanyui/writing-utils.el"
                  '(:tag ("writing")))
-(vendle:register "joodland/bm"
+(hoarder:register "joodland/bm"
                  '(:tag ("bookmark")))
-(vendle:register "mhayashi1120/Emacs-image-archive"
+(hoarder:register "mhayashi1120/Emacs-image-archive"
                  '(:tag ("image" "archive")))
-(vendle:register "zk-phi/download-region"
+(hoarder:register "zk-phi/download-region"
                  '(:tag ("download")
                    :desc "simple in-buffer download manager for Emacs"))
-(vendle:register "knu/dired-fdclone.el"
+(hoarder:register "knu/dired-fdclone.el"
                  '(:tag ("dired" "fclone")))
-(vendle:register "Fuco1/dired-hacks")
-(vendle:register "syohex/emacs-literate-coffee-mode"
+(hoarder:register "Fuco1/dired-hacks")
+(hoarder:register "syohex/emacs-literate-coffee-mode"
                  '(:depends ( "defunkt/coffee-mode")
                    :tag ("coffeescript")))
-(vendle:register "tarsius/elx"
+(hoarder:register "tarsius/elx"
                  '(:desc "Extract information from Emacs Lisp libraries"))
-(vendle:register "thisirs/state"
+(hoarder:register "thisirs/state"
                  '(:tag ("workspace")
                    :desc "Quick navigation between workspaces in emacs"))
-(vendle:register "lunaryorn/fancy-battery.el"
+(hoarder:register "lunaryorn/fancy-battery.el"
                  '(:tag ("appearance" "mode-line")))
-(vendle:register "csrhodes/iplayer-el"
+(hoarder:register "csrhodes/iplayer-el"
                  '(:tag ("bbc")
                    :desc "Emacs interface to the BBC's iPlayer (uses get_iplayer)"))
-(vendle:register "sigma/marshal.el"
+(hoarder:register "sigma/marshal.el"
                  '(:tag ("eieio")
                    :desc " eieio extension for automatic (un)marshalling"))
-(vendle:register "zk-phi/phi-grep"
+(hoarder:register "zk-phi/phi-grep"
                  '(:tag ("grep")
                    :desc "Interactively-editable recursive grep implementation in elisp"))
-(vendle:register "tarsius/packed"
+(hoarder:register "tarsius/packed"
                  '(:tag ("package")
                    :desc "package manager agnostic Emacs Lisp package utilities"))
-(vendle:register "ainame/smart-newline.el"
+(hoarder:register "ainame/smart-newline.el"
                  '( :site "http://ainame.hateblo.jp/entry/2013/12/08/162032"))
-(vendle:register "xuchunyang/one.el"
+(hoarder:register "xuchunyang/one.el"
                  '(:desc "Read several news sources within Emacs"))
-(vendle:register "rakete/pixel-mode"
+(hoarder:register "rakete/pixel-mode"
                  '(:desc "Make pixel art in emacs buffers."
                    :tag ("pixel_art")))
-(vendle:register "bmag/emacs-purpose"
+(hoarder:register "bmag/emacs-purpose"
                  '(:tag ("workspace")))
-(vendle:register "ajsquared/env-var-import"
+(hoarder:register "ajsquared/env-var-import"
                  '(:desc "Import shell environment variables in GUI Emacs "))
-(vendle:register "emacsmirror/ob-speak"
+(hoarder:register "emacsmirror/ob-speak"
                  '(:tag ("org" "espeak" "org-babel")
                    :desc "espeak speech synthesis for org-babel blocks"))
-(vendle:register "vapniks/syslog-mode"
+(hoarder:register "vapniks/syslog-mode"
                  '(:tag ("log")
                    :depends ("vapniks/hide-lines")
                    :desc "Emacs major-mode for viewing log files "))
-(vendle:register "chrisbarrett/skeletor.el"
+(hoarder:register "chrisbarrett/skeletor.el"
                  '(:desc "Powerful project skeletons for Emacs"
                    :depends ("sviridov/undercover.el")))
-(vendle:register "steckerhalter/emacs-fasd"
+(hoarder:register "steckerhalter/emacs-fasd"
                  '(:tag ("fasd")
                    :depends ("d11wtq/grizzl")
                    :desc "An Emacs extension to integrate Fasd"))
-(vendle:register "steckerhalter/ipretty"
+(hoarder:register "steckerhalter/ipretty"
                  '(:desc "Interactive Emacs Lisp pretty-printing "))
-(vendle:register "tarao/bundle-el"
+(hoarder:register "tarao/bundle-el"
                  '(:tag ("el-get" "package_manager")))
-(vendle:register "Bruce-Connor/fancy-narrow"
+(hoarder:register "Bruce-Connor/fancy-narrow"
                  '(:tag ("narrowing")))
-(vendle:register "DalekBaldwin/highlight-backquotes-mode"
+(hoarder:register "DalekBaldwin/highlight-backquotes-mode"
                  '(:tag ("highlight")))
-(vendle:register "vibhavp/emacs-xkcd"
+(hoarder:register "vibhavp/emacs-xkcd"
                  '(:tag ("xkcd" "comic")
                    :desc "Implementation of an xkcd (http://xkcd.com/) reader for Emacs."))
-(vendle:register "emacsmirror/bytecomp-simplify"
+(hoarder:register "emacsmirror/bytecomp-simplify"
                  '(:tag ("bytecomp")
                    :desc "byte compile warnings for simplifications"))
-(vendle:register "Lindydancer/lisp-extra-font-lock"
+(hoarder:register "Lindydancer/lisp-extra-font-lock"
                  '(:tag ("highlight")))
-(vendle:register "xuchunyang/youdao-dictionary.el"
+(hoarder:register "xuchunyang/youdao-dictionary.el"
                  '(:tag ("chinese")
                    :depends ("auto-complete/popup-el"
                              "xuchunyang/chinese-word-at-point.el")))
-(vendle:register "xuchunyang/google-translate-chinese.el"
+(hoarder:register "xuchunyang/google-translate-chinese.el"
                  '(:tag ("chinese" "translation")
                    :depends ("auto-complete/popup-el"
                              "xuchunyang/chinese-word-at-point.el")))
-(vendle:register "rolandwalker/unicode-fonts"
+(hoarder:register "rolandwalker/unicode-fonts"
                  '(:tag ("font" "unicode")))
-(vendle:register "sanryuu/emacs-bijin-tokei")
-(vendle:register "Benaiah/seethru"
+(hoarder:register "sanryuu/emacs-bijin-tokei")
+(hoarder:register "Benaiah/seethru"
                  '(:tag ("appearance" "transparency")
                    :desc "seethru.el - easily change Emacs transparency "))
-(vendle:register "russell/elisp-slime-expand"
+(hoarder:register "russell/elisp-slime-expand"
                  '(:tag ("emacs_lisp" "macro")))
-(vendle:register "tam17aki/summarye")
-(vendle:register "emacsmirror/top-mode"
+(hoarder:register "tam17aki/summarye")
+(hoarder:register "emacsmirror/top-mode"
                  '(:tag ("top")))
-(vendle:register "dbrock/bongo"
+(hoarder:register "dbrock/bongo"
                  '(:tag ("music" "bongo")))
-(vendle:register "syohex/emacs-eww-hatebu"
+(hoarder:register "syohex/emacs-eww-hatebu"
                  '(:tag ("eww" "hatena_bookmark")
                    :desc "Hatena bookmark count in mode-line"))
-(vendle:register "nlamirault/dionysos"
+(hoarder:register "nlamirault/dionysos"
                  '(:tag ("music")
                    :desc "A music player for Emacs "))
-(vendle:register "thisirs/vc-check-status"
+(hoarder:register "thisirs/vc-check-status"
                  '(:tag ("vcs" "git")))
-(vendle:register "syohex/emacs-gitignore"
+(hoarder:register "syohex/emacs-gitignore"
                  '(:tag ("git" "gitignore")))
-(vendle:register "fgallina/region-bindings-mode"
+(hoarder:register "fgallina/region-bindings-mode"
                  '(:tag ("region")))
-(vendle:register "zk-phi/jaword"
+(hoarder:register "zk-phi/jaword"
                  '(:tag ("japanese" "movement")
                    :depends (("myuhe/tinysegmenter.el"
                               (:tag ("japanese"))))))
-(vendle:register "xahlee/xah-elisp-mode"
+(hoarder:register "xahlee/xah-elisp-mode"
                  '(:tag ("emacs-lisp")))
-(vendle:register "asok/peep-dired"
+(hoarder:register "asok/peep-dired"
                  '(:tag ("dired")))
-(vendle:register "jixiuf/dired-filetype-face"
+(hoarder:register "jixiuf/dired-filetype-face"
                  '(:tag ("dired")))
-(vendle:register "aaronbieber/sunshine.el"
+(hoarder:register "aaronbieber/sunshine.el"
                  '(:tag ("weather" "forecast")))
-(vendle:register "Dewdrops/visual-ascii-mode"
+(hoarder:register "Dewdrops/visual-ascii-mode"
                  '(:tag ("ascii")))
-(vendle:register "nex3/perspective-el"
+(hoarder:register "nex3/perspective-el"
                  '(:tag ("workspace")))
-(vendle:register "niku/realtime-preview.el"
+(hoarder:register "niku/realtime-preview.el"
                  '(:tag ("html" "preview" "markdown")))
-(vendle:register "zk-phi/symon"
+(hoarder:register "zk-phi/symon"
                  '(:tag ("system" "monitor")))
-(vendle:register "wanderlust/wanderlust"
+(hoarder:register "wanderlust/wanderlust"
                  '(:tag ("mail")
                    :build ("gmake")
                    :depends ( "wanderlust/flim"
                              "wanderlust/semi"
                              "wanderlust/apel")))
-(vendle:register "syohex/emacs-itunes-bgm"
+(hoarder:register "syohex/emacs-itunes-bgm"
                  '(:tag ("music" "itunes")))
-(vendle:register "andyetitmoves/libmpdee"
+(hoarder:register "andyetitmoves/libmpdee"
                  '(:tag ("mpd" "music")))
-(vendle:register "osanai3/eshell-tree"
+(hoarder:register "osanai3/eshell-tree"
                  '(:tag ("eshell")))
-(vendle:register "nobrowser/dig-browser"
+(hoarder:register "nobrowser/dig-browser"
                  '(:tag ("dig" "dns")))
-(vendle:register "hagleitn/unicode-emoticons"
+(hoarder:register "hagleitn/unicode-emoticons"
                  '(:tag ("unicode" "emoticon")))
-(vendle:register "ryuslash/kaarvok"
+(hoarder:register "ryuslash/kaarvok"
                  '(:tag ("project" "template")))
-(vendle:register "bmag/emacs-purpose"
+(hoarder:register "bmag/emacs-purpose"
                  '(:tag ("window" "layout")))
-(vendle:register "git://git.savannah.gnu.org/tramp.git"
+(hoarder:register "git://git.savannah.gnu.org/tramp.git"
                  '(:tag ("tramp" "ssh")
                    :build ("autoconf" "./configure" "gmake")
                    :load-path ("lisp")
                    :info "info"))
-(vendle:register "ataka/emacs-wget"
+(hoarder:register "ataka/emacs-wget"
                  '(:tag ("wget")))
-(vendle:register "rmuslimov/browse-at-remote"
+(hoarder:register "rmuslimov/browse-at-remote"
                  '(:tag ("github" "bitbucket" "git")
                    :depends ("magnars/s.el"
                              "rejeep/f.el")))
-(vendle:register "chillaranand/real-auto-save"
+(hoarder:register "chillaranand/real-auto-save"
                  '(:tag ("autosave")))
-(vendle:register "kentaro/auto-save-buffers-enhanced")
-(vendle:register "m2ym/compilation-highlight-el")
-(vendle:register "ongaeshi/auto-shell-command"
+(hoarder:register "kentaro/auto-save-buffers-enhanced")
+(hoarder:register "m2ym/compilation-highlight-el")
+(hoarder:register "ongaeshi/auto-shell-command"
                  '(:depends ("kiwanami/emacs-deferred")
                    :desc "Run the shell command **asynchronously** that you specified when you save the file."))
-(vendle:register "chumpage/chumpy-windows"
+(hoarder:register "chumpage/chumpy-windows"
                  '(:tag ("window" "layout")))
-(vendle:register "kljohann/mpv.el"
+(hoarder:register "kljohann/mpv.el"
                  '(:depends ( "Bruce-Connor/names"
                              ( "git://orgmode.org/org-mode.git"
                               (:load-path ("lisp" "contrib/lisp")
@@ -769,187 +769,187 @@
                                           :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
                                           :info "doc"
                                           :tag "org")))))
-(vendle:register "danielsz/Palimpsest")
-(vendle:register "rolandwalker/ignoramus")
-(vendle:register "anler/centered-window-mode"
+(hoarder:register "danielsz/Palimpsest")
+(hoarder:register "rolandwalker/ignoramus")
+(hoarder:register "anler/centered-window-mode"
                  '(:tag ("writing")))
-(vendle:register "milkypostman/hl-sentence"
+(hoarder:register "milkypostman/hl-sentence"
                  '(:tag ("writing" "reading" "highlight")))
-(vendle:register "joostkremers/writeroom-mode"
+(hoarder:register "joostkremers/writeroom-mode"
                  '(:tag ("writing")
                    :depends ("joostkremers/visual-fill-column")))
-(vendle:register "gongo/emacs-ikku"
+(hoarder:register "gongo/emacs-ikku"
                  '(:tag ("haiku" "mecab" "japanese")
                    :depends ("magnars/dash.el"
                              "sviridov/undercover.el")))
-(vendle:register "ThibautVerron/echo-sth.el")
-(vendle:register "10sr/git-command-el"
+(hoarder:register "ThibautVerron/echo-sth.el")
+(hoarder:register "10sr/git-command-el"
                  '(:tag ("git")))
-(vendle:register "purcell/default-text-scale"
+(hoarder:register "purcell/default-text-scale"
                  '(:tag ("font")))
-(vendle:register "theBlackDragon/fvwm-mode"
+(hoarder:register "theBlackDragon/fvwm-mode"
                  '(:tag ("fvwm")))
-(vendle:register "tjim/nevermore"
+(hoarder:register "tjim/nevermore"
                  '(:tag ("mail" "notmuch")
                    :depends ("emacsmirror/peg")))
-(vendle:register "syohex/emacs-import-popwin"
+(hoarder:register "syohex/emacs-import-popwin"
                  '(:tag ("popwin")))
-(vendle:register "johanclaesson/picpocket"
+(hoarder:register "johanclaesson/picpocket"
                  '(:tag ("image_viewer")))
-(vendle:register "kakakaya/random-splash-image"
+(hoarder:register "kakakaya/random-splash-image"
                  '(:tag ("splash")))
-(vendle:register "fgeller/highlight-thing.el"
+(hoarder:register "fgeller/highlight-thing.el"
                  '(:tag ("highlight")))
-(vendle:register "baohaojun/bbyac"
+(hoarder:register "baohaojun/bbyac"
                  '(:tag ("completion")
                    :depends ("browse-kill-ring/browse-kill-ring")))
-(vendle:register "jorgenschaefer/emacs-buttercup"
+(hoarder:register "jorgenschaefer/emacs-buttercup"
                  '(:tag ("testing")))
-(vendle:register "dgutov/diff-hl"
+(hoarder:register "dgutov/diff-hl"
                  '(:tag ("git")))
-(vendle:register "Bruce-Connor/elisp-bug-hunter")
-(vendle:register "lokedhs/em-translate"
+(hoarder:register "Bruce-Connor/elisp-bug-hunter")
+(hoarder:register "lokedhs/em-translate"
                  '(:tag ("google_translate")
                    :depends ("emacsmirror/http-post-simple")))
-(vendle:register "toroidal-code/cycle-themes.el"
+(hoarder:register "toroidal-code/cycle-themes.el"
                  '(:tag ("theme")))
-(vendle:register "uk-ar/smart-region"
+(hoarder:register "uk-ar/smart-region"
                  '(:tag ("region" "mark")
                    :depends ("magnars/expand-region.el"
                              "magnars/multiple-cursors.el")))
-(vendle:register "sellout/emacs-unimode"
+(hoarder:register "sellout/emacs-unimode"
                  '(:tag ("unicode" "mode-line")))
-(vendle:register "tuhdo/semantic-refactor"
+(hoarder:register "tuhdo/semantic-refactor"
                  '(:tag ("refactoring" "format")))
-(vendle:register "momomo5717/emms-player-mpv-jp-radio-settings"
+(hoarder:register "momomo5717/emms-player-mpv-jp-radio-settings"
                  '(:tag ("radio" "emms" "mpv")))
-(vendle:register "momomo5717/emms-player-simple-mpv"
+(hoarder:register "momomo5717/emms-player-simple-mpv"
                  '(:tag ("emms" "mpv")))
-(vendle:register  "wasamasa/firestarter")
-(vendle:register "myTerminal/theme-looper"
+(hoarder:register  "wasamasa/firestarter")
+(hoarder:register "myTerminal/theme-looper"
                  '(:tag ("theme")))
-(vendle:register "djcb/sauron")
-;; (vendle:register "nschum/highlight-parentheses.el")
-(vendle:register "tsdh/highlight-parentheses.el")
-(vendle:register "jordonbiondo/column-enforce-mode")
-(vendle:register "wasamasa/svg-2048"
+(hoarder:register "djcb/sauron")
+;; (hoarder:register "nschum/highlight-parentheses.el")
+(hoarder:register "tsdh/highlight-parentheses.el")
+(hoarder:register "jordonbiondo/column-enforce-mode")
+(hoarder:register "wasamasa/svg-2048"
                  '(:depends ("tali713/esxml")))
-(vendle:register "abo-abo/avy")
-(vendle:register "marcowahl/emacsshot"
+(hoarder:register "abo-abo/avy")
+(hoarder:register "marcowahl/emacsshot"
                  '(:tag ("screenshot")))
-(vendle:register "n8willis/fontfile-modes"
+(hoarder:register "n8willis/fontfile-modes"
                  '(:tag ("font")))
-(vendle:register "atheriel/splash-buffer.el"
+(hoarder:register "atheriel/splash-buffer.el"
                  '(:tag ("splash")))
-(vendle:register "rejeep/jq.el"
+(hoarder:register "rejeep/jq.el"
                  '(:tag ("json" "jq")))
-(vendle:register "Fuco1/autobookmarks"
+(hoarder:register "Fuco1/autobookmarks"
                  '(:depends ("magnars/dash.el"
                              "emacsmirror/bookmark-plus")
                    :tag ("recentf" "bookmark")))
-(vendle:register "larstvei/Focus"
+(hoarder:register "larstvei/Focus"
                  '(:tag ("highlight" "narrowing")))
-(vendle:register "tthieman/soundcloud.el"
+(hoarder:register "tthieman/soundcloud.el"
                  '(:tag ("music" "soundcloud")
                    :depends ("kiwanami/emacs-deferred"
                              "rolandwalker/string-utils"
                              "tkf/emacs-request")))
-(vendle:register "emacsmirror/longlines-jp")
-(vendle:register "zonuexe/emoji-fontset.el"
+(hoarder:register "emacsmirror/longlines-jp")
+(hoarder:register "zonuexe/emoji-fontset.el"
                  '(:tag ("font" "emoji" "unicode")))
-(vendle:register "purcell/exec-path-from-shell")
-(vendle:register "myuhe/imgur.el"
+(hoarder:register "purcell/exec-path-from-shell")
+(hoarder:register "myuhe/imgur.el"
                  '(:tag "imgur" "anything"))
-(vendle:register "gongo/emacs-gimei"
+(hoarder:register "gongo/emacs-gimei"
                  '(:tag ("japanese")))
-(vendle:register "emacs-pe/ssh-modes"
+(hoarder:register "emacs-pe/ssh-modes"
                  '(:tag ("ssh")))
-(vendle:register "sensorflo/adoc-mode"
+(hoarder:register "sensorflo/adoc-mode"
                  '(:tag ("asciidoc")
                    :depends ("sensorflo/markup-faces")))
-(vendle:register "syohex/emacs-fontawesome"
+(hoarder:register "syohex/emacs-fontawesome"
                  '(:tag ("font" "fontawesome" "icon")))
-(vendle:register "zweifisch/ob-http"
+(hoarder:register "zweifisch/ob-http"
                  '(:tag ("org" "http")))
-(vendle:register "bastibe/annotate.el"
+(hoarder:register "bastibe/annotate.el"
                  '(:tag ("annotation" "note" "memo" "text-property")))
-(vendle:register "emacsmirror/csv-mode"
+(hoarder:register "emacsmirror/csv-mode"
                  '(:tag ("csv")))
-(vendle:register "nicferrier/creole-mode")
+(hoarder:register "nicferrier/creole-mode")
 
-;; (vendle:register "politza/pdf-tools"
+;; (hoarder:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
-;; (vendle:register "http://git.chise.org/git/elisp/flim.git"
+;; (hoarder:register "http://git.chise.org/git/elisp/flim.git"
 ;;                  '(:tag ("flim" "luna")))
-;; (vendle:register "capitaomorte/yasnippet")
+;; (hoarder:register "capitaomorte/yasnippet")
 
 ;;;;; evil
-(vendle:register "https://gitorious.org/evil/evil.git"
+(hoarder:register "https://gitorious.org/evil/evil.git"
                  '(:build ("gmake doc all")
                    :info "doc"
                    :depends ("emacsmirror/goto-chg"
                              "http://www.dr-qubit.org/git/undo-tree.git")
                    :tag "evil"))
-(vendle:register "cofi/evil-leader"
+(hoarder:register "cofi/evil-leader"
                  '(:tag "evil"))
-(vendle:register "timcharper/evil-surround"
+(hoarder:register "timcharper/evil-surround"
                  '(:tag "evil"))
-(vendle:register "redguardtoo/evil-nerd-commenter"
+(hoarder:register "redguardtoo/evil-nerd-commenter"
                  '(:tag "evil"))
-(vendle:register "redguardtoo/evil-matchit"
+(hoarder:register "redguardtoo/evil-matchit"
                  '(:tag "evil"))
-(vendle:register "Dewdrops/evil-exchange"
+(hoarder:register "Dewdrops/evil-exchange"
                  '(:tag "evil"))
-(vendle:register "edwtjo/evil-org-mode"
+(hoarder:register "edwtjo/evil-org-mode"
                  '(:tag "evil"))
-(vendle:register "bling/evil-visualstar"
+(hoarder:register "bling/evil-visualstar"
                  '(:tag "evil"))
-(vendle:register "tarao/evil-plugins"
+(hoarder:register "tarao/evil-plugins"
                  '(:tag "evil"))
-(vendle:register "tarleb/evil-rebellion"
+(hoarder:register "tarleb/evil-rebellion"
                  '(:tag "evil"))
-(vendle:register "AshleyMoni/evil-sneak"
+(hoarder:register "AshleyMoni/evil-sneak"
                  '(:tag "evil"))
-;;(vendle:register "juanjux/evil-search-highlight-persist"
+;;(hoarder:register "juanjux/evil-search-highlight-persist"
 ;;                 '(:tag "evil"
 ;;                   :depends ("emacsmirror/highlight")))
-(vendle:register "sunesimonsen/evil-walk-on-the-edge"
+(hoarder:register "sunesimonsen/evil-walk-on-the-edge"
                  '(:tag "evil"))
-(vendle:register "bling/evil-jumper"
+(hoarder:register "bling/evil-jumper"
                  '(:tag "evil"))
-(vendle:register "roman/evil-paredit"
+(hoarder:register "roman/evil-paredit"
                  '(:tag "evil"))
-(vendle:register "Dewdrops/evil-extra-operator"
+(hoarder:register "Dewdrops/evil-extra-operator"
                  '(:tag "evil"))
-(vendle:register "cofi/evil-indent-textobject"
+(hoarder:register "cofi/evil-indent-textobject"
                  '(:tag "evil"))
-(vendle:register "linktohack/evil-space"
+(hoarder:register "linktohack/evil-space"
                  '(:tag "evil"))
-;; (vendle:register "jschaf/evil-smartparens"
+;; (hoarder:register "jschaf/evil-smartparens"
 ;;                  '(:tag "evil"))
-(vendle:register "expez/evil-smartparens"
+(hoarder:register "expez/evil-smartparens"
                  '(:tag ("evil" "smartparens")))
-(vendle:register "nadavspi/evil-linewise"
+(hoarder:register "nadavspi/evil-linewise"
                  '(:depends ("emacsmirror/move-text")
                    :tag "evil"))
-(vendle:register "TheBB/evil-paragraph-textobject"
+(hoarder:register "TheBB/evil-paragraph-textobject"
                  '(:tag "evil"))
-(vendle:register "syl20bnr/evil-lisp-state"
+(hoarder:register "syl20bnr/evil-lisp-state"
                  '(:depends ("magnars/expand-region.el")
                    :compile nil
                    :tag "evil"))
-(vendle:register "syl20bnr/evil-escape"
+(hoarder:register "syl20bnr/evil-escape"
                  '(:tag "evil"
                    :depends ("emacsmirror/key-chord")))
-(vendle:register "gridaphobe/evil-god-state"
+(hoarder:register "gridaphobe/evil-god-state"
                  '(:tag "evil"
                    :depends ( "chrisdone/god-mode" )))
-(vendle:register "tarleb/evil-scout")
-(vendle:register "PythonNut/evil-easymotion"
+(hoarder:register "tarleb/evil-scout")
+(hoarder:register "PythonNut/evil-easymotion"
                  '(:tag "evil"
                    :depends ( "winterTTr/ace-jump-mode"
                              "nicferrier/emacs-noflet")))
-(vendle:register "hlissner/evil-snipe"
+(hoarder:register "hlissner/evil-snipe"
                  '(:tag "evil"
                    :depends (( "https://gitorious.org/evil/evil.git"
                               (:build ("gmake doc all")
@@ -957,222 +957,222 @@
                                       :depends ("emacsmirror/goto-chg"
                                                 "http://www.dr-qubit.org/git/undo-tree.git")
                                       :tag "evil")))))
-(vendle:register "linktohack/evil-commentary"
+(hoarder:register "linktohack/evil-commentary"
                  '(:tag "evil"))
-(vendle:register "syl20bnr/evil-tutor"
+(hoarder:register "syl20bnr/evil-tutor"
                  '(:tag ("evil" "tutorial")))
-(vendle:register "roman/evil-visual-mark-mode"
+(hoarder:register "roman/evil-visual-mark-mode"
                  '(:tag ("evil")))
-(vendle:register "bcarrell/evil-lispy"
+(hoarder:register "bcarrell/evil-lispy"
                  '(:tag ("evil" "lispy")
                    :depends (("abo-abo/lispy"
                               (:depends ("sviridov/undercover.el"))))))
-(vendle:register "linktohack/evil-rsi")
-(vendle:register "luxbock/evil-cleverparens"
+(hoarder:register "linktohack/evil-rsi")
+(hoarder:register "luxbock/evil-cleverparens"
                  '(:depends ("rejeep/drag-stuff.el"
                              "http://mumble.net/~campbell/git/paredit.git"
                              "promethial/paxedit"
                              "Fuco1/smartparens")))
-(vendle:register "lotabout/evil-mc"
+(hoarder:register "lotabout/evil-mc"
                  '(:tag ("evil" "multiple-cursor")))
 
 ;;;;; org
-(vendle:register "git://orgmode.org/org-mode.git"
+(hoarder:register "git://orgmode.org/org-mode.git"
                  '(:load-path ("lisp" "contrib/lisp")
                    :compile nil
                    :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
                    :info "doc"
                    :tag "org"))
-(vendle:register "tj64/org-hlc")
-(vendle:register "tj64/outshine" '(:compile nil
+(hoarder:register "tj64/org-hlc")
+(hoarder:register "tj64/outshine" '(:compile nil
                                    :tag ("org" "outline")))
-(vendle:register "tj64/outorg" '(:compile nil
+(hoarder:register "tj64/outorg" '(:compile nil
                                  :tag ("org" "outline")))
-(vendle:register "tj64/outline-magic"
+(hoarder:register "tj64/outline-magic"
                  '(:tag ("org" "outline")))
-(vendle:register "omouse/org-doing"
+(hoarder:register "omouse/org-doing"
                  '(:tag "org"))
-(vendle:register "Fuco1/org-pretty-table"
+(hoarder:register "Fuco1/org-pretty-table"
                  '(:compile nil :tag "org"))
-(vendle:register "rlister/org-present"
+(hoarder:register "rlister/org-present"
                  '(:depends (("git://orgmode.org/org-mode.git"
                               (:load-path ("lisp" "contrib/lisp")
                                           :compile nil
                                           :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
                                           :info "doc"
                                           :tag "org")))))
-;; (vendle:register "jleechpe/outorg-export")
-(vendle:register "tj64/navi"
+;; (hoarder:register "jleechpe/outorg-export")
+(hoarder:register "tj64/navi"
                  '(:tag ("org" "outline")))
-(vendle:register "kawabata/ox-pandoc"
+(hoarder:register "kawabata/ox-pandoc"
                  '(:depends ("Wilfred/ht.el"
                              "magnars/dash.el")
                    :tag ( "org" "pandoc" )))
-(vendle:register "bastibe/org-journal"
+(hoarder:register "bastibe/org-journal"
                  '(:tag ("org")))
-(vendle:register "calvinwyoung/org-autolist"
+(hoarder:register "calvinwyoung/org-autolist"
                  '(:tag ("org")))
-(vendle:register "krisajenkins/ob-browser"
+(hoarder:register "krisajenkins/ob-browser"
                  '(:tag ("org" "org-babel" "html" "phantomjs")
                    :desc "Render HTML inside Emacs' org-mode"))
-(vendle:register "thisirs/org-context"
+(hoarder:register "thisirs/org-context"
                  '(:tag ("org" "org-agenda" "org-capture")
                    :desc "Contextual agenda and capture for Org-mode"))
-(vendle:register "woudshoo/html-2-org"
+(hoarder:register "woudshoo/html-2-org"
                  '(:tag ("org" "html")
                    :desc "Attempts to undo the html export of org"))
-(vendle:register "abo-abo/org-download"
+(hoarder:register "abo-abo/org-download"
                  '(:tag ("org")
                    :depends ("jwiegley/emacs-async")))
-(vendle:register "brettviren/org-pub"
+(hoarder:register "brettviren/org-pub"
                  '(:tag ("org" "web" "html")))
-(vendle:register "tj64/org-dp"
+(hoarder:register "tj64/org-dp"
                  '(:tag ("org")))
-(vendle:register "p-m/org-notify"
+(hoarder:register "p-m/org-notify"
                  '(:tag ("org")))
-(vendle:register "vapniks/org-gather"
+(hoarder:register "vapniks/org-gather"
                  '(:tag ("org")))
-(vendle:register "markus1189/org-pdfview"
+(hoarder:register "markus1189/org-pdfview"
                  '(:tag ("org" "pdf")))
-(vendle:register "HKey/omboo"
+(hoarder:register "HKey/omboo"
                  '(:tag ("org" "bookmark")
                    :desc "Org-mode as BOOkmark"))
-(vendle:register "rexim/org-cliplink"
+(hoarder:register "rexim/org-cliplink"
                  '(:tag ("org" "clipboard")))
-(vendle:register "tarsius/orglink"
+(hoarder:register "tarsius/orglink"
                  '(:tag ("org")))
-;; (vendle:register "https://bitbucket.org/eeeickythump/org-player"
+;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ("org" "bongo" "music")
 ;;                    :depends ("dbrock/bongo")
 ;;                    :type hg))
 
 ;;;;; themes
-(vendle:register "owainlewis/emacs-color-themes")
-(vendle:register "kuanyui/moe-theme.el")
-(vendle:register-theme "caisah/seti-theme")
-(vendle:register-theme "j0ni/phoenix-dark-pink")
-(vendle:register-theme "Fanael/stekene-theme")
-(vendle:register-theme "sabof/hyperplane-theme")
-(vendle:register-theme "niflheim-theme/emacs" '(:name "niflheim-theme"))
-(vendle:register-theme "emacs-jp/replace-colorthemes")
-(vendle:register-theme "djcb/dream-theme")
-(vendle:register-theme "FrankRuben/cuatroporocho-theme" '(:compile nil))
-(vendle:register-theme "neomantic/Emacs-Sunburst-Color-Theme")
-(vendle:register-theme "ranmocy/amelie-theme")
-(vendle:register-theme "yuttie/steady-theme-emacs")
-(vendle:register-theme "rozh/grandpunk-theme")
-(vendle:register-theme "nhunzaker/emacs-laravel-plus-theme")
-(vendle:register-theme "nishikawasasaki/ns-milk-theme")
-(vendle:register-theme "tiborsimko/ostrich-theme-el")
-(vendle:register-theme "michaelparenteau/parenteau-theme")
-(vendle:register-theme "gchp/flatland-emacs")
-(vendle:register-theme "mswift42/busybee-theme")
-(vendle:register-theme "byels/emacs-cherry-blossom-theme")
-(vendle:register-theme "startling/firebelly")
-(vendle:register-theme "Greduan/emacs-theme-gruvbox")
-(vendle:register-theme "donderom/jazz-theme")
-(vendle:register-theme "andre-richter/emacs-lush-theme")
-(vendle:register-theme "Lokaltog/distinguished-theme")
-(vendle:register-theme "mswift42/warm-night-theme")
-(vendle:register-theme "jasonm23/emacs-bubbleberry-theme")
-(vendle:register-theme "n3mo/cyberpunk-theme.el")
-(vendle:register-theme "Fanael/colorsarenice-theme")
-(vendle:register-theme "kodx/TangoDark")
-(vendle:register-theme "wasamasa/gotham-theme")
-(vendle:register-theme "neil477/base16-emacs")
-(vendle:register-theme "oneKelvinSmith/monokai-emacs")
-;; (vendle:register-theme "hbin/molokai-theme")
-(vendle:register-theme "hos/molokai-emacs")
-(vendle:register-theme "jordonbiondo/ample-theme")
-(vendle:register-theme "mjwall/ample-zen")
-(vendle:register-theme "bruce/emacs-spacegray-theme")
-(vendle:register-theme "juba/color-theme-tangotango")
-(vendle:register-theme "ccann/badger-theme")
-(vendle:register-theme "xzerocode/hipster-theme")
-(vendle:register-theme "fommil/darcula-theme-emacs")
-(vendle:register-theme "emacsfodder/emacs-waher-theme")
-(vendle:register-theme "emacsfodder/emacs-purple-haze-theme")
-(vendle:register-theme "emacsfodder/emacs-clues-theme")
-(vendle:register-theme "emacsfodder/emacs-soothe-theme")
-(vendle:register-theme  "emacsfodder/emacs-slime-theme" )
-(vendle:register-theme  "emacsfodder/emacs-peacock-theme" )
-(vendle:register-theme  "emacsfodder/emacs-mustard-theme" )
-(vendle:register-theme  "emacsfodder/emacs-mellow-theme" )
-(vendle:register-theme  "emacsfodder/emacs-lavender-theme" )
-(vendle:register-theme  "emacsfodder/emacs-firecode-theme" )
-(vendle:register-theme  "emacsfodder/emacs-dark-krystal-theme" )
-(vendle:register-theme  "emacsfodder/emacs-colonoscopy-theme" )
-(vendle:register-theme  "emacsfodder/emacs-boron-theme" )
-(vendle:register-theme  "emacsfodder/emacs-bliss-theme" )
-(vendle:register-theme  "emacsfodder/emacs-flatland-black-theme" )
-(vendle:register-theme "emacsfodder/emacs-mbo70s-theme")
-(vendle:register-theme "uwabami/darkpastel-theme")
-(vendle:register-theme "dev-plvlml/zenburn-care")
-(vendle:register-theme "idleberg/Hopscotch"
+(hoarder:register "owainlewis/emacs-color-themes")
+(hoarder:register "kuanyui/moe-theme.el")
+(hoarder:register-theme "caisah/seti-theme")
+(hoarder:register-theme "j0ni/phoenix-dark-pink")
+(hoarder:register-theme "Fanael/stekene-theme")
+(hoarder:register-theme "sabof/hyperplane-theme")
+(hoarder:register-theme "niflheim-theme/emacs" '(:name "niflheim-theme"))
+(hoarder:register-theme "emacs-jp/replace-colorthemes")
+(hoarder:register-theme "djcb/dream-theme")
+(hoarder:register-theme "FrankRuben/cuatroporocho-theme" '(:compile nil))
+(hoarder:register-theme "neomantic/Emacs-Sunburst-Color-Theme")
+(hoarder:register-theme "ranmocy/amelie-theme")
+(hoarder:register-theme "yuttie/steady-theme-emacs")
+(hoarder:register-theme "rozh/grandpunk-theme")
+(hoarder:register-theme "nhunzaker/emacs-laravel-plus-theme")
+(hoarder:register-theme "nishikawasasaki/ns-milk-theme")
+(hoarder:register-theme "tiborsimko/ostrich-theme-el")
+(hoarder:register-theme "michaelparenteau/parenteau-theme")
+(hoarder:register-theme "gchp/flatland-emacs")
+(hoarder:register-theme "mswift42/busybee-theme")
+(hoarder:register-theme "byels/emacs-cherry-blossom-theme")
+(hoarder:register-theme "startling/firebelly")
+(hoarder:register-theme "Greduan/emacs-theme-gruvbox")
+(hoarder:register-theme "donderom/jazz-theme")
+(hoarder:register-theme "andre-richter/emacs-lush-theme")
+(hoarder:register-theme "Lokaltog/distinguished-theme")
+(hoarder:register-theme "mswift42/warm-night-theme")
+(hoarder:register-theme "jasonm23/emacs-bubbleberry-theme")
+(hoarder:register-theme "n3mo/cyberpunk-theme.el")
+(hoarder:register-theme "Fanael/colorsarenice-theme")
+(hoarder:register-theme "kodx/TangoDark")
+(hoarder:register-theme "wasamasa/gotham-theme")
+(hoarder:register-theme "neil477/base16-emacs")
+(hoarder:register-theme "oneKelvinSmith/monokai-emacs")
+;; (hoarder:register-theme "hbin/molokai-theme")
+(hoarder:register-theme "hos/molokai-emacs")
+(hoarder:register-theme "jordonbiondo/ample-theme")
+(hoarder:register-theme "mjwall/ample-zen")
+(hoarder:register-theme "bruce/emacs-spacegray-theme")
+(hoarder:register-theme "juba/color-theme-tangotango")
+(hoarder:register-theme "ccann/badger-theme")
+(hoarder:register-theme "xzerocode/hipster-theme")
+(hoarder:register-theme "fommil/darcula-theme-emacs")
+(hoarder:register-theme "emacsfodder/emacs-waher-theme")
+(hoarder:register-theme "emacsfodder/emacs-purple-haze-theme")
+(hoarder:register-theme "emacsfodder/emacs-clues-theme")
+(hoarder:register-theme "emacsfodder/emacs-soothe-theme")
+(hoarder:register-theme  "emacsfodder/emacs-slime-theme" )
+(hoarder:register-theme  "emacsfodder/emacs-peacock-theme" )
+(hoarder:register-theme  "emacsfodder/emacs-mustard-theme" )
+(hoarder:register-theme  "emacsfodder/emacs-mellow-theme" )
+(hoarder:register-theme  "emacsfodder/emacs-lavender-theme" )
+(hoarder:register-theme  "emacsfodder/emacs-firecode-theme" )
+(hoarder:register-theme  "emacsfodder/emacs-dark-krystal-theme" )
+(hoarder:register-theme  "emacsfodder/emacs-colonoscopy-theme" )
+(hoarder:register-theme  "emacsfodder/emacs-boron-theme" )
+(hoarder:register-theme  "emacsfodder/emacs-bliss-theme" )
+(hoarder:register-theme  "emacsfodder/emacs-flatland-black-theme" )
+(hoarder:register-theme "emacsfodder/emacs-mbo70s-theme")
+(hoarder:register-theme "uwabami/darkpastel-theme")
+(hoarder:register-theme "dev-plvlml/zenburn-care")
+(hoarder:register-theme "idleberg/Hopscotch"
                        '(:load-path "Emacs"))
-;; (vendle:register-theme "pronobis/material-linux-theme"
+;; (hoarder:register-theme "pronobis/material-linux-theme"
 ;;                        '(:load-path "out"))
-(vendle:register-theme "jd/naquadah-theme")
-(vendle:register-theme "rexim/gruber-darker-theme")
-(vendle:register-theme "developernotes/twilight-theme")
-(vendle:register-theme "steckerhalter/grandshell-theme")
-(vendle:register-theme "CQQL/xresources-theme")
-(vendle:register-theme "apnsngr/iceberg-emacs")
-(vendle:register-theme "4lex1v/sirthias-theme")
-(vendle:register-theme "sellout/emacs-color-theme-solarized")
-(vendle:register-theme "Trevoke/color-theme-mejelly-light")
-(vendle:register-theme "aurelienbottazini/tronesque"
+(hoarder:register-theme "jd/naquadah-theme")
+(hoarder:register-theme "rexim/gruber-darker-theme")
+(hoarder:register-theme "developernotes/twilight-theme")
+(hoarder:register-theme "steckerhalter/grandshell-theme")
+(hoarder:register-theme "CQQL/xresources-theme")
+(hoarder:register-theme "apnsngr/iceberg-emacs")
+(hoarder:register-theme "4lex1v/sirthias-theme")
+(hoarder:register-theme "sellout/emacs-color-theme-solarized")
+(hoarder:register-theme "Trevoke/color-theme-mejelly-light")
+(hoarder:register-theme "aurelienbottazini/tronesque"
                        '(:load-path "themes"))
-(vendle:register-theme "edran/hc-zenburn-emacs")
-(vendle:register-theme "Soren-Nordstrom/motoko-theme")
-(vendle:register-theme "rashack/solarized-grey")
-(vendle:register-theme "vurmux/crazyfruits-color-theme")
-(vendle:register-theme "purcell/color-theme-sanityinc-tomorrow")
-(vendle:register-theme "purcell/color-theme-sanityinc-solarized")
-(vendle:register-theme "bbatsov/solarized-emacs")
-(vendle:register-theme "matteobanerjee/orpheus-theme")
-(vendle:register-theme "yveszoundi/emacs-rimero-theme")
-(vendle:register-theme "holomorph/emacs-zenburn")
-(vendle:register-theme "darrik/zenesque-theme")
-(vendle:register-theme "Corsair/emacs-flatui-theme")
-(vendle:register-theme "stafu/noctilux-theme")
-(vendle:register-theme "yveszoundi/emacs-rimero-theme")
-(vendle:register-theme "darrik/erosiond-theme")
-(vendle:register-theme "zk-phi/lenlen-theme"
+(hoarder:register-theme "edran/hc-zenburn-emacs")
+(hoarder:register-theme "Soren-Nordstrom/motoko-theme")
+(hoarder:register-theme "rashack/solarized-grey")
+(hoarder:register-theme "vurmux/crazyfruits-color-theme")
+(hoarder:register-theme "purcell/color-theme-sanityinc-tomorrow")
+(hoarder:register-theme "purcell/color-theme-sanityinc-solarized")
+(hoarder:register-theme "bbatsov/solarized-emacs")
+(hoarder:register-theme "matteobanerjee/orpheus-theme")
+(hoarder:register-theme "yveszoundi/emacs-rimero-theme")
+(hoarder:register-theme "holomorph/emacs-zenburn")
+(hoarder:register-theme "darrik/zenesque-theme")
+(hoarder:register-theme "Corsair/emacs-flatui-theme")
+(hoarder:register-theme "stafu/noctilux-theme")
+(hoarder:register-theme "yveszoundi/emacs-rimero-theme")
+(hoarder:register-theme "darrik/erosiond-theme")
+(hoarder:register-theme "zk-phi/lenlen-theme"
                        '(:depends ( "sellout/emacs-color-theme-solarized")))
-(vendle:register-theme "emacsfodder/emacs-theme-darktooth")
-(vendle:register-theme "melisgl/color-theme-mgl")
-(vendle:register-theme "BrianHicks/emacs-themes")
-(vendle:register-theme "mrsipan/sipan-theme")
-(vendle:register-theme "cmack/emacs-planet-theme")
-(vendle:register-theme "cpaulik/emacs-material-theme")
-(vendle:register-theme "eglaysher/dark-forest-theme")
-(vendle:register-theme "waymondo/apropospriate-theme")
-(vendle:register-theme "john2x/plan9-theme.el")
-(vendle:register-theme "TheQZ/emerald-emacs")
-(vendle:register-theme "ZehCnaS34/zonokai-emacs")
-(vendle:register-theme "whitlockjc/atom-dark-theme-emacs")
-(vendle:register-theme "zovt/pretty-emacs")
-(vendle:register-theme "toroidal-code/monokai-extended-theme.el")
-(vendle:register-theme "mattly/emacs-farmhouse-theme")
-(vendle:register-theme "evenhold/nerv-theme")
-(vendle:register-theme "mjhanninen/liquorice.el")
-(vendle:register-theme "p-lambert/jellyburn-theme")
-(vendle:register-theme "cryon/subatomic")
-(vendle:register-theme "Gastove/rhombus")
-(vendle:register-theme "Fanael/colorsarenice-theme")
-(vendle:register-theme "aalpern/emacs-color-theme-green-phosphor")
-(vendle:register-theme "Alexander-Miller/morning-star-theme")
-(vendle:register-theme "nhunzaker/emacs-ectoplasm-theme")
-(vendle:register-theme "ryter/emacs-metro-theme")
-(vendle:register-theme "PGGB/emacs-bluedrake-theme")
-(vendle:register-theme "kostafey/organic-green-theme")
-(vendle:register-theme "nashamri/spacemacs-theme")
-(vendle:register-theme "timrichardt/zendyke")
+(hoarder:register-theme "emacsfodder/emacs-theme-darktooth")
+(hoarder:register-theme "melisgl/color-theme-mgl")
+(hoarder:register-theme "BrianHicks/emacs-themes")
+(hoarder:register-theme "mrsipan/sipan-theme")
+(hoarder:register-theme "cmack/emacs-planet-theme")
+(hoarder:register-theme "cpaulik/emacs-material-theme")
+(hoarder:register-theme "eglaysher/dark-forest-theme")
+(hoarder:register-theme "waymondo/apropospriate-theme")
+(hoarder:register-theme "john2x/plan9-theme.el")
+(hoarder:register-theme "TheQZ/emerald-emacs")
+(hoarder:register-theme "ZehCnaS34/zonokai-emacs")
+(hoarder:register-theme "whitlockjc/atom-dark-theme-emacs")
+(hoarder:register-theme "zovt/pretty-emacs")
+(hoarder:register-theme "toroidal-code/monokai-extended-theme.el")
+(hoarder:register-theme "mattly/emacs-farmhouse-theme")
+(hoarder:register-theme "evenhold/nerv-theme")
+(hoarder:register-theme "mjhanninen/liquorice.el")
+(hoarder:register-theme "p-lambert/jellyburn-theme")
+(hoarder:register-theme "cryon/subatomic")
+(hoarder:register-theme "Gastove/rhombus")
+(hoarder:register-theme "Fanael/colorsarenice-theme")
+(hoarder:register-theme "aalpern/emacs-color-theme-green-phosphor")
+(hoarder:register-theme "Alexander-Miller/morning-star-theme")
+(hoarder:register-theme "nhunzaker/emacs-ectoplasm-theme")
+(hoarder:register-theme "ryter/emacs-metro-theme")
+(hoarder:register-theme "PGGB/emacs-bluedrake-theme")
+(hoarder:register-theme "kostafey/organic-green-theme")
+(hoarder:register-theme "nashamri/spacemacs-theme")
+(hoarder:register-theme "timrichardt/zendyke")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
-              (vendle:register (expand-file-name path "~/huone/projektit")
+              (hoarder:register (expand-file-name path "~/huone/projektit")
                                option)))
   (add-project-root  "emacs-flatline")
   (add-project-root "helm-ypv" '(:tag "helm"))
@@ -1186,7 +1186,7 @@
   (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
   (add-project-root "helm-project-buffer" '(:tag "helm"))
   (add-project-root "emacs-eshellar" '(:tag ( "eshell" "shellar" )))
-  (add-project-root "emacs-vendle" '(:load-path nil
+  (add-project-root "emacs-hoarder" '(:load-path nil
                                      :tag ( "package" )))
   (add-project-root "helm-features" '(:tag ( "emacs-lisp" )))
   (add-project-root "helm-eww-bookmark" '(:tag ("helm" "eww" )))
@@ -1195,479 +1195,479 @@
   (add-project-root "helm-eshell-jump" '(:tag ("helm" "eshell"))))
 
 ;;;;;; skk
-(vendle:register "skk-dev/ddskk"
+(hoarder:register "skk-dev/ddskk"
                  '(:build ("gmake clean elc info")
                    :info "doc"
                    :load-path ("." "experimental")))
-(vendle:fetch "skk-dev/skktools"
+(hoarder:fetch "skk-dev/skktools"
               '(:build ("./configure" "gmake clean" "gmake")))
-(vendle:fetch "tkita/SKK-JISYO"
+(hoarder:fetch "tkita/SKK-JISYO"
               '(:tag ("skk" "skk-jisyo")))
 
 ;; (cond
-;;   ((file-directory-p (muki:user-emacs-directory "vendle/ddskk"))
-;;    (vendle:register-local (muki:user-emacs-directory "vendle/ddskk")
+;;   ((file-directory-p (muki:user-emacs-directory "hoarder/ddskk"))
+;;    (hoarder:register-local (muki:user-emacs-directory "hoarder/ddskk")
 ;;                           '(:build ("gmake elc info")
 ;;                             :info "info")))
 ;;   ((file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
-;;    (vendle:register-local "/usr/local/share/emacs/24.3/site-lisp/skk")))
+;;    (hoarder:register-local "/usr/local/share/emacs/24.3/site-lisp/skk")))
 
-(vendle:register "~/.stumpwm.d/modules/util/swm-emacs")
+(hoarder:register "~/.stumpwm.d/modules/util/swm-emacs")
 
-;; (vendle:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
+;; (hoarder:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
 ;;;;; not library
-(vendle:fetch "purcell/emacs.d")
-(vendle:fetch "redguardtoo/mastering-emacs-in-one-year-guide")
-(vendle:fetch "git://git.savannah.nongnu.org/emacs-tiny-tools.git")
-(vendle:fetch "bbatsov/emacs-lisp-style-guide")
-(vendle:fetch "danielsz/.emacs.d")
-(vendle:fetch "davvil/.emacs.d")
-(vendle:fetch "hico-horiuchi/dotemacs")
-(vendle:fetch "juanjux/emacs-dotfiles")
-(vendle:fetch "redguardtoo/emacs.d")
-(vendle:fetch "sachac/.emacs.d")
-(vendle:fetch "sachac/sharing"
+(hoarder:fetch "purcell/emacs.d")
+(hoarder:fetch "redguardtoo/mastering-emacs-in-one-year-guide")
+(hoarder:fetch "git://git.savannah.nongnu.org/emacs-tiny-tools.git")
+(hoarder:fetch "bbatsov/emacs-lisp-style-guide")
+(hoarder:fetch "danielsz/.emacs.d")
+(hoarder:fetch "davvil/.emacs.d")
+(hoarder:fetch "hico-horiuchi/dotemacs")
+(hoarder:fetch "juanjux/emacs-dotfiles")
+(hoarder:fetch "redguardtoo/emacs.d")
+(hoarder:fetch "sachac/.emacs.d")
+(hoarder:fetch "sachac/sharing"
               '(:tag ("org")))
-(vendle:fetch "sachac/sketched-books"
+(hoarder:fetch "sachac/sketched-books"
               '(:tag ("org")))
-(vendle:fetch "serras/emacs-haskell-tutorial")
-(vendle:fetch "supermomonga/dot-emacs")
-(vendle:fetch "thierryvolpiatto/emacs-tv-config")
-(vendle:fetch "xiaohanyu/oh-my-emacs")
-(vendle:fetch "bling/emacs-evil-bootstrap")
-(vendle:fetch "capdevc/dotfiles-cc")
-(vendle:fetch "siancu/evilmode-pack"
+(hoarder:fetch "serras/emacs-haskell-tutorial")
+(hoarder:fetch "supermomonga/dot-emacs")
+(hoarder:fetch "thierryvolpiatto/emacs-tv-config")
+(hoarder:fetch "xiaohanyu/oh-my-emacs")
+(hoarder:fetch "bling/emacs-evil-bootstrap")
+(hoarder:fetch "capdevc/dotfiles-cc")
+(hoarder:fetch "siancu/evilmode-pack"
               '(:recursive nil))
-(vendle:fetch "emacs-tw/awesome-emacs")
-(vendle:fetch "syl20bnr/spacemacs"
+(hoarder:fetch "emacs-tw/awesome-emacs")
+(hoarder:fetch "syl20bnr/spacemacs"
               '(:recursive nil
                 :branch "develop"))
-(vendle:fetch "bbatsov/prelude")
-(vendle:fetch "bling/dotemacs")
-(vendle:fetch "cofi/dotfiles"
+(hoarder:fetch "bbatsov/prelude")
+(hoarder:fetch "bling/dotemacs")
+(hoarder:fetch "cofi/dotfiles"
               '(:recursive nil))
-(vendle:fetch "tarao/dotfiles"
+(hoarder:fetch "tarao/dotfiles"
               '(:recursive nil))
-(vendle:fetch "fukamachi/emacs-config")
-(vendle:fetch "mikio/dotfiles")
-(vendle:fetch "yukihr/dotfiles"
+(hoarder:fetch "fukamachi/emacs-config")
+(hoarder:fetch "mikio/dotfiles")
+(hoarder:fetch "yukihr/dotfiles"
               '(:recursive nil))
-(vendle:fetch "handlename/dot-emacs")
-(vendle:fetch "seven1m/.emacs.d")
-(vendle:fetch "gongo/elfactory"
+(hoarder:fetch "handlename/dot-emacs")
+(hoarder:fetch "seven1m/.emacs.d")
+(hoarder:fetch "gongo/elfactory"
               '(:recursive nil))
-(vendle:fetch "rdallasgray/graphene"
+(hoarder:fetch "rdallasgray/graphene"
               '(:recursive nil))
-(vendle:fetch "mgill25/emacs")
-(vendle:fetch "nikki93/.emacs.d")
-(vendle:fetch "davvil/.emacs.d")
-(vendle:fetch "sunesimonsen/evil-config")
-(vendle:fetch "jcf/emacs.d")
-(vendle:fetch "jcf/previous-emacs.d")
-(vendle:fetch "nathantypanski/emacs.d")
-(vendle:fetch "lukaszkorecki/cult-leader"
+(hoarder:fetch "mgill25/emacs")
+(hoarder:fetch "nikki93/.emacs.d")
+(hoarder:fetch "davvil/.emacs.d")
+(hoarder:fetch "sunesimonsen/evil-config")
+(hoarder:fetch "jcf/emacs.d")
+(hoarder:fetch "jcf/previous-emacs.d")
+(hoarder:fetch "nathantypanski/emacs.d")
+(hoarder:fetch "lukaszkorecki/cult-leader"
               '(:recursive nil))
-(vendle:fetch "ahmadseleem/ViMacs"
+(hoarder:fetch "ahmadseleem/ViMacs"
               '(:tag ("evil" "dotifles")))
-(vendle:fetch "febuiles/dotemacs")
-(vendle:fetch "git://orgmode.org/worg.git")
-(vendle:fetch "roman/emacs.d")
-(vendle:fetch "iconpin/dotemacs")
-(vendle:fetch "jpace121/evil-ed")
-(vendle:fetch "sunesimonsen/evil-config")
-(vendle:fetch "gbarta/evil-my-shims")
-(vendle:fetch "novoid/Memacs")
-(vendle:fetch "novoid/dot-emacs"
+(hoarder:fetch "febuiles/dotemacs")
+(hoarder:fetch "git://orgmode.org/worg.git")
+(hoarder:fetch "roman/emacs.d")
+(hoarder:fetch "iconpin/dotemacs")
+(hoarder:fetch "jpace121/evil-ed")
+(hoarder:fetch "sunesimonsen/evil-config")
+(hoarder:fetch "gbarta/evil-my-shims")
+(hoarder:fetch "novoid/Memacs")
+(hoarder:fetch "novoid/dot-emacs"
               '(:tag ("org")))
-(vendle:fetch "terhechte/emacs.d")
-(vendle:fetch "echosa/emacs.d")
-(vendle:fetch "wataken44/dot.emacs.d2")
-(vendle:fetch "scottjad/dotfiles")
-(vendle:fetch "alexander-yakushev/.emacs.d")
-(vendle:fetch "LukeSwart/.emacs.d")
-(vendle:fetch "romanoaugusto88/.emacs.d")
-(vendle:fetch "jirkamarsik/sonic-screwdriver"
+(hoarder:fetch "terhechte/emacs.d")
+(hoarder:fetch "echosa/emacs.d")
+(hoarder:fetch "wataken44/dot.emacs.d2")
+(hoarder:fetch "scottjad/dotfiles")
+(hoarder:fetch "alexander-yakushev/.emacs.d")
+(hoarder:fetch "LukeSwart/.emacs.d")
+(hoarder:fetch "romanoaugusto88/.emacs.d")
+(hoarder:fetch "jirkamarsik/sonic-screwdriver"
               '(:recursive nil))
-(vendle:fetch "defunkt/emacs"
+(hoarder:fetch "defunkt/emacs"
               '(:recursive nil))
-(vendle:fetch "rejeep/emacs")
-(vendle:fetch "dragonwasrobot/dot-emacs")
-(vendle:fetch "jhamrick/emacs")
-(vendle:fetch "joedicastro/dotfiles")
-(vendle:fetch "emacs-tw/awesome-emacs")
-(vendle:fetch "11111000000/emacs-d")
-(vendle:fetch "Shougo/neobundle.vim"
+(hoarder:fetch "rejeep/emacs")
+(hoarder:fetch "dragonwasrobot/dot-emacs")
+(hoarder:fetch "jhamrick/emacs")
+(hoarder:fetch "joedicastro/dotfiles")
+(hoarder:fetch "emacs-tw/awesome-emacs")
+(hoarder:fetch "11111000000/emacs-d")
+(hoarder:fetch "Shougo/neobundle.vim"
               '(:tag "vim" "plugin_manager"))
-(vendle:fetch "Shougo/vimshell.vim"
+(hoarder:fetch "Shougo/vimshell.vim"
               '(:tag ("vim" "shell")))
-(vendle:fetch "sunaku/vim-unbundle"
+(hoarder:fetch "sunaku/vim-unbundle"
               '(:tag ("vim" "plugin_manager")))
-(vendle:fetch "kamichidu/vim-hariti"
+(hoarder:fetch "kamichidu/vim-hariti"
               '(:tag ("vim" "plugin_manager")))
-(vendle:fetch "gmarik/Vundle.vim"
+(hoarder:fetch "gmarik/Vundle.vim"
               '(:tag "vim"))
-(vendle:fetch "guns/vim-sexp"
+(hoarder:fetch "guns/vim-sexp"
               '(:tag "vim"))
-(vendle:fetch "tpope/vim-sexp-mappings-for-regular-people"
+(hoarder:fetch "tpope/vim-sexp-mappings-for-regular-people"
               '(:tag "vim"))
-(vendle:fetch "kovisoft/paredit"
+(hoarder:fetch "kovisoft/paredit"
               '(:tag ("vim" "paredit")))
-(vendle:fetch "goldfeld/vim-seek"
+(hoarder:fetch "goldfeld/vim-seek"
               '(:tag ("vim")))
-(vendle:fetch "justinmk/vim-sneak"
+(hoarder:fetch "justinmk/vim-sneak"
               '(:tag ("vim")))
-(vendle:fetch "miripiruni/vimi"
+(hoarder:fetch "miripiruni/vimi"
               '(:tag ("vim")))
-(vendle:fetch "junegunn/vim-plug"
+(hoarder:fetch "junegunn/vim-plug"
               '(:tag ("vim")))
-(vendle:fetch "bling/vim-airline"
+(hoarder:fetch "bling/vim-airline"
               '(:tag ("vim" "statusline")))
-(vendle:fetch "itchyny/lightline.vim"
+(hoarder:fetch "itchyny/lightline.vim"
               '(:tag("vim" "statusline")))
-(vendle:fetch "yuratomo/w3m.vim"
+(hoarder:fetch "yuratomo/w3m.vim"
               '(:tag ("vim" "browser" "web")))
-(vendle:fetch "kovan/dopemacs")
-(vendle:fetch "AshleyMoni/dotfiles"
+(hoarder:fetch "kovan/dopemacs")
+(hoarder:fetch "AshleyMoni/dotfiles"
               '(:tag ( "evil" "dotfiles" )))
-(vendle:fetch "EricGebhart/emacs-setup"
+(hoarder:fetch "EricGebhart/emacs-setup"
               '(:tag ( "evil" "dotfiles" )))
-(vendle:fetch "nadavspi/dotfiles"
+(hoarder:fetch "nadavspi/dotfiles"
               '(:tag ( "evil" "dotfiles" )
                 :recursive nil))
-(vendle:fetch "gridaphobe/dotfiles"
+(hoarder:fetch "gridaphobe/dotfiles"
               '(:tag ("evil" "dotifles")))
-(vendle:fetch "farisnasution/.evil-pack"
+(hoarder:fetch "farisnasution/.evil-pack"
               '(:tag ("evil" "dotifles")))
-(vendle:fetch "takaishi/.emacs.d"
+(hoarder:fetch "takaishi/.emacs.d"
               '(:tag "dotfiles"))
-(vendle:fetch "nanasess/dot.emacs")
-(vendle:fetch "technomancy/better-defaults")
-(vendle:fetch "chrismccord/dot_emacs")
-(vendle:fetch "thomasf/dotfiles-thomasf-emacs"
+(hoarder:fetch "nanasess/dot.emacs")
+(hoarder:fetch "technomancy/better-defaults")
+(hoarder:fetch "chrismccord/dot_emacs")
+(hoarder:fetch "thomasf/dotfiles-thomasf-emacs"
               '(:tag ( "dotfiles" "evil" )))
-(vendle:fetch "xcwen/site-lisp"
+(hoarder:fetch "xcwen/site-lisp"
               '(:tag ("evil")))
-(vendle:fetch "yangchenyun/emacs-prelude"
+(hoarder:fetch "yangchenyun/emacs-prelude"
               '(:tag ( "dotfiles" "evil" )))
 
-(vendle:fetch "stumpwm/stumpwm"
+(hoarder:fetch "stumpwm/stumpwm"
               '(:tag ("common_lisp" "stumpwm")))
-(vendle:fetch "stumpwm/stumpwm-contrib"
+(hoarder:fetch "stumpwm/stumpwm-contrib"
               '(:tag ("common_lisp" "stumpwm")))
-(vendle:fetch "stumpwm/stumpwm.wiki"
+(hoarder:fetch "stumpwm/stumpwm.wiki"
               '(:tag ("common_lisp" "stumpwm")))
-(vendle:fetch "deepfire/cl-org-mode"
+(hoarder:fetch "deepfire/cl-org-mode"
               '(:tag ("common_lisp" "org")))
-(vendle:fetch "Ramarren/cl-parser-combinators"
+(hoarder:fetch "Ramarren/cl-parser-combinators"
               '(:tag ("common_lisp" "parser")))
-(vendle:fetch "https://gitlab.common-lisp.net/alexandria/alexandria.git"
+(hoarder:fetch "https://gitlab.common-lisp.net/alexandria/alexandria.git"
               '(:tag ("common_lisp" )))
-(vendle:fetch "robert-strandh/SICL"
+(hoarder:fetch "robert-strandh/SICL"
               '(:tag ("common_lisp" )))
-(vendle:fetch "robert-strandh/Second-Climacs"
+(hoarder:fetch "robert-strandh/Second-Climacs"
               '(:tag ("common_lisp" "climacs" "clim" )))
-(vendle:fetch "robert-strandh/CLIMatis"
+(hoarder:fetch "robert-strandh/CLIMatis"
               '(:tag ("common_lisp" "climacs" "clim" )))
-(vendle:fetch "edicl/cl-unicode"
+(hoarder:fetch "edicl/cl-unicode"
               '(:tag ("common_lisp" "unicode")))
-(vendle:fetch "edicl/cl-fad"
+(hoarder:fetch "edicl/cl-fad"
               '(:tag ("common_lisp")))
 
-(vendle:fetch "gabriel-laddel/masamune")
-(vendle:fetch "Fanael/init.el"
+(hoarder:fetch "gabriel-laddel/masamune")
+(hoarder:fetch "Fanael/init.el"
               '(:tag "dotfiles"))
-(vendle:fetch "deftsp/.emacs.d"
+(hoarder:fetch "deftsp/.emacs.d"
               '(:tag ("dotfiles" "evil")))
-(vendle:fetch "zhen-qin/.emacs.d"
+(hoarder:fetch "zhen-qin/.emacs.d"
               '(:tag ("dotfiles" "evil")))
-(vendle:fetch "LeifAndersen/Emacs")
-(vendle:fetch "uwabami/emacs-config"
+(hoarder:fetch "LeifAndersen/Emacs")
+(hoarder:fetch "uwabami/emacs-config"
               '(:recursive nil))
-(vendle:fetch "farseer90718/dotemacs")
-(vendle:fetch "bixuanzju/emacs.d")
-(vendle:fetch "mahinshaw/emacsd"
+(hoarder:fetch "farseer90718/dotemacs")
+(hoarder:fetch "bixuanzju/emacs.d")
+(hoarder:fetch "mahinshaw/emacsd"
               '(:tag ("evil")))
-(vendle:fetch "bosko/boem")
-(vendle:fetch "jceb/vim-orgmode"
+(hoarder:fetch "bosko/boem")
+(hoarder:fetch "jceb/vim-orgmode"
               '(:tag ("vim" "org")))
-;; (vendle:fetch "borntorock/UI-toolkit-using-orgmode"
+;; (hoarder:fetch "borntorock/UI-toolkit-using-orgmode"
 ;;               '(:tag ("org")))
-(vendle:fetch "bodil/emacs.d")
-(vendle:fetch "jixiuf/emacs_conf"
+(hoarder:fetch "bodil/emacs.d")
+(hoarder:fetch "jixiuf/emacs_conf"
               '(:tag ("evil")))
-(vendle:fetch "m00natic/dot-emacs")
-(vendle:fetch "holguinj/evil-clojure-emacs"
+(hoarder:fetch "m00natic/dot-emacs")
+(hoarder:fetch "holguinj/evil-clojure-emacs"
               '(:tag ("evil" "clojure")))
-(vendle:fetch "rolandwalker/emacs-travis"
+(hoarder:fetch "rolandwalker/emacs-travis"
               '(:tag ("travis")))
-(vendle:fetch "wcsmith/dotemacs"
+(hoarder:fetch "wcsmith/dotemacs"
               '(:tag ("evil")))
-(vendle:fetch "takaxp/emacs.d")
-(vendle:fetch "senny/cabbage"
+(hoarder:fetch "takaxp/emacs.d")
+(hoarder:fetch "senny/cabbage"
               '(:recursive nil))
-(vendle:fetch "capitaomorte/holy"
+(hoarder:fetch "capitaomorte/holy"
               '(:tag ("stumpwm")
                 :recursive nil))
-(vendle:fetch "avendael/dotemacs"
+(hoarder:fetch "avendael/dotemacs"
               '(:tag ("evil")))
-(vendle:fetch "VincentToups/emacs-utils")
-(vendle:fetch "bamos/dotfiles")
-(vendle:fetch "bradyt/basic-computing-notes"
+(hoarder:fetch "VincentToups/emacs-utils")
+(hoarder:fetch "bamos/dotfiles")
+(hoarder:fetch "bradyt/basic-computing-notes"
               '(:tag ("org")))
-(vendle:fetch "Fuco1/.emacs.d")
-(vendle:fetch "nlamirault/scame")
-(vendle:fetch "dtan4/dot.emacs.d")
-(vendle:fetch "jimm/elisp")
-(vendle:fetch "magnars/.emacs.d"
+(hoarder:fetch "Fuco1/.emacs.d")
+(hoarder:fetch "nlamirault/scame")
+(hoarder:fetch "dtan4/dot.emacs.d")
+(hoarder:fetch "jimm/elisp")
+(hoarder:fetch "magnars/.emacs.d"
               '(:recursive nil))
-(vendle:fetch "steventlamb/lamb-horned-beast")
-(vendle:fetch "Bruce-Connor/emacs-online-documentation")
-(vendle:fetch "unbalancedparentheses/lunfardo")
-(vendle:fetch "emacsimize/org-admin"
+(hoarder:fetch "steventlamb/lamb-horned-beast")
+(hoarder:fetch "Bruce-Connor/emacs-online-documentation")
+(hoarder:fetch "unbalancedparentheses/lunfardo")
+(hoarder:fetch "emacsimize/org-admin"
               '(:tag ("org" "server")))
-(vendle:fetch "garaud/foggycowinn")
-(vendle:fetch "ardumont/org"
+(hoarder:fetch "garaud/foggycowinn")
+(hoarder:fetch "ardumont/org"
               '(:tag ("org")))
-(vendle:fetch "TheBB/dotfiles"
+(hoarder:fetch "TheBB/dotfiles"
               '(:tag ("evil" "org")
                 :desc "https://github.com/TheBB/dotfiles/blob/master/emacs/init.el#L841-975"
                 :recursive nil))
-(vendle:fetch "grettke/home"
+(hoarder:fetch "grettke/home"
               '(:tag ("org")))
-(vendle:fetch "lunaryorn/.emacs.d"
+(hoarder:fetch "lunaryorn/.emacs.d"
               '(:tag ("smartparens")))
-(vendle:fetch "fgallina/dotemacs")
-(vendle:fetch "ghoseb/dotemacs")
-(vendle:fetch "meteor1113/dotemacs")
-(vendle:fetch "bzg/dotemacs")
-(vendle:fetch "CestDiego/spacemacs_conf")
-(vendle:fetch "waymondo/hemacs")
-(vendle:fetch "davidvilla/emacs-pills")
-(vendle:fetch "cdlm/vitamined-mode-line")
-(vendle:fetch "wasamasa/dotemacs")
-(vendle:fetch "hlissner/emacs.d")
-(vendle:fetch "fniessen/orgmk"
+(hoarder:fetch "fgallina/dotemacs")
+(hoarder:fetch "ghoseb/dotemacs")
+(hoarder:fetch "meteor1113/dotemacs")
+(hoarder:fetch "bzg/dotemacs")
+(hoarder:fetch "CestDiego/spacemacs_conf")
+(hoarder:fetch "waymondo/hemacs")
+(hoarder:fetch "davidvilla/emacs-pills")
+(hoarder:fetch "cdlm/vitamined-mode-line")
+(hoarder:fetch "wasamasa/dotemacs")
+(hoarder:fetch "hlissner/emacs.d")
+(hoarder:fetch "fniessen/orgmk"
               '(:tag ("org")))
-(vendle:fetch "fniessen/org-macros"
+(hoarder:fetch "fniessen/org-macros"
               '(:tag ("org")))
-(vendle:fetch "fniessen/refcard-org-babel"
+(hoarder:fetch "fniessen/refcard-org-babel"
               '(:tag ("org")))
-(vendle:fetch "https://gitorious.org/org-cook/org-cook.git"
+(hoarder:fetch "https://gitorious.org/org-cook/org-cook.git"
               '(:tag ("org" "cooking")))
-(vendle:fetch "https://gitorious.org/org-brew/org-brew.git"
+(hoarder:fetch "https://gitorious.org/org-brew/org-brew.git"
               '(:tag ("org" "brewing")))
-(vendle:fetch "krisajenkins/EvilBegins"
+(hoarder:fetch "krisajenkins/EvilBegins"
               '(:tag ("evil")))
-(vendle:fetch "bzg/org-mode-rr"
+(hoarder:fetch "bzg/org-mode-rr"
               '(:tag ("org" "reproducible_research")))
-(vendle:fetch "jkitchin/jmax"
+(hoarder:fetch "jkitchin/jmax"
               '(:tag ("org")
                 :recursive nil))
-(vendle:fetch "ihodes/emacs.org"
+(hoarder:fetch "ihodes/emacs.org"
               '(:tag ("org")))
-(vendle:fetch "tsu-nera/dotfiles"
+(hoarder:fetch "tsu-nera/dotfiles"
               '(:tag ("org")))
-(vendle:fetch "roman/birdseye.el"
+(hoarder:fetch "roman/birdseye.el"
               '(:tag ("configuration")))
-(vendle:fetch "tonini/owl.el"
+(hoarder:fetch "tonini/owl.el"
               '(:tag ("documentation")))
-(vendle:fetch "JarrodCTaylor/monster"
+(hoarder:fetch "JarrodCTaylor/monster"
               '(:tag ("evil")))
-(vendle:fetch "git://git.code.sf.net/p/cedet/git"
+(hoarder:fetch "git://git.code.sf.net/p/cedet/git"
               '(:name "cedet"
                 :tag ("eieio" "cedet")))
-(vendle:fetch "scymtym/rudel"
+(hoarder:fetch "scymtym/rudel"
               '(:tag ("eieio")))
-(vendle:fetch "scymtym/moped"
+(hoarder:fetch "scymtym/moped"
               '(:tag ("clos" "eieio")))
-(vendle:fetch "scymtym/zencoding")
-(vendle:fetch "kiwanami/emacs-elroutine"
+(hoarder:fetch "scymtym/zencoding")
+(hoarder:fetch "kiwanami/emacs-elroutine"
               '(:tag ("process")))
-(vendle:fetch "holtzermann17/metaca"
+(hoarder:fetch "holtzermann17/metaca"
               '(:tag ("automata")))
-(vendle:fetch "Prismatic/plumbing"
+(hoarder:fetch "Prismatic/plumbing"
               '(:tag "clojure"))
-(vendle:fetch "jkitchin/org-ref"
+(hoarder:fetch "jkitchin/org-ref"
               '(:tag ("org" "bibtex")))
-(vendle:fetch "emacsmirror/eoops"
+(hoarder:fetch "emacsmirror/eoops"
               '(:tag ("oop")))
-(vendle:fetch "WildCarrot/OrgThings"
+(hoarder:fetch "WildCarrot/OrgThings"
               '(:tag ("org")))
-(vendle:fetch "kiwanami/emacs-widget-mvc"
+(hoarder:fetch "kiwanami/emacs-widget-mvc"
               '(:tug ("widget" "gui")))
-(vendle:fetch "vapniks/org-dotemacs"
+(hoarder:fetch "vapniks/org-dotemacs"
               '(:tag ("org" "configuration")))
-;; (vendle:fetch "ellerh/xref")
-(vendle:fetch "kelvinh/org-page"
+;; (hoarder:fetch "ellerh/xref")
+(hoarder:fetch "kelvinh/org-page"
               '(:tag ("org")))
-(vendle:fetch "abedra/emacs.d")
-(vendle:fetch "emacsmirror/xclip"
+(hoarder:fetch "abedra/emacs.d")
+(hoarder:fetch "emacsmirror/xclip"
               '(:tag "clipboard"))
-;;(vendle:fetch "emacsmirror/uni-confusables"
+;;(hoarder:fetch "emacsmirror/uni-confusables"
 ;;              '(:tag "unicode"))
-(vendle:fetch "funcool/cats"
+(hoarder:fetch "funcool/cats"
               '(:tag ("clojure" "monad")))
-(vendle:fetch "jonnay/emagicians-starter-kit"
+(hoarder:fetch "jonnay/emagicians-starter-kit"
               '(:tag ("org" "configuration")))
-(vendle:fetch "julfy/scopid")
-(vendle:fetch "holomorph/transmission"
+(hoarder:fetch "julfy/scopid")
+(hoarder:fetch "holomorph/transmission"
               '(:tag ("transmisson")))
-(vendle:fetch "tromey/emacs-module"
+(hoarder:fetch "tromey/emacs-module"
               '(:tag ("module")))
-(vendle:fetch "vikasrawal/orgpaper"
+(hoarder:fetch "vikasrawal/orgpaper"
               '(:tag ("org")))
-(vendle:fetch "shellhead/org-docs"
+(hoarder:fetch "shellhead/org-docs"
               '(:tag ("org")))
-(vendle:fetch "tuhdo/emacs-c-ide-demo")
-(vendle:fetch "tkf/emacs-ipython-notebook"
+(hoarder:fetch "tuhdo/emacs-c-ide-demo")
+(hoarder:fetch "tkf/emacs-ipython-notebook"
               '(:tag ("python")
                 :recursive nil))
-(vendle:fetch "ryzzn/sydi-site"
+(hoarder:fetch "ryzzn/sydi-site"
               '(:tag ("org" "html")))
-(vendle:fetch "tonini/emacs.d")
-(vendle:fetch "Lindydancer/e2ansi"
+(hoarder:fetch "tonini/emacs.d")
+(hoarder:fetch "Lindydancer/e2ansi"
               '(:tag ("terminal" "escape_sequence")
                 :desc "Syntax highlighting support for terminals, powered by Emacs"))
-(vendle:fetch "mlf176f2/EmacsMate")
-(vendle:fetch "https://gitlab.com/emacs-stuff/fasd-shell.git"
+(hoarder:fetch "mlf176f2/EmacsMate")
+(hoarder:fetch "https://gitlab.com/emacs-stuff/fasd-shell.git"
               '(:tag ("fasd" "shell" "ido")
                 :desc "Use ido completion for the fasd utility in an emacs shell."))
-(vendle:fetch "coldnew/eshell-autojump"
+(hoarder:fetch "coldnew/eshell-autojump"
               '(:tag ("eshell" "autojump")))
-(vendle:fetch "impaktor/unison-mode"
+(hoarder:fetch "impaktor/unison-mode"
               '(:tag ("unison")))
-(vendle:fetch "Sodaware/beeminder.el"
+(hoarder:fetch "Sodaware/beeminder.el"
               '(:tag ("beeminder" "org")))
-(vendle:fetch "skwp/dotfiles"
+(hoarder:fetch "skwp/dotfiles"
               '(:tag ("tmux" "vim" "zsh")))
-(vendle:fetch "git://git.savannah.gnu.org/guix.git"
+(hoarder:fetch "git://git.savannah.gnu.org/guix.git"
               '(:tag ("guix" "package_manager")
                 :site "http://www.gnu.org/software/guix/"
                 :desc "This is Guix! Purely functional package manager for GNU, and distribution of the GNU system."))
-(vendle:fetch "eschulte/org-scraps"
+(hoarder:fetch "eschulte/org-scraps"
               '(:tag ("org")))
-(vendle:fetch "yuratomo/w3m.vim"
+(hoarder:fetch "yuratomo/w3m.vim"
               '(:tag ("vim" "w3m")))
 
-(vendle:fetch "flexibeast/ewmctrl"
+(hoarder:fetch "flexibeast/ewmctrl"
               '(:tag ("wmctrl")))
-(vendle:fetch "abo-abo/org-fu"
+(hoarder:fetch "abo-abo/org-fu"
               '(:tag ("org")))
-(vendle:fetch "tumashu/chinese-fonts-setup"
+(hoarder:fetch "tumashu/chinese-fonts-setup"
               '(tag ("chinese" "font")))
-(vendle:fetch "aoksh/weblauncher"
+(hoarder:fetch "aoksh/weblauncher"
               '(:tag ("web" "bookmark")))
 ;; repository not working
-;; (vendle:fetch "git://git01.fort.kickass.systems/fsem.git"
+;; (hoarder:fetch "git://git01.fort.kickass.systems/fsem.git"
 ;;               '(:tag ("org")
 ;;                 :site "http://doc.rix.si/org/fsem.html"))
-(vendle:fetch "emacsmirror/windows"
+(hoarder:fetch "emacsmirror/windows"
               '(:tag ("window_management")
                 :desc "Window manager for GNU Emacs."))
-(vendle:fetch "emacsmirror/mpg123"
+(hoarder:fetch "emacsmirror/mpg123"
               '(:tag ("mpg123")))
-(vendle:fetch "thartman83/org-filer"
+(hoarder:fetch "thartman83/org-filer"
               '(:tag ("org")))
-(vendle:fetch "chrisdone/elisp-guide"
+(hoarder:fetch "chrisdone/elisp-guide"
               '(:tag ("elisp" "programming")))
-(vendle:fetch "baohaojun/system-config"
+(hoarder:fetch "baohaojun/system-config"
               '(:tag ("chinese" "font")))
-(vendle:fetch "emacsmirror/swbuff-x"
+(hoarder:fetch "emacsmirror/swbuff-x"
               '(:tag ("buffer")))
-(vendle:fetch "alezost/emacs-utils"
+(hoarder:fetch "alezost/emacs-utils"
               '(:tag ("utility")))
-(vendle:fetch "defaultxr/tracker.el"
+(hoarder:fetch "defaultxr/tracker.el"
               '(:tag ("osc" "music" "tracker")))
-(vendle:fetch "steckerhalter/steckemacs.el"
+(hoarder:fetch "steckerhalter/steckemacs.el"
               '(:tag ("configuration" "quelpa")))
-(vendle:fetch "DamienCassou/unify-opening"
+(hoarder:fetch "DamienCassou/unify-opening"
               '(:desc "Emacs package to make everything use the same mechanism to open files"))
-(vendle:fetch "steckerhalter/steckemacs"
+(hoarder:fetch "steckerhalter/steckemacs"
               '(:tag ("org" "org-babel")))
-(vendle:fetch "atykhonov/dtc.el")
-(vendle:fetch "hillgreen012/xinix"
+(hoarder:fetch "atykhonov/dtc.el")
+(hoarder:fetch "hillgreen012/xinix"
               '(:tag ("configuration")))
-(vendle:fetch "nsaeki/dotemacs")
-(vendle:fetch "lambdasakura/emacs")
-(vendle:fetch "julienchastang/dotemacs"
+(hoarder:fetch "nsaeki/dotemacs")
+(hoarder:fetch "lambdasakura/emacs")
+(hoarder:fetch "julienchastang/dotemacs"
               '(:tag ("org")))
-(vendle:fetch "howardabrams/dot-files"
+(hoarder:fetch "howardabrams/dot-files"
               '(:tag ("org")))
-(vendle:fetch "ikame/dotfiles"
+(hoarder:fetch "ikame/dotfiles"
               '(:tag ("org" "conkeror")))
-(vendle:fetch "kuanyui/.emacs.d")
-(vendle:fetch "emacsmirror/disptime")
-(vendle:fetch "xahlee/xah_emacs_init")
-(vendle:fetch "lisp/de.setf.utility"
+(hoarder:fetch "kuanyui/.emacs.d")
+(hoarder:fetch "emacsmirror/disptime")
+(hoarder:fetch "xahlee/xah_emacs_init")
+(hoarder:fetch "lisp/de.setf.utility"
               '(:tag ("common_lisp")))
-(vendle:fetch "tarao/el-get-cli"
+(hoarder:fetch "tarao/el-get-cli"
               '(:tag ("el-get" "cli")))
-(vendle:fetch "coldasparagus/face-schemes"
+(hoarder:fetch "coldasparagus/face-schemes"
               '(:tag ("face" "font")))
-(vendle:fetch "kiwanami/emacs-anything-books"
+(hoarder:fetch "kiwanami/emacs-anything-books"
               '(:tag ("anything" "book")))
-(vendle:fetch "sbcl/specializable"
+(hoarder:fetch "sbcl/specializable"
               '(:tag ("common_lisp" "clos")))
-(vendle:fetch "jave/xwidget-aux"
+(hoarder:fetch "jave/xwidget-aux"
               '(:tag ("xwidget")))
-(vendle:fetch "tomoyuki28jp/stumpwm"
+(hoarder:fetch "tomoyuki28jp/stumpwm"
               '(:tag ("stumpwm")))
-(vendle:fetch "joelagnel/stumpwm-goodies"
+(hoarder:fetch "joelagnel/stumpwm-goodies"
               '(:tag ("stumpwm")))
-(vendle:fetch "eggcaker/pelm"
+(hoarder:fetch "eggcaker/pelm"
               '(:tag ("org")))
-(vendle:fetch "bodil/ohai-emacs")
-(vendle:fetch "jwiegley/dot-emacs")
-(vendle:fetch "expez/.emacs.d")
-(vendle:fetch "fjyuu/dotfiles")
-(vendle:fetch "wasamasa/xbm-life")
-(vendle:fetch "bodil/microkanrens"
+(hoarder:fetch "bodil/ohai-emacs")
+(hoarder:fetch "jwiegley/dot-emacs")
+(hoarder:fetch "expez/.emacs.d")
+(hoarder:fetch "fjyuu/dotfiles")
+(hoarder:fetch "wasamasa/xbm-life")
+(hoarder:fetch "bodil/microkanrens"
               '(:tag ("logic" "kanren")))
-(vendle:fetch "emacs-pe/cookiecutter-emacs"
+(hoarder:fetch "emacs-pe/cookiecutter-emacs"
               '(:tag ("cookiecutter" "template")))
-(vendle:fetch "edrx/eev"
+(hoarder:fetch "edrx/eev"
               '(:site "http://angg.twu.net/#eev"))
-(vendle:fetch "laynor/smotitah"
+(hoarder:fetch "laynor/smotitah"
               '(:tag ("configuration")))
-(vendle:fetch "snosov1/dot-emacs")
-(vendle:fetch "pierre-lecocq/emacs.d")
-(vendle:fetch "meteor1113/dotemacs")
-(vendle:fetch "jeffgran/elscreen-bg"
+(hoarder:fetch "snosov1/dot-emacs")
+(hoarder:fetch "pierre-lecocq/emacs.d")
+(hoarder:fetch "meteor1113/dotemacs")
+(hoarder:fetch "jeffgran/elscreen-bg"
               '(:desc "defadvice"))
-(vendle:fetch "Idorobots/mode-line-stats"
+(hoarder:fetch "Idorobots/mode-line-stats"
               '(:tag ("mode-line")))
-(vendle:fetch "dz/dotfiles")
-(vendle:fetch "git://gist.github.com/5264829.git"
+(hoarder:fetch "dz/dotfiles")
+(hoarder:fetch "git://gist.github.com/5264829.git"
               '(:tag ("emms" "sabof" "gist")))
-(vendle:fetch "NightBlues/deploy-framework"
+(hoarder:fetch "NightBlues/deploy-framework"
               '(:tag ("deploy")
                 :depends ("sviridov/undercover.el")))
-(vendle:fetch "https://bitbucket.org/hoangtu/.emacs.d.git")
-(vendle:fetch "wiedzmin/stumpwm-config"
+(hoarder:fetch "https://bitbucket.org/hoangtu/.emacs.d.git")
+(hoarder:fetch "wiedzmin/stumpwm-config"
               '(:tag ("stumpwm")))
-(vendle:fetch "abo-abo/oremacs"
+(hoarder:fetch "abo-abo/oremacs"
               '(:tag ("configuration" "org" "lispy" "hydra")))
-(vendle:fetch "inlinestyle/lifted.el")
-(vendle:fetch "luxbock/spacemacs-luxbock"
+(hoarder:fetch "inlinestyle/lifted.el")
+(hoarder:fetch "luxbock/spacemacs-luxbock"
               '(:tag ("spacemacs" "evil" "evil-cleverparens")))
-(vendle:fetch "emacsmirror/minibuffer-line"
+(hoarder:fetch "emacsmirror/minibuffer-line"
               '(:tag ("minibuffer" "timer")))
-(vendle:fetch "uwabami/el-get-deb-package"
+(hoarder:fetch "uwabami/el-get-deb-package"
               '(:tag ("el-get" "debian")))
-(vendle:fetch "dfeich/org-babel-examples"
+(hoarder:fetch "dfeich/org-babel-examples"
               '(:tag ("org" "org-babel" )))
-(vendle:fetch "renard/o-blog"
+(hoarder:fetch "renard/o-blog"
               '(:tag ("org" "blog")))
-(vendle:fetch "tuhdo/tuhdo.github.io"
+(hoarder:fetch "tuhdo/tuhdo.github.io"
               '(:tag ("org" "emacs-tutor")))
 
-;; (vendle:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
+;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
-;; (vendle:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
+;; (hoarder:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
 ;; '(:tag ("common_lisp")
 ;; :type hg))
 
 
-;;; init-vendle-registers.el ends here
+;;; init-hoarder-registers.el ends here
 ;;

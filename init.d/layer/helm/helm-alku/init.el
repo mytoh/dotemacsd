@@ -20,7 +20,7 @@
          ("lainchan" . "~/huone/kuvat/sivusto/lainchan")
          ("futaba" . "~/huone/kuvat/sivusto/futaba")
          ("paketti" . ,(locate-user-emacs-file "init.d/paketit"))
-         ("vendle" . ,(locate-user-emacs-file "vendle"))
+         ("hoarder" . ,(locate-user-emacs-file "hoarder"))
          ("elpa" . ,(locate-user-emacs-file "elpa"))))
     (helm-alku-directory-add-subdirectories "~/huone/projektit")
     (set-option helm-alku-program-list
