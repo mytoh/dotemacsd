@@ -15,8 +15,14 @@
           evil-snipe-smart-case t)
     (setq evil-snipe-repeat-scope 'whole-buffer
           evil-snipe-override-evil t)
+
     (add-hook 'prog-mode-hook 'evil-snipe-mode)
-    (add-hook 'text-mode-hook 'evil-snipe-mode)))
+    (add-hook 'text-mode-hook 'evil-snipe-mode)
+
+    (add-hook 'prog-mode-hook
+              (lambda () (enable-mode evil-snipe-override-mode)))
+    (add-hook 'text-mode-hook
+              (lambda () (enable-mode evil-snipe-override-mode)))))
 
 (cl-defun muki:init-evil-snipe-like-vim-seek ()
   (req 'evil-snipe
