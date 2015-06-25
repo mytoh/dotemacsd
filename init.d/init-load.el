@@ -287,6 +287,7 @@
     emms-mode
     emacs-lisp-mode
     org-mode
+    expand-region
     ))
 
 (muki-layer:load-layers 'helm
