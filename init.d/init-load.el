@@ -199,6 +199,7 @@
     fontawesome
     adoc-mode
     creole-mode
+    psession
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image
@@ -346,7 +347,7 @@
     rcirc
     tramp
     eieio
-    savehist ; if history file become too large, delete file or disable mode
+    ;; savehist ; if history file become too large, delete file or disable mode
     recentf
     ))
 
