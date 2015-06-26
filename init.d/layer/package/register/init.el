@@ -742,11 +742,11 @@
                   '(:tag ("project" "template")))
 (hoarder:register "bmag/emacs-purpose"
                   '(:tag ("window" "layout")))
-(hoarder:register "git://git.savannah.gnu.org/tramp.git"
-                  '(:tag ("tramp" "ssh")
-                    :build ("autoconf" "./configure" "gmake")
-                    :load-path ("lisp")
-                    :info "info"))
+;; (hoarder:register "git://git.savannah.gnu.org/tramp.git"
+;;                   '(:tag ("tramp" "ssh")
+;;                     :build ("autoconf" "./configure" "gmake")
+;;                     :load-path ("lisp")
+;;                     :info "info"))
 (hoarder:register "ataka/emacs-wget"
                   '(:tag ("wget")))
 (hoarder:register "rmuslimov/browse-at-remote"
@@ -877,6 +877,7 @@
 (hoarder:register "emacsmirror/csv-mode"
                   '(:tag ("csv")))
 (hoarder:register "nicferrier/creole-mode")
+(hoarder:register "thierryvolpiatto/psession")
 
 ;; (hoarder:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
