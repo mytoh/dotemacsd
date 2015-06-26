@@ -21,6 +21,9 @@
     "ms" #'org-schedule
     ;; insertion of common elements
     "mil" #'org-insert-link
-    "mif" #'org-footnote-new)
+    "mif" #'org-footnote-new
+
+    ;; helm
+    "mhl" #'helm-org-headlines)
 
 ;;; init.el ends here
