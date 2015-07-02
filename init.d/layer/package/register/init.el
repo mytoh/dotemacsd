@@ -199,6 +199,7 @@
                   '(:build ("gmake lisp docs")
                     :info "Documentation"
                     :load-path ("lisp")
+                    :depends (("magnars/dash.el" ( :compile nil)))
                     :tag "git"))
 (hoarder:register "magit/orgit"
                   '(:depends (("magit/magit"
