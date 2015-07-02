@@ -40,8 +40,8 @@
     (enable-option evil-leader/in-all-states)
 
     (evil-leader/set-key
-        "Q" #'evil-quit-all
-      "q" #'kill-buffer-and-window
+        "qQ" #'evil-quit-all
+      "qq" #'kill-buffer-and-window
       ;; Universal argument ---------------------------------------------------------
       "u" #'universal-argument)
 
@@ -49,6 +49,7 @@
       "f" #'describe-function
       "k" #'describe-key
       "m" #'describe-mode
+      "c" #'describe-char
       "v" #'describe-variable)
 
     (cl-defun switch-to-scratch-buffer ()
