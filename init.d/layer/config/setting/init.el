@@ -15,7 +15,7 @@
 ;; (set-option fancy-splash-image (muki:user-emacs-directory "splash/splash.png"))
 
 ;;;; parens
-(enable-mode show-paren-mode)
+(add-hook 'prog-mode-hook #'show-paren-mode)
 (set-option show-paren-delay 0
             show-paren-style 'mixed)
 ;; (set-face-attribute 'show-paren-match-face nil
@@ -444,5 +444,8 @@
 
 ;; end sentence with single space
 (disable-option sentence-end-double-space)
+
+;; disable character fold search
+(disable-option character-fold-search)
 
 ;;; config-setting.el ends here
