@@ -362,6 +362,8 @@
                   '(:tag ("common_lisp" "completion" "company" "sly")))
 (hoarder:register "PuercoPop/sly-repl-ansi-color"
                   '(:tag ("sly")))
+(hoarder:register "slime/slime"
+                  '(:tag ("common_lisp")))
 (hoarder:register "hayamiz/twittering-mode"
                   '(:tag ("twitter")))
 (hoarder:register "mhayashi1120/Emacs-twittering-stream"
@@ -878,6 +880,10 @@
                   '(:tag ("csv")))
 (hoarder:register "nicferrier/creole-mode")
 (hoarder:register "thierryvolpiatto/psession")
+;; (hoarder:register "papaeye/emacs-jscs"
+;;                   '(:tag ("language" "javascript" "jscs" "format")
+;;                     :depends (("papaeye/go-mode.el"
+;;                                (:tag ("langfmt"))))))
 
 ;; (hoarder:register "politza/pdf-tools"
 ;;                  '(:tag ("pdf")))
@@ -977,6 +983,10 @@
                               "Fuco1/smartparens")))
 (hoarder:register "lotabout/evil-mc"
                   '(:tag ("evil" "multiple-cursor")))
+(hoarder:register "willghatch/emacs-on-parens"
+                  '(:tag ("evil" "smartparens")
+                    :depends ("Fuco1/smartparens"
+                              "magnars/dash.el")))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1171,6 +1181,7 @@
 (hoarder:register-theme "kostafey/organic-green-theme")
 (hoarder:register-theme "nashamri/spacemacs-theme")
 (hoarder:register-theme "timrichardt/zendyke")
+(hoarder:register-theme "biotician/emacs-bloomlight-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
