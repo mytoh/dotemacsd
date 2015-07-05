@@ -137,8 +137,11 @@
     ;; web-beautify
     direx
     oniisama
-    guide-key
-    guide-key-tip
+
+    ;; guide-key
+    ;; guide-key-tip
+    ;; which-key
+
     clojure-mode
     lorem-ipsum
     emacs-color-themes

@@ -202,22 +202,11 @@
                     :depends (("magnars/dash.el" ( :compile nil)))
                     :tag "git"))
 (hoarder:register "magit/orgit"
-                  '(:depends (("magit/magit"
-                               (:build ("gmake lisp docs")
-                                       :info "."
-                                       :tag ("git" )))
-                              ("magnars/dash.el" ( :compile nil)))
-                    :tag ("git" "org" "magit")))
+                  '(:tag ("git" "org" "magit")))
 (hoarder:register "mickesv/magit-overview"
-                  '(:tag ("magit")
-                    :depends (("magit/magit"
-                               (:build ("gmake lisp docs")
-                                       :info "."
-                                       :tag "git")))))
+                  '(:tag ("magit")))
 (hoarder:register "magit/magit-filenotify"
-                  '(:tag ("magit")
-                    :depends (("magit/magit"
-                               (:build ("gmake lisp docs") :info "." :tag "git")))))
+                  '(:tag ("magit")))
 (hoarder:register "dholm/magit-idle-breadcrumbs"
                   '(:tag ("magit")))
 (hoarder:register "YoungFrog/git-overview"
@@ -881,6 +870,11 @@
                   '(:tag ("csv")))
 (hoarder:register "nicferrier/creole-mode")
 (hoarder:register "thierryvolpiatto/psession")
+(hoarder:register "justbur/emacs-which-key"
+                  '(:tag ("guide-key")
+                    :depends ("magnars/s.el"
+                              "m2ym/popwin-el")))
+(hoarder:register "gongo/shimapan.el")
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :depends (("papaeye/go-mode.el"

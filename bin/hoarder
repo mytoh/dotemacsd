@@ -1,5 +1,5 @@
 #!emacs --script
-;; -*- mode: emacs-lisp; lexical-binding: t; -*-
+;; -*- lexical-binding: t; -*-
 
 (setq lexical-binding t)
 
@@ -117,3 +117,7 @@
      (hoarder:check))))
 
 (main)
+
+;; Local Variables:
+;; mode: emacs-lisp
+;; End:

@@ -19,7 +19,7 @@
                  (turf-page "peercast.takami98.net/turf-page")
                  (oekaki "oekakiyp.appspot.com")
                  (event "eventyp.xrea.jp")
-                 (message "peercast.takami98.net/message-yp")
+                 ;; (message "peercast.takami98.net/message-yp")
                  ))
 
   (set-option helm-ypv-player-type 'mpv)
