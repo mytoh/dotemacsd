@@ -150,11 +150,26 @@
         "+" #'emms-volume-raise
         "-" #'emms-volume-lower))
 
+
+    (cl-defun muki:open-file-init-load ()
+      (interactive)
+      (find-file (expand-file-name
+                  "init.d/init-load.el"
+                  user-emacs-directory)))
+
+    (cl-defun muki:open-file-package-registers ()
+      (interactive)
+      (find-file (expand-file-name
+                  "init.d/layer/package/register/init.el"
+                  user-emacs-directory)))
+
     (muki:evil-leader-prefix-set-keys 'file
       "f" #'helm-find-files
       "g" #'helm-ls-git-ls
       "w" 'evil-write
-      "eh" #'helm-alku-layer)
+      "eh" #'helm-alku-layer
+      "el" #'muki:open-file-init-load
+      "er" #'muki:open-file-package-registers)
 
 
     (muki:evil-leader-prefix-set-keys 'org
@@ -164,13 +179,6 @@
       (muki:evil-leader-prefix-set-keys 'theme
         "r" #'theme-looper-enable-random-theme
         "n" #'theme-looper-enable-next-theme))
-
-    ;; (defun-add-hook muki:evil-ace-jump-mode-setup (after-init-hook)
-    ;;   (when (and (featurep 'evil) (featurep 'evil-leader))
-    ;;     (evil-leader/set-key
-    ;;         "<SPC>c" 'evil-ace-jump-char-mode
-    ;;       "<SPC>w" 'evil-ace-jump-word-mode
-    ;;       "<SPC>l" 'evil-ace-jump-line-mode)))
 
     ))
 
