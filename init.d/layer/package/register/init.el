@@ -19,6 +19,8 @@
                   '(:tag ("helm" "migemo")))
 (hoarder:register "emacs-helm/helm-ls-git"
                   '(:tag ("helm" "git")))
+(hoarder:register "emacs-helm/helm-ls-hg"
+                  '(:tag ("helm" "mercurial")))
 (hoarder:register "emacs-helm/helm-cmd-t"
                   '(:tag ("helm")))
 (hoarder:register "ShingoFukuyama/helm-swoop"
