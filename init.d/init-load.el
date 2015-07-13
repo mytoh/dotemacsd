@@ -140,7 +140,7 @@
 
     ;; guide-key
     ;; guide-key-tip
-    ;; which-key
+    which-key
 
     clojure-mode
     lorem-ipsum

@@ -2,8 +2,8 @@
 
 ;;; Code:
 
-(req 'which-key
+(liby 'which-key
   (req 'popwin)
-  (which-key-mode))
+  (command (which-key-mode) "which-key"))
 
 ;;; init.el ends here

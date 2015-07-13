@@ -24,6 +24,6 @@
     "mif" #'org-footnote-new
 
     ;; helm
-    "mhl" #'helm-org-headlines)
+    "mhl" #'helm-org-in-buffer-headings)
 
 ;;; init.el ends here
