@@ -203,6 +203,7 @@
     adoc-mode
     creole-mode
     psession
+    picpocket
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image
