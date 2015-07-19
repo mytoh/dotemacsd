@@ -1179,6 +1179,8 @@
 (hoarder:register-theme "nashamri/spacemacs-theme")
 (hoarder:register-theme "timrichardt/zendyke")
 (hoarder:register-theme "biotician/emacs-bloomlight-theme")
+(hoarder:register-theme "vyp/redbelly")
+(hoarder:register-theme "NicolasPetton/zerodark-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
