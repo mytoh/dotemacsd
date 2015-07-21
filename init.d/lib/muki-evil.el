@@ -5,9 +5,14 @@
 (require 'evil)
 (require 'evil-leader)
 
+(defvar muki:evil-leader-major-mode-prefix
+  ",")
+
+
 (cl-defmacro muki:evil-leader-define-local-leader-key (keymap key def)
   `(evil-define-key 'normal ,keymap
-     ,(seq-concatenate 'string "," key)
+     ,(seq-concatenate 'string muki:evil-leader-major-mode-prefix
+                       key)
      ,def))
 
 (cl-defmacro muki:evil-leader-define-local-leader-keys (keymap &rest bindings)
