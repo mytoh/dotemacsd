@@ -871,7 +871,8 @@
 (hoarder:register "emacsmirror/csv-mode"
                   '(:tag ("csv")))
 (hoarder:register "nicferrier/creole-mode")
-(hoarder:register "thierryvolpiatto/psession")
+(hoarder:register "thierryvolpiatto/psession"
+                  '(:tag ("history" "session")))
 (hoarder:register "justbur/emacs-which-key"
                   '(:tag ("guide-key")
                     :depends ("magnars/s.el"
