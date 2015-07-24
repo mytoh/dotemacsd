@@ -93,7 +93,6 @@
 (cl-defun muki:indent-buffer ()
   "milkypostman/dotemacs/defun.el"
   (interactive)
-  (delete-trailing-whitespace)
   (indent-region (point-min) (point-max)))
 
 ;; prelude/init.el
