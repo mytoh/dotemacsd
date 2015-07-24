@@ -204,6 +204,7 @@
     creole-mode
     psession
     picpocket
+    ws-butler
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image
