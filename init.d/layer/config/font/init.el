@@ -203,7 +203,7 @@
                                :registry  "iso10646-1"))
   (set-face-attribute 'default nil :family   "Source Han Code JP" :height 70)
   (set-face-attribute 'variable-pitch nil :family  "Source Han Code JP" )
-  (set-fontset-font t 'symbol "Symbola" nil 'prepend))
+  (set-fontset-font t 'symbol (font-spec :name "Symbola" :size 11) nil 'prepend))
 
 (cl-defun muki:set-font (type)
   (cond
