@@ -14,7 +14,6 @@
   (muki:init-evil-jumper)
   (muki:init-evil-visualstar)
   (muki:init-evil-search-highlight-persist)
-  (muki:init-evil-easymotion)
   (muki:init-evil-textobj-between)
   (muki:init-evil-extra-operator)
   (muki:init-evil-anzu)
