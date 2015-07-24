@@ -2,28 +2,30 @@
 
 ;;; Code:
 
-(evil-leader/set-key-for-mode 'org-mode
-    "m'" #'org-edit-special
-    "mc" #'org-capture
-    "md" #'org-deadline
-    "me" #'org-export-dispatch
-    "mf" #'org-set-effort
-    ;; headings
-    "mhi" #'org-insert-heading-after-current
-    "mhI" #'org-insert-heading
-    "mI" #'org-clock-in
-    "m," #'org-ctrl-c-ctrl-c
-    "mn" #'org-narrow-to-subtree
-    "mN" #'widen
-    "mO" #'org-clock-out
-    "mq" #'org-clock-cancel
-    "mR" #'org-refile
-    "ms" #'org-schedule
-    ;; insertion of common elements
-    "mil" #'org-insert-link
-    "mif" #'org-footnote-new
+(require 'muki-evil)
 
-    ;; helm
-    "mhl" #'helm-org-in-buffer-headings)
+(muki:evil-leader-define-key-for-mode (org-mode org-mode-map)
+  "'" #'org-edit-special
+  "c" #'org-capture
+  "d" #'org-deadline
+  "e" #'org-export-dispatch
+  "f" #'org-set-effort
+  ;; headings
+  "hi" #'org-insert-heading-after-current
+  "hI" #'org-insert-heading
+  "I" #'org-clock-in
+  "," #'org-ctrl-c-ctrl-c
+  "n" #'org-narrow-to-subtree
+  "N" #'widen
+  "O" #'org-clock-out
+  "q" #'org-clock-cancel
+  "R" #'org-refile
+  "s" #'org-schedule
+  ;; insertion of common elements
+  "il" #'org-insert-link
+  "if" #'org-footnote-new
+
+  ;; helm
+  "hl" #'helm-org-in-buffer-headings)
 
 ;;; init.el ends here
