@@ -878,6 +878,8 @@
                     :depends ("magnars/s.el"
                               "m2ym/popwin-el")))
 (hoarder:register "gongo/shimapan.el")
+(hoarder:register "lewang/ws-butler"
+                  '(:tag ("whitespace" "cleanup")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :depends (("papaeye/go-mode.el"
@@ -953,7 +955,7 @@
 (hoarder:register "tarleb/evil-scout")
 (hoarder:register "PythonNut/evil-easymotion"
                   '(:tag "evil"
-                    :depends ( "winterTTr/ace-jump-mode"
+                    :depends (  "abo-abo/avy"
                               "nicferrier/emacs-noflet")))
 (hoarder:register "hlissner/evil-snipe"
                   '(:tag "evil"
