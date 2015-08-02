@@ -1184,6 +1184,7 @@
 (hoarder:register-theme "biotician/emacs-bloomlight-theme")
 (hoarder:register-theme "vyp/redbelly")
 (hoarder:register-theme "NicolasPetton/zerodark-theme")
+(hoarder:register-theme "credmp/arjen-grey")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1585,7 +1586,7 @@
 (hoarder:fetch "thartman83/org-filer"
                '(:tag ("org")))
 (hoarder:fetch "chrisdone/elisp-guide"
-               '(:tag ("elisp" "programming")))
+               '(:tag ("elisp" "programming" "guide")))
 (hoarder:fetch "baohaojun/system-config"
                '(:tag ("chinese" "font")))
 (hoarder:fetch "emacsmirror/swbuff-x"
