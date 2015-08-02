@@ -271,6 +271,18 @@ buffer if the variable `delete-trailing-lines' is non-nil."
   (sort-lines nil beg end)
   (delete-duplicate-lines beg end))
 
+(defun muki:quote-all-lines (beg end)
+  (interactive "r")
+  (let ((marker (make-marker)))
+    (set-marker marker (region-end))
+    (goto-char (region-beginning))
+    (while (< (point) marker)
+      (beginning-of-line)
+      (insert ?\")
+      (end-of-line)
+      (insert ?\")
+      (forward-line 1))))
+
 (require 'muki-key)
 (require 'muki-option)
 (require 'muki-mode)
