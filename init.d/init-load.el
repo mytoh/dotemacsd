@@ -205,6 +205,7 @@
     psession
     picpocket
     ws-butler
+    letcheck
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image

@@ -880,6 +880,8 @@
 (hoarder:register "gongo/shimapan.el")
 (hoarder:register "lewang/ws-butler"
                   '(:tag ("whitespace" "cleanup")))
+(hoarder:register "Fuco1/letcheck"
+                  '(:tag ("convinience" "syntax_check")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :depends (("papaeye/go-mode.el"
