@@ -4,6 +4,8 @@
 
 (liby 'highlight-parentheses
   (command (highlight-parentheses-mode) "highlight-parentheses")
-  (hook 'emacs-lisp-mode-hook #'highlight-parentheses-mode))
+  (add-hook 'prog-mode-hook #'highlight-parentheses-mode)
+  (set-option hl-paren-delay 0.2)
+  )
 
 ;;; init.el ends here
