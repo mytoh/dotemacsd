@@ -2,7 +2,8 @@
 
 ;;; Code:
 
-(req 'hl-indent
+(liby 'hl-indent
+  (command (hl-indent-mode) "hl-indent")
   (add-hook 'emacs-lisp-mode-hook #'hl-indent-mode))
 
 ;;; init.el ends here
