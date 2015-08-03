@@ -16,8 +16,8 @@
   "el" #'lisp-state-eval-sexp-end-of-line
   ","  #'lisp-state-toggle-lisp-state
 
-  "gg" 'elisp-slime-nav-find-elisp-thing-at-point
-  "hh" 'elisp-slime-nav-describe-elisp-thing-at-point)
+  "gg" #'xref-find-definitions-other-window
+  "hh" #'elisp-slime-nav-describe-elisp-thing-at-point)
 
 
 ;;; init.el ends here
