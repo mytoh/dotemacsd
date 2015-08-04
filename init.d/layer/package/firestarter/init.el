@@ -4,7 +4,7 @@
 
 (liby 'firestarter
   (command (firestarter-mode) "firestarter")
-  (defer 'firestarter)
+  (defery 'firestarter)
   (after 'firestarter
       (firestarter-mode)))
 
