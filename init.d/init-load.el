@@ -275,12 +275,14 @@
     evil-textobj-between
     evil-extra-operator
     evil-visual-mark-mode
-    evil-anzu
     ;; evil-lisp-state
+
     evil
+
     ;; evil-rsi ; after evil
     ;; evil-cleverparens
     ;; evil-smartparens
+    evil-anzu
     evil-snipe
     ))
 

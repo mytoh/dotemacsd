@@ -2,6 +2,9 @@
 
 ;;; Code:
 (cl-defun muki:init-evil-anzu ()
-  (req 'evil-anzu))
+  (after 'anzu
+      (req 'evil-anzu)))
+
+(muki:init-evil-anzu)
 
 ;;; init.el ends here

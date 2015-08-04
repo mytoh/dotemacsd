@@ -16,7 +16,6 @@
   (muki:init-evil-search-highlight-persist)
   (muki:init-evil-textobj-between)
   (muki:init-evil-extra-operator)
-  (muki:init-evil-anzu)
   ;; (muki:init-evil-visual-mark-mode)
   )
 
