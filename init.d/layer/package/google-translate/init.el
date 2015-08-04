@@ -2,26 +2,27 @@
 
 ;;; COMMENT Code:
 
-(req 'google-translate
+(liby 'google-translate
+  (defery 'google-translate)
+
+  (after 'google-translate
+
+      (cl-letf ((mpv (executable-find "mpv")))
+        (when mpv
+          (set-option google-translate-listen-program mpv)))
+
+    ;; default ui
+    ;; (req 'google-translate-default-ui)
+
+    ;; (setq google-translate-default-source-language "en")
+    ;; (setq google-translate-default-target-language "fi")
 
 
-  (cl-letf ((mpv (executable-find "mpv")))
-    (when mpv
-      (set-option google-translate-listen-program mpv)))
+    (req 'google-translate-smooth-ui)
 
-  ;; default ui
-  ;; (req 'google-translate-default-ui)
+    (setq google-translate-translation-directions-alist
+          '(("fi" . "en") ("en" . "fi") ("fi" . "ja") ("ja" . "fi"))))
 
-  ;; (setq google-translate-default-source-language "en")
-  ;; (setq google-translate-default-target-language "fi")
-
-
-  (req 'google-translate-smooth-ui)
-
-  (setq google-translate-translation-directions-alist
-        '(("fi" . "en") ("en" . "fi") ("fi" . "ja") ("ja" . "fi")))
   )
-
-(provide 'init-google-translate)
 
 ;;; init-google-translate.el ends here
