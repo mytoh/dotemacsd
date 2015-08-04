@@ -46,6 +46,9 @@
        ,@(seq-map (lambda (f) `(autoload ',f ,lib nil t))
                   funcs)))
 
+(cl-defun defery (library)
+  (run-with-idle-timer 2 nil #'require library nil t))
+
 (provide 'muki-lib)
 
 ;;; muki-lib.el ends here
