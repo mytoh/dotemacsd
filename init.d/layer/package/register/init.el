@@ -1681,6 +1681,8 @@
                '(:tag ("org" "blog")))
 (hoarder:fetch "tuhdo/tuhdo.github.io"
                '(:tag ("org" "emacs-tutor")))
+(hoarder:fetch "olewhalehunter/kommissar"
+               '(:tag ("common_lisp" "browser" "mozrepl")))
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
