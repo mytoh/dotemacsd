@@ -15,8 +15,8 @@
           evil-snipe-smart-case t)
     (setq evil-snipe-repeat-scope 'whole-buffer)
 
-    (add-hook 'prog-mode-hook 'evil-snipe-mode)
-    (add-hook 'text-mode-hook 'evil-snipe-mode)
+    (add-hook 'prog-mode-hook #'evil-snipe-mode)
+    (add-hook 'text-mode-hook #'evil-snipe-mode)
 
     (add-hook 'prog-mode-hook
               (lambda () (enable-mode evil-snipe-override-mode)))
