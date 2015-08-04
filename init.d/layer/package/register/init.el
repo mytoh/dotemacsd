@@ -882,6 +882,8 @@
                   '(:tag ("whitespace" "cleanup")))
 (hoarder:register "Fuco1/letcheck"
                   '(:tag ("convinience" "syntax_check")))
+(hoarder:register "k-talo/volatile-highlights.el"
+                  '(:tag ("highlight" "feedback" "undo" "paste")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :depends (("papaeye/go-mode.el"

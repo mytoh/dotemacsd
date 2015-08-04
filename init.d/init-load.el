@@ -206,6 +206,7 @@
     picpocket
     ws-butler
     letcheck
+    volatile-highlights
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image
