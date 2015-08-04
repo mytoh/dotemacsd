@@ -2,8 +2,10 @@
 
 ;;; Code:
 
-(req 'firestarter
+(liby 'firestarter
   (command (firestarter-mode) "firestarter")
-  (firestarter-mode))
+  (defer 'firestarter)
+  (after 'firestarter
+      (firestarter-mode)))
 
 ;;; init.el ends here
