@@ -19,9 +19,9 @@
         ("z" .  mesh)))
 
 (cl-defun muki:evil-leader-prefix-set-key (category key def)
-  (cl-letf* ((found (cl-find-if (pcase-lambda (`(,_ . ,x)) (cl-equalp category x))
+  (cl-letf* ((found (seq-filter (pcase-lambda (`(,_ . ,x)) (cl-equalp category x))
                                 muki:evil-leader-key-binding-prefixes))
-             (prefix (if found (car found) nil)))
+             (prefix (if found (car (car found)) nil)))
     (when found
       (evil-leader/set-key (concat prefix key) def))))
 
@@ -77,7 +77,8 @@
           "z)" #'mesh:next-session
           "z(" #'mesh:prev-session
           "zC" #'mesh:new-session
-          "z <tab>" #'mesh:next-pane))
+          "z <tab>" #'mesh:next-pane)
+      )
 
     (liby 'helm-ypv
       (muki:evil-leader-prefix-set-keys 'application
