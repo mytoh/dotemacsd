@@ -93,6 +93,13 @@
     "M-p" #'previous-complete-history-element
     "M-n" #'next-complete-history-element)
 
+  ;; Apply Macros with Q
+  ;; [[http://hashrocket.com/blog/posts/8-great-vim-mappings][8 Great Vim Mappings - The Hashrocket Blog]]
+  (add-key evil-normal-state-map
+    "Q" "@q")
+  (add-key evil-visual-state-map
+    "Q" "@q")
+
   )
 
 
