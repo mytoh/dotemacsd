@@ -3,7 +3,7 @@
   (command (company-mode) "company")
 
 
-  ;; (add-hook 'after-init-hook #'global-company-mode)
+  ;; (add-hook 'emacs-startup-hook #'global-company-mode)
   (add-hook 'emacs-lisp-mode-hook #'company-mode)
   (add-hook 'scheme-mode-hook #'company-mode)
   (add-hook 'org-mode-hook #'company-mode)

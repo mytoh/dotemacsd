@@ -2,7 +2,7 @@
 
 (liby 'flycheck
   (command (flycheck-mode global-flycheck-mode) "flycheck")
-  ;; (add-hook 'after-init-hook #'global-flycheck-mode)
+  ;; (add-hook 'emacs-startup-hook #'global-flycheck-mode)
   (set-option flycheck-check-syntax-automatically '(save new-line))
 
   ;; (flycheck-define-checker javascript-jslint-reporter

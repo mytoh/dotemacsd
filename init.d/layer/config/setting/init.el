@@ -105,7 +105,7 @@
 (cl-defun muki:set-hl-line-face ()
   (set-face-attribute 'hl-line nil :foreground nil :background "Gray20"))
 
-(add-hook 'after-init-hook #'muki:set-hl-line-face)
+(add-hook 'emacs-startup-hook #'muki:set-hl-line-face)
 
 ;; [[http://rubikitch.com/2015/05/14/global-hl-line-mode-timer/]]
 ;; (defun global-hl-line-timer-function ()

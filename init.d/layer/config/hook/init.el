@@ -1,9 +1,9 @@
 ;;; config-hook.el  -*- lexical-binding: t -*-
 
-(cl-defun muki:after-init-hook ()
+(cl-defun muki:emacs-startup-hook ()
   (setq debug-on-error t)
   )
-;; (add-hook 'after-init-hook #'muki:after-init-hook)
+;; (add-hook 'emacs-startup-hook #'muki:emacs-startup-hook)
 
 (cl-defun muki:after-save-hook ()
   (if (string-match (rx (or "config" "package" "init" "lang") "-" (* anything) "el" eol)
@@ -34,7 +34,7 @@
                           :x 1100
                           :y 100
                           :timeout 5000)))
-;; (add-hook 'after-init-hook #'muki:init-finish-notify)
+;; (add-hook 'emacs-startup-hook #'muki:init-finish-notify)
 
 ;; make read only when file under certain directory
 ;; (add-hook 'find-file-hook
@@ -46,7 +46,7 @@
 ;;                 (read-only-mode 1))))
 
 ;;; customize file
-(defun-add-hook muki:set-custom-el-file (after-init-hook)
+(defun-add-hook muki:set-custom-el-file (emacs-startup-hook)
   (setq custom-file (locate-user-emacs-file "custom.el"))
   (load (file-name-sans-extension custom-file) t t))
 

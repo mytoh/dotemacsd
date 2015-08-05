@@ -39,7 +39,7 @@
                      "cyan")
 
 (whitespace-newline-mode)
-(add-hook 'after-init-hook
+(add-hook 'emacs-startup-hook
           (lambda ()
             (set-face-foreground 'whitespace-newline
                                  (color-lighten-name (face-background 'default)
