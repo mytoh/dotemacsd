@@ -2,7 +2,8 @@
 
 ;;; Code:
 
-(req 'mpv
+(liby 'mpv
+  (defery 'mpv)
   (after 'org
       (org-add-link-type "mpv" #'mpv-play)
     (defun org-mpv-complete-link (&optional arg)

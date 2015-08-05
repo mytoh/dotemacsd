@@ -3,7 +3,8 @@
 ;;; Code:
 
 ;;;;; bookmark-extensions
-(req 'bookmark-extensions)
+(liby 'bookmark-extensions
+  (defery 'bookmark-extensions))
 
 
 ;;; init.el ends here

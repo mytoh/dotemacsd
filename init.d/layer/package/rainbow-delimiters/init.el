@@ -1,10 +1,24 @@
 ;; rainbow-delimiters
-(req 'rainbow-delimiters
+
+(liby 'rainbow-delimiters
+  (command (rainbow-delimiters-mode) "rainbow-delimiters")
   (hook 'scheme-mode-hook       #'rainbow-delimiters-mode)
   (hook 'lisp-mode-hook         #'rainbow-delimiters-mode)
   (hook 'emacs-lisp-mode-hook   #'rainbow-delimiters-mode)
   (hook 'clojure-mode-hook   #'rainbow-delimiters-mode)
   ;; (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+  ;; (after 'rainbow-delimiters
+  ;;     (defface my-outermost-paren-face
+  ;;       '((t (:weight bold)))
+  ;;       "Face used for outermost parens.")
+
+  ;;   (setq rainbow-delimiters-outermost-only-face-count 1)
+  ;;   (set-face-attribute 'rainbow-delimiters-depth-1-face nil
+  ;;                       :foreground 'unspecified
+  ;;                       :inherit 'my-outermost-paren-face))
+
+
   ;; (after "rainbow-delimiters"
   ;;   (set-face-attribute 'rainbow-delimiters-depth-1-face nil :inherit 'font-lock-builtin-face)
   ;;   (set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "dodger blue")

@@ -3,8 +3,9 @@
 ;;; Code:
 
 (cl-defun muki:init-volatile-highlights ()
-  (req 'volatile-highlights
-    (enable-mode volatile-highlights-mode)))
+  (defery 'volatile-highlights)
+  (after 'volatile-highlights
+      (enable-mode volatile-highlights-mode)))
 
 (muki:init-volatile-highlights)
 

@@ -3,6 +3,7 @@
 ;;; Code:
 
 ;;;;; stack exchange mode
-(req 'sx-load)
+(liby 'sx-load
+  (defery 'sx-load))
 
 ;;; init.el ends here

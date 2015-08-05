@@ -2,7 +2,9 @@
 
 ;;; Code:
 
-(req 'autobookmarks
-  (autobookmarks-mode))
+(liby 'autobookmarks
+  (defery 'autobookmarks)
+  (after 'autobookmarks
+      (autobookmarks-mode)))
 
 ;;; init.el ends here
