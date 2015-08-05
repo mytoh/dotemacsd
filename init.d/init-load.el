@@ -207,6 +207,8 @@
     ws-butler
     letcheck
     volatile-highlights
+    ;; flyparens ; load error
+
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image
@@ -248,7 +250,6 @@
     ;; elnode
     ;; auto-highlight-symbol
     ;; tabbar
-    ;; flyparens
     ))
 
 ;;;; highlight
@@ -281,7 +282,7 @@
 
     ;; evil-rsi ; after evil
     ;; evil-cleverparens
-    ;; evil-smartparens
+    evil-smartparens
     evil-anzu
     evil-snipe
     ))
@@ -377,8 +378,8 @@
 
 ;;;;; elisp
 (require 'init-elisp)
-(muki-layer:load-layers 'elisp
-  '(csh-mode))
+;; (muki-layer:load-layers 'elisp
+;;   '(csh-mode))
 
 ;;;;; themem
 (muki-layer:load-layers 'theme
