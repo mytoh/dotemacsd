@@ -141,8 +141,10 @@
   (muki:org-babel-options)
   (muki:org-set-modules)
   (muki:org-capture-setting)
-  (add-hook 'before-save-hook
-            #'muki:org-mode-before-save-hook))
+  (add-hook 'org-mode-hook
+            (lambda ()
+              (add-hook 'before-save-hook
+                        #'muki:org-mode-before-save-hook))))
 
 (after 'org
     (muki:org-mode-hook-function))
