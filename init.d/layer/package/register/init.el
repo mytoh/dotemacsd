@@ -1060,6 +1060,8 @@
                   '(:tag ("org" "clipboard")))
 (hoarder:register "tarsius/orglink"
                   '(:tag ("org")))
+(hoarder:register "steventlamb/yatt.el"
+                  '(:tag ("tea" "timer")))
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ("org" "bongo" "music")
 ;;                    :depends ("dbrock/bongo")
@@ -1192,6 +1194,8 @@
 (hoarder:register-theme "vyp/redbelly")
 (hoarder:register-theme "NicolasPetton/zerodark-theme")
 (hoarder:register-theme "credmp/arjen-grey")
+(hoarder:register-theme "warreq/xres-theme"
+                        '(:tag ("xresources")))
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
