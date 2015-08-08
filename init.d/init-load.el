@@ -90,6 +90,7 @@
     shackle
 
     company
+    company-emoji
     ;; company-quickhelp
     bbyac
 
@@ -282,7 +283,7 @@
 
     ;; evil-rsi ; after evil
     ;; evil-cleverparens
-    evil-smartparens
+    ;; evil-smartparens
     evil-anzu
     evil-snipe
     ))
