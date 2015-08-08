@@ -227,6 +227,9 @@
                     :depends ( "company-mode/company-mode"
                               ("for-GET/know-your-http-well"
                                (:load-path "emacs")))))
+(hoarder:register "dunn/company-emoji"
+                  '(:tag ("company" "emoji")
+                    :depends ("company-mode/company-mode")))
 (hoarder:register "expez/company-quickhelp"
                   '(:tag ("company")
                     :depends ("pitkali/pos-tip")))
@@ -1363,7 +1366,8 @@
                '(:tag "dotfiles"))
 (hoarder:fetch "nanasess/dot.emacs")
 (hoarder:fetch "technomancy/better-defaults")
-(hoarder:fetch "chrismccord/dot_emacs")
+(hoarder:fetch "chrismccord/dot_emacs"
+               '(:tag ("dotfiles" "evil")))
 (hoarder:fetch "thomasf/dotfiles-thomasf-emacs"
                '(:tag ( "dotfiles" "evil" )))
 (hoarder:fetch "xcwen/site-lisp"
