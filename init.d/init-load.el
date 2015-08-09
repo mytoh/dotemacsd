@@ -300,6 +300,7 @@
     emacs-lisp-mode
     org-mode
     expand-region
+    skk-mode
     ))
 
 (muki-layer:load-layers 'helm
