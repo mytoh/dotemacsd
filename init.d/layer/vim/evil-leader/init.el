@@ -16,6 +16,7 @@
         ("f" . file)
         ("s" . search)
         ("T" .  theme)
+        ("w" . window)
         ("z" .  mesh)))
 
 (cl-defun muki:evil-leader-prefix-set-key (category key def)
@@ -63,6 +64,26 @@
       "p"  #'switch-to-prev-buffer
       "s" #'switch-to-scratch-buffer
       "r" #'revert-buffer)
+
+    (muki:evil-leader-prefix-set-keys 'window
+      "c"  'delete-window
+      "H"  'evil-window-move-far-left
+      "h"  'evil-window-left
+      "J"  'evil-window-move-very-bottom
+      "j"  'evil-window-down
+      "K"  'evil-window-move-very-top
+      "k"  'evil-window-up
+      "L"  'evil-window-move-far-right
+      "l"  'evil-window-right
+      "o"  'delete-other-windows
+      "s"  'split-window-below
+      "-"  'split-window-below
+      "U"  'winner-redo
+      "u"  'winner-undo
+      "v"  'split-window-right
+      "w"  'other-window
+      "/"  'split-window-right
+      "="  'balance-windows)
 
     (liby 'mesh
       (muki:evil-leader-prefix-set-keys 'mesh
