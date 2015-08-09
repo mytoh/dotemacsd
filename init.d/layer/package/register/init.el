@@ -1196,6 +1196,7 @@
 (hoarder:register-theme "credmp/arjen-grey")
 (hoarder:register-theme "warreq/xres-theme"
                         '(:tag ("xresources")))
+(hoarder:register-theme "jonathanchu/atom-one-dark-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1691,6 +1692,8 @@
                '(:tag ("org" "emacs-tutor")))
 (hoarder:fetch "olewhalehunter/kommissar"
                '(:tag ("common_lisp" "browser" "mozrepl")))
+(hoarder:fetch "caiorss/Emacs-Elisp-Programming"
+               '(:tag ("elisp" "guilde" "programming")))
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
