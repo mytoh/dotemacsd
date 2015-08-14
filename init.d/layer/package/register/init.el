@@ -345,7 +345,16 @@
 ;;(hoarder:register "aki2o/guide-key-tip"
 ;;                 '(:depends ("kbkbkbkb1/guide-key"
 ;;                          "emacsmirror/pos-tip")))
-(hoarder:register "clojure-emacs/clojure-mode")
+(hoarder:register "clojure-emacs/clojure-mode"
+                  '(:tag ("clojure")))
+(hoarder:register "clojure-emacs/cider"
+                  '(:tag ("clojure")
+                    :depends ("emacsmirror/queue")))
+(hoarder:register "krisajenkins/clojure-cheatsheet"
+                  '(:tag ("clojure")
+                    :depends ("clojure-emacs/cider")))
+(hoarder:register "andrewmains12/clojurescript-mode"
+                  '(:tag ("clojure")))
 (hoarder:register "Fanael/rainbow-delimiters")
 (hoarder:register "zk-phi/highlight-stages")
 (hoarder:register "zk-phi/indent-guide")
