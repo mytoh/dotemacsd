@@ -896,6 +896,8 @@
                   '(:tag ("convinience" "syntax_check")))
 (hoarder:register "k-talo/volatile-highlights.el"
                   '(:tag ("highlight" "feedback" "undo" "paste")))
+(hoarder:register "KeenS/cssfmt.el"
+                  '(:tag ("css")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :depends (("papaeye/go-mode.el"
@@ -1229,7 +1231,8 @@
   (add-project-root "helm-eww-bookmark" '(:tag ("helm" "eww" )))
   (add-project-root "helm-eww-history" '(:tag ("helm" "eww" )))
   (add-project-root "helm-eww-search-engine" '(:tag ("helm" "eww" )))
-  (add-project-root "helm-eshell-jump" '(:tag ("helm" "eshell"))))
+  (add-project-root "helm-eshell-jump" '(:tag ("helm" "eshell")))
+  (add-project-root "emacs-glove" '(:tag ("plist" "utility"))))
 
 ;;;;;; skk
 (hoarder:register "skk-dev/ddskk"
@@ -1703,6 +1706,18 @@
                '(:tag ("common_lisp" "browser" "mozrepl")))
 (hoarder:fetch "caiorss/Emacs-Elisp-Programming"
                '(:tag ("elisp" "guilde" "programming")))
+(hoarder:fetch "weavejester/medley"
+               '(:tag ("clojure" "map" "utility")))
+(hoarder:fetch "bbatsov/clojure-style-guide"
+               '(:tag ("clojure" "style_guide")))
+(hoarder:fetch "flatland/useful"
+               '(:tag ("clojure" "utility")))
+(hoarder:fetch "prismatic/plumbing"
+               '(:tag ("clojure" "utility")))
+(hoarder:fetch "marick/suchwow"
+               '(:tag ("clojure" "utility")))
+(hoarder:fetch "aphyr/merkle"
+               '(:tag ("clojure" "map" "tree")))
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
