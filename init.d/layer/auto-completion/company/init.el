@@ -12,12 +12,12 @@
 
   (after 'company
       ;; (setq company-idle-delay 0.3)
-      (setq company-tooltip-limit 30)
-    (setq company-minimum-prefix-length 2)
+      ;;   (setq company-tooltip-limit 30)
+      ;; (setq company-minimum-prefix-length 2)
 
-    (add-key company-active-map
-      "C-n" #'company-select-next
-      "C-p" #'company-select-previous)
+      (add-key company-active-map
+        "C-n" #'company-select-next
+        "C-p" #'company-select-previous)
 
     (set-face-attribute 'company-tooltip-selection nil
                         :background (muki:colour-hsl-to-hex 19 60 50))

@@ -2,7 +2,8 @@
 
 ;;; Code:
 
-(req 'company-quickhelp
-  (company-quickhelp-mode 1))
+(liby 'company-statistics
+  (after 'company
+      (company-statistics-mode)))
 
 ;;; init.el ends here

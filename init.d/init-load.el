@@ -89,9 +89,6 @@
     ;; popwin
     shackle
 
-    company
-    company-emoji
-    ;; company-quickhelp
     bbyac
 
     paradox
@@ -210,8 +207,8 @@
     ws-butler
     letcheck
     volatile-highlights
-    ;; flyparens ; load error
 
+    ;; flyparens ; load error
     ;; cycle-themes
     ;; smart-newline
     ;; random-splash-image
@@ -338,6 +335,14 @@
     ;; helm-swoop
     ;; helm-company
     ;; helm-delicious
+    ))
+
+(muki-layer:load-layers 'auto-completion
+  '(
+    company
+    company-emoji
+    company-quickhelp
+    company-statistics
     ))
 
 
