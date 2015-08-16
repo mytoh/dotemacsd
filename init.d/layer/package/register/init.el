@@ -233,6 +233,9 @@
 (hoarder:register "expez/company-quickhelp"
                   '(:tag ("company")
                     :depends ("pitkali/pos-tip")))
+(hoarder:register "company-mode/company-statistics"
+                  '(:tag ("company" "auto_completion")
+                    :depends ("company-mode/company-mode")))
 (hoarder:register "syohex/emacs-git-gutter"
                   '(:tag "git"))
 (hoarder:register "syohex/emacs-git-gutter-fringe"
