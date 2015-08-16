@@ -144,6 +144,8 @@
     which-key
 
     clojure-mode
+    clojure-cheatsheet
+    cider
     lorem-ipsum
     emacs-color-themes
     sly
