@@ -10,6 +10,7 @@
          gruvbox base16-tomorrow odersky jazz purple-haze
          warm-night brin gotham soothe spolsky wilson noctilux erosiond
          material subatomic ectoplasm spacemacs-dark
-         base16-ocean-dark zerodark plan9 spacegray atom-one-dark))))
+         base16-ocean-dark zerodark plan9 spacegray atom-one-dark
+         aurora))))
 
 ;;; init.el ends here
