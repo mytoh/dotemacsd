@@ -4,6 +4,6 @@
 
 (liby 'evil-quick-scope
   (command (evil-quick-scope-mode) "evil-quick-scope")
-  (add-hook 'prog-mode-hook #'evil-quick-scope-mode))
+  (add-hook 'emacs-lisp-mode-hook #'evil-quick-scope-mode))
 
 ;;; init.el ends here
