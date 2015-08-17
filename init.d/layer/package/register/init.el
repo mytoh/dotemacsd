@@ -201,7 +201,8 @@
                   '(:build ("gmake lisp docs")
                     :info "Documentation"
                     :load-path ("lisp")
-                    :depends (("magnars/dash.el" ( :compile nil)))
+                    :depends (("magnars/dash.el" ( :compile nil))
+                              ("jwiegley/emacs-async"))
                     :tag "git"))
 (hoarder:register "magit/orgit"
                   '(:tag ("git" "org" "magit")))
@@ -1008,6 +1009,10 @@
                   '(:tag ("evil" "smartparens")
                     :depends ("Fuco1/smartparens"
                               "magnars/dash.el")))
+(hoarder:register "syl20bnr/evil-multiple-cursors"
+                  '(:tag ("evil" "multiple-cursors")))
+(hoarder:register "vyp/evil-quick-scope"
+                  '(:tag ("evil")))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1124,6 +1129,7 @@
 (hoarder:register-theme "juba/color-theme-tangotango")
 (hoarder:register-theme "ccann/badger-theme")
 (hoarder:register-theme "xzerocode/hipster-theme")
+(hoarder:register-theme "xzerocode/aurora-theme")
 (hoarder:register-theme "fommil/darcula-theme-emacs")
 (hoarder:register-theme "emacsfodder/emacs-waher-theme")
 (hoarder:register-theme "emacsfodder/emacs-purple-haze-theme")
