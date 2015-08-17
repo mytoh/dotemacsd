@@ -285,6 +285,7 @@
     ;; evil-smartparens
     evil-anzu
     evil-snipe
+    evil-quick-scope
     ))
 
 (muki-layer:load-layers 'vim
