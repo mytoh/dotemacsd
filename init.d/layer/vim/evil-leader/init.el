@@ -9,6 +9,7 @@
         ("av" . application-hoarder)
         ("b" .  buffer)
         ("g" .  git)
+        ("h" . helm)
         ("hi" . help-info)
         ("hd" . help-describe)
         ("am" . emms)
@@ -47,11 +48,14 @@
       "u" #'universal-argument)
 
     (muki:evil-leader-prefix-set-keys 'help-describe
+      "b" #'describe-bindings
       "f" #'describe-function
       "k" #'describe-key
       "m" #'describe-mode
       "c" #'describe-char
-      "v" #'describe-variable)
+      "v" #'describe-variable
+      "p" #'describe-package
+      "t" #'describe-theme)
 
     (cl-defun switch-to-scratch-buffer ()
       (interactive)
@@ -133,9 +137,19 @@
     (liby 'helm
       (evil-leader/set-key
           ";" #'helm-M-x
-        "?" #'helm-descbinds
-        "hl"  'helm-resume
-        "h s"   #'helm-swoop)
+        "?" #'helm-descbinds)
+      (muki:evil-leader-prefix-set-keys 'helm
+        "l" #'helm-resume
+        "L" #'helm-locate-library
+        "f" #'helm-features
+        "Cl" #'helm-colo
+        "b" #'helm-pp-bookmarks
+        "i" #'helm-info-at-point
+        "m" #'helm-man-woman
+        "a" #'helm-apropos
+        "ry" #'helm-show-kill-ring
+        "rr" #'helm-register
+        "rm" #'helm-all-mark-rings)
       (muki:evil-leader-prefix-set-keys 'theme
         "h" #'helm-themes))
 
