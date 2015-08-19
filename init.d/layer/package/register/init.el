@@ -902,6 +902,16 @@
                   '(:tag ("highlight" "feedback" "undo" "paste")))
 (hoarder:register "KeenS/cssfmt.el"
                   '(:tag ("css")))
+(hoarder:register "mutbuerger/not-from-scratch"
+                  '(:tag ("scratch")))
+(hoarder:register "Levenson/dictionary"
+                  '(:tag ("dictionary" "english")))
+(hoarder:register "leoliu/sokoban"
+                  '(:tag ("game" "sokoban")))
+(hoarder:register "stevenremot/roguel-ike"
+                  '(:tag ("game" "rogue")))
+(hoarder:register "emacsattic/elite"
+                  '(:tag ("elite" "game")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :depends (("papaeye/go-mode.el"
@@ -1009,7 +1019,7 @@
                   '(:tag ("evil" "smartparens")
                     :depends ("Fuco1/smartparens"
                               "magnars/dash.el")))
-(hoarder:register "syl20bnr/evil-multiple-cursors"
+(hoarder:register "syl20bnr/evil-iedit-multiple-cursors"
                   '(:tag ("evil" "multiple-cursors")))
 (hoarder:register "vyp/evil-quick-scope"
                   '(:tag ("evil")))
@@ -1217,6 +1227,10 @@
 (hoarder:register-theme "warreq/xres-theme"
                         '(:tag ("xresources")))
 (hoarder:register-theme "jonathanchu/atom-one-dark-theme")
+(hoarder:register-theme "vjohansen/dark-nature-theme")
+(hoarder:register-theme "zenmacs/leuven-solarized")
+(hoarder:register-theme "chriskempson/tomorrow-theme"
+                        '(:load-path "GNU Emacs"))
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1727,6 +1741,10 @@
                '(:tag ("clojure" "utility")))
 (hoarder:fetch "aphyr/merkle"
                '(:tag ("clojure" "map" "tree")))
+(hoarder:fetch "zweifisch/enlive"
+               '(:tag ("html" "dom" "xpath")))
+(hoarder:fetch "hyPiRion/fairbrook"
+               '(:tag ("clojure" "map" "utility")))
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
