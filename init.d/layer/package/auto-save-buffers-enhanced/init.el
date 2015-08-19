@@ -18,14 +18,16 @@
     ;; evil integration
     ;; disable auto-saving in insert mode
     (cl-defun muki:auto-save-buffers-enhanced-disable ()
-      (when auto-save-buffers-enhanced-activity-flag
-        (setq auto-save-buffers-enhanced-activity-flag nil)
-        (message "auto-save-buffers-enhanced off")))
+      (unless (eq 'eshell-mode major-mode)
+        (when auto-save-buffers-enhanced-activity-flag
+          (setq auto-save-buffers-enhanced-activity-flag nil)
+          (message "auto-save-buffers-enhanced off"))))
 
     (cl-defun muki:auto-save-buffers-enhanced-enable ()
-      (unless auto-save-buffers-enhanced-activity-flag
-        (setq auto-save-buffers-enhanced-activity-flag t)
-        (message "auto-save-buffers-enhanced on")))
+      (unless (eq 'eshell-mode major-mode)
+        (unless auto-save-buffers-enhanced-activity-flag
+          (setq auto-save-buffers-enhanced-activity-flag t)
+          (message "auto-save-buffers-enhanced on"))))
 
     (add-hook 'evil-insert-state-entry-hook
               #'muki:auto-save-buffers-enhanced-disable)
