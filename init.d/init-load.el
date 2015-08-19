@@ -207,6 +207,9 @@
     ws-butler
     letcheck
     volatile-highlights
+    not-from-scratch
+    dictionary
+    sokoban
 
     ;; flyparens ; load error
     ;; cycle-themes
