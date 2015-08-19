@@ -23,7 +23,7 @@
   (setq helm-autoresize-max-height 35)
   (setq helm-autoresize-min-height 35)
 
-  (defun muki:helm-set-face ()
+  (cl-defun muki:helm-set-face ()
     (cl-letf ((background
                (face-background 'default))
               (percent 20))
@@ -32,7 +32,8 @@
                             :background
                             (color-lighten-name background percent)))))
 
-  (after 'helm (muki:helm-set-face))
+  (after 'helm
+      (hook 'helm-update-hook #'muki:helm-set-face))
 
   (defun helm-select-2nd-action-or-end-of-line ()
     "Select the 2nd action for the currently selected candidate.
