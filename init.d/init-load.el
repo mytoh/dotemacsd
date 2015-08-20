@@ -35,6 +35,7 @@
     outline-magic
     org-cliplink
     orglink
+    toc-org
     ))
 
 (muki-layer:load-layers 'package
