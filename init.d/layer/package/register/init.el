@@ -912,6 +912,8 @@
                   '(:tag ("game" "rogue")))
 (hoarder:register "emacsattic/elite"
                   '(:tag ("elite" "game")))
+(hoarder:register "eschulte/shen-mode"
+                  '(:tag ("shen" "language" "pattern_match")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :depends (("papaeye/go-mode.el"
@@ -1023,6 +1025,10 @@
                   '(:tag ("evil" "multiple-cursors")))
 (hoarder:register "vyp/evil-quick-scope"
                   '(:tag ("evil")))
+(hoarder:register "blorbx/evil-quickscope"
+                  '(:tag ("evil")))
+(hoarder:register "louy2/evil-avy"
+                  '(:tag ("evil" "avy")))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1091,6 +1097,8 @@
                   '(:tag ("org")))
 (hoarder:register "steventlamb/yatt.el"
                   '(:tag ("tea" "timer")))
+(hoarder:register "snosov1/toc-org"
+                  '(:tag ("org" "toc" )))
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ("org" "bongo" "music")
 ;;                    :depends ("dbrock/bongo")
@@ -1231,6 +1239,7 @@
 (hoarder:register-theme "zenmacs/leuven-solarized")
 (hoarder:register-theme "chriskempson/tomorrow-theme"
                         '(:load-path "GNU Emacs"))
+(hoarder:register-theme "mattly/emacs-farmhouse-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1745,6 +1754,8 @@
                '(:tag ("html" "dom" "xpath")))
 (hoarder:fetch "hyPiRion/fairbrook"
                '(:tag ("clojure" "map" "utility")))
+(hoarder:fetch "mthom/shen-minikanren"
+               '(:tag ("shen" "logic" "kanren")))
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
