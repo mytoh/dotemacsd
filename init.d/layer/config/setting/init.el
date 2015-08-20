@@ -451,4 +451,7 @@
 ;; disable character fold search
 (disable-option character-fold-search)
 
+;; enable syntax highlight for various file types
+(require 'generic-x)
+
 ;;; config-setting.el ends here
