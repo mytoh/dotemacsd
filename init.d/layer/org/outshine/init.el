@@ -1,9 +1,19 @@
 ;; * outshine
 
-(defvar outline-minor-mode-prefix (kbd "C-c"))
+
+;; [[https://github.com/tj64/outshine]]
+;; Note that since version 2.0, outshine.el depends on outorg.el
+;; and navi-mode.el depends on both, outshine.el and outorg.el. So the order of installation should be
+;;     outorg
+;;     outshine
+;;     navi-mode (optional)
+
 
 (liby 'outshine
   (command (outshine-hook-function) "outshine")
+
+  (defvar outline-minor-mode-prefix (kbd "C-c"))
+
   (add-hook 'outline-minor-mode-hook #'outshine-hook-function)
 
   ;; (defvar outline-minor-mode-prefix "\M-#")
