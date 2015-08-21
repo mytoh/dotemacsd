@@ -914,6 +914,12 @@
                   '(:tag ("elite" "game")))
 (hoarder:register "eschulte/shen-mode"
                   '(:tag ("shen" "language" "pattern_match")))
+(hoarder:register "wasamasa/retris"
+                  '(:tag ("game" "tetris")))
+(hoarder:register "dbordak/telephone-line"
+                  '(:tag ("powerline" "mode-line")))
+(hoarder:register "neomantic/helm-rubygems-org"
+                  '(:tag ("ruby" "rubygems" "helm")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :depends (("papaeye/go-mode.el"
@@ -1038,10 +1044,16 @@
                     :info "doc"
                     :tag "org"))
 (hoarder:register "tj64/org-hlc")
-(hoarder:register "tj64/outshine" '(:compile nil
-                                    :tag ("org" "outline")))
+
 (hoarder:register "tj64/outorg" '(:compile nil
                                   :tag ("org" "outline")))
+(hoarder:register "tj64/outshine" '(:compile nil
+                                    :tag ("org" "outline")
+                                    :depends ("tj64/outorg")))
+;; (hoarder:register "jleechpe/outorg-export")
+(hoarder:register "tj64/navi"
+                  '(:tag ("org" "outline")))
+
 (hoarder:register "tj64/outline-magic"
                   '(:tag ("org" "outline")))
 (hoarder:register "omouse/org-doing"
@@ -1055,9 +1067,6 @@
                                            :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
                                            :info "doc"
                                            :tag "org")))))
-;; (hoarder:register "jleechpe/outorg-export")
-(hoarder:register "tj64/navi"
-                  '(:tag ("org" "outline")))
 (hoarder:register "kawabata/ox-pandoc"
                   '(:depends ("Wilfred/ht.el"
                               "magnars/dash.el")
@@ -1756,6 +1765,12 @@
                '(:tag ("clojure" "map" "utility")))
 (hoarder:fetch "mthom/shen-minikanren"
                '(:tag ("shen" "logic" "kanren")))
+(hoarder:fetch "dakrone/cheshire"
+               '(:tag ("clojure" "json")))
+(hoarder:fetch "razum2um/awesome-clojure"
+               '(:tag ("awesome_list" "clojure" )))
+(hoarder:fetch "pogin503/emacs-test-sample"
+               '(:tag ("test" "ert" "development" "elisp")))
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
