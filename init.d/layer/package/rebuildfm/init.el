@@ -4,6 +4,19 @@
 
 ;;;;; rebuildfm
 (liby 'rebuildfm
-  (command (rebuildfm) "rebuildfm"))
+  (command (rebuildfm) "rebuildfm")
+  (set-option rebuildfm-mp3-player "mpv")
+
+  (cl-defun muki:rebuildfm--mp3-player-command (oldfun &rest args)
+    (cl-letf ((cmd (car args))
+              (url (cadr args)))
+      (message "open %s with %s"
+               cmd url)
+      (list cmd url)))
+
+  (advice-add 'rebuildfm--mp3-player-command :around
+              #'muki:rebuildfm--mp3-player-command)
+
+  )
 
 ;;; init.el ends here
