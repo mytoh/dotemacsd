@@ -18,11 +18,12 @@
 (muki-layer:load-layers 'package
   '(boot
     register
-    check))
+    check
+    hoarder
+    ))
 
 (muki-layer:load-layers 'package
-  '(hoarder
-    diminish))
+  '(diminish))
 
 (muki-layer:load-layers 'org
   '(outshine
@@ -289,7 +290,7 @@
     ;; evil-smartparens
     evil-anzu
     evil-snipe
-    evil-quick-scope
+    ;; evil-quick-scope
     ))
 
 (muki-layer:load-layers 'vim
