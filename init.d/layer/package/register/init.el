@@ -920,6 +920,12 @@
                   '(:tag ("powerline" "mode-line")))
 (hoarder:register "neomantic/helm-rubygems-org"
                   '(:tag ("ruby" "rubygems" "helm")))
+(hoarder:register "ruediger/weather-metno-el"
+                  '(:tag ("weather")))
+(hoarder:register "myuhe/quick-preview.el"
+                  '(:tag ("preview" "sushi" "quick-look")))
+(hoarder:register "zonuexe/vim-filetype.el"
+                  '(:tag ("vim" "filetype")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :depends (("papaeye/go-mode.el"
@@ -1224,7 +1230,8 @@
 (hoarder:register-theme "toroidal-code/monokai-extended-theme.el")
 (hoarder:register-theme "mattly/emacs-farmhouse-theme")
 (hoarder:register-theme "evenhold/nerv-theme")
-(hoarder:register-theme "mjhanninen/liquorice.el")
+(hoarder:register-theme "mjhanninen/liquorice.el"
+                        '(:load-path "."))
 (hoarder:register-theme "p-lambert/jellyburn-theme")
 (hoarder:register-theme "cryon/subatomic")
 (hoarder:register-theme "Gastove/rhombus")
@@ -1771,6 +1778,14 @@
                '(:tag ("awesome_list" "clojure" )))
 (hoarder:fetch "pogin503/emacs-test-sample"
                '(:tag ("test" "ert" "development" "elisp")))
+(hoarder:fetch "boxed/instar"
+               '(:tag ("clojure" "map" "utility")))
+(hoarder:fetch "hick/emacs-chinese"
+               '(:tag ("chinese")))
+(hoarder:fetch "elimik31/geohashing_el"
+               '(:tag ("geohashing")))
+(hoarder:fetch "nathanmarz/specter"
+               '(:tag ("clojure" "map" "utility")))
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
