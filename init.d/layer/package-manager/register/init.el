@@ -926,6 +926,8 @@
                   '(:tag ("preview" "sushi" "quick-look")))
 (hoarder:register "zonuexe/vim-filetype.el"
                   '(:tag ("vim" "filetype")))
+(hoarder:register "ryuslash/git-auto-commit-mode"
+                  '(:tag ("git" "auto_commit")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :depends (("papaeye/go-mode.el"
@@ -1786,6 +1788,8 @@
                '(:tag ("geohashing")))
 (hoarder:fetch "nathanmarz/specter"
                '(:tag ("clojure" "map" "utility")))
+(hoarder:fetch "mattduck/generic-css"
+               '(:tag ("css" "html" "org")))
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
