@@ -15,7 +15,7 @@
 (muki-layer:load-layers 'system
   '(freebsd darwin))
 
-(muki-layer:load-layers 'package
+(muki-layer:load-layers 'package-manager
   '(boot
     register
     check
