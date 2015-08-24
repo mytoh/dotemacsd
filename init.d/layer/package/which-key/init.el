@@ -6,6 +6,7 @@
   (req 'popwin)
   (command (which-key-mode) "which-key")
   (setq which-key-max-description-length 32)
+  (setq which-key-idle-delay 0.5)
   (which-key-mode)
   (which-key-add-key-based-replacements
    "SPC ?" "show keybindings"
