@@ -6,7 +6,7 @@
 (defvar muki:evil-leader-key-binding-prefixes nil)
 (setq muki:evil-leader-key-binding-prefixes
       '(("a" .  application)
-        ("av" . application-hoarder)
+        ("ap" . application-package-manager)
         ("b" .  buffer)
         ("g" .  git)
         ("h" . helm)
@@ -117,7 +117,7 @@
         "ä" #'helm-alku-ääliö))
 
     (liby 'hoarder
-      (muki:evil-leader-prefix-set-keys 'application-hoarder
+      (muki:evil-leader-prefix-set-keys 'application-package-manager
         "u" #'hoarder:update
         "k" #'hoarder:check
         ;; "c" #'hoarder:clean
