@@ -14,8 +14,6 @@
 
 (global-set-key (kbd "M-/") #'hippie-expand)
 
-;; (muki:define-launcher-key "p" 'package-list-packages)
-
 ;;;; disable compose mail
 (global-unset-key (kbd "C-x m"))
 

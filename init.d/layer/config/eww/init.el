@@ -50,8 +50,6 @@
     (cl-letf* ((url-proxy-services '(("http" . "proxy.koti:3128"))))
       (eww url)))
 
-  (muki:define-launcher-key "w" #'muki:eww)
-
   )
 
 

@@ -74,9 +74,6 @@
     (sunrise)
     (sr-popviewer-mode 1))
 
-  (muki:define-launcher-key "x" #'muki:sunrise)
-  (muki:define-launcher-key "X" #'sunrise-cd)
-
   (defvar muki:sunrise-external-programs-associations
     '(("cbz" . "mcomix")
       ("cbr" . "mcomix")

@@ -188,12 +188,12 @@ Otherwise goto the end of minibuffer."
 ;; elisp-package
 (liby 'helm-elisp-package
   (command (helm-list-elisp-packages) "helm-elisp-package")
-  (muki:define-launcher-key "P" #'helm-list-elisp-packages))
+  )
 
 ;; helm-git-grep
 (liby 'helm-git-grep
   (command (helm-git-grep) "helm-git-grep")
-  (muki:define-launcher-key "r" #'helm-git-grep))
+  )
 
 
 ;;; init-helm.el ends here

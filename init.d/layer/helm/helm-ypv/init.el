@@ -9,13 +9,11 @@
       (set-option helm-ypv-local-address "peca2.koti:7144")
     (load-file (locate-user-emacs-file "helm-ypv/yp")))
 
-  (muki:define-launcher-key  "y" 'helm-ypv)
-
   (set-option  helm-ypv-yp-urls
                '((sp  "bayonet.ddo.jp/sp")
                  (tp  "temp.orz.hm/yp")
                  ;; (dp  "dp.prgrssv.net")
-                 (hktv "games.himitsukichi.com/hktv")
+                 ;; (hktv "games.himitsukichi.com/hktv")
                  (turf-page "peercast.takami98.net/turf-page")
                  (oekaki "oekakiyp.appspot.com")
                  (event "eventyp.xrea.jp")

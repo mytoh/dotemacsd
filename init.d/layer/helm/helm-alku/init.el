@@ -41,8 +41,6 @@
     ;; remove bookmark source temporally
     (cl-delete 'helm-source-bookmarks helm-alku-sources))
 
-  (muki:define-launcher-key "c"  #'helm-alku-program)
-  (muki:define-launcher-key "n" #'helm-alku-vihko)
   (add-global-key "C-c h" #'helm-alku)
 
   )

@@ -6,8 +6,6 @@
 (liby 'helm-ls-git
   (command (helm-ls-git-ls) "helm-ls-git")
   (after 'helm-ls-git
-      (set-option helm-ls-git-show-abs-or-relative
-       'relative))
-  (muki:define-launcher-key "f" #'helm-ls-git-ls))
+      (set-option helm-ls-git-show-abs-or-relative 'relative)))
 
 ;;; init.el ends here

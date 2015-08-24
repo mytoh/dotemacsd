@@ -12,7 +12,7 @@
     (enable-option navi2ch-mona-use-ipa-mona)
     (set-option navi2ch-mona-ipa-mona-font-family-name "mona-izmg16")
     (navi2ch-mona-setup)
-    (muki:define-launcher-key "2" 'navi2ch)))
+    ))
 
 ;; Local Variables:
 ;; coding: utf-8
