@@ -212,6 +212,7 @@
     not-from-scratch
     dictionary
     sokoban
+    git-auto-commit-mode
 
     ;; flyparens ; load error
     ;; cycle-themes
