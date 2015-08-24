@@ -196,8 +196,8 @@
     (cl-defun muki:open-file-package-registers ()
       (interactive)
       (find-file (expand-file-name
-                  "init.d/layer/package-manager/register/init.el"
-                  user-emacs-directory)))
+                  "package-manager/register/init.el"
+                  muki-layer:root)))
 
     (muki:evil-leader-prefix-set-keys 'file
       "f" #'helm-find-files
