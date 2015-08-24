@@ -7,14 +7,14 @@
   (command (rebuildfm) "rebuildfm")
   (set-option rebuildfm-mp3-player "mpv")
 
-  (cl-defun muki:rebuildfm--mp3-player-command (oldfun &rest args)
+  (cl-defun muki:rebuildfm--mp3-player-command (&rest args)
     (cl-letf ((cmd (car args))
               (url (cadr args)))
       (message "open %s with %s"
                cmd url)
       (list cmd url)))
 
-  (advice-add 'rebuildfm--mp3-player-command :around
+  (advice-add 'rebuildfm--mp3-player-command :override
               #'muki:rebuildfm--mp3-player-command)
 
   )
