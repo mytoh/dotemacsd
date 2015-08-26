@@ -53,7 +53,7 @@
     stripe-buffer
     url-preview
     dircmp
-    sx
+    ;; sx ; error loading
     smeargle
     stumpwm-mode
     context-coloring

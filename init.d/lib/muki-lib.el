@@ -47,7 +47,10 @@
                   funcs)))
 
 (cl-defun defery (library)
-  (run-with-idle-timer 2 nil #'require library nil t))
+  (run-with-idle-timer 2 nil
+                       (lambda ()
+                         (message "loading %s" library)
+                         (require library nil t))))
 
 (provide 'muki-lib)
 
