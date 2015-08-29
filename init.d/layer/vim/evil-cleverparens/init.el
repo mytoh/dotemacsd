@@ -2,7 +2,8 @@
 
 ;;; Code:
 
-(req 'evil-cleverparens
-  (add-hook 'emacs-lisp-mode-hook 'evil-cleverparens-mode))
+(liby 'evil-cleverparens
+  (command (evil-cleverparens-mode) "evil-cleverparens")
+  (add-hook 'emacs-lisp-mode-hook #'evil-cleverparens-mode))
 
 ;;; init.el ends here

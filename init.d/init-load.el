@@ -287,7 +287,7 @@
     evil
 
     ;; evil-rsi ; after evil
-    ;; evil-cleverparens
+    evil-cleverparens
     ;; evil-smartparens
     evil-anzu
     evil-snipe
