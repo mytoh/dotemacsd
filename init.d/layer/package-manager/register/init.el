@@ -928,6 +928,10 @@
                   '(:tag ("vim" "filetype")))
 (hoarder:register "ryuslash/git-auto-commit-mode"
                   '(:tag ("git" "auto_commit")))
+(hoarder:register "dnaumov/midje-mode"
+                  '(:tag ("clojure" "test" )))
+(hoarder:register "cadadr/forecast.el"
+                  '(:tag ("weather" "forecast")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :depends (("papaeye/go-mode.el"
@@ -1497,9 +1501,7 @@
 (hoarder:fetch "takaxp/emacs.d")
 (hoarder:fetch "senny/cabbage"
                '(:recursive nil))
-(hoarder:fetch "capitaomorte/holy"
-               '(:tag ("stumpwm")
-                 :recursive nil))
+
 (hoarder:fetch "avendael/dotemacs"
                '(:tag ("evil")))
 (hoarder:fetch "VincentToups/emacs-utils")
@@ -1790,6 +1792,8 @@
                '(:tag ("clojure" "map" "utility")))
 (hoarder:fetch "mattduck/generic-css"
                '(:tag ("css" "html" "org")))
+(hoarder:fetch "capitaomorte/holy"
+               '(:tag ("sly" "common_lisp" "emacs" "configuration" "stumpwm")))
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
