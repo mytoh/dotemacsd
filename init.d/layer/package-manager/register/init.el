@@ -1686,7 +1686,9 @@
 (hoarder:fetch "julienchastang/dotemacs"
                '(:tag ("org")))
 (hoarder:fetch "howardabrams/dot-files"
-               '(:tag ("org")))
+               '(:tag ("org" "emacs" "configuration")))
+(hoarder:fetch "howardabrams/demo-it"
+               '(:tag ("org" "presentation")))
 (hoarder:fetch "ikame/dotfiles"
                '(:tag ("org" "conkeror")))
 (hoarder:fetch "kuanyui/.emacs.d")
