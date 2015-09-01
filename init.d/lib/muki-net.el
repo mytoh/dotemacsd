@@ -20,17 +20,19 @@
                (divs (thread-first root
                        (xml-get-children 'body)
                        car
-                       (xml-get-children 'div)))
-               (my-body (thread-first (node-filter divs "my_body" 'id)
+                       get-div))
+               (my-body (thread-first divs
+                          (node-filter "my_body" 'id)
                           car
-                          (xml-get-children 'div)))
-               (main (xml-get-children
-                      (car (node-filter my-body "main" 'id))
-                      'div))
-               (my-footer
-                (xml-get-children
-                 (car (node-filter main "my_footer" 'id))
-                 'div))
+                          get-div))
+               (main (thread-first my-body
+                       (node-filter "main" 'id)
+                       car
+                       get-div))
+               (my-footer (thread-first main
+                            (node-filter "my_footer" 'id)
+                            car
+                            get-div))
                (box02 (car (node-filter my-footer "box02" 'class)))
                (links (xml-get-children box02 'a)))
       (message "playing %s" where)
