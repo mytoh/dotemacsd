@@ -4,7 +4,9 @@
 
 (cl-defun muki:shutup-stop (where)
   (interactive "sWhere?: ")
-  (cl-labels ((node-filter (elms target attr)
+  (cl-labels ((get-id (elm) (xml-get-children elm 'id))
+              (get-div (elm) (xml-get-children elm 'div))
+              (node-filter (elms target attr)
                 (seq-filter
                  (lambda (elm) (string-equal target
                                         (xml-get-attribute elm attr)))
