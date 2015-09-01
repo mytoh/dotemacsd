@@ -4,7 +4,7 @@
 
 (cl-defun muki:shutup-stop (where)
   (interactive "sWhere?: ")
-  (cl-labels ((node-filter (target attr elms)
+  (cl-labels ((node-filter (elms target attr)
                 (seq-filter
                  (lambda (elm) (string-equal target
                                         (xml-get-attribute elm attr)))
@@ -19,17 +19,17 @@
                        (xml-get-children 'body)
                        car
                        (xml-get-children 'div)))
-               (my-body (xml-get-children
-                         (car (node-filter "my_body" 'id divs))
-                         'div))
+               (my-body (thread-first (node-filter divs "my_body" 'id)
+                          car
+                          (xml-get-children 'div)))
                (main (xml-get-children
-                      (car (node-filter "main" 'id my-body))
+                      (car (node-filter my-body "main" 'id))
                       'div))
                (my-footer
                 (xml-get-children
-                 (car (node-filter "my_footer" 'id main))
+                 (car (node-filter main "my_footer" 'id))
                  'div))
-               (box02 (car (node-filter "box02" 'class my-footer)))
+               (box02 (car (node-filter my-footer "box02" 'class)))
                (links (xml-get-children box02 'a)))
       (message "playing %s" where)
       (require 'async)
