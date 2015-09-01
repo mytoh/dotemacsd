@@ -286,6 +286,7 @@ buffer if the variable `delete-trailing-lines' is non-nil."
 (require 'muki-key)
 (require 'muki-option)
 (require 'muki-mode)
+(require 'muki-net)
 (require 'muki-lib)
 
 
