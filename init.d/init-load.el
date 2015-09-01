@@ -84,7 +84,7 @@
     navi2ch-file-mode
     magit
     magit-overview
-    magit-idle-breadcrumbs
+    ;; magit-idle-breadcrumbs
     git-modes
     skk
 
