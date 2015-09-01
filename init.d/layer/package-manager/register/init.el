@@ -932,6 +932,8 @@
                   '(:tag ("clojure" "test" )))
 (hoarder:register "cadadr/forecast.el"
                   '(:tag ("weather" "forecast")))
+(hoarder:register "emacsmirror/cparen"
+                  '(:tag ("scheme")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :depends (("papaeye/go-mode.el"
