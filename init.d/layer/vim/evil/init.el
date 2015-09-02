@@ -164,10 +164,10 @@
       "Inhibit search pattern update during `skk-henkan-mode'.
 This is reasonable since inserted text during `skk-henkan-mode'
 is a kind of temporary one which is not confirmed yet."
-      (unless (and (boundp 'skk-henkan-mode) skk-henkan-mode)
+      (unless (bound-and-true-p skk-henkan-mode)
         ad-do-it))
 
-    (if (boundp 'skk-mode)
+    (if (bound-and-true-p skk-mode)
         (defun-add-hook muki:evil-disable-skk (evil-normal-state-entry-hook)
           (if skk-mode
               (skk-mode-off))))))
