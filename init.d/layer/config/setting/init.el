@@ -400,7 +400,7 @@
 ;; (set-option gc-cons-threshold (* 10 gc-cons-threshold))
 
 ;; message log line counts
-(set-option message-log-max 5000)
+(set-option message-log-max 10000)
 
 ;; desktop
 ;; (setq desktop-globals-to-save '(extended-command-history
