@@ -934,6 +934,8 @@
                   '(:tag ("weather" "forecast")))
 (hoarder:register "emacsmirror/cparen"
                   '(:tag ("scheme")))
+(hoarder:register "steventlamb/yatt.el"
+                  '(:tag ("tea" "timer")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :depends (("papaeye/go-mode.el"
@@ -1118,10 +1120,10 @@
                   '(:tag ("org" "clipboard")))
 (hoarder:register "tarsius/orglink"
                   '(:tag ("org")))
-(hoarder:register "steventlamb/yatt.el"
-                  '(:tag ("tea" "timer")))
 (hoarder:register "snosov1/toc-org"
                   '(:tag ("org" "toc" )))
+(hoarder:register "mattduck/org-query"
+                  '(:tag ("org" "agenda")))
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ("org" "bongo" "music")
 ;;                    :depends ("dbrock/bongo")
