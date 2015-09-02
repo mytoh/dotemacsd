@@ -37,6 +37,7 @@
     org-cliplink
     orglink
     toc-org
+    org-query
     ))
 
 (muki-layer:load-layers 'package
@@ -213,6 +214,7 @@
     dictionary
     sokoban
     git-auto-commit-mode
+    yatt
 
     ;; flyparens ; load error
     ;; cycle-themes
@@ -372,7 +374,7 @@
     newsticker
     rcirc
     tramp
-    eieio
+    ;; eieio
     ;; savehist ; if history file become too large, delete file or disable mode
     recentf
     ))
