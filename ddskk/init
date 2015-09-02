@@ -2,6 +2,11 @@
 
 ;;; ddskk init
 
+;;;; utf-8
+;; this line should put on last
+(setq skk-jisyo-code 'utf-8)
+
+
 ;;;; large dict
 ;; (setq skk-large-jisyo (expand-file-name "ddskk/dic/SKK-JISYO.L"
 ;;                                         user-emacs-directory))
@@ -49,6 +54,17 @@
   :group 'skk-tooltip)
 (setq skk-tooltip-face 'muki:skk-tooltip)
 
+;;;; kakasi
+(when (executable-find "kakasi")
+  (setq skk-use-kakasi t))
+
+;; (let ((euc 'euc))
+;;   (modify-coding-system-alist 'process
+;;                               "kakasi"
+;;                               (cons euc euc)))
+
+;;;; dictionary
+
 ;;;; か行をcで入れるときに辞書の送りがなをちゃんとする。
 ;; (setq skk-okuri-char-alist '((\"c\" . \"k\")))
 
@@ -93,10 +109,6 @@
 
 ;;;; itaiji
 (setq skk-itaiji-jisyo (muki:skk-dic-path "SKK-JISYO.itaiji"))
-
-;;;; utf-8
-;; this line should put on last
-(setq skk-jisyo-code 'utf-8)
 
 ;;;; github emoji
 
