@@ -1279,8 +1279,9 @@
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
-              (hoarder:register (expand-file-name path
-                                                  (muki:expand-path-huone "ateljee"))
+              (hoarder:register (thread-last (getenv "HUONE")
+                                  (expand-file-name "ateljee")
+                                  (expand-file-name path))
                                 option)))
   (add-project-root  "emacs-flatline")
   (add-project-root "helm-ypv" '(:tag "helm"))
