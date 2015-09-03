@@ -16,7 +16,7 @@
 
 (cl-defun muki:magit-setup ()
   (set-option magit-diff-refine-hunk 'all)
-  (set-option magit-repository-directories `(,(muki:expand-path-huone "projektit")))
+  (set-option magit-repository-directories `(,(muki:expand-path-huone "ateljee")))
   (disable-option magit-push-always-verify)
   ;; auto fill
   (hook 'magit-log-edit-mode-hook

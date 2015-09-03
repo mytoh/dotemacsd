@@ -19,7 +19,7 @@
          ("paketti" . ,(locate-user-emacs-file "init.d/paketit"))
          ("hoarder" . ,(locate-user-emacs-file "hoarder"))
          ("elpa" . ,(locate-user-emacs-file "elpa"))))
-    (helm-alku-directory-add-subdirectories (muki:expand-path-huone "projektit/"))
+    (helm-alku-directory-add-subdirectories (muki:expand-path-huone "ateljee/"))
     (helm-alku-directory-add-subdirectories (muki:expand-path-huone "kuvat/sivusto"))
     (set-option helm-alku-program-list
                 '("v2c"

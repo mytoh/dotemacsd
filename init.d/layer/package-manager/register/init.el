@@ -1280,7 +1280,7 @@
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
               (hoarder:register (expand-file-name path
-                                                  (muki:expand-path-huone "projektit"))
+                                                  (muki:expand-path-huone "ateljee"))
                                 option)))
   (add-project-root  "emacs-flatline")
   (add-project-root "helm-ypv" '(:tag "helm"))

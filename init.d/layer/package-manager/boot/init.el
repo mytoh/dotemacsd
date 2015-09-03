@@ -6,7 +6,7 @@
 (require 'muki)
 
 ;;;  setup
-(muki:add-to-load-path (muki:expand-path-huone "projektit/emacs-hoarder/"))
+(muki:add-to-load-path (muki:expand-path-huone "ateljee/emacs-hoarder/"))
 
 ;;;; initialize hoarder
 (req 'hoarder
