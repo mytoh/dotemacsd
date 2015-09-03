@@ -71,8 +71,8 @@
 
   (cl-defun muki:flatline:flycheck ()
     (if (bound-and-true-p flycheck-status-emoji-version)
-        (flycheck-status-emoji-mode-line-text)
-      (flycheck-mode-line-status-text)))
+        (format-mode-line (flycheck-status-emoji-mode-line-text))
+      (format-mode-line (flycheck-mode-line-status-text))))
 
   (flatline:set-theme 'solarized-dark)
 
