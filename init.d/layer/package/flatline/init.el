@@ -69,6 +69,11 @@
         (flatline:theme-get-face 'left))
        (_ (flatline:theme-get-face 'left)))))
 
+  (cl-defun muki:flatline:flycheck ()
+    (if (bound-and-true-p flycheck-status-emoji-version)
+        (flycheck-status-emoji-mode-line-text)
+      (flycheck-mode-line-status-text)))
+
   (flatline:set-theme 'solarized-dark)
 
   (setq flatline:mode-line '())
@@ -84,6 +89,7 @@
   (flatline:add '("<" . middle))
   (flatline:add '(muki:flatline:coding-system . middle))
   (flatline:add '(muki:flatline:position . right-sub))
+  (flatline:add '(muki:flatline:flycheck . right-sub))
   (flatline:add '(flatline:minor-mode . right))
   (flatline:update)
 
