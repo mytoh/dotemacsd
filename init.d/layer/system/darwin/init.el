@@ -1,7 +1,7 @@
  ;;; -*- coding: utf-8 -*-
 
 (when (string-equal system-type "darwin")
-  (cl-letf ((my-paths `(,(expand-file-name "~/huone/homebrew/bin"))))
+  (cl-letf ((my-paths `(,(muki:expand-path-huone "homebrew/bin"))))
     (seq-doseq (dir my-paths)
       ;; sakito.jp/emacs/emacsshell.html
       (when (and (file-directory-p dir) (not (member dir exec-path)))

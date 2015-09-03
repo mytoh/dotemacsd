@@ -317,7 +317,7 @@
      (seq-filter
       (clambda (dir) (and (file-directory-p dir)
                       (file-exists-p dir)))
-      (directory-files (expand-file-name "~/huone/työkaluvaja/info") 'full "^[^.]+"))))
+      (directory-files (muki:expand-path-huone "työkaluvaja/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
 (defvar muki:external-programs-associations nil)

@@ -32,7 +32,7 @@
   (disable-option shr-image-animate)
   (enable-option shr-use-fonts)
   (after 'eww
-      (set-option eww-download-directory "~/huone/lataukset")
+      (set-option eww-download-directory (muki:expand-path-huone "lataukset"))
     ;; (set-option eww-search-prefix "https://duckduckgo.com/html/?q=!g+")
     (setq eww-search-prefix "http://www.google.co.jp/search?q=")
     (add-key eww-mode-map "C-i" #'shr-next-link))

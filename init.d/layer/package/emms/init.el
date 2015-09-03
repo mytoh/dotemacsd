@@ -11,7 +11,8 @@
               emms-mode-line-icon-color "blue")
   ;; playing time
   (emms-playing-time +1)
-  (set-option emms-source-file-default-directory "~/huone/musiikki")
+  (set-option emms-source-file-default-directory
+              (muki:expand-path-huone "musiikki"))
   (enable-option emms-repeat-playlist)
   (enable-option emms-info-asynchronously)
   (enable-option emms-info-auto-update)
