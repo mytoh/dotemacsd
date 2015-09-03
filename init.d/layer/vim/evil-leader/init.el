@@ -55,6 +55,7 @@
       "c" #'describe-char
       "v" #'describe-variable
       "p" #'describe-package
+      "c" #'describe-face
       "t" #'describe-theme)
 
     (cl-defun switch-to-scratch-buffer ()
