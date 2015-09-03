@@ -215,6 +215,9 @@
     sokoban
     git-auto-commit-mode
     yatt
+    elisp-sandbox
+    flycheck-status-emoji
+    subemacs
 
     ;; flyparens ; load error
     ;; cycle-themes

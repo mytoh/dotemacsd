@@ -936,6 +936,16 @@
                   '(:tag ("scheme")))
 (hoarder:register "steventlamb/yatt.el"
                   '(:tag ("tea" "timer")))
+(hoarder:register "joelmccracken/elisp-sandbox"
+                  '(:tag ("emacs_lisp")
+                    :desc  "Evaluate EmacsLisp expressions in a sandbox"))
+(hoarder:register "liblit/flycheck-status-emoji"
+                  '(:tag ("flycheck" "test" "emoji")
+                    :desc "Summary: Show flycheck status using cute, compact emoji"))
+(hoarder:register "kbauer/subemacs"
+                  '(:tag ("emacs_lisp")
+                    :desc "Evaluating expressions in a fresh Emacs subprocess"))
+
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :depends (("papaeye/go-mode.el"
