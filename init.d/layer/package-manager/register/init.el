@@ -198,7 +198,7 @@
 (hoarder:register "magit/git-modes"
                   '(:tag "git"))
 (hoarder:register "magit/magit"
-                  '(:build ("gmake lisp docs")
+                  '(:build ("gmake clean lisp docs")
                     :info "Documentation"
                     :load-path ("lisp")
                     :depends (("magnars/dash.el" ( :compile nil))
