@@ -2,6 +2,7 @@
 
 (require 'muki-core)
 
+(require 'muki-env)
 (require 'muki-key)
 (require 'muki-option)
 (require 'muki-mode)
