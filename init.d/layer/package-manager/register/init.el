@@ -945,6 +945,8 @@
 (hoarder:register "kbauer/subemacs"
                   '(:tag ("emacs_lisp")
                     :desc "Evaluating expressions in a fresh Emacs subprocess"))
+(hoarder:register "gabesoft/emc"
+                  '(:tag ("evil" "multiple-cursor")))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
@@ -1812,6 +1814,8 @@
                '(:tag ("css" "html" "org")))
 (hoarder:fetch "capitaomorte/holy"
                '(:tag ("sly" "common_lisp" "emacs" "configuration" "stumpwm")))
+(hoarder:fetch "emacsmirror/shop"
+               '(:tag ("todo" "shop_list")))
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
