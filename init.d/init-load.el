@@ -361,6 +361,7 @@
 ;;;;; config
 (muki-layer:load-layers 'config
   '(setting
+    autorevert
     key
     hook
     path

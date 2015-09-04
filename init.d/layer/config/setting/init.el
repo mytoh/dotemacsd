@@ -205,14 +205,6 @@
 ;; (set-option undo-limit 100000
 ;;             undo-string-limit 1300000)
 
-;;;; reload buffer
-(global-auto-revert-mode 1)
-;; (set-option auto-revert-interval 5)
-(req 'vc
-  (enable-option auto-revert-check-vc-info))
-(enable-option global-auto-revert-non-file-buffers)
-(disable-option auto-revert-verbose)
-(set-option revert-without-query '(".*\\.scm\\'" ".*\\.el\\'" ".*\\.tcsh\\'"))
 
 ;;;; confirmation when visit new file or buffer
 (set-option confirm-nonexistent-file-or-buffer nil)
