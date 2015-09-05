@@ -296,6 +296,7 @@
     ;; evil-smartparens
     evil-anzu
     evil-snipe
+    evil-textobj-anyblock
     ;; evil-quick-scope
     ))
 

@@ -1063,6 +1063,8 @@
                   '(:tag ("evil")))
 (hoarder:register "louy2/evil-avy"
                   '(:tag ("evil" "avy")))
+(hoarder:register "noctuid/evil-textobj-anyblock"
+                  '(:tag ("evil" "textobj")))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
