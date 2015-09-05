@@ -77,10 +77,13 @@
   (cl-letf ((dict-directory (locate-user-emacs-file "ddskk/dic")))
     (seq-each
      (lambda (d)
-       (cl-letf ((elem (if (listp d)
-                           (cons (expand-file-name (car d) dict-directory)
-                                 (cdr d))
-                         (expand-file-name d dict-directory))))
+       (cl-letf ((elem
+                  (pcase d
+                    (`(,head . ,tail)
+                      (cons (expand-file-name head dict-directory)
+                            tail))
+                    (_
+                     (expand-file-name d dict-directory)))))
          (when (file-exists-p (if (listp elem) (car elem) elem))
            (cl-pushnew elem skk-extra-jisyo-file-list))))
      dicts)))
