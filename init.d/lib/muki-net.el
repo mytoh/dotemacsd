@@ -9,7 +9,7 @@
               (node-filter (elms target attr)
                 (seq-filter
                  (lambda (elm) (string-equal target
-                                        (xml-get-attribute elm attr)))
+                                             (xml-get-attribute elm attr)))
                  elms)))
     (cl-letf* ((html (with-current-buffer
                          (url-retrieve-synchronously
@@ -47,8 +47,10 @@
 (cl-defun muki:play-mpv (url)
   (interactive "sUrl: ")
   (message "playing %s" url)
-  (call-process-shell-command
-   (concat "nohup mpv " url " &")))
+  (start-process-shell-command "muki:play-mpv" nil
+                               (concat "nohup " "mpv "
+                                       "\'" url "\'"
+                                       " &")))
 
 
 (provide 'muki-net)
