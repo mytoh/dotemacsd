@@ -423,7 +423,7 @@
                   '(:tag "emoji"))
 (hoarder:register "antonj/Highlight-Indentation-for-Emacs")
 (hoarder:register "mcandre/vimrc-mode" '(:tag "vim"))
-(hoarder:register "victorhge/iedit")
+(hoarder:register "tsdh/iedit")
 (hoarder:register "gaudecker/mip-mode")
 (hoarder:register "mugijiru/cat-mode")
 (hoarder:register "syl20bnr/vi-tilde-fringe"
@@ -1065,6 +1065,9 @@
                   '(:tag ("evil" "avy")))
 (hoarder:register "noctuid/evil-textobj-anyblock"
                   '(:tag ("evil" "textobj")))
+(hoarder:register "syl20bnr/evil-iedit-state"
+                  '(:tag ("evil" "iedit")
+                    :depends ("tsdh/iedit")))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
