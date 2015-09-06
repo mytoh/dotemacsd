@@ -60,12 +60,14 @@
                     (file-name-as-directory path))
                    load-path)))
 
-(cl-defmacro muki:expand-file-names (&rest names)
-  (cl-labels ((rec (l ns)
-                (if (cl-endp ns)
-                    l
-                  (rec (list 'expand-file-name (car ns) l)  (cdr ns)))))
-    (rec '() names)))
+;; (cl-defmacro muki:expand-file-names (&rest names)
+;;   (cl-labels ((rec (l ns)
+;;                 (pcase ns
+;;                   (`nil l)
+;;                   (`(,h . ,t)
+;;                     (rec (list 'expand-file-name h l)
+;;                          t)))))
+;;     (rec '() names)))
 
 (cl-defmacro muki:set-face-colours (face fore back)
   (declare (debug t))
