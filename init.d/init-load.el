@@ -297,6 +297,7 @@
     evil-anzu
     evil-snipe
     evil-textobj-anyblock
+    evil-iedit-state
     ;; evil-quick-scope
     ))
 
