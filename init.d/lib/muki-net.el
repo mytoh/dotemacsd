@@ -44,6 +44,15 @@
                            (xml-get-attribute (seq-elt links 1)
                                               'href)))))
 
+(cl-defun muki:play-mpv (url)
+  (interactive "sUrl: ")
+  (message "playing %s" url)
+  (async-start-process "play-mpv" "mpv"
+                       (lambda (proc)
+                         (message "%s finished"
+                                  url))
+                       url))
+
 
 (provide 'muki-net)
 ;;; muki-net.el ends here
