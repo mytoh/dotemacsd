@@ -218,6 +218,7 @@
     elisp-sandbox
     flycheck-status-emoji
     subemacs
+    nameless
 
     ;; flyparens ; load error
     ;; cycle-themes
