@@ -13,14 +13,13 @@
 
   (after 'helm-alku
       (set-option helm-alku-directory-list
-       `(("video" . ,(muki:expand-path-huone "videot"))
-         ("sarjakuva" . ,(muki:expand-path-huone "sarjakuva"))
-         ("lataukset" . ,(muki:expand-path-huone "lataukset"))
+       `(("sarjakuva" . ,(muki:expand-path-huone "kuvat/sarjakuva"))
          ("paketti" . ,(locate-user-emacs-file "init.d/paketit"))
          ("hoarder" . ,(locate-user-emacs-file "hoarder"))
          ("elpa" . ,(locate-user-emacs-file "elpa"))))
     (helm-alku-directory-add-subdirectories (muki:expand-path-huone "ateljee/"))
     (helm-alku-directory-add-subdirectories (muki:expand-path-huone "kuvat/sivusto"))
+    (helm-alku-directory-add-subdirectories (getenv "HUONE"))
     (set-option helm-alku-program-list
                 '("v2c"
                   "conkeror"
