@@ -947,6 +947,7 @@
                     :desc "Evaluating expressions in a fresh Emacs subprocess"))
 (hoarder:register "gabesoft/emc"
                   '(:tag ("evil" "multiple-cursor")))
+(hoarder:register "Malabarba/Nameless")
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
