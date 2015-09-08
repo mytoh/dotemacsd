@@ -12,8 +12,9 @@
   (setq migemo-user-dictionary nil)
   (setq migemo-regex-dictionary nil)
   (setq migemo-coding-system 'utf-8-unix)
-  (load-library "migemo")
-  (migemo-init))
+  (defery 'migemo)
+  (after 'migemo
+      (migemo-init)))
 
 (provide 'init-migemo)
 
