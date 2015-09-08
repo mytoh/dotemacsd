@@ -1662,8 +1662,6 @@
                '(:tag ("guix" "package_manager")
                  :site "http://www.gnu.org/software/guix/"
                  :desc "This is Guix! Purely functional package manager for GNU, and distribution of the GNU system."))
-(hoarder:fetch "eschulte/org-scraps"
-               '(:tag ("org")))
 (hoarder:fetch "yuratomo/w3m.vim"
                '(:tag ("vim" "w3m")))
 
@@ -1822,6 +1820,10 @@
                '(:tag ("sly" "common_lisp" "emacs" "configuration" "stumpwm")))
 (hoarder:fetch "emacsmirror/shop"
                '(:tag ("todo" "shop_list")))
+(hoarder:fetch "eschulte/org-scraps"
+               '(:tag ("org" "snippets")
+                 :site "http://eschulte.github.com/org-scraps/"
+                 :desc "Collection of Org-mode snippets"))
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
