@@ -20,8 +20,8 @@
     (flycheck-mode)
     (flycheck-select-checker 'sh-shellcheck)))
 
-(add-hook 'sh-mode-hook
-          #'muki:shell-set-flycheck-checker)
+;; (add-hook 'sh-mode-hook
+;;           #'muki:shell-set-flycheck-checker)
 
 (add-hook 'sh-mode-hook
           (clambda ()
