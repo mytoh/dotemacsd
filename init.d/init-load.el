@@ -347,6 +347,7 @@
     swiper
     ace-jump-helm-line
     helm-commandlinefu
+    helm-unicode
     ;; helm-swoop
     ;; helm-company
     ;; helm-delicious
