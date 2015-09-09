@@ -1284,6 +1284,7 @@
 (hoarder:register-theme "chriskempson/tomorrow-theme"
                         '(:load-path "GNU Emacs"))
 (hoarder:register-theme "mattly/emacs-farmhouse-theme")
+(hoarder:register-theme "edliaw/bubblegum-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
