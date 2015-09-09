@@ -1310,7 +1310,7 @@
   (add-project-root "helm-eww-history" '(:tag ("helm" "eww" )))
   (add-project-root "helm-eww-search-engine" '(:tag ("helm" "eww" )))
   (add-project-root "helm-eshell-jump" '(:tag ("helm" "eshell")))
-  (add-project-root "emacs-glove" '(:tag ("plist" "utility"))))
+  (add-project-root "emacs-glof" '(:tag ("plist" "utility"))))
 
 ;;;;;; skk
 (hoarder:register "skk-dev/ddskk"
@@ -1824,6 +1824,8 @@
                '(:tag ("org" "snippets")
                  :site "http://eschulte.github.com/org-scraps/"
                  :desc "Collection of Org-mode snippets"))
+(hoarder:fetch "ptaoussanis/encore"
+               '(:tag ("clojure" "utility")))
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
