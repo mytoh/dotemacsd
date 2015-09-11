@@ -49,7 +49,13 @@
   "tq" #'ert
 
   "gg" #'xref-find-definitions-other-window
-  "hh" #'elisp-slime-nav-describe-elisp-thing-at-point)
+  "hh" #'elisp-slime-nav-describe-elisp-thing-at-point
+
+  "=b" #'srefactor-lisp-format-buffer
+  "=d" #'srefactor-lisp-format-defun
+  "=o" #'srefactor-lisp-one-line
+  "=s" #'srefactor-lisp-format-sexp
+  )
 
 
 ;;; init.el ends here
