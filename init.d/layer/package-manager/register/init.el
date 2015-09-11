@@ -948,6 +948,15 @@
 (hoarder:register "gabesoft/emc"
                   '(:tag ("evil" "multiple-cursor")))
 (hoarder:register "Malabarba/Nameless")
+(hoarder:register "xuchunyang/eshell-did-you-mean"
+                  '(:tag ("eshell")))
+(hoarder:register "tonini/alchemist.el"
+                  '(:tag ("elixir")
+                    :depends ( "elixir-lang/emacs-elixir"
+                              "magnars/dash.el"
+                              "company-mode/company-mode")))
+(hoarder:register "elixir-lang/emacs-elixir"
+                  '(:tag ("elixir" "erlang")))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
@@ -1827,6 +1836,8 @@
                  :desc "Collection of Org-mode snippets"))
 (hoarder:fetch "ptaoussanis/encore"
                '(:tag ("clojure" "utility")))
+(hoarder:fetch "jneen/variants-slides"
+               '(:tag ("clojure" "variants" "elixir")))
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
