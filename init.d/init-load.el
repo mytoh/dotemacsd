@@ -220,6 +220,7 @@
     subemacs
     nameless
     wordnut
+    erlang
 
     ;; flyparens ; load error
     ;; cycle-themes

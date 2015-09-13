@@ -959,6 +959,9 @@
                   '(:tag ("elixir" "erlang")))
 (hoarder:register "gromnitsky/wordnut"
                   '(:tag ("wordnet" "language" "english")))
+(hoarder:register "erlang/otp"
+                  '(:tag ("erlang" "otp")
+                    :load-path "lib/tools/emacs"))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
