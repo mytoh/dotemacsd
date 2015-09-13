@@ -5,7 +5,9 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 (package-initialize)
 
+(require 'cl-lib)
 
-(add-to-list 'load-path (concat user-emacs-directory "init.d"))
-(require 'init-load)
-(put 'downcase-region 'disabled nil)
+(cl-letf ((file-name-handler-alist nil)) 
+  (add-to-list 'load-path (concat user-emacs-directory "init.d"))
+  (require 'init-load)
+  (put 'downcase-region 'disabled nil))
