@@ -9,7 +9,7 @@
               (node-filter (elms target attr)
                 (seq-filter
                  (lambda (elm) (string-equal target
-                                             (xml-get-attribute elm attr)))
+                                        (xml-get-attribute elm attr)))
                  elms)))
     (cl-letf* ((html (with-current-buffer
                          (url-retrieve-synchronously
@@ -34,15 +34,12 @@
                             car
                             get-div))
                (box02 (car (node-filter my-footer "box02" 'class)))
-               (links (xml-get-children box02 'a)))
+               (links (xml-get-children box02 'a))
+               (url (xml-get-attribute (seq-elt links 1)
+                                       'href)))
       (message "playing %s" where)
       (require 'async)
-      (async-start-process "shutup-stop" "mpv"
-                           (lambda (proc)
-                             (message "shutup-stop %s finished"
-                                      where))
-                           (xml-get-attribute (seq-elt links 1)
-                                              'href)))))
+      (muki:play-mpv url))))
 
 (cl-defun muki:play-mpv (url)
   (interactive "sUrl: ")
