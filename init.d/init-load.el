@@ -388,7 +388,9 @@
     ))
 
 ;;;;; packages
-(require 'init-paketti)
+;; (require 'init-paketti)
+(muki-layer:load-layers 'elpa
+  '(archive))
 
 ;;;;; lang
 (muki-layer:load-layers 'lang
