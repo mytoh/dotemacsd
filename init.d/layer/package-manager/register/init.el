@@ -957,6 +957,8 @@
                                  "company-mode/company-mode")))
 (hoarder:register "elixir-lang/emacs-elixir"
                   '(:tag ("elixir" "erlang")))
+(hoarder:register "gromnitsky/wordnut"
+                  '(:tag ("wordnet" "language" "english")))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")

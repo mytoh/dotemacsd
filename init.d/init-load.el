@@ -219,6 +219,7 @@
     flycheck-status-emoji
     subemacs
     nameless
+    wordnut
 
     ;; flyparens ; load error
     ;; cycle-themes
