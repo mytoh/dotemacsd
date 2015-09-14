@@ -221,6 +221,7 @@
     nameless
     wordnut
     erlang
+    sml-mode
 
     ;; flyparens ; load error
     ;; cycle-themes

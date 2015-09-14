@@ -962,6 +962,8 @@
 (hoarder:register "erlang/otp"
                   '(:tag ("erlang" "otp")
                     :load-path "lib/tools/emacs"))
+(hoarder:register "emacsmirror/sml-mode"
+                  '(:tag ("language" "Standard ML")))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
