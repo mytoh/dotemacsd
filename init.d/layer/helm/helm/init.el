@@ -19,6 +19,8 @@
   (enable-mode helm-push-mark-mode)
 
   (enable-mode helm-autoresize-mode)
+  (after 'migemo
+    (enable-mode helm-migemo-mode))
 
   (setq helm-autoresize-max-height 35)
   (setq helm-autoresize-min-height 35)
