@@ -446,4 +446,8 @@
 ;; enable syntax highlight for various file types
 (require 'generic-x)
 
+;; frame title
+(setq frame-title-format '(multiple-frames "%b"
+                           ("" "vim" "@" system-name)))
+
 ;;; config-setting.el ends here
