@@ -15,8 +15,8 @@
                   '(:tag ("helm" "ag")))
 (hoarder:register "yasuyk/helm-git-grep"
                   '(:tag ("helm" "git")))
-(hoarder:register "emacs-helm/helm-migemo"
-                  '(:tag ("helm" "migemo")))
+;; (hoarder:register "emacs-helm/helm-migemo"
+;;                   '(:tag ("helm" "migemo")))
 (hoarder:register "emacs-helm/helm-ls-git"
                   '(:tag ("helm" "git")))
 (hoarder:register "emacs-helm/helm-ls-hg"
