@@ -448,6 +448,6 @@
 
 ;; frame title
 (setq frame-title-format '(multiple-frames "%b"
-                           ("" "vim" "@" system-name)))
+                           ("" "GNU Vim" "@" system-name)))
 
 ;;; config-setting.el ends here
