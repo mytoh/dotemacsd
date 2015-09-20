@@ -364,6 +364,9 @@
     company-statistics
     ))
 
+(muki-layer:load-layers 'source-control
+  '(github-browse-file))
+
 
 ;;;;; config
 (muki-layer:load-layers 'config
