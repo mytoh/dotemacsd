@@ -44,13 +44,13 @@
   (cl-defun muki:flatline:buffer-name ()
     (cl-letf ((ro (propertize "🔒" 'face
                               `(:foreground "#bfcf3f"
-                                            :background ,(face-background (flatline:theme-get-face 'left-sub))))))
+                                            :background ,(face-background (flatline:theme-get-face :left-sub))))))
       (if buffer-read-only
           (cl-concatenate 'string
-                          (propertize " " 'face (flatline:theme-get-face 'left-sub))
+                          (propertize " " 'face (flatline:theme-get-face :left-sub))
                           ro
-                          (propertize " %b " 'face (flatline:theme-get-face 'left-sub)))
-        (propertize (flatline:pad "%b") 'face (flatline:theme-get-face 'left-sub)))))
+                          (propertize " %b " 'face (flatline:theme-get-face :left-sub)))
+        (propertize (flatline:pad "%b") 'face (flatline:theme-get-face :left-sub)))))
 
   (cl-defun muki:flatline:major-mode ()
     (propertize
@@ -64,10 +64,10 @@
      'face
      (pcase major-mode
        (`emacs-lisp-mode
-        (flatline:theme-get-face 'right))
+        (flatline:theme-get-face :right))
        (`eshell-mode
-        (flatline:theme-get-face 'left))
-       (_ (flatline:theme-get-face 'left)))))
+        (flatline:theme-get-face :left))
+       (_ (flatline:theme-get-face :left)))))
 
   (cl-defun muki:flatline:flycheck ()
     (if (bound-and-true-p flycheck-status-emoji-version)
@@ -81,16 +81,16 @@
   (flatline:add 'muki:flatline:major-mode)
   (flatline:add 'muki:flatline:buffer-name)
   (flatline:add '(muki:flatline:vc-mode . flatline:vc-mode))
-  (flatline:add '(flatline:buffer-directory . middle))
-  (flatline:add '(flatline:nyan-mode . middle))
-  ;; (flatline:add '(fill . middle))
-  (flatline:add 'fill)
-  (flatline:add '(flatline:eol-desc . middle))
-  (flatline:add '("<" . middle))
-  (flatline:add '(muki:flatline:coding-system . middle))
-  (flatline:add '(muki:flatline:position . right-sub))
-  (flatline:add '(muki:flatline:flycheck . right-sub))
-  (flatline:add '(flatline:minor-mode . right))
+  (flatline:add '(flatline:buffer-directory . :middle))
+  (flatline:add '(flatline:nyan-mode . :middle))
+  ;; (flatline:add '(:fill . :middle))
+  (flatline:add :fill)
+  (flatline:add '(flatline:eol-desc . :middle))
+  (flatline:add '("<" . :middle))
+  (flatline:add '(muki:flatline:coding-system . :middle))
+  (flatline:add '(muki:flatline:position . :right-sub))
+  (flatline:add '(muki:flatline:flycheck . :right-sub))
+  (flatline:add '(flatline:minor-mode . :right))
   (flatline:update)
 
   (enable-mode flatline-mode)
