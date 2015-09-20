@@ -91,11 +91,17 @@
 (add-hook 'emacs-lisp-mode-hook #'checkdoc-minor-mode)
 (add-hook 'emacs-lisp-mode-hook #'eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook
-          (clambda ()
-              (setq mode-name " ξ ")))
+   (clambda ()
+       (setq mode-name " ξ ")))
 
 (defun-add-hook muki:elisp-pretty-symbols (emacs-lisp-mode-hook)
-  (push '(">=" . ?≥) prettify-symbols-alist))
+  (push '(">=" . ?≥) prettify-symbols-alist)
+  (push '("add-hook" . ?) prettify-symbols-alist)
+  (push '("hook" . ?) prettify-symbols-alist)
+  (push '("mode" . ?👚) prettify-symbols-alist)
+  (push '("defun" . ?𝆑) prettify-symbols-alist)
+  (push '("cl-defun" . ?𝆑) prettify-symbols-alist)
+  )
 
 (setq lisp-indent-function #'common-lisp-indent-function)
 
