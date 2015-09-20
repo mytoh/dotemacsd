@@ -1,0 +1,13 @@
+diff --git src/cmds.c src/cmds.c
+index 7a575ae..114e4db 100644
+--- src/cmds.c
++++ src/cmds.c
+@@ -264,7 +264,7 @@ because it respects values of `delete-active-region' and `overwrite-mode'.  */)
+ 
+   CHECK_NUMBER (n);
+ 
+-  if (abs (XINT (n)) < 2)
++  if (llabs (XINT (n)) < 2)
+     remove_excessive_undo_boundaries ();
+ 
+   pos = PT + XINT (n);
