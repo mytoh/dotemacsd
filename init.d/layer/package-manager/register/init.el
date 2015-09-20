@@ -964,6 +964,9 @@
                     :load-path "lib/tools/emacs"))
 (hoarder:register "emacsmirror/sml-mode"
                   '(:tag ("language" "Standard ML")))
+(hoarder:register "osener/github-browse-file"
+                  '(:tag ("git" "github")))
+
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
@@ -1845,7 +1848,8 @@
                '(:tag ("clojure" "utility")))
 (hoarder:fetch "jneen/variants-slides"
                '(:tag ("clojure" "variants" "elixir")))
-
+(hoarder:fetch "supermomonga/darui.io"
+               '(:tag ("elnode" "blog" "org" "web" "docker")))
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;; (hoarder:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
