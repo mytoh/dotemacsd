@@ -198,7 +198,13 @@
                     'katakana-jisx0201
                     (cons  "Source Han Code JP" "iso10646-1"))
   (set-fontset-font (frame-parameter nil 'font)
-                    'han
+                    'kana (font-spec :name "Source Han Code JP"
+                                     :registry  "iso10646-1"))
+  (set-fontset-font (frame-parameter nil 'font)
+                    'han (font-spec :name "Source Han Code JP"
+                                    :registry  "iso10646-1"))
+  (set-fontset-font (frame-parameter nil 'font)
+                    'cjk-misc
                     (font-spec :name "Source Han Code JP"
                                :registry  "iso10646-1"))
   (set-face-attribute 'default nil :family   "Source Han Code JP" :height 70)
