@@ -3,7 +3,7 @@
 ;;; Code:
 
 (liby 'github-browse-file
-  (command (github-browse-file-name) "github-browse-file")
+  (command (github-browse-file) "github-browse-file")
   (evil-leader/set-key
       "gfb" #'github-browse-file))
 
