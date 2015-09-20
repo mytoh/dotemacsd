@@ -1,4 +1,6 @@
-;;; %file-base% -*- lexical-binding: t; coding: utf-8; -*-
+;;; %file-base% --- %file-base% -*- lexical-binding: t; coding: utf-8; -*-
+
+;;; Commentary:
 
 ;;; Code:
 
