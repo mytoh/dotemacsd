@@ -198,12 +198,13 @@
                     'katakana-jisx0201
                     (cons  "Source Han Code JP" "iso10646-1"))
   (set-fontset-font (frame-parameter nil 'font)
-                    'unicode
+                    'han
                     (font-spec :name "Source Han Code JP"
                                :registry  "iso10646-1"))
   (set-face-attribute 'default nil :family   "Source Han Code JP" :height 70)
   (set-face-attribute 'variable-pitch nil :family  "Source Han Code JP" )
   (set-fontset-font t 'symbol (font-spec :name "Symbola" ) nil 'prepend)
+  (set-fontset-font t 'unicode (font-spec :name "Symbola" ) nil 'prepend)
   (set-fontset-font t 'musical-symbol
                     (font-spec :name "Symbola" ) nil 'prepend))
 
@@ -212,16 +213,18 @@
 [[http://www.emacswiki.org/emacs/FontSets]] "
 (seq-map
  (pcase-lambda (`(,font . ,ratio))
-     (cons
-      (rx-to-string `(: (* anything) ,font (* anything)))
-      ratio))
+     (add-to-list 'face-font-rescale-alist
+      (cons
+       (rx-to-string `(: (* anything) ,font (* anything)))
+       ratio)))
  '(("Hiragino Kaku Gothic ProN" . 1.2)
    ("LiHei Pro" . 1.2)
    ("Heiti SC" . 1.2)
    ("Arial Unicode MS" . 1.2)
    ("Devanagari MT" . 1.3)
    ("Kailasa" . 1.4)
-   ("Symbola" . 1.3))))
+   ("Symbola" . 1.7)
+   )))
 
 (cl-defun muki:set-font (type)
   (cond
