@@ -35,7 +35,8 @@
 
 ;; from spacemacs github.com/syl20bnr/spacemacs/spacemacs/keybindings.el
 ;; emacs-lisp -----------------------------------------------------------------
-(muki:evil-leader-define-key-for-mode (emacs-lisp-mode emacs-lisp-mode-map)
+(muki:evil-leader-define-key-for-modes ((emacs-lisp-mode emacs-lisp-mode-map)
+                                        (lisp-interaction-mode lisp-interaction-mode-map))
   "e$" #'lisp-state-eval-sexp-end-of-line
   "eb" #'eval-buffer
   "ee" #'eval-last-sexp
@@ -56,6 +57,5 @@
   "=o" #'srefactor-lisp-one-line
   "=s" #'srefactor-lisp-format-sexp
   )
-
 
 ;;; init.el ends here

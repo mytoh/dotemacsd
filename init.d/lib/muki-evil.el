@@ -57,6 +57,14 @@
           (muki:evil-leader-define-key-for-mode ,mode-and-map)
           ,@(cddr bindings))))
 
+(cl-defmacro muki:evil-leader-define-key-for-modes (mode-map-list &rest bindings)
+  (declare (debug t)
+           (indent 1))
+  (unless (seq-empty-p mode-map-list)
+    `(progn
+       (muki:evil-leader-define-key-for-mode ,(car mode-map-list) ,@bindings)
+       (muki:evil-leader-define-key-for-modes ,(cdr mode-map-list) ,@bindings))))
+
 (provide 'muki-evil)
 
 ;;; muki-evil.el ends here
