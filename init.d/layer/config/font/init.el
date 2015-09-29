@@ -212,7 +212,7 @@
   (set-fontset-font t 'symbol (font-spec :name "Symbola" ) nil 'prepend)
   (set-fontset-font t 'unicode (font-spec :name "Symbola" ) nil 'prepend)
   (set-fontset-font t 'musical-symbol
-                    (font-spec :name "Symbola" ) nil 'prepend))
+                    (font-spec :name "Fira Mono" ) nil 'prepend))
 
 (cl-defun muki:font-set-rescale-alist ()
   " [[https://skalldan.wordpress.com/2011/08/05/mac-os-x-%E3%81%A7%E3%81%AE-emacs-2/]]
