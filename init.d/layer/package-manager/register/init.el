@@ -376,6 +376,8 @@
                   '(:tag ("twitter")))
 (hoarder:register "mhayashi1120/Emacs-twittering-stream"
                   '(:tag ("twitter")))
+(hoarder:register "zonuexe/twindrill-mode"
+                  '(:tag ("twitter")))
 (hoarder:register "defunkt/coffee-mode")
 (hoarder:register "fbkante/recycle")
 (hoarder:register "kawabata/ids-edit")
@@ -966,6 +968,8 @@
                   '(:tag ("language" "Standard ML")))
 (hoarder:register "osener/github-browse-file"
                   '(:tag ("git" "github")))
+(hoarder:register "mrkkrp/cyphejor"
+                  '(:tag ("diminish" "mode-line")))
 
 
 ;; (hoarder:register "papaeye/emacs-jscs"
