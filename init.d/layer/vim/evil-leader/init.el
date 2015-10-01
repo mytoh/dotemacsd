@@ -44,6 +44,7 @@
     (evil-leader/set-key
         "qQ" #'evil-quit-all
       "qq" #'kill-buffer-and-window
+      "qr" #'muki:restart-emacs
       ;; Universal argument ---------------------------------------------------------
       "u" #'universal-argument)
 
