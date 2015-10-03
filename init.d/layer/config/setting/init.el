@@ -74,10 +74,10 @@
 (auto-image-file-mode 1)
 (enable-option image-animate-loop)
 (add-hook 'image-mode-hook
-          (clambda ()
-              (cl-letf ((image (image-get-display-property)))
-                (if (image-multi-frame-p image)
-                    (image-toggle-animation)))))
+   (clambda ()
+       (cl-letf ((image (image-get-display-property)))
+         (if (image-multi-frame-p image)
+             (image-toggle-animation)))))
 ;; (set-option image-transform-resize 'fit-height)
 
 ;;;; add file types
@@ -288,6 +288,8 @@
 
 ;;;; prettify symbols
 (enable-mode global-prettify-symbols-mode)
+;;;; unprettify
+(enable-option prettify-symbols-unprettify-at-point)
 
 ;; (when window-system
 ;;   (enable-mode global-highlight-changes-mode)
