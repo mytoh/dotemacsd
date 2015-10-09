@@ -68,7 +68,6 @@
     elisp-slime-nav
     yaml-mode
     httprepl
-    highlight-defined
     rich-minority
     cat-mode
     emoji-cheat-sheet
@@ -162,7 +161,6 @@
     markdown-mode
     charmap
     pt
-    highlight-sexp
     ;; undohist
     image-archive
     js2-mode
@@ -197,7 +195,6 @@
     firestarter
     hnr
     theme-looper
-    highlight-parentheses
     column-enforce-mode
     ;; autobookmarks
     focus
@@ -212,7 +209,6 @@
     picpocket
     ws-butler
     letcheck
-    volatile-highlights
     not-from-scratch
     dictionary
     sokoban
@@ -233,7 +229,6 @@
     ;; hl-sentence
     ;; centered-window-mode
     ;; real-auto-save
-    ;; highlight-backquotes-mode
     ;; bqlist-lock
     ;; eshell-alias
     ;; switch-window
@@ -247,14 +242,12 @@
     ;; command-dwim-2
     ;; moe-theme
     ;; indent-guide
-    ;; highlight-stages
     ;; smooth-scroll
     ;; fuzzyjump
     ;; zone-settings
     ;; emux
     ;; yasnippet
     ;; js3-mode
-    ;; highlight-indentation
     ;; aggressive-indent
     ;; vi-tilde-fringe
     ;; travis
@@ -266,7 +259,6 @@
     ;; golden-ratio
     ;; writing-utils
     ;; elnode
-    ;; auto-highlight-symbol
     ;; tabbar
     ))
 
@@ -275,6 +267,15 @@
   '(
     ;; highlight-symbol
     highlight-thing
+
+    volatile-highlights
+    highlight-parentheses
+    highlight-sexp
+    highlight-defined
+    ;; auto-highlight-symbol
+    ;; highlight-indentation
+    ;; highlight-stages
+    ;; highlight-backquotes-mode
     ))
 
 ;;;;; package
