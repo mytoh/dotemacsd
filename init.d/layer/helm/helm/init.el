@@ -20,7 +20,7 @@
 
   (enable-mode helm-autoresize-mode)
   (after 'migemo
-    (enable-mode helm-migemo-mode))
+      (enable-mode helm-migemo-mode))
 
   (setq helm-autoresize-max-height 35)
   (setq helm-autoresize-min-height 35)
@@ -158,6 +158,9 @@ Otherwise goto the end of minibuffer."
 
       ;;;; helm-grep
   (setq helm-grep-default-command "env LANG=C grep -a -d skip %e -n%cH -e %p %f")
+
+  ;;;; helm-eshell
+  (enable-option helm-eshell-hist-ignoredups)
 
   )
 
