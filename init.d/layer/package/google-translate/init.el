@@ -21,7 +21,9 @@
     (req 'google-translate-smooth-ui)
 
     (setq google-translate-translation-directions-alist
-          '(("fi" . "en") ("en" . "fi") ("fi" . "ja") ("ja" . "fi"))))
+          '(("fi" . "en") ("en" . "fi")
+            ("fi" . "ja") ("ja" . "fi")
+            ("en" . "ja") ("ja" . "en"))))
 
   )
 
