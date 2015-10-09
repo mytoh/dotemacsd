@@ -38,6 +38,9 @@
     orglink
     toc-org
     org-query
+    org-bullets
+    ox-pandoc
+    org-hlc
     ))
 
 (muki-layer:load-layers 'package
