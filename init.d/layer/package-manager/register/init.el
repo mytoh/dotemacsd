@@ -971,7 +971,6 @@
 (hoarder:register "mrkkrp/cyphejor"
                   '(:tag ("diminish" "mode-line")))
 
-
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :dependency (("papaeye/go-mode.el"
@@ -1308,6 +1307,7 @@
                         '(:load-path "GNU Emacs"))
 (hoarder:register-theme "mattly/emacs-farmhouse-theme")
 (hoarder:register-theme "edliaw/bubblegum-theme")
+(hoarder:register-theme "jonathanchu/atom-one-dark-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
