@@ -307,7 +307,7 @@
     evil-textobj-anyblock
     evil-iedit-state
     evil-mc
-    ;; evil-quick-scope
+    evil-quickscope
     ))
 
 (muki-layer:load-layers 'vim
