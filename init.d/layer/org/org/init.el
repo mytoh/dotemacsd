@@ -243,18 +243,10 @@
              (message "Entry with erroneous properties drawer at %d" begin)
              begin)))))
 
-(req 'org-bullets
-  (cl-defun enable-org-bullets ()
-    (org-bullets-mode 1))
-  ;; (add-hook 'org-mode-hook 'enable-org-bullets)
-  )
-
-(req 'ox-pandoc)
 (req 'org-protocol)
 
 ;; (req 'org-eldoc)
 
-(req 'org-hlc)
 
 (add-hook 'org-mode-hook #'turn-off-auto-fill)
 
