@@ -1072,7 +1072,9 @@
                                  "http://mumble.net/~campbell/git/paredit.git"
                                  "promethial/paxedit"
                                  "Fuco1/smartparens")))
-(hoarder:register "lotabout/evil-mc"
+;; (hoarder:register "lotabout/evil-mc"
+;;                   '(:tag ("evil" "multiple-cursor")))
+(hoarder:register "gabesoft/evil-mc"
                   '(:tag ("evil" "multiple-cursor")))
 (hoarder:register "willghatch/emacs-on-parens"
                   '(:tag ("evil" "smartparens")

@@ -306,6 +306,7 @@
     evil-snipe
     evil-textobj-anyblock
     evil-iedit-state
+    evil-mc
     ;; evil-quick-scope
     ))
 
