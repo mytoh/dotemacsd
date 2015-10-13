@@ -139,6 +139,8 @@
                   '(:tag ("helm" "git" "gitignore")))
 (hoarder:register "xuchunyang/helm-commandlinefu")
 (hoarder:register "vapniks/helm-helm-commands")
+(hoarder:register "emacs-jp/helm-migemo"
+                  '(:tag ("migemo" "japanese")))
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ("helm")
 ;;                    :dependency ("michael-heerdegen/iterators.el")))
@@ -1856,6 +1858,8 @@
                '(:tag ("clojure" "variants" "elixir")))
 (hoarder:fetch "supermomonga/darui.io"
                '(:tag ("elnode" "blog" "org" "web" "docker")))
+(hoarder:fetch "ctford/traversy"
+               '(:tag ("clojure")))
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;; (hoarder:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
