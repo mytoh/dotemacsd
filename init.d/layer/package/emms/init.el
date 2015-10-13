@@ -133,8 +133,10 @@ controls, run `mixer' in a shell."
   (muki:define-emms-key "b" 'emms-smart-browse)
   (muki:define-emms-key "a f" 'emms-add-file)
   (muki:define-emms-key "a d" 'emms-add-directory-tree)
-  (muki:define-emms-key "+" 'emms-volume-raise))
-(muki:define-emms-key "-" 'emms-volume-lower)
+  (muki:define-emms-key "+" 'emms-volume-raise)
+  (muki:define-emms-key "-" 'emms-volume-lower)
+  )
+
 
 
 (req 'init-helm-emms-librefm)
