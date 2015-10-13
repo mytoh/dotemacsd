@@ -193,6 +193,14 @@ is a kind of temporary one which is not confirmed yet."
 (cl-defun muki:init-evil-modify-syntax-table ()
   (modify-syntax-entry ?_ "w" (standard-syntax-table)))
 
+(cl-defun muki:init-evil-leave-insert-mode-on-focus-out ()
+  " original code by @justbur "
+  (cl-labels ((insert-to-normal ()
+                (when (evil-insert-state-p)
+                  (evil-normal-state))))
+    (add-hook 'focus-out-hook #'insert-to-normal)
+    (run-with-idle-timer 10 t #'insert-to-normal)))
+
 (liby 'evil
   (req 'goto-chg)
 
@@ -219,6 +227,7 @@ is a kind of temporary one which is not confirmed yet."
 
   (muki:init-evil-mode-skk)
   (muki:init-evil-modify-syntax-table)
+  (muki:init-evil-leave-insert-mode-on-focus-out)
   )
 
 ;; (req 'evil-org)
