@@ -295,7 +295,6 @@
     evil-textobj-between
     evil-extra-operator
     evil-visual-mark-mode
-    ;; evil-lisp-state
 
     evil
 
@@ -308,6 +307,7 @@
     evil-iedit-state
     evil-mc
     evil-quickscope
+    evil-lisp-state
     ))
 
 (muki-layer:load-layers 'vim
