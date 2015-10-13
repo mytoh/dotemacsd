@@ -7,12 +7,14 @@
 (setq muki:evil-leader-key-binding-prefixes
       '(("a" .  application)
         ("ap" . application-package-manager)
+        ("am" . application-multimedia)
+        ("aw" . application-web)
         ("b" .  buffer)
         ("g" .  git)
         ("h" . helm)
         ("hi" . help-info)
         ("hd" . help-describe)
-        ("am" . emms)
+        ("amm" . emms)
         ("o" . org)
         ("f" . file)
         ("s" . search)
@@ -116,7 +118,12 @@
         "h" #'helm-alku
         "c" #'helm-alku-program
         "n" #'helm-alku-vihko
-        "ä" #'helm-alku-ääliö))
+        "ä" #'helm-alku-ääliö)
+      (muki:evil-leader-prefix-set-keys 'application-web
+        "t" #'helm-alku-twitch))
+
+    (muki:evil-leader-prefix-set-keys 'application-multimedia
+      "v" #'muki:play-mpv)
 
     (liby 'hoarder
       (muki:evil-leader-prefix-set-keys 'application-package-manager
@@ -160,9 +167,9 @@
         "P" #'muki:paradox-list-packages))
 
     (liby 'eww
-      (muki:evil-leader-prefix-set-keys 'application
-        "w" #'muki:eww
-        "W" #'eww))
+      (muki:evil-leader-prefix-set-keys 'application-web
+        "e" #'muki:eww
+        "E" #'eww))
 
     (liby 'helm-git-grep
       (muki:evil-leader-prefix-set-keys 'search
