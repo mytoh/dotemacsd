@@ -227,7 +227,7 @@ is a kind of temporary one which is not confirmed yet."
 
   (muki:init-evil-mode-skk)
   (muki:init-evil-modify-syntax-table)
-  (muki:init-evil-leave-insert-mode-on-focus-out)
+  ;; (muki:init-evil-leave-insert-mode-on-focus-out)
   )
 
 ;; (req 'evil-org)
