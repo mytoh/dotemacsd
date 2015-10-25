@@ -273,7 +273,7 @@
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
 ;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson, noctilux, erosiond, material
-(defvar muki:x-theme 'aurora)
+(defvar muki:x-theme 'atom-one-dark)
 (defvar muki:term-theme 'flatland)
 
 (enable-option select-enable-clipboard
@@ -431,7 +431,7 @@
 
 ;;; automatically make script executable
 (add-hook 'after-save-hook
-          #'executable-make-buffer-file-executable-if-script-p)
+   #'executable-make-buffer-file-executable-if-script-p)
 
 ;;;
 (set-option max-specpdl-size (* 10 max-specpdl-size))

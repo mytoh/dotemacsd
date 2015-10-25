@@ -14,7 +14,7 @@
                  (tp  "temp.orz.hm/yp")
                  ;; (dp  "dp.prgrssv.net")
                  ;; (hktv "games.himitsukichi.com/hktv")
-                 (turf-page "peercast.takami98.net/turf-page")
+                 ;; (turf-page "peercast.takami98.net/turf-page")
                  (oekaki "oekakiyp.appspot.com")
                  (event "eventyp.xrea.jp")
                  ;; (message "peercast.takami98.net/message-yp")

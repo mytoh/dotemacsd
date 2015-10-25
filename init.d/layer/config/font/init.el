@@ -77,6 +77,29 @@
   (if (font-exists-p "CosmicSansNeueMono")
       (set-fontset-font nil 'cyrillic (font-spec :name "CosmicSansNeueMono"))))
 
+(cl-defun set-mplus-font ()
+  "[[http://mplus-fonts.osdn.jp/mplus-bitmap-fonts/download/]]"
+  (create-fontset-from-fontset-spec
+   "-mplus-*-mplus-r-normal--10-*-*-*-*-*-fontset-mplus_10r,
+    ascii:-mplus-gothic-medium-r-normal--10-*-iso8859-1,
+    japanese-jisx0208:-mplus-gothic-medium-r-normal--10-*-jisx0208.1990-0,
+    katakana-jisx0201:-mplus-gothic-medium-r-normal--10-*-jisx0201.1976-0")
+  (create-fontset-from-fontset-spec
+   "-mplus-*-mplus-r-normal--12-*-*-*-*-*-fontset-mplus_10b,
+    ascii:-mplus-gothic-bold-r-normal--10-*-iso8859-1,
+    japanese-jisx0208:-mplus-gothic-bold-r-normal--10-*-jisx0208.1990-0,
+    katakana-jisx0201:-mplus-gothic-bold-r-normal--10-*-jisx0201.1976-0")
+  (create-fontset-from-fontset-spec
+   "-mplus-*-mplus-r-normal--12-*-*-*-*-*-fontset-mplus_12r,
+    ascii:-mplus-gothic-medium-r-normal--12-*-iso8859-1,
+    japanese-jisx0208:-mplus-gothic-medium-r-normal--12-*-jisx0208.1990-0,
+    katakana-jisx0201:-mplus-gothic-medium-r-normal--12-*-jisx0201.1976-0")
+  (create-fontset-from-fontset-spec
+   "-mplus-*-mplus-r-normal--12-*-*-*-*-*-fontset-mplus_12b,
+    ascii:-mplus-gothic-bold-r-normal--12-*-iso8859-1,
+    japanese-jisx0208:-mplus-gothic-bold-r-normal--12-*-jisx0208.1990-0,
+    katakana-jisx0201:-mplus-gothic-bold-r-normal--12-*-jisx0201.1976-0")
+  (set-default-font "fontset-mplus_10r"))
 
 (cl-defun set-naga10-font ()
   (cl-letf ((k10  "-misc-fixed-medium-r-normal--10-*-75-75-c-100-jisx0208.1983-0")
@@ -209,10 +232,13 @@
                                :registry  "iso10646-1"))
   (set-face-attribute 'default nil :family   "Source Han Code JP" :height 70)
   (set-face-attribute 'variable-pitch nil :family  "Source Han Code JP" )
-  (set-fontset-font t 'symbol (font-spec :name "Symbola" ) nil 'prepend)
-  (set-fontset-font t 'unicode (font-spec :name "Symbola" ) nil 'prepend)
-  (set-fontset-font t 'musical-symbol
-                    (font-spec :name "Fira Mono" ) nil 'prepend))
+
+  ;;; below settings may cause displayng slow
+  ;; (set-fontset-font t 'symbol (font-spec :name "Symbola" ) nil 'prepend)
+  ;; (set-fontset-font t 'unicode (font-spec :name "Symbola" ) nil 'prepend)
+  ;; (set-fontset-font t 'musical-symbol
+  ;;                   (font-spec :name "Fira Mono" ) nil 'prepend)
+  )
 
 (cl-defun muki:font-set-rescale-alist ()
   " [[https://skalldan.wordpress.com/2011/08/05/mac-os-x-%E3%81%A7%E3%81%AE-emacs-2/]]
@@ -251,13 +277,14 @@
 
 (if (display-graphic-p)
     ;; (set-default-font-size)
-    ;; (muki:set-font 'bitmap)
-    ;; (set-ricty-font)
-    ;; (set-ricty-diminished-font)
-    ;; (set-myrica-font)
-    (progn
-      (set-source-han-code-jp)
-      (muki:font-set-rescale-alist))
+    (muki:set-font 'bitmap)
+  ;; (set-ricty-font)
+  ;; (set-ricty-diminished-font)
+  ;; (set-myrica-font)
+  ;; (progn
+  ;;   (set-source-han-code-jp)
+  ;;   (muki:font-set-rescale-alist)
+  ;;   )
   )
 
 ;; [[http://nya-0.hatenablog.com/entry/2014/03/17/174309]]

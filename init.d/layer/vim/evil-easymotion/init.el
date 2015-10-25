@@ -7,6 +7,6 @@
     (req 'evil-easymotion
       ;; (evilem-define (kbd "SPC w") evil-forward-word-begin)
       (evilem-default-keybindings "SPC")
-      )))
+      (evilem-define (kbd "SPC w") 'evil-forward-word-begin))))
 
 ;;; easymotion.el ends here

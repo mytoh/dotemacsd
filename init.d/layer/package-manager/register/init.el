@@ -279,7 +279,8 @@
 (hoarder:register "Bruce-Connor/paradox"
                   '(:dependency ("magnars/dash.el"
                                  "jwiegley/emacs-async"
-                                 "Malabarba/spinner.el")))
+                                 "Malabarba/spinner.el"
+                                 "abo-abo/hydra")))
 (hoarder:register "Bruce-Connor/aggressive-indent-mode"
                   '(:dependency ( "Bruce-Connor/names")))
 (hoarder:register "Bruce-Connor/rich-minority")
@@ -972,7 +973,22 @@
                   '(:tag ("git" "github")))
 (hoarder:register "mrkkrp/cyphejor"
                   '(:tag ("diminish" "mode-line")))
-
+(hoarder:register "NicolasPetton/stream"
+                  '(:tag ("stream" "data")))
+(hoarder:register "dimitri/el-get"
+                  '(:tag ("el-get" "package")))
+(hoarder:register "eludom/org-babel-git-utils"
+                  '(:tag ("org" "babel" "git")))
+(hoarder:register "Malabarba/beacon")
+(hoarder:register "knl/name-this-color.el"
+                  '(:tag ("colour")))
+(hoarder:register "Lindydancer/font-lock-studio"
+                  '(:tag ("font-lock" "highlight" "syntax")))
+(hoarder:register "michael-heerdegen/on-screen.el")
+(hoarder:register "mutbuerger/company-org-headings"
+                  '(:tag ("company" "org" "completion")))
+(hoarder:register "samisalkosuo/elite-for-emacs"
+                  '(:tag ("game" "elite")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :dependency (("papaeye/go-mode.el"
@@ -1312,6 +1328,7 @@
 (hoarder:register-theme "mattly/emacs-farmhouse-theme")
 (hoarder:register-theme "edliaw/bubblegum-theme")
 (hoarder:register-theme "jonathanchu/atom-one-dark-theme")
+(hoarder:register-theme "yuttie/hydrangea-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1860,6 +1877,8 @@
                '(:tag ("elnode" "blog" "org" "web" "docker")))
 (hoarder:fetch "ctford/traversy"
                '(:tag ("clojure")))
+(hoarder:fetch "tallesl/Rich-Hickey-fanclub"
+               '(:tag ("clojure" "video" "youtube" "rich hickey")))
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;; (hoarder:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"

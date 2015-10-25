@@ -28,4 +28,5 @@
   ;; (add-to-list 'tramp-default-proxies-alist
   ;;              '((regexp-quote (system-name)) nil nil))
 
+  ;; (set-option ange-ftp-generate-anonymous-password "ftp")
   )
