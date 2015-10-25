@@ -109,8 +109,6 @@
     hi2
     ghc
     sunrise-commander
-    flycheck-package
-    flycheck
     multiple-cursors
     google-translate
     form-feed
@@ -208,20 +206,22 @@
     psession
     picpocket
     ws-butler
-    letcheck
     not-from-scratch
     dictionary
     sokoban
     git-auto-commit-mode
     yatt
     elisp-sandbox
-    flycheck-status-emoji
     subemacs
     nameless
     wordnut
     erlang
     sml-mode
+    beacon
+    clipmon
+    font-lock-studio
 
+    ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
     ;; cycle-themes
     ;; smart-newline
@@ -261,6 +261,12 @@
     ;; elnode
     ;; tabbar
     ))
+
+;;;; syntax-check
+(muki-layer:load-layers 'syntax-checking
+  '(flycheck-status-emoji
+    flycheck-package
+    flycheck))
 
 ;;;; highlight
 (muki-layer:load-layers 'package
@@ -356,6 +362,7 @@
     ace-jump-helm-line
     helm-commandlinefu
     helm-unicode
+    helm-github-stars
     ;; helm-swoop
     ;; helm-company
     ;; helm-delicious
@@ -367,7 +374,7 @@
     company-emoji
     company-quickhelp
     company-statistics
-    ))
+    company-org-headings))
 
 (muki-layer:load-layers 'source-control
   '(github-browse-file))
@@ -376,16 +383,11 @@
 ;;;;; config
 (muki-layer:load-layers 'config
   '(setting
-    autorevert
     key
     hook
     path
     face
-    ;;clipboard
-    font
-    ;; erc
     eshell
-    ;; eshell-prompt
     whitespace
     autoinsert
     dired
@@ -393,9 +395,14 @@
     newsticker
     rcirc
     tramp
+    recentf
+    ;; autorevert
+    ;;clipboard
+    font ; this cause slow displaying
+    ;; erc
+    ;; eshell-prompt
     ;; eieio
     ;; savehist ; if history file become too large, delete file or disable mode
-    recentf
     ))
 
 ;;;;; packages
