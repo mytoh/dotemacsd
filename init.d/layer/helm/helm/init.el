@@ -96,6 +96,11 @@ Otherwise goto the end of minibuffer."
   (enable-option helm-M-x-always-save-history
                  helm-split-window-in-side-p ; open helm buffer inside current window, not occupy whole other window
                  helm-buffer-skip-remote-checking
+                 atching for these sources with:
+                 helm-M-x-fuzzy-match
+                 helm-mode-fuzzy-match 
+                 helm-apropos-fuzzy-match
+                 helm-recentf-fuzzy-match
                  )
   (disable-option enable-recursive-minibuffers
                   helm-quick-update
@@ -107,7 +112,8 @@ Otherwise goto the end of minibuffer."
                  helm-ff-transformer-show-only-basename
                  helm-ff-search-library-in-sexp
                  helm-ff-skip-boring-files)
-  (disable-option helm-ff-newfile-prompt-p)
+  (disable-option helm-ff-newfile-prompt-p
+                  helm-ff-guess-ffap-urls)
   ;; disable auto completion
   ;; (setq helm-ff-auto-update-initial-value nil)
 
