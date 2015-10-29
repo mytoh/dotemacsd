@@ -363,6 +363,8 @@
     helm-commandlinefu
     helm-unicode
     helm-github-stars
+    helm-fuzzier
+    helm-flx
     ;; helm-swoop
     ;; helm-company
     ;; helm-delicious
