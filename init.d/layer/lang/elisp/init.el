@@ -86,22 +86,35 @@
 (cl-defun muki:elisp-check-parens ()
   (add-hook 'after-save-hook #'check-parens))
 
+;;; Auto Byte-Compile Emacs Lisp Files
+;;; [[http://ergoemacs.org/emacs/emacs_byte_compile.html]]
+(cl-defun muki:byte-compile-current-buffer ()
+  "`byte-compile' current buffer if it's emacs-lisp-mode and compiled file exists."
+  (interactive)
+  (when (and (eq major-mode 'emacs-lisp-mode)
+             (file-exists-p (byte-compile-dest-file buffer-file-name)))
+    (byte-compile-file buffer-file-name)))
+
+(cl-defun muki:elisp-byte-compile-buffer ()
+  (add-hook 'after-save-hook #'muki:byte-compile-current-buffer nil t))
+
+(add-hook 'emacs-lisp-mode-hook #'muki:elisp-byte-compile-buffer)
 (add-hook 'emacs-lisp-mode-hook #'muki:elisp-buffer-enable-reindent)
 (add-hook 'emacs-lisp-mode-hook #'muki:elisp-check-parens)
 (add-hook 'emacs-lisp-mode-hook #'checkdoc-minor-mode)
 (add-hook 'emacs-lisp-mode-hook #'eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook
-   (clambda ()
-       (setq mode-name " ξ ")))
+          (clambda ()
+              (setq mode-name " ξ ")))
 
-(defun-add-hook muki:elisp-pretty-symbols (emacs-lisp-mode-hook)
-  (push '(">=" . ?≥) prettify-symbols-alist)
-  (push '("add-hook" . ?) prettify-symbols-alist)
-  (push '("hook" . ?) prettify-symbols-alist)
-  (push '("mode" . ?👚) prettify-symbols-alist)
-  (push '("defun" . ?𝆑) prettify-symbols-alist)
-  (push '("cl-defun" . ?𝆑) prettify-symbols-alist)
-  )
+;; (defun-add-hook muki:elisp-pretty-symbols (emacs-lisp-mode-hook)
+;;   (push '(">=" . ?≥) prettify-symbols-alist)
+;;   (push '("add-hook" . ?) prettify-symbols-alist)
+;;   (push '("hook" . ?) prettify-symbols-alist)
+;;   (push '("mode" . ?👚) prettify-symbols-alist)
+;;   (push '("defun" . ?𝆑) prettify-symbols-alist)
+;;   (push '("cl-defun" . ?𝆑) prettify-symbols-alist)
+;;   )
 
 (setq lisp-indent-function #'common-lisp-indent-function)
 
@@ -112,3 +125,4 @@
 ;;; flycheck
 (liby 'flycheck
   (add-hook 'emacs-lisp-mode-hook #'flycheck-mode))
+
