@@ -5,6 +5,9 @@
   (command (helm-do-ag) "helm-ag")
   (set-option helm-ag-source-type 'file-line)
   (setq helm-ag-insert-at-point 'symbol)
+
+  (setq helm-ag-base-command
+        "hw --no-group --no-color")
   )
 
 ;; Local Variables:
