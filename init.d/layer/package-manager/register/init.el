@@ -141,6 +141,11 @@
 (hoarder:register "vapniks/helm-helm-commands")
 (hoarder:register "emacs-jp/helm-migemo"
                   '(:tag ("migemo" "japanese")))
+(hoarder:register "EphramPerdition/helm-fuzzier"
+                  '(:tag "fuzzy_matching"))
+(hoarder:register "PythonNut/helm-flx"
+                  '(:tag "fuzzy_matching"
+                    :dependency ("lewang/flx")))
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ("helm")
 ;;                    :dependency ("michael-heerdegen/iterators.el")))
@@ -989,6 +994,10 @@
                   '(:tag ("company" "org" "completion")))
 (hoarder:register "samisalkosuo/elite-for-emacs"
                   '(:tag ("game" "elite")))
+(hoarder:register "iqbalansari/emacs-emoji"
+                  '(:tag ("emoji" )))
+(hoarder:register "death/reddit-mode"
+                  '(:tag ("reddit")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :dependency (("papaeye/go-mode.el"
