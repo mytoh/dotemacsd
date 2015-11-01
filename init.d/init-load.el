@@ -314,6 +314,7 @@
     evil-mc
     evil-quickscope
     evil-lisp-state
+    evil-magit
     ))
 
 (muki-layer:load-layers 'vim
