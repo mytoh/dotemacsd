@@ -5,15 +5,16 @@
 (liby 'which-key
   (req 'popwin)
   (command (which-key-mode) "which-key")
-  (setq which-key-max-description-length 32)
-  (setq which-key-idle-delay 0.5)
+  (set-option which-key-max-description-length 32)
+  (set-option which-key-idle-delay 0.5)
+  (enable-option which-key-allow-evil-operators)
   (which-key-mode)
   (which-key-add-key-based-replacements
-   "SPC ?" "show keybindings"
-   "SPC u" "universal arg"
-   "SPC m" "major mode cmds"
-   (concat "SPC " ";") "M-x"
-   (concat "SPC" " m")    "major mode commands")
+      "SPC ?" "show keybindings"
+    "SPC u" "universal arg"
+    "SPC m" "major mode cmds"
+    (concat "SPC " ";") "M-x"
+    (concat "SPC" " m")    "major mode commands")
 
   (cl-letf ((new-descriptions
              ;; being higher in this list means the replacement is applied later
