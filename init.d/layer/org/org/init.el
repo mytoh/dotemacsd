@@ -142,9 +142,9 @@
   (muki:org-set-modules)
   (muki:org-capture-setting)
   (add-hook 'org-mode-hook
-     (lambda ()
-       (add-hook 'before-save-hook
-          #'muki:org-mode-before-save-hook))))
+            (lambda ()
+              (add-hook 'before-save-hook
+                        #'muki:org-mode-before-save-hook))))
 
 (after 'org
     (muki:org-mode-hook-function))
@@ -175,10 +175,10 @@
                (node-property (:key "url" :value ""))))))))
 
 (add-hook 'org-mode-hook
-   (clambda ()
-       (add-key org-mode-map
-         "C-c o o" #'helm-org-headlines
-         "C-c o b" #'muki:org-insert-book-drawer)))
+          (clambda ()
+              (add-key org-mode-map
+                "C-c o o" #'helm-org-headlines
+                "C-c o b" #'muki:org-insert-book-drawer)))
 
 ;;;; Viewing, navigating, and editing the Org tree
 ;;     I often cut and paste subtrees. This makes it easier to cut
@@ -189,19 +189,19 @@
   (setq org-yank-adjusted-subtrees t))
 
 (add-hook 'org-mode-hook
-   (clambda ()
-       (local-set-key (kbd "M-n") #'outline-next-visible-heading)
-     (local-set-key (kbd "M-p") #'outline-previous-visible-heading)
-     (local-set-key (kbd "M-u") #'outline-up-heading)
-     ;; table
-     (local-set-key (kbd "M-C-w") #'org-table-copy-region)
-     (local-set-key (kbd "M-C-y") #'org-table-paste-rectangle)
-     (local-set-key (kbd "M-C-l") #'org-table-sort-lines)
-     ;; display images
-     (local-set-key (kbd "M-I") #'org-toggle-iimage-in-org)))
+          (clambda ()
+              (local-set-key (kbd "M-n") #'outline-next-visible-heading)
+            (local-set-key (kbd "M-p") #'outline-previous-visible-heading)
+            (local-set-key (kbd "M-u") #'outline-up-heading)
+            ;; table
+            (local-set-key (kbd "M-C-w") #'org-table-copy-region)
+            (local-set-key (kbd "M-C-y") #'org-table-paste-rectangle)
+            (local-set-key (kbd "M-C-l") #'org-table-sort-lines)
+            ;; display images
+            (local-set-key (kbd "M-I") #'org-toggle-iimage-in-org)))
 
 (add-hook 'org-mode-hook
-   #'auto-fill-mode)
+          #'auto-fill-mode)
 
 
 (require 'iimage)
@@ -216,6 +216,13 @@
       (set-face-underline 'org-link nil)
     (set-face-underline 'org-link t))
   (iimage-mode 'toggle))
+
+;; [[https://www.reddit.com/r/orgmode/comments/3mh0w9/how_to_search_through_big_files_on_orgmode/]]
+(defun disable-line-number-mode-in-big-files ()
+  (if (> (count-words (point-min) (point-max)) 20000)
+      (line-number-mode -1)
+    (column-number-mode -1)))
+(add-hook 'org-mode-hook #'disable-line-number-mode-in-big-files)
 
 ;; [[http://www.wisdomandwonder.com/link/9352/easily-check-src-block-correctness-in-org-mode]]
 (defun gcr/src-block-check ()
