@@ -219,8 +219,10 @@
                   '(:tag ("magit")))
 (hoarder:register "dholm/magit-idle-breadcrumbs"
                   '(:tag ("magit")))
-(hoarder:register "magit/evil-magit"
-                  '(:tag ("magit")))
+;; (hoarder:register "magit/evil-magit"
+;;                   '(:tag ("magit")))
+(hoarder:register "justbur/evil-magit"
+                  '(:tag ("evil" "magit")))
 (hoarder:register "YoungFrog/git-overview"
                   '(:tag ("git" "org")))
 (hoarder:register "company-mode/company-mode"
