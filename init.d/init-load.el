@@ -220,6 +220,7 @@
     beacon
     clipmon
     font-lock-studio
+    emojify
 
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
