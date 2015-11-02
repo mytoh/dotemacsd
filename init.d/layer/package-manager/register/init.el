@@ -1002,6 +1002,8 @@
                   '(:tag ("emoji" )))
 (hoarder:register "death/reddit-mode"
                   '(:tag ("reddit")))
+(hoarder:register "iqbalansari/emacs-emojify"
+                  '(:tag ("emoji")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :dependency (("papaeye/go-mode.el"
@@ -1342,6 +1344,7 @@
 (hoarder:register-theme "edliaw/bubblegum-theme")
 (hoarder:register-theme "jonathanchu/atom-one-dark-theme")
 (hoarder:register-theme "yuttie/hydrangea-theme")
+(hoarder:register-theme "emacsomancer/cybertron")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
