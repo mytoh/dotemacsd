@@ -5,6 +5,7 @@
 ;;; Code:
 
 (after 'magit
-    (req 'evil-magit))
+    (setq evil-magit-state 'motion)
+  (req 'evil-magit))
 
 ;;; init.el ends here
