@@ -83,7 +83,11 @@
 
   ;; Use a real ellipsis to render an ellipsis for =org= stuff like showing that a
   ;; header is collapsed.
-  (set-option org-ellipsis "…")
+
+  ;; Other interesting characters are ↴, ⬎, ⤷, and
+  ;; "⋱" "…"
+  (set-option org-ellipsis "⤵")
+
   )
 
 (cl-defun muki:org-babel-options ()
