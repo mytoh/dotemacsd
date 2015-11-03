@@ -221,6 +221,7 @@
     clipmon
     font-lock-studio
     emojify
+    wget
 
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
