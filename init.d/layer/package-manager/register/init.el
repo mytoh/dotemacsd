@@ -1004,6 +1004,10 @@
                   '(:tag ("reddit")))
 (hoarder:register "iqbalansari/emacs-emojify"
                   '(:tag ("emoji")))
+(hoarder:register "wasamasa/zone-nyan"
+                  '(:tag ("nyancat" "zone" "eshell")))
+(hoarder:register "ilya-babanov/emacs-bpr"
+                  '(:tag ("process")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :dependency (("papaeye/go-mode.el"
@@ -1345,6 +1349,7 @@
 (hoarder:register-theme "jonathanchu/atom-one-dark-theme")
 (hoarder:register-theme "yuttie/hydrangea-theme")
 (hoarder:register-theme "emacsomancer/cybertron")
+(hoarder:register-theme "bmastenbrook/termbright-theme-el")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1895,6 +1900,8 @@
                '(:tag ("clojure")))
 (hoarder:fetch "tallesl/Rich-Hickey-fanclub"
                '(:tag ("clojure" "video" "youtube" "rich hickey")))
+(hoarder:fetch "https://gitlab.com/com-informatimago/com-informatimago.git"
+               '(:tag ("common-lisp")))
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;; (hoarder:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
