@@ -1011,7 +1011,9 @@
 (hoarder:register "jwiegley/emacs-pl"
                   '(:tag ("haskell" "parser")))
 (hoarder:register "jwiegley/alert"
-                  '(:tag ("notification" "growl")))
+                  '(:tag ("notification" "growl")
+                    :dependency ("aki2o/log4e")))
+
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :dependency (("papaeye/go-mode.el"
