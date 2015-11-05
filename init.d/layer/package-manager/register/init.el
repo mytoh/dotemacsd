@@ -1912,6 +1912,8 @@
                '(:tag ("clojure" "video" "youtube" "rich hickey")))
 (hoarder:fetch "https://gitlab.com/com-informatimago/com-informatimago.git"
                '(:tag ("common-lisp")))
+(hoarder:fetch "git://git.savannah.gnu.org/emacs/elpa.git"
+               '(:tag ("elpa" "gnu" "emacs")))
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;; (hoarder:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
