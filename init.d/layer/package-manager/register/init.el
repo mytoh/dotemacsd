@@ -1350,6 +1350,8 @@
 (hoarder:register-theme "yuttie/hydrangea-theme")
 (hoarder:register-theme "emacsomancer/cybertron")
 (hoarder:register-theme "bmastenbrook/termbright-theme-el")
+(hoarder:register-theme "zenorocha/dracula-theme"
+                        '(:load-path "emacs"))
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)

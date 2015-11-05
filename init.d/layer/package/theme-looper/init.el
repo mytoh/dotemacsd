@@ -11,6 +11,6 @@
          warm-night brin gotham soothe spolsky wilson noctilux erosiond
          material subatomic ectoplasm spacemacs-dark
          base16-ocean-dark zerodark plan9 spacegray atom-one-dark
-         aurora arjen-grey))))
+         aurora arjen-grey dracula))))
 
 ;;; init.el ends here
