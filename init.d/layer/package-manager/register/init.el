@@ -1008,6 +1008,10 @@
                   '(:tag ("nyancat" "zone" "eshell")))
 (hoarder:register "ilya-babanov/emacs-bpr"
                   '(:tag ("process")))
+(hoarder:register "jwiegley/emacs-pl"
+                  '(:tag ("haskell" "parser")))
+(hoarder:register "jwiegley/alert"
+                  '(:tag ("notification" "growl")))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
 ;;                     :dependency (("papaeye/go-mode.el"
