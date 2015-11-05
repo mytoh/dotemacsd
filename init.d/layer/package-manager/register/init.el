@@ -1024,7 +1024,9 @@
 ;; (hoarder:register "capitaomorte/yasnippet")
 
 ;;;;; evil
-(hoarder:register "https://gitorious.org/evil/evil.git"
+;; TODO nede mercurial support
+(hoarder:register (expand-file-name "bitbucket.org/lyro/evil"
+					  (locate-user-emacs-file "hoarder"))
                   '(:build ("gmake doc all")
                     :info "doc"
                     :dependency ("emacsmirror/goto-chg"
