@@ -47,6 +47,7 @@
         "qQ" #'evil-quit-all
       "qq" #'kill-buffer-and-window
       "qr" #'muki:restart-emacs
+      "qR" #'muki:restart-emacs-debug
       ;; Universal argument ---------------------------------------------------------
       "u" #'universal-argument)
 
