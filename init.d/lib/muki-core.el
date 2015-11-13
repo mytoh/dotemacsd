@@ -298,6 +298,16 @@ buffer if the variable `delete-trailing-lines' is non-nil."
       (sit-for 1)
       (save-buffers-kill-emacs))))
 
+(cl-defun muki:restart-emacs-debug ()
+  "[[https://github.com/iqbalansari/restart-emacs]]"
+  (interactive)
+  (cl-labels ((restart-emacs () (call-process "sh" nil nil nil
+                                              "-c" "emacs --debug-init &" )))
+    (cl-letf ((kill-emacs-hook (append kill-emacs-hook
+                                       (list #'restart-emacs))))
+      (sit-for 1)
+      (save-buffers-kill-emacs))))
+
 (provide 'muki-core)
 
 ;;; muki-core.el ends here
