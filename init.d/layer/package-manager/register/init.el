@@ -1013,6 +1013,14 @@
 (hoarder:register "jwiegley/alert"
                   '(:tag ("notification" "growl")
                     :dependency ("aki2o/log4e")))
+(hoarder:register "iquiw/hyai"
+                  '(:tag ("haskell" "indentation")))
+(hoarder:register "xuchunyang/github-notifier.el"
+                  '(:tag ("github" "mode-line")))
+(hoarder:register "xuchunyang/region-state.el"
+                  '(:tag ("region")))
+(hoarder:register "xuchunyang/eshell-z"
+                  '(:tag ("eshell" "z")))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
@@ -1028,7 +1036,7 @@
 ;;;;; evil
 ;; TODO nede mercurial support
 (hoarder:register (expand-file-name "bitbucket.org/lyro/evil"
-					  (locate-user-emacs-file "hoarder"))
+                                    (locate-user-emacs-file "hoarder"))
                   '(:build ("gmake doc all")
                     :info "doc"
                     :dependency ("emacsmirror/goto-chg"
@@ -1360,6 +1368,8 @@
 (hoarder:register-theme "bmastenbrook/termbright-theme-el")
 (hoarder:register-theme "zenorocha/dracula-theme"
                         '(:load-path "emacs"))
+(hoarder:register-theme "rdallasgray/graphene-meta-theme")
+(hoarder:register-theme "waymondo/apropospriate-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
