@@ -141,7 +141,7 @@
 
     ;; guide-key
     ;; guide-key-tip
-    which-key
+    ;; which-key
 
     clojure-mode
     clojure-cheatsheet
@@ -222,6 +222,9 @@
     font-lock-studio
     emojify
     wget
+    hyai
+    github-notifier
+    region-state
 
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
@@ -435,7 +438,8 @@
 ;;;;; themem
 (muki-layer:load-layers 'theme
   '(color-theme-sanityinc-tomorrow
-    color-theme-sanityinc-solarized))
+    color-theme-sanityinc-solarized
+    apropospriate))
 
 ;;;;; el-get
 ;; (require 'init-el-get)
