@@ -6,6 +6,7 @@
   (hook 'lisp-mode-hook         #'rainbow-delimiters-mode)
   (hook 'emacs-lisp-mode-hook   #'rainbow-delimiters-mode)
   (hook 'clojure-mode-hook   #'rainbow-delimiters-mode)
+  (hook 'haskell-mode-hook #'rainbow-delimiters-mode)
   ;; (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
   ;; (after 'rainbow-delimiters
