@@ -86,7 +86,7 @@
 
   ;; Other interesting characters are ↴, ⬎, ⤷, and
   ;; "⋱" "…"
-  (set-option org-ellipsis "⤵")
+  (set-option org-ellipsis "…")
 
   )
 
