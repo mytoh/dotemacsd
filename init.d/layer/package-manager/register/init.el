@@ -1021,6 +1021,8 @@
                   '(:tag ("region")))
 (hoarder:register "xuchunyang/eshell-z"
                   '(:tag ("eshell" "z")))
+(hoarder:register "tom-tan/esh-buf-stack"
+                  '(:tag ("eshell" "zsh")))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ("language" "javascript" "jscs" "format")
