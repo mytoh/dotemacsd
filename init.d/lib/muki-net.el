@@ -43,11 +43,12 @@
 
 (cl-defun muki:play-mpv (url)
   (interactive "sUrl: ")
-  (message "playing %s" url)
-  (start-process-shell-command "muki:play-mpv" nil
-                               (concat "nohup " "mpv "
-                                       "\'" url "\'"
-                                       " &")))
+  (cl-letf ((cleaned-url (string-trim url)))
+    (message "playing %s" cleaned-url)
+    (start-process-shell-command "muki:play-mpv" cleaned-url
+                                 (concat "nohup " "mpv "
+                                         "\'" cleaned-url "\'"
+                                         " &"))))
 
 
 (provide 'muki-net)
