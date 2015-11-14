@@ -286,11 +286,6 @@
 (set-option browse-url-generic-program "conkeror")
 (set-option browse-url-browser-function #'browse-url-generic)
 
-;;;; prettify symbols
-(enable-mode global-prettify-symbols-mode)
-;;;; unprettify
-(enable-option prettify-symbols-unprettify-at-point)
-
 ;; (when window-system
 ;;   (enable-mode global-highlight-changes-mode)
 ;;   (set-face-attribute 'highlight-changes nil
