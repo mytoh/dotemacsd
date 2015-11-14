@@ -4,6 +4,12 @@
 
 (require 'muki-evil)
 
+(cl-defun muki:org-insert-heading ()
+  (interactive)
+  (org-insert-heading)
+  (when (bound-and-true-p evil-mode)
+    (evil-insert-state)))
+
 (muki:evil-leader-define-key-for-mode (org-mode org-mode-map)
   "'" #'org-edit-special
   "c" #'org-capture
@@ -12,7 +18,7 @@
   "f" #'org-set-effort
   ;; headings
   "hi" #'org-insert-heading-after-current
-  "hI" #'org-insert-heading
+  "hI" #'muki:org-insert-heading
   "I" #'org-clock-in
   "," #'org-ctrl-c-ctrl-c
   "n" #'org-narrow-to-subtree
