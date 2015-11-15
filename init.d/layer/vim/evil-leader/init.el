@@ -87,8 +87,6 @@
       "o"  #'delete-other-windows
       "s"  #'split-window-below
       "-"  #'split-window-below
-      "U"  #'winner-redo
-      "u"  #'winner-undo
       "v"  #'split-window-right
       "w"  #'other-window
       "/"  #'split-window-right
