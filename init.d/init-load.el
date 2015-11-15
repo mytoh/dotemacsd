@@ -217,7 +217,7 @@
     wordnut
     erlang
     sml-mode
-    beacon
+    ;; beacon
     clipmon
     font-lock-studio
     emojify
