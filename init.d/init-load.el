@@ -372,6 +372,7 @@
     helm-github-stars
     helm-fuzzier
     helm-flx
+    helm-open-github
     ;; helm-swoop
     ;; helm-company
     ;; helm-delicious
