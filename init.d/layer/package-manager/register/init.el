@@ -1221,6 +1221,8 @@
                   '(:tag ("org" "toc" )))
 (hoarder:register "mattduck/org-query"
                   '(:tag ("org" "agenda")))
+(hoarder:register "alphapapa/org-protocol-capture-html"
+                  '(:tag ["org" "org-capture" "html"]))
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ("org" "bongo" "music")
 ;;                    :dependency ("dbrock/bongo")
