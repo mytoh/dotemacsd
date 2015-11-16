@@ -225,6 +225,8 @@
     hyai
     github-notifier
     region-state
+    prettify-symbols
+    indent-guide
 
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
@@ -246,7 +248,6 @@
     ;; slideview
     ;; command-dwim-2
     ;; moe-theme
-    ;; indent-guide
     ;; smooth-scroll
     ;; fuzzyjump
     ;; zone-settings
