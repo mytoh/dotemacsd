@@ -5,9 +5,12 @@
 ;;; Code:
 
 ;;;; prettify symbols
-(enable-mode global-prettify-symbols-mode)
+;; (enable-mode global-prettify-symbols-mode)
 ;;;; unprettify under cursor
-(enable-option prettify-symbols-unprettify-at-point)
+;; (enable-option prettify-symbols-unprettify-at-point)
+
+;;; enable only for few modes
+(hook 'emacs-lisp-mode-hook #'prettify-symbols-mode)
 
 
 ;;; [[http://endlessparentheses.com/using-prettify-symbols-in-clojure-and-elisp-without-breaking-indentation.html?source=rss]]
@@ -23,8 +26,8 @@
                                  (Bc . Bl) ?- (Br . Br) ?>)))
 
 (cl-defun muki:emacs-lisp-add-prettify-symbols ()
-    (setq prettify-symbols-alist
-     (seq-concatenate 'list prettify-symbols-alist endless/emacs-lisp-prettify-alist)))
+  (setq-local prettify-symbols-alist
+              (seq-concatenate 'list prettify-symbols-alist endless/emacs-lisp-prettify-alist)))
 
 (hook 'emacs-lisp-mode-hook #'muki:emacs-lisp-add-prettify-symbols)
 
