@@ -5,64 +5,64 @@
 ;;;;  register packages
 ;;;;; helm
 (hoarder:register "emacs-helm/helm"
-                  '(:build ("gmake")
-                    :dependency ("jwiegley/emacs-async")
+                  '(:build ["gmake"]
+                    :dependency ["jwiegley/emacs-async"]
                     :tag "helm"))
 (hoarder:fetch "emacs-helm/helm.wiki"
-               '(:tag ("helm" "wiki")))
+               '(:tag ["helm" "wiki"]))
 (hoarder:register "thierryvolpiatto/pcomplete-extension")
 (hoarder:register "yuutayamada/helm-ag-r"
-                  '(:tag ("helm" "ag")))
+                  '(:tag ["helm" "ag"]))
 (hoarder:register "yasuyk/helm-git-grep"
-                  '(:tag ("helm" "git")))
+                  '(:tag ["helm" "git"]))
 ;; (hoarder:register "emacs-helm/helm-migemo"
 ;;                   '(:tag ("helm" "migemo")))
 (hoarder:register "emacs-helm/helm-ls-git"
-                  '(:tag ("helm" "git")))
+                  '(:tag ["helm" "git"]))
 (hoarder:register "emacs-helm/helm-ls-hg"
-                  '(:tag ("helm" "mercurial")))
+                  '(:tag ["helm" "mercurial"]))
 (hoarder:register "emacs-helm/helm-cmd-t"
-                  '(:tag ("helm")))
+                  '(:tag ["helm"]))
 (hoarder:register "ShingoFukuyama/helm-swoop"
-                  '(:tag ("helm")))
+                  '(:tag ["helm"]))
 (hoarder:register "steckerhalter/helm-google"
-                  '(:tag ("helm" "google")))
+                  '(:tag ["helm" "google"]))
 (hoarder:register "syohex/emacs-helm-ag"
-                  '(:tag ("helm" "ag")))
+                  '(:tag ["helm" "ag"]))
 (hoarder:register "markus1189/helm-hoogle"
-                  '(:tag ("helm" "haskell")))
+                  '(:tag ["helm" "haskell"]))
 (hoarder:register "jixiuf/helm-etags-plus"
-                  '(:tag ("helm")))
+                  '(:tag ["helm"]))
 (hoarder:register "syohex/emacs-helm-themes"
-                  '(:tag ("helm" "theme")))
+                  '(:tag ["helm" "theme"]))
 (hoarder:register "syohex/emacs-helm-open-github"
-                  '(:tag ("helm" "github")
+                  '(:tag ["helm" "github"]
                     :dependency ("sigma/gh.el")))
 (hoarder:register "istib/helm-mode-manager"
-                  '(:tag ("helm")))
+                  '(:tag ["helm"]))
 (hoarder:register "tkf/emacs-pinot-search"
-                  '(:tag ("helm")))
+                  '(:tag ["helm"]))
 (hoarder:register "yasuyk/helm-flycheck"
-                  '(:tag ("helm" "flycheck")))
+                  '(:tag ["helm" "flycheck"]))
 (hoarder:register "emacs-helm/helm-descbinds"
-                  '(:tag ("helm")))
+                  '(:tag ["helm"]))
 (hoarder:register "yasuyk/helm-company"
                   '(:dependency ("rejeep/f.el")
-                    :tag ("helm" "company")))
+                    :tag ["helm" "company"]))
 (hoarder:register "emacs-helm/helm-dictionary"
-                  '(:tag ("helm")))
+                  '(:tag ["helm"]))
 (hoarder:register "emacs-helm/helm-recoll"
-                  '(:tag ("helm")))
+                  '(:tag ["helm"]))
 (hoarder:register "mhayashi1120/Emacs-wgrep")
 (hoarder:register "ShingoFukuyama/helm-css-scss"
-                  '(:tag ("helm" "css")))
+                  '(:tag ["helm" "css"]))
 (hoarder:register "tmalsburg/helm-bibtex"
                   '(:dependency ("joostkremers/ebib"
                                  "magnars/s.el"
                                  "magnars/dash.el"
                                  "rejeep/f.el"
                                  "joostkremers/parsebib")
-                    :tag ("helm" "bibtex")))
+                    :tag ["helm" "bibtex"]))
 (hoarder:register "k1LoW/helm-dirset"
                   '(:dependency ("rejeep/f.el"
                                  "magnars/s.el"
@@ -75,23 +75,23 @@
                                   (:build ("gmake")
                                           :dependency ("jwiegley/emacs-async")
                                           :tag "helm")))
-                    :tag ("helm" "dictionary")))
+                    :tag ["helm" "dictionary"]))
 (hoarder:register "emacs-helm/helm-orgcard"
-                  '(:tag ("helm" "org")
+                  '(:tag ["helm" "org"]
                     :dependency (( "emacs-helm/helm"
                                   (:build ("gmake")
                                           :dependency ("jwiegley/emacs-async")
                                           :tag "helm")))))
 (hoarder:register "lins05/helm-org-files"
-                  '(:tag ("helm" "org")
+                  '(:tag ["helm" "org"]
                     :dependency (( "emacs-helm/helm"
                                   (:build ("gmake")
                                           :dependency ("jwiegley/emacs-async")
                                           :tag "helm")))))
 (hoarder:register "abo-abo/helm-org-wiki"
-                  '(:tag ("helm" "org")))
+                  '(:tag ["helm" "org"]))
 (hoarder:register "csantosb/helm-perso-wiki"
-                  '(:tag ("helm" "wiki" "org")
+                  '(:tag ["helm" "wiki" "org"]
                     :dependency ("git://jblevins.org/git/deft.git"
                                  ("bbatsov/projectile"
                                   (:dependency ("magnars/s.el"
@@ -102,63 +102,63 @@
                                  "nex3/perspective-el"
                                  "Bruce-Connor/names")))
 (hoarder:register "yuutayamada/helm-shell-history"
-                  '(:tag ("helm" "term")))
+                  '(:tag ["helm" "term"]))
 (hoarder:register "david-christiansen/helm-pages"
-                  '(:tag ("helm")))
+                  '(:tag ["helm"]))
 (hoarder:register "vanicat/helm-xmms2"
-                  '(:tag ("helm" "xmms2")))
+                  '(:tag ["helm" "xmms2"]))
 (hoarder:register "julienXX/helm-lobste.rs"
-                  '(:tag ("helm" "lobste.rs" "news" "web")))
+                  '(:tag ["helm" "lobste.rs" "news" "web"]))
 (hoarder:register "syohex/emacs-helm-hackernews"
-                  '(:tag ("helm" "hackernews" "news" "web")))
+                  '(:tag ["helm" "hackernews" "news" "web"]))
 (hoarder:register "tetracat/sallet"
-                  '(:tag ("helm")
+                  '(:tag ["helm"]
                     :dependency ("lewang/flx"
                                  ("magnars/dash.el" ( :compile nil))
                                  "magnars/s.el"
                                  "jwiegley/emacs-async"
                                  "cask/shut-up")))
 (hoarder:register "Sliim/helm-github-stars"
-                  '(:tag ("helm" "github")))
+                  '(:tag ["helm" "github"]))
 (hoarder:register "ralesi/helm-pt"
-                  '(:tag ("helm" "pt")))
+                  '(:tag ["helm" "pt"]))
 (hoarder:register "abo-abo/swiper"
-                  '(:tag ("isearch")
+                  '(:tag ["isearch"]
                     ;; :dependency ("abo-abo/ivy") ; not yet created
                     :desc "Isearch with an overview. Oh, man! "
                     :dependency ( "abo-abo/hydra")))
 (hoarder:register "abo-abo/swiper-helm"
-                  '(:tag ("helm" "search")))
+                  '(:tag ["helm" "search"]))
 (hoarder:register "emacs-helm/helm-emms"
-                  '(:tag ("helm" "emms")))
+                  '(:tag ["helm" "emms"]))
 (hoarder:register "cute-jumper/ace-jump-helm-line"
                   '(:dependency ("abo-abo/ace-window")))
 (hoarder:register "shosti/helm-unicode"
-                  '(:tag ("helm" "unicode")))
+                  '(:tag ["helm" "unicode"]))
 (hoarder:register "jupl/helm-gitignore"
-                  '(:tag ("helm" "git" "gitignore")))
+                  '(:tag ["helm" "git" "gitignore"]))
 (hoarder:register "xuchunyang/helm-commandlinefu")
 (hoarder:register "vapniks/helm-helm-commands")
 (hoarder:register "emacs-jp/helm-migemo"
-                  '(:tag ("migemo" "japanese")))
+                  '(:tag ["migemo" "japanese"]))
 (hoarder:register "EphramPerdition/helm-fuzzier"
                   '(:tag "fuzzy_matching"))
 (hoarder:register "PythonNut/helm-flx"
                   '(:tag "fuzzy_matching"
                     :dependency ("lewang/flx")))
 ;; (hoarder:register "michael-heerdegen/helm-browse"
-;;                  '(:tag ("helm")
+;;                  '(:tag ["helm"]
 ;;                    :dependency ("michael-heerdegen/iterators.el")))
 
 ;;;;;  general packages
 (hoarder:register "magnars/s.el")
 (hoarder:register "jonathanchu/emacs-powerline")
 (hoarder:register "raugturi/powerline-evil"
-                  '(:tag ("evil" "mode-line")))
+                  '(:tag ["evil" "mode-line"]))
 (hoarder:register "milkypostman/powerline"
-                  '(:tag ("mode-line")))
+                  '(:tag ["mode-line"]))
 (hoarder:register "unic0rn/powerline"
-                  '(:tag ("mode-line")))
+                  '(:tag ["mode-line"]))
 (hoarder:register "TeMPOraL/nyan-mode")
 (hoarder:register "daimrod/highlight-sexp")
 (hoarder:register "m2ym/undohist-el")
@@ -186,16 +186,16 @@
 (hoarder:register "fgallina/emms-info-mediainfo"
                   '(:tag "emms"))
 (hoarder:register "osener/emms-soundcloud"
-                  '(:tag ("emms" "soundcloud")))
+                  '(:tag ["emms" "soundcloud"]))
 (hoarder:register "vapniks/emms-mark-ext"
-                  '(:tag ("emms")
+                  '(:tag ["emms"]
                     :desc "Extra functions for tagging tracks in emms mode in emacs. "))
 (hoarder:register "dochang/emms-player-mpv"
-                  '(:tag ("emms" "mpv")))
+                  '(:tag ["emms" "mpv"]))
 (hoarder:register "momomo5717/emms-player-mpv-volume"
-                  '(:tag ("emms" "mpv" )))
+                  '(:tag ["emms" "mpv"]))
 (hoarder:register "alezost/emms-status.el"
-                  '(:tag ("emms")))
+                  '(:tag ["emms"]))
 (hoarder:register "r0man/soundklaus.el"
                   '(:dependency (("magnars/dash.el" ( :compile nil))
                                  "magnars/s.el"
@@ -212,19 +212,19 @@
                                  ("jwiegley/emacs-async"))
                     :tag "git"))
 (hoarder:register "magit/orgit"
-                  '(:tag ("git" "org" "magit")))
+                  '(:tag ["git" "org" "magit"]))
 (hoarder:register "mickesv/magit-overview"
-                  '(:tag ("magit")))
+                  '(:tag ["magit"]))
 (hoarder:register "magit/magit-filenotify"
-                  '(:tag ("magit")))
+                  '(:tag ["magit"]))
 (hoarder:register "dholm/magit-idle-breadcrumbs"
-                  '(:tag ("magit")))
+                  '(:tag ["magit"]))
 ;; (hoarder:register "magit/evil-magit"
-;;                   '(:tag ("magit")))
+;;                   '(:tag ["magit"]))
 (hoarder:register "justbur/evil-magit"
-                  '(:tag ("evil" "magit")))
+                  '(:tag ["evil" "magit"]))
 (hoarder:register "YoungFrog/git-overview"
-                  '(:tag ("git" "org")))
+                  '(:tag ["git" "org"]))
 (hoarder:register "company-mode/company-mode"
                   '(:tag "company"))
 (hoarder:register "proofit404/company-edbi"
@@ -240,29 +240,29 @@
                                  ("for-GET/know-your-http-well"
                                   (:load-path "emacs")))))
 (hoarder:register "dunn/company-emoji"
-                  '(:tag ("company" "emoji")
+                  '(:tag ["company" "emoji"]
                     :dependency ("company-mode/company-mode")))
 (hoarder:register "expez/company-quickhelp"
-                  '(:tag ("company")
+                  '(:tag ["company"]
                     :dependency ("pitkali/pos-tip")))
 (hoarder:register "company-mode/company-statistics"
-                  '(:tag ("company" "auto_completion")
+                  '(:tag ["company" "auto_completion"]
                     :dependency ("company-mode/company-mode")))
 (hoarder:register "syohex/emacs-git-gutter"
                   '(:tag "git"))
 (hoarder:register "syohex/emacs-git-gutter-fringe"
-                  '(:tag ("git")
+                  '(:tag ["git"]
                     :dependency ( "syohex/emacs-git-gutter"
                                  "nschum/fringe-helper.el")))
 (hoarder:register "nonsequitur/git-gutter-fringe-plus"
-                  '(:tag ("git")
+                  '(:tag ["git"]
                     :dependency ( "nonsequitur/git-gutter-plus"
                                  "nschum/fringe-helper.el")))
 (hoarder:register "syohex/emacs-rebuildfm"
                   '(:tag "radio"))
 (hoarder:register "syohex/emacs-anzu" '(:compile nil))
 (hoarder:register "syohex/emacs-evil-anzu"
-                  '(:tag ("evil" "anzu")
+                  '(:tag ["evil" "anzu"]
                     :dependency (("syohex/emacs-anzu" (:compile nil))
                                  ( "https://gitorious.org/evil/evil.git"
                                   (:build ("gmake doc all")
@@ -275,7 +275,7 @@
 (hoarder:register "magnars/expand-region.el")
 (hoarder:register "magnars/multiple-cursors.el")
 (hoarder:register "knu/mc-extras.el"
-                  '(:tag ("multiple-cursors")))
+                  '(:tag ["multiple-cursors"]))
 (hoarder:register "haskell/haskell-mode"
                   '(:tag "haskell"
                     :compile nil
@@ -283,7 +283,7 @@
 (hoarder:register "nilcons/hi2"
                   '(:tag "haskell"))
 (hoarder:register "kazu-yamamoto/ghc-mod"
-                  '(:tag ("ghc" "haskell")
+                  '(:tag ["ghc" "haskell"]
                     :load-path "elisp"))
 (hoarder:register "Bruce-Connor/paradox"
                   '(:dependency ("magnars/dash.el"
@@ -306,7 +306,7 @@
                   '(:tag "rss"))
 (hoarder:register "remyhonig/elfeed-org"
                   '(:dependency ("skeeto/elfeed")
-                    :tag ("org" "rss")))
+                    :tag ["org" "rss"]))
 (hoarder:register "zk-phi/spray")
 (hoarder:register "dominikh/go-mode.el")
 (hoarder:register "immerrr/lua-mode")
@@ -325,13 +325,13 @@
 (hoarder:register "flycheck/flycheck-pos-tip"
                   '(:dependency ("auto-complete/popup-el")))
 (hoarder:register "purcell/flycheck-package"
-                  '(:tag ("flycheck")))
+                  '(:tag ["flycheck"]))
 (hoarder:register "zenozeng/css-eldoc")
 (hoarder:register "yasuyk/web-beautify")
 (hoarder:register "mhayashi1120/Emacs-slideview")
 (hoarder:register "mhayashi1120/Emacs-imagex")
 (hoarder:register "mhayashi1120/Emacs-image-diredx"
-                  '(:tag ("dired" "image")))
+                  '(:tag ["dired" "image"]))
 (hoarder:register "kiwanami/emacs-window-manager"
                   '(:dependency ("kiwanami/emacs-window-layout")))
 (hoarder:register "m2ym/direx-el"
@@ -362,15 +362,15 @@
 ;;                 '(:dependency ("kbkbkbkb1/guide-key"
 ;;                          "emacsmirror/pos-tip")))
 (hoarder:register "clojure-emacs/clojure-mode"
-                  '(:tag ("clojure")))
+                  '(:tag ["clojure"]))
 (hoarder:register "clojure-emacs/cider"
-                  '(:tag ("clojure")
+                  '(:tag ["clojure"]
                     :dependency ("emacsmirror/queue")))
 (hoarder:register "krisajenkins/clojure-cheatsheet"
-                  '(:tag ("clojure")
+                  '(:tag ["clojure"]
                     :dependency ("clojure-emacs/cider")))
 (hoarder:register "andrewmains12/clojurescript-mode"
-                  '(:tag ("clojure")))
+                  '(:tag ["clojure"]))
 (hoarder:register "Fanael/rainbow-delimiters")
 (hoarder:register "zk-phi/highlight-stages")
 (hoarder:register "zk-phi/indent-guide")
@@ -379,17 +379,17 @@
 (hoarder:register "capitaomorte/sly"
                   '(:build ("gmake compile contrib-compile")))
 (hoarder:register "capitaomorte/sly-company"
-                  '(:tag ("common_lisp" "completion" "company" "sly")))
+                  '(:tag ["common_lisp" "completion" "company" "sly"]))
 (hoarder:register "PuercoPop/sly-repl-ansi-color"
-                  '(:tag ("sly")))
+                  '(:tag ["sly"]))
 (hoarder:register "slime/slime"
-                  '(:tag ("common_lisp")))
+                  '(:tag ["common_lisp"]))
 (hoarder:register "hayamiz/twittering-mode"
-                  '(:tag ("twitter")))
+                  '(:tag ["twitter"]))
 (hoarder:register "mhayashi1120/Emacs-twittering-stream"
-                  '(:tag ("twitter")))
+                  '(:tag ["twitter"]))
 (hoarder:register "zonuexe/twindrill-mode"
-                  '(:tag ("twitter")))
+                  '(:tag ["twitter"]))
 (hoarder:register "defunkt/coffee-mode")
 (hoarder:register "fbkante/recycle")
 (hoarder:register "kawabata/ids-edit")
@@ -455,9 +455,9 @@
 ;; (hoarder:register "larsmagne/csid"
 ;;                  '(:desc "http://lars.ingebrigtsen.no/2013/09/crowdsourcing-is-dead.html"))
 (hoarder:register "gregsexton/httprepl.el"
-                  '(:tag ("http" "repl")))
+                  '(:tag ["http" "repl"]))
 (hoarder:register "nicferrier/emacs-twaddle"
-                  '(:tag ("twitter")
+                  '(:tag ["twitter"]
                     :dependency ("VincentToups/shadchen-el"
                                  "nicferrier/emacs-kv"
                                  "magnars/dash.el"
@@ -476,17 +476,17 @@
 (hoarder:register "yuutayamada/eshell-better-prompt"
                   '(:tag "eshell"))
 (hoarder:register "syohex/emacs-eshellutil"
-                  '(:tag ("eshell")))
+                  '(:tag ["eshell"]))
 (hoarder:register "syohex/emacs-smeargle"
-                  '(:tag ("git" "highlight" )))
+                  '(:tag ["git" "highlight"]))
 (hoarder:register "syohex/emacs-git-messenger"
-                  '(:tag ("git")
+                  '(:tag ["git"]
                     :dependency ("auto-complete/popup-el")))
 (hoarder:register "abo-abo/ace-link"
                   '(:dependency ( "winterTTr/ace-jump-mode"
                                  "nicferrier/emacs-noflet")))
 (hoarder:register "kenoss/erfi"
-                  '(:tag ("scheme" "srfi")))
+                  '(:tag ["scheme" "srfi"]))
 (hoarder:register "nicferrier/eshell-manual"
                   '(:load-path ("dist")
                     :build ("gmake")
@@ -501,36 +501,36 @@
                                  ( "lunaryorn/pkg-info.el"
                                   (:dependency ("cask/epl")))
                                  "tkf/emacs-request")
-                    :tag ("travis")))
+                    :tag ["travis"]))
 (hoarder:register "aJchemist/linkmap.el")
 (hoarder:register "alezost/mana.el"
-                  '(:tag ("manaplus")))
+                  '(:tag ["manaplus"]))
 (hoarder:register "ichibeikatura/nipposi")
 (hoarder:register "clarete/hackernews.el"
-                  '(:tag ("hackernews")))
+                  '(:tag ["hackernews"]))
 (hoarder:register "c41x/hnr.el"
-                  '(:tag ("hackernews")))
+                  '(:tag ["hackernews"]))
 (hoarder:register "kkholst/SuperMan"
-                  '(:tag ("org")
+                  '(:tag ["org"]
                     :load-path ("lisp")))
 (hoarder:register "jacksonrayhamilton/context-coloring"
-                  '(:tag ("javascript")
+                  '(:tag ["javascript"]
                     :build ("npm install")))
 (hoarder:register "emacsattic/spaces")
 (hoarder:register "jeremy-compostella/project-manager"
-                  '(:tag ("project")))
+                  '(:tag ["project"]))
 (hoarder:register "Fuco1/better-jump"
-                  '(:tag ("ace-jump")
+                  '(:tag ["ace-jump"]
                     :dependency ("ShingoFukuyama/ov.el")))
 (hoarder:register "Fuco1/free-keys")
 (hoarder:register "Fuco1/banana.el"
-                  '(:tag ("monad")))
+                  '(:tag ["monad"]))
 (hoarder:register "josteink/csharp-mode"
-                  '(:tag ("C#")
+                  '(:tag ["C#"]
                     :compile nil))
 (hoarder:register "sensorflo/sln-mode")
 (hoarder:register "Bruce-Connor/camcorder.el"
-                  '(:tag ("screencast")
+                  '(:tag ["screencast"]
                     :dependency ("Bruce-Connor/names")))
 (hoarder:register "matthewlmcclure/dircmp-mode")
 (hoarder:register "agpchil/url-preview.el"
@@ -546,13 +546,13 @@
 (hoarder:register "promethial/paxedit"
                   '(:dependency ("http://mumble.net/~campbell/git/paredit.git")))
 (hoarder:register "tlh/workgroups.el"
-                  '(:tag ("window")))
+                  '(:tag ["window"]))
 (hoarder:register "wasamasa/eyebrowse"
                   '(:dependency (("magnars/dash.el" ( :compile nil)))))
 (hoarder:register "idomagal/Tabula-Rasa"
-                  '(:tag ("writing" "distraction free")))
+                  '(:tag ["writing" "distraction free"]))
 (hoarder:register "capitaomorte/darkroom"
-                  '(:tag ("writing" "distraction free")))
+                  '(:tag ["writing" "distraction free"]))
 (hoarder:register "vspinu/image-transform"
                   '(:tag "image"
                     :compile nil))
@@ -565,11 +565,11 @@
                                  "gongo/json-reformat")))
 (hoarder:register "hchbaw/bqlist-lock.el")
 (hoarder:register "fgeller/leerzeichen.el"
-                  '(:tag ("whitespace" "highlight")))
+                  '(:tag ["whitespace" "highlight"]))
 (hoarder:register "abo-abo/anon"
-                  '(:tag ("namespace")))
+                  '(:tag ["namespace"]))
 (hoarder:register "chrisbarrett/emacs-refactor"
-                  '(:tag ("refactoring")
+                  '(:tag ["refactoring"]
                     :dependency (("magnars/dash.el" (:compile nil))
                                  "rolandwalker/list-utils"
                                  "http://mumble.net/~campbell/git/paredit.git"
@@ -583,21 +583,21 @@
                                  "emacsmirror/redshank"
                                  "magnars/s.el")))
 (hoarder:register "rakete/pixel-mode"
-                  '(:tag ("pixel_art")))
+                  '(:tag ["pixel_art"]))
 (hoarder:register "yuttie/initchart")
 (hoarder:register "bburns/clipmon")
 (hoarder:register "purcell/whitespace-cleanup-mode"
-                  '(:tag ("whitespace")))
+                  '(:tag ["whitespace"]))
 (hoarder:register "emacsmirror/emoticons")
 (hoarder:register "zonuexe/pixiv-novel-mode.el")
 (hoarder:register "jhgorrell/ssh-config-mode-el"
                   '(:tag "ssh"))
 (hoarder:register "dtaht/comics-el"
-                  '(:tag ("comic")))
+                  '(:tag ["comic"]))
 (hoarder:register "kljohann/clang-format.el"
                   '(:tag "clang"))
 (hoarder:register "saintaardvark/meleme"
-                  '(:tag ("mode-line")))
+                  '(:tag ["mode-line"]))
 (hoarder:register "10sr/shell-split-string-el"
                   '(:tag "shell"))
 (hoarder:register "kiwanami/emacs-kovlive"
@@ -605,52 +605,52 @@
 (hoarder:register "ieure/ssh-el"
                   '(:tag "ssh"))
 (hoarder:register "tarsius/hl-todo"
-                  '(:tag ("highlight" "font-lock")))
+                  '(:tag ["highlight" "font-lock"]))
 (hoarder:register "ifree/emacs-code-playground")
 (hoarder:register "ikirill/hl-indent"
-                  '(:tag ("highlight" "indentation")))
+                  '(:tag ["highlight" "indentation"]))
 (hoarder:register "AeroFengBlade/typewriter-mode")
 (hoarder:register "ahyatt/emacs-websocket"
-                  '(:tag ("websocket")))
+                  '(:tag ["websocket"]))
 (hoarder:register "syohex/emacs-realtime-markdown-viewer"
                   '(:tag "markdown"))
 (hoarder:register "jscheid/kite")
 (hoarder:register "wasamasa/form-feed")
 (hoarder:register "emacsmirror/aumix-mode"
-                  '(:tag ("aumix" "audio")))
+                  '(:tag ["aumix" "audio"]))
 (hoarder:register "kuanyui/writing-utils.el"
-                  '(:tag ("writing")))
+                  '(:tag ["writing"]))
 (hoarder:register "joodland/bm"
-                  '(:tag ("bookmark")))
+                  '(:tag ["bookmark"]))
 (hoarder:register "mhayashi1120/Emacs-image-archive"
-                  '(:tag ("image" "archive")))
+                  '(:tag ["image" "archive"]))
 (hoarder:register "zk-phi/download-region"
-                  '(:tag ("download")
+                  '(:tag ["download"]
                     :desc "simple in-buffer download manager for Emacs"))
 (hoarder:register "knu/dired-fdclone.el"
-                  '(:tag ("dired" "fclone")))
+                  '(:tag ["dired" "fclone"]))
 (hoarder:register "Fuco1/dired-hacks")
 (hoarder:register "syohex/emacs-literate-coffee-mode"
                   '(:dependency ( "defunkt/coffee-mode")
-                    :tag ("coffeescript")))
+                    :tag ["coffeescript"]))
 (hoarder:register "tarsius/elx"
                   '(:desc "Extract information from Emacs Lisp libraries"))
 (hoarder:register "thisirs/state"
-                  '(:tag ("workspace")
+                  '(:tag ["workspace"]
                     :desc "Quick navigation between workspaces in emacs"))
 (hoarder:register "lunaryorn/fancy-battery.el"
-                  '(:tag ("appearance" "mode-line")))
+                  '(:tag ["appearance" "mode-line"]))
 (hoarder:register "csrhodes/iplayer-el"
-                  '(:tag ("bbc")
+                  '(:tag ["bbc"]
                     :desc "Emacs interface to the BBC's iPlayer (uses get_iplayer)"))
 (hoarder:register "sigma/marshal.el"
-                  '(:tag ("eieio")
+                  '(:tag ["eieio"]
                     :desc " eieio extension for automatic (un)marshalling"))
 (hoarder:register "zk-phi/phi-grep"
-                  '(:tag ("grep")
+                  '(:tag ["grep"]
                     :desc "Interactively-editable recursive grep implementation in elisp"))
 (hoarder:register "tarsius/packed"
-                  '(:tag ("package")
+                  '(:tag ["package"]
                     :desc "package manager agnostic Emacs Lisp package utilities"))
 (hoarder:register "ainame/smart-newline.el"
                   '( :site "http://ainame.hateblo.jp/entry/2013/12/08/162032"))
@@ -658,134 +658,134 @@
                   '(:desc "Read several news sources within Emacs"))
 (hoarder:register "rakete/pixel-mode"
                   '(:desc "Make pixel art in emacs buffers."
-                    :tag ("pixel_art")))
+                    :tag ["pixel_art"]))
 (hoarder:register "bmag/emacs-purpose"
-                  '(:tag ("workspace")))
+                  '(:tag ["workspace"]))
 (hoarder:register "ajsquared/env-var-import"
                   '(:desc "Import shell environment variables in GUI Emacs "))
 (hoarder:register "emacsmirror/ob-speak"
-                  '(:tag ("org" "espeak" "org-babel")
+                  '(:tag ["org" "espeak" "org-babel"]
                     :desc "espeak speech synthesis for org-babel blocks"))
 (hoarder:register "vapniks/syslog-mode"
-                  '(:tag ("log")
+                  '(:tag ["log"]
                     :dependency ("vapniks/hide-lines")
                     :desc "Emacs major-mode for viewing log files "))
 (hoarder:register "chrisbarrett/skeletor.el"
                   '(:desc "Powerful project skeletons for Emacs"
                     :dependency ("sviridov/undercover.el")))
 (hoarder:register "steckerhalter/emacs-fasd"
-                  '(:tag ("fasd")
+                  '(:tag ["fasd"]
                     :dependency ("d11wtq/grizzl")
                     :desc "An Emacs extension to integrate Fasd"))
 (hoarder:register "steckerhalter/ipretty"
                   '(:desc "Interactive Emacs Lisp pretty-printing "))
 (hoarder:register "tarao/bundle-el"
-                  '(:tag ("el-get" "package_manager")))
+                  '(:tag ["el-get" "package_manager"]))
 (hoarder:register "Bruce-Connor/fancy-narrow"
-                  '(:tag ("narrowing")))
+                  '(:tag ["narrowing"]))
 (hoarder:register "DalekBaldwin/highlight-backquotes-mode"
-                  '(:tag ("highlight")))
+                  '(:tag ["highlight"]))
 (hoarder:register "vibhavp/emacs-xkcd"
-                  '(:tag ("xkcd" "comic")
+                  '(:tag ["xkcd" "comic"]
                     :desc "Implementation of an xkcd (http://xkcd.com/) reader for Emacs."))
 (hoarder:register "emacsmirror/bytecomp-simplify"
-                  '(:tag ("bytecomp")
+                  '(:tag ["bytecomp"]
                     :desc "byte compile warnings for simplifications"))
 (hoarder:register "Lindydancer/lisp-extra-font-lock"
-                  '(:tag ("highlight")))
+                  '(:tag ["highlight"]))
 (hoarder:register "xuchunyang/youdao-dictionary.el"
-                  '(:tag ("chinese")
+                  '(:tag ["chinese"]
                     :dependency ("auto-complete/popup-el"
                                  "xuchunyang/chinese-word-at-point.el")))
 (hoarder:register "xuchunyang/google-translate-chinese.el"
-                  '(:tag ("chinese" "translation")
+                  '(:tag ["chinese" "translation"]
                     :dependency ("auto-complete/popup-el"
                                  "xuchunyang/chinese-word-at-point.el")))
 (hoarder:register "rolandwalker/unicode-fonts"
-                  '(:tag ("font" "unicode")))
+                  '(:tag ["font" "unicode"]))
 (hoarder:register "sanryuu/emacs-bijin-tokei")
 (hoarder:register "Benaiah/seethru"
-                  '(:tag ("appearance" "transparency")
+                  '(:tag ["appearance" "transparency"]
                     :desc "seethru.el - easily change Emacs transparency "))
 (hoarder:register "russell/elisp-slime-expand"
-                  '(:tag ("emacs_lisp" "macro")))
+                  '(:tag ["emacs_lisp" "macro"]))
 (hoarder:register "tam17aki/summarye")
 (hoarder:register "emacsmirror/top-mode"
-                  '(:tag ("top")))
+                  '(:tag ["top"]))
 (hoarder:register "dbrock/bongo"
-                  '(:tag ("music" "bongo")))
+                  '(:tag ["music" "bongo"]))
 (hoarder:register "syohex/emacs-eww-hatebu"
-                  '(:tag ("eww" "hatena_bookmark")
+                  '(:tag ["eww" "hatena_bookmark"]
                     :desc "Hatena bookmark count in mode-line"))
 (hoarder:register "nlamirault/dionysos"
-                  '(:tag ("music")
+                  '(:tag ["music"]
                     :desc "A music player for Emacs "))
 (hoarder:register "thisirs/vc-check-status"
-                  '(:tag ("vcs" "git")))
+                  '(:tag ["vcs" "git"]))
 (hoarder:register "syohex/emacs-gitignore"
-                  '(:tag ("git" "gitignore")))
+                  '(:tag ["git" "gitignore"]))
 (hoarder:register "fgallina/region-bindings-mode"
-                  '(:tag ("region")))
+                  '(:tag ["region"]))
 (hoarder:register "zk-phi/jaword"
-                  '(:tag ("japanese" "movement")
+                  '(:tag ["japanese" "movement"]
                     :dependency (("myuhe/tinysegmenter.el"
-                                  (:tag ("japanese"))))))
+                                  (:tag ["japanese"])))))
 (hoarder:register "xahlee/xah-elisp-mode"
-                  '(:tag ("emacs-lisp")))
+                  '(:tag ["emacs-lisp"]))
 (hoarder:register "asok/peep-dired"
-                  '(:tag ("dired")))
+                  '(:tag ["dired"]))
 (hoarder:register "jixiuf/dired-filetype-face"
-                  '(:tag ("dired")))
+                  '(:tag ["dired"]))
 (hoarder:register "aaronbieber/sunshine.el"
-                  '(:tag ("weather" "forecast")))
+                  '(:tag ["weather" "forecast"]))
 (hoarder:register "Dewdrops/visual-ascii-mode"
-                  '(:tag ("ascii")))
+                  '(:tag ["ascii"]))
 (hoarder:register "nex3/perspective-el"
-                  '(:tag ("workspace")))
+                  '(:tag ["workspace"]))
 (hoarder:register "niku/realtime-preview.el"
-                  '(:tag ("html" "preview" "markdown")))
+                  '(:tag ["html" "preview" "markdown"]))
 (hoarder:register "zk-phi/symon"
-                  '(:tag ("system" "monitor")))
+                  '(:tag ["system" "monitor"]))
 (hoarder:register "wanderlust/wanderlust"
-                  '(:tag ("mail")
+                  '(:tag ["mail"]
                     :build ("gmake")
                     :dependency ( "wanderlust/flim"
                                  "wanderlust/semi"
                                  "wanderlust/apel")))
 (hoarder:register "syohex/emacs-itunes-bgm"
-                  '(:tag ("music" "itunes")))
+                  '(:tag ["music" "itunes"]))
 (hoarder:register "andyetitmoves/libmpdee"
-                  '(:tag ("mpd" "music")))
+                  '(:tag ["mpd" "music"]))
 (hoarder:register "osanai3/eshell-tree"
-                  '(:tag ("eshell")))
+                  '(:tag ["eshell"]))
 (hoarder:register "nobrowser/dig-browser"
-                  '(:tag ("dig" "dns")))
+                  '(:tag ["dig" "dns"]))
 (hoarder:register "hagleitn/unicode-emoticons"
-                  '(:tag ("unicode" "emoticon")))
+                  '(:tag ["unicode" "emoticon"]))
 (hoarder:register "ryuslash/kaarvok"
-                  '(:tag ("project" "template")))
+                  '(:tag ["project" "template"]))
 (hoarder:register "bmag/emacs-purpose"
-                  '(:tag ("window" "layout")))
+                  '(:tag ["window" "layout"]))
 (hoarder:register "git://git.savannah.gnu.org/tramp.git"
-                  '(:tag ("tramp" "ssh")
+                  '(:tag ["tramp" "ssh"]
                     :build ("autoconf" "./configure" "gmake")
                     :load-path ("lisp")
                     :info "info"))
 (hoarder:register "ataka/emacs-wget"
-                  '(:tag ("wget")))
+                  '(:tag ["wget"]))
 (hoarder:register "rmuslimov/browse-at-remote"
-                  '(:tag ("github" "bitbucket" "git")
+                  '(:tag ["github" "bitbucket" "git"]
                     :dependency ("magnars/s.el"
                                  "rejeep/f.el")))
 (hoarder:register "chillaranand/real-auto-save"
-                  '(:tag ("autosave")))
+                  '(:tag ["autosave"]))
 (hoarder:register "kentaro/auto-save-buffers-enhanced")
 (hoarder:register "m2ym/compilation-highlight-el")
 (hoarder:register "ongaeshi/auto-shell-command"
                   '(:dependency ("kiwanami/emacs-deferred")
                     :desc "Run the shell command **asynchronously** that you specified when you save the file."))
 (hoarder:register "chumpage/chumpy-windows"
-                  '(:tag ("window" "layout")))
+                  '(:tag ["window" "layout"]))
 (hoarder:register "kljohann/mpv.el"
                   '(:dependency ( "Bruce-Connor/names"
                                  ( "git://orgmode.org/org-mode.git"
@@ -797,62 +797,62 @@
 (hoarder:register "danielsz/Palimpsest")
 (hoarder:register "rolandwalker/ignoramus")
 (hoarder:register "anler/centered-window-mode"
-                  '(:tag ("writing")))
+                  '(:tag ["writing"]))
 (hoarder:register "milkypostman/hl-sentence"
-                  '(:tag ("writing" "reading" "highlight")))
+                  '(:tag ["writing" "reading" "highlight"]))
 (hoarder:register "joostkremers/writeroom-mode"
-                  '(:tag ("writing")
+                  '(:tag ["writing"]
                     :dependency ("joostkremers/visual-fill-column")))
 (hoarder:register "gongo/emacs-ikku"
-                  '(:tag ("haiku" "mecab" "japanese")
+                  '(:tag ["haiku" "mecab" "japanese"]
                     :dependency ("magnars/dash.el"
                                  "sviridov/undercover.el")))
 (hoarder:register "ThibautVerron/echo-sth.el")
 (hoarder:register "10sr/git-command-el"
-                  '(:tag ("git")))
+                  '(:tag ["git"]))
 (hoarder:register "purcell/default-text-scale"
-                  '(:tag ("font")))
+                  '(:tag ["font"]))
 (hoarder:register "theBlackDragon/fvwm-mode"
-                  '(:tag ("fvwm")))
+                  '(:tag ["fvwm"]))
 (hoarder:register "tjim/nevermore"
-                  '(:tag ("mail" "notmuch")
+                  '(:tag ["mail" "notmuch"]
                     :dependency ("emacsmirror/peg")))
 (hoarder:register "syohex/emacs-import-popwin"
-                  '(:tag ("popwin")))
+                  '(:tag ["popwin"]))
 (hoarder:register "johanclaesson/picpocket"
-                  '(:tag ("image_viewer")))
+                  '(:tag ["image_viewer"]))
 (hoarder:register "kakakaya/random-splash-image"
-                  '(:tag ("splash")))
+                  '(:tag ["splash"]))
 (hoarder:register "fgeller/highlight-thing.el"
-                  '(:tag ("highlight")))
+                  '(:tag ["highlight"]))
 (hoarder:register "baohaojun/bbyac"
-                  '(:tag ("completion")
+                  '(:tag ["completion"]
                     :dependency ("browse-kill-ring/browse-kill-ring")))
 (hoarder:register "jorgenschaefer/emacs-buttercup"
-                  '(:tag ("testing")))
+                  '(:tag ["testing"]))
 (hoarder:register "dgutov/diff-hl"
-                  '(:tag ("git")))
+                  '(:tag ["git"]))
 (hoarder:register "Bruce-Connor/elisp-bug-hunter")
 (hoarder:register "lokedhs/em-translate"
-                  '(:tag ("google_translate")
+                  '(:tag ["google_translate"]
                     :dependency ("emacsmirror/http-post-simple")))
 (hoarder:register "toroidal-code/cycle-themes.el"
-                  '(:tag ("theme")))
+                  '(:tag ["theme"]))
 (hoarder:register "uk-ar/smart-region"
-                  '(:tag ("region" "mark")
+                  '(:tag ["region" "mark"]
                     :dependency ("magnars/expand-region.el"
                                  "magnars/multiple-cursors.el")))
 (hoarder:register "sellout/emacs-unimode"
-                  '(:tag ("unicode" "mode-line")))
+                  '(:tag ["unicode" "mode-line"]))
 (hoarder:register "tuhdo/semantic-refactor"
-                  '(:tag ("refactoring" "format")))
+                  '(:tag ["refactoring" "format"]))
 (hoarder:register "momomo5717/emms-player-mpv-jp-radio-settings"
-                  '(:tag ("radio" "emms" "mpv")))
+                  '(:tag ["radio" "emms" "mpv"]))
 (hoarder:register "momomo5717/emms-player-simple-mpv"
-                  '(:tag ("emms" "mpv")))
+                  '(:tag ["emms" "mpv"]))
 (hoarder:register  "wasamasa/firestarter")
 (hoarder:register "myTerminal/theme-looper"
-                  '(:tag ("theme")))
+                  '(:tag ["theme"]))
 (hoarder:register "djcb/sauron")
 ;; (hoarder:register "nschum/highlight-parentheses.el")
 (hoarder:register "tsdh/highlight-parentheses.el")
@@ -861,178 +861,178 @@
                   '(:dependency ("tali713/esxml")))
 (hoarder:register "abo-abo/avy")
 (hoarder:register "marcowahl/emacsshot"
-                  '(:tag ("screenshot")))
+                  '(:tag ["screenshot"]))
 (hoarder:register "n8willis/fontfile-modes"
-                  '(:tag ("font")))
+                  '(:tag ["font"]))
 (hoarder:register "atheriel/splash-buffer.el"
-                  '(:tag ("splash")))
+                  '(:tag ["splash"]))
 (hoarder:register "rejeep/jq.el"
-                  '(:tag ("json" "jq")))
+                  '(:tag ["json" "jq"]))
 (hoarder:register "Fuco1/autobookmarks"
                   '(:dependency ("magnars/dash.el"
                                  "emacsmirror/bookmark-plus")
-                    :tag ("recentf" "bookmark")))
+                    :tag ["recentf" "bookmark"]))
 (hoarder:register "larstvei/Focus"
-                  '(:tag ("highlight" "narrowing")))
+                  '(:tag ["highlight" "narrowing"]))
 (hoarder:register "tthieman/soundcloud.el"
-                  '(:tag ("music" "soundcloud")
+                  '(:tag ["music" "soundcloud"]
                     :dependency ("kiwanami/emacs-deferred"
                                  "rolandwalker/string-utils"
                                  "tkf/emacs-request")))
 (hoarder:register "emacsmirror/longlines-jp")
 (hoarder:register "zonuexe/emoji-fontset.el"
-                  '(:tag ("font" "emoji" "unicode")))
+                  '(:tag ["font" "emoji" "unicode"]))
 (hoarder:register "purcell/exec-path-from-shell")
 (hoarder:register "myuhe/imgur.el"
-                  '(:tag "imgur" "anything"))
+                  '(:tag ["imgur" "anything"]))
 (hoarder:register "gongo/emacs-gimei"
-                  '(:tag ("japanese")))
+                  '(:tag ["japanese"]))
 (hoarder:register "emacs-pe/ssh-modes"
-                  '(:tag ("ssh")))
+                  '(:tag ["ssh"]))
 (hoarder:register "sensorflo/adoc-mode"
-                  '(:tag ("asciidoc")
+                  '(:tag ["asciidoc"]
                     :dependency ("sensorflo/markup-faces")))
 (hoarder:register "syohex/emacs-fontawesome"
-                  '(:tag ("font" "fontawesome" "icon")))
+                  '(:tag ["font" "fontawesome" "icon"]))
 (hoarder:register "zweifisch/ob-http"
-                  '(:tag ("org" "http")))
+                  '(:tag ["org" "http"]))
 (hoarder:register "bastibe/annotate.el"
-                  '(:tag ("annotation" "note" "memo" "text-property")))
+                  '(:tag ["annotation" "note" "memo" "text-property"]))
 (hoarder:register "emacsmirror/csv-mode"
-                  '(:tag ("csv")))
+                  '(:tag ["csv"]))
 (hoarder:register "nicferrier/creole-mode")
 (hoarder:register "thierryvolpiatto/psession"
-                  '(:tag ("history" "session")))
+                  '(:tag ["history" "session"]))
 (hoarder:register "justbur/emacs-which-key"
-                  '(:tag ("guide-key")
+                  '(:tag ["guide-key"]
                     :dependency ("magnars/s.el"
                                  "m2ym/popwin-el")))
 (hoarder:register "gongo/shimapan.el")
 (hoarder:register "lewang/ws-butler"
-                  '(:tag ("whitespace" "cleanup")))
+                  '(:tag ["whitespace" "cleanup"]))
 (hoarder:register "Fuco1/letcheck"
-                  '(:tag ("convinience" "syntax_check")))
+                  '(:tag ["convinience" "syntax_check"]))
 (hoarder:register "k-talo/volatile-highlights.el"
-                  '(:tag ("highlight" "feedback" "undo" "paste")))
+                  '(:tag ["highlight" "feedback" "undo" "paste"]))
 (hoarder:register "KeenS/cssfmt.el"
-                  '(:tag ("css")))
+                  '(:tag ["css"]))
 (hoarder:register "mutbuerger/not-from-scratch"
-                  '(:tag ("scratch")))
+                  '(:tag ["scratch"]))
 (hoarder:register "Levenson/dictionary"
-                  '(:tag ("dictionary" "english")))
+                  '(:tag ["dictionary" "english"]))
 (hoarder:register "leoliu/sokoban"
-                  '(:tag ("game" "sokoban")))
+                  '(:tag ["game" "sokoban"]))
 (hoarder:register "stevenremot/roguel-ike"
-                  '(:tag ("game" "rogue")))
+                  '(:tag ["game" "rogue"]))
 (hoarder:register "emacsattic/elite"
-                  '(:tag ("elite" "game")))
+                  '(:tag ["elite" "game"]))
 (hoarder:register "eschulte/shen-mode"
-                  '(:tag ("shen" "language" "pattern_match")))
+                  '(:tag ["shen" "language" "pattern_match"]))
 (hoarder:register "wasamasa/retris"
-                  '(:tag ("game" "tetris")))
+                  '(:tag ["game" "tetris"]))
 (hoarder:register "dbordak/telephone-line"
-                  '(:tag ("powerline" "mode-line")))
+                  '(:tag ["powerline" "mode-line"]))
 (hoarder:register "neomantic/helm-rubygems-org"
-                  '(:tag ("ruby" "rubygems" "helm")))
+                  '(:tag ["ruby" "rubygems" "helm"]))
 (hoarder:register "ruediger/weather-metno-el"
-                  '(:tag ("weather")))
+                  '(:tag ["weather"]))
 (hoarder:register "myuhe/quick-preview.el"
-                  '(:tag ("preview" "sushi" "quick-look")))
+                  '(:tag ["preview" "sushi" "quick-look"]))
 (hoarder:register "zonuexe/vim-filetype.el"
-                  '(:tag ("vim" "filetype")))
+                  '(:tag ["vim" "filetype"]))
 (hoarder:register "ryuslash/git-auto-commit-mode"
-                  '(:tag ("git" "auto_commit")))
+                  '(:tag ["git" "auto_commit"]))
 (hoarder:register "dnaumov/midje-mode"
-                  '(:tag ("clojure" "test" )))
+                  '(:tag ["clojure" "test"]))
 (hoarder:register "cadadr/forecast.el"
-                  '(:tag ("weather" "forecast")))
+                  '(:tag ["weather" "forecast"]))
 (hoarder:register "emacsmirror/cparen"
-                  '(:tag ("scheme")))
+                  '(:tag ["scheme"]))
 (hoarder:register "steventlamb/yatt.el"
-                  '(:tag ("tea" "timer")))
+                  '(:tag ["tea" "timer"]))
 (hoarder:register "joelmccracken/elisp-sandbox"
-                  '(:tag ("emacs_lisp")
+                  '(:tag ["emacs_lisp"]
                     :desc  "Evaluate EmacsLisp expressions in a sandbox"))
 (hoarder:register "liblit/flycheck-status-emoji"
-                  '(:tag ("flycheck" "test" "emoji")
+                  '(:tag ["flycheck" "test" "emoji"]
                     :desc "Summary: Show flycheck status using cute, compact emoji"))
 (hoarder:register "kbauer/subemacs"
-                  '(:tag ("emacs_lisp")
+                  '(:tag ["emacs_lisp"]
                     :desc "Evaluating expressions in a fresh Emacs subprocess"))
 (hoarder:register "gabesoft/emc"
-                  '(:tag ("evil" "multiple-cursor")))
+                  '(:tag ["evil" "multiple-cursor"]))
 (hoarder:register "Malabarba/Nameless")
 (hoarder:register "xuchunyang/eshell-did-you-mean"
-                  '(:tag ("eshell")))
+                  '(:tag ["eshell"]))
 (hoarder:register "tonini/alchemist.el"
-                  '(:tag ("elixir")
+                  '(:tag ["elixir"]
                     :dependency ( "elixir-lang/emacs-elixir"
                                  "magnars/dash.el"
                                  "company-mode/company-mode")))
 (hoarder:register "elixir-lang/emacs-elixir"
-                  '(:tag ("elixir" "erlang")))
+                  '(:tag ["elixir" "erlang"]))
 (hoarder:register "gromnitsky/wordnut"
-                  '(:tag ("wordnet" "language" "english")))
+                  '(:tag ["wordnet" "language" "english"]))
 (hoarder:register "erlang/otp"
-                  '(:tag ("erlang" "otp")
+                  '(:tag ["erlang" "otp"]
                     :load-path "lib/tools/emacs"))
 (hoarder:register "emacsmirror/sml-mode"
-                  '(:tag ("language" "Standard ML")))
+                  '(:tag ["language" "Standard ML"]))
 (hoarder:register "osener/github-browse-file"
-                  '(:tag ("git" "github")))
+                  '(:tag ["git" "github"]))
 (hoarder:register "mrkkrp/cyphejor"
-                  '(:tag ("diminish" "mode-line")))
+                  '(:tag ["diminish" "mode-line"]))
 (hoarder:register "NicolasPetton/stream"
-                  '(:tag ("stream" "data")))
+                  '(:tag ["stream" "data"]))
 (hoarder:register "dimitri/el-get"
-                  '(:tag ("el-get" "package")))
+                  '(:tag ["el-get" "package"]))
 (hoarder:register "eludom/org-babel-git-utils"
-                  '(:tag ("org" "babel" "git")))
+                  '(:tag ["org" "babel" "git"]))
 (hoarder:register "Malabarba/beacon")
 (hoarder:register "knl/name-this-color.el"
-                  '(:tag ("colour")))
+                  '(:tag ["colour"]))
 (hoarder:register "Lindydancer/font-lock-studio"
-                  '(:tag ("font-lock" "highlight" "syntax")))
+                  '(:tag ["font-lock" "highlight" "syntax"]))
 (hoarder:register "michael-heerdegen/on-screen.el")
 (hoarder:register "mutbuerger/company-org-headings"
-                  '(:tag ("company" "org" "completion")))
+                  '(:tag ["company" "org" "completion"]))
 (hoarder:register "samisalkosuo/elite-for-emacs"
-                  '(:tag ("game" "elite")))
+                  '(:tag ["game" "elite"]))
 (hoarder:register "iqbalansari/emacs-emoji"
-                  '(:tag ("emoji" )))
+                  '(:tag ["emoji"]))
 (hoarder:register "death/reddit-mode"
-                  '(:tag ("reddit")))
+                  '(:tag ["reddit"]))
 (hoarder:register "iqbalansari/emacs-emojify"
-                  '(:tag ("emoji")))
+                  '(:tag ["emoji"]))
 (hoarder:register "wasamasa/zone-nyan"
-                  '(:tag ("nyancat" "zone" "eshell")))
+                  '(:tag ["nyancat" "zone" "eshell"]))
 (hoarder:register "ilya-babanov/emacs-bpr"
-                  '(:tag ("process")))
+                  '(:tag ["process"]))
 (hoarder:register "jwiegley/emacs-pl"
-                  '(:tag ("haskell" "parser")))
+                  '(:tag ["haskell" "parser"]))
 (hoarder:register "jwiegley/alert"
-                  '(:tag ("notification" "growl")
+                  '(:tag ["notification" "growl"]
                     :dependency ("aki2o/log4e")))
 (hoarder:register "iquiw/hyai"
-                  '(:tag ("haskell" "indentation")))
+                  '(:tag ["haskell" "indentation"]))
 (hoarder:register "xuchunyang/github-notifier.el"
-                  '(:tag ("github" "mode-line")))
+                  '(:tag ["github" "mode-line"]))
 (hoarder:register "xuchunyang/region-state.el"
-                  '(:tag ("region")))
+                  '(:tag ["region"]))
 (hoarder:register "xuchunyang/eshell-z"
-                  '(:tag ("eshell" "z")))
+                  '(:tag ["eshell" "z"]))
 (hoarder:register "tom-tan/esh-buf-stack"
-                  '(:tag ("eshell" "zsh")))
+                  '(:tag ["eshell" "zsh"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
-;;                   '(:tag ("language" "javascript" "jscs" "format")
+;;                   '(:tag ["language" "javascript" "jscs" "format"]
 ;;                     :dependency (("papaeye/go-mode.el"
-;;                                (:tag ("langfmt"))))))
+;;                                (:tag ["langfmt"])))))
 
 ;; (hoarder:register "politza/pdf-tools"
-;;                  '(:tag ("pdf")))
+;;                  '(:tag ["pdf"]))
 ;; (hoarder:register "http://git.chise.org/git/elisp/flim.git"
-;;                  '(:tag ("flim" "luna")))
+;;                  '(:tag ["flim" "luna"]))
 ;; (hoarder:register "capitaomorte/yasnippet")
 
 ;;;;; evil
@@ -1082,7 +1082,7 @@
 ;; (hoarder:register "jschaf/evil-smartparens"
 ;;                  '(:tag "evil"))
 (hoarder:register "expez/evil-smartparens"
-                  '(:tag ("evil" "smartparens")))
+                  '(:tag ["evil" "smartparens"]))
 (hoarder:register "nadavspi/evil-linewise"
                   '(:dependency ("emacsmirror/move-text")
                     :tag "evil"))
@@ -1114,11 +1114,11 @@
 (hoarder:register "linktohack/evil-commentary"
                   '(:tag "evil"))
 (hoarder:register "syl20bnr/evil-tutor"
-                  '(:tag ("evil" "tutorial")))
+                  '(:tag ["evil" "tutorial"]))
 (hoarder:register "roman/evil-visual-mark-mode"
-                  '(:tag ("evil")))
+                  '(:tag ["evil"]))
 (hoarder:register "bcarrell/evil-lispy"
-                  '(:tag ("evil" "lispy")
+                  '(:tag ["evil" "lispy"]
                     :dependency (("abo-abo/lispy"
                                   (:dependency ("sviridov/undercover.el"))))))
 (hoarder:register "linktohack/evil-rsi")
@@ -1128,25 +1128,25 @@
                                  "promethial/paxedit"
                                  "Fuco1/smartparens")))
 ;; (hoarder:register "lotabout/evil-mc"
-;;                   '(:tag ("evil" "multiple-cursor")))
+;;                   '(:tag ["evil" "multiple-cursor"]))
 (hoarder:register "gabesoft/evil-mc"
-                  '(:tag ("evil" "multiple-cursor")))
+                  '(:tag ["evil" "multiple-cursor"]))
 (hoarder:register "willghatch/emacs-on-parens"
-                  '(:tag ("evil" "smartparens")
+                  '(:tag ["evil" "smartparens"]
                     :dependency ("Fuco1/smartparens"
                                  "magnars/dash.el")))
 (hoarder:register "syl20bnr/evil-iedit-multiple-cursors"
-                  '(:tag ("evil" "multiple-cursors")))
+                  '(:tag ["evil" "multiple-cursors"]))
 (hoarder:register "vyp/evil-quick-scope"
-                  '(:tag ("evil")))
+                  '(:tag ["evil"]))
 (hoarder:register "blorbx/evil-quickscope"
-                  '(:tag ("evil")))
+                  '(:tag ["evil"]))
 (hoarder:register "louy2/evil-avy"
-                  '(:tag ("evil" "avy")))
+                  '(:tag ["evil" "avy"]))
 (hoarder:register "noctuid/evil-textobj-anyblock"
-                  '(:tag ("evil" "textobj")))
+                  '(:tag ["evil" "textobj"]))
 (hoarder:register "syl20bnr/evil-iedit-state"
-                  '(:tag ("evil" "iedit")
+                  '(:tag ["evil" "iedit"]
                     :dependency ("tsdh/iedit")))
 
 ;;;;; org
@@ -1159,16 +1159,16 @@
 (hoarder:register "tj64/org-hlc")
 
 (hoarder:register "tj64/outorg" '(:compile nil
-                                  :tag ("org" "outline")))
+                                  :tag ["org" "outline"]))
 (hoarder:register "tj64/outshine" '(:compile nil
-                                    :tag ("org" "outline")
+                                    :tag ["org" "outline"]
                                     :dependency ("tj64/outorg")))
 ;; (hoarder:register "jleechpe/outorg-export")
 (hoarder:register "tj64/navi"
-                  '(:tag ("org" "outline")))
+                  '(:tag ["org" "outline"]))
 
 (hoarder:register "tj64/outline-magic"
-                  '(:tag ("org" "outline")))
+                  '(:tag ["org" "outline"]))
 (hoarder:register "omouse/org-doing"
                   '(:tag "org"))
 (hoarder:register "Fuco1/org-pretty-table"
@@ -1183,48 +1183,48 @@
 (hoarder:register "kawabata/ox-pandoc"
                   '(:dependency ("Wilfred/ht.el"
                                  "magnars/dash.el")
-                    :tag ( "org" "pandoc" )))
+                    :tag ["org" "pandoc"]))
 (hoarder:register "bastibe/org-journal"
-                  '(:tag ("org")))
+                  '(:tag ["org"]))
 (hoarder:register "calvinwyoung/org-autolist"
-                  '(:tag ("org")))
+                  '(:tag ["org"]))
 (hoarder:register "krisajenkins/ob-browser"
-                  '(:tag ("org" "org-babel" "html" "phantomjs")
+                  '(:tag ["org" "org-babel" "html" "phantomjs"]
                     :desc "Render HTML inside Emacs' org-mode"))
 (hoarder:register "thisirs/org-context"
-                  '(:tag ("org" "org-agenda" "org-capture")
+                  '(:tag ["org" "org-agenda" "org-capture"]
                     :desc "Contextual agenda and capture for Org-mode"))
 (hoarder:register "woudshoo/html-2-org"
-                  '(:tag ("org" "html")
+                  '(:tag ["org" "html"]
                     :desc "Attempts to undo the html export of org"))
 (hoarder:register "abo-abo/org-download"
-                  '(:tag ("org")
+                  '(:tag ["org"]
                     :dependency ("jwiegley/emacs-async")))
 (hoarder:register "brettviren/org-pub"
-                  '(:tag ("org" "web" "html")))
+                  '(:tag ["org" "web" "html"]))
 (hoarder:register "tj64/org-dp"
-                  '(:tag ("org")))
+                  '(:tag ["org"]))
 (hoarder:register "p-m/org-notify"
-                  '(:tag ("org")))
+                  '(:tag ["org"]))
 (hoarder:register "vapniks/org-gather"
-                  '(:tag ("org")))
+                  '(:tag ["org"]))
 (hoarder:register "markus1189/org-pdfview"
-                  '(:tag ("org" "pdf")))
+                  '(:tag ["org" "pdf"]))
 (hoarder:register "HKey/omboo"
-                  '(:tag ("org" "bookmark")
+                  '(:tag ["org" "bookmark"]
                     :desc "Org-mode as BOOkmark"))
 (hoarder:register "rexim/org-cliplink"
-                  '(:tag ("org" "clipboard")))
+                  '(:tag ["org" "clipboard"]))
 (hoarder:register "tarsius/orglink"
-                  '(:tag ("org")))
+                  '(:tag ["org"]))
 (hoarder:register "snosov1/toc-org"
-                  '(:tag ("org" "toc" )))
+                  '(:tag ["org" "toc"]))
 (hoarder:register "mattduck/org-query"
-                  '(:tag ("org" "agenda")))
+                  '(:tag ["org" "agenda"]))
 (hoarder:register "alphapapa/org-protocol-capture-html"
                   '(:tag ["org" "org-capture" "html"]))
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
-;;                  '(:tag ("org" "bongo" "music")
+;;                  '(:tag ["org" "bongo" "music"]
 ;;                    :dependency ("dbrock/bongo")
 ;;                    :type hg))
 
@@ -1358,7 +1358,7 @@
 (hoarder:register-theme "NicolasPetton/zerodark-theme")
 (hoarder:register-theme "credmp/arjen-grey")
 (hoarder:register-theme "warreq/xres-theme"
-                        '(:tag ("xresources")))
+                        '(:tag ["xresources"]))
 (hoarder:register-theme "jonathanchu/atom-one-dark-theme")
 (hoarder:register-theme "vjohansen/dark-nature-theme")
 (hoarder:register-theme "zenmacs/leuven-solarized")
@@ -1383,24 +1383,24 @@
                                 option)))
   (add-project-root  "emacs-flatline")
   (add-project-root "helm-ypv" '(:tag "helm"))
-  (add-project-root "company-scheme" '(:tag ("company" "scheme")))
+  (add-project-root "company-scheme" '(:tag ["company" "scheme"]))
   (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
   (add-project-root "emacs-lehtifile-mode")
-  (add-project-root "helm-alku" '(:tag ("helm")))
+  (add-project-root "helm-alku" '(:tag ["helm"]))
   (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
   ;; (add-project-root "emacs-eshell-switch" '(:tag "eshell"))
   (add-project-root "emacs-mesh" '(:tag "eshell"))
   (add-project-root "emacs-eshell-alias" '(:tag "eshell"))
   (add-project-root "helm-project-buffer" '(:tag "helm"))
-  (add-project-root "emacs-eshellar" '(:tag ( "eshell" "shellar" )))
+  (add-project-root "emacs-eshellar" '(:tag ["eshell" "shellar"]))
   (add-project-root "emacs-hoarder" '(:load-path nil
-                                      :tag ( "package" )))
-  (add-project-root "helm-features" '(:tag ( "emacs-lisp" )))
-  (add-project-root "helm-eww-bookmark" '(:tag ("helm" "eww" )))
-  (add-project-root "helm-eww-history" '(:tag ("helm" "eww" )))
-  (add-project-root "helm-eww-search-engine" '(:tag ("helm" "eww" )))
-  (add-project-root "helm-eshell-jump" '(:tag ("helm" "eshell")))
-  (add-project-root "emacs-glof" '(:tag ("plist" "utility"))))
+                                      :tag ["package"]))
+  (add-project-root "helm-features" '(:tag ["emacs-lisp"]))
+  (add-project-root "helm-eww-bookmark" '(:tag ["helm" "eww"]))
+  (add-project-root "helm-eww-history" '(:tag ["helm" "eww"]))
+  (add-project-root "helm-eww-search-engine" '(:tag ["helm" "eww"]))
+  (add-project-root "helm-eshell-jump" '(:tag ["helm" "eshell"]))
+  (add-project-root "emacs-glof" '(:tag ["plist" "utility"])))
 
 ;;;;;; skk
 (hoarder:register "skk-dev/ddskk"
@@ -1410,7 +1410,7 @@
 (hoarder:fetch "skk-dev/skktools"
                '(:build ("./configure" "gmake clean" "gmake")))
 (hoarder:fetch "tkita/SKK-JISYO"
-               '(:tag ("skk" "skk-jisyo")))
+               '(:tag ["skk" "skk-jisyo"]))
 
 ;; (cond
 ;;   ((file-directory-p (muki:user-emacs-directory "hoarder/ddskk"))
@@ -1436,9 +1436,9 @@
 (hoarder:fetch "redguardtoo/emacs.d")
 (hoarder:fetch "sachac/.emacs.d")
 (hoarder:fetch "sachac/sharing"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "sachac/sketched-books"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "serras/emacs-haskell-tutorial")
 (hoarder:fetch "supermomonga/dot-emacs")
 (hoarder:fetch "thierryvolpiatto/emacs-tv-config")
@@ -1477,7 +1477,7 @@
 (hoarder:fetch "lukaszkorecki/cult-leader"
                '(:recursive nil))
 (hoarder:fetch "ahmadseleem/ViMacs"
-               '(:tag ("evil" "dotifles")))
+               '(:tag ["evil" "dotifles"]))
 (hoarder:fetch "febuiles/dotemacs")
 (hoarder:fetch "git://orgmode.org/worg.git")
 (hoarder:fetch "roman/emacs.d")
@@ -1487,7 +1487,7 @@
 (hoarder:fetch "gbarta/evil-my-shims")
 (hoarder:fetch "novoid/Memacs")
 (hoarder:fetch "novoid/dot-emacs"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "terhechte/emacs.d")
 (hoarder:fetch "echosa/emacs.d")
 (hoarder:fetch "wataken44/dot.emacs.d2")
@@ -1506,13 +1506,13 @@
 (hoarder:fetch "emacs-tw/awesome-emacs")
 (hoarder:fetch "11111000000/emacs-d")
 (hoarder:fetch "Shougo/neobundle.vim"
-               '(:tag "vim" "plugin_manager"))
+               '(:tag ["vim" "plugin_manager"]))
 (hoarder:fetch "Shougo/vimshell.vim"
-               '(:tag ("vim" "shell")))
+               '(:tag ["vim" "shell"]))
 (hoarder:fetch "sunaku/vim-unbundle"
-               '(:tag ("vim" "plugin_manager")))
+               '(:tag ["vim" "plugin_manager"]))
 (hoarder:fetch "kamichidu/vim-hariti"
-               '(:tag ("vim" "plugin_manager")))
+               '(:tag ["vim" "plugin_manager"]))
 (hoarder:fetch "gmarik/Vundle.vim"
                '(:tag "vim"))
 (hoarder:fetch "guns/vim-sexp"
@@ -1520,108 +1520,108 @@
 (hoarder:fetch "tpope/vim-sexp-mappings-for-regular-people"
                '(:tag "vim"))
 (hoarder:fetch "kovisoft/paredit"
-               '(:tag ("vim" "paredit")))
+               '(:tag ["vim" "paredit"]))
 (hoarder:fetch "goldfeld/vim-seek"
-               '(:tag ("vim")))
+               '(:tag ["vim"]))
 (hoarder:fetch "justinmk/vim-sneak"
-               '(:tag ("vim")))
+               '(:tag ["vim"]))
 (hoarder:fetch "miripiruni/vimi"
-               '(:tag ("vim")))
+               '(:tag ["vim"]))
 (hoarder:fetch "junegunn/vim-plug"
-               '(:tag ("vim")))
+               '(:tag ["vim"]))
 (hoarder:fetch "bling/vim-airline"
-               '(:tag ("vim" "statusline")))
+               '(:tag ["vim" "statusline"]))
 (hoarder:fetch "itchyny/lightline.vim"
-               '(:tag("vim" "statusline")))
+               '(:tag["vim" "statusline"]))
 (hoarder:fetch "yuratomo/w3m.vim"
-               '(:tag ("vim" "browser" "web")))
+               '(:tag ["vim" "browser" "web"]))
 (hoarder:fetch "kovan/dopemacs")
 (hoarder:fetch "AshleyMoni/dotfiles"
-               '(:tag ( "evil" "dotfiles" )))
+               '(:tag ["evil" "dotfiles"]))
 (hoarder:fetch "EricGebhart/emacs-setup"
-               '(:tag ( "evil" "dotfiles" )))
+               '(:tag ["evil" "dotfiles"]))
 (hoarder:fetch "nadavspi/dotfiles"
-               '(:tag ( "evil" "dotfiles" )
+               '(:tag ["evil" "dotfiles"]
                  :recursive nil))
 (hoarder:fetch "gridaphobe/dotfiles"
-               '(:tag ("evil" "dotifles")))
+               '(:tag ["evil" "dotifles"]))
 (hoarder:fetch "farisnasution/.evil-pack"
-               '(:tag ("evil" "dotifles")))
+               '(:tag ["evil" "dotifles"]))
 (hoarder:fetch "takaishi/.emacs.d"
                '(:tag "dotfiles"))
 (hoarder:fetch "nanasess/dot.emacs")
 (hoarder:fetch "technomancy/better-defaults")
 (hoarder:fetch "chrismccord/dot_emacs"
-               '(:tag ("dotfiles" "evil")))
+               '(:tag ["dotfiles" "evil"]))
 (hoarder:fetch "thomasf/dotfiles-thomasf-emacs"
-               '(:tag ( "dotfiles" "evil" )))
+               '(:tag ["dotfiles" "evil"]))
 (hoarder:fetch "xcwen/site-lisp"
-               '(:tag ("evil")))
+               '(:tag ["evil"]))
 (hoarder:fetch "yangchenyun/emacs-prelude"
-               '(:tag ( "dotfiles" "evil" )))
+               '(:tag ["dotfiles" "evil"]))
 
 (hoarder:fetch "stumpwm/stumpwm"
-               '(:tag ("common_lisp" "stumpwm")))
+               '(:tag ["common_lisp" "stumpwm"]))
 (hoarder:fetch "stumpwm/stumpwm-contrib"
-               '(:tag ("common_lisp" "stumpwm")))
+               '(:tag ["common_lisp" "stumpwm"]))
 (hoarder:fetch "stumpwm/stumpwm.wiki"
-               '(:tag ("common_lisp" "stumpwm")))
+               '(:tag ["common_lisp" "stumpwm"]))
 (hoarder:fetch "deepfire/cl-org-mode"
-               '(:tag ("common_lisp" "org")))
+               '(:tag ["common_lisp" "org"]))
 (hoarder:fetch "Ramarren/cl-parser-combinators"
-               '(:tag ("common_lisp" "parser")))
+               '(:tag ["common_lisp" "parser"]))
 (hoarder:fetch "https://gitlab.common-lisp.net/alexandria/alexandria.git"
-               '(:tag ("common_lisp" )))
+               '(:tag ["common_lisp"]))
 (hoarder:fetch "robert-strandh/SICL"
-               '(:tag ("common_lisp" )))
+               '(:tag ["common_lisp"]))
 (hoarder:fetch "robert-strandh/Second-Climacs"
-               '(:tag ("common_lisp" "climacs" "clim" )))
+               '(:tag ["common_lisp" "climacs" "clim"]))
 (hoarder:fetch "robert-strandh/CLIMatis"
-               '(:tag ("common_lisp" "climacs" "clim" )))
+               '(:tag ["common_lisp" "climacs" "clim"]))
 (hoarder:fetch "edicl/cl-unicode"
-               '(:tag ("common_lisp" "unicode")))
+               '(:tag ["common_lisp" "unicode"]))
 (hoarder:fetch "edicl/cl-fad"
-               '(:tag ("common_lisp")))
+               '(:tag ["common_lisp"]))
 
 (hoarder:fetch "gabriel-laddel/masamune")
 (hoarder:fetch "Fanael/init.el"
                '(:tag "dotfiles"))
 (hoarder:fetch "deftsp/.emacs.d"
-               '(:tag ("dotfiles" "evil")))
+               '(:tag ["dotfiles" "evil"]))
 (hoarder:fetch "zhen-qin/.emacs.d"
-               '(:tag ("dotfiles" "evil")))
+               '(:tag ["dotfiles" "evil"]))
 (hoarder:fetch "LeifAndersen/Emacs")
 (hoarder:fetch "uwabami/emacs-config"
                '(:recursive nil))
 (hoarder:fetch "farseer90718/dotemacs")
 (hoarder:fetch "bixuanzju/emacs.d")
 (hoarder:fetch "mahinshaw/emacsd"
-               '(:tag ("evil")))
+               '(:tag ["evil"]))
 (hoarder:fetch "bosko/boem")
 (hoarder:fetch "jceb/vim-orgmode"
-               '(:tag ("vim" "org")))
+               '(:tag ["vim" "org"]))
 ;; (hoarder:fetch "borntorock/UI-toolkit-using-orgmode"
-;;               '(:tag ("org")))
+;;               '(:tag ["org"]))
 (hoarder:fetch "bodil/emacs.d")
 (hoarder:fetch "jixiuf/emacs_conf"
-               '(:tag ("evil")))
+               '(:tag ["evil"]))
 (hoarder:fetch "m00natic/dot-emacs")
 (hoarder:fetch "holguinj/evil-clojure-emacs"
-               '(:tag ("evil" "clojure")))
+               '(:tag ["evil" "clojure"]))
 (hoarder:fetch "rolandwalker/emacs-travis"
-               '(:tag ("travis")))
+               '(:tag ["travis"]))
 (hoarder:fetch "wcsmith/dotemacs"
-               '(:tag ("evil")))
+               '(:tag ["evil"]))
 (hoarder:fetch "takaxp/emacs.d")
 (hoarder:fetch "senny/cabbage"
                '(:recursive nil))
 
 (hoarder:fetch "avendael/dotemacs"
-               '(:tag ("evil")))
+               '(:tag ["evil"]))
 (hoarder:fetch "VincentToups/emacs-utils")
 (hoarder:fetch "bamos/dotfiles")
 (hoarder:fetch "bradyt/basic-computing-notes"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "Fuco1/.emacs.d")
 (hoarder:fetch "nlamirault/scame")
 (hoarder:fetch "dtan4/dot.emacs.d")
@@ -1632,18 +1632,18 @@
 (hoarder:fetch "Bruce-Connor/emacs-online-documentation")
 (hoarder:fetch "unbalancedparentheses/lunfardo")
 (hoarder:fetch "emacsimize/org-admin"
-               '(:tag ("org" "server")))
+               '(:tag ["org" "server"]))
 (hoarder:fetch "garaud/foggycowinn")
 (hoarder:fetch "ardumont/org"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "TheBB/dotfiles"
-               '(:tag ("evil" "org")
+               '(:tag ["evil" "org"]
                  :desc "https://github.com/TheBB/dotfiles/blob/master/emacs/init.el#L841-975"
                  :recursive nil))
 (hoarder:fetch "grettke/home"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "lunaryorn/.emacs.d"
-               '(:tag ("smartparens")))
+               '(:tag ["smartparens"]))
 (hoarder:fetch "fgallina/dotemacs")
 (hoarder:fetch "ghoseb/dotemacs")
 (hoarder:fetch "meteor1113/dotemacs")
@@ -1655,283 +1655,283 @@
 (hoarder:fetch "wasamasa/dotemacs")
 (hoarder:fetch "hlissner/emacs.d")
 (hoarder:fetch "fniessen/orgmk"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "fniessen/org-macros"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "fniessen/refcard-org-babel"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "https://gitorious.org/org-cook/org-cook.git"
-               '(:tag ("org" "cooking")))
+               '(:tag ["org" "cooking"]))
 (hoarder:fetch "https://gitorious.org/org-brew/org-brew.git"
-               '(:tag ("org" "brewing")))
+               '(:tag ["org" "brewing"]))
 (hoarder:fetch "krisajenkins/EvilBegins"
-               '(:tag ("evil")))
+               '(:tag ["evil"]))
 (hoarder:fetch "bzg/org-mode-rr"
-               '(:tag ("org" "reproducible_research")))
+               '(:tag ["org" "reproducible_research"]))
 (hoarder:fetch "jkitchin/jmax"
-               '(:tag ("org")
+               '(:tag ["org"]
                  :recursive nil))
 (hoarder:fetch "ihodes/emacs.org"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "tsu-nera/dotfiles"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "roman/birdseye.el"
-               '(:tag ("configuration")))
+               '(:tag ["configuration"]))
 (hoarder:fetch "tonini/owl.el"
-               '(:tag ("documentation")))
+               '(:tag ["documentation"]))
 (hoarder:fetch "JarrodCTaylor/monster"
-               '(:tag ("evil")))
+               '(:tag ["evil"]))
 (hoarder:fetch "git://git.code.sf.net/p/cedet/git"
                '(:name "cedet"
-                 :tag ("eieio" "cedet")))
+                 :tag ["eieio" "cedet"]))
 (hoarder:fetch "scymtym/rudel"
-               '(:tag ("eieio")))
+               '(:tag ["eieio"]))
 (hoarder:fetch "scymtym/moped"
-               '(:tag ("clos" "eieio")))
+               '(:tag ["clos" "eieio"]))
 (hoarder:fetch "scymtym/zencoding")
 (hoarder:fetch "kiwanami/emacs-elroutine"
-               '(:tag ("process")))
+               '(:tag ["process"]))
 (hoarder:fetch "holtzermann17/metaca"
-               '(:tag ("automata")))
+               '(:tag ["automata"]))
 (hoarder:fetch "Prismatic/plumbing"
                '(:tag "clojure"))
 (hoarder:fetch "jkitchin/org-ref"
-               '(:tag ("org" "bibtex")))
+               '(:tag ["org" "bibtex"]))
 (hoarder:fetch "emacsmirror/eoops"
-               '(:tag ("oop")))
+               '(:tag ["oop"]))
 (hoarder:fetch "WildCarrot/OrgThings"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "kiwanami/emacs-widget-mvc"
-               '(:tug ("widget" "gui")))
+               '(:tag ["widget" "gui"]))
 (hoarder:fetch "vapniks/org-dotemacs"
-               '(:tag ("org" "configuration")))
+               '(:tag ["org" "configuration"]))
 ;; (hoarder:fetch "ellerh/xref")
 (hoarder:fetch "kelvinh/org-page"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "abedra/emacs.d")
 (hoarder:fetch "emacsmirror/xclip"
                '(:tag "clipboard"))
 ;;(hoarder:fetch "emacsmirror/uni-confusables"
 ;;              '(:tag "unicode"))
 (hoarder:fetch "funcool/cats"
-               '(:tag ("clojure" "monad")))
+               '(:tag ["clojure" "monad"]))
 (hoarder:fetch "jonnay/emagicians-starter-kit"
-               '(:tag ("org" "configuration")))
+               '(:tag ["org" "configuration"]))
 (hoarder:fetch "julfy/scopid")
 (hoarder:fetch "holomorph/transmission"
-               '(:tag ("transmisson")))
+               '(:tag ["transmisson"]))
 (hoarder:fetch "tromey/emacs-module"
-               '(:tag ("module")))
+               '(:tag ["module"]))
 (hoarder:fetch "vikasrawal/orgpaper"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "shellhead/org-docs"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "tuhdo/emacs-c-ide-demo")
 (hoarder:fetch "tkf/emacs-ipython-notebook"
-               '(:tag ("python")
+               '(:tag ["python"]
                  :recursive nil))
 (hoarder:fetch "ryzzn/sydi-site"
-               '(:tag ("org" "html")))
+               '(:tag ["org" "html"]))
 (hoarder:fetch "tonini/emacs.d")
 (hoarder:fetch "Lindydancer/e2ansi"
-               '(:tag ("terminal" "escape_sequence")
+               '(:tag ["terminal" "escape_sequence"]
                  :desc "Syntax highlighting support for terminals, powered by Emacs"))
 (hoarder:fetch "mlf176f2/EmacsMate")
 (hoarder:fetch "https://gitlab.com/emacs-stuff/fasd-shell.git"
-               '(:tag ("fasd" "shell" "ido")
+               '(:tag ["fasd" "shell" "ido"]
                  :desc "Use ido completion for the fasd utility in an emacs shell."))
 (hoarder:fetch "coldnew/eshell-autojump"
-               '(:tag ("eshell" "autojump")))
+               '(:tag ["eshell" "autojump"]))
 (hoarder:fetch "impaktor/unison-mode"
-               '(:tag ("unison")))
+               '(:tag ["unison"]))
 (hoarder:fetch "Sodaware/beeminder.el"
-               '(:tag ("beeminder" "org")))
+               '(:tag ["beeminder" "org"]))
 (hoarder:fetch "skwp/dotfiles"
-               '(:tag ("tmux" "vim" "zsh")))
+               '(:tag ["tmux" "vim" "zsh"]))
 (hoarder:fetch "git://git.savannah.gnu.org/guix.git"
-               '(:tag ("guix" "package_manager")
+               '(:tag ["guix" "package_manager"]
                  :site "http://www.gnu.org/software/guix/"
                  :desc "This is Guix! Purely functional package manager for GNU, and distribution of the GNU system."))
 (hoarder:fetch "yuratomo/w3m.vim"
-               '(:tag ("vim" "w3m")))
+               '(:tag ["vim" "w3m"]))
 
 (hoarder:fetch "flexibeast/ewmctrl"
-               '(:tag ("wmctrl")))
+               '(:tag ["wmctrl"]))
 (hoarder:fetch "abo-abo/org-fu"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "tumashu/chinese-fonts-setup"
-               '(tag ("chinese" "font")))
+               '(:tag ["chinese" "font"]))
 (hoarder:fetch "aoksh/weblauncher"
-               '(:tag ("web" "bookmark")))
+               '(:tag ["web" "bookmark"]))
 ;; repository not working
 ;; (hoarder:fetch "git://git01.fort.kickass.systems/fsem.git"
-;;               '(:tag ("org")
+;;               '(:tag ["org"]
 ;;                 :site "http://doc.rix.si/org/fsem.html"))
 (hoarder:fetch "emacsmirror/windows"
-               '(:tag ("window_management")
+               '(:tag ["window_management"]
                  :desc "Window manager for GNU Emacs."))
 (hoarder:fetch "emacsmirror/mpg123"
-               '(:tag ("mpg123")))
+               '(:tag ["mpg123"]))
 (hoarder:fetch "thartman83/org-filer"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "chrisdone/elisp-guide"
-               '(:tag ("elisp" "programming" "guide")))
+               '(:tag ["elisp" "programming" "guide"]))
 (hoarder:fetch "baohaojun/system-config"
-               '(:tag ("chinese" "font")))
+               '(:tag ["chinese" "font"]))
 (hoarder:fetch "emacsmirror/swbuff-x"
-               '(:tag ("buffer")))
+               '(:tag ["buffer"]))
 (hoarder:fetch "alezost/emacs-utils"
-               '(:tag ("utility")))
+               '(:tag ["utility"]))
 (hoarder:fetch "defaultxr/tracker.el"
-               '(:tag ("osc" "music" "tracker")))
+               '(:tag ["osc" "music" "tracker"]))
 (hoarder:fetch "steckerhalter/steckemacs.el"
-               '(:tag ("configuration" "quelpa")))
+               '(:tag ["configuration" "quelpa"]))
 (hoarder:fetch "DamienCassou/unify-opening"
                '(:desc "Emacs package to make everything use the same mechanism to open files"))
 (hoarder:fetch "steckerhalter/steckemacs"
-               '(:tag ("org" "org-babel")))
+               '(:tag ["org" "org-babel"]))
 (hoarder:fetch "atykhonov/dtc.el")
 (hoarder:fetch "hillgreen012/xinix"
-               '(:tag ("configuration")))
+               '(:tag ["configuration"]))
 (hoarder:fetch "nsaeki/dotemacs")
 (hoarder:fetch "lambdasakura/emacs")
 (hoarder:fetch "julienchastang/dotemacs"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "howardabrams/dot-files"
-               '(:tag ("org" "emacs" "configuration")))
+               '(:tag ["org" "emacs" "configuration"]))
 (hoarder:fetch "howardabrams/demo-it"
-               '(:tag ("org" "presentation")))
+               '(:tag ["org" "presentation"]))
 (hoarder:fetch "ikame/dotfiles"
-               '(:tag ("org" "conkeror")))
+               '(:tag ["org" "conkeror"]))
 (hoarder:fetch "kuanyui/.emacs.d")
 (hoarder:fetch "emacsmirror/disptime")
 (hoarder:fetch "xahlee/xah_emacs_init")
 (hoarder:fetch "lisp/de.setf.utility"
-               '(:tag ("common_lisp")))
+               '(:tag ["common_lisp"]))
 (hoarder:fetch "tarao/el-get-cli"
-               '(:tag ("el-get" "cli")))
+               '(:tag ["el-get" "cli"]))
 (hoarder:fetch "coldasparagus/face-schemes"
-               '(:tag ("face" "font")))
+               '(:tag ["face" "font"]))
 (hoarder:fetch "kiwanami/emacs-anything-books"
-               '(:tag ("anything" "book")))
+               '(:tag ["anything" "book"]))
 (hoarder:fetch "sbcl/specializable"
-               '(:tag ("common_lisp" "clos")))
+               '(:tag ["common_lisp" "clos"]))
 (hoarder:fetch "jave/xwidget-aux"
-               '(:tag ("xwidget")))
+               '(:tag ["xwidget"]))
 (hoarder:fetch "tomoyuki28jp/stumpwm"
-               '(:tag ("stumpwm")))
+               '(:tag ["stumpwm"]))
 (hoarder:fetch "joelagnel/stumpwm-goodies"
-               '(:tag ("stumpwm")))
+               '(:tag ["stumpwm"]))
 (hoarder:fetch "eggcaker/pelm"
-               '(:tag ("org")))
+               '(:tag ["org"]))
 (hoarder:fetch "bodil/ohai-emacs")
 (hoarder:fetch "jwiegley/dot-emacs")
 (hoarder:fetch "expez/.emacs.d")
 (hoarder:fetch "fjyuu/dotfiles")
 (hoarder:fetch "wasamasa/xbm-life")
 (hoarder:fetch "bodil/microkanrens"
-               '(:tag ("logic" "kanren")))
+               '(:tag ["logic" "kanren"]))
 (hoarder:fetch "emacs-pe/cookiecutter-emacs"
-               '(:tag ("cookiecutter" "template")))
+               '(:tag ["cookiecutter" "template"]))
 (hoarder:fetch "edrx/eev"
                '(:site "http://angg.twu.net/#eev"))
 (hoarder:fetch "laynor/smotitah"
-               '(:tag ("configuration")))
+               '(:tag ["configuration"]))
 (hoarder:fetch "snosov1/dot-emacs")
 (hoarder:fetch "pierre-lecocq/emacs.d")
 (hoarder:fetch "meteor1113/dotemacs")
 (hoarder:fetch "jeffgran/elscreen-bg"
                '(:desc "defadvice"))
 (hoarder:fetch "Idorobots/mode-line-stats"
-               '(:tag ("mode-line")))
+               '(:tag ["mode-line"]))
 (hoarder:fetch "dz/dotfiles")
 (hoarder:fetch "git://gist.github.com/5264829.git"
-               '(:tag ("emms" "sabof" "gist")))
+               '(:tag ["emms" "sabof" "gist"]))
 (hoarder:fetch "NightBlues/deploy-framework"
-               '(:tag ("deploy")
+               '(:tag ["deploy"]
                  :dependency ("sviridov/undercover.el")))
 (hoarder:fetch "https://bitbucket.org/hoangtu/.emacs.d.git")
 (hoarder:fetch "wiedzmin/stumpwm-config"
-               '(:tag ("stumpwm")))
+               '(:tag ["stumpwm"]))
 (hoarder:fetch "abo-abo/oremacs"
-               '(:tag ("configuration" "org" "lispy" "hydra")))
+               '(:tag ["configuration" "org" "lispy" "hydra"]))
 (hoarder:fetch "inlinestyle/lifted.el")
 (hoarder:fetch "luxbock/spacemacs-luxbock"
-               '(:tag ("spacemacs" "evil" "evil-cleverparens")))
+               '(:tag ["spacemacs" "evil" "evil-cleverparens"]))
 (hoarder:fetch "emacsmirror/minibuffer-line"
-               '(:tag ("minibuffer" "timer")))
+               '(:tag ["minibuffer" "timer"]))
 (hoarder:fetch "uwabami/el-get-deb-package"
-               '(:tag ("el-get" "debian")))
+               '(:tag ["el-get" "debian"]))
 (hoarder:fetch "dfeich/org-babel-examples"
-               '(:tag ("org" "org-babel" )))
+               '(:tag ["org" "org-babel"]))
 (hoarder:fetch "renard/o-blog"
-               '(:tag ("org" "blog")))
+               '(:tag ["org" "blog"]))
 (hoarder:fetch "tuhdo/tuhdo.github.io"
-               '(:tag ("org" "emacs-tutor")))
+               '(:tag ["org" "emacs-tutor"]))
 (hoarder:fetch "olewhalehunter/kommissar"
-               '(:tag ("common_lisp" "browser" "mozrepl")))
+               '(:tag ["common_lisp" "browser" "mozrepl"]))
 (hoarder:fetch "caiorss/Emacs-Elisp-Programming"
-               '(:tag ("elisp" "guilde" "programming")))
+               '(:tag ["elisp" "guilde" "programming"]))
 (hoarder:fetch "weavejester/medley"
-               '(:tag ("clojure" "map" "utility")))
+               '(:tag ["clojure" "map" "utility"]))
 (hoarder:fetch "bbatsov/clojure-style-guide"
-               '(:tag ("clojure" "style_guide")))
+               '(:tag ["clojure" "style_guide"]))
 (hoarder:fetch "flatland/useful"
-               '(:tag ("clojure" "utility")))
+               '(:tag ["clojure" "utility"]))
 (hoarder:fetch "prismatic/plumbing"
-               '(:tag ("clojure" "utility")))
+               '(:tag ["clojure" "utility"]))
 (hoarder:fetch "marick/suchwow"
-               '(:tag ("clojure" "utility")))
+               '(:tag ["clojure" "utility"]))
 (hoarder:fetch "aphyr/merkle"
-               '(:tag ("clojure" "map" "tree")))
+               '(:tag ["clojure" "map" "tree"]))
 (hoarder:fetch "zweifisch/enlive"
-               '(:tag ("html" "dom" "xpath")))
+               '(:tag ["html" "dom" "xpath"]))
 (hoarder:fetch "hyPiRion/fairbrook"
-               '(:tag ("clojure" "map" "utility")))
+               '(:tag ["clojure" "map" "utility"]))
 (hoarder:fetch "mthom/shen-minikanren"
-               '(:tag ("shen" "logic" "kanren")))
+               '(:tag ["shen" "logic" "kanren"]))
 (hoarder:fetch "dakrone/cheshire"
-               '(:tag ("clojure" "json")))
+               '(:tag ["clojure" "json"]))
 (hoarder:fetch "razum2um/awesome-clojure"
-               '(:tag ("awesome_list" "clojure" )))
+               '(:tag ["awesome_list" "clojure"]))
 (hoarder:fetch "pogin503/emacs-test-sample"
-               '(:tag ("test" "ert" "development" "elisp")))
+               '(:tag ["test" "ert" "development" "elisp"]))
 (hoarder:fetch "boxed/instar"
-               '(:tag ("clojure" "map" "utility")))
+               '(:tag ["clojure" "map" "utility"]))
 (hoarder:fetch "hick/emacs-chinese"
-               '(:tag ("chinese")))
+               '(:tag ["chinese"]))
 (hoarder:fetch "elimik31/geohashing_el"
-               '(:tag ("geohashing")))
+               '(:tag ["geohashing"]))
 (hoarder:fetch "nathanmarz/specter"
-               '(:tag ("clojure" "map" "utility")))
+               '(:tag ["clojure" "map" "utility"]))
 (hoarder:fetch "mattduck/generic-css"
-               '(:tag ("css" "html" "org")))
+               '(:tag ["css" "html" "org"]))
 (hoarder:fetch "capitaomorte/holy"
-               '(:tag ("sly" "common_lisp" "emacs" "configuration" "stumpwm")))
+               '(:tag ["sly" "common_lisp" "emacs" "configuration" "stumpwm"]))
 (hoarder:fetch "emacsmirror/shop"
-               '(:tag ("todo" "shop_list")))
+               '(:tag ["todo" "shop_list"]))
 (hoarder:fetch "eschulte/org-scraps"
-               '(:tag ("org" "snippets")
+               '(:tag ["org" "snippets"]
                  :site "http://eschulte.github.com/org-scraps/"
                  :desc "Collection of Org-mode snippets"))
 (hoarder:fetch "ptaoussanis/encore"
-               '(:tag ("clojure" "utility")))
+               '(:tag ["clojure" "utility"]))
 (hoarder:fetch "jneen/variants-slides"
-               '(:tag ("clojure" "variants" "elixir")))
+               '(:tag ["clojure" "variants" "elixir"]))
 (hoarder:fetch "supermomonga/darui.io"
-               '(:tag ("elnode" "blog" "org" "web" "docker")))
+               '(:tag ["elnode" "blog" "org" "web" "docker"]))
 (hoarder:fetch "ctford/traversy"
-               '(:tag ("clojure")))
+               '(:tag ["clojure"]))
 (hoarder:fetch "tallesl/Rich-Hickey-fanclub"
-               '(:tag ("clojure" "video" "youtube" "rich hickey")))
+               '(:tag ["clojure" "video" "youtube" "rich hickey"]))
 (hoarder:fetch "https://gitlab.com/com-informatimago/com-informatimago.git"
-               '(:tag ("common-lisp")))
+               '(:tag ["common-lisp"]))
 (hoarder:fetch "git://git.savannah.gnu.org/emacs/elpa.git"
-               '(:tag ("elpa" "gnu" "emacs")))
+               '(:tag ["elpa" "gnu" "emacs"]))
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;; (hoarder:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
-;; '(:tag ("common_lisp")
+;; '(:tag ["common_lisp"]
 ;; :type hg))
 
 
