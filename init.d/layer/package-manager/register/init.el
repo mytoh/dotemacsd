@@ -69,25 +69,25 @@
                   '(:dependency ["rejeep/f.el"
                                  "magnars/s.el"
                                  ( "emacs-helm/helm"
-                                  (:build ("gmake")
+                                  (:build ["gmake"]
                                           :dependency ["jwiegley/emacs-async"]
                                           :tag "helm"))]))
 (hoarder:register "pronobis/helm-words"
                   '(:dependency [( "emacs-helm/helm"
-                                  (:build ("gmake")
+                                  (:build ["gmake"]
                                           :dependency ["jwiegley/emacs-async"]
                                           :tag "helm"))]
                     :tag ["helm" "dictionary"]))
 (hoarder:register "emacs-helm/helm-orgcard"
                   '(:tag ["helm" "org"]
                     :dependency [( "emacs-helm/helm"
-                                  (:build ("gmake")
+                                  (:build ["gmake"]
                                           :dependency ["jwiegley/emacs-async"]
                                           :tag "helm"))]))
 (hoarder:register "lins05/helm-org-files"
                   '(:tag ["helm" "org"]
                     :dependency [( "emacs-helm/helm"
-                                  (:build ("gmake")
+                                  (:build ["gmake"]
                                           :dependency ["jwiegley/emacs-async"]
                                           :tag "helm"))]))
 (hoarder:register "abo-abo/helm-org-wiki"
@@ -183,7 +183,7 @@
 (hoarder:register "davexunit/yon-chan")
 (hoarder:register "git://git.sv.gnu.org/emms.git"
                   '(:name "emms" :load-path "lisp"
-                    :build ("gmake lisp docs emms-print-metadata")
+                    :build ["gmake lisp docs emms-print-metadata"]
                     :tag "emms"))
 (hoarder:register "fgallina/emms-info-mediainfo"
                   '(:tag "emms"))
@@ -207,7 +207,7 @@
 (hoarder:register "magit/git-modes"
                   '(:tag "git"))
 (hoarder:register "magit/magit"
-                  '(:build ("gmake clean lisp docs")
+                  '(:build ["gmake clean lisp docs"]
                     :info "Documentation"
                     :load-path ("lisp")
                     :dependency [("magnars/dash.el" ( :compile nil))
@@ -267,7 +267,7 @@
                   '(:tag ["evil" "anzu"]
                     :dependency [("syohex/emacs-anzu" (:compile nil))
                                  ( "https://gitorious.org/evil/evil.git"
-                                  (:build ("gmake doc all")
+                                  (:build ["gmake doc all"]
                                           :info "doc"
                                           :dependency ["emacsmirror/goto-chg"
                                                        "http://www.dr-qubit.org/git/undo-tree.git"]
@@ -281,7 +281,7 @@
 (hoarder:register "haskell/haskell-mode"
                   '(:tag "haskell"
                     :compile nil
-                    :build ("gmake clean all")))
+                    :build ["gmake clean all"]))
 (hoarder:register "nilcons/hi2"
                   '(:tag "haskell"))
 (hoarder:register "kazu-yamamoto/ghc-mod"
@@ -357,7 +357,7 @@
 (hoarder:register "escherdragon/sunrise-commander"
                   '(:compile nil))
 ;; (hoarder:register "http://git.gnus.org/gnus.git"
-;;                  '(:build ("./configure" "gmake")
+;;                  '(:build ["./configure" "gmake"]
 ;;                    :load-path ("lisp" "contrib")))
 (hoarder:register "dholm/tabbar")
 ;; (hoarder:register "aki2o/guide-key-tip"
@@ -379,7 +379,7 @@
 (hoarder:register "jschaf/emacs-lorem-ipsum")
 (hoarder:register "remyferre/comment-dwim-2")
 (hoarder:register "capitaomorte/sly"
-                  '(:build ("gmake compile contrib-compile")))
+                  '(:build ["gmake compile contrib-compile"]))
 (hoarder:register "capitaomorte/sly-company"
                   '(:tag ["common_lisp" "completion" "company" "sly"]))
 (hoarder:register "PuercoPop/sly-repl-ansi-color"
@@ -414,7 +414,7 @@
 (hoarder:register "sabof/svg-mode-line-themes"
                   '(:dependency ["philjackson/xmlgen"]))
 (hoarder:register "naota/navi2ch"
-                  '(:build ("./configure" "gmake")))
+                  '(:build ["./configure" "gmake"]))
 (hoarder:register "purcell/elisp-slime-nav")
 (hoarder:register "gcr/tumblesocks"
                   '(:dependency ["psanford/emacs-oauth"
@@ -491,7 +491,7 @@
                   '(:tag ["scheme" "srfi"]))
 (hoarder:register "nicferrier/eshell-manual"
                   '(:load-path ("dist")
-                    :build ("gmake")
+                    :build ["gmake"]
                     :info "dist"
                     :tag "eshell"))
 (hoarder:register "jschaf/esup")
@@ -517,7 +517,7 @@
                     :load-path ("lisp")))
 (hoarder:register "jacksonrayhamilton/context-coloring"
                   '(:tag ["javascript"]
-                    :build ("npm install")))
+                    :build ["npm install"]))
 (hoarder:register "emacsattic/spaces")
 (hoarder:register "jeremy-compostella/project-manager"
                   '(:tag ["project"]))
@@ -544,7 +544,7 @@
                   '(:compile nil))
 (hoarder:register "sabof/stripe-buffer")
 (hoarder:register "chrisbarrett/skeletor.el"
-                  '(:build ("gmake")))
+                  '(:build ["gmake"]))
 (hoarder:register "promethial/paxedit"
                   '(:dependency ["http://mumble.net/~campbell/git/paredit.git"]))
 (hoarder:register "tlh/workgroups.el"
@@ -750,7 +750,7 @@
                   '(:tag ["system" "monitor"]))
 (hoarder:register "wanderlust/wanderlust"
                   '(:tag ["mail"]
-                    :build ("gmake")
+                    :build ["gmake"]
                     :dependency ["wanderlust/flim"
                                  "wanderlust/semi"
                                  "wanderlust/apel"]))
@@ -770,7 +770,7 @@
                   '(:tag ["window" "layout"]))
 (hoarder:register "git://git.savannah.gnu.org/tramp.git"
                   '(:tag ["tramp" "ssh"]
-                    :build ("autoconf" "./configure" "gmake")
+                    :build ["autoconf" "./configure" "gmake"]
                     :load-path ("lisp")
                     :info "info"))
 (hoarder:register "ataka/emacs-wget"
@@ -793,7 +793,7 @@
                                  ( "git://orgmode.org/org-mode.git"
                                   (:load-path ("lisp" "contrib/lisp")
                                               :compile nil
-                                              :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
+                                              :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
                                               :info "doc"
                                               :tag "org"))]))
 (hoarder:register "danielsz/Palimpsest")
@@ -1041,7 +1041,7 @@
 ;; TODO nede mercurial support
 (hoarder:register (expand-file-name "bitbucket.org/lyro/evil"
                                     (locate-user-emacs-file "hoarder"))
-                  '(:build ("gmake doc all")
+                  '(:build ["gmake doc all"]
                     :info "doc"
                     :dependency ["emacsmirror/goto-chg"
                                  "http://www.dr-qubit.org/git/undo-tree.git"]
@@ -1108,7 +1108,7 @@
 (hoarder:register "hlissner/evil-snipe"
                   '(:tag "evil"
                     :dependency [( "https://gitorious.org/evil/evil.git"
-                                  (:build ("gmake doc all")
+                                  (:build ["gmake doc all"]
                                           :info "doc"
                                           :dependency ["emacsmirror/goto-chg"
                                                        "http://www.dr-qubit.org/git/undo-tree.git"]
@@ -1155,7 +1155,7 @@
 (hoarder:register "git://orgmode.org/org-mode.git"
                   '(:load-path ("lisp" "contrib/lisp")
                     :compile nil
-                    :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
+                    :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
                     :info "doc"
                     :tag "org"))
 (hoarder:register "tj64/org-hlc")
@@ -1179,7 +1179,7 @@
                   '(:dependency [("git://orgmode.org/org-mode.git"
                                   (:load-path ("lisp" "contrib/lisp")
                                               :compile nil
-                                              :build ("gmake cleanall" "gmake" "gmake autoloads" "gmake doc")
+                                              :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
                                               :info "doc"
                                               :tag "org"))]))
 (hoarder:register "kawabata/ox-pandoc"
@@ -1406,18 +1406,18 @@
 
 ;;;;;; skk
 (hoarder:register "skk-dev/ddskk"
-                  '(:build ("gmake clean elc info")
+                  '(:build ["gmake clean elc info"]
                     :info "doc"
                     :load-path ("." "experimental")))
 (hoarder:fetch "skk-dev/skktools"
-               '(:build ("./configure" "gmake clean" "gmake")))
+               '(:build ["./configure" "gmake clean" "gmake"]))
 (hoarder:fetch "tkita/SKK-JISYO"
                '(:tag ["skk" "skk-jisyo"]))
 
 ;; (cond
 ;;   ((file-directory-p (muki:user-emacs-directory "hoarder/ddskk"))
 ;;    (hoarder:register-local (muki:user-emacs-directory "hoarder/ddskk")
-;;                           '(:build ("gmake elc info")
+;;                           '(:build ["gmake elc info"]
 ;;                             :info "info")))
 ;;   ((file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
 ;;    (hoarder:register-local "/usr/local/share/emacs/24.3/site-lisp/skk")))
