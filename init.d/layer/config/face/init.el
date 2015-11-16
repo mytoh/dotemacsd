@@ -16,13 +16,25 @@
          (setq solarized-degrade t)
          (setq solarized-termcolors 256)
          (defvar monokai-add-font-lock-keywords t)
-         (load-theme muki:term-theme 'no-confirm))))
+         (load-theme muki:term-theme 'no-confirm)))
+  ;; (load-theme 'graphene 'no-confirm)
+  )
 (add-hook 'emacs-startup-hook #'muki:load-theme)
 ;;(add-to-list 'before-make-frame-hook #'muki:load-theme)
 
 ;;;; cursor shape
 (cl-pushnew '(cursor-type . box) default-frame-alist)
 (set-cursor-color (muki:colour-hsl-to-hex 127 55 39))
+
+;;;; disable bold face
+;;;;; [[http://stackoverflow.com/questions/2064904/how-to-disable-bold-font-weight-globally-in-emacs]]
+(set-face-bold-p 'bold nil)
+(cl-defun muki:disable-bold-face ()
+  (mapc
+   (lambda (face)
+     (set-face-attribute face nil :weight 'normal :underline nil))
+   (face-list)))
+(add-hook 'after-init-hook #'muki:disable-bold-face)
 
 ;;;; terminal colors
 ;; (set-face-attribute 'term-color-red nil :foreground "#d55e00")
