@@ -209,7 +209,7 @@
 (hoarder:register "magit/magit"
                   '(:build ["gmake clean lisp docs"]
                     :info "Documentation"
-                    :load-path ("lisp")
+                    :load-path ["lisp"]
                     :dependency [("magnars/dash.el" ( :compile nil))
                                  ("jwiegley/emacs-async")]
                     :tag "git"))
@@ -358,7 +358,7 @@
                   '(:compile nil))
 ;; (hoarder:register "http://git.gnus.org/gnus.git"
 ;;                  '(:build ["./configure" "gmake"]
-;;                    :load-path ("lisp" "contrib")))
+;;                    :load-path ["lisp" "contrib"]))
 (hoarder:register "dholm/tabbar")
 ;; (hoarder:register "aki2o/guide-key-tip"
 ;;                 '(:dependency ["kbkbkbkb1/guide-key"
@@ -490,7 +490,7 @@
 (hoarder:register "kenoss/erfi"
                   '(:tag ["scheme" "srfi"]))
 (hoarder:register "nicferrier/eshell-manual"
-                  '(:load-path ("dist")
+                  '(:load-path ["dist"]
                     :build ["gmake"]
                     :info "dist"
                     :tag "eshell"))
@@ -514,7 +514,7 @@
                   '(:tag ["hackernews"]))
 (hoarder:register "kkholst/SuperMan"
                   '(:tag ["org"]
-                    :load-path ("lisp")))
+                    :load-path ["lisp"]))
 (hoarder:register "jacksonrayhamilton/context-coloring"
                   '(:tag ["javascript"]
                     :build ["npm install"]))
@@ -771,7 +771,7 @@
 (hoarder:register "git://git.savannah.gnu.org/tramp.git"
                   '(:tag ["tramp" "ssh"]
                     :build ["autoconf" "./configure" "gmake"]
-                    :load-path ("lisp")
+                    :load-path ["lisp"]
                     :info "info"))
 (hoarder:register "ataka/emacs-wget"
                   '(:tag ["wget"]))
@@ -791,7 +791,7 @@
 (hoarder:register "kljohann/mpv.el"
                   '(:dependency ["Bruce-Connor/names"
                                  ( "git://orgmode.org/org-mode.git"
-                                  (:load-path ("lisp" "contrib/lisp")
+                                  (:load-path ["lisp" "contrib/lisp"]
                                               :compile nil
                                               :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
                                               :info "doc"
@@ -1153,7 +1153,7 @@
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
-                  '(:load-path ("lisp" "contrib/lisp")
+                  '(:load-path ["lisp" "contrib/lisp"]
                     :compile nil
                     :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
                     :info "doc"
@@ -1177,7 +1177,7 @@
                   '(:compile nil :tag "org"))
 (hoarder:register "rlister/org-present"
                   '(:dependency [("git://orgmode.org/org-mode.git"
-                                  (:load-path ("lisp" "contrib/lisp")
+                                  (:load-path ["lisp" "contrib/lisp"]
                                               :compile nil
                                               :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
                                               :info "doc"
@@ -1408,7 +1408,7 @@
 (hoarder:register "skk-dev/ddskk"
                   '(:build ["gmake clean elc info"]
                     :info "doc"
-                    :load-path ("." "experimental")))
+                    :load-path ["." "experimental"]))
 (hoarder:fetch "skk-dev/skktools"
                '(:build ["./configure" "gmake clean" "gmake"]))
 (hoarder:fetch "tkita/SKK-JISYO"
