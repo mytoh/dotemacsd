@@ -38,6 +38,8 @@
 (hoarder:register "syohex/emacs-helm-open-github"
                   '(:tag ["helm" "github"]
                     :dependency ("sigma/gh.el")))
+                                  (:dependency ["sigma/logito"
+                                                "sigma/pcache"]))]))
 (hoarder:register "istib/helm-mode-manager"
                   '(:tag ["helm"]))
 (hoarder:register "tkf/emacs-pinot-search"
