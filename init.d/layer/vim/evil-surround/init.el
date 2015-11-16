@@ -4,14 +4,19 @@
 
 (cl-defun muki:init-evil-surround ()
   (req 'evil-surround
-    (enable-mode global-evil-surround-mode)
+    (hook 'emacs-lisp-mode-hook #'evil-surround-mode)
+    (hook 'org-mode-hook #'evil-surround-mode)
     (cl-defun muki:evil-surround-replace-pairs (new old)
       (set-option evil-surround-pairs-alist
                   (cl-subst new old evil-surround-pairs-alist
                             :test 'cl-equalp)))
-    (muki:evil-surround-replace-pairs '(?\( . ("(" . ")")) '(?\( . ("( " . " )")))
-    (muki:evil-surround-replace-pairs '(?\) . ("(" . ")")) '(?\) . ("( " . " )")))
-    (muki:evil-surround-replace-pairs '(?\[ . ("[" . "]")) '(?\[ . ("[ " . " ]")))
-    (muki:evil-surround-replace-pairs '(?\] . ("[" . "]")) '(?\] . ("[ " . " ]")))))
+    (cl-defun muki:evil-surround-replace-all-pairs ()
+      (muki:evil-surround-replace-pairs '(?\( . ("(" . ")")) '(?\( . ("( " . " )")))
+      (muki:evil-surround-replace-pairs '(?\) . ("(" . ")")) '(?\) . ("( " . " )")))
+      (muki:evil-surround-replace-pairs '(?\[ . ("[" . "]")) '(?\[ . ("[ " . " ]")))
+      (muki:evil-surround-replace-pairs '(?\] . ("[" . "]")) '(?\] . ("[ " . " ]"))))
+    (hook 'emacs-lisp-mode-hook #'muki:evil-surround-replace-all-pairs)
+    (hook 'org-mode-hook #'muki:evil-surround-replace-all-pairs)
+    ))
 
 ;;; surround.el ends here
