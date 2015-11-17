@@ -41,6 +41,7 @@
     org-bullets
     ox-pandoc
     org-hlc
+    ob-browser
     ))
 
 (muki-layer:load-layers 'package
