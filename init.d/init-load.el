@@ -438,11 +438,12 @@
 ;; (muki-layer:load-layers 'elisp
 ;;   '(csh-mode))
 
-;;;;; themem
+;;;;; theme
 (muki-layer:load-layers 'theme
   '(color-theme-sanityinc-tomorrow
     color-theme-sanityinc-solarized
-    apropospriate))
+    apropospriate
+    moe-theme))
 
 ;;;;; el-get
 ;; (require 'init-el-get)
