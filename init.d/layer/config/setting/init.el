@@ -74,10 +74,10 @@
 (auto-image-file-mode 1)
 (enable-option image-animate-loop)
 (add-hook 'image-mode-hook
-   (clambda ()
-       (cl-letf ((image (image-get-display-property)))
-         (if (image-multi-frame-p image)
-             (image-toggle-animation)))))
+          (clambda ()
+              (cl-letf ((image (image-get-display-property)))
+                (if (image-multi-frame-p image)
+                    (image-toggle-animation)))))
 ;; (set-option image-transform-resize 'fit-height)
 
 ;;;; add file types
@@ -273,7 +273,7 @@
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
 ;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson, noctilux, erosiond, material
-(defvar muki:x-theme 'dracula)
+(defvar muki:x-theme 'spacemacs-dark)
 (defvar muki:term-theme 'flatland)
 
 (enable-option select-enable-clipboard
@@ -426,7 +426,7 @@
 
 ;;; automatically make script executable
 (add-hook 'after-save-hook
-   #'executable-make-buffer-file-executable-if-script-p)
+          #'executable-make-buffer-file-executable-if-script-p)
 
 ;;;
 (set-option max-specpdl-size (* 10 max-specpdl-size))
