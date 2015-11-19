@@ -273,6 +273,7 @@
 (muki-layer:load-layers 'syntax-checking
   '(flycheck-status-emoji
     flycheck-package
+    flychck-css-colorguard
     flycheck))
 
 ;;;; highlight

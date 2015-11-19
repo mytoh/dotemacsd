@@ -1025,6 +1025,9 @@
                   '(:tag ["eshell" "z"]))
 (hoarder:register "tom-tan/esh-buf-stack"
                   '(:tag ["eshell" "zsh"]))
+(hoarder:register "Simplify/flycheck-css-colorguard"
+                  '(:tag ["flycheck" "css" "colorguard"
+                          "syntax_checking"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
@@ -1225,6 +1228,7 @@
                   '(:tag ["org" "agenda"]))
 (hoarder:register "alphapapa/org-protocol-capture-html"
                   '(:tag ["org" "org-capture" "html"]))
+
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
 ;;                    :dependency ["dbrock/bongo"]
