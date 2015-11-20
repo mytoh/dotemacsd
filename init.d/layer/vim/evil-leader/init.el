@@ -62,6 +62,8 @@
       "F" #'describe-face
       "t" #'describe-theme)
 
+    (evil-leader/set-key "hk" 'which-key-show-top-level)
+
     (cl-defun switch-to-scratch-buffer ()
       (interactive)
       (switch-to-buffer
