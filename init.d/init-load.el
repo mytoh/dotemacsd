@@ -99,7 +99,8 @@
 
     paradox
     hl-todo
-    hl-indent
+    ;; hl-indent
+    ;; indent-guide
     rainbow-delimiters
     anzu
     smartparens
@@ -142,7 +143,7 @@
 
     ;; guide-key
     ;; guide-key-tip
-    ;; which-key
+    which-key
 
     clojure-mode
     clojure-cheatsheet
@@ -218,7 +219,7 @@
     wordnut
     erlang
     sml-mode
-    ;; beacon
+    ;; beacon ; error invalid face :background
     clipmon
     font-lock-studio
     emojify
@@ -227,7 +228,6 @@
     github-notifier
     region-state
     prettify-symbols
-    indent-guide
 
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
