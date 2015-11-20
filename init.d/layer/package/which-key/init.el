@@ -8,6 +8,7 @@
   (set-option which-key-max-description-length 32)
   (set-option which-key-idle-delay 0.5)
   (enable-option which-key-allow-evil-operators)
+  (which-key-setup-side-window-bottom)
   (which-key-mode)
   (which-key-add-key-based-replacements
       "SPC ?" "show keybindings"
