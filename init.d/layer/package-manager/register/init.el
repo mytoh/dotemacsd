@@ -1380,6 +1380,7 @@
                         '(:load-path "emacs"))
 (hoarder:register-theme "rdallasgray/graphene-meta-theme")
 (hoarder:register-theme "waymondo/apropospriate-theme")
+(hoarder:register-theme "https://gitlab.com/franksn/majapahit-theme.git")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
