@@ -1153,6 +1153,8 @@
 (hoarder:register "syl20bnr/evil-iedit-state"
                   '(:tag ["evil" "iedit"]
                     :dependency ["tsdh/iedit"]))
+(hoarder:register "justbur/emacs-bind-map"
+  '(:tag ["evil" "key_binding"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
