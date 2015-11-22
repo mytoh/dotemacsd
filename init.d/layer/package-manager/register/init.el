@@ -1381,6 +1381,8 @@
 (hoarder:register-theme "rdallasgray/graphene-meta-theme")
 (hoarder:register-theme "waymondo/apropospriate-theme")
 (hoarder:register-theme "https://gitlab.com/franksn/majapahit-theme.git")
+(hoarder:register-theme "jmdeldin/underwater-theme.el")
+(hoarder:register-theme "ysz/hhazure")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1407,7 +1409,9 @@
   (add-project-root "helm-eww-history" '(:tag ["helm" "eww"]))
   (add-project-root "helm-eww-search-engine" '(:tag ["helm" "eww"]))
   (add-project-root "helm-eshell-jump" '(:tag ["helm" "eshell"]))
-  (add-project-root "emacs-glof" '(:tag ["plist" "utility"])))
+  (add-project-root "emacs-glof" '(:tag ["plist" "utility"]))
+  (add-project-root "emacs-fridge" )
+  (add-project-root "emacs-pcst-api" ))
 
 ;;;;;; skk
 (hoarder:register "skk-dev/ddskk"
