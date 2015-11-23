@@ -137,7 +137,8 @@
     (bind-map my-mesh-leader-map
         :evil-keys ("SPC z")
         :evil-states (normal)
-        :major-modes (eshell-mode))
+        :major-modes (eshell-mode)
+        :minor-modes (mesh-mode))
     (bind-map-set-keys my-base-leader-map
         "z z" #'mesh:switch)
     (bind-map-set-keys my-mesh-leader-map
