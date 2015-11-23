@@ -10,28 +10,33 @@
   (when (bound-and-true-p evil-mode)
     (evil-insert-state)))
 
-(muki:evil-leader-define-key-for-mode (org-mode org-mode-map)
-  "'" #'org-edit-special
-  "c" #'org-capture
-  "d" #'org-deadline
-  "e" #'org-export-dispatch
-  "f" #'org-set-effort
-  ;; headings
-  "hi" #'org-insert-heading-after-current
-  "hI" #'muki:org-insert-heading
-  "I" #'org-clock-in
-  "," #'org-ctrl-c-ctrl-c
-  "n" #'org-narrow-to-subtree
-  "N" #'widen
-  "O" #'org-clock-out
-  "q" #'org-clock-cancel
-  "R" #'org-refile
-  "s" #'org-schedule
-  ;; insertion of common elements
-  "il" #'org-insert-link
-  "if" #'org-footnote-new
+(bind-map my-leader-org-map
+    :evil-keys ("SPC m" ",")
+    :evil-states (normal motion visual)
+    :major-modes (org-mode))
 
-  ;; helm
-  "hl" #'helm-org-in-buffer-headings)
+(bind-map-set-keys my-leader-org-map
+    "'" #'org-edit-special
+    "c" #'org-capture
+    "d" #'org-deadline
+    "e" #'org-export-dispatch
+    "f" #'org-set-effort
+    ;; headings
+    "hi" #'org-insert-heading-after-current
+    "hI" #'muki:org-insert-heading
+    "I" #'org-clock-in
+    "," #'org-ctrl-c-ctrl-c
+    "n" #'org-narrow-to-subtree
+    "N" #'widen
+    "O" #'org-clock-out
+    "q" #'org-clock-cancel
+    "R" #'org-refile
+    "s" #'org-schedule
+    ;; insertion of common elements
+    "il" #'org-insert-link
+    "if" #'org-footnote-new
+
+    ;; helm
+    "hl" #'helm-org-in-buffer-headings)
 
 ;;; init.el ends here

@@ -3,6 +3,7 @@
 ;;; Code:
 
 (require 'muki-evil)
+(require 'bind-map)
 
 (cl-defun muki:emacs-lisp-test-run-buffer ()
   "from spacemacs/ert-run-tests-buffer"
@@ -35,27 +36,31 @@
 
 ;; from spacemacs github.com/syl20bnr/spacemacs/spacemacs/keybindings.el
 ;; emacs-lisp -----------------------------------------------------------------
-(muki:evil-leader-define-key-for-modes ((emacs-lisp-mode emacs-lisp-mode-map)
-                                        (lisp-interaction-mode lisp-interaction-mode-map))
-  "e$" #'lisp-state-eval-sexp-end-of-line
-  "eb" #'eval-buffer
-  "ee" #'eval-last-sexp
-  "ep" #'pp-eval-last-sexp
-  "ef" #'eval-defun
-  "er" 'eval-region
-  "el" #'lisp-state-eval-sexp-end-of-line
-  ","  #'lisp-state-toggle-lisp-state
-  "tf" #'muki:emacs-lisp-test-open-alternate-file
-  "tb" #'muki:emacs-lisp-test-run-buffer
-  "tq" #'ert
+(bind-map my-elisp-leader-map
+    :evil-keys ("SPC m" ",")
+    :evil-states (normal)
+    :major-modes (emacs-lisp-mode
+                  lisp-interaction-mode))
+(bind-map-set-keys my-elisp-leader-map
+    "e$" #'lisp-state-eval-sexp-end-of-line
+    "eb" #'eval-buffer
+    "ee" #'eval-last-sexp
+    "ep" #'pp-eval-last-sexp
+    "ef" #'eval-defun
+    "er" 'eval-region
+    "el" #'lisp-state-eval-sexp-end-of-line
+    ","  #'lisp-state-toggle-lisp-state
+    "tf" #'muki:emacs-lisp-test-open-alternate-file
+    "tb" #'muki:emacs-lisp-test-run-buffer
+    "tq" #'ert
 
-  "gg" #'xref-find-definitions-other-window
-  "hh" #'elisp-slime-nav-describe-elisp-thing-at-point
+    "gg" #'xref-find-definitions-other-window
+    "hh" #'elisp-slime-nav-describe-elisp-thing-at-point
 
-  "=b" #'srefactor-lisp-format-buffer
-  "=d" #'srefactor-lisp-format-defun
-  "=o" #'srefactor-lisp-one-line
-  "=s" #'srefactor-lisp-format-sexp
-  )
+    "=b" #'srefactor-lisp-format-buffer
+    "=d" #'srefactor-lisp-format-defun
+    "=o" #'srefactor-lisp-one-line
+    "=s" #'srefactor-lisp-format-sexp
+    )
 
 ;;; init.el ends here
