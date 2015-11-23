@@ -309,18 +309,7 @@
     evil-extra-operator
     
     evil-escape
-    evil-surround
-    evil-nerd-commenter
-    evil-linewise
-    evil-matchit
-    evil-exchange
-    evil-operator-comment
-    evil-search-highlight-persist
-    evil-jumper
-    evil-visualstar
     evil-easymotion
-    evil-textobj-between
-    evil-extra-operator
     evil-visual-mark-mode
 
     ;; evil-rsi ; after evil
@@ -332,7 +321,7 @@
     evil-iedit-state
     evil-mc
     evil-quickscope
-    evil-lisp-state
+    ;; evil-lisp-state
     evil-magit
     bind-map
     ))
