@@ -294,10 +294,7 @@
 
 ;;;;; package
 (muki-layer:load-layers 'vim
-  '(
-    ;; evil-leader
-    
-    evil
+  '(evil
 
     evil-nerd-commenter
     evil-surround
