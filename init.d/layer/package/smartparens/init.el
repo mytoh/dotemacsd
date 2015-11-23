@@ -3,7 +3,8 @@
   (defery 'smartparens)
   (after 'smartparens
       (req 'smartparens-config)
-    (set-option sp-show-pair-from-inside (not evil-move-beyond-eol))
+      (after 'evil
+	(set-option sp-show-pair-from-inside (not evil-move-beyond-eol)))
     (disable-option sp-cancel-autoskip-on-backward-movement)
 
      ;;;;;;;;;;;;
