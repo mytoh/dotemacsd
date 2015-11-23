@@ -1093,11 +1093,11 @@
     :tag "evil"))
 (hoarder:register "TheBB/evil-paragraph-textobject"
   '(:tag "evil"))
-;; (hoarder:register "syl20bnr/evil-lisp-state"
-;;                   '(:dependency ["Fuco1/smartparens"
-;;                                  "justbur/emacs-bind-map"]
-;;                     :compile nil
-;;                     :tag "evil"))
+(hoarder:register "syl20bnr/evil-lisp-state"
+  '(:dependency ["Fuco1/smartparens"
+                 "justbur/emacs-bind-map"]
+    :compile nil
+    :tag "evil"))
 (hoarder:register "syl20bnr/evil-escape"
   '(:tag "evil"
     :dependency ["emacsmirror/key-chord"]))
