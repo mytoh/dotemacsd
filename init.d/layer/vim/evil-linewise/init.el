@@ -11,4 +11,6 @@
   ;; "] p" 'evil-linewise-paste-newline-below
   (req 'evil-linewise))
 
+(muki:init-evil-linewise)
+
 ;;; linewise.el ends here

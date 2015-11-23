@@ -6,4 +6,6 @@
   (req 'evil-search-highlight-persist
     (enable-mode global-evil-search-highlight-persist)))
 
+(muki:init-evil-search-highlight-persist)
+
 ;;; search-highlight-persist.el ends here

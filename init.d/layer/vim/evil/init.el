@@ -3,19 +3,21 @@
 ;;; Code:
 
 (cl-defun muki:init-evil-plugins ()
-  (muki:init-evil-leader)
+  ;; (muki:init-evil-leader)
   ;; (muki:init-evil-escape)
-  (muki:init-evil-nerd-commenter)
-  (muki:init-evil-surround)
-  (muki:init-evil-linewise)
-  (muki:init-evil-matchit)
-  (muki:init-evil-exchange)
-  (muki:init-evil-operator-comment)
-  (muki:init-evil-jumper)
-  (muki:init-evil-visualstar)
-  (muki:init-evil-search-highlight-persist)
-  (muki:init-evil-textobj-between)
-  (muki:init-evil-extra-operator)
+  
+  ;; (muki:init-evil-nerd-commenter)
+  ;; (muki:init-evil-surround)
+  ;; (muki:init-evil-linewise)
+  ;; (muki:init-evil-matchit)
+  ;; (muki:init-evil-exchange)
+  ;; (muki:init-evil-operator-comment)
+  ;; (muki:init-evil-jumper)
+  ;; (muki:init-evil-visualstar)
+  ;; (muki:init-evil-search-highlight-persist)
+  ;; (muki:init-evil-textobj-between)
+  ;; (muki:init-evil-extra-operator)
+  
   ;; (muki:init-evil-visual-mark-mode)
   )
 
@@ -36,6 +38,15 @@
                  evil-cjk-emacs-word-boundary)
   (disable-option evil-move-cursor-back)
   (set-option evil-esc-delay 0.001)
+
+  ;; * Prevent the visual selection overriding my system clipboard?
+  ;; +On some operating systems, there is only one clipboard for both *copied* and
+  ;; +*selected* texts. This has the consequence that visual *selection* – which
+  ;; +should normally be saved to the /PRIMARY/ clipboard – overrides the /SYSTEM/
+  ;; +clipboard, where normally goes the *copied* text. This can be corrected by
+  ;; +adding the following code to the =dotspacemacs/user-config= of your
+  ;; +=.spacemacs=:
+  (fset 'evil-visual-update-x-selection 'ignore)
 
   (cl-locally
       (enable-option evil-want-C-u-scroll)

@@ -19,4 +19,6 @@
     (hook 'org-mode-hook #'muki:evil-surround-replace-all-pairs)
     ))
 
+(muki:init-evil-surround)
+
 ;;; surround.el ends here

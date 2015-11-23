@@ -6,4 +6,6 @@
   (req 'evil-extra-operator
     (global-evil-extra-operator-mode 1)))
 
+(muki:init-evil-extra-operator)
+
 ;;; extra-operator.el ends here

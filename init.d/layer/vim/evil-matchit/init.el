@@ -6,4 +6,6 @@
   (req 'evil-matchit
     (enable-mode global-evil-matchit-mode)))
 
+(muki:init-evil-matchit)
+
 ;;; matchit.el ends here

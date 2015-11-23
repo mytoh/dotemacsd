@@ -6,4 +6,6 @@
   (req 'evil-jumper
     (enable-option evil-jumper-auto-center)))
 
+(muki:init-evil-jumper)
+
 ;;; jumper.el ends here

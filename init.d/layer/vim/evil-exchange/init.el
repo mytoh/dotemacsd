@@ -6,4 +6,6 @@
   (req 'evil-exchange
     (evil-exchange-install)))
 
+(muki:init-evil-exchange)
+
 ;;; exchange.el ends here

@@ -12,4 +12,6 @@
       (add-key evil-normal-state-map ",cp" #'evilnc-comment-or-uncomment-paragraphs)
       (add-key evil-normal-state-map ",cr" #'comment-or-uncomment-region))))
 
+(muki:init-evil-nerd-commenter)
+
 ;;; nerd-commenter.el ends here

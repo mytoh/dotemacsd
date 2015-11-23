@@ -294,7 +294,23 @@
 
 ;;;;; package
 (muki-layer:load-layers 'vim
-  '(evil-leader
+  '(
+    ;; evil-leader
+    
+    evil
+
+    evil-nerd-commenter
+    evil-surround
+    evil-linewise
+    evil-matchit
+    evil-exchange
+    evil-operator-comment
+    evil-jumper
+    evil-visualstar
+    evil-search-highlight-persist
+    evil-textobj-between
+    evil-extra-operator
+    
     evil-escape
     evil-surround
     evil-nerd-commenter
@@ -310,8 +326,6 @@
     evil-extra-operator
     evil-visual-mark-mode
 
-    evil
-
     ;; evil-rsi ; after evil
     evil-cleverparens
     ;; evil-smartparens
@@ -323,6 +337,7 @@
     evil-quickscope
     evil-lisp-state
     evil-magit
+    bind-map
     ))
 
 (muki-layer:load-layers 'vim

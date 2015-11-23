@@ -6,4 +6,6 @@
   (req 'evil-visualstar
     (global-evil-visualstar-mode)))
 
+(muki:init-evil-visualstar)
+
 ;;; visual.el ends here
