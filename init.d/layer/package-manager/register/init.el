@@ -1386,6 +1386,7 @@
 (hoarder:register-theme "https://gitlab.com/franksn/majapahit-theme.git")
 (hoarder:register-theme "jmdeldin/underwater-theme.el")
 (hoarder:register-theme "ysz/hhazure")
+(hoarder:register-theme "bkruczyk/badwolf-emacs")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
