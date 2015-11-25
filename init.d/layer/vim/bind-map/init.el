@@ -8,88 +8,86 @@
 
 (req 'bind-map
 
-  (cl-defmacro muki:bind-map (map  &rest args)
+  (cl-defmacro muki:bind-leader-map (mapname &rest args)
     (declare (indent 1))
     (if (glof:get args :evil-keys)
-        (cl-letf* ((prefix (if (bound-and-true-p muki:evil-leader-key)
-                               muki:evil-leader-key
-                             "SPC"))
-                   (evil-keys
-                    (glof:update args
-                                 :evil-keys
-                                 (lambda (keys)
-                                   (seq-map
-                                    (lambda (key)
-                                      (concat prefix " " key))
-                                    keys)))))
-          `(bind-map ,map  ,@evil-keys))
-      `(bind-map ,map ,@args)))
+        `(bind-map ,mapname ,@(cl-letf* ((prefix (if (bound-and-true-p muki:evil-leader-key)
+                                                     muki:evil-leader-key
+                                                   "SPC")))
+                                (glof:update args
+                                             :evil-keys
+                                             (lambda (keys)
+                                               (seq-map
+                                                (lambda (key)
+                                                  (concat prefix " " key))
+                                                keys)))))
+      `(bind-map ,mapname ,@args)))
 
   (bind-map my-base-leader-map
       :evil-keys ("SPC")
       :evil-states (normal motion visual))
 
-  (muki:bind-map my-base-leader-application-map
+  (muki:bind-leader-map my-base-leader-application-map
     :evil-keys ("a")
     :evil-states (normal motion))
 
-  (muki:bind-map my-base-leader-application-web-map
+  (muki:bind-leader-map my-base-leader-application-web-map
     :evil-keys ("a w")
     :evil-states (normal motion))
 
-  (muki:bind-map my-base-leader-application-package-manager-map
+  (muki:bind-leader-map my-base-leader-application-package-manager-map
     :evil-keys ("a p")
     :evil-states (normal motion))
 
-  (muki:bind-map my-base-leader-application-multimedia-map
+  (muki:bind-leader-map my-base-leader-application-multimedia-map
     :evil-keys ("a m")
     :evil-states (normal motion))
   
-  (muki:bind-map my-base-leader-help-describe-map
+  (muki:bind-leader-map my-base-leader-help-describe-map
     :evil-keys ("h d")
     :evil-states (normal motion visual))
 
-  (muki:bind-map my-base-leader-buffer-map
+  (muki:bind-leader-map my-base-leader-buffer-map
     :evil-keys ("b")
     :evil-states (normal motion visual))
 
-  (muki:bind-map my-base-leader-window-map
+  (muki:bind-leader-map my-base-leader-window-map
     :evil-keys ("w")
     :evil-states (normal motion))
 
-  (muki:bind-map my-base-leader-quit-map
+  (muki:bind-leader-map my-base-leader-quit-map
     :evil-keys ("q")
     :evil-states (normal motion))
 
-  (muki:bind-map my-base-leader-git-map
+  (muki:bind-leader-map my-base-leader-git-map
     :evil-keys ("g")
     :evil-states (normal motion))
   
-  (muki:bind-map my-base-leader-helm-map
+  (muki:bind-leader-map my-base-leader-helm-map
     :evil-keys ("h")
     :evil-states (normal motion))
 
-  (muki:bind-map my-base-leader-help-info-map
+  (muki:bind-leader-map my-base-leader-help-info-map
     :evil-keys ("h i")
     :evil-states (normal motion))
 
-  (muki:bind-map my-base-leader-emms-map
+  (muki:bind-leader-map my-base-leader-emms-map
     :evil-keys ("a m m")
     :evil-states (normal motion))
 
-  (muki:bind-map my-base-leader-org-map
+  (muki:bind-leader-map my-base-leader-org-map
     :evil-keys ("o")
     :evil-states (normal motion))
   
-  (muki:bind-map my-base-leader-file-map
+  (muki:bind-leader-map my-base-leader-file-map
     :evil-keys ("f")
     :evil-states (normal motion))
 
-  (muki:bind-map my-base-leader-search-map
+  (muki:bind-leader-map my-base-leader-search-map
     :evil-keys ("s")
     :evil-states (normal motion))
 
-  (muki:bind-map my-base-leader-theme-map
+  (muki:bind-leader-map my-base-leader-theme-map
     :evil-keys ("T")
     :evil-states (normal motion))
 
@@ -154,7 +152,7 @@
 
 
   (liby 'mesh
-    (muki:bind-map my-mesh-leader-map
+    (muki:bind-leader-map my-mesh-leader-map
       :evil-keys ("z")
       :evil-states (normal)
       :major-modes (eshell-mode)
