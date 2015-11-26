@@ -1028,6 +1028,8 @@
 (hoarder:register "Simplify/flycheck-css-colorguard"
   '(:tag ["flycheck" "css" "colorguard"
           "syntax_checking"]))
+(hoarder:register "febuiles/tumble"
+  '(:tag ["tumblr"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
