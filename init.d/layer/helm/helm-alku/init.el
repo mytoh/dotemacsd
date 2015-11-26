@@ -36,7 +36,12 @@
                   "xombrero"
                   "lxappearance"))
     ;; remove bookmark source temporally
-    (cl-delete 'helm-source-bookmarks helm-alku-sources))
+    (cl-delete 'helm-source-bookmarks helm-alku-sources)
+
+    ;; helm-alku-twitch
+    (setq helm-alku-twitch-additional-games
+          '("Clicker Heroes"))
+    )
 
   (add-global-key "C-c h" #'helm-alku)
 
