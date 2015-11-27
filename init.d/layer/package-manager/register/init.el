@@ -1133,7 +1133,6 @@
 (hoarder:register "luxbock/evil-cleverparens"
   '(:dependency ["rejeep/drag-stuff.el"
                  "http://mumble.net/~campbell/git/paredit.git"
-                 "promethial/paxedit"
                  "Fuco1/smartparens"]))
 ;; (hoarder:register "lotabout/evil-mc"
 ;;                   '(:tag ["evil" "multiple-cursor"]))
