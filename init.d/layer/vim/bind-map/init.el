@@ -63,10 +63,6 @@
     :evil-keys ("g")
     :evil-states (normal motion))
   
-  (muki:bind-leader-map my-base-leader-helm-map
-    :evil-keys ("h")
-    :evil-states (normal motion))
-
   (muki:bind-leader-map my-base-leader-help-info-map
     :evil-keys ("h i")
     :evil-states (normal motion))
@@ -211,18 +207,18 @@
     (bind-map-set-keys my-base-leader-map
         ";" #'helm-M-x
         "?" #'helm-descbinds)
-    (bind-map-set-keys my-base-leader-helm-map
-        "l" #'helm-resume
-        "L" #'helm-locate-library
-        "f" #'helm-features
-        "Cl" #'helm-colo
-        "b" #'helm-pp-bookmarks
-        "i" #'helm-info-at-point
-        "m" #'helm-man-woman
-        "a" #'helm-apropos
-        "ry" #'helm-show-kill-ring
-        "rr" #'helm-register
-        "rm" #'helm-all-mark-rings)
+    (bind-map-set-keys my-base-leader-map
+        "hl" #'helm-resume
+        "hL" #'helm-locate-library
+        "hf" #'helm-features
+        "hCl" #'helm-colo
+        "hb" #'helm-pp-bookmarks
+        "hi" #'helm-info-at-point
+        "hm" #'helm-man-woman
+        "ha" #'helm-apropos
+        "hry" #'helm-show-kill-ring
+        "hrr" #'helm-register
+        "hrm" #'helm-all-mark-rings)
     (bind-map-set-keys my-base-leader-theme-map
         "h" #'helm-themes))
 
