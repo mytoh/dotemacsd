@@ -40,7 +40,7 @@
 
     ;; helm-alku-twitch
     (setq helm-alku-twitch-additional-games
-          '("Clicker Heroes"))
+          '("Clicker Heroes" "Elite: Dangerous"))
     )
 
   (add-global-key "C-c h" #'helm-alku)
