@@ -103,7 +103,7 @@
     ;; indent-guide
     rainbow-delimiters
     anzu
-    ;; smartparens
+    smartparens
     expand-region
     e2wm
     elfeed
