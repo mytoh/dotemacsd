@@ -7,8 +7,7 @@
   (add-hook 'emacs-lisp-mode-hook #'company-mode)
   (add-hook 'scheme-mode-hook #'company-mode)
   (add-hook 'org-mode-hook #'company-mode)
-  (after 'magit
-      (add-hook 'magit-commit-mode #'company-mode))
+  (add-hook 'text-mode #'company-mode)
 
   (after 'company
       (setq company-idle-delay 0.3)
