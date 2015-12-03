@@ -1280,6 +1280,7 @@
 (hoarder:register-theme "jordonbiondo/ample-theme")
 (hoarder:register-theme "mjwall/ample-zen")
 (hoarder:register-theme "bruce/emacs-spacegray-theme")
+;; (hoarder:register-theme "nhunzaker/spacegray-emacs")
 (hoarder:register-theme "juba/color-theme-tangotango")
 (hoarder:register-theme "ccann/badger-theme")
 (hoarder:register-theme "xzerocode/hipster-theme")
