@@ -295,7 +295,8 @@
 
 ;;;;; package
 (muki-layer:load-layers 'vim
-  '(evil
+  '(
+    evil
 
     evil-nerd-commenter
     evil-surround
@@ -308,7 +309,7 @@
     evil-search-highlight-persist
     evil-textobj-between
     evil-extra-operator
-    
+
     evil-escape
     evil-easymotion
     evil-visual-mark-mode
@@ -320,10 +321,11 @@
     evil-snipe
     evil-textobj-anyblock
     evil-iedit-state
-    evil-mc
+    ;; evil-mc
     evil-quickscope
     ;; evil-lisp-state
     evil-magit
+    evil-org-mode
     bind-map
     ))
 
@@ -331,16 +333,16 @@
   '(vim-empty-lines-mode
     vimrc-mode))
 
-(muki-layer:load-layers 'vim
-  '(eww-mode
-    image-mode
-    paradox-mode
-    emms-mode
-    emacs-lisp-mode
-    org-mode
-    expand-region
-    skk-mode
-    ))
+;; (muki-layer:load-layers 'vim
+;;   '(eww-mode
+;;     image-mode
+;;     paradox-mode
+;;     emms-mode
+;;     emacs-lisp-mode
+;;     org-mode
+;;     expand-region
+;;     skk-mode
+;;     ))
 
 (muki-layer:load-layers 'helm
   '(helm
@@ -388,7 +390,8 @@
     company-emoji
     company-quickhelp
     company-statistics
-    company-org-headings))
+    company-org-headings
+    ))
 
 (muki-layer:load-layers 'source-control
   '(github-browse-file))
