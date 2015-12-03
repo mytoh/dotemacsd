@@ -7,7 +7,8 @@
   (add-hook 'emacs-lisp-mode-hook #'company-mode)
   (add-hook 'scheme-mode-hook #'company-mode)
   (add-hook 'org-mode-hook #'company-mode)
-  (add-hook 'text-mode #'company-mode)
+  (add-hook 'eshell-mode-hook #'company-mode)
+  (add-hook 'git-commit-mode #'company-mode)
 
   (after 'company
       (setq company-idle-delay 0.3)
