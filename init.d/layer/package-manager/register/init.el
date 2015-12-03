@@ -1030,6 +1030,8 @@
           "syntax_checking"]))
 (hoarder:register "febuiles/tumble"
   '(:tag ["tumblr"]))
+(hoarder:register "emacsmirror/highlight-tail"
+  '(:tag ["highlight"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]

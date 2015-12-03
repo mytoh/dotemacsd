@@ -286,6 +286,7 @@
     highlight-parentheses
     highlight-sexp
     highlight-defined
+    highlight-tail
     ;; auto-highlight-symbol
     ;; highlight-indentation
     ;; highlight-stages
