@@ -286,7 +286,7 @@
     highlight-parentheses
     highlight-sexp
     highlight-defined
-    highlight-tail
+    ;; highlight-tail
     ;; auto-highlight-symbol
     ;; highlight-indentation
     ;; highlight-stages
@@ -386,11 +386,13 @@
 
 (muki-layer:load-layers 'auto-completion
   '(
-    company
-    company-emoji
-    company-quickhelp
-    company-statistics
-    company-org-headings
+    ;; company
+    ;; company-emoji
+    ;; company-quickhelp
+    ;; company-statistics
+    ;; company-org-headings
+
+    auto-complete
     ))
 
 (muki-layer:load-layers 'source-control
@@ -399,7 +401,8 @@
 
 ;;;;; config
 (muki-layer:load-layers 'config
-  '(setting
+  '(
+    setting
     key
     hook
     path
@@ -413,9 +416,10 @@
     rcirc
     tramp
     recentf
+    font ; this cause slow displaying
+
     ;; autorevert
     ;;clipboard
-    font ; this cause slow displaying
     ;; erc
     ;; eshell-prompt
     ;; eieio
