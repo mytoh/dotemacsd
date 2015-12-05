@@ -1036,6 +1036,10 @@
   '(:tag ["sound" "typewriter"]))
 (hoarder:register "nicferrier/emacs-proc-net"
   '(:tag ["network" "process"]))
+(hoarder:register "auto-complete/auto-complete"
+  '(:tag ["completion"]
+    :dependency ["auto-complete/fuzzy-el"
+                 "auto-complete/popup-el"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
