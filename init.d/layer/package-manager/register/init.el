@@ -1032,6 +1032,10 @@
   '(:tag ["tumblr"]))
 (hoarder:register "emacsmirror/highlight-tail"
   '(:tag ["highlight"]))
+(hoarder:register "rbanffy/selectric-mode"
+  '(:tag ["sound" "typewriter"]))
+(hoarder:register "nicferrier/emacs-proc-net"
+  '(:tag ["network" "process"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
