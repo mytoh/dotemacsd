@@ -1040,6 +1040,14 @@
   '(:tag ["completion"]
     :dependency ["auto-complete/fuzzy-el"
                  "auto-complete/popup-el"]))
+(hoarder:register "syohex/emacs-ac-capf"
+  '(:tag ["completion" "auto-complete"]))
+(hoarder:register "syohex/emacs-ac-emoji"
+  '(:tag ["completion" "auto-complete" "emoji"]))
+(hoarder:register "myuhe/ac-skk.el"
+  '(:tag ["completion" "auto-complete" "skk"]
+    :dependency ["myuhe/tinysegmenter.el"]))
+
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
