@@ -333,16 +333,17 @@
   '(vim-empty-lines-mode
     vimrc-mode))
 
-;; (muki-layer:load-layers 'vim
-;;   '(eww-mode
-;;     image-mode
-;;     paradox-mode
-;;     emms-mode
-;;     emacs-lisp-mode
-;;     org-mode
-;;     expand-region
-;;     skk-mode
-;;     ))
+(muki-layer:load-layers 'vim
+  '(
+    ;; eww-mode
+    image-mode
+    paradox-mode
+    emms-mode
+    ;; emacs-lisp-mode
+    ;; org-mode
+    expand-region
+    skk-mode
+    ))
 
 (muki-layer:load-layers 'helm
   '(helm
