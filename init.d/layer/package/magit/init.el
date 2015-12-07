@@ -17,7 +17,9 @@
 (cl-defun muki:magit-setup ()
   (set-option magit-diff-refine-hunk 'all)
   (set-option magit-repository-directories `(,(muki:expand-path-huone "ateljee")))
-  (disable-option magit-push-always-verify)
+  (set-option magit-revision-show-gravatars
+              '("^Author:     " . "^Commit:     "))
+  
   ;; auto fill
   (hook 'magit-log-edit-mode-hook
         (clambda ()
