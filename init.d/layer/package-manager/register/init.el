@@ -518,7 +518,6 @@
 (hoarder:register "jacksonrayhamilton/context-coloring"
   '(:tag ["javascript"]
     :build ["npm install"]))
-(hoarder:register "emacsattic/spaces")
 (hoarder:register "jeremy-compostella/project-manager"
   '(:tag ["project"]))
 (hoarder:register "Fuco1/better-jump"
@@ -1692,9 +1691,9 @@
   '(:tag ["org"]))
 (hoarder:fetch "fniessen/refcard-org-babel"
   '(:tag ["org"]))
-(hoarder:fetch "https://gitorious.org/org-cook/org-cook.git"
+(hoarder:fetch "https://gitlab.com/egh/org-cook.git"
   '(:tag ["org" "cooking"]))
-(hoarder:fetch "https://gitorious.org/org-brew/org-brew.git"
+(hoarder:fetch "https://gitlab.com/egh/org-brew.git"
   '(:tag ["org" "brewing"]))
 (hoarder:fetch "krisajenkins/EvilBegins"
   '(:tag ["evil"]))
@@ -1755,8 +1754,6 @@
 (hoarder:fetch "tromey/emacs-module"
   '(:tag ["module"]))
 (hoarder:fetch "vikasrawal/orgpaper"
-  '(:tag ["org"]))
-(hoarder:fetch "shellhead/org-docs"
   '(:tag ["org"]))
 (hoarder:fetch "tuhdo/emacs-c-ide-demo")
 (hoarder:fetch "tkf/emacs-ipython-notebook"
