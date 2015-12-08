@@ -78,7 +78,7 @@
                           :dependency ["jwiegley/emacs-async"]
                           :tag "helm"))]
     :tag ["helm" "dictionary"]))
-(hoarder:register "emacs-helm/helm-orgcard"
+(hoarder:register "emacs-jp/helm-orgcard"
   '(:tag ["helm" "org"]
     :dependency [( "emacs-helm/helm"
                   (:build ["gmake"]
@@ -1370,7 +1370,6 @@
 (hoarder:register-theme "evenhold/nerv-theme")
 (hoarder:register-theme "mjhanninen/liquorice.el"
   '(:load-path "."))
-(hoarder:register-theme "p-lambert/jellyburn-theme")
 (hoarder:register-theme "cryon/subatomic")
 (hoarder:register-theme "Gastove/rhombus")
 (hoarder:register-theme "Fanael/colorsarenice-theme")
@@ -1381,8 +1380,6 @@
 (hoarder:register-theme "PGGB/emacs-bluedrake-theme")
 (hoarder:register-theme "kostafey/organic-green-theme")
 (hoarder:register-theme "nashamri/spacemacs-theme")
-(hoarder:register-theme "timrichardt/zendyke")
-(hoarder:register-theme "biotician/emacs-bloomlight-theme")
 (hoarder:register-theme "vyp/redbelly")
 (hoarder:register-theme "NicolasPetton/zerodark-theme")
 (hoarder:register-theme "credmp/arjen-grey")
