@@ -8,6 +8,7 @@
   (add-to-list 'ac-dictionary-directories "~/.emacs.d/hoarder/github.com/auto-complete/auto-complete/dict")
   (ac-config-default)
   (setq ac-use-menu-map t)
+  (setq ac-dwim t)
   ;; Default settings
   (define-key ac-menu-map "\C-n" 'ac-next)
   (define-key ac-menu-map "\C-p" 'ac-previous))
