@@ -25,7 +25,8 @@
 
   (bind-map my-base-leader-map
       :evil-keys ("SPC")
-      :evil-states (normal motion visual))
+      :evil-states (normal motion visual)
+      :override-minor-modes t)
 
   (muki:bind-leader-map my-base-leader-application-map
     :evil-keys ("a")
@@ -149,10 +150,7 @@
 
   (liby 'mesh
     (muki:bind-leader-map my-mesh-leader-map
-      :evil-keys ("z")
-      :evil-states (normal)
-      :major-modes (eshell-mode)
-      :minor-modes (mesh-mode))
+      :evil-keys ("z"))
     (bind-map-set-keys my-base-leader-map
         "z z" #'mesh:switch)
     (bind-map-set-keys my-mesh-leader-map
