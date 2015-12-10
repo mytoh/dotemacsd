@@ -17,6 +17,9 @@
       (muki:evil-surround-replace-pairs '(?\] . ("[" . "]")) '(?\] . ("[ " . " ]"))))
     (hook 'emacs-lisp-mode-hook #'muki:evil-surround-replace-all-pairs)
     (hook 'org-mode-hook #'muki:evil-surround-replace-all-pairs)
+
+    (evil-define-key 'visual evil-surround-mode-map "s" 'evil-surround-region)
+    (evil-define-key 'visual evil-surround-mode-map "S" 'evil-substitute)
     ))
 
 (muki:init-evil-surround)
