@@ -298,12 +298,14 @@
   '(
     evil
 
-    evil-nerd-commenter
+    evil-commentary
+    ;; evil-nerd-commenter
+    ;; evil-operator-comment
+
     evil-surround
     evil-linewise
     evil-matchit
     evil-exchange
-    evil-operator-comment
     evil-jumper
     evil-visualstar
     evil-search-highlight-persist
