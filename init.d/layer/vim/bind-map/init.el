@@ -268,7 +268,8 @@
   (bind-map-set-keys my-base-leader-file-map
       "f" #'helm-find-files
       "g" #'helm-ls-git-ls
-      "w" 'evil-write
+      "s" #'evil-write
+      "S" #'evil-write-all
       "eh" #'helm-alku-layer
       "el" #'muki:open-file-init-load
       "er" #'muki:open-file-package-registers)
