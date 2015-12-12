@@ -337,12 +337,12 @@
 
 (muki-layer:load-layers 'vim
   '(
-    ;; eww-mode
+    eww-mode
     image-mode
     paradox-mode
     emms-mode
-    ;; emacs-lisp-mode
-    ;; org-mode
+    emacs-lisp-mode
+    org-mode
     expand-region
     skk-mode
     ))
