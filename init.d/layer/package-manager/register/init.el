@@ -148,6 +148,8 @@
 (hoarder:register "PythonNut/helm-flx"
   '(:tag "fuzzy_matching"
     :dependency ["lewang/flx"]))
+(hoarder:register "syohex/emacs-helm-japanese-weather")
+(hoarder:register "syohex/emacs-helm-kaomoji")
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]
 ;;                    :dependency ["michael-heerdegen/iterators.el"]))

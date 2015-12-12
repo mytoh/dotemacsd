@@ -382,6 +382,8 @@
     helm-fuzzier
     helm-flx
     helm-open-github
+    helm-japanese-weather
+    helm-kaomoji
     ;; helm-swoop
     ;; helm-company
     ;; helm-delicious
