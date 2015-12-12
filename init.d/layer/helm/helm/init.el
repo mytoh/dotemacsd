@@ -15,7 +15,6 @@
   ;;   (enable-mode dired-async-mode))
 
   (enable-mode helm-mode)
-  (enable-mode helm-adaptative-mode)
   (enable-mode helm-push-mark-mode)
 
   (enable-mode helm-autoresize-mode)
