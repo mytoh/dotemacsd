@@ -26,7 +26,8 @@
   (bind-map my-base-leader-map
       :evil-keys ("SPC")
       :evil-states (normal motion visual)
-      :override-minor-modes t)
+      :override-minor-modes t
+      :override-mode-name muki-leader-override-map)
 
   (muki:bind-leader-map my-base-leader-application-map
     :evil-keys ("a")
