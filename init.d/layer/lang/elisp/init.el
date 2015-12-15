@@ -98,6 +98,43 @@
 (cl-defun muki:elisp-byte-compile-buffer ()
   (add-hook 'after-save-hook #'muki:byte-compile-current-buffer nil t))
 
+(cl-defun muki:elisp-find-provided-feature ()
+  (cl-letf ((bs (buffer-string)))
+    (with-temp-buffer
+      (insert bs)
+      (goto-char (point-min))
+      (re-search-forward
+       (rx line-start
+           (0+ (any " "))
+           (char ?\()
+           "provide"
+           (1+ (any " "))
+           ?\'
+           (group (1+ (or alphanumeric
+                          ?\-)))
+           (0+ (any " "))
+           (char ?\)))
+       nil t)
+      (match-string-no-properties 1))))
+
+(cl-defun muki:elisp-reload-package ()
+  (when (and (eq major-mode 'emacs-lisp-mode)
+             (buffer-file-name))
+    (cl-letf* ((file-name (buffer-file-name))
+               (base-name (intern (file-name-base file-name)))
+               (found-feature (muki:elisp-find-provided-feature))
+               (feature (if found-feature
+                            (intern found-feature)
+                          nil)))
+      (cond ((featurep feature)
+             (unload-feature feature 'force)
+             (require feature file-name)
+             (message "feature %s reloaded" feature))
+            ((featurep base-name)
+             (unload-feature base-name 'force)
+             (require base-name file-name)
+             (message "feature %s reloaded" base-name))))))
+
 (add-hook 'emacs-lisp-mode-hook #'muki:elisp-byte-compile-buffer)
 (add-hook 'emacs-lisp-mode-hook #'muki:elisp-buffer-enable-reindent)
 (add-hook 'emacs-lisp-mode-hook #'muki:elisp-check-parens)
@@ -106,6 +143,9 @@
 (add-hook 'emacs-lisp-mode-hook
           (clambda ()
               (setq mode-name " ξ ")))
+;; (add-hook 'emacs-lisp-mode-hook
+;;           (lambda ()
+;;             (add-to-list 'after-save-hook #'muki:elisp-reload-package)))
 
 ;; (defun-add-hook muki:elisp-pretty-symbols (emacs-lisp-mode-hook)
 ;;   (push '(">=" . ?≥) prettify-symbols-alist)
