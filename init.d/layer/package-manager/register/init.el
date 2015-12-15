@@ -1405,6 +1405,7 @@
 (hoarder:register-theme "jmdeldin/underwater-theme.el")
 (hoarder:register-theme "ysz/hhazure")
 (hoarder:register-theme "bkruczyk/badwolf-emacs")
+(hoarder:register-theme "fourier/idea-darkula-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
