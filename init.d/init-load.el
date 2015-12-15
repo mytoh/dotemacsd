@@ -374,7 +374,6 @@
     helm-ls-git
     helm-pt
     helm-emms
-    swiper
     ace-jump-helm-line
     helm-commandlinefu
     helm-unicode
@@ -384,7 +383,8 @@
     helm-open-github
     helm-japanese-weather
     helm-kaomoji
-    ;; helm-swoop
+    helm-swoop
+    ;; swiper
     ;; helm-company
     ;; helm-delicious
     ))

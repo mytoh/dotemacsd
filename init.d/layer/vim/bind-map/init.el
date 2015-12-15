@@ -239,10 +239,14 @@
     (bind-map-set-keys my-base-leader-search-map
         "a" #'helm-do-ag))
 
-  (liby 'swiper
-    (bind-map-set-keys my-base-leader-search-map
-        "i" #'swiper))
+  ;; (liby 'swiper
+  ;;   (bind-map-set-keys my-base-leader-search-map
+  ;;       "i" #'swiper))
 
+  (liby 'helm-swoop
+    (bind-map-set-keys my-base-leader-search-map
+        "i" #'helm-swoop))
+  
   (liby 'emms
     (bind-map-set-keys my-base-leader-emms-map
         "P" #'emms-pause
