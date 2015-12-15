@@ -7,7 +7,7 @@
   (add-hook 'emacs-lisp-mode-hook #'company-mode)
   (add-hook 'scheme-mode-hook #'company-mode)
   (add-hook 'org-mode-hook #'company-mode)
-  (add-hook 'eshell-mode-hook #'company-mode)
+  ;; (add-hook 'eshell-mode-hook #'company-mode)
   (add-hook 'git-commit-mode #'company-mode)
 
   (after 'company
@@ -39,6 +39,7 @@
                         :background (face-background 'company-tooltip))
 
     )
+
   ;; (setq company-echo-delay 0)
   ;; (setq company-auto-complete nil)
   ;; (cl-pushnew 'company-dabbrev company-backends)
