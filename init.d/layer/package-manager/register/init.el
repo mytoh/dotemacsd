@@ -1963,6 +1963,8 @@
   '(:tag ["clojure" "zipper"]))
 (hoarder:fetch "clojure/data.xml"
   '(:tag ["clojure" "xml"]))
+(hoarder:fetch "webpro/awesome-dotfiles"
+  '(:tag ["awesome-list" "dotfiles"]))
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;; (hoarder:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
