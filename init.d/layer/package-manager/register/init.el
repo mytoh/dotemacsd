@@ -434,7 +434,8 @@
 (hoarder:register "camdez/goto-last-change.el")
 (hoarder:register "dimitri/switch-window")
 (hoarder:register "rnkn/olivetti")
-(hoarder:register "emacsmirror/diminish")
+;; (hoarder:register "emacsmirror/diminish")
+(hoarder:register "myrjola/diminish.el")
 (hoarder:register "ShingoFukuyama/emacs-emoji-cheat-sheet"
   '(:tag "emoji"))
 (hoarder:register "syl20bnr/emacs-emoji-cheat-sheet-plus"
