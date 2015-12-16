@@ -51,6 +51,6 @@
     "Ambient"
     "Electronic"))
 
-(muki:define-emms-key "l" 'helm-librefm-stream)
+
 
 ;;; init-helm-emms-librefm.el ends here

@@ -80,6 +80,7 @@
     git-gutter
 
     emms
+    emms-info
     ;; emms-mpd
     ;; emms-player-mpv
     ;; emms-player-mpv-volume
