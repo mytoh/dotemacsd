@@ -1969,6 +1969,8 @@
   '(:tag ["clojure" "xml"]))
 (hoarder:fetch "webpro/awesome-dotfiles"
   '(:tag ["awesome-list" "dotfiles"]))
+(hoarder:fetch "maitria/packthread"
+  '(:tag ["clojure" "threading"]))
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;; (hoarder:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
