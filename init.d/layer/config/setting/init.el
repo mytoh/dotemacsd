@@ -14,18 +14,6 @@
 ;; startup splash
 ;; (set-option fancy-splash-image (muki:user-emacs-directory "splash/splash.png"))
 
-;;;; parens
-(add-hook 'prog-mode-hook #'show-paren-mode)
-(set-option show-paren-delay 0
-            show-paren-style 'mixed)
-(after 'paren
-    (set-face-attribute 'show-paren-match-face nil
-     :foreground nil
-     :background (color-saturate-name
-                  (face-background 'default)
-                  30)
-     :underline nil))
-
 ;;;; syntax highlight
 (global-font-lock-mode 1)
 ;;;; dont enable this option

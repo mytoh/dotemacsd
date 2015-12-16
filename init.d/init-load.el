@@ -424,6 +424,7 @@
     tramp
     recentf
     font ; this cause slow displaying
+    paren
 
     ;; autorevert
     ;;clipboard
