@@ -1049,6 +1049,8 @@
 (hoarder:register "myuhe/ac-skk.el"
   '(:tag ["completion" "auto-complete" "skk"]
     :dependency ["myuhe/tinysegmenter.el"]))
+(hoarder:register "mrBliss/highlight-leading-spaces"
+  '(:tag ["highlight" "whitespace" "indent"]))
 
 
 ;; (hoarder:register "papaeye/emacs-jscs"
