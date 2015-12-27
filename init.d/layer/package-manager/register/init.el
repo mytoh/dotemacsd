@@ -1051,7 +1051,9 @@
     :dependency ["myuhe/tinysegmenter.el"]))
 (hoarder:register "mrBliss/highlight-leading-spaces"
   '(:tag ["highlight" "whitespace" "indent"]))
-
+(hoarder:register "johanvts/emacs-fireplace"
+  '(:tag ["animation"]))
+(hoarder:register "alezost/dim.el")
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
@@ -1409,6 +1411,7 @@
 (hoarder:register-theme "ysz/hhazure")
 (hoarder:register-theme "bkruczyk/badwolf-emacs")
 (hoarder:register-theme "fourier/idea-darkula-theme")
+(hoarder:register-theme "uemurax/japanese-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -1437,7 +1440,8 @@
   (add-project-root "helm-eshell-jump" '(:tag ["helm" "eshell"]))
   (add-project-root "emacs-glof" '(:tag ["plist" "utility"]))
   (add-project-root "emacs-fridge" )
-  (add-project-root "emacs-pcst-api" ))
+  (add-project-root "emacs-pcst-api")
+  (add-project-root "emacs-tupper"))
 
 ;;;;;; skk
 (hoarder:register "skk-dev/ddskk"
@@ -1971,6 +1975,9 @@
   '(:tag ["awesome-list" "dotfiles"]))
 (hoarder:fetch "maitria/packthread"
   '(:tag ["clojure" "threading"]))
+(hoarder:fetch "zkat/sheeple"
+  '(:tag ["common_lisp" "oop" "clos"]
+    :desc "[[https://vimeo.com/7242003&sa=U&ved=0ahUKEwjPjLn82ejJAhUKXRQKHffmDAk4ChC3AggfMAM&usg=AFQjCNERuNfycIl8dKGz0e8t_abMO48R2A]]"))
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;; (hoarder:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
