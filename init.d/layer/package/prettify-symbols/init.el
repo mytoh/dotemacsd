@@ -27,7 +27,13 @@
 
 (cl-defun muki:emacs-lisp-add-prettify-symbols ()
   (setq-local prettify-symbols-alist
-              (seq-concatenate 'list prettify-symbols-alist endless/emacs-lisp-prettify-alist)))
+              (seq-concatenate 'list prettify-symbols-alist endless/emacs-lisp-prettify-alist))
+  (add-to-list 'prettify-symbols-alist
+               '("pcase-lambda" . ?\꓀
+                 ;; ?\⫍ ?\⌦ ?\⍍ ?\⍃ ?\⎇ ?\⑁ ?\𝈑 ?\꓀ ?\꓃ ?\𝈄
+                 ))
+  (add-to-list 'prettify-symbols-alist
+               '("pcase" . ?\⎇)))
 
 (hook 'emacs-lisp-mode-hook #'muki:emacs-lisp-add-prettify-symbols)
 
