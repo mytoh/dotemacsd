@@ -6,7 +6,9 @@
 
 (add-hook 'prog-mode-hook #'show-paren-mode)
 (set-option show-paren-delay 0
-            show-paren-style 'parenthesis)
+            show-paren-style 'parenthesis
+            show-paren-when-point-inside-paren t
+            show-paren-when-point-in-periphery t)
 (after 'paren
     (set-face-attribute 'show-paren-match-face nil
      :foreground nil
