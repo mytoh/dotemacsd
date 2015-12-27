@@ -129,6 +129,13 @@
       "s" #'switch-to-scratch-buffer
       "r" #'revert-buffer)
   
+
+  (defun muki:switch-to-minibuffer-window ()
+    ;; spacemacs
+    "switch to minibuffer window (if active)"
+    (interactive)
+    (when (active-minibuffer-window)
+      (select-window (active-minibuffer-window))))
   
   (bind-map-set-keys my-base-leader-window-map
       "c"  #'delete-window
@@ -142,6 +149,7 @@
       "l"  #'evil-window-right
       "o"  #'delete-other-windows
       "s"  #'split-window-below
+      "b"  #'muki:switch-to-minibuffer-window
       "-"  #'split-window-below
       "v"  #'split-window-right
       "w"  #'other-window
