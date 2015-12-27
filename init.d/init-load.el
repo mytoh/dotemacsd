@@ -23,7 +23,8 @@
     ))
 
 (muki-layer:load-layers 'package
-  '(diminish))
+  '(;; diminish
+    dim))
 
 (muki-layer:load-layers 'org
   '(outshine
@@ -31,7 +32,7 @@
     org-autolist
     org
     org-pretty-table
-    orgit
+    ;;orgit
     org-download
     outline-magic
     org-cliplink
@@ -39,7 +40,7 @@
     toc-org
     org-query
     org-bullets
-    ox-pandoc
+    ;;ox-pandoc				
     org-hlc
     ob-browser
     ))
@@ -284,10 +285,10 @@
     highlight-thing
 
     volatile-highlights
-    highlight-parentheses
-    highlight-sexp
     highlight-defined
     highlight-leading-spaces
+    ;; highlight-parentheses
+    ;; highlight-sexp
     ;; highlight-tail
     ;; auto-highlight-symbol
     ;; highlight-indentation
