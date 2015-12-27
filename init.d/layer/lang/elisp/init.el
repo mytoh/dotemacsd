@@ -140,9 +140,9 @@
 (add-hook 'emacs-lisp-mode-hook #'muki:elisp-check-parens)
 (add-hook 'emacs-lisp-mode-hook #'checkdoc-minor-mode)
 (add-hook 'emacs-lisp-mode-hook #'eldoc-mode)
-(add-hook 'emacs-lisp-mode-hook
-          (clambda ()
-              (setq mode-name " ξ ")))
+;; (add-hook 'emacs-lisp-mode-hook
+;;           (clambda ()
+;;               (setq mode-name " ξ ")))
 ;; (add-hook 'emacs-lisp-mode-hook
 ;;           (lambda ()
 ;;             (add-to-list 'after-save-hook #'muki:elisp-reload-package)))
