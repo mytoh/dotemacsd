@@ -1400,7 +1400,6 @@
 (hoarder:register-theme "edliaw/bubblegum-theme")
 (hoarder:register-theme "jonathanchu/atom-one-dark-theme")
 (hoarder:register-theme "yuttie/hydrangea-theme")
-(hoarder:register-theme "emacsomancer/cybertron")
 (hoarder:register-theme "bmastenbrook/termbright-theme-el")
 (hoarder:register-theme "zenorocha/dracula-theme"
   '(:load-path "emacs"))
@@ -1586,8 +1585,6 @@
     :recursive nil))
 (hoarder:fetch "gridaphobe/dotfiles"
   '(:tag ["evil" "dotifles"]))
-(hoarder:fetch "farisnasution/.evil-pack"
-  '(:tag ["evil" "dotifles"]))
 (hoarder:fetch "takaishi/.emacs.d"
   '(:tag "dotfiles"))
 (hoarder:fetch "nanasess/dot.emacs")
@@ -1661,8 +1658,6 @@
   '(:tag ["evil"]))
 (hoarder:fetch "VincentToups/emacs-utils")
 (hoarder:fetch "bamos/dotfiles")
-(hoarder:fetch "bradyt/basic-computing-notes"
-  '(:tag ["org"]))
 (hoarder:fetch "Fuco1/.emacs.d")
 (hoarder:fetch "nlamirault/scame")
 (hoarder:fetch "dtan4/dot.emacs.d")
@@ -1671,7 +1666,6 @@
   '(:recursive nil))
 (hoarder:fetch "steventlamb/lamb-horned-beast")
 (hoarder:fetch "Bruce-Connor/emacs-online-documentation")
-(hoarder:fetch "unbalancedparentheses/lunfardo")
 (hoarder:fetch "emacsimize/org-admin"
   '(:tag ["org" "server"]))
 (hoarder:fetch "garaud/foggycowinn")
