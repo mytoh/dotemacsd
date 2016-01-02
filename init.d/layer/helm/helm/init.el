@@ -177,12 +177,6 @@ Otherwise goto the end of minibuffer."
 ;; misc
 (req 'helm-misc)
 
-;; migemo
-;; (when (executable-find "cmigemo")
-;;   (req 'migemo
-;;        (req 'helm-migemo
-;;             (setq helm-use-migemo t))))
-
 ;; descbinds
 (req 'helm-descbinds (helm-descbinds-mode))
 

@@ -6,8 +6,6 @@
             helm-multi-swoop-all)
            "helm-swoop")
 
-  (req 'helm-migemo)
-
   ;; キーバインドはお好みで
   (add-global-key "M-i" #'helm-swoop
                   "M-I" #'helm-swoop-back-to-last-point
