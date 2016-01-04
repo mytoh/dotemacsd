@@ -1054,6 +1054,8 @@
 (hoarder:register "johanvts/emacs-fireplace"
   '(:tag ["animation"]))
 (hoarder:register "alezost/dim.el")
+(hoarder:register "atomontage/xterm-color"
+  '(:tag ["color" "xterm" "ansi" "escape_sequence"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
