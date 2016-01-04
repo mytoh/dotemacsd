@@ -1411,6 +1411,7 @@
 (hoarder:register-theme "bkruczyk/badwolf-emacs")
 (hoarder:register-theme "fourier/idea-darkula-theme")
 (hoarder:register-theme "uemurax/japanese-theme")
+(hoarder:register-theme "siovan/emacs24-inkpot")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
