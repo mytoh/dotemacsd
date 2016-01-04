@@ -40,7 +40,7 @@
     toc-org
     org-query
     org-bullets
-    ;;ox-pandoc				
+    ;;ox-pandoc                 
     org-hlc
     ob-browser
     ))
@@ -348,6 +348,7 @@
     org-mode
     expand-region
     skk-mode
+    magit
     ))
 
 (muki-layer:load-layers 'helm
