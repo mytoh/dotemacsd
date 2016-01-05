@@ -166,6 +166,22 @@ Otherwise goto the end of minibuffer."
   ;;;; helm-eshell
   (enable-option helm-eshell-hist-ignoredups)
 
+  (after 'helm-files
+
+      (defun muki:helm-ff-candidates-html-p (candidate)
+        (string-match "\.htm[l]*$" candidate))
+
+  ;;;; Modify source attributes
+    ;;
+    ;; Add actions to `helm-source-find-files' IF:
+
+    (cl-defmethod helm-setup-user-source ((source helm-source-ffiles))
+      (helm-source-add-action-to-source-if
+       "Open file with eww"
+       #'eww-open-file
+       source
+       #'muki:helm-ff-candidates-html-p))
+    )
   )
 
 ;; helm-themes
