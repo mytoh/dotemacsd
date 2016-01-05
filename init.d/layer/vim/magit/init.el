@@ -4,8 +4,8 @@
 
 ;;; Code:
 
-(liby 'magit
-  (add-hook 'with-editor-mode-hook #'evil-normalize-keymaps)
+(after 'magit
+    (add-hook 'with-editor-mode-hook #'evil-normalize-keymaps)
 
   (bind-map my-leader-with-editor-map
       :evil-keys ("SPC m" ",")
