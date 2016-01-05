@@ -9,6 +9,8 @@
 ;;;; unprettify under cursor
 ;; (enable-option prettify-symbols-unprettify-at-point)
 
+(set-option prettify-symbols-unprettify-at-point 'right-edge)
+
 ;;; enable only for few modes
 (hook 'emacs-lisp-mode-hook #'prettify-symbols-mode)
 
