@@ -80,7 +80,7 @@ Otherwise goto the end of minibuffer."
                                                   '(picture-mode artist-mode))
               ;; helm-buffer-max-length 50x
               helm-candidate-number-limit 200
-              helm-raise-command                         "wmctrl -xa %s"
+              ;; helm-raise-command                         "wmctrl -xa %s"
               helm-tramp-verbose 6
               )
 
