@@ -1056,6 +1056,8 @@
 (hoarder:register "alezost/dim.el")
 (hoarder:register "atomontage/xterm-color"
   '(:tag ["color" "xterm" "ansi" "escape_sequence"]))
+(hoarder:register "noctuid/link-hint.el"
+  '(:tag ["avy" "ace_jump" "link" "hint"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
