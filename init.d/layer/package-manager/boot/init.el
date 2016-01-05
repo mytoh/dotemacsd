@@ -11,7 +11,7 @@
 
 ;;;; initialize hoarder
 (req 'hoarder
-  (cl-letf ((muki:hoarder-directory (locate-user-emacs-file "hoarder")))
+  (cl-letf ((muki:hoarder-directory (locate-user-emacs-file "vendor")))
     (hoarder:initialize muki:hoarder-directory)))
 
 ;;; boot.el ends here

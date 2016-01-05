@@ -1071,7 +1071,7 @@
 ;;;;; evil
 ;; TODO nede mercurial support
 (hoarder:register (expand-file-name "bitbucket.org/lyro/evil"
-                                    (locate-user-emacs-file "hoarder"))
+                                    (locate-user-emacs-file "vendor"))
   '(:build ["gmake doc all"]
     :info "doc"
     :dependency ["emacsmirror/goto-chg"

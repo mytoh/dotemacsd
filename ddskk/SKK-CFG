@@ -132,9 +132,9 @@
 ;; 設定できます。self-contained でない場合は通常の UNIX 的ファイル配置になりま
 ;; す。
 
-(setq SKK_DATADIR "~/.emacs.d/hoarder/ddskk/etc")
-(setq SKK_INFODIR "~/.emacs.d/hoarder/ddskk/info")
-(setq SKK_LISPDIR "~/.emacs.d/hoarder/ddskk")
+(setq SKK_DATADIR "~/.emacs.d/vendor/ddskk/etc")
+(setq SKK_INFODIR "~/.emacs.d/vendor/ddskk/info")
+(setq SKK_LISPDIR "~/.emacs.d/vendor/ddskk")
 (setq SKK_SET_JISYO t)
 
 

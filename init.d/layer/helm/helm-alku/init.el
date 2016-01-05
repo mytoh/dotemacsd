@@ -15,7 +15,7 @@
       (set-option helm-alku-directory-list
        `(("sarjakuva" . ,(muki:expand-path-huone "kuvat/sarjakuva"))
          ("paketti" . ,(locate-user-emacs-file "init.d/paketit"))
-         ("hoarder" . ,(locate-user-emacs-file "hoarder"))
+         ("hoarder" . ,(locate-user-emacs-file "vendor"))
          ("elpa" . ,(locate-user-emacs-file "elpa"))))
     (helm-alku-directory-add-subdirectories (muki:expand-path-huone "ateljee/"))
     (helm-alku-directory-add-subdirectories (muki:expand-path-huone "kuvat/sivusto"))
