@@ -5,7 +5,7 @@
 ;;; Code:
 
 (req 'auto-complete-config
-  (add-to-list 'ac-dictionary-directories "~/.emacs.d/hoarder/github.com/auto-complete/auto-complete/dict")
+  (add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/github.com/auto-complete/auto-complete/dict")
   (setq ac-auto-start 0
         ac-delay 0.2
         ac-quick-help-delay 1.
