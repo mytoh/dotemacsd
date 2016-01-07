@@ -323,7 +323,7 @@
     evil-cleverparens
     ;; evil-smartparens
     evil-anzu
-    evil-snipe
+    ;; evil-snipe
     evil-textobj-anyblock
     evil-iedit-state
     ;; evil-mc
