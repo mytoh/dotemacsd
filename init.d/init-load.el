@@ -402,6 +402,9 @@
     ;; company-org-headings
 
     auto-complete
+    ac-capf
+    ac-emoji
+    ac-skk
     ))
 
 (muki-layer:load-layers 'source-control
