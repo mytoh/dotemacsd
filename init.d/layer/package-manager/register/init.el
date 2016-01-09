@@ -1416,6 +1416,7 @@
 (hoarder:register-theme "fourier/idea-darkula-theme")
 (hoarder:register-theme "uemurax/japanese-theme")
 (hoarder:register-theme "siovan/emacs24-inkpot")
+(hoarder:register-theme "mswift42/reykjavik-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
