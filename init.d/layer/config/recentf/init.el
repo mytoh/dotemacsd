@@ -21,4 +21,13 @@
 ;; [[http://d.hatena.ne.jp/daimatz/20110529/1306602969]]
 (cl-pushnew "^/[^/:]+:" recentf-exclude)
 
+;;;;; save list periodically
+;; [[http://www.emacswiki.org/emacs?action=browse;diff=1;id=RecentFiles]]
+(after 'recentf
+    (run-at-time nil (* 10 60) #'recentf-save-list))
+
+;;;;; clean up when killing emacs
+(after 'recentf
+    (hook 'kill-emacs-hook #'recentf-cleanup))
+
 ;;; init.el ends here
