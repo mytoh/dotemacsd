@@ -1058,6 +1058,8 @@
   '(:tag ["color" "xterm" "ansi" "escape_sequence"]))
 (hoarder:register "noctuid/link-hint.el"
   '(:tag ["avy" "ace_jump" "link" "hint"]))
+(hoarder:register "pierre-lecocq/bonjourmadame")
+(hoarder:register "thierryvolpiatto/zop-to-char")
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
