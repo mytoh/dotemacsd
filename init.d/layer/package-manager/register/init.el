@@ -1049,6 +1049,11 @@
 (hoarder:register "myuhe/ac-skk.el"
   '(:tag ["completion" "auto-complete" "skk"]
     :dependency ["myuhe/tinysegmenter.el"]))
+(hoarder:register "aki2o/org-ac"
+  '(:tag ["completion" "auto-complete" "org-mode"]
+    :dependency ["aki2o/auto-complete-pcmp"
+                 "aki2o/log4e"
+                 "aki2o/yaxception"]))
 (hoarder:register "mrBliss/highlight-leading-spaces"
   '(:tag ["highlight" "whitespace" "indent"]))
 (hoarder:register "johanvts/emacs-fireplace"

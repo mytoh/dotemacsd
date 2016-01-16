@@ -405,6 +405,7 @@
     ac-capf
     ac-emoji
     ac-skk
+    org-ac
     ))
 
 (muki-layer:load-layers 'source-control
