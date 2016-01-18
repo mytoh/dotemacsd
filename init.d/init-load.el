@@ -221,7 +221,7 @@
     wordnut
     erlang
     sml-mode
-    ;; beacon ; error invalid face :background
+    beacon ; error invalid face :background
     clipmon
     font-lock-studio
     emojify
