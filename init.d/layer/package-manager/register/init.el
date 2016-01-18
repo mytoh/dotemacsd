@@ -1065,6 +1065,7 @@
   '(:tag ["avy" "ace_jump" "link" "hint"]))
 (hoarder:register "pierre-lecocq/bonjourmadame")
 (hoarder:register "thierryvolpiatto/zop-to-char")
+(hoarder:register "kawabata/zone-rainbow")
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
@@ -1393,7 +1394,6 @@
 (hoarder:register-theme "aalpern/emacs-color-theme-green-phosphor")
 (hoarder:register-theme "Alexander-Miller/morning-star-theme")
 (hoarder:register-theme "nhunzaker/emacs-ectoplasm-theme")
-(hoarder:register-theme "ryter/emacs-metro-theme")
 (hoarder:register-theme "PGGB/emacs-bluedrake-theme")
 (hoarder:register-theme "kostafey/organic-green-theme")
 (hoarder:register-theme "nashamri/spacemacs-theme")
@@ -1424,6 +1424,7 @@
 (hoarder:register-theme "uemurax/japanese-theme")
 (hoarder:register-theme "siovan/emacs24-inkpot")
 (hoarder:register-theme "mswift42/reykjavik-theme")
+(hoarder:register-theme "fourier/borland-blue-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
