@@ -12,6 +12,6 @@
          material subatomic ectoplasm spacemacs-dark
          base16-ocean-dark zerodark plan9 spacegray atom-one-dark
          aurora arjen-grey dracula inkpot idea-darkula
-         reykjavik morning-star))))
+         reykjavik morning-star majapahit-dark))))
 
 ;;; init.el ends here
