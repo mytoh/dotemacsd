@@ -1425,6 +1425,7 @@
 (hoarder:register-theme "siovan/emacs24-inkpot")
 (hoarder:register-theme "mswift42/reykjavik-theme")
 (hoarder:register-theme "fourier/borland-blue-theme")
+(hoarder:register-theme "hubisan/lorisan-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
