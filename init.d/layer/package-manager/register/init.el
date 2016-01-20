@@ -1426,6 +1426,7 @@
 (hoarder:register-theme "mswift42/reykjavik-theme")
 (hoarder:register-theme "fourier/borland-blue-theme")
 (hoarder:register-theme "hubisan/lorisan-theme")
+(hoarder:register-theme "hodumi/hodumi-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
