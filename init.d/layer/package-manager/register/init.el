@@ -1066,6 +1066,7 @@
 (hoarder:register "pierre-lecocq/bonjourmadame")
 (hoarder:register "thierryvolpiatto/zop-to-char")
 (hoarder:register "kawabata/zone-rainbow")
+(hoarder:register "parkeristyping/party-mode")
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
