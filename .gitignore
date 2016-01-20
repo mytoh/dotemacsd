@@ -34,8 +34,8 @@ tramp$
 # cask packages
 .cask/
 
-
-# Org-mode
-.org-id-locations
-*_archive
+# fontconfig
 fontconfig
+
+# flycheck
+flycheck_*.el
