@@ -23,15 +23,30 @@
                                           (buffer-file-name))))
                                        "test")
                          (string-match-p "-tests.el\\'" name))))
-        (if (test-file-p (buffer-file-name))
-            (switch-to-buffer (other-buffer (current-buffer)))
-          (cl-letf* ((test-dir (file-name-as-directory (expand-file-name "test" root)))
-                     (current (file-name-base (buffer-file-name)))
-                     (test-file (expand-file-name
-                                 (concat current "-tests.el")
-                                 test-dir)))
-            (when test-file
-              (find-file test-file)))))
+        (pcase (buffer-file-name)
+          ((pred test-file-p)
+           (cl-letf* ((buffers (buffer-list))
+                      (test-file (file-name-base (buffer-file-name)))
+                      (target-file (substring test-file 0
+                                              (string-match-p "-tests\\'" test-file))))
+             (if target-file
+                 (cl-letf ((target-buffer (seq-find (lambda (b)
+                                                      (when (buffer-file-name b)
+                                                        (cl-equalp target-file
+                                                                   (file-name-base (buffer-file-name b)))))
+                                                    buffers)))
+                   (if target-buffer
+                       (switch-to-buffer target-buffer)
+                     (switch-to-prev-buffer)))
+               (switch-to-prev-buffer))))
+          (_
+           (cl-letf* ((test-dir (file-name-as-directory (expand-file-name "test" root)))
+                      (current (file-name-base (buffer-file-name)))
+                      (test-file (expand-file-name
+                                  (concat current "-tests.el")
+                                  test-dir)))
+             (when test-file
+               (find-file test-file))))))
     (message "not in a vc repository")))
 
 ;; from spacemacs github.com/syl20bnr/spacemacs/spacemacs/keybindings.el
