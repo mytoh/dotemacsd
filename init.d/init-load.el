@@ -24,7 +24,8 @@
 
 (muki-layer:load-layers 'package
   '(;; diminish
-    dim))
+    ;; dim
+    ))
 
 (muki-layer:load-layers 'org
   '(outshine
@@ -100,9 +101,6 @@
     bbyac
 
     paradox
-    hl-todo
-    ;; hl-indent
-    ;; indent-guide
     rainbow-delimiters
     anzu
     smartparens
@@ -230,6 +228,8 @@
     github-notifier
     region-state
     prettify-symbols
+    erefactor
+    elm-mode
 
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
@@ -287,11 +287,14 @@
     volatile-highlights
     highlight-defined
     highlight-leading-spaces
+    highlight-indentation
+    hl-todo
+    ;; hl-indent
+    ;; indent-guide
     ;; highlight-parentheses
     ;; highlight-sexp
     ;; highlight-tail
     ;; auto-highlight-symbol
-    ;; highlight-indentation
     ;; highlight-stages
     ;; highlight-backquotes-mode
     ))
