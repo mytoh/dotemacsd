@@ -1187,6 +1187,7 @@
   '(:tag ["emacs-lisp" "lint" "elint" "refactoring"]))
 (hoarder:register "jcollard/elm-mode"
   '(:tag ["elm" "language" "haskell"]))
+(hoarder:register "EricCrosson/unkillable-scratch")
 
 
 ;; (hoarder:register "papaeye/emacs-jscs"
