@@ -230,7 +230,8 @@
     prettify-symbols
     erefactor
     elm-mode
-
+    unkillable-scratch
+    
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
     ;; cycle-themes
