@@ -231,6 +231,7 @@
     erefactor
     elm-mode
     unkillable-scratch
+    mode-icons
     
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error

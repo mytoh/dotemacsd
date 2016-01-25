@@ -1188,6 +1188,8 @@
 (hoarder:register "jcollard/elm-mode"
   '(:tag ["elm" "language" "haskell"]))
 (hoarder:register "EricCrosson/unkillable-scratch")
+(hoarder:register "ryuslash/mode-icons")
+
 
 
 ;; (hoarder:register "papaeye/emacs-jscs"
@@ -1404,7 +1406,6 @@
 (hoarder:register-theme "PGGB/emacs-bluedrake-theme")
 (hoarder:register-theme "kostafey/organic-green-theme")
 (hoarder:register-theme "nashamri/spacemacs-theme")
-(hoarder:register-theme "vyp/redbelly")
 (hoarder:register-theme "NicolasPetton/zerodark-theme")
 (hoarder:register-theme "credmp/arjen-grey")
 (hoarder:register-theme "warreq/xres-theme"
