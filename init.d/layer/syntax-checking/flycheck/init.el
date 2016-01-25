@@ -16,6 +16,8 @@
   ;; (add-hook 'js-mode-hook (clambda ()
   ;;                           (flycheck-select-checker 'javascript-jslint-reporter)
   ;;                           (flycheck-mode)))
+
+  (setq flycheck-emacs-lisp-load-path 'inherit)
   )
 
 (liby 'flycheck-pos-tip

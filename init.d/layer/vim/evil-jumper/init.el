@@ -4,7 +4,7 @@
 
 (cl-defun muki:init-evil-jumper ()
   (req 'evil-jumper
-    (enable-option evil-jumper-auto-center)))
+    (turn-on-evil-jumper-mode)))
 
 (muki:init-evil-jumper)
 
