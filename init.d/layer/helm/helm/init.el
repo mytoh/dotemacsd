@@ -95,7 +95,6 @@ Otherwise goto the end of minibuffer."
   (enable-option helm-M-x-always-save-history
                  helm-split-window-in-side-p ; open helm buffer inside current window, not occupy whole other window
                  helm-buffer-skip-remote-checking
-                 atching for these sources with:
                  helm-M-x-fuzzy-match
                  helm-mode-fuzzy-match 
                  helm-apropos-fuzzy-match
@@ -134,18 +133,18 @@ Otherwise goto the end of minibuffer."
                 ("pdf" . "mcomix")
                 ("7z" . "mcomix")
                 ("tar.gz" . "mcomix")
-                ("jpg" . "ekuva")
-                ("JPG" . "ekuva")
-                ("png" . "ekuva")
-                ("gif" . "ekuva")
-                ("mov" . "mpv")
-                ("swf" . "mpv")
-                ("flv" . "mpv")
-                ("avi" . "mpv")
-                ("mkv" . "mpv")
-                ("mp4" . "mpv")
-                ("wmv" . "mpv")
-                ("webm" . "empv_all")
+                ("jpg" . "epiki ekuva")
+                ("JPG" . "epiki ekuva")
+                ("png" . "epiki ekuva")
+                ("gif" . "epiki ekuva")
+                ("mov" . "epiki evid single")
+                ("swf" . "epiki evid single")
+                ("flv" . "epiki evid single")
+                ("avi" . "epiki evid single")
+                ("mkv" . "epiki evid single")
+                ("mp4" . "epiki evid single")
+                ("wmv" . "epiki evid single")
+                ("webm" . "epiki evid all")
                 ("pdf" . "mupdf")))
 
   (enable-option helm-bookmark-show-location)
