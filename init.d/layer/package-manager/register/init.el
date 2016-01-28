@@ -1191,7 +1191,6 @@
 (hoarder:register "ryuslash/mode-icons")
 
 
-
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
 ;;                     :dependency (("papaeye/go-mode.el"
@@ -1435,13 +1434,15 @@
 (hoarder:register-theme "fourier/borland-blue-theme")
 (hoarder:register-theme "hubisan/lorisan-theme")
 (hoarder:register-theme "hodumi/hodumi-theme")
+(hoarder:register-theme "mswift42/hamburg-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
-              (hoarder:register (thread-last (getenv "HUONE")
-                                  (expand-file-name "ateljee")
-                                  (expand-file-name path))
-                option)))
+              (cl-letf ((proj-path (thread-last (getenv "HUONE")
+                                     (expand-file-name "ateljee")
+                                     (expand-file-name path))))
+                (when (file-exists-p proj-path)
+                  (hoarder:register proj-path option)))))
   (add-project-root  "emacs-flatline")
   (add-project-root "helm-ypv" '(:tag "helm"))
   (add-project-root "company-scheme" '(:tag ["company" "scheme"]))
@@ -1466,7 +1467,8 @@
   (add-project-root "emacs-pcst-api")
   (add-project-root "emacs-tupper")
   (add-project-root "emacs-napron")
-  (add-project-root "eshell-lista"))
+  (add-project-root "eshell-lista")
+  (add-project-root "emacs-colle"))
 
 ;;;;;; skk
 (hoarder:register "skk-dev/ddskk"
