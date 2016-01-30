@@ -7,6 +7,7 @@
 
 ;;;  setup
 (muki:add-to-load-path (muki:expand-path-huone "ateljee/emacs-glof/"))
+(muki:add-to-load-path (muki:expand-path-huone "ateljee/emacs-colle/"))
 (muki:add-to-load-path (muki:expand-path-huone "ateljee/emacs-hoarder/"))
 
 ;;;; initialize hoarder
