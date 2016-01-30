@@ -2,6 +2,8 @@
 
 ;;; Code:
 
+(setq max-lisp-eval-depth 8000)
+
 ;;;;  register packages
 ;;;;; helm
 (hoarder:register "emacs-helm/helm"
