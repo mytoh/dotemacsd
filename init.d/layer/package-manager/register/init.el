@@ -329,7 +329,8 @@
     :info "Documentation"
     :load-path ["lisp"]
     :dependency [("magnars/dash.el" ( :compile nil))
-                 ("jwiegley/emacs-async")]
+                 "jwiegley/emacs-async"
+                 "magit/with-editor"]
     :tag "git"))
 (hoarder:register "magit/orgit"
   '(:tag ["git" "org" "magit"]))
@@ -1189,6 +1190,9 @@
   '(:tag ["elm" "language" "haskell"]))
 (hoarder:register "EricCrosson/unkillable-scratch")
 (hoarder:register "ryuslash/mode-icons")
+(hoarder:register "mrkkrp/char-menu"
+  '(:tag ["unicode"]
+    :dependency ["mrkkrp/avy-menu"]))
 
 
 ;; (hoarder:register "papaeye/emacs-jscs"

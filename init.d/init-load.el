@@ -232,6 +232,7 @@
     elm-mode
     unkillable-scratch
     mode-icons
+    char-menu
     
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
