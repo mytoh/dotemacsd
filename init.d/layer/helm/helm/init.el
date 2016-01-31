@@ -136,7 +136,7 @@ Otherwise goto the end of minibuffer."
                 ("jpg" . "epiki ekuva")
                 ("JPG" . "epiki ekuva")
                 ("png" . "epiki ekuva")
-                ("gif" . "epiki ekuva")
+                ("gif" . "epiki evid all")
                 ("mov" . "epiki evid single")
                 ("swf" . "epiki evid single")
                 ("flv" . "epiki evid single")
