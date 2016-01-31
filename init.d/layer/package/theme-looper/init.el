@@ -6,13 +6,17 @@
   (defery 'theme-looper)
   (after 'theme-looper
       (theme-looper-set-theme-set
-       '(comidia planet monokai molokai firebelly
-         gruvbox base16-tomorrow odersky jazz purple-haze
-         warm-night brin gotham soothe spolsky wilson noctilux erosiond
-         material subatomic ectoplasm spacemacs-dark
-         base16-ocean-dark zerodark plan9 spacegray atom-one-dark
-         aurora arjen-grey dracula inkpot idea-darkula
-         reykjavik morning-star majapahit-dark redbelly badwolf
-         hanburg))))
+       (colle:filter
+        (lambda (theme)
+          (colle:find (lambda (tm) (eq tm theme))
+                      (custom-available-themes)))
+        '(comidia planet monokai molokai firebelly
+          gruvbox base16-tomorrow odersky jazz purple-haze
+          warm-night brin gotham soothe spolsky wilson noctilux erosiond
+          material subatomic ectoplasm spacemacs-dark
+          base16-ocean-dark zerodark plan9 spacegray atom-one-dark
+          aurora arjen-grey dracula inkpot idea-darkula
+          reykjavik morning-star majapahit-dark redbelly badwolf
+          hamburg)))))
 
 ;;; init.el ends here
