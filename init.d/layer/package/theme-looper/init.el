@@ -2,6 +2,8 @@
 
 ;;; Code:
 
+(req 'colle)
+
 (liby 'theme-looper
   (defery 'theme-looper)
   (after 'theme-looper
