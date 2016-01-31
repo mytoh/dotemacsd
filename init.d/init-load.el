@@ -183,7 +183,8 @@
     itunes-bgm
     imagex
     browse-at-remote
-    auto-save-buffers-enhanced
+    super-save
+    ;; auto-save-buffers-enhanced
     compilation-highlight
     conkeror-minor-mode
     mpv
@@ -336,7 +337,8 @@
     evil-quickscope
     ;; evil-lisp-state
     evil-magit
-    evil-org-mode
+    ;; evil-org-mode
+    ;; pure-evil
     bind-map
     ))
 

@@ -271,6 +271,8 @@
     :dependency ["tsdh/iedit"]))
 (hoarder:register "justbur/emacs-bind-map"
   '(:tag ["evil" "key_binding"]))
+(hoarder:register "justbur/pure-evil"
+  '(:tag ["evil" "key_binding"]))
 
 ;;;;;  general packages
 (hoarder:register "magnars/s.el")
@@ -1195,6 +1197,8 @@
 (hoarder:register "mrkkrp/char-menu"
   '(:tag ["unicode"]
     :dependency ["mrkkrp/avy-menu"]))
+(hoarder:register "bbatsov/super-save"
+  '(:tag ["auto-save"]))
 
 
 ;; (hoarder:register "papaeye/emacs-jscs"
