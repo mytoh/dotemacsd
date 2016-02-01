@@ -258,8 +258,6 @@
                  "magnars/dash.el"]))
 (hoarder:register "syl20bnr/evil-iedit-multiple-cursors"
   '(:tag ["evil" "multiple-cursors"]))
-(hoarder:register "vyp/evil-quick-scope"
-  '(:tag ["evil"]))
 (hoarder:register "blorbx/evil-quickscope"
   '(:tag ["evil"]))
 (hoarder:register "louy2/evil-avy"
