@@ -415,8 +415,7 @@
                  "jwiegley/emacs-async"
                  "Malabarba/spinner.el"
                  "abo-abo/hydra"]))
-(hoarder:register "Bruce-Connor/aggressive-indent-mode"
-  '(:dependency ["Bruce-Connor/names"]))
+(hoarder:register "Malabarba/aggressive-indent-mode")
 (hoarder:register "Bruce-Connor/rich-minority")
 (hoarder:register "steckerhalter/google-el")
 (hoarder:register "daemianmack/magit-cheatsheet"
@@ -2010,6 +2009,8 @@
 (hoarder:fetch "zkat/sheeple"
   '(:tag ["common_lisp" "oop" "clos"]
     :desc "[[https://vimeo.com/7242003&sa=U&ved=0ahUKEwjPjLn82ejJAhUKXRQKHffmDAk4ChC3AggfMAM&usg=AFQjCNERuNfycIl8dKGz0e8t_abMO48R2A]]"))
+(hoarder:fetch "Shinmera/.emacs"
+  '(:tag ["dotemacs" "emacs" "common_lisp"]))
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;; (hoarder:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
