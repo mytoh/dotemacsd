@@ -89,6 +89,10 @@
     :evil-keys ("T")
     :evil-states (normal motion))
 
+  (muki:bind-leader-map my-base-leader-text-minip-map
+    :evil-keys ("x")
+    :evil-state (normal))
+
 
   (bind-map-set-keys my-base-leader-map
       ;; Universal argument ---------------------------------------------------------
@@ -305,6 +309,11 @@
   (liby 'evil-iedit-state
     (bind-map-set-keys my-base-leader-search-map
         "e" 'evil-iedit-state/iedit-mode))
+
+  (liby 'link-hint
+    (bind-map-set-keys my-base-leader-text-minip-map
+        "o" 'link-hint-open-link
+        "O" 'link-hint-open-multiple-links))
 
   )
 
