@@ -234,6 +234,8 @@
     unkillable-scratch
     mode-icons
     char-menu
+    aggressive-indent
+    link-hint
     
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
@@ -261,7 +263,6 @@
     ;; emux
     ;; yasnippet
     ;; js3-mode
-    ;; aggressive-indent
     ;; vi-tilde-fringe
     ;; travis
     ;; git-gutter-fringe-plus
