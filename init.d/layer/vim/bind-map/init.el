@@ -164,6 +164,7 @@
   (liby 'mesh
     (muki:bind-leader-map my-mesh-leader-map
       :evil-keys ("z")
+      :major-modes (eshell-mode)
       :minor-modes (mesh-mode))
     (bind-map-set-keys my-base-leader-map
         "z z" #'mesh:switch)
