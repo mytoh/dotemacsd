@@ -438,4 +438,7 @@
 ;; disable cursor in non selected windows
 (disable-option cursor-in-non-selected-windows)
 
+;; change quoting style
+(set-option text-quoting-style 'grave)
+
 ;;; config-setting.el ends here
