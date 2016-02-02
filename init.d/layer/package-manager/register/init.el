@@ -1442,6 +1442,7 @@
 (hoarder:register-theme "hubisan/lorisan-theme")
 (hoarder:register-theme "hodumi/hodumi-theme")
 (hoarder:register-theme "mswift42/hamburg-theme")
+(hoarder:register-theme "TheSuspiciousWombat/suscolors-emacs")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
