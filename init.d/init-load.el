@@ -236,6 +236,7 @@
     char-menu
     aggressive-indent
     link-hint
+    tldr
     
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error

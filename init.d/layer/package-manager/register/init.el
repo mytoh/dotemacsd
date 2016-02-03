@@ -1196,6 +1196,8 @@
     :dependency ["mrkkrp/avy-menu"]))
 (hoarder:register "bbatsov/super-save"
   '(:tag ["auto-save"]))
+(hoarder:register "kuanyui/tldr.el"
+  '(:tag ["tldr" "man" "document"]))
 
 
 ;; (hoarder:register "papaeye/emacs-jscs"
