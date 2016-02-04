@@ -1198,6 +1198,8 @@
   '(:tag ["auto-save"]))
 (hoarder:register "kuanyui/tldr.el"
   '(:tag ["tldr" "man" "document"]))
+(hoarder:register "tj64/ert-buffer-report"
+  '(:tag ["ert" "org-mode"]))
 
 
 ;; (hoarder:register "papaeye/emacs-jscs"
