@@ -5,9 +5,10 @@
 (liby 'which-key
   (req 'popwin)
   (command (which-key-mode which-key-setup-side-window-bottom)
-	   "which-key")
+           "which-key")
   (set-option which-key-max-description-length 32)
-  (set-option which-key-idle-delay 0.5)
+  ;; (setq which-key-idle-delay 0.01)
+  ;; (setq which-key-idle-secondary-delay 0.01)
   (enable-option which-key-allow-evil-operators)
   (which-key-setup-side-window-bottom)
   (which-key-mode)
