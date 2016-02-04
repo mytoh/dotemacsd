@@ -4,8 +4,8 @@
 
 (liby 'evil-quickscope
   (command (turn-on-evil-quickscope-always-mode
-            evil-quickscope-mode)
+            turn-on-evil-quickscope-mode)
            "evil-quickscope")
-  (add-hook 'emacs-lisp-mode-hook 'turn-on-evil-quickscope-always-mode))
+  (add-hook 'emacs-lisp-mode-hook 'turn-on-evil-quickscope-mode))
 
 ;;; init.el ends here
