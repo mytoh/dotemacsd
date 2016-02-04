@@ -1223,8 +1223,10 @@
 (hoarder:register "tj64/org-hlc")
 
 (hoarder:register "tj64/outorg" '(:compile nil
+                                  :branch "trunk"
                                   :tag ["org" "outline"]))
 (hoarder:register "tj64/outshine" '(:compile nil
+                                    :branch "trunk"
                                     :tag ["org" "outline"]
                                     :dependency ["tj64/outorg"]))
 ;; (hoarder:register "jleechpe/outorg-export")
