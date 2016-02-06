@@ -18,7 +18,7 @@
 (muki-layer:load-layers 'package-manager
   '(boot
     register
-    check
+    ;; check
     hoarder
     ))
 
@@ -237,6 +237,7 @@
     aggressive-indent
     link-hint
     tldr
+    party-mode
     
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
