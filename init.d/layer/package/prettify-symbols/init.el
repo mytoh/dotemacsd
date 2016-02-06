@@ -35,7 +35,9 @@
                  ;; ?\⫍ ?\⌦ ?\⍍ ?\⍃ ?\⎇ ?\⑁ ?\𝈑 ?\꓀ ?\꓃ ?\𝈄
                  ))
   (add-to-list 'prettify-symbols-alist
-               '("pcase" . ?\⎇)))
+               '("pcase" . ?\⎇))
+  (add-to-list 'prettify-symbols-alist
+               '("funcall" . ?\𝐅)))
 
 (hook 'emacs-lisp-mode-hook #'muki:emacs-lisp-add-prettify-symbols)
 
