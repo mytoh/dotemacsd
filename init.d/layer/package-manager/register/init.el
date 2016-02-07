@@ -1204,6 +1204,9 @@
 (hoarder:register "capitaomorte/yasnippet"
   '(:tag ["snippet"]
     :recursive t))
+(hoarder:register "mineo/yatemplate"
+  '(:tag ["yasnippet" "template" "autoinsert"]
+    :dependency ["capitaomorte/yasnippet"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
