@@ -10,6 +10,7 @@
   (hook 'css-mode-hook #'rainbow-mode)
   (hook 'js3-mode-hook #'rainbow-mode)
   (hook 'js-mode-hook #'rainbow-mode)
+  (hook 'help-mode-hook #'rainbow-mode)
   (after 'diminish
       (after 'rainbow-mode
           (diminish 'rainbow-mode " ω"))))
