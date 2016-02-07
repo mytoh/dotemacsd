@@ -6,7 +6,9 @@
   ;;;; yasnippet
 (req 'yasnippet
   (set-option yas-snippet-dirs
-              yas--default-user-snippets-dir)
+              (list (expand-file-name
+                     "init.d/snippets"
+                     user-emacs-directory)))
   (yas-global-mode 1))
 
 ;;; init.el ends here
