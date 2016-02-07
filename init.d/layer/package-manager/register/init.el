@@ -1201,6 +1201,9 @@
 (hoarder:register "tj64/ert-buffer-report"
   '(:tag ["ert" "org-mode"]))
 
+(hoarder:register "capitaomorte/yasnippet"
+  '(:tag ["snippet"]
+    :recursive t))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
@@ -1211,7 +1214,7 @@
 ;;                  '(:tag ["pdf"]))
 ;; (hoarder:register "http://git.chise.org/git/elisp/flim.git"
 ;;                  '(:tag ["flim" "luna"]))
-;; (hoarder:register "capitaomorte/yasnippet")
+
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"

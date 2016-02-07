@@ -238,6 +238,7 @@
     link-hint
     tldr
     party-mode
+    yasnippet
     
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
@@ -263,7 +264,6 @@
     ;; fuzzyjump
     ;; zone-settings
     ;; emux
-    ;; yasnippet
     ;; js3-mode
     ;; vi-tilde-fringe
     ;; travis
