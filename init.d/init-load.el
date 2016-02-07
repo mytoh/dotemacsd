@@ -433,7 +433,7 @@
     face
     eshell
     whitespace
-    autoinsert
+    ;; autoinsert
     dired
     eww
     newsticker
