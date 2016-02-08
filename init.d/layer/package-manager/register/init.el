@@ -1069,7 +1069,7 @@
   '(:tag ["clojure" "test"]))
 (hoarder:register "cadadr/forecast.el"
   '(:tag ["weather" "forecast"]))
-(hoarder:register "emacsmirror/cparen"
+(hoarder:register "emacsattic/cparen"
   '(:tag ["scheme"]))
 (hoarder:register "steventlamb/yatt.el"
   '(:tag ["tea" "timer"]))
