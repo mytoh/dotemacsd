@@ -400,6 +400,7 @@
     helm-japanese-weather
     helm-kaomoji
     helm-swoop
+    helm-describe-modes
     ;; swiper
     ;; helm-company
     ;; helm-delicious

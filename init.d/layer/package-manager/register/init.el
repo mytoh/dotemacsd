@@ -152,6 +152,7 @@
     :dependency ["lewang/flx"]))
 (hoarder:register "syohex/emacs-helm-japanese-weather")
 (hoarder:register "syohex/emacs-helm-kaomoji")
+(hoarder:register "xiongtx/helm-describe-modes")
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]
 ;;                    :dependency ["michael-heerdegen/iterators.el"]))
