@@ -1458,6 +1458,7 @@
 (hoarder:register-theme "TheSuspiciousWombat/suscolors-emacs")
 (hoarder:register-theme "franksn/omtose-phellack-theme")
 (hoarder:register-theme "rost/emacs-lesser-theme")
+(hoarder:register-theme "d125q/gruvbox-dark-emacs")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
