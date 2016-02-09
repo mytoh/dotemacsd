@@ -1494,7 +1494,8 @@
   (add-project-root "emacs-tupper")
   (add-project-root "emacs-napron")
   (add-project-root "eshell-lista")
-  (add-project-root "emacs-colle"))
+  (add-project-root "emacs-colle")
+  (add-project-root "emacs-sis"))
 
 ;;;;;; skk
 (hoarder:register "skk-dev/ddskk"
