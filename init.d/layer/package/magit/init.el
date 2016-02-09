@@ -26,7 +26,8 @@
             (set (make-local-variable 'fill-column) 72)
           (turn-on-auto-fill))))
 
-(command (magit-status magit-log) "magit")
+(command (magit-status magit-log magit-init)
+         "magit")
 
 (liby 'magit
   (muki:magit-setup))
