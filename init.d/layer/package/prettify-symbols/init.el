@@ -21,11 +21,17 @@
 (defvar endless/emacs-lisp-prettify-alist '())
 
 (add-to-list 'endless/emacs-lisp-prettify-alist
-             '("thread-first" . (?- (Br . Bc) ?- (Br . Bc) ?>)))
+             '("thread-first" . (?\s (Br . Bl) ?\s (Bc . Bc) ?🠊)))
 (add-to-list 'endless/emacs-lisp-prettify-alist
-             '("thread-last" .  (?\s (Br . Bl) ?\s (Br . Bl) ?\s
-                                 (Bl . Bl) ?- (Bc . Br) ?- (Bc . Bc) ?>
-                                 (Bc . Bl) ?- (Br . Br) ?>)))
+             '("thread-last" . (?\s (Br . Bl) ?\s (Br . Bl) ?\s
+                                (Bc . Br) ?🠊 (Bc . Bl) ?🠊)))
+
+;; (add-to-list 'endless/emacs-lisp-prettify-alist
+;;              '("thread-first" . (?- (Br . Bc) ?- (Br . Bc) ?>)))
+;; (add-to-list 'endless/emacs-lisp-prettify-alist
+;;              '("thread-last" .  (?\s (Br . Bl) ?\s (Br . Bl) ?\s
+;;                                  (Bl . Bl) ?- (Bc . Br) ?- (Bc . Bc) ?>
+;;                                  (Bc . Bl) ?- (Br . Br) ?>)))
 
 (cl-defun muki:emacs-lisp-add-prettify-symbols ()
   (setq-local prettify-symbols-alist
