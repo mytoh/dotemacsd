@@ -1208,6 +1208,8 @@
 (hoarder:register "mineo/yatemplate"
   '(:tag ["yasnippet" "template" "autoinsert"]
     :dependency ["capitaomorte/yasnippet"]))
+(hoarder:register "legoscia/cabledolphin"
+  '(:tag ["wireshark" "packet" "network"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
