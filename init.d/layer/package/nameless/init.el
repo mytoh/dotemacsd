@@ -8,9 +8,12 @@
   (after 'nameless
       (set-option nameless-prefix "¦")
     (set-option nameless-separator ":")
-    (add-to-list 'nameless-global-aliases
-                 '("⚢" . "sis" ))
-    (add-to-list 'nameless-global-aliases
-                 '("☠" . "hoarder" ))))
+    (cl-labels ((add-alias (icon name)
+                  (add-to-list 'nameless-global-aliases
+                               (cons icon name)))))
+    (add-alias "⚢" "sis")
+    (add-alias "☠"  "hoarder")
+    (add-alias "🍺" "muki")
+    (add-alias "🍱" "colle")))
 
 ;;; init.el ends here
