@@ -10,10 +10,11 @@
     (set-option nameless-separator ":")
     (cl-labels ((add-alias (icon name)
                   (add-to-list 'nameless-global-aliases
-                               (cons icon name)))))
-    (add-alias "⚢" "sis")
-    (add-alias "☠"  "hoarder")
-    (add-alias "🍺" "muki")
-    (add-alias "🍱" "colle")))
+                               (cons icon name))))
+      (add-alias "⚢" "sis")
+      (add-alias "☠"  "hoarder")
+      (add-alias "🍺" "muki")
+      (add-alias "🍱" "colle")
+      (add-alias "👚" "mesh"))))
 
 ;;; init.el ends here
