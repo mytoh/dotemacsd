@@ -160,7 +160,7 @@
 ;;;;; evil
 ;; TODO nede mercurial support
 (hoarder:register (expand-file-name "bitbucket.org/lyro/evil"
-                                    (locate-user-emacs-file "vendor"))
+                              (locate-user-emacs-file "vendor"))
   '(:build ["gmake doc all"]
     :info "doc"
     :dependency ["emacsmirror/goto-chg"
@@ -1232,12 +1232,12 @@
 (hoarder:register "tj64/org-hlc")
 
 (hoarder:register "tj64/outorg" '(:compile nil
-                                  :branch "trunk"
-                                  :tag ["org" "outline"]))
+                            :branch "trunk"
+                            :tag ["org" "outline"]))
 (hoarder:register "tj64/outshine" '(:compile nil
-                                    :branch "trunk"
-                                    :tag ["org" "outline"]
-                                    :dependency ["tj64/outorg"]))
+                              :branch "trunk"
+                              :tag ["org" "outline"]
+                              :dependency ["tj64/outorg"]))
 ;; (hoarder:register "jleechpe/outorg-export")
 (hoarder:register "tj64/navi"
   '(:tag ["org" "outline"]))
@@ -1461,6 +1461,7 @@
 (hoarder:register-theme "franksn/omtose-phellack-theme")
 (hoarder:register-theme "rost/emacs-lesser-theme")
 (hoarder:register-theme "d125q/gruvbox-dark-emacs")
+(hoarder:register-theme "rogermolas/boracay-dark.el")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
