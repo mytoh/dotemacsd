@@ -19,9 +19,10 @@
 
   (setq flycheck-emacs-lisp-load-path 'inherit)
 
-  (after 'flycheck
-      (set-face-background 'flycheck-warning
-       (color-lighten-name (face-background 'default) 15))))
+  (add-hook 'flycheck-mode-hook
+            (lambda ()
+              (set-face-background 'flycheck-warning
+                                   (color-lighten-name (face-background 'default) 15)))))
 
 (liby 'flycheck-pos-tip
   (when (display-graphic-p (selected-frame))
