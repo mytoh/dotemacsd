@@ -4,6 +4,8 @@
 
 ;;; Code:
 
-(req 'elm-mode)
+(liby 'elm-mode
+  (command (elm-mode) "elm-mode")
+  (mode "\\.elm\\'" #'elm-mode))
 
 ;;; init.el ends here
