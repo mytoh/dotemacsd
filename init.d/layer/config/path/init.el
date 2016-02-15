@@ -12,8 +12,9 @@
                             "-c")
                            ((string-match "mksh\\'" shell)
                             "-l -c")
-                           ;; ((string-match "fish\\'" shell)
-                           ;;  "--login -c \"sh -c 'echo $PATH'\"")
+                           ((string-match "fish\\'" shell)
+                            "--interactive --login --command=\"printf '%s' {$PATH}\"")
+                           ;; fish -i -l -c "printf \"__RESULT %s %s\" \"$PATH\" \"$MANPATH\""
                            (else
                             "--login -c")))
              (path-from-shell (replace-regexp-in-string

@@ -1210,6 +1210,8 @@
     :dependency ["capitaomorte/yasnippet"]))
 (hoarder:register "legoscia/cabledolphin"
   '(:tag ["wireshark" "packet" "network"]))
+(hoarder:register "syohex/emacs-ac-shell"
+  '(:tag ["auto-complete" "shell"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
@@ -1450,7 +1452,8 @@
 (hoarder:register-theme "ysz/hhazure")
 (hoarder:register-theme "bkruczyk/badwolf-emacs")
 (hoarder:register-theme "fourier/idea-darkula-theme")
-(hoarder:register-theme "uemurax/japanese-theme")
+(hoarder:register-theme "uemurax/japanese-theme"
+  '(:build ["gmake ELC"]))
 (hoarder:register-theme "siovan/emacs24-inkpot")
 (hoarder:register-theme "mswift42/reykjavik-theme")
 (hoarder:register-theme "fourier/borland-blue-theme")
@@ -1462,6 +1465,7 @@
 (hoarder:register-theme "rost/emacs-lesser-theme")
 (hoarder:register-theme "d125q/gruvbox-dark-emacs")
 (hoarder:register-theme "rogermolas/boracay-dark.el")
+(hoarder:register-theme "mswift42/silkworm-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)

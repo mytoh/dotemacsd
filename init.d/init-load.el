@@ -394,8 +394,8 @@
     helm-commandlinefu
     helm-unicode
     helm-github-stars
-    helm-fuzzier
-    helm-flx
+    ;; helm-fuzzier
+    ;; helm-flx
     helm-open-github
     helm-japanese-weather
     helm-kaomoji
@@ -419,6 +419,7 @@
     ac-emoji
     ac-skk
     org-ac
+    ac-shell
     ))
 
 (muki-layer:load-layers 'source-control
