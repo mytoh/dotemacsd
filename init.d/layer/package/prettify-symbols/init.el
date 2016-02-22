@@ -43,7 +43,13 @@
   (add-to-list 'prettify-symbols-alist
                '("pcase" . ?\⎇))
   (add-to-list 'prettify-symbols-alist
-               '("funcall" . ?\𝐅)))
+               '("funcall" . ?\𝐅))
+  (add-to-list 'prettify-symbols-alist
+               '("not" . ?\¬))
+  (add-to-list 'prettify-symbols-alist
+               '("and" . ?\∧))
+  (add-to-list 'prettify-symbols-alist
+               '("or" . ?\∨)))
 
 (hook 'emacs-lisp-mode-hook #'muki:emacs-lisp-add-prettify-symbols)
 

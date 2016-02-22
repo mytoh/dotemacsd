@@ -95,10 +95,10 @@ Otherwise goto the end of minibuffer."
   (enable-option helm-M-x-always-save-history
                  helm-split-window-in-side-p ; open helm buffer inside current window, not occupy whole other window
                  helm-buffer-skip-remote-checking
-                 helm-M-x-fuzzy-match
-                 helm-mode-fuzzy-match 
-                 helm-apropos-fuzzy-match
-                 helm-recentf-fuzzy-match
+                 ;; helm-M-x-fuzzy-match
+                 ;; helm-mode-fuzzy-match 
+                 ;; helm-apropos-fuzzy-match
+                 ;; helm-recentf-fuzzy-match
                  )
   (disable-option enable-recursive-minibuffers
                   helm-quick-update

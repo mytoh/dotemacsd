@@ -191,8 +191,6 @@
 ;;                   :dependency ["emacsmirror/highlight"]))
 (hoarder:register "sunesimonsen/evil-walk-on-the-edge"
   '(:tag "evil"))
-(hoarder:register "bling/evil-jumper"
-  '(:tag "evil"))
 (hoarder:register "roman/evil-paredit"
   '(:tag "evil"))
 (hoarder:register "Dewdrops/evil-extra-operator"
@@ -1212,6 +1210,10 @@
   '(:tag ["wireshark" "packet" "network"]))
 (hoarder:register "syohex/emacs-ac-shell"
   '(:tag ["auto-complete" "shell"]))
+(hoarder:register "idris-hackers/idris-mode"
+  '(:tag ["haskell" "idris"]
+    :dependency ["david-christiansen/prop-menu-el"]))
+
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
@@ -1466,6 +1468,7 @@
 (hoarder:register-theme "d125q/gruvbox-dark-emacs")
 (hoarder:register-theme "rogermolas/boracay-dark.el")
 (hoarder:register-theme "mswift42/silkworm-theme")
+(hoarder:register-theme "mswift42/foggy-night-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -2034,6 +2037,8 @@
     :desc "[[https://vimeo.com/7242003&sa=U&ved=0ahUKEwjPjLn82ejJAhUKXRQKHffmDAk4ChC3AggfMAM&usg=AFQjCNERuNfycIl8dKGz0e8t_abMO48R2A]]"))
 (hoarder:fetch "Shinmera/.emacs"
   '(:tag ["dotemacs" "emacs" "common_lisp"]))
+(hoarder:fetch "SiCKRAGETV/SiCKRAGE"
+  '(:tag ["nzb" "torrent"]))
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;; (hoarder:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"

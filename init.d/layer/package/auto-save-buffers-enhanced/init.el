@@ -9,10 +9,11 @@
        20)
     ;; exclude some files
     (set-option auto-save-buffers-enhanced-exclude-regexps
-                '("COMMIT_EDITMSG\\'"
+                '("COMMIT_EDITMSG\\'" "Org Src"
                   "^/ssh:" "^scp:" "/sudo:" "/multi:"))
     ;; If you're using CVS or Subversion or git
     (auto-save-buffers-enhanced-include-only-checkout-path t)
+    (setq auto-save-buffers-enhanced-quiet-save-p t)
     (auto-save-buffers-enhanced t)
 
     ;; evil integration

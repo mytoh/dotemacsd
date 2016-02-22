@@ -181,10 +181,10 @@
     jaword
     visual-ascii-mode
     itunes-bgm
-    imagex
+    ;; imagex
     browse-at-remote
-    super-save
-    ;; auto-save-buffers-enhanced
+    ;; super-save
+    auto-save-buffers-enhanced
     compilation-highlight
     conkeror-minor-mode
     mpv
@@ -240,6 +240,7 @@
     party-mode
     yasnippet
     yatemplate
+    idris-mode
     
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
@@ -320,7 +321,6 @@
     evil-linewise
     evil-matchit
     evil-exchange
-    evil-jumper
     evil-visualstar
     evil-search-highlight-persist
     evil-textobj-between
@@ -414,12 +414,12 @@
     ;; company-statistics
     ;; company-org-headings
 
-    auto-complete
-    ac-capf
-    ac-emoji
-    ac-skk
-    org-ac
-    ac-shell
+    ;; auto-complete
+    ;; ac-capf
+    ;; ac-emoji
+    ;; ac-skk
+    ;; org-ac
+    ;; ac-shell
     ))
 
 (muki-layer:load-layers 'source-control
