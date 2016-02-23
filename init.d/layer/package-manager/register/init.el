@@ -2046,8 +2046,10 @@
   '(:tag ["nzb" "torrent"]))
 (hoarder:fetch "hlissner/emacs.d"
   '(:tag ["emacs" "dotfiles" "evil"]))
+(hoarder:fetch "sferik/active_emoji"
+  '(:tag ["ruby" "emoji"]))
 
-
+;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
