@@ -336,7 +336,8 @@
     evil-anzu
     ;; evil-snipe
     evil-textobj-anyblock
-    evil-iedit-state
+    evil-multiedit
+    ;; evil-iedit-state
     ;; evil-mc
     evil-quickscope
     ;; evil-lisp-state

@@ -270,6 +270,10 @@
   '(:tag ["evil" "key_binding"]))
 (hoarder:register "justbur/pure-evil"
   '(:tag ["evil" "key_binding"]))
+(hoarder:register "hlissner/evil-multiedit"
+  '(:tag ["evil" "multiple-cursors"]
+    :dependency ["tsdh/iedit"]))
+
 
 ;;;;;  general packages
 (hoarder:register "magnars/s.el")
@@ -1213,6 +1217,8 @@
 (hoarder:register "idris-hackers/idris-mode"
   '(:tag ["haskell" "idris"]
     :dependency ["david-christiansen/prop-menu-el"]))
+(hoarder:register "xuchunyang/eshell-git-prompt"
+  '(:tag ["eshell" "prompt" "git"]))
 
 
 ;; (hoarder:register "papaeye/emacs-jscs"
@@ -1751,7 +1757,6 @@
 (hoarder:fetch "davidvilla/emacs-pills")
 (hoarder:fetch "cdlm/vitamined-mode-line")
 (hoarder:fetch "wasamasa/dotemacs")
-(hoarder:fetch "hlissner/emacs.d")
 (hoarder:fetch "fniessen/orgmk"
   '(:tag ["org"]))
 (hoarder:fetch "fniessen/org-macros"
@@ -2039,6 +2044,11 @@
   '(:tag ["dotemacs" "emacs" "common_lisp"]))
 (hoarder:fetch "SiCKRAGETV/SiCKRAGE"
   '(:tag ["nzb" "torrent"]))
+(hoarder:fetch "hlissner/emacs.d"
+  '(:tag ["emacs" "dotfiles" "evil"]))
+
+
+
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;; (hoarder:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
