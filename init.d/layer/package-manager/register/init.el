@@ -153,6 +153,7 @@
 (hoarder:register "syohex/emacs-helm-japanese-weather")
 (hoarder:register "syohex/emacs-helm-kaomoji")
 (hoarder:register "emacs-helm/helm-describe-modes")
+
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]
 ;;                    :dependency ["michael-heerdegen/iterators.el"]))
@@ -1219,6 +1220,12 @@
     :dependency ["david-christiansen/prop-menu-el"]))
 (hoarder:register "xuchunyang/eshell-git-prompt"
   '(:tag ["eshell" "prompt" "git"]))
+(hoarder:register "noctuid/general.el"
+  '(:tag ["keybinding" "evil"]))
+(hoarder:register "zonuexe/aa-edit-mode"
+  '(:tag ["ascii_art" ]))
+(hoarder:register "ryuslash/eshell-fringe-status"
+  '(:tag ["eshell"]))
 
 
 ;; (hoarder:register "papaeye/emacs-jscs"
@@ -2048,6 +2055,14 @@
   '(:tag ["emacs" "dotfiles" "evil"]))
 (hoarder:fetch "sferik/active_emoji"
   '(:tag ["ruby" "emoji"]))
+(hoarder:fetch "https://git.fleshless.org/frozenbar"
+  '(:tag ["lemonbar" "statusbar"]))
+(hoarder:fetch "noctuid/dotfiles"
+  '(:tag ["dotfiles" "emacs"]))
+(hoarder:fetch "gstk/siji"
+  '(:tag ["font" "icon" "bitmap" "dwm"]))
+(hoarder:fetch "phallus/fonts"
+  '(:tag ["font" "icon"]))
 
 ;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
 

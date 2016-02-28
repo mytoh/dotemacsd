@@ -241,6 +241,7 @@
     yasnippet
     yatemplate
     idris-mode
+    aa-edit-mode
     
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
@@ -344,7 +345,9 @@
     evil-magit
     ;; evil-org-mode
     ;; pure-evil
+
     bind-map
+    ;; general
     ))
 
 (muki-layer:load-layers 'vim
