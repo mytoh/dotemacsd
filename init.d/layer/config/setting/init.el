@@ -116,10 +116,10 @@
 ;;       scroll-step 4
 ;;       scroll-conservatively 35
 ;;       scroll-preserve-screen-position 1)
-(set-option scroll-conservatively 9999
-            scroll-preserve-screen-position t)
-
-(setq scroll-step 1) ;; keyboard scroll one line at a time
+(setq hscroll-step 1
+      scroll-step 1 ;; keyboard scroll one line at a time
+      scroll-conservatively 1000
+      scroll-preserve-screen-position t)
 
 (setq auto-window-vscroll nil)
 

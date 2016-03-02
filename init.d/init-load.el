@@ -418,12 +418,12 @@
     ;; company-statistics
     ;; company-org-headings
 
-    ;; auto-complete
-    ;; ac-capf
-    ;; ac-emoji
-    ;; ac-skk
-    ;; org-ac
-    ;; ac-shell
+    auto-complete
+    ac-capf
+    ac-emoji
+    ac-skk
+    org-ac
+    ac-shell
     ))
 
 (muki-layer:load-layers 'source-control

@@ -3,6 +3,7 @@
 ;;; Commentary:
 
 ;;; Code:
+(req 'sis)
 
 ;;;; prettify symbols
 ;; (enable-mode global-prettify-symbols-mode)
@@ -36,20 +37,18 @@
 (cl-defun muki:emacs-lisp-add-prettify-symbols ()
   (setq-local prettify-symbols-alist
               (seq-concatenate 'list prettify-symbols-alist endless/emacs-lisp-prettify-alist))
-  (add-to-list 'prettify-symbols-alist
-               '("pcase-lambda" . ?\꓀
-                 ;; ?\⫍ ?\⌦ ?\⍍ ?\⍃ ?\⎇ ?\⑁ ?\𝈑 ?\꓀ ?\꓃ ?\𝈄
-                 ))
-  (add-to-list 'prettify-symbols-alist
-               '("pcase" . ?\⎇))
-  (add-to-list 'prettify-symbols-alist
-               '("funcall" . ?\𝐅))
-  (add-to-list 'prettify-symbols-alist
-               '("not" . ?\¬))
-  (add-to-list 'prettify-symbols-alist
-               '("and" . ?\∧))
-  (add-to-list 'prettify-symbols-alist
-               '("or" . ?\∨)))
+  (cl-labels ((add (name char)
+                (add-to-list 'prettify-symbols-alist
+                             (sis:pair name char))))
+    (add "pcase-lambda"  ?\꓀
+         ;; ?\⫍ ?\⌦ ?\⍍ ?\⍃ ?\⎇ ?\⑁ ?\𝈑 ?\꓀ ?\꓃ ?\𝈄
+         )
+    (add "pcase"  ?\⎇)
+    (add "funcall"  ?\𝐅)
+    (add "not"  ?\¬)
+    (add "and"  ?\∧)
+    (add "or"  ?\∨)
+    (add "apply-partially"  ?\🍛)))
 
 (hook 'emacs-lisp-mode-hook #'muki:emacs-lisp-add-prettify-symbols)
 
