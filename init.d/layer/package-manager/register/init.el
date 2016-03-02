@@ -1482,6 +1482,7 @@
 (hoarder:register-theme "rogermolas/boracay-dark.el")
 (hoarder:register-theme "mswift42/silkworm-theme")
 (hoarder:register-theme "mswift42/foggy-night-theme")
+(hoarder:register-theme "shaunvxc/dark-mint-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -2056,7 +2057,8 @@
 (hoarder:fetch "sferik/active_emoji"
   '(:tag ["ruby" "emoji"]))
 (hoarder:fetch "https://git.fleshless.org/frozenbar"
-  '(:tag ["lemonbar" "statusbar"]))
+  '(:type :git
+    :tag ["lemonbar" "statusbar"]))
 (hoarder:fetch "noctuid/dotfiles"
   '(:tag ["dotfiles" "emacs"]))
 (hoarder:fetch "gstk/siji"
