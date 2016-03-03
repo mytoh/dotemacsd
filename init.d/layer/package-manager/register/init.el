@@ -2065,6 +2065,8 @@
   '(:tag ["font" "icon" "bitmap" "dwm"]))
 (hoarder:fetch "phallus/fonts"
   '(:tag ["font" "icon"]))
+(hoarder:fetch "Abhishaker17/Awesome-APIs"
+  '(:tag ["awesome" "list" "api"]))
 
 ;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
 
