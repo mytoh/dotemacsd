@@ -2067,6 +2067,7 @@
   '(:tag ["font" "icon"]))
 (hoarder:fetch "Abhishaker17/Awesome-APIs"
   '(:tag ["awesome" "list" "api"]))
+(hoarder:fetch "https://gitgud.io/Nagru/Manga-Organizer.git")
 
 ;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
 
