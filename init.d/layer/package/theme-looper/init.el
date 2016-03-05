@@ -19,6 +19,7 @@
           base16-ocean-dark zerodark plan9 spacegray atom-one-dark
           aurora arjen-grey dracula inkpot idea-darkula
           reykjavik morning-star majapahit-dark redbelly badwolf
-          hamburg omtose-phellack base16-harmonic16-dark)))))
+          hamburg omtose-phellack base16-harmonic16-dark
+          Motoko)))))
 
 ;;; init.el ends here
