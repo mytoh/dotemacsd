@@ -1402,6 +1402,7 @@
   '(:load-path "themes"))
 (hoarder:register-theme "edran/hc-zenburn-emacs")
 (hoarder:register-theme "Soren-Nordstrom/motoko-theme")
+(hoarder:register-theme "Soren-Nordstrom/motoko-night")
 (hoarder:register-theme "rashack/solarized-grey")
 (hoarder:register-theme "vurmux/crazyfruits-color-theme")
 (hoarder:register-theme "purcell/color-theme-sanityinc-tomorrow")
