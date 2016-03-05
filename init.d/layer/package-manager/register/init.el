@@ -1483,6 +1483,8 @@
 (hoarder:register-theme "mswift42/silkworm-theme")
 (hoarder:register-theme "mswift42/foggy-night-theme")
 (hoarder:register-theme "shaunvxc/dark-mint-theme")
+(hoarder:register-theme "jimeh/twilight-anti-bright-theme")
+
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
