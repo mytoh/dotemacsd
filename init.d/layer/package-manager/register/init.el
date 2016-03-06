@@ -1484,6 +1484,7 @@
 (hoarder:register-theme "shaunvxc/dark-mint-theme")
 (hoarder:register-theme "jimeh/twilight-anti-bright-theme")
 (hoarder:register-theme "ryuslash/yoshi-theme")
+(hoarder:register-theme "jefflasslett/positive-reinforcement-theme")
 
 
 ;;;;; local packages
