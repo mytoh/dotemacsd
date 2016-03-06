@@ -1124,8 +1124,6 @@
   '(:tag ["company" "org" "completion"]))
 (hoarder:register "samisalkosuo/elite-for-emacs"
   '(:tag ["game" "elite"]))
-(hoarder:register "iqbalansari/emacs-emoji"
-  '(:tag ["emoji"]))
 (hoarder:register "death/reddit-mode"
   '(:tag ["reddit"]))
 (hoarder:register "iqbalansari/emacs-emojify"
@@ -1485,6 +1483,7 @@
 (hoarder:register-theme "mswift42/foggy-night-theme")
 (hoarder:register-theme "shaunvxc/dark-mint-theme")
 (hoarder:register-theme "jimeh/twilight-anti-bright-theme")
+(hoarder:register-theme "ryuslash/yoshi-theme")
 
 
 ;;;;; local packages
@@ -2071,6 +2070,10 @@
 (hoarder:fetch "Abhishaker17/Awesome-APIs"
   '(:tag ["awesome" "list" "api"]))
 (hoarder:fetch "https://gitgud.io/Nagru/Manga-Organizer.git")
+(hoarder:fetch "xyl0n/iris"
+  '(:tag ["gtk" "theme"]))
+(hoarder:fetch "lxde/pcmanfm-qt"
+  '(:tag ["desktop" "qt" "lxde"]))
 
 ;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
 
