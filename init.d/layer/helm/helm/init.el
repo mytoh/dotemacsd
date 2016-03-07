@@ -168,7 +168,7 @@ Otherwise goto the end of minibuffer."
   (after 'helm-files
 
       (defun muki:helm-ff-candidates-html-p (candidate)
-        (string-match "\.htm[l]*$" candidate))
+        (string-match-p "\.htm[l]*$" candidate))
 
   ;;;; Modify source attributes
     ;;

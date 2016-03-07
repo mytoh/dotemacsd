@@ -8,11 +8,11 @@
 ;;       (add-to-list 'exec-path shpath))))
 
 (cl-defun set-exec-path-from-shell-PATH (shell)
-  (cl-letf* ((option (cond ((string-match "tcsh\\'" shell)
+  (cl-letf* ((option (cond ((string-match-p "tcsh\\'" shell)
                             "-c")
-                           ((string-match "mksh\\'" shell)
+                           ((string-match-p "mksh\\'" shell)
                             "-l -c")
-                           ((string-match "fish\\'" shell)
+                           ((string-match-p "fish\\'" shell)
                             "--interactive --login --command=\"printf '%s' {$PATH}\"")
                            ;; fish -i -l -c "printf \"__RESULT %s %s\" \"$PATH\" \"$MANPATH\""
                            (else

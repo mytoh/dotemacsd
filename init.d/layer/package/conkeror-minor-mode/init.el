@@ -7,9 +7,8 @@
   (command (conkeror-minor-mode) "conkeror-minor-mode")
 
   (cl-defun muki:enable-conkeror-minor-mode ()
-    (when (save-match-data
-            (string-match "conkeror" (buffer-file-name))
-            (string-match ".js" (buffer-file-name)))
+    (when (and (string-match-p "conkeror" (buffer-file-name))
+             (string-match-p ".js" (buffer-file-name)))
       (conkeror-minor-mode 1)))
 
   (add-hook 'js-mode-hook #'muki:enable-conkeror-minor-mode)

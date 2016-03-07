@@ -56,9 +56,9 @@
 
 (cl-defun muki:add-to-load-path (path)
   (and (file-exists-p path)
-       (cl-pushnew (expand-file-name
-                    (file-name-as-directory path))
-                   load-path)))
+     (cl-pushnew (expand-file-name
+                  (file-name-as-directory path))
+                 load-path)))
 
 ;; (cl-defmacro muki:expand-file-names (&rest names)
 ;;   (cl-labels ((rec (l ns)
@@ -106,9 +106,9 @@ emacs load path"
   (seq-doseq (f (directory-files parent-dir))
     (cl-letf ((name (expand-file-name f parent-dir)))
       (and (file-directory-p name)
-           (not (equal f ".."))
-           (not (equal f "."))
-           (cl-pushnew name load-path)))))
+         (not (equal f ".."))
+         (not (equal f "."))
+         (cl-pushnew name load-path)))))
 
 ;; kill other buffers
 (cl-defun kill-other-buffers ()
@@ -117,7 +117,7 @@ Don't mess with special buffers."
   (interactive)
   (seq-doseq (buffer (buffer-list))
     (unless (or (eql buffer (current-buffer))
-                (not (buffer-file-name buffer)))
+               (not (buffer-file-name buffer)))
       (kill-buffer buffer))))
 
 
@@ -191,9 +191,9 @@ buffer is not visiting a file."
               ;; donk kill buffers who has the windows displayed in
               (not (get-buffer-window (buffer-name buffer)))
               ;; dont kill hidden buffers (hidden buffers' name starts with SPACE)
-              (not (save-match-data (string-match "^ " (buffer-name buffer))))
+              (not (string-match-p "^ " (buffer-name buffer)))
               ;; dont kill special buffersa with stars
-              (not (save-match-data (string-match "^\\*.+\\*\\'" (buffer-name buffer))))
+              (not (string-match-p "^\\*.+\\*\\'" (buffer-name buffer)))
               ;; dont kill buffers who have running processes
               (let ((proc (get-buffer-process buffer)))
                 (if proc
@@ -224,7 +224,7 @@ buffer is not visiting a file."
   (interactive)
   (cl-letf ((orig-alpha (frame-parameter nil 'alpha)))
     (if (and orig-alpha
-             (/= (cadr orig-alpha) 100))
+           (/= (cadr orig-alpha) 100))
         (set-frame-parameter nil 'alpha '(100 100))
       (set-frame-parameter nil 'alpha '(85 50)))))
 
@@ -261,10 +261,10 @@ buffer if the variable `delete-trailing-lines' is non-nil."
         ;; Delete trailing empty lines.
         (goto-char end-marker)
         (when (and (not end)
-                   delete-trailing-lines
-                   ;; Really the end of buffer.
-                   (= (point-max) (1+ (buffer-size)))
-                   (<= (skip-chars-backward "\n") -2))
+                 delete-trailing-lines
+                 ;; Really the end of buffer.
+                 (= (point-max) (1+ (buffer-size)))
+                 (<= (skip-chars-backward "\n") -2))
           (delete-region (1+ (point)) end-marker))
         (set-marker end-marker nil))))
   ;; Return nil for the benefit of `write-file-functions'.

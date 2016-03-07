@@ -14,8 +14,8 @@
   ;; ファイルなら別バッファで、ディレクトリなら同じバッファで開く
   (cl-defun dired-open-in-accordance-with-situation ()
     (interactive)
-    (cond ((string-match "\\(?:\\.\\.?\\)"
-                         (format "%s" (thing-at-point 'filename)))
+    (cond ((string-match-p "\\(?:\\.\\.?\\)"
+                           (format "%s" (thing-at-point 'filename)))
            (dired-find-alternate-file))
           ((file-directory-p (dired-get-filename))
            (dired-find-alternate-file))
@@ -46,7 +46,7 @@
   (when (eq major-mode 'dired-mode)
     (let* ((dir (expand-file-name list-buffers-directory))
            (drive (if (and (eq 'system-type 'window-nt) ;; add drive letter on Windows
-                           (string-match "^\\([a-zA-Z]:\\)" dir))
+                         (string-match "^\\([a-zA-Z]:\\)" dir))
                       (match-string 1 dir) "")))
       (rename-buffer (concat (buffer-name) " [" drive "dired]") t))))
 ;; (add-hook 'dired-mode-hook #'muki:dired-append-buffer-name-hint)
@@ -57,8 +57,8 @@
 (set-option dired-guess-shell-alist-user
             `(( ,(rx  "."
                       (or "jpg"
-                          "png"
-                          "bmp"
-                          "gif")
+                         "png"
+                         "bmp"
+                         "gif")
                       line-end)
                  "kuva.sh")))
