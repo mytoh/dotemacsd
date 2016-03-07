@@ -242,6 +242,7 @@
     yatemplate
     idris-mode
     aa-edit-mode
+    paren
     
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
@@ -448,7 +449,6 @@
     tramp
     recentf
     font ; this cause slow displaying
-    paren
 
     ;; autorevert
     ;;clipboard
