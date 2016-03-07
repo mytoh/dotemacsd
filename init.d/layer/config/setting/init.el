@@ -343,10 +343,6 @@
 ;; (require 'allout)
 ;; (allout-auto-activation)
 
-;;;;; save cursor position
-(req 'saveplace
-  (setq save-place-file (locate-user-emacs-file "saveplace.el")) ; use standard emacs dir
-  (setq-default save-place t))
 
 ;; important for golden-ratio to better work
 (enable-option window-combination-resize)
