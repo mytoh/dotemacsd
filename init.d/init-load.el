@@ -242,7 +242,11 @@
     yatemplate
     idris-mode
     aa-edit-mode
-    paren
+
+    mic-paren
+    ;; paren
+
+    saveplace
     
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
