@@ -1224,7 +1224,8 @@
   '(:tag ["ascii_art" ]))
 (hoarder:register "ryuslash/eshell-fringe-status"
   '(:tag ["eshell"]))
-
+(hoarder:register "emacsmirror/mic-paren"
+  '(:tag ["parentheses"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
