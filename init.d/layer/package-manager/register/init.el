@@ -1226,6 +1226,8 @@
   '(:tag ["eshell"]))
 (hoarder:register "emacsmirror/mic-paren"
   '(:tag ["parentheses"]))
+(hoarder:register "skyer9/ac-kill-ring"
+  '(:tag ["auto-complete" "kill-ring"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
