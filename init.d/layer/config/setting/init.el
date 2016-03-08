@@ -446,4 +446,7 @@
 ;; change quoting style
 (set-option text-quoting-style 'grave)
 
+;; tooltip optimize
+(enable-option tooltip-reuse-hidden-frame)
+
 ;;; config-setting.el ends here
