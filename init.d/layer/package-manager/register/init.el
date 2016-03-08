@@ -2076,6 +2076,12 @@
   '(:tag ["gtk" "theme"]))
 (hoarder:fetch "lxde/pcmanfm-qt"
   '(:tag ["desktop" "qt" "lxde"]))
+(hoarder:fetch "http://git.suckless.org/farbfeld"
+  '(:tag ["image" "format"]
+    :type :git))
+(hoarder:fetch "git://git.2f30.org/lel.git"
+  '(:tag ["image" "viewer" "farbfeld"]))
+
 
 ;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
 
