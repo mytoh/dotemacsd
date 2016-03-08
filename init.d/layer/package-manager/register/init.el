@@ -2081,6 +2081,8 @@
     :type :git))
 (hoarder:fetch "git://git.2f30.org/lel.git"
   '(:tag ["image" "viewer" "farbfeld"]))
+(hoarder:fetch "FLIF-hub/FLIF"
+  '(:tag ["image" "format"]))
 
 
 ;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
