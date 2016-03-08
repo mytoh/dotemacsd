@@ -44,6 +44,7 @@
     ;;ox-pandoc                 
     org-hlc
     ob-browser
+    org-breadcrumbs
     ))
 
 (muki-layer:load-layers 'package

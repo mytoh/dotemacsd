@@ -1314,6 +1314,8 @@
   '(:tag ["org" "agenda"]))
 (hoarder:register "alphapapa/org-protocol-capture-html"
   '(:tag ["org" "org-capture" "html"]))
+(hoarder:register "linktohack/org-breadcrumbs"
+  '(:tag ["org"]))
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
