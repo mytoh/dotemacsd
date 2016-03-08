@@ -242,6 +242,8 @@
     yatemplate
     idris-mode
     aa-edit-mode
+    image-dired
+    image-diredx
 
     mic-paren
     ;; paren
