@@ -4,7 +4,8 @@
 
 ;;; Code:
 
-(req 'ac-skk
-  (add-hook 'ac-sources #'ac-skk-enable))
+(after 'skk
+    (req 'ac-skk
+      (ac-skk-enable)))
 
 ;;; init.el ends here
