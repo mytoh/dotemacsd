@@ -1490,6 +1490,7 @@
 (hoarder:register-theme "jimeh/twilight-anti-bright-theme")
 (hoarder:register-theme "ryuslash/yoshi-theme")
 (hoarder:register-theme "jefflasslett/positive-reinforcement-theme")
+(hoarder:register-theme "wasamasa/punpun-theme")
 
 
 ;;;;; local packages
@@ -2087,7 +2088,14 @@
   '(:tag ["image" "viewer" "farbfeld"]))
 (hoarder:fetch "FLIF-hub/FLIF"
   '(:tag ["image" "format"]))
-
+(hoarder:fetch "parro-it/awesome-micro-npm-packages"
+  '(:tag ["node" "npm" "awesome-list"]))
+(hoarder:fetch "pyllyukko/user.js"
+  '(:tag ["firefox" "javascript" "security"]))
+(hoarder:fetch "dylanaraps/neofetch"
+  '(:tag ["screenfetch"]))
+(hoarder:fetch "TheReverend403/rice-stuff"
+  '(:tag ["rice" "desktop"]))
 
 ;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
 
