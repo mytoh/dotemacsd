@@ -180,6 +180,17 @@ Otherwise goto the end of minibuffer."
        #'eww-open-file
        source
        #'muki:helm-ff-candidates-html-p))
+
+    ;;;; remove current and parent directory from find-files source
+    (req 'map)
+    (setq helm-source-find-files
+          (map-put helm-source-find-files
+                   'candidate-transformer
+                   (lambda (candidates)
+                     (colle:remove
+                      (lambda (c)
+                        (string-match-p ".*/\\.+\\'" c))
+                      candidates))))
     )
   )
 
