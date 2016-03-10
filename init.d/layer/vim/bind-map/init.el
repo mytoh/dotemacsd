@@ -218,7 +218,7 @@
 
   (liby 'helm
     (bind-map-set-keys my-base-leader-map
-        ";" #'helm-M-x
+        "SPC" #'helm-M-x
         "?" #'helm-descbinds)
     (bind-map-set-keys my-base-leader-map
         "hl" #'helm-resume
