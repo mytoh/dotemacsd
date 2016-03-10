@@ -182,15 +182,13 @@ Otherwise goto the end of minibuffer."
        #'muki:helm-ff-candidates-html-p))
 
     ;;;; remove current and parent directory from find-files source
-    (req 'map)
-    (setq helm-source-find-files
-          (map-put helm-source-find-files
-                   'candidate-transformer
-                   (lambda (candidates)
-                     (colle:remove
-                      (lambda (c)
-                        (string-match-p ".*/\\.+\\'" c))
-                      candidates))))
+    (cl-defmethod helm-setup-user-source ((source helm-source-ffiles))
+      (eieio-oset source 'candidate-transformer
+                  (lambda (candidates)
+                    (colle:remove
+                     (lambda (c)
+                       (string-match-p ".*/\\.+\\'" c))
+                     candidates))))
     )
   )
 
