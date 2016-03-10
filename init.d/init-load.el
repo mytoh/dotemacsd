@@ -246,8 +246,8 @@
     image-dired
     image-diredx
 
-    mic-paren
-    ;; paren
+    ;; mic-paren
+    paren
 
     saveplace
     
