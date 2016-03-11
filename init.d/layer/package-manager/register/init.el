@@ -2096,6 +2096,8 @@
   '(:tag ["screenfetch"]))
 (hoarder:fetch "TheReverend403/rice-stuff"
   '(:tag ["rice" "desktop"]))
+(hoarder:fetch "uncomplicate/fluokitten"
+  '(:tag ["clojure" "haskell" "monad" "category"]))
 
 ;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
 
