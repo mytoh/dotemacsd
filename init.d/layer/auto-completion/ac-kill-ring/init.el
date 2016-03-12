@@ -8,11 +8,11 @@
   (add-hook 'emacs-lisp-mode-hook
             (lambda ()
               (add-to-list 'ac-sources
-                           'ac-kill-ring)))
+                           'ac-source-kill-ring)))
   (add-hook 'org-mode-hook
             (lambda ()
               (add-to-list 'ac-sources
-                           'ac-kill-ring))))
+                           'ac-source-kill-ring))))
 
 
 

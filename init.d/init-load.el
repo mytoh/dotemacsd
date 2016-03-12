@@ -432,7 +432,7 @@
     ac-skk
     org-ac
     ac-shell
-    ;; ac-kill-ring
+    ac-kill-ring
     ))
 
 (muki-layer:load-layers 'source-control
