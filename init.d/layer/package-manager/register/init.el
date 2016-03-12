@@ -1228,6 +1228,8 @@
   '(:tag ["parentheses"]))
 (hoarder:register "skyer9/ac-kill-ring"
   '(:tag ["auto-complete" "kill-ring"]))
+(hoarder:register "ocaml/tuareg"
+  '(:tag ["ocaml"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]

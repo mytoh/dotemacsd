@@ -244,6 +244,7 @@
     aa-edit-mode
     image-dired
     image-diredx
+    tuareg
 
     ;; mic-paren
     paren
