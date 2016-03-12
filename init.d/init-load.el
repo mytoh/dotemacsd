@@ -152,7 +152,6 @@
     lorem-ipsum
     emacs-color-themes
     sly
-    sly-company
     ;; sly-repl-ansi-color
     twittering-mode
     coffee-mode
@@ -425,6 +424,7 @@
     ;; company-quickhelp
     ;; company-statistics
     ;; company-org-headings
+    ;; sly-company
 
     auto-complete
     ac-capf
