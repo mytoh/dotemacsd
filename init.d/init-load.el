@@ -308,7 +308,7 @@
     hl-todo
     ;; hl-indent
     ;; indent-guide
-    ;; highlight-parentheses
+    highlight-parentheses
     ;; highlight-sexp
     ;; highlight-tail
     ;; auto-highlight-symbol
