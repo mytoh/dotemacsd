@@ -2106,6 +2106,8 @@
   '(:tag ["font" "emoji" "emojione"]))
 (hoarder:fetch "ramda/ramda"
   '(:tag ["javascript"]))
+(hoarder:fetch "janestreet/core_kernel"
+  '(:tag ["ocaml"]))
 
 ;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
 
