@@ -2098,6 +2098,12 @@
   '(:tag ["rice" "desktop"]))
 (hoarder:fetch "uncomplicate/fluokitten"
   '(:tag ["clojure" "haskell" "monad" "category"]))
+(hoarder:fetch "purnam/brahmin"
+  '(:tag ["clojure" "haskell" "monad" "category"]))
+(hoarder:fetch "eosrei/emojione-color-font"
+  '(:tag ["font" "emoji" "emojione"]))
+(hoarder:fetch "ramda/ramda"
+  '(:tag ["javascript"]))
 
 ;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
 
