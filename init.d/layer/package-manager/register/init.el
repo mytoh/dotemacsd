@@ -2110,8 +2110,16 @@
   '(:tag ["javascript"]))
 (hoarder:fetch "janestreet/core_kernel"
   '(:tag ["ocaml"]))
+(hoarder:fetch "ocaml-batteries-team/batteries-included"
+  '(:tag ["ocaml"]))
+(hoarder:fetch "fukamachi/qlot"
+  '(:tag ["common_lisp" "bundlr"]))
+(hoarder:fetch "fantasyland/fantasy-land"
+  '(:tag ["monad" "javascript"]))
+(hoarder:fetch "fantasyland/fantasy-birds"
+  '(:tag ["combinator" "javascript"]))
 
-;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
+-;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
