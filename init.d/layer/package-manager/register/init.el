@@ -1230,6 +1230,8 @@
   '(:tag ["auto-complete" "kill-ring"]))
 (hoarder:register "ocaml/tuareg"
   '(:tag ["ocaml"]))
+(hoarder:register "NixOS/nix"
+  '(:load-path "misc/emacs"))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]

@@ -245,6 +245,7 @@
     image-dired
     image-diredx
     tuareg
+    nix-mode
 
     ;; mic-paren
     paren
