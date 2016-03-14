@@ -2118,8 +2118,12 @@
   '(:tag ["monad" "javascript"]))
 (hoarder:fetch "fantasyland/fantasy-birds"
   '(:tag ["combinator" "javascript"]))
+(hoarder:fetch "maio/smagit"
+  '(:tag ["magit" "git"]))
+(hoarder:fetch "http://git.tukaani.org/xz.git"
+  '(:tag ["archive" "xz" "lzma"]))
 
--;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
+;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
