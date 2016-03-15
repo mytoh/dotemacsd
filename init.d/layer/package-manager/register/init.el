@@ -2123,6 +2123,29 @@
   '(:tag ["magit" "git"]))
 (hoarder:fetch "http://git.tukaani.org/xz.git"
   '(:tag ["archive" "xz" "lzma"]))
+(hoarder:fetch "brabadu/awesome-fonts"
+  '(:tag ["font"]))
+(hoarder:fetch "chrissimpkins/codeface"
+  '(:tag ["font"]))
+(hoarder:fetch "Tecate/bitmap-fonts"
+  '(:tag ["font"]))
+(hoarder:fetch "roberoonska/dotfiles"
+  '(:tag ["dotfiles" "colorscript" ]))
+(hoarder:fetch "geommer/yabar"
+  '(:tag ["bar" "wm" "desktop"]))
+(hoarder:fetch "Anachron/i3blocks"
+  '(:tag ["i3" "wm" "bar" "desktop"]))
+(hoarder:fetch "deviantfero/wpgtk"
+  '(:tag ["gtk" "colorscheme"]))
+(hoarder:fetch "gstk/color-scripts")
+(hoarder:fetch "Floens/uchan"
+  '(:tag ["4chan" "chan" "bbs"]))
+(hoarder:fetch "get-iplayer/get_iplayer"
+  '(:tag ["radio" "bbc"]))
+(hoarder:fetch "fanglingsu/vimb"
+  '(:tag ["web" "browser" "vim" "webkit"]))
+(hoarder:fetch "storax/emaci"
+  '(:tag ["CI" "continuous integration"]))
 
 ;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
 
