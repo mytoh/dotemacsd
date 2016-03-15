@@ -246,6 +246,7 @@
     image-diredx
     tuareg
     nix-mode
+    ranger
 
     ;; mic-paren
     paren

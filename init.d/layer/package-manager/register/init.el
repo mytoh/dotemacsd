@@ -1232,6 +1232,7 @@
   '(:tag ["ocaml"]))
 (hoarder:register "NixOS/nix"
   '(:load-path "misc/emacs"))
+(hoarder:register "ralesi/ranger.el")
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
