@@ -3,6 +3,8 @@
 ;;; Code:
 
 (req 'psession
+  (set-option psession-elisp-objects-default-directory
+              (file-name-as-directory (locate-user-emacs-file "psession")))
   (set-option psession-object-to-save-alist
               `((extended-command-history . "extended-command-history.el")
                 ,@(if (locate-library "helm")
@@ -21,11 +23,11 @@
                 (evil-search-forward-history . "evil-search-forward-history.el")
                 (evil-search-backward-history . "evil-search-backward-history.el")))
   (hook 'psession-mode-hook
-     (lambda ()
-       (remove-hook 'kill-emacs-hook 'psession--dump-some-buffers-to-list)
-       (remove-hook 'emacs-startup-hook 'psession--restore-some-buffers)
-       (remove-hook 'kill-emacs-hook 'psession-save-last-winconf)
-       (remove-hook 'emacs-startup-hook 'psession-restore-last-winconf)))
+        (lambda ()
+          (remove-hook 'kill-emacs-hook 'psession--dump-some-buffers-to-list)
+          (remove-hook 'emacs-startup-hook 'psession--restore-some-buffers)
+          (remove-hook 'kill-emacs-hook 'psession-save-last-winconf)
+          (remove-hook 'emacs-startup-hook 'psession-restore-last-winconf)))
   (enable-mode psession-mode))
 
 ;;; init.el ends here
