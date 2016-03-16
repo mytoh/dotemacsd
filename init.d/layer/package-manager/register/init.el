@@ -2154,6 +2154,8 @@
   '(:tag ["ssh"]))
 (hoarder:fetch "caffo/org-minimal-html-theme"
   '(:tag ["org-mode" "html"]))
+(hoarder:fetch "DaveDavenport/rofi"
+  '(:tag ["desktop" "utility" "dmenu"]))
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
