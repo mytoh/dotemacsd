@@ -248,9 +248,6 @@
     nix-mode
     ranger
 
-    ;; mic-paren
-    paren
-
     saveplace
     
     ;; letcheck ; not work with pcase's let pattern
@@ -312,6 +309,8 @@
     ;; hl-indent
     ;; indent-guide
     highlight-parentheses
+    ;; mic-paren
+    ;; paren
     ;; highlight-sexp
     ;; highlight-tail
     ;; auto-highlight-symbol
