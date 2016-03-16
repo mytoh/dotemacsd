@@ -1497,6 +1497,7 @@
 (hoarder:register-theme "jefflasslett/positive-reinforcement-theme")
 (hoarder:register-theme "wasamasa/punpun-theme")
 (hoarder:register-theme "MetroWind/emacs-deviant-theme")
+(hoarder:register-theme "sainathadapa/emacs-hybrid-material")
 
 
 ;;;;; local packages
