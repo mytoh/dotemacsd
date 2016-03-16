@@ -1496,6 +1496,7 @@
 (hoarder:register-theme "ryuslash/yoshi-theme")
 (hoarder:register-theme "jefflasslett/positive-reinforcement-theme")
 (hoarder:register-theme "wasamasa/punpun-theme")
+(hoarder:register-theme "MetroWind/emacs-deviant-theme")
 
 
 ;;;;; local packages
@@ -2146,8 +2147,12 @@
   '(:tag ["web" "browser" "vim" "webkit"]))
 (hoarder:fetch "storax/emaci"
   '(:tag ["CI" "continuous integration"]))
-
-;; https://gist.github.com/p1ch-jp/2912dc157b53449f7d1b
+(hoarder:fetch "mizzy/specinfra"
+  '(:tag ["itamae" "configuration" "provisioning" "chef" "puppet" "ssh" "freebsd"]))
+(hoarder:fetch "capistrano/sshkit"
+  '(:tag ["ssh"]))
+(hoarder:fetch "caffo/org-minimal-html-theme"
+  '(:tag ["org-mode" "html"]))
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
