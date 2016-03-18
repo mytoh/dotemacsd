@@ -1233,6 +1233,8 @@
 (hoarder:register "NixOS/nix"
   '(:load-path "misc/emacs"))
 (hoarder:register "ralesi/ranger.el")
+(hoarder:register "https://bitbucket.org/inigoserna/per-buffer-theme.el"
+  '(:type :hg))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
@@ -1694,7 +1696,8 @@
 (hoarder:fetch "stumpwm/stumpwm"
   '(:tag ["common_lisp" "stumpwm"]))
 (hoarder:fetch "stumpwm/stumpwm-contrib"
-  '(:tag ["common_lisp" "stumpwm"]))
+  '(:tag ["common_lisp" "stumpwm"]
+    :load-path "util/swm-emacs"))
 (hoarder:fetch "stumpwm/stumpwm.wiki"
   '(:tag ["common_lisp" "stumpwm"]))
 (hoarder:fetch "deepfire/cl-org-mode"
@@ -1757,7 +1760,6 @@
 (hoarder:fetch "jimm/elisp")
 (hoarder:fetch "magnars/.emacs.d"
   '(:recursive nil))
-(hoarder:fetch "steventlamb/lamb-horned-beast")
 (hoarder:fetch "Bruce-Connor/emacs-online-documentation")
 (hoarder:fetch "emacsimize/org-admin"
   '(:tag ["org" "server"]))
@@ -2156,6 +2158,11 @@
   '(:tag ["org-mode" "html"]))
 (hoarder:fetch "DaveDavenport/rofi"
   '(:tag ["desktop" "utility" "dmenu"]))
+(hoarder:fetch "jloughry/Unicode"
+  '(:tag ["font" "unicode" "power_symbol" "iec"]))
+(hoarder:fetch "ripienaar/free-for-dev"
+  '(:tag ["devops" "SaaS" "PaaS" "IaaS"]))
+
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
