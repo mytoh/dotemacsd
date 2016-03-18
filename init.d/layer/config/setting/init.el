@@ -371,7 +371,6 @@
 
 ;; decrease gc cycle
 ;; (set-option gc-cons-threshold (* 10 gc-cons-threshold))
-(set-option gc-cons-threshold (* 64 1024 1024))
 
 ;; message log line counts
 (set-option message-log-max 10000)
