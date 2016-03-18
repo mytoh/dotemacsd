@@ -159,14 +159,13 @@
 ;;                    :dependency ["michael-heerdegen/iterators.el"]))
 
 ;;;;; evil
-;; TODO nede mercurial support
-(hoarder:register (expand-file-name "bitbucket.org/lyro/evil"
-                              (locate-user-emacs-file "vendor"))
-  '(:build ["gmake doc all"]
+(hoarder:register "https://bitbucket.org/lyro/evil"
+  '(:build ["gmake clean doc all"]
     :info "doc"
     :dependency ["emacsmirror/goto-chg"
                  "http://www.dr-qubit.org/git/undo-tree.git"]
-    :tag "evil"))
+    :tag "evil"
+    :type :hg))
 (hoarder:register "cofi/evil-leader"
   '(:tag "evil"))
 (hoarder:register "timcharper/evil-surround"
