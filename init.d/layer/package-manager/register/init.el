@@ -225,13 +225,7 @@
     :dependency ["abo-abo/avy"
                  "nicferrier/emacs-noflet"]))
 (hoarder:register "hlissner/evil-snipe"
-  '(:tag "evil"
-    :dependency [( "https://gitorious.org/evil/evil.git"
-                  (:build ["gmake doc all"]
-                          :info "doc"
-                          :dependency ["emacsmirror/goto-chg"
-                                       "http://www.dr-qubit.org/git/undo-tree.git"]
-                          :tag "evil"))]))
+  '(:tag "evil"))
 (hoarder:register "linktohack/evil-commentary"
   '(:tag "evil"))
 (hoarder:register "syl20bnr/evil-tutor"
@@ -389,13 +383,7 @@
 (hoarder:register "syohex/emacs-anzu" '(:compile nil))
 (hoarder:register "syohex/emacs-evil-anzu"
   '(:tag ["evil" "anzu"]
-    :dependency [("syohex/emacs-anzu" (:compile nil))
-                 ( "https://gitorious.org/evil/evil.git"
-                  (:build ["gmake doc all"]
-                          :info "doc"
-                          :dependency ["emacsmirror/goto-chg"
-                                       "http://www.dr-qubit.org/git/undo-tree.git"]
-                          :tag "evil"))]))
+    :dependency [("syohex/emacs-anzu" (:compile nil))]))
 (hoarder:register "Fuco1/smartparens"
   '(:compile nil :dependency [("magnars/dash.el" ( :compile nil))]))
 (hoarder:register "magnars/expand-region.el")
