@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: lt
+# key: lt
+# --
+(cl-letf (($1)))

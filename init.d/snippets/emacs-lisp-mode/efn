@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: efn
+# key: efn
+# --
+(expand-file-name $1)

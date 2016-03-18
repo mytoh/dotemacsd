@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: hdf
+# key: hdf
+# --
+(hoarder:fetch "$1")
