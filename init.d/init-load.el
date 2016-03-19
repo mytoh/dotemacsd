@@ -247,6 +247,7 @@
     tuareg
     nix-mode
     ranger
+    per-buffer-theme
 
     saveplace
     
