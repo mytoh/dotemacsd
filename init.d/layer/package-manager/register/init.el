@@ -2149,6 +2149,12 @@
   '(:tag ["font" "unicode" "power_symbol" "iec"]))
 (hoarder:fetch "ripienaar/free-for-dev"
   '(:tag ["devops" "SaaS" "PaaS" "IaaS"]))
+(hoarder:fetch "rizo/awesome-ocaml"
+  '(:tag ["ocaml" "awesome_list"]))
+(hoarder:fetch "melling/ComputerLanguages"
+  '(:tag ["notes" "languages" "haskell" "ocaml"]))
+(hoarder:fetch "sugano-nu/tofu"
+  '(:tag ["game"]))
 
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
