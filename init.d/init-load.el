@@ -23,8 +23,9 @@
     ))
 
 (muki-layer:load-layers 'package
-  '(;; diminish
-    ;; dim
+  '(
+    ;; diminish
+    dim
     ))
 
 (muki-layer:load-layers 'org
