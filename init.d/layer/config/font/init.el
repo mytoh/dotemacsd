@@ -243,7 +243,7 @@
 (cl-defun muki:font-set-rescale-alist ()
   " [[https://skalldan.wordpress.com/2011/08/05/mac-os-x-%E3%81%A7%E3%81%AE-emacs-2/]]
 [[http://www.emacswiki.org/emacs/FontSets]] "
-(seq-map
+(colle:map
  (pcase-lambda (`(,font . ,ratio))
      (add-to-list 'face-font-rescale-alist
       (cons

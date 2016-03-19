@@ -72,9 +72,9 @@
 
 ;; function from http://emacswiki.org/emacs/AddKeywords
 (cl-defun muki:gauche-add-keywords (face-name keyword-rules)
-  (let* ((keyword-list (seq-map (clambda (x)
-                                    (symbol-name (cdr x)))
-                                keyword-rules))
+  (let* ((keyword-list (colle:map (clambda (x)
+                                   (symbol-name (cdr x)))
+                               keyword-rules))
          (keyword-regexp (concat "(\\("
                                  (regexp-opt keyword-list)
                                  "\\)[ \n]")))
@@ -4188,7 +4188,7 @@
                                  (syntax open-parenthesis)  "use" (zero-or-more (in " \t\n"))
                                  (submatch (one-or-more
                                             (submatch (or (syntax word)
-                                                          (syntax symbol)))))
+                                                         (syntax symbol)))))
                                  (syntax close-parenthesis)))
                             1 'font-lock-variable-name-face)
                           ;; (require-extension (srfi 1))
@@ -4198,7 +4198,7 @@
                                  (submatch
                                   "srfi")
                                  (submatch (one-or-more (or numeric
-                                                            (in " \t\n"))))
+                                                           (in " \t\n"))))
                                  (syntax close-parenthesis)
                                  (syntax close-parenthesis)
                                         ;(one-or-more
@@ -4212,8 +4212,8 @@
                                  (syntax open-parenthesis) "export" (one-or-more (in " \t\n"))
                                  (submatch
                                   (one-or-more (or (syntax word)
-                                                   (syntax symbol)
-                                                   (in " \t\n"))))))
+                                                  (syntax symbol)
+                                                  (in " \t\n"))))))
                             1  'font-lock-variable-name-face)
                           ;; (export some-function)
                           ;; (,(rx (and
@@ -4232,7 +4232,7 @@
                                  (syntax open-parenthesis) "select-module" (zero-or-more (in " \t\n"))
                                  (submatch
                                   (one-or-more (or (syntax symbol)
-                                                   (syntax word))))))
+                                                  (syntax word))))))
                             1  'muki:font-lock-scheme-module-name-face)
                           ;; ,@
                           (,(rx ",@")

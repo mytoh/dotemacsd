@@ -17,7 +17,7 @@
                                 (glof:update args
                                              :evil-keys
                                              (lambda (keys)
-                                               (seq-map
+                                               (colle:map
                                                 (lambda (key)
                                                   (concat prefix " " key))
                                                 keys)))))

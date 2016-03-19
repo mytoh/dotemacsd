@@ -4,9 +4,9 @@
             auto-mode-alist)
 
 (cl-defun muki:elisp-add-keywords (face-name keyword-rules)
-  (cl-letf* ((keyword-list (seq-map (pcase-lambda (`(,_ . ,x))
-                                        (symbol-name x))
-                                    keyword-rules))
+  (cl-letf* ((keyword-list (colle:map (pcase-lambda (`(,_ . ,x))
+                                       (symbol-name x))
+                                   keyword-rules))
              (keyword-regexp (concat "(\\("
                                      (regexp-opt keyword-list)
                                      "\\)[ \n]")))
@@ -54,7 +54,7 @@
          (or "cl-defun" "cl-defmacro")
          (+ space)
          (submatch (+ (or (syntax word)
-                          (syntax symbol)))))
+                         (syntax symbol)))))
      (1 'font-lock-function-name-face))))
 
 ;; [[https://groups.google.com/forum/#!topic/gnu.emacs.help/3EoQjpr5Kfk]]
@@ -92,7 +92,7 @@
   "`byte-compile' current buffer if it's emacs-lisp-mode and compiled file exists."
   (interactive)
   (when (and (eq major-mode 'emacs-lisp-mode)
-             (file-exists-p (byte-compile-dest-file buffer-file-name)))
+           (file-exists-p (byte-compile-dest-file buffer-file-name)))
     (byte-compile-file buffer-file-name)))
 
 (cl-defun muki:elisp-byte-compile-buffer ()
@@ -111,7 +111,7 @@
            (1+ (any " "))
            ?\'
            (group (1+ (or alphanumeric
-                          ?\-)))
+                         ?\-)))
            (0+ (any " "))
            (char ?\)))
        nil t)
@@ -119,7 +119,7 @@
 
 (cl-defun muki:elisp-reload-package ()
   (when (and (eq major-mode 'emacs-lisp-mode)
-             (buffer-file-name))
+           (buffer-file-name))
     (cl-letf* ((file-name (buffer-file-name))
                (base-name (intern (file-name-base file-name)))
                (found-feature (muki:elisp-find-provided-feature))

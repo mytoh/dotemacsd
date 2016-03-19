@@ -5,15 +5,15 @@
 
 
 (cl-defun muki:scheme-add-keywords (face-name keyword-rules)
-  (cl-letf* ((keyword-list (seq-map (clambda (x)
-                                        (symbol-name (cdr x)))
-                                    keyword-rules))
+  (cl-letf* ((keyword-list (colle:map (clambda (x)
+                                       (symbol-name (cdr x)))
+                                   keyword-rules))
              (keyword-regexp (concat "(\\("
                                      (regexp-opt keyword-list)
                                      "\\)[ \n]")))
     (muki:log "adding keywords for face "
-              (propertize (symbol-name face-name) 'face 'font-lock-variable-name-face)
-              " on scheme mode")
+            (propertize (symbol-name face-name) 'face 'font-lock-variable-name-face)
+            " on scheme mode")
     (font-lock-add-keywords 'scheme-mode
                             `((,keyword-regexp 1 ',face-name))))
   (seq-each (clambda (x)
