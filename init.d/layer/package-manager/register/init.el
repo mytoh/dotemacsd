@@ -1226,6 +1226,8 @@
   '(:tag ["emacs-lisp"]))
 (hoarder:register "konzeptual/tea-time")
 (hoarder:register "LouisKottmann/zygospore.el")
+(hoarder:register "apg/unipoint"
+  '(:tag ["math" "unicode"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
