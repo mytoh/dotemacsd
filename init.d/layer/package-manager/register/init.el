@@ -2167,6 +2167,11 @@
   '(:tag ["fantasy-land" "javascript" "combinator"]))
 (hoarder:fetch "ggreer/the_silver_searcher"
   '(:tag ["ag" "grep" "ack"]))
+(hoarder:fetch "googlei18n/noto-emoji"
+  '(:tag ["font" "emoji"]))
+(hoarder:fetch "mietek/charity-language"
+  '(:tag ["charity" "language" "paramorphism" ]))
+
 
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
