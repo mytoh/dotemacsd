@@ -2155,6 +2155,16 @@
   '(:tag ["notes" "languages" "haskell" "ocaml"]))
 (hoarder:fetch "sugano-nu/tofu"
   '(:tag ["game"]))
+(hoarder:fetch "ImageMagick/ImageMagick"
+  '(:tag ["image" "graphic" "conversion"]))
+(hoarder:fetch "sjsyrek/maryamyriameliamurphies.js"
+  '(:tag ["javascript" "monad" "haskell"]))
+(hoarder:fetch "cgrand/xforms"
+  '(:tag ["clojure" "transducer" ]))
+(hoarder:fetch "DrBoolean/pointfree-fantasy"
+  '(:tag ["fantasy-land" "javascript" "combinator"]))
+(hoarder:fetch "ggreer/the_silver_searcher"
+  '(:tag ["ag" "grep" "ack"]))
 
 
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
