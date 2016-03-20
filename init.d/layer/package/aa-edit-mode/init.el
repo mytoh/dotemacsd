@@ -4,6 +4,9 @@
 
 ;;; Code:
 
+(require 'muki-mode)
+(require 'muki-lib)
+
 (liby 'aa-edit-mode
   (command (aa-edit-mode) "aa-edit-mode")
   (mode "\\.mlt\\'"  #'aa-edit-mode))

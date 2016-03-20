@@ -3,6 +3,7 @@
 ;;;;; cl-lib
 (require 'cl-lib)
 (require 'seq)
+(require 'files)
 
 ;;;;; libs
 (eval-when-compile (require 'init-lib "lib/init-lib"))
