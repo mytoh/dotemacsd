@@ -251,6 +251,8 @@
     ranger
     per-buffer-theme
     elisp-depend
+    tea-time
+    zygospore
 
     saveplace
     

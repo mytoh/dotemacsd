@@ -1224,6 +1224,8 @@
   '(:type :hg))
 (hoarder:register "tehom/elisp-depend"
   '(:tag ["emacs-lisp"]))
+(hoarder:register "konzeptual/tea-time")
+(hoarder:register "LouisKottmann/zygospore.el")
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
