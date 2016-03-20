@@ -585,7 +585,7 @@
 (hoarder:register "yoshiki/yaml-mode")
 (hoarder:register "ijp/mbe.el")
 (hoarder:register "emacsmirror/info-plus" )
-(hoarder:register "kaihaosw/eshell-prompt-extras"
+(hoarder:register "hiddenlotus/eshell-prompt-extras"
   '(:tag "eshell"))
 (hoarder:register "yuutayamada/eshell-better-prompt"
   '(:tag "eshell"))
