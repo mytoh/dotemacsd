@@ -249,6 +249,7 @@
     nix-mode
     ranger
     per-buffer-theme
+    elisp-depend
 
     saveplace
     

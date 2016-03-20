@@ -1222,6 +1222,8 @@
 (hoarder:register "ralesi/ranger.el")
 (hoarder:register "https://bitbucket.org/inigoserna/per-buffer-theme.el"
   '(:type :hg))
+(hoarder:register "tehom/elisp-depend"
+  '(:tag ["emacs-lisp"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
