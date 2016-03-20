@@ -987,7 +987,7 @@
     :tag ["recentf" "bookmark"]))
 (hoarder:register "larstvei/Focus"
   '(:tag ["highlight" "narrowing"]))
-(hoarder:register "tthieman/soundcloud.el"
+(hoarder:register "thieman/soundcloud.el"
   '(:tag ["music" "soundcloud"]
     :dependency ["kiwanami/emacs-deferred"
                  "rolandwalker/string-utils"
