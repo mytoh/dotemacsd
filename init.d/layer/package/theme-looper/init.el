@@ -20,6 +20,6 @@
           aurora arjen-grey dracula inkpot idea-darkula
           reykjavik morning-star majapahit-dark redbelly badwolf
           hamburg omtose-phellack base16-harmonic16-dark
-          Motoko)))))
+          Motoko motoko-night base16-oceanicnext-dark)))))
 
 ;;; init.el ends here
