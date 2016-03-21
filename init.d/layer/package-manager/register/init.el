@@ -2175,6 +2175,8 @@
   '(:tag ["font" "emoji"]))
 (hoarder:fetch "mietek/charity-language"
   '(:tag ["charity" "language" "paramorphism" ]))
+(hoarder:fetch "libressl-portable/portable"
+  '(:tag ["openssl" ]))
 
 
 
