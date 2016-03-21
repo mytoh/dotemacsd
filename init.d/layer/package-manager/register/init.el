@@ -2177,6 +2177,9 @@
   '(:tag ["charity" "language" "paramorphism" ]))
 (hoarder:fetch "libressl-portable/portable"
   '(:tag ["openssl" ]))
+(hoarder:fetch "rg3/youtube-dl"
+  '(:tag ["youtube"]))
+
 
 
 
