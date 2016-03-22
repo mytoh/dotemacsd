@@ -359,6 +359,7 @@
     evil-quickscope
     ;; evil-lisp-state
     evil-magit
+    syndicate
     ;; evil-org-mode
     ;; pure-evil
 

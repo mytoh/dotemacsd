@@ -176,8 +176,6 @@
   '(:tag "evil"))
 (hoarder:register "Dewdrops/evil-exchange"
   '(:tag "evil"))
-(hoarder:register "edwtjo/evil-org-mode"
-  '(:tag "evil"))
 (hoarder:register "bling/evil-visualstar"
   '(:tag "evil"))
 (hoarder:register "tarao/evil-plugins"
@@ -267,6 +265,11 @@
 (hoarder:register "hlissner/evil-multiedit"
   '(:tag ["evil" "multiple-cursors"]
     :dependency ["tsdh/iedit"]))
+(hoarder:register "https://gitlab.com/KNX32542/syndicate.git"
+  '(:tag ["evil" "org"]))
+(hoarder:register "edwtjo/evil-org-mode"
+  '(:tag "evil"))
+
 
 
 ;;;;;  general packages
