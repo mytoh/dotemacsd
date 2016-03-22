@@ -1231,6 +1231,8 @@
 (hoarder:register "LouisKottmann/zygospore.el")
 (hoarder:register "apg/unipoint"
   '(:tag ["math" "unicode"]))
+(hoarder:register "hitode909/emacs-highlight-unique-symbol"
+  '(:tag ["highlight" "symbol"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
@@ -1253,12 +1255,12 @@
 (hoarder:register "tj64/org-hlc")
 
 (hoarder:register "tj64/outorg" '(:compile nil
-                            :branch "trunk"
-                            :tag ["org" "outline"]))
+                                  :branch "trunk"
+                                  :tag ["org" "outline"]))
 (hoarder:register "tj64/outshine" '(:compile nil
-                              :branch "trunk"
-                              :tag ["org" "outline"]
-                              :dependency ["tj64/outorg"]))
+                                    :branch "trunk"
+                                    :tag ["org" "outline"]
+                                    :dependency ["tj64/outorg"]))
 ;; (hoarder:register "jleechpe/outorg-export")
 (hoarder:register "tj64/navi"
   '(:tag ["org" "outline"]))
@@ -2185,6 +2187,8 @@
 (hoarder:fetch "phillipberndt/pqiv"
   '(:tag ["image" "viewer"]))
 (hoarder:fetch "taglib/taglib")
+(hoarder:fetch "https://gitlab.com/KNX32542/dotfiles.git"
+  '(:tag ["gitlab" "evil" "org" "emacs" "syndicate" "org-babel"]))
 
 
 
