@@ -82,27 +82,6 @@
 ;;;; delete seleted text when typing
 (delete-selection-mode 1)
 
-;;;; highlight current line
-;; highlight the current line; set a custom face, so we can
-;; recognize from the normal marking (selection)
-
-(setq hl-line-face 'hl-line)
-
-(global-hl-line-mode t) ; turn it on for all modes by default
-
-(cl-defun muki:set-hl-line-face ()
-  (set-face-attribute 'hl-line nil :foreground nil :background "Gray20"))
-
-(add-hook 'emacs-startup-hook #'muki:set-hl-line-face)
-
-;; [[http://rubikitch.com/2015/05/14/global-hl-line-mode-timer/]]
-;; (defun global-hl-line-timer-function ()
-;;   (global-hl-line-unhighlight-all)
-;;   (let ((global-hl-line-mode t))
-;;     (global-hl-line-highlight)))
-;; (setq global-hl-line-timer
-;;       (run-with-idle-timer 0.1 t 'global-hl-line-timer-function))
-;; (cancel-timer global-hl-line-timer)
 
 ;;;; display keys
 (set-option echo-keystrokes 0.1)

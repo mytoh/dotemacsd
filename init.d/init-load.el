@@ -304,6 +304,7 @@
 ;;;; highlight
 (muki-layer:load-layers 'package
   '(
+    hl-line
     ;; highlight-symbol
     highlight-thing
 
