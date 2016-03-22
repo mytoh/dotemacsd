@@ -2,7 +2,7 @@
 (req 'org)
 
 (defface org-block-background
-  '((t (:background "#2b2948")))
+    '((t (:background "#2b2948")))
   "Face used for the source block background")
 
 (cl-defun muki:org-set-faces ()
@@ -96,8 +96,10 @@
                   org-confirm-shell-link-function)
   (org-babel-do-load-languages
    'org-babel-load-languages
-   '((emacs-lisp . t)
-     (shell . t)
+   `((emacs-lisp . t)
+     ,@(if (locate-library "ob-shell")
+           '((shell . t))
+         nil)
      (scheme . t)
      (lisp . t)
      (ditaa . t)
@@ -248,11 +250,11 @@
   (org-element-map (org-element-parse-buffer 'element) 'headline
     (lambda (h)
       (and (org-element-map h 'drawer
-             (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
-             nil t 'headline)
-           (let ((begin (org-element-property :begin h)))
-             (message "Entry with erroneous properties drawer at %d" begin)
-             begin)))))
+           (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
+           nil t 'headline)
+         (let ((begin (org-element-property :begin h)))
+           (message "Entry with erroneous properties drawer at %d" begin)
+           begin)))))
 
 (req 'org-protocol)
 
