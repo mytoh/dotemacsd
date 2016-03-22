@@ -16,19 +16,21 @@
 
   (general-nmap :prefix muki:leader-key
                 :keymaps 'eshell-mode-map
-                "zz" #'mesh:switch
-                "zc" #'mesh:new-tab
-                "zn" #'mesh:next-tab
-                "zp" #'mesh:prev-tab
-                "zs" #'mesh:split-tab
-                "zS" #'mesh:vsplit-tab
-                "zx" #'mesh:kill-pane
-                "z)" #'mesh:next-session
-                "z(" #'mesh:prev-session
-                "zC" #'mesh:new-session
-                "z<tab>" #'mesh:next-pane)
-  
+                "z z" #'mesh:switch
+                "z c" #'mesh:new-tab
+                "z n" #'mesh:next-tab
+                "z p" #'mesh:prev-tab
+                "z s" #'mesh:split-tab
+                "z S" #'mesh:vsplit-tab
+                "z x" #'mesh:kill-pane
+                "z )" #'mesh:next-session
+                "z (" #'mesh:prev-session
+                "z C" #'mesh:new-session
+                "z <tab>" #'mesh:next-pane)
 
+  ;; all keywords arguments are still supported
+  (general-nmap :prefix muki:leader-key
+                "ap" #'helm-alku)
   )
 
 ;;; init.el ends here
