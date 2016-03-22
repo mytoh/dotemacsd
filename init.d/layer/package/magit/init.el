@@ -19,6 +19,7 @@
   (set-option magit-repository-directories `(,(muki:expand-path-huone "ateljee")))
   (set-option magit-revision-show-gravatars
               '("^Author:     " . "^Commit:     "))
+  (add-to-list 'magit-diff-arguments "--ignore-blank-lines")
   
   ;; auto fill
   (hook 'magit-log-edit-mode-hook
