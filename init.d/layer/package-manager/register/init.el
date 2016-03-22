@@ -2184,6 +2184,7 @@
   '(:tag ["youtube"]))
 (hoarder:fetch "phillipberndt/pqiv"
   '(:tag ["image" "viewer"]))
+(hoarder:fetch "taglib/taglib")
 
 
 
