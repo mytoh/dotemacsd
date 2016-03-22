@@ -20,6 +20,9 @@
   (set-option magit-revision-show-gravatars
               '("^Author:     " . "^Commit:     "))
   (add-to-list 'magit-diff-arguments "--ignore-blank-lines")
+  (add-to-list 'magit-diff-arguments "--ignore-space-at-eol")
+  (add-to-list 'magit-diff-arguments "--ignore-space-change")
+  (add-to-list 'magit-diff-arguments "--ignore-all-space")
   
   ;; auto fill
   (hook 'magit-log-edit-mode-hook
