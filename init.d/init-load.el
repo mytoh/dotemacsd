@@ -253,6 +253,7 @@
     elisp-depend
     tea-time
     zygospore
+    monky
 
     saveplace
     
