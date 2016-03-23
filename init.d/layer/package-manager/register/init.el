@@ -2193,6 +2193,8 @@
   '(:tag ["gitlab" "evil" "org" "emacs" "syndicate" "org-babel"]))
 (hoarder:fetch "jart/hiptext"
   '(:tag ["image" "text" "sixel"]))
+(hoarder:fetch "toddmotto/public-apis"
+  '(:tag ["api" "public" "data"]))
 
 
 
