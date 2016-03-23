@@ -15,14 +15,16 @@
 ;;        (muki:magit-highlights))
 
 (cl-defun muki:magit-setup ()
-  (set-option magit-diff-refine-hunk 'all)
+  (after 'magit
+ (set-option magit-diff-refine-hunk 'all)
   (set-option magit-repository-directories `(,(muki:expand-path-huone "ateljee")))
   (set-option magit-revision-show-gravatars
               '("^Author:     " . "^Commit:     "))
+    
   (add-to-list 'magit-diff-arguments "--ignore-blank-lines")
   (add-to-list 'magit-diff-arguments "--ignore-space-at-eol")
   (add-to-list 'magit-diff-arguments "--ignore-space-change")
-  (add-to-list 'magit-diff-arguments "--ignore-all-space")
+  (add-to-list 'magit-diff-arguments "--ignore-all-space"))
   
   ;; auto fill
   (hook 'magit-log-edit-mode-hook
