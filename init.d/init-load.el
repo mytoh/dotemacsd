@@ -254,6 +254,8 @@
     tea-time
     zygospore
     monky
+    magic-buffer
+    edit-color-stamp
 
     saveplace
     

@@ -1235,6 +1235,12 @@
   '(:tag ["highlight" "symbol"]))
 (hoarder:register "ananthakumaran/monky"
   '(:tag ["hg" "mercurial" "magit"]))
+(hoarder:register "sabof/magic-buffer")
+(hoarder:register "sabof/edit-color-stamp"
+  '(:build ["cd qt_color_picker"
+            "qmake-qt4 qt_color_picker.pro"
+            "gmake"]
+    :dependency ["sabof/es-lib"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
