@@ -11,7 +11,7 @@
        (colle:filter
         (lambda (theme)
           (colle:find (lambda (tm) (eq tm theme))
-                  (custom-available-themes)))
+                   (custom-available-themes)))
         '(comidia planet monokai molokai firebelly
           gruvbox base16-tomorrow odersky jazz purple-haze
           warm-night brin gotham soothe spolsky wilson noctilux erosiond
@@ -20,6 +20,7 @@
           aurora arjen-grey dracula inkpot idea-darkula
           reykjavik morning-star majapahit-dark redbelly badwolf
           hamburg omtose-phellack base16-harmonic16-dark
-          Motoko motoko-night base16-oceanicnext-dark)))))
+          Motoko motoko-night base16-oceanicnext-dark
+          hyperplane)))))
 
 ;;; init.el ends here
