@@ -265,7 +265,7 @@
 (hoarder:register "hlissner/evil-multiedit"
   '(:tag ["evil" "multiple-cursors"]
     :dependency ["tsdh/iedit"]))
-(hoarder:register "https://gitlab.com/KNX32542/syndicate.git"
+(hoarder:register "KNX32542/syndicate"
   '(:tag ["evil" "org"]))
 (hoarder:register "edwtjo/evil-org-mode"
   '(:tag "evil"))
