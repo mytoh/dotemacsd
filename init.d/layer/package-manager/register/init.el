@@ -2201,6 +2201,8 @@
   '(:tag ["image" "text" "sixel"]))
 (hoarder:fetch "toddmotto/public-apis"
   '(:tag ["api" "public" "data"]))
+(hoarder:fetch "chriskite/anemone"
+  '(:tag ["ruby" "crawler" "scraping"]))
 
 
 
