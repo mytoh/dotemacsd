@@ -444,7 +444,7 @@
     ac-capf
     ac-emoji
     ac-skk
-    org-ac
+    ;; org-ac
     ac-shell
     ac-kill-ring
     ))
