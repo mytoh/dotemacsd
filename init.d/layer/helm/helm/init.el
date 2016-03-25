@@ -185,10 +185,13 @@ Otherwise goto the end of minibuffer."
     (cl-defmethod helm-setup-user-source ((source helm-source-ffiles))
       (eieio-oset source 'candidate-transformer
                   (lambda (candidates)
-                    (colle:remove
-                     (lambda (c)
-                       (string-match-p ".*/\\.+\\'" c))
-                     candidates))))
+                    (pcase (seq-length candidates)
+                      (2 candidates)
+                      (_
+                       (colle:remove
+                        (lambda (c)
+                          (string-match-p ".*/\\.+\\'" c))
+                        candidates))))))
     )
   )
 
