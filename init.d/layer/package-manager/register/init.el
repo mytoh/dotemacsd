@@ -1241,6 +1241,8 @@
             "qmake-qt4 qt_color_picker.pro"
             "gmake"]
     :dependency ["sabof/es-lib"]))
+(hoarder:register "cestdiego/c-c-combo.el"
+  '(:tag ["sound"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
@@ -2203,6 +2205,13 @@
   '(:tag ["api" "public" "data"]))
 (hoarder:fetch "chriskite/anemone"
   '(:tag ["ruby" "crawler" "scraping"]))
+(hoarder:fetch "MihailJP/Inconsolata-LGC"
+  '(:tag ["font"]))
+(hoarder:fetch "jodrell/unbound-block-hosts"
+  '(:tag ["unbound" "dns" "hosts" "adblock"]))
+(hoarder:fetch "StevenBlack/hosts"
+  '(:tag ["unbound" "dns" "hosts" "adblock"]))
+
 
 
 
