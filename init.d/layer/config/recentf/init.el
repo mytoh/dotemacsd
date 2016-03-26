@@ -6,14 +6,14 @@
 ;; save more recent files
 (set-option recentf-max-saved-items nil)
 (defvar muki:recentf-exclude `(,(rx  ".el.gz" string-end)
-                                "archive-contents\\'"
-                                "-autoloads\\.el\\'"
-                                "/elpa/"
-                                "COMMIT_EDITMSG"
-                                ".gz"
-                                "/ssh:"
-                                "/scp:"
-                                "/sudo:"))
+                              "archive-contents\\'"
+                              "-autoloads\\.el\\'"
+                              "/elpa/"
+                              "COMMIT_EDITMSG"
+                              ".gz"
+                              "/ssh:"
+                              "/scp:"
+                              "/sudo:"))
 (set-option recentf-exclude muki:recentf-exclude)
 ;; (set-option recentf-auto-cleanup 10)
 
@@ -23,8 +23,8 @@
 
 ;;;;; save list periodically
 ;; [[http://www.emacswiki.org/emacs?action=browse;diff=1;id=RecentFiles]]
-(after 'recentf
-    (run-at-time nil (* 10 60) #'recentf-save-list))
+;; (after 'recentf
+;;     (run-at-time nil (* 10 60) #'recentf-save-list))
 
 ;;;;; clean up when killing emacs
 (after 'recentf
