@@ -1265,12 +1265,12 @@
 (hoarder:register "tj64/org-hlc")
 
 (hoarder:register "tj64/outorg" '(:compile nil
-                            :branch "trunk"
-                            :tag ["org" "outline"]))
+                                  :branch "trunk"
+                                  :tag ["org" "outline"]))
 (hoarder:register "tj64/outshine" '(:compile nil
-                              :branch "trunk"
-                              :tag ["org" "outline"]
-                              :dependency ["tj64/outorg"]))
+                                    :branch "trunk"
+                                    :tag ["org" "outline"]
+                                    :dependency ["tj64/outorg"]))
 ;; (hoarder:register "jleechpe/outorg-export")
 (hoarder:register "tj64/navi"
   '(:tag ["org" "outline"]))
@@ -2211,10 +2211,506 @@
   '(:tag ["unbound" "dns" "hosts" "adblock"]))
 (hoarder:fetch "StevenBlack/hosts"
   '(:tag ["unbound" "dns" "hosts" "adblock"]))
+(hoarder:fetch "lodash/lodash"
+  '(:tag ["javascript"]))
+
+;;; migrating
+
+(hoarder:fetch "git://erdgeist.org/opentracker") 
+(hoarder:fetch "git://git.2f30.org/colors") 
+(hoarder:fetch "git://git.dolezel.info/fatrat.git") 
+;; (hoarder:fetch "git://git.gnome.org/byzanz") 
+;; (hoarder:fetch "git://git.gnupg.org/gnupg.git") 
+;; (hoarder:fetch "git://git.kernel.org/pub/scm/editors/uemacs/uemacs.git") 
+;; (hoarder:fetch "git://git.musicpd.org/master/mpd.git") 
+;; (hoarder:fetch "git://git.savannah.gnu.org/emacs") 
+;; (hoarder:fetch "git://git.savannah.gnu.org/screen.git") 
+;; (hoarder:fetch "git://git.savannah.gnu.org/stow.git") 
+;; (hoarder:fetch "git://git.savannah.gnu.org/tramp.git") 
+;; (hoarder:fetch "git://git.savannah.nongnu.org/gzochi.git") 
+;; (hoarder:fetch "git://git.savannah.nongnu.org/ranger.git") 
+;; (hoarder:fetch "git://git.sourceforge.jp/gitroot/ninix-aya/master.git") 
+;; (hoarder:fetch "git://git.suckless.org/sprop") 
+;; (hoarder:fetch "git://git.suckless.org/st") 
+;; (hoarder:fetch "git://git.suckless.org/sup") 
+;; (hoarder:fetch "git://git.suckless.org/surf") 
+;; (hoarder:fetch "git://git.sv.gnu.org/erbot.git") 
+;; (hoarder:fetch "git://git.sv.gnu.org/guile.git") 
+;; (hoarder:fetch "git://git.sv.gnu.org/librejs.git") 
+;; (hoarder:fetch "git://git.sv.gnu.org/smalltalk.git") 
+;; (hoarder:fetch "http://git.gnus.org/gnus.git") 
+;; (hoarder:fetch "http://git.randomsample.de/cedet.git") 
+;; (hoarder:fetch "http://neetco.de/chibi/sshchan") 
+;; (hoarder:fetch "https://gitgud.io/Nagru/Manga-Organizer.git") 
+;; (hoarder:fetch "https://github.com/cjdelisle/cjdns.git") 
+;; (hoarder:fetch "https://github.com/symbolset/ss-emoji-beta") 
+;; (hoarder:fetch "https://notabug.org/koz.ross/awesome-c.git") 
+;; (hoarder:fetch "https://notabug.org/koz.ross/awesome-cl.git") 
+;; (hoarder:fetch "https://notabug.org/wubthecaptain/deathwatch-pomf.git") 
+;; (hoarder:fetch "git://repo.or.cz/abduco.git") 
+;; (hoarder:fetch "git://repo.or.cz/conkeror.git") 
+;; (hoarder:fetch "git://repo.or.cz/dvtm.git") 
+
+;; git://github.com/2xT/kaistapaa 
+;; git://github.com/3ofcoins/jetpack 
+;; git://github.com/86me/pentadactyl-scripts 
+;; git://github.com/Ahed91/Mlterm-Color-Schames 
+;; git://github.com/AnidevFR/NyaaAPI 
+;; git://github.com/Argon-/mpv-stats 
+;; git://github.com/Cloudef/dmenu-pango-imlib 
+;; git://github.com/Cloudef/dotFiles 
+;; git://github.com/Cloudef/dotfiles-ng 
+;; git://github.com/Cloudef/monsterwm-xcb 
+;; git://github.com/Cloudef/sxiv 
+;; git://github.com/Cloudef/xcmenu 
+;; git://github.com/DaisukeAramaki/Dotfiles 
+;; git://github.com/DaveDavenport/rofi-themes 
+;; git://github.com/EZ3CHI3L/Eternity 
+;; git://github.com/FFmpeg/FFmpeg 
+;; git://github.com/FLIF-hub/FLIF 
+;; git://github.com/FooSoft/homemaker 
+;; git://github.com/Fvwm-Nightshade/Fvwm-Nightshade 
+;; git://github.com/GGLucas/vimperator-buftabs 
+;; git://github.com/Gabriel439/Haskell-Turtle-Library 
+;; git://github.com/Griever/userChromeJS 
+;; git://github.com/HelloZeroNet/ZeroNet 
+;; git://github.com/Hiroyuki-Nagata/XrossBoard 
+;; git://github.com/Hund/Userstyles 
+;; git://github.com/IgnorantGuru/spacefm 
+;; git://github.com/ImageMagick/ImageMagick 
+;; git://github.com/ItzBlitz98/torrentflix 
+;; git://github.com/Jehops/swm-freebsd-battery-modeline 
+;; git://github.com/Jehops/swm-freebsd-cpu-modeline 
+;; git://github.com/Jehops/swm-freebsd-mem-modeline 
+;; git://github.com/Jehops/swm-freebsd-net-modeline 
+;; git://github.com/Jehops/swm-freebsd-volume-modeline 
+;; git://github.com/Jehops/swm-freebsd-zfs-modeline 
+;; git://github.com/Jehops/swm-hostname-modeline 
+;; git://github.com/Jehops/swm-maildir-modeline 
+;; git://github.com/KeenS/CIM 
+;; git://github.com/Kickball/awesome-selfhosted 
+;; git://github.com/LemonBoy/bar 
+;; git://github.com/MLton/mlton 
+;; git://github.com/MagikBSD/please 
+;; git://github.com/Masterminds/glide 
+;; git://github.com/MidnightCommander/mc.git 
+;; git://github.com/MirBSD/mksh 
+;; git://github.com/Nagru/Manga-Organizer 
+;; git://github.com/Nandaka/DanbooruDownloader 
+;; git://github.com/Nenuphar/Dyod 
+;; git://github.com/NitruxSA/flattr-icons 
+;; git://github.com/NitruxSA/plasma-next-icons 
+;; git://github.com/NoahBuscher/Flatron 
+;; git://github.com/OpenBazaar/OpenBazaar 
+;; git://github.com/Pewpews/happypanda 
+;; git://github.com/PopcornTimeCE/popcorntimece 
+;; git://github.com/Rabrennie/anything.js 
+;; git://github.com/Ranks/emojione 
+;; git://github.com/Raynes/fs 
+;; git://github.com/RubenRocha/ricey 
+;; git://github.com/Russell91/sshrc 
+;; git://github.com/RuudBurger/CouchPotatoServer 
+;; git://github.com/Shinryuu/dotfiles 
+;; git://github.com/Shougo/dein.vim 
+;; git://github.com/Shougo/vimshell.vim 
+;; git://github.com/Slevinski/signwriting_2010_fonts 
+;; git://github.com/Stephen304/bitcannon 
+;; git://github.com/Swordfish90/cool-retro-term 
+;; git://github.com/TBRSS/serapeum 
+;; git://github.com/Tecate/bitmap-fonts 
+;; git://github.com/TheMozg/awk-raycaster 
+;; git://github.com/UniversalMediaServer/UniversalMediaServer 
+;; git://github.com/aajanki/yle-dl 
+;; git://github.com/adobe-fonts/source-han-code-jp 
+;; git://github.com/adobe-type-tools/afdko 
+;; git://github.com/agda/agda 
+;; git://github.com/agtorre/gocolorize 
+;; git://github.com/ahodesuka/ahoviewer 
+;; git://github.com/ainame/mediakit 
+;; git://github.com/alebcay/awesome-shell 
+;; git://github.com/alezost/stumpwmrc 
+;; git://github.com/alice0775/userChrome.js 
+;; git://github.com/aliceml/aliceml 
+;; git://github.com/allanjude/uclcmd 
+;; git://github.com/alphapapa/bucket 
+;; git://github.com/altercation/solarized 
+;; git://github.com/andsens/homeshick 
+;; git://github.com/andyfitz/overpass 
+;; git://github.com/aredridel/es-shell 
+;; git://github.com/asciimoo/searx 
+;; git://github.com/asdfman/linux-shimeji 
+;; git://github.com/ashinn/chibi-scheme 
+;; git://github.com/atextor/icat 
+;; git://github.com/aziz/tmuxinator 
+;; git://github.com/azu/awesome-commit-english 
+;; git://github.com/b4b4r07/zplug 
+;; git://github.com/badele/gitcheck 
+;; git://github.com/bamos/dotfiles 
+;; git://github.com/baskerville/bspwm 
+;; git://github.com/baskerville/diana 
+;; git://github.com/baskerville/sutils 
+;; git://github.com/baskerville/sxhkd 
+;; git://github.com/baskerville/xtitle.git 
+;; git://github.com/benjaminoakes/maid 
+;; git://github.com/benlinton/bash-slugify 
+;; git://github.com/bibanon/bibanon 
+;; git://github.com/blakemcbride/POS 
+;; git://github.com/bmizerany/roundup 
+;; git://github.com/bookdraft/QPeerCastYP 
+;; git://github.com/boot-clj/boot 
+;; git://github.com/brpocock/shelltoys 
+;; git://github.com/brushdemon/gen-update 
+;; git://github.com/btpd/btpd 
+;; git://github.com/bucaran/awesome-fish 
+;; git://github.com/bucaran/flash 
+;; git://github.com/bucaran/hulk 
+;; git://github.com/buntine/Fractals 
+;; git://github.com/burningtree/awesome-json 
+;; git://github.com/butterproject/butter 
+;; git://github.com/caarlos0/antibody 
+;; git://github.com/caleb-/evilvte 
+;; git://github.com/carnager/teiler 
+;; git://github.com/cavalle/steak 
+;; git://github.com/chirauraNoSakusha/chiraura 
+;; git://github.com/chjj/compton 
+;; git://github.com/chrisdone/ghci-ng 
+;; git://github.com/chrissimpkins/Hack 
+;; git://github.com/chrissimpkins/codeface 
+;; git://github.com/chujoii/battery-scheme 
+;; git://github.com/chujoii/xattr-tag 
+;; git://github.com/cjb/gittorrent 
+;; git://github.com/cjxgm/libcrude 
+;; git://github.com/ckolivas/lrzip 
+;; git://github.com/cldwalker/boson 
+;; git://github.com/cldwalker/boson-more 
+;; git://github.com/clibs/clib 
+;; git://github.com/clojure/clojure 
+;; git://github.com/clojure/clojure-contrib 
+;; git://github.com/clojure/core.logic 
+;; git://github.com/clvv/fasd 
+;; git://github.com/cmdrkotori/mplaylist 
+;; git://github.com/cmus/cmus 
+;; git://github.com/coderholic/pyradio 
+;; git://github.com/colinf/om-chat-base 
+;; git://github.com/conformal/xombrero 
+;; git://github.com/copiousfreetime/launchy 
+;; git://github.com/cssnext/cssnext 
+;; git://github.com/ctrlcctrlv/8chan 
+;; git://github.com/dcolascione/ppgrep 
+;; git://github.com/ded/valentine 
+;; git://github.com/defunkt/hub 
+;; git://github.com/denilsonsa/prettyping 
+;; git://github.com/derf/feh 
+;; git://github.com/deterenkelt/watchsh 
+;; git://github.com/dfkt/firefox-tweaks 
+;; git://github.com/digego/extempore 
+;; git://github.com/doomzhou/.fvwm 
+;; git://github.com/dss-project/stumpmacs 
+;; git://github.com/eXeC64/imv 
+;; git://github.com/eijah/demoncrypt 
+;; git://github.com/elm-lang/core 
+;; git://github.com/emgram769/lighthouse 
+;; git://github.com/emrehan/clojurescript-awesome 
+;; git://github.com/enaqx/awesome-react 
+;; git://github.com/erikw/tmux-powerline 
+;; git://github.com/esodax/fishystuff 
+;; git://github.com/fabianalexisinostroza/Antu 
+;; git://github.com/faizilham/nyaaupdater 
+;; git://github.com/fantasyland/fantasy-land 
+;; git://github.com/fdv/platypus 
+;; git://github.com/fenrus75/powertop 
+;; git://github.com/feross/awesome-mad-science 
+;; git://github.com/fish-bundles/root-bundle-fish-bundle 
+;; git://github.com/fish-shell/fish-shell 
+;; git://github.com/fisherman/fisherman 
+;; git://github.com/fitzgen/wu.js 
+;; git://github.com/fizzed/font-mfizz 
+;; git://github.com/fniessen/org-html-themes 
+;; git://github.com/fniessen/orgmk 
+;; git://github.com/francesco-bracchi/sake 
+;; git://github.com/frytvm/XS 
+;; git://github.com/fukamachi/clack 
+;; git://github.com/g-gundam/yotsubAPI 
+;; git://github.com/gentoo-science/eselect 
+;; git://github.com/ghc/ghc 
+;; git://github.com/git/git 
+;; git://github.com/github/octicons 
+;; git://github.com/gka/chroma.js 
+;; git://github.com/gmarik/vimfiles 
+;; git://github.com/gongo/elfactory 
+;; git://github.com/google/roboto 
+;; git://github.com/gotbletu/dotfiles 
+;; git://github.com/graudeejs/dot.fvwm 
+;; git://github.com/greghendershott/rackjure 
+;; git://github.com/guipdutra/awesome-geek-podcasts 
+;; git://github.com/gustavnikolaj/keepass-dmenu 
+;; git://github.com/hchbaw/auto-fu.zsh 
+;; git://github.com/heyalexej/awesome-images 
+;; git://github.com/hishamhm/htop 
+;; git://github.com/holman/dotfiles 
+;; git://github.com/horst3180/Arc-theme 
+;; git://github.com/horst3180/ceti-2-theme 
+;; git://github.com/horst3180/ceti-theme 
+;; git://github.com/huyz/less.vim 
+;; git://github.com/hydride0/yamazaki 
+;; git://github.com/hydrusnetwork/hydrus 
+;; git://github.com/ianstormtaylor/to-slug-case 
+;; git://github.com/idris-lang/Idris-dev 
+;; git://github.com/install-logos/ricedb 
+;; git://github.com/isohuntto/openbay 
+;; git://github.com/itchyny/lightline.vim 
+;; git://github.com/ivmai/bdwgc 
+;; git://github.com/ivmai/libatomic_ops 
+;; git://github.com/jamesob/desk 
+;; git://github.com/jarofghosts/just-pluck 
+;; git://github.com/jashkenas/underscore 
+;; git://github.com/jasonhemann/microKanren 
+;; git://github.com/jbernard/dotfiles 
+;; git://github.com/jduey/applicative 
+;; git://github.com/jedisct1/dnscrypt-proxy 
+;; git://github.com/jgm/pandoc 
+;; git://github.com/jhawthorn/meh 
+;; git://github.com/jnv/lists 
+;; git://github.com/jodrell/unbound-block-hosts 
+;; git://github.com/joelagnel/stumpwm-goodies 
+;; git://github.com/joeyespo/grip 
+;; git://github.com/jonls/redshift 
+;; git://github.com/jstolarek/why-dependent-types-matter 
+;; git://github.com/justintv/Twitch-API 
+;; git://github.com/kahua/Kahua 
+;; git://github.com/kahun/awesome-sysadmin 
+;; git://github.com/kazesawa/kazesawa 
+;; git://github.com/kazu-yamamoto/ghc-mod 
+;; git://github.com/keplerproject/luarocks 
+;; git://github.com/kfish/xsel 
+;; git://github.com/kfl/mosml 
+;; git://github.com/kidd/org-protocol-github-lines 
+;; git://github.com/kidd/radios 
+;; git://github.com/kirikx/bds 
+;; git://github.com/knopwob/dunst 
+;; git://github.com/koron/chalice 
+;; git://github.com/koron/cmigemo.git 
+;; git://github.com/kovisoft/paredit 
+;; git://github.com/kragniz/python-pixiv 
+;; git://github.com/krakenjs/confit 
+;; git://github.com/kuanyui/dotfiles 
+;; git://github.com/kumacoinproject/kumacoin 
+;; git://github.com/kumaryu/peercaststation 
+;; git://github.com/kyleterry/awesome-radio 
+;; git://github.com/lastpass/lastpass-cli 
+;; git://github.com/laurikari/tre 
+;; git://github.com/leafo/moonscript 
+;; git://github.com/letsgetrandy/DICSS 
+;; git://github.com/libav/libav 
+;; git://github.com/lzap/dancepill 
+;; git://github.com/mWater/minimongo 
+;; git://github.com/madmalik/monoOne 
+;; git://github.com/mafintosh/peerflix 
+;; git://github.com/majestrate/nntpchan 
+;; git://github.com/manateelazycat/mrkeyboard 
+;; git://github.com/martanne/abduco 
+;; git://github.com/martanne/dvtm 
+;; git://github.com/martinp26/motix 
+;; git://github.com/mason-larobina/luakit 
+;; git://github.com/masroore/opentracker 
+;; git://github.com/maxogden/art-of-node 
+;; git://github.com/mbadolato/iTerm2-Color-Schemes 
+;; git://github.com/mbunkus/mkvtoolnix 
+;; git://github.com/mcandre/modulinos 
+;; git://github.com/mcna/closer-mop 
+;; git://github.com/mcrapet/plowshare 
+;; git://github.com/melaniecebula/cat-ascii-faces 
+;; git://github.com/mietek/bashmenot 
+;; git://github.com/mietek/halcyon 
+;; git://github.com/minimaxir/big-list-of-naughty-strings 
+;; git://github.com/mirror/x265 
+;; git://github.com/mitchellh/cli 
+;; git://github.com/mitchellh/colorstring 
+;; git://github.com/mitmproxy/mitmproxy 
+;; git://github.com/miyagawa/cpanminus 
+;; git://github.com/mo-ya/tmux-agent 
+;; git://github.com/mobile-shell/mosh 
+;; git://github.com/monacoinproject/monacoin 
+;; git://github.com/mooz/percol 
+;; git://github.com/motemen/ghq 
+;; git://github.com/moul/awesome-ssh 
+;; git://github.com/mps-youtube/mps-youtube 
+;; git://github.com/mps-youtube/pafy 
+;; git://github.com/mpv-player/mpv 
+;; git://github.com/mrowa44/emojify 
+;; git://github.com/msiemens/tinydb 
+;; git://github.com/muennich/sxiv 
+;; git://github.com/myimouto/myimouto 
+;; git://github.com/n-yuji/keyboard-font 
+;; git://github.com/neovim/neovim 
+;; git://github.com/neovim/python-client 
+;; git://github.com/nezumisama/mpvmenu 
+;; git://github.com/ninjaaron/bitocra 
+;; git://github.com/nixxquality/WebMConverter 
+;; git://github.com/npm/npm 
+;; git://github.com/nrgmilk/freebsd-desktop-jp 
+;; git://github.com/numixproject/numix-icon-theme-circle 
+;; git://github.com/ocaml/ocaml 
+;; git://github.com/oh-my-fish/oh-my-fish 
+;; git://github.com/ok100/lyvi 
+;; git://github.com/okuoku/mosh 
+;; git://github.com/okuoku/r7rs-bridge 
+;; git://github.com/omcljs/om 
+;; git://github.com/onodera-punpun/dotfiles 
+;; git://github.com/openssh/openssh-portable 
+;; git://github.com/ozonos/ozon-gtk-theme 
+;; git://github.com/pallet/thread-expr 
+;; git://github.com/pannon/iocage 
+;; git://github.com/parro-it/awesome-microlibs 
+;; git://github.com/pasky/speedread 
+;; git://github.com/paulsmith/getting-started-llvm-c-api 
+;; git://github.com/pavoljuhas/smart-change-directory 
+;; git://github.com/phallus/fonts 
+;; git://github.com/pindexis/marker 
+;; git://github.com/pituz/webm-thread 
+;; git://github.com/pkgng/pkgng 
+;; git://github.com/plonk/bbiff 
+;; git://github.com/plonk/psapi 
+;; git://github.com/politza/pdf-tools 
+;; git://github.com/polyml/polyml 
+;; git://github.com/progre/pecastarter5 
+;; git://github.com/psyrendust/alf 
+;; git://github.com/puffnfresh/daggy 
+;; git://github.com/pyload/pyload 
+;; git://github.com/rakshasa/rtorrent 
+;; git://github.com/ramda/ramda 
+;; git://github.com/rbanffy/3270font 
+;; git://github.com/rbenv/ruby-build 
+;; git://github.com/retroj/conkeror 
+;; git://github.com/rg3/youtube-dl 
+;; git://github.com/rjosph/fluxbox-config 
+;; git://github.com/robert-strandh/SICL 
+;; git://github.com/robfig/config 
+;; git://github.com/robfig/pathtree 
+;; git://github.com/robm/dzen 
+;; git://github.com/romeovs/creep 
+;; git://github.com/rossy2401/img2xterm 
+;; git://github.com/rplevy/swiss-arrows 
+;; git://github.com/rupa/v 
+;; git://github.com/rupa/z 
+;; git://github.com/saironiq/shellscripts 
+;; git://github.com/saitoha/libsixel 
+;; git://github.com/samirahmed/fu 
+;; git://github.com/sanzo12/myanimelist 
+;; git://github.com/sashavasko/afterstep-devel 
+;; git://github.com/sbcl/sbcl 
+;; git://github.com/sboli/twmn 
+;; git://github.com/scottjad/cons 
+;; git://github.com/scottjad/dotfiles 
+;; git://github.com/sdegutis/mjolnir 
+;; git://github.com/sdhand/n30f 
+;; git://github.com/seattlerb/hoe 
+;; git://github.com/seebi/tmux-colors-solarized 
+;; git://github.com/seven332/EhViewer 
+;; git://github.com/sgrove/tehila 
+;; git://github.com/sgymtic/sl 
+;; git://github.com/shaldengeki/python-mal 
+;; git://github.com/shellfire-dev/shellfire 
+;; git://github.com/shingetsu/saku 
+;; git://github.com/shingetsu/saku-ex 
+;; git://github.com/shirok/Gauche 
+;; git://github.com/shutterstock/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words 
+;; git://github.com/sickill/git-dude 
+;; git://github.com/silentbicycle/ff 
+;; git://github.com/simonwhitaker/gibo 
+;; git://github.com/sindresorhus/awesome-nodejs 
+;; git://github.com/sindresorhus/awesome-npm 
+;; git://github.com/sixsixfive/Glare 
+;; git://github.com/sjl/z-fish 
+;; git://github.com/skroll/privoxy-adblock 
+;; git://github.com/snmsts/roswell 
+;; git://github.com/snwh/yuyo-gtk-theme 
+;; git://github.com/soimort/you-get 
+;; git://github.com/solus-project/evopop-gtk-theme 
+;; git://github.com/solus-project/evopop-icon-theme 
+;; git://github.com/sorin-ionescu/prezto 
+;; git://github.com/stevemao/awesome-git-addons 
+;; git://github.com/streadway/simpleuuid 
+;; git://github.com/stumpwm/paulownia 
+;; git://github.com/stumpwm/stumpwm 
+;; git://github.com/stumpwm/stumpwm-contrib 
+;; git://github.com/stumpwm/stumpwm.wiki 
+;; git://github.com/swannodette/mori 
+;; git://github.com/syl20bnr/oh-my-fish-theme-syl20bnr 
+;; git://github.com/syohex/byzanz-window 
+;; git://github.com/t9md/vim-ezbar 
+;; git://github.com/takeoutweight/bidirectional 
+;; git://github.com/tarjoilija/zgen 
+;; git://github.com/tastejs/awesome-app-ideas 
+;; git://github.com/tatsuhiro-t/aria2 
+;; git://github.com/tchoulihan/torrenttunes-client 
+;; git://github.com/technicalpickles/homesick 
+;; git://github.com/tekknolagi/carp 
+;; git://github.com/tizoc/chibi-shen 
+;; git://github.com/tj/git-extras 
+;; git://github.com/tkengo/highway 
+;; git://github.com/tlatsas/xcolors 
+;; git://github.com/tmbinc/bgrep 
+;; git://github.com/tmux-plugins/tmux-resurrect 
+;; git://github.com/tmux-plugins/tpm 
+;; git://github.com/tmux/tmux 
+;; git://github.com/tolitius/mount 
+;; git://github.com/tommy351/warehouse 
+;; git://github.com/tomokuni/Myrica 
+;; git://github.com/tonsky/rum 
+;; git://github.com/toolpunk/dmenu-ee 
+;; git://github.com/toromoti/chocomint.sh 
+;; git://github.com/trapd00r/configs 
+;; git://github.com/trapd00r/ls-- 
+;; git://github.com/trapd00r/utils 
+;; git://github.com/trapd00r/zsh-syntax-highlighting-filetypes 
+;; git://github.com/travitch/taffybar 
+;; git://github.com/trizen/youtube-viewer 
+;; git://github.com/tuvistavie/fundle 
+;; git://github.com/tyru/dotto 
+;; git://github.com/ultravideo/kvazaar 
+;; git://github.com/underdash/underdash 
+;; git://github.com/unixorn/awesome-zsh-plugins 
+;; git://github.com/unot/WebRadioRecorder 
+;; git://github.com/uobikiemukot/sdump 
+;; git://github.com/uobikiemukot/yaft 
+;; git://github.com/valvallow/lifegame 
+;; git://github.com/variadico/noti 
+;; git://github.com/victorhaggqvist/xboomx 
+;; git://github.com/videolan/x265 
+;; git://github.com/vikasrawal/orgpaper 
+;; git://github.com/vstakhov/libucl 
+;; git://github.com/weavejester/medley 
+;; git://github.com/webyrd/miniKanren 
+;; git://github.com/whatyouhide/gotham-contrib 
+;; git://github.com/windelicato/dotfiles 
+;; git://github.com/windymelt/p2p2ch 
+;; git://github.com/wooorm/alex 
+;; git://github.com/xero/dotfiles 
+;; git://github.com/xmonad/xmonad-contrib 
+;; git://github.com/xorg62/wmfs 
+;; git://github.com/xyl0n/iris-light 
+;; git://github.com/xylosper/bomi 
+;; git://github.com/yascentur/RictyDiminished 
+;; git://github.com/yayugu/net-radio-archive 
+;; git://github.com/zcaudate/hara 
+;; git://github.com/zero808/ya4cid 
+;; git://github.com/zmalltalker/fish-nuggets 
+;; git://github.com/zone117x/Jackett 
+;; git://github.com/zoppo/plugins 
+;; git://github.com/zoppo/zoppo 
+;; git://github.com/zovt/papier-gtk-theme 
+;; git://github.com/zsh-users/zsh-completions 
+;; git://github.com/zsh-users/zsh-syntax-highlighting 
+;; git://github.com/zsoltf/lsr 
+;; git://github.com/zy/zy-fvwm 
+;; git://github.com/zzggbb/colorblocks 
+;; git://gitorious.org/sly/sly 
+;; git://gitorious.org/src-vcs/src-vcs.git 
+;; gitpub@162.252.242.77:morphis.git 
 
 
-
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; (hoarder:fetch "https://gist.github.com/david-christiansen/2ba5e03910666ae27203")
 
 ;; (hoarder:fetch "https://bitbucket.org/tarballs_are_good/lisp-random.git"
