@@ -243,8 +243,8 @@
 (defvar muki:x-theme 'omtose-phellack)
 (defvar muki:term-theme 'flatland)
 
-(enable-option select-enable-clipboard
-               select-enable-primary)
+;; (enable-option select-enable-clipboard
+;;                select-enable-primary)
 
 ;; kill-ring and clipboard are same now!
 ;; (set-option save-interprogram-paste-before-kill t)
