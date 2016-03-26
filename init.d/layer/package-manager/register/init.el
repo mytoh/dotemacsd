@@ -2250,459 +2250,460 @@
 (hoarder:fetch "git://repo.or.cz/conkeror.git") 
 (hoarder:fetch "git://repo.or.cz/dvtm.git") 
 
-;; git://github.com/2xT/kaistapaa 
-;; git://github.com/3ofcoins/jetpack 
-;; git://github.com/86me/pentadactyl-scripts 
-;; git://github.com/Ahed91/Mlterm-Color-Schames 
-;; git://github.com/AnidevFR/NyaaAPI 
-;; git://github.com/Argon-/mpv-stats 
-;; git://github.com/Cloudef/dmenu-pango-imlib 
-;; git://github.com/Cloudef/dotFiles 
-;; git://github.com/Cloudef/dotfiles-ng 
-;; git://github.com/Cloudef/monsterwm-xcb 
-;; git://github.com/Cloudef/sxiv 
-;; git://github.com/Cloudef/xcmenu 
-;; git://github.com/DaisukeAramaki/Dotfiles 
-;; git://github.com/DaveDavenport/rofi-themes 
-;; git://github.com/EZ3CHI3L/Eternity 
-;; git://github.com/FFmpeg/FFmpeg 
-;; git://github.com/FLIF-hub/FLIF 
-;; git://github.com/FooSoft/homemaker 
-;; git://github.com/Fvwm-Nightshade/Fvwm-Nightshade 
-;; git://github.com/GGLucas/vimperator-buftabs 
-;; git://github.com/Gabriel439/Haskell-Turtle-Library 
-;; git://github.com/Griever/userChromeJS 
-;; git://github.com/HelloZeroNet/ZeroNet 
-;; git://github.com/Hiroyuki-Nagata/XrossBoard 
-;; git://github.com/Hund/Userstyles 
-;; git://github.com/IgnorantGuru/spacefm 
-;; git://github.com/ImageMagick/ImageMagick 
-;; git://github.com/ItzBlitz98/torrentflix 
-;; git://github.com/Jehops/swm-freebsd-battery-modeline 
-;; git://github.com/Jehops/swm-freebsd-cpu-modeline 
-;; git://github.com/Jehops/swm-freebsd-mem-modeline 
-;; git://github.com/Jehops/swm-freebsd-net-modeline 
-;; git://github.com/Jehops/swm-freebsd-volume-modeline 
-;; git://github.com/Jehops/swm-freebsd-zfs-modeline 
-;; git://github.com/Jehops/swm-hostname-modeline 
-;; git://github.com/Jehops/swm-maildir-modeline 
-;; git://github.com/KeenS/CIM 
-;; git://github.com/Kickball/awesome-selfhosted 
-;; git://github.com/LemonBoy/bar 
-;; git://github.com/MLton/mlton 
-;; git://github.com/MagikBSD/please 
-;; git://github.com/Masterminds/glide 
-;; git://github.com/MidnightCommander/mc.git 
-;; git://github.com/MirBSD/mksh 
-;; git://github.com/Nandaka/DanbooruDownloader 
-;; git://github.com/Nenuphar/Dyod 
-;; git://github.com/NitruxSA/flattr-icons 
-;; git://github.com/NitruxSA/plasma-next-icons 
-;; git://github.com/NoahBuscher/Flatron 
-;; git://github.com/OpenBazaar/OpenBazaar 
-;; git://github.com/Pewpews/happypanda 
-;; git://github.com/PopcornTimeCE/popcorntimece 
-;; git://github.com/Rabrennie/anything.js 
-;; git://github.com/Ranks/emojione 
-;; git://github.com/Raynes/fs 
-;; git://github.com/RubenRocha/ricey 
-;; git://github.com/Russell91/sshrc 
-;; git://github.com/RuudBurger/CouchPotatoServer 
-;; git://github.com/Shinryuu/dotfiles 
-;; git://github.com/Shougo/dein.vim 
-;; git://github.com/Shougo/vimshell.vim 
-;; git://github.com/Slevinski/signwriting_2010_fonts 
-;; git://github.com/Stephen304/bitcannon 
-;; git://github.com/Swordfish90/cool-retro-term 
-;; git://github.com/TBRSS/serapeum 
-;; git://github.com/Tecate/bitmap-fonts 
-;; git://github.com/TheMozg/awk-raycaster 
-;; git://github.com/UniversalMediaServer/UniversalMediaServer 
-;; git://github.com/aajanki/yle-dl 
-;; git://github.com/adobe-fonts/source-han-code-jp 
-;; git://github.com/adobe-type-tools/afdko 
-;; git://github.com/agda/agda 
-;; git://github.com/agtorre/gocolorize 
-;; git://github.com/ahodesuka/ahoviewer 
-;; git://github.com/ainame/mediakit 
-;; git://github.com/alebcay/awesome-shell 
-;; git://github.com/alezost/stumpwmrc 
-;; git://github.com/alice0775/userChrome.js 
-;; git://github.com/aliceml/aliceml 
-;; git://github.com/allanjude/uclcmd 
-;; git://github.com/alphapapa/bucket 
-;; git://github.com/altercation/solarized 
-;; git://github.com/andsens/homeshick 
-;; git://github.com/andyfitz/overpass 
-;; git://github.com/aredridel/es-shell 
-;; git://github.com/asciimoo/searx 
-;; git://github.com/asdfman/linux-shimeji 
-;; git://github.com/ashinn/chibi-scheme 
-;; git://github.com/atextor/icat 
-;; git://github.com/aziz/tmuxinator 
-;; git://github.com/azu/awesome-commit-english 
-;; git://github.com/b4b4r07/zplug 
-;; git://github.com/badele/gitcheck 
-;; git://github.com/bamos/dotfiles 
-;; git://github.com/baskerville/bspwm 
-;; git://github.com/baskerville/diana 
-;; git://github.com/baskerville/sutils 
-;; git://github.com/baskerville/sxhkd 
-;; git://github.com/baskerville/xtitle.git 
-;; git://github.com/benjaminoakes/maid 
-;; git://github.com/benlinton/bash-slugify 
-;; git://github.com/bibanon/bibanon 
-;; git://github.com/blakemcbride/POS 
-;; git://github.com/bmizerany/roundup 
-;; git://github.com/bookdraft/QPeerCastYP 
-;; git://github.com/boot-clj/boot 
-;; git://github.com/brpocock/shelltoys 
-;; git://github.com/brushdemon/gen-update 
-;; git://github.com/btpd/btpd 
-;; git://github.com/bucaran/awesome-fish 
-;; git://github.com/bucaran/flash 
-;; git://github.com/bucaran/hulk 
-;; git://github.com/buntine/Fractals 
-;; git://github.com/burningtree/awesome-json 
-;; git://github.com/butterproject/butter 
-;; git://github.com/caarlos0/antibody 
-;; git://github.com/caleb-/evilvte 
-;; git://github.com/carnager/teiler 
-;; git://github.com/cavalle/steak 
-;; git://github.com/chirauraNoSakusha/chiraura 
-;; git://github.com/chjj/compton 
-;; git://github.com/chrisdone/ghci-ng 
-;; git://github.com/chrissimpkins/Hack 
-;; git://github.com/chrissimpkins/codeface 
-;; git://github.com/chujoii/battery-scheme 
-;; git://github.com/chujoii/xattr-tag 
-;; git://github.com/cjb/gittorrent 
-;; git://github.com/cjxgm/libcrude 
-;; git://github.com/ckolivas/lrzip 
-;; git://github.com/cldwalker/boson 
-;; git://github.com/cldwalker/boson-more 
-;; git://github.com/clibs/clib 
-;; git://github.com/clojure/clojure 
-;; git://github.com/clojure/clojure-contrib 
-;; git://github.com/clojure/core.logic 
-;; git://github.com/clvv/fasd 
-;; git://github.com/cmdrkotori/mplaylist 
-;; git://github.com/cmus/cmus 
-;; git://github.com/coderholic/pyradio 
-;; git://github.com/colinf/om-chat-base 
-;; git://github.com/conformal/xombrero 
-;; git://github.com/copiousfreetime/launchy 
-;; git://github.com/cssnext/cssnext 
-;; git://github.com/ctrlcctrlv/8chan 
-;; git://github.com/dcolascione/ppgrep 
-;; git://github.com/ded/valentine 
-;; git://github.com/defunkt/hub 
-;; git://github.com/denilsonsa/prettyping 
-;; git://github.com/derf/feh 
-;; git://github.com/deterenkelt/watchsh 
-;; git://github.com/dfkt/firefox-tweaks 
-;; git://github.com/digego/extempore 
-;; git://github.com/doomzhou/.fvwm 
-;; git://github.com/dss-project/stumpmacs 
-;; git://github.com/eXeC64/imv 
-;; git://github.com/eijah/demoncrypt 
-;; git://github.com/elm-lang/core 
-;; git://github.com/emgram769/lighthouse 
-;; git://github.com/emrehan/clojurescript-awesome 
-;; git://github.com/enaqx/awesome-react 
-;; git://github.com/erikw/tmux-powerline 
-;; git://github.com/esodax/fishystuff 
-;; git://github.com/fabianalexisinostroza/Antu 
-;; git://github.com/faizilham/nyaaupdater 
-;; git://github.com/fantasyland/fantasy-land 
-;; git://github.com/fdv/platypus 
-;; git://github.com/fenrus75/powertop 
-;; git://github.com/feross/awesome-mad-science 
-;; git://github.com/fish-bundles/root-bundle-fish-bundle 
-;; git://github.com/fish-shell/fish-shell 
-;; git://github.com/fisherman/fisherman 
-;; git://github.com/fitzgen/wu.js 
-;; git://github.com/fizzed/font-mfizz 
-;; git://github.com/fniessen/org-html-themes 
-;; git://github.com/fniessen/orgmk 
-;; git://github.com/francesco-bracchi/sake 
-;; git://github.com/frytvm/XS 
-;; git://github.com/fukamachi/clack 
-;; git://github.com/g-gundam/yotsubAPI 
-;; git://github.com/gentoo-science/eselect 
-;; git://github.com/ghc/ghc 
-;; git://github.com/git/git 
-;; git://github.com/github/octicons 
-;; git://github.com/gka/chroma.js 
-;; git://github.com/gmarik/vimfiles 
-;; git://github.com/gongo/elfactory 
-;; git://github.com/google/roboto 
-;; git://github.com/gotbletu/dotfiles 
-;; git://github.com/graudeejs/dot.fvwm 
-;; git://github.com/greghendershott/rackjure 
-;; git://github.com/guipdutra/awesome-geek-podcasts 
-;; git://github.com/gustavnikolaj/keepass-dmenu 
-;; git://github.com/hchbaw/auto-fu.zsh 
-;; git://github.com/heyalexej/awesome-images 
-;; git://github.com/hishamhm/htop 
-;; git://github.com/holman/dotfiles 
-;; git://github.com/horst3180/Arc-theme 
-;; git://github.com/horst3180/ceti-2-theme 
-;; git://github.com/horst3180/ceti-theme 
-;; git://github.com/huyz/less.vim 
-;; git://github.com/hydride0/yamazaki 
-;; git://github.com/hydrusnetwork/hydrus 
-;; git://github.com/ianstormtaylor/to-slug-case 
-;; git://github.com/idris-lang/Idris-dev 
-;; git://github.com/install-logos/ricedb 
-;; git://github.com/isohuntto/openbay 
-;; git://github.com/itchyny/lightline.vim 
-;; git://github.com/ivmai/bdwgc 
-;; git://github.com/ivmai/libatomic_ops 
-;; git://github.com/jamesob/desk 
-;; git://github.com/jarofghosts/just-pluck 
-;; git://github.com/jashkenas/underscore 
-;; git://github.com/jasonhemann/microKanren 
-;; git://github.com/jbernard/dotfiles 
-;; git://github.com/jduey/applicative 
-;; git://github.com/jedisct1/dnscrypt-proxy 
-;; git://github.com/jgm/pandoc 
-;; git://github.com/jhawthorn/meh 
-;; git://github.com/jnv/lists 
-;; git://github.com/jodrell/unbound-block-hosts 
-;; git://github.com/joelagnel/stumpwm-goodies 
-;; git://github.com/joeyespo/grip 
-;; git://github.com/jonls/redshift 
-;; git://github.com/jstolarek/why-dependent-types-matter 
-;; git://github.com/justintv/Twitch-API 
-;; git://github.com/kahua/Kahua 
-;; git://github.com/kahun/awesome-sysadmin 
-;; git://github.com/kazesawa/kazesawa 
-;; git://github.com/kazu-yamamoto/ghc-mod 
-;; git://github.com/keplerproject/luarocks 
-;; git://github.com/kfish/xsel 
-;; git://github.com/kfl/mosml 
-;; git://github.com/kidd/org-protocol-github-lines 
-;; git://github.com/kidd/radios 
-;; git://github.com/kirikx/bds 
-;; git://github.com/knopwob/dunst 
-;; git://github.com/koron/chalice 
-;; git://github.com/koron/cmigemo.git 
-;; git://github.com/kovisoft/paredit 
-;; git://github.com/kragniz/python-pixiv 
-;; git://github.com/krakenjs/confit 
-;; git://github.com/kuanyui/dotfiles 
-;; git://github.com/kumacoinproject/kumacoin 
-;; git://github.com/kumaryu/peercaststation 
-;; git://github.com/kyleterry/awesome-radio 
-;; git://github.com/lastpass/lastpass-cli 
-;; git://github.com/laurikari/tre 
-;; git://github.com/leafo/moonscript 
-;; git://github.com/letsgetrandy/DICSS 
-;; git://github.com/libav/libav 
-;; git://github.com/lzap/dancepill 
-;; git://github.com/mWater/minimongo 
-;; git://github.com/madmalik/monoOne 
-;; git://github.com/mafintosh/peerflix 
-;; git://github.com/majestrate/nntpchan 
-;; git://github.com/manateelazycat/mrkeyboard 
-;; git://github.com/martanne/abduco 
-;; git://github.com/martanne/dvtm 
-;; git://github.com/martinp26/motix 
-;; git://github.com/mason-larobina/luakit 
-;; git://github.com/masroore/opentracker 
-;; git://github.com/maxogden/art-of-node 
-;; git://github.com/mbadolato/iTerm2-Color-Schemes 
-;; git://github.com/mbunkus/mkvtoolnix 
-;; git://github.com/mcandre/modulinos 
-;; git://github.com/mcna/closer-mop 
-;; git://github.com/mcrapet/plowshare 
-;; git://github.com/melaniecebula/cat-ascii-faces 
-;; git://github.com/mietek/bashmenot 
-;; git://github.com/mietek/halcyon 
-;; git://github.com/minimaxir/big-list-of-naughty-strings 
-;; git://github.com/mirror/x265 
-;; git://github.com/mitchellh/cli 
-;; git://github.com/mitchellh/colorstring 
-;; git://github.com/mitmproxy/mitmproxy 
-;; git://github.com/miyagawa/cpanminus 
-;; git://github.com/mo-ya/tmux-agent 
-;; git://github.com/mobile-shell/mosh 
-;; git://github.com/monacoinproject/monacoin 
-;; git://github.com/mooz/percol 
-;; git://github.com/motemen/ghq 
-;; git://github.com/moul/awesome-ssh 
-;; git://github.com/mps-youtube/mps-youtube 
-;; git://github.com/mps-youtube/pafy 
-;; git://github.com/mpv-player/mpv 
-;; git://github.com/mrowa44/emojify 
-;; git://github.com/msiemens/tinydb 
-;; git://github.com/muennich/sxiv 
-;; git://github.com/myimouto/myimouto 
-;; git://github.com/n-yuji/keyboard-font 
-;; git://github.com/neovim/neovim 
-;; git://github.com/neovim/python-client 
-;; git://github.com/nezumisama/mpvmenu 
-;; git://github.com/ninjaaron/bitocra 
-;; git://github.com/nixxquality/WebMConverter 
-;; git://github.com/npm/npm 
-;; git://github.com/nrgmilk/freebsd-desktop-jp 
-;; git://github.com/numixproject/numix-icon-theme-circle 
-;; git://github.com/ocaml/ocaml 
-;; git://github.com/oh-my-fish/oh-my-fish 
-;; git://github.com/ok100/lyvi 
-;; git://github.com/okuoku/mosh 
-;; git://github.com/okuoku/r7rs-bridge 
-;; git://github.com/omcljs/om 
-;; git://github.com/onodera-punpun/dotfiles 
-;; git://github.com/openssh/openssh-portable 
-;; git://github.com/ozonos/ozon-gtk-theme 
-;; git://github.com/pallet/thread-expr 
-;; git://github.com/pannon/iocage 
-;; git://github.com/parro-it/awesome-microlibs 
-;; git://github.com/pasky/speedread 
-;; git://github.com/paulsmith/getting-started-llvm-c-api 
-;; git://github.com/pavoljuhas/smart-change-directory 
-;; git://github.com/phallus/fonts 
-;; git://github.com/pindexis/marker 
-;; git://github.com/pituz/webm-thread 
-;; git://github.com/pkgng/pkgng 
-;; git://github.com/plonk/bbiff 
-;; git://github.com/plonk/psapi 
-;; git://github.com/politza/pdf-tools 
-;; git://github.com/polyml/polyml 
-;; git://github.com/progre/pecastarter5 
-;; git://github.com/psyrendust/alf 
-;; git://github.com/puffnfresh/daggy 
-;; git://github.com/pyload/pyload 
-;; git://github.com/rakshasa/rtorrent 
-;; git://github.com/ramda/ramda 
-;; git://github.com/rbanffy/3270font 
-;; git://github.com/rbenv/ruby-build 
-;; git://github.com/retroj/conkeror 
-;; git://github.com/rg3/youtube-dl 
-;; git://github.com/rjosph/fluxbox-config 
-;; git://github.com/robert-strandh/SICL 
-;; git://github.com/robfig/config 
-;; git://github.com/robfig/pathtree 
-;; git://github.com/robm/dzen 
-;; git://github.com/romeovs/creep 
-;; git://github.com/rossy2401/img2xterm 
-;; git://github.com/rplevy/swiss-arrows 
-;; git://github.com/rupa/v 
-;; git://github.com/rupa/z 
-;; git://github.com/saironiq/shellscripts 
-;; git://github.com/saitoha/libsixel 
-;; git://github.com/samirahmed/fu 
-;; git://github.com/sanzo12/myanimelist 
-;; git://github.com/sashavasko/afterstep-devel 
-;; git://github.com/sbcl/sbcl 
-;; git://github.com/sboli/twmn 
-;; git://github.com/scottjad/cons 
-;; git://github.com/scottjad/dotfiles 
-;; git://github.com/sdegutis/mjolnir 
-;; git://github.com/sdhand/n30f 
-;; git://github.com/seattlerb/hoe 
-;; git://github.com/seebi/tmux-colors-solarized 
-;; git://github.com/seven332/EhViewer 
-;; git://github.com/sgrove/tehila 
-;; git://github.com/sgymtic/sl 
-;; git://github.com/shaldengeki/python-mal 
-;; git://github.com/shellfire-dev/shellfire 
-;; git://github.com/shingetsu/saku 
-;; git://github.com/shingetsu/saku-ex 
-;; git://github.com/shirok/Gauche 
-;; git://github.com/shutterstock/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words 
-;; git://github.com/sickill/git-dude 
-;; git://github.com/silentbicycle/ff 
-;; git://github.com/simonwhitaker/gibo 
-;; git://github.com/sindresorhus/awesome-nodejs 
-;; git://github.com/sindresorhus/awesome-npm 
-;; git://github.com/sixsixfive/Glare 
-;; git://github.com/sjl/z-fish 
-;; git://github.com/skroll/privoxy-adblock 
-;; git://github.com/snmsts/roswell 
-;; git://github.com/snwh/yuyo-gtk-theme 
-;; git://github.com/soimort/you-get 
-;; git://github.com/solus-project/evopop-gtk-theme 
-;; git://github.com/solus-project/evopop-icon-theme 
-;; git://github.com/sorin-ionescu/prezto 
-;; git://github.com/stevemao/awesome-git-addons 
-;; git://github.com/streadway/simpleuuid 
-;; git://github.com/stumpwm/paulownia 
-;; git://github.com/stumpwm/stumpwm 
-;; git://github.com/stumpwm/stumpwm-contrib 
-;; git://github.com/stumpwm/stumpwm.wiki 
-;; git://github.com/swannodette/mori 
-;; git://github.com/syl20bnr/oh-my-fish-theme-syl20bnr 
-;; git://github.com/syohex/byzanz-window 
-;; git://github.com/t9md/vim-ezbar 
-;; git://github.com/takeoutweight/bidirectional 
-;; git://github.com/tarjoilija/zgen 
-;; git://github.com/tastejs/awesome-app-ideas 
-;; git://github.com/tatsuhiro-t/aria2 
-;; git://github.com/tchoulihan/torrenttunes-client 
-;; git://github.com/technicalpickles/homesick 
-;; git://github.com/tekknolagi/carp 
-;; git://github.com/tizoc/chibi-shen 
-;; git://github.com/tj/git-extras 
-;; git://github.com/tkengo/highway 
-;; git://github.com/tlatsas/xcolors 
-;; git://github.com/tmbinc/bgrep 
-;; git://github.com/tmux-plugins/tmux-resurrect 
-;; git://github.com/tmux-plugins/tpm 
-;; git://github.com/tmux/tmux 
-;; git://github.com/tolitius/mount 
-;; git://github.com/tommy351/warehouse 
-;; git://github.com/tomokuni/Myrica 
-;; git://github.com/tonsky/rum 
-;; git://github.com/toolpunk/dmenu-ee 
-;; git://github.com/toromoti/chocomint.sh 
-;; git://github.com/trapd00r/configs 
-;; git://github.com/trapd00r/ls-- 
-;; git://github.com/trapd00r/utils 
-;; git://github.com/trapd00r/zsh-syntax-highlighting-filetypes 
-;; git://github.com/travitch/taffybar 
-;; git://github.com/trizen/youtube-viewer 
-;; git://github.com/tuvistavie/fundle 
-;; git://github.com/tyru/dotto 
-;; git://github.com/ultravideo/kvazaar 
-;; git://github.com/underdash/underdash 
-;; git://github.com/unixorn/awesome-zsh-plugins 
-;; git://github.com/unot/WebRadioRecorder 
-;; git://github.com/uobikiemukot/sdump 
-;; git://github.com/uobikiemukot/yaft 
-;; git://github.com/valvallow/lifegame 
-;; git://github.com/variadico/noti 
-;; git://github.com/victorhaggqvist/xboomx 
-;; git://github.com/videolan/x265 
-;; git://github.com/vikasrawal/orgpaper 
-;; git://github.com/vstakhov/libucl 
-;; git://github.com/weavejester/medley 
-;; git://github.com/webyrd/miniKanren 
-;; git://github.com/whatyouhide/gotham-contrib 
-;; git://github.com/windelicato/dotfiles 
-;; git://github.com/windymelt/p2p2ch 
-;; git://github.com/wooorm/alex 
-;; git://github.com/xero/dotfiles 
-;; git://github.com/xmonad/xmonad-contrib 
-;; git://github.com/xorg62/wmfs 
-;; git://github.com/xyl0n/iris-light 
-;; git://github.com/xylosper/bomi 
-;; git://github.com/yascentur/RictyDiminished 
-;; git://github.com/yayugu/net-radio-archive 
-;; git://github.com/zcaudate/hara 
-;; git://github.com/zero808/ya4cid 
-;; git://github.com/zmalltalker/fish-nuggets 
-;; git://github.com/zone117x/Jackett 
-;; git://github.com/zoppo/plugins 
-;; git://github.com/zoppo/zoppo 
-;; git://github.com/zovt/papier-gtk-theme 
-;; git://github.com/zsh-users/zsh-completions 
-;; git://github.com/zsh-users/zsh-syntax-highlighting 
-;; git://github.com/zsoltf/lsr 
-;; git://github.com/zy/zy-fvwm 
-;; git://github.com/zzggbb/colorblocks 
+;; (hoarder:fetch "2xT/kaistapaa") 
+;; (hoarder:fetch "3ofcoins/jetpack") 
+;; (hoarder:fetch "86me/pentadactyl-scripts") 
+;; (hoarder:fetch "Ahed91/Mlterm-Color-Schames") 
+;; (hoarder:fetch "AnidevFR/NyaaAPI") 
+;; (hoarder:fetch "Argon-/mpv-stats") 
+;; (hoarder:fetch "Cloudef/dmenu-pango-imlib") 
+;; (hoarder:fetch "Cloudef/dotFiles") 
+;; (hoarder:fetch "Cloudef/dotfiles-ng") 
+;; (hoarder:fetch "Cloudef/monsterwm-xcb") 
+;; (hoarder:fetch "Cloudef/sxiv") 
+;; (hoarder:fetch "Cloudef/xcmenu") 
+;; (hoarder:fetch "DaisukeAramaki/Dotfiles") 
+;; (hoarder:fetch "DaveDavenport/rofi-themes") 
+;; (hoarder:fetch "EZ3CHI3L/Eternity") 
+;; (hoarder:fetch "FFmpeg/FFmpeg") 
+;; (hoarder:fetch "FLIF-hub/FLIF") 
+;; (hoarder:fetch "FooSoft/homemaker") 
+;; (hoarder:fetch "Fvwm-Nightshade/Fvwm-Nightshade") 
+;; (hoarder:fetch "GGLucas/vimperator-buftabs") 
+;; (hoarder:fetch "Gabriel439/Haskell-Turtle-Library") 
+;; (hoarder:fetch "Griever/userChromeJS") 
+;; (hoarder:fetch "HelloZeroNet/ZeroNet") 
+;; (hoarder:fetch "Hiroyuki-Nagata/XrossBoard") 
+;; (hoarder:fetch "Hund/Userstyles") 
+;; (hoarder:fetch "IgnorantGuru/spacefm") 
+;; (hoarder:fetch "ImageMagick/ImageMagick") 
+;; (hoarder:fetch "ItzBlitz98/torrentflix") 
+;; (hoarder:fetch "Jehops/swm-freebsd-battery-modeline") 
+;; (hoarder:fetch "Jehops/swm-freebsd-cpu-modeline") 
+;; (hoarder:fetch "Jehops/swm-freebsd-mem-modeline") 
+;; (hoarder:fetch "Jehops/swm-freebsd-net-modeline") 
+;; (hoarder:fetch "Jehops/swm-freebsd-volume-modeline") 
+;; (hoarder:fetch "Jehops/swm-freebsd-zfs-modeline") 
+;; (hoarder:fetch "Jehops/swm-hostname-modeline") 
+;; (hoarder:fetch "Jehops/swm-maildir-modeline") 
+;; (hoarder:fetch "KeenS/CIM") 
+;; (hoarder:fetch "Kickball/awesome-selfhosted") 
+;; (hoarder:fetch "LemonBoy/bar") 
+;; (hoarder:fetch "MLton/mlton") 
+;; (hoarder:fetch "MagikBSD/please") 
+;; (hoarder:fetch "Masterminds/glide") 
+;; (hoarder:fetch "MidnightCommander/mc.git") 
+;; (hoarder:fetch "MirBSD/mksh") 
+;; (hoarder:fetch "Nandaka/DanbooruDownloader") 
+;; (hoarder:fetch "Nenuphar/Dyod") 
+;; (hoarder:fetch "NitruxSA/flattr-icons") 
+;; (hoarder:fetch "NitruxSA/plasma-next-icons") 
+;; (hoarder:fetch "NoahBuscher/Flatron") 
+;; (hoarder:fetch "OpenBazaar/OpenBazaar") 
+;; (hoarder:fetch "Pewpews/happypanda") 
+;; (hoarder:fetch "PopcornTimeCE/popcorntimece") 
+;; (hoarder:fetch "Rabrennie/anything.js") 
+;; (hoarder:fetch "Ranks/emojione") 
+;; (hoarder:fetch "Raynes/fs") 
+;; (hoarder:fetch "RubenRocha/ricey") 
+;; (hoarder:fetch "Russell91/sshrc") 
+;; (hoarder:fetch "RuudBurger/CouchPotatoServer") 
+;; (hoarder:fetch "Shinryuu/dotfiles") 
+;; (hoarder:fetch "Shougo/dein.vim") 
+;; (hoarder:fetch "Shougo/vimshell.vim") 
+;; (hoarder:fetch "Slevinski/signwriting_2010_fonts") 
+;; (hoarder:fetch "Stephen304/bitcannon") 
+;; (hoarder:fetch "Swordfish90/cool-retro-term") 
+;; (hoarder:fetch "TBRSS/serapeum") 
+;; (hoarder:fetch "Tecate/bitmap-fonts") 
+;; (hoarder:fetch "TheMozg/awk-raycaster") 
+;; (hoarder:fetch "UniversalMediaServer/UniversalMediaServer") 
+;; (hoarder:fetch "aajanki/yle-dl") 
+;; (hoarder:fetch "adobe-fonts/source-han-code-jp") 
+;; (hoarder:fetch "adobe-type-tools/afdko") 
+;; (hoarder:fetch "agda/agda") 
+;; (hoarder:fetch "agtorre/gocolorize") 
+;; (hoarder:fetch "ahodesuka/ahoviewer") 
+;; (hoarder:fetch "ainame/mediakit") 
+;; (hoarder:fetch "alebcay/awesome-shell") 
+;; (hoarder:fetch "alezost/stumpwmrc") 
+;; (hoarder:fetch "alice0775/userChrome.js") 
+;; (hoarder:fetch "aliceml/aliceml") 
+;; (hoarder:fetch "allanjude/uclcmd") 
+;; (hoarder:fetch "alphapapa/bucket") 
+;; (hoarder:fetch "altercation/solarized") 
+;; (hoarder:fetch "andsens/homeshick") 
+;; (hoarder:fetch "andyfitz/overpass") 
+;; (hoarder:fetch "aredridel/es-shell") 
+;; (hoarder:fetch "asciimoo/searx") 
+;; (hoarder:fetch "asdfman/linux-shimeji") 
+;; (hoarder:fetch "ashinn/chibi-scheme") 
+;; (hoarder:fetch "atextor/icat") 
+;; (hoarder:fetch "aziz/tmuxinator") 
+;; (hoarder:fetch "azu/awesome-commit-english") 
+;; (hoarder:fetch "b4b4r07/zplug") 
+;; (hoarder:fetch "badele/gitcheck") 
+;; (hoarder:fetch "bamos/dotfiles") 
+;; (hoarder:fetch "baskerville/bspwm") 
+;; (hoarder:fetch "baskerville/diana") 
+;; (hoarder:fetch "baskerville/sutils") 
+;; (hoarder:fetch "baskerville/sxhkd") 
+;; (hoarder:fetch "baskerville/xtitle.git") 
+;; (hoarder:fetch "benjaminoakes/maid") 
+;; (hoarder:fetch "benlinton/bash-slugify") 
+;; (hoarder:fetch "bibanon/bibanon") 
+;; (hoarder:fetch "blakemcbride/POS") 
+;; (hoarder:fetch "bmizerany/roundup") 
+;; (hoarder:fetch "bookdraft/QPeerCastYP") 
+;; (hoarder:fetch "boot-clj/boot") 
+;; (hoarder:fetch "brpocock/shelltoys") 
+;; (hoarder:fetch "brushdemon/gen-update") 
+;; (hoarder:fetch "btpd/btpd") 
+;; (hoarder:fetch "bucaran/awesome-fish") 
+;; (hoarder:fetch "bucaran/flash") 
+;; (hoarder:fetch "bucaran/hulk") 
+;; (hoarder:fetch "buntine/Fractals") 
+;; (hoarder:fetch "burningtree/awesome-json") 
+;; (hoarder:fetch "butterproject/butter") 
+;; (hoarder:fetch "caarlos0/antibody") 
+;; (hoarder:fetch "caleb-/evilvte") 
+;; (hoarder:fetch "carnager/teiler") 
+;; (hoarder:fetch "cavalle/steak") 
+;; (hoarder:fetch "chirauraNoSakusha/chiraura") 
+;; (hoarder:fetch "chjj/compton") 
+;; (hoarder:fetch "chrisdone/ghci-ng") 
+;; (hoarder:fetch "chrissimpkins/Hack") 
+;; (hoarder:fetch "chrissimpkins/codeface") 
+;; (hoarder:fetch "chujoii/battery-scheme") 
+;; (hoarder:fetch "chujoii/xattr-tag") 
+;; (hoarder:fetch "cjb/gittorrent") 
+;; (hoarder:fetch "cjxgm/libcrude") 
+;; (hoarder:fetch "ckolivas/lrzip") 
+;; (hoarder:fetch "cldwalker/boson") 
+;; (hoarder:fetch "cldwalker/boson-more") 
+;; (hoarder:fetch "clibs/clib") 
+;; (hoarder:fetch "clojure/clojure") 
+;; (hoarder:fetch "clojure/clojure-contrib") 
+;; (hoarder:fetch "clojure/core.logic") 
+;; (hoarder:fetch "clvv/fasd") 
+;; (hoarder:fetch "cmdrkotori/mplaylist") 
+;; (hoarder:fetch "cmus/cmus") 
+;; (hoarder:fetch "coderholic/pyradio") 
+;; (hoarder:fetch "colinf/om-chat-base") 
+;; (hoarder:fetch "conformal/xombrero") 
+;; (hoarder:fetch "copiousfreetime/launchy") 
+;; (hoarder:fetch "cssnext/cssnext") 
+;; (hoarder:fetch "ctrlcctrlv/8chan") 
+;; (hoarder:fetch "dcolascione/ppgrep") 
+;; (hoarder:fetch "ded/valentine") 
+;; (hoarder:fetch "defunkt/hub") 
+;; (hoarder:fetch "denilsonsa/prettyping") 
+;; (hoarder:fetch "derf/feh") 
+;; (hoarder:fetch "deterenkelt/watchsh") 
+;; (hoarder:fetch "dfkt/firefox-tweaks") 
+;; (hoarder:fetch "digego/extempore") 
+;; (hoarder:fetch "doomzhou/.fvwm") 
+;; (hoarder:fetch "dss-project/stumpmacs") 
+;; (hoarder:fetch "eXeC64/imv") 
+;; (hoarder:fetch "eijah/demoncrypt") 
+;; (hoarder:fetch "elm-lang/core") 
+;; (hoarder:fetch "emgram769/lighthouse") 
+;; (hoarder:fetch "emrehan/clojurescript-awesome") 
+;; (hoarder:fetch "enaqx/awesome-react") 
+;; (hoarder:fetch "erikw/tmux-powerline") 
+;; (hoarder:fetch "esodax/fishystuff") 
+;; (hoarder:fetch "fabianalexisinostroza/Antu") 
+;; (hoarder:fetch "faizilham/nyaaupdater") 
+;; (hoarder:fetch "fantasyland/fantasy-land") 
+;; (hoarder:fetch "fdv/platypus") 
+;; (hoarder:fetch "fenrus75/powertop") 
+;; (hoarder:fetch "feross/awesome-mad-science") 
+;; (hoarder:fetch "fish-bundles/root-bundle-fish-bundle") 
+;; (hoarder:fetch "fish-shell/fish-shell") 
+;; (hoarder:fetch "fisherman/fisherman") 
+;; (hoarder:fetch "fitzgen/wu.js") 
+;; (hoarder:fetch "fizzed/font-mfizz") 
+;; (hoarder:fetch "fniessen/org-html-themes") 
+;; (hoarder:fetch "fniessen/orgmk") 
+;; (hoarder:fetch "francesco-bracchi/sake") 
+;; (hoarder:fetch "frytvm/XS") 
+;; (hoarder:fetch "fukamachi/clack") 
+;; (hoarder:fetch "g-gundam/yotsubAPI") 
+;; (hoarder:fetch "gentoo-science/eselect") 
+;; (hoarder:fetch "ghc/ghc") 
+;; (hoarder:fetch "git/git") 
+;; (hoarder:fetch "github/octicons") 
+;; (hoarder:fetch "gka/chroma.js") 
+;; (hoarder:fetch "gmarik/vimfiles") 
+;; (hoarder:fetch "gongo/elfactory") 
+;; (hoarder:fetch "google/roboto") 
+;; (hoarder:fetch "gotbletu/dotfiles") 
+;; (hoarder:fetch "graudeejs/dot.fvwm") 
+;; (hoarder:fetch "greghendershott/rackjure") 
+;; (hoarder:fetch "guipdutra/awesome-geek-podcasts") 
+;; (hoarder:fetch "gustavnikolaj/keepass-dmenu") 
+;; (hoarder:fetch "hchbaw/auto-fu.zsh") 
+;; (hoarder:fetch "heyalexej/awesome-images") 
+;; (hoarder:fetch "hishamhm/htop") 
+;; (hoarder:fetch "holman/dotfiles") 
+;; (hoarder:fetch "horst3180/Arc-theme") 
+;; (hoarder:fetch "horst3180/ceti-2-theme") 
+;; (hoarder:fetch "horst3180/ceti-theme") 
+;; (hoarder:fetch "huyz/less.vim") 
+;; (hoarder:fetch "hydride0/yamazaki") 
+;; (hoarder:fetch "hydrusnetwork/hydrus") 
+;; (hoarder:fetch "ianstormtaylor/to-slug-case") 
+;; (hoarder:fetch "idris-lang/Idris-dev") 
+;; (hoarder:fetch "install-logos/ricedb") 
+;; (hoarder:fetch "isohuntto/openbay") 
+;; (hoarder:fetch "itchyny/lightline.vim") 
+;; (hoarder:fetch "ivmai/bdwgc") 
+;; (hoarder:fetch "ivmai/libatomic_ops") 
+;; (hoarder:fetch "jamesob/desk") 
+;; (hoarder:fetch "jarofghosts/just-pluck") 
+;; (hoarder:fetch "jashkenas/underscore") 
+;; (hoarder:fetch "jasonhemann/microKanren") 
+;; (hoarder:fetch "jbernard/dotfiles") 
+;; (hoarder:fetch "jduey/applicative") 
+;; (hoarder:fetch "jedisct1/dnscrypt-proxy") 
+;; (hoarder:fetch "jgm/pandoc") 
+;; (hoarder:fetch "jhawthorn/meh") 
+;; (hoarder:fetch "jnv/lists") 
+;; (hoarder:fetch "jodrell/unbound-block-hosts") 
+;; (hoarder:fetch "joelagnel/stumpwm-goodies") 
+;; (hoarder:fetch "joeyespo/grip") 
+;; (hoarder:fetch "jonls/redshift") 
+;; (hoarder:fetch "jstolarek/why-dependent-types-matter") 
+;; (hoarder:fetch "justintv/Twitch-API") 
+;; (hoarder:fetch "kahua/Kahua") 
+;; (hoarder:fetch "kahun/awesome-sysadmin") 
+;; (hoarder:fetch "kazesawa/kazesawa") 
+;; (hoarder:fetch "kazu-yamamoto/ghc-mod") 
+;; (hoarder:fetch "keplerproject/luarocks") 
+;; (hoarder:fetch "kfish/xsel") 
+;; (hoarder:fetch "kfl/mosml") 
+;; (hoarder:fetch "kidd/org-protocol-github-lines") 
+;; (hoarder:fetch "kidd/radios") 
+;; (hoarder:fetch "kirikx/bds") 
+;; (hoarder:fetch "knopwob/dunst") 
+;; (hoarder:fetch "koron/chalice") 
+;; (hoarder:fetch "koron/cmigemo.git") 
+;; (hoarder:fetch "kovisoft/paredit") 
+;; (hoarder:fetch "kragniz/python-pixiv") 
+;; (hoarder:fetch "krakenjs/confit") 
+;; (hoarder:fetch "kuanyui/dotfiles") 
+;; (hoarder:fetch "kumacoinproject/kumacoin") 
+;; (hoarder:fetch "kumaryu/peercaststation") 
+;; (hoarder:fetch "kyleterry/awesome-radio") 
+;; (hoarder:fetch "lastpass/lastpass-cli") 
+;; (hoarder:fetch "laurikari/tre") 
+;; (hoarder:fetch "leafo/moonscript") 
+;; (hoarder:fetch "letsgetrandy/DICSS") 
+;; (hoarder:fetch "libav/libav") 
+;; (hoarder:fetch "lzap/dancepill") 
+;; (hoarder:fetch "mWater/minimongo") 
+;; (hoarder:fetch "madmalik/monoOne") 
+;; (hoarder:fetch "mafintosh/peerflix") 
+;; (hoarder:fetch "majestrate/nntpchan") 
+;; (hoarder:fetch "manateelazycat/mrkeyboard") 
+;; (hoarder:fetch "martanne/abduco") 
+;; (hoarder:fetch "martanne/dvtm") 
+;; (hoarder:fetch "martinp26/motix") 
+;; (hoarder:fetch "mason-larobina/luakit") 
+;; (hoarder:fetch "masroore/opentracker") 
+;; (hoarder:fetch "maxogden/art-of-node") 
+;; (hoarder:fetch "mbadolato/iTerm2-Color-Schemes") 
+;; (hoarder:fetch "mbunkus/mkvtoolnix") 
+;; (hoarder:fetch "mcandre/modulinos") 
+;; (hoarder:fetch "mcna/closer-mop") 
+;; (hoarder:fetch "mcrapet/plowshare") 
+;; (hoarder:fetch "melaniecebula/cat-ascii-faces") 
+;; (hoarder:fetch "mietek/bashmenot") 
+;; (hoarder:fetch "mietek/halcyon") 
+;; (hoarder:fetch "minimaxir/big-list-of-naughty-strings") 
+;; (hoarder:fetch "mirror/x265") 
+;; (hoarder:fetch "mitchellh/cli") 
+;; (hoarder:fetch "mitchellh/colorstring") 
+;; (hoarder:fetch "mitmproxy/mitmproxy") 
+;; (hoarder:fetch "miyagawa/cpanminus") 
+;; (hoarder:fetch "mo-ya/tmux-agent") 
+;; (hoarder:fetch "mobile-shell/mosh") 
+;; (hoarder:fetch "monacoinproject/monacoin") 
+;; (hoarder:fetch "mooz/percol") 
+;; (hoarder:fetch "motemen/ghq") 
+;; (hoarder:fetch "moul/awesome-ssh") 
+;; (hoarder:fetch "mps-youtube/mps-youtube") 
+;; (hoarder:fetch "mps-youtube/pafy") 
+;; (hoarder:fetch "mpv-player/mpv") 
+;; (hoarder:fetch "mrowa44/emojify") 
+;; (hoarder:fetch "msiemens/tinydb") 
+;; (hoarder:fetch "muennich/sxiv") 
+;; (hoarder:fetch "myimouto/myimouto") 
+;; (hoarder:fetch "n-yuji/keyboard-font") 
+;; (hoarder:fetch "neovim/neovim") 
+;; (hoarder:fetch "neovim/python-client") 
+;; (hoarder:fetch "nezumisama/mpvmenu") 
+;; (hoarder:fetch "ninjaaron/bitocra") 
+;; (hoarder:fetch "nixxquality/WebMConverter") 
+;; (hoarder:fetch "npm/npm") 
+;; (hoarder:fetch "nrgmilk/freebsd-desktop-jp") 
+;; (hoarder:fetch "numixproject/numix-icon-theme-circle") 
+;; (hoarder:fetch "ocaml/ocaml") 
+;; (hoarder:fetch "oh-my-fish/oh-my-fish") 
+;; (hoarder:fetch "ok100/lyvi") 
+;; (hoarder:fetch "okuoku/mosh") 
+;; (hoarder:fetch "okuoku/r7rs-bridge") 
+;; (hoarder:fetch "omcljs/om") 
+;; (hoarder:fetch "onodera-punpun/dotfiles") 
+;; (hoarder:fetch "openssh/openssh-portable") 
+;; (hoarder:fetch "ozonos/ozon-gtk-theme") 
+;; (hoarder:fetch "pallet/thread-expr") 
+;; (hoarder:fetch "pannon/iocage") 
+;; (hoarder:fetch "parro-it/awesome-microlibs") 
+;; (hoarder:fetch "pasky/speedread") 
+;; (hoarder:fetch "paulsmith/getting-started-llvm-c-api") 
+;; (hoarder:fetch "pavoljuhas/smart-change-directory") 
+;; (hoarder:fetch "phallus/fonts") 
+;; (hoarder:fetch "pindexis/marker") 
+;; (hoarder:fetch "pituz/webm-thread") 
+;; (hoarder:fetch "pkgng/pkgng") 
+;; (hoarder:fetch "plonk/bbiff") 
+;; (hoarder:fetch "plonk/psapi") 
+;; (hoarder:fetch "politza/pdf-tools") 
+;; (hoarder:fetch "polyml/polyml") 
+;; (hoarder:fetch "progre/pecastarter5") 
+;; (hoarder:fetch "psyrendust/alf") 
+;; (hoarder:fetch "puffnfresh/daggy") 
+;; (hoarder:fetch "pyload/pyload") 
+;; (hoarder:fetch "rakshasa/rtorrent") 
+;; (hoarder:fetch "ramda/ramda") 
+;; (hoarder:fetch "rbanffy/3270font") 
+;; (hoarder:fetch "rbenv/ruby-build") 
+;; (hoarder:fetch "retroj/conkeror") 
+;; (hoarder:fetch "rg3/youtube-dl") 
+;; (hoarder:fetch "rjosph/fluxbox-config") 
+;; (hoarder:fetch "robert-strandh/SICL") 
+;; (hoarder:fetch "robfig/config") 
+;; (hoarder:fetch "robfig/pathtree") 
+;; (hoarder:fetch "robm/dzen") 
+;; (hoarder:fetch "romeovs/creep") 
+;; (hoarder:fetch "rossy2401/img2xterm") 
+;; (hoarder:fetch "rplevy/swiss-arrows") 
+;; (hoarder:fetch "rupa/v") 
+;; (hoarder:fetch "rupa/z") 
+;; (hoarder:fetch "saironiq/shellscripts") 
+;; (hoarder:fetch "saitoha/libsixel") 
+;; (hoarder:fetch "samirahmed/fu") 
+;; (hoarder:fetch "sanzo12/myanimelist") 
+;; (hoarder:fetch "sashavasko/afterstep-devel") 
+;; (hoarder:fetch "sbcl/sbcl") 
+;; (hoarder:fetch "sboli/twmn") 
+;; (hoarder:fetch "scottjad/cons") 
+;; (hoarder:fetch "scottjad/dotfiles") 
+;; (hoarder:fetch "sdegutis/mjolnir") 
+;; (hoarder:fetch "sdhand/n30f") 
+;; (hoarder:fetch "seattlerb/hoe") 
+;; (hoarder:fetch "seebi/tmux-colors-solarized") 
+;; (hoarder:fetch "seven332/EhViewer") 
+;; (hoarder:fetch "sgrove/tehila") 
+;; (hoarder:fetch "sgymtic/sl") 
+;; (hoarder:fetch "shaldengeki/python-mal") 
+;; (hoarder:fetch "shellfire-dev/shellfire") 
+;; (hoarder:fetch "shingetsu/saku") 
+;; (hoarder:fetch "shingetsu/saku-ex") 
+;; (hoarder:fetch "shirok/Gauche") 
+;; (hoarder:fetch "shutterstock/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words") 
+;; (hoarder:fetch "sickill/git-dude") 
+;; (hoarder:fetch "silentbicycle/ff") 
+;; (hoarder:fetch "simonwhitaker/gibo") 
+;; (hoarder:fetch "sindresorhus/awesome-nodejs") 
+;; (hoarder:fetch "sindresorhus/awesome-npm") 
+;; (hoarder:fetch "sixsixfive/Glare") 
+;; (hoarder:fetch "sjl/z-fish") 
+;; (hoarder:fetch "skroll/privoxy-adblock") 
+;; (hoarder:fetch "snmsts/roswell") 
+;; (hoarder:fetch "snwh/yuyo-gtk-theme") 
+;; (hoarder:fetch "soimort/you-get") 
+;; (hoarder:fetch "solus-project/evopop-gtk-theme") 
+;; (hoarder:fetch "solus-project/evopop-icon-theme") 
+;; (hoarder:fetch "sorin-ionescu/prezto") 
+;; (hoarder:fetch "stevemao/awesome-git-addons") 
+;; (hoarder:fetch "streadway/simpleuuid") 
+;; (hoarder:fetch "stumpwm/paulownia") 
+;; (hoarder:fetch "stumpwm/stumpwm") 
+;; (hoarder:fetch "stumpwm/stumpwm-contrib") 
+;; (hoarder:fetch "stumpwm/stumpwm.wiki") 
+;; (hoarder:fetch "swannodette/mori") 
+;; (hoarder:fetch "syl20bnr/oh-my-fish-theme-syl20bnr") 
+;; (hoarder:fetch "syohex/byzanz-window") 
+;; (hoarder:fetch "t9md/vim-ezbar") 
+;; (hoarder:fetch "takeoutweight/bidirectional") 
+;; (hoarder:fetch "tarjoilija/zgen") 
+;; (hoarder:fetch "tastejs/awesome-app-ideas") 
+;; (hoarder:fetch "tatsuhiro-t/aria2") 
+;; (hoarder:fetch "tchoulihan/torrenttunes-client") 
+;; (hoarder:fetch "technicalpickles/homesick") 
+;; (hoarder:fetch "tekknolagi/carp") 
+;; (hoarder:fetch "tizoc/chibi-shen") 
+;; (hoarder:fetch "tj/git-extras") 
+;; (hoarder:fetch "tkengo/highway") 
+;; (hoarder:fetch "tlatsas/xcolors") 
+;; (hoarder:fetch "tmbinc/bgrep") 
+;; (hoarder:fetch "tmux-plugins/tmux-resurrect") 
+;; (hoarder:fetch "tmux-plugins/tpm") 
+;; (hoarder:fetch "tmux/tmux") 
+;; (hoarder:fetch "tolitius/mount") 
+;; (hoarder:fetch "tommy351/warehouse") 
+;; (hoarder:fetch "tomokuni/Myrica") 
+;; (hoarder:fetch "tonsky/rum") 
+;; (hoarder:fetch "toolpunk/dmenu-ee") 
+;; (hoarder:fetch "toromoti/chocomint.sh") 
+;; (hoarder:fetch "trapd00r/configs") 
+;; (hoarder:fetch "trapd00r/ls--") 
+;; (hoarder:fetch "trapd00r/utils") 
+;; (hoarder:fetch "trapd00r/zsh-syntax-highlighting-filetypes") 
+;; (hoarder:fetch "travitch/taffybar") 
+;; (hoarder:fetch "trizen/youtube-viewer") 
+;; (hoarder:fetch "tuvistavie/fundle") 
+;; (hoarder:fetch "tyru/dotto") 
+;; (hoarder:fetch "ultravideo/kvazaar") 
+;; (hoarder:fetch "underdash/underdash") 
+;; (hoarder:fetch "unixorn/awesome-zsh-plugins") 
+;; (hoarder:fetch "unot/WebRadioRecorder") 
+;; (hoarder:fetch "uobikiemukot/sdump") 
+;; (hoarder:fetch "uobikiemukot/yaft") 
+;; (hoarder:fetch "valvallow/lifegame") 
+;; (hoarder:fetch "variadico/noti") 
+;; (hoarder:fetch "victorhaggqvist/xboomx") 
+;; (hoarder:fetch "videolan/x265") 
+;; (hoarder:fetch "vikasrawal/orgpaper") 
+;; (hoarder:fetch "vstakhov/libucl") 
+;; (hoarder:fetch "weavejester/medley") 
+;; (hoarder:fetch "webyrd/miniKanren") 
+;; (hoarder:fetch "whatyouhide/gotham-contrib") 
+;; (hoarder:fetch "windelicato/dotfiles") 
+;; (hoarder:fetch "windymelt/p2p2ch") 
+;; (hoarder:fetch "wooorm/alex") 
+;; (hoarder:fetch "xero/dotfiles") 
+;; (hoarder:fetch "xmonad/xmonad-contrib") 
+;; (hoarder:fetch "xorg62/wmfs") 
+;; (hoarder:fetch "xyl0n/iris-light") 
+;; (hoarder:fetch "xylosper/bomi") 
+;; (hoarder:fetch "yascentur/RictyDiminished") 
+;; (hoarder:fetch "yayugu/net-radio-archive") 
+;; (hoarder:fetch "zcaudate/hara") 
+;; (hoarder:fetch "zero808/ya4cid") 
+;; (hoarder:fetch "zmalltalker/fish-nuggets") 
+;; (hoarder:fetch "zone117x/Jackett") 
+;; (hoarder:fetch "zoppo/plugins") 
+;; (hoarder:fetch "zoppo/zoppo") 
+;; (hoarder:fetch "zovt/papier-gtk-theme") 
+;; (hoarder:fetch "zsh-users/zsh-completions") 
+;; (hoarder:fetch "zsh-users/zsh-syntax-highlighting") 
+;; (hoarder:fetch "zsoltf/lsr") 
+;; (hoarder:fetch "zy/zy-fvwm") 
+;; (hoarder:fetch "zzggbb/colorblocks") 
+
 ;; git://gitorious.org/sly/sly 
 ;; git://gitorious.org/src-vcs/src-vcs.git 
 ;; gitpub@162.252.242.77:morphis.git 
