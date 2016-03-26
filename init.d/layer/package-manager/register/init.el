@@ -2249,6 +2249,9 @@
 (hoarder:fetch "git://repo.or.cz/abduco.git") 
 (hoarder:fetch "git://repo.or.cz/conkeror.git") 
 (hoarder:fetch "git://repo.or.cz/dvtm.git") 
+(hoarder:fetch "json-porn-api/demo"
+  '(:tag ["json" "porn" "api"]))
+
 
 ;; (hoarder:fetch "2xT/kaistapaa") 
 ;; (hoarder:fetch "3ofcoins/jetpack") 
