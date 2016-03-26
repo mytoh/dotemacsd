@@ -1265,12 +1265,12 @@
 (hoarder:register "tj64/org-hlc")
 
 (hoarder:register "tj64/outorg" '(:compile nil
-                                  :branch "trunk"
-                                  :tag ["org" "outline"]))
+                            :branch "trunk"
+                            :tag ["org" "outline"]))
 (hoarder:register "tj64/outshine" '(:compile nil
-                                    :branch "trunk"
-                                    :tag ["org" "outline"]
-                                    :dependency ["tj64/outorg"]))
+                              :branch "trunk"
+                              :tag ["org" "outline"]
+                              :dependency ["tj64/outorg"]))
 ;; (hoarder:register "jleechpe/outorg-export")
 (hoarder:register "tj64/navi"
   '(:tag ["org" "outline"]))
@@ -1821,6 +1821,7 @@
 (hoarder:fetch "git://git.code.sf.net/p/cedet/git"
   '(:name "cedet"
     :tag ["eieio" "cedet"]))
+;; (hoarder:fetch "http://git.randomsample.de/cedet.git") 
 (hoarder:fetch "scymtym/rudel"
   '(:tag ["eieio"]))
 (hoarder:fetch "scymtym/moped"
@@ -2219,37 +2220,35 @@
 (hoarder:fetch "git://erdgeist.org/opentracker") 
 (hoarder:fetch "git://git.2f30.org/colors") 
 (hoarder:fetch "git://git.dolezel.info/fatrat.git") 
-;; (hoarder:fetch "git://git.gnome.org/byzanz") 
-;; (hoarder:fetch "git://git.gnupg.org/gnupg.git") 
-;; (hoarder:fetch "git://git.kernel.org/pub/scm/editors/uemacs/uemacs.git") 
-;; (hoarder:fetch "git://git.musicpd.org/master/mpd.git") 
+(hoarder:fetch "git://git.gnome.org/byzanz") 
+(hoarder:fetch "git://git.gnupg.org/gnupg.git") 
+(hoarder:fetch "git://git.kernel.org/pub/scm/editors/uemacs/uemacs.git") 
+(hoarder:fetch "git://git.musicpd.org/master/mpd.git") 
 ;; (hoarder:fetch "git://git.savannah.gnu.org/emacs") 
-;; (hoarder:fetch "git://git.savannah.gnu.org/screen.git") 
-;; (hoarder:fetch "git://git.savannah.gnu.org/stow.git") 
-;; (hoarder:fetch "git://git.savannah.gnu.org/tramp.git") 
-;; (hoarder:fetch "git://git.savannah.nongnu.org/gzochi.git") 
-;; (hoarder:fetch "git://git.savannah.nongnu.org/ranger.git") 
-;; (hoarder:fetch "git://git.sourceforge.jp/gitroot/ninix-aya/master.git") 
-;; (hoarder:fetch "git://git.suckless.org/sprop") 
-;; (hoarder:fetch "git://git.suckless.org/st") 
-;; (hoarder:fetch "git://git.suckless.org/sup") 
-;; (hoarder:fetch "git://git.suckless.org/surf") 
-;; (hoarder:fetch "git://git.sv.gnu.org/erbot.git") 
-;; (hoarder:fetch "git://git.sv.gnu.org/guile.git") 
-;; (hoarder:fetch "git://git.sv.gnu.org/librejs.git") 
-;; (hoarder:fetch "git://git.sv.gnu.org/smalltalk.git") 
-;; (hoarder:fetch "http://git.gnus.org/gnus.git") 
-;; (hoarder:fetch "http://git.randomsample.de/cedet.git") 
-;; (hoarder:fetch "http://neetco.de/chibi/sshchan") 
-;; (hoarder:fetch "https://gitgud.io/Nagru/Manga-Organizer.git") 
-;; (hoarder:fetch "https://github.com/cjdelisle/cjdns.git") 
-;; (hoarder:fetch "https://github.com/symbolset/ss-emoji-beta") 
-;; (hoarder:fetch "https://notabug.org/koz.ross/awesome-c.git") 
-;; (hoarder:fetch "https://notabug.org/koz.ross/awesome-cl.git") 
-;; (hoarder:fetch "https://notabug.org/wubthecaptain/deathwatch-pomf.git") 
-;; (hoarder:fetch "git://repo.or.cz/abduco.git") 
-;; (hoarder:fetch "git://repo.or.cz/conkeror.git") 
-;; (hoarder:fetch "git://repo.or.cz/dvtm.git") 
+(hoarder:fetch "git://git.savannah.gnu.org/screen.git") 
+(hoarder:fetch "git://git.savannah.gnu.org/stow.git") 
+(hoarder:fetch "git://git.savannah.gnu.org/tramp.git") 
+(hoarder:fetch "git://git.savannah.nongnu.org/gzochi.git") 
+(hoarder:fetch "git://git.savannah.nongnu.org/ranger.git") 
+(hoarder:fetch "git://git.sourceforge.jp/gitroot/ninix-aya/master.git") 
+(hoarder:fetch "git://git.suckless.org/sprop") 
+(hoarder:fetch "git://git.suckless.org/st") 
+(hoarder:fetch "git://git.suckless.org/sup") 
+(hoarder:fetch "git://git.suckless.org/surf") 
+(hoarder:fetch "git://git.sv.gnu.org/erbot.git") 
+(hoarder:fetch "git://git.sv.gnu.org/guile.git") 
+(hoarder:fetch "git://git.sv.gnu.org/librejs.git") 
+(hoarder:fetch "git://git.sv.gnu.org/smalltalk.git") 
+(hoarder:fetch "http://neetco.de/chibi/sshchan"
+  '(:type :git)) 
+(hoarder:fetch "cjdelisle/cjdns") 
+(hoarder:fetch "symbolset/ss-emoji-beta") 
+(hoarder:fetch "https://notabug.org/koz.ross/awesome-c.git") 
+(hoarder:fetch "https://notabug.org/koz.ross/awesome-cl.git") 
+(hoarder:fetch "https://notabug.org/wubthecaptain/deathwatch-pomf.git") 
+(hoarder:fetch "git://repo.or.cz/abduco.git") 
+(hoarder:fetch "git://repo.or.cz/conkeror.git") 
+(hoarder:fetch "git://repo.or.cz/dvtm.git") 
 
 ;; git://github.com/2xT/kaistapaa 
 ;; git://github.com/3ofcoins/jetpack 
@@ -2295,7 +2294,6 @@
 ;; git://github.com/Masterminds/glide 
 ;; git://github.com/MidnightCommander/mc.git 
 ;; git://github.com/MirBSD/mksh 
-;; git://github.com/Nagru/Manga-Organizer 
 ;; git://github.com/Nandaka/DanbooruDownloader 
 ;; git://github.com/Nenuphar/Dyod 
 ;; git://github.com/NitruxSA/flattr-icons 
