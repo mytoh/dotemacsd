@@ -1246,6 +1246,8 @@
 (hoarder:register "cestdiego/c-c-combo.el"
   '(:tag ["sound"]))
 (hoarder:register "abo-abo/hydra")
+(hoarder:register "mrkkrp/para"
+  '(:tag ["paredit" "smartparens"]))
 
 
 ;; (hoarder:register "papaeye/emacs-jscs"
