@@ -2640,7 +2640,6 @@
 ;; (hoarder:fetch "sjl/z-fish") 
 ;; (hoarder:fetch "skroll/privoxy-adblock") 
 (hoarder:fetch "snmsts/roswell") 
-(hoarder:fetch "snwh/yuyo-gtk-theme") 
 ;; (hoarder:fetch "soimort/you-get") 
 (hoarder:fetch "solus-project/evopop-gtk-theme") 
 (hoarder:fetch "solus-project/evopop-icon-theme") 
