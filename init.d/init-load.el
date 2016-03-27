@@ -256,6 +256,7 @@
     monky
     magic-buffer
     edit-color-stamp
+    hydra
 
     saveplace
     
