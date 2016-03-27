@@ -153,6 +153,8 @@
 (hoarder:register "syohex/emacs-helm-japanese-weather")
 (hoarder:register "syohex/emacs-helm-kaomoji")
 (hoarder:register "emacs-helm/helm-describe-modes")
+(hoarder:register "alphapapa/helm-org-rifle"
+  '(:tag ["org" "helm"]))
 
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]
@@ -1243,6 +1245,8 @@
     :dependency ["sabof/es-lib"]))
 (hoarder:register "cestdiego/c-c-combo.el"
   '(:tag ["sound"]))
+(hoarder:register "abo-abo/hydra")
+
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
@@ -2214,6 +2218,7 @@
   '(:tag ["unbound" "dns" "hosts" "adblock"]))
 (hoarder:fetch "lodash/lodash"
   '(:tag ["javascript"]))
+(hoarder:fetch "l3ib/nitrogen")
 
 ;;; migrating
 
@@ -2251,6 +2256,8 @@
 (hoarder:fetch "git://repo.or.cz/dvtm.git") 
 (hoarder:fetch "json-porn-api/demo"
   '(:tag ["json" "porn" "api"]))
+(hoarder:fetch "kana/vim-submode"
+  '(:tag ["vim"]))
 
 
 ;; (hoarder:fetch "2xT/kaistapaa") 
@@ -2266,7 +2273,8 @@
 ;; (hoarder:fetch "Cloudef/sxiv") 
 ;; (hoarder:fetch "Cloudef/xcmenu") 
 ;; (hoarder:fetch "DaisukeAramaki/Dotfiles") 
-;; (hoarder:fetch "DaveDavenport/rofi-themes") 
+(hoarder:fetch "DaveDavenport/rofi-themes"
+  '(:tag ["rofi"])) 
 ;; (hoarder:fetch "EZ3CHI3L/Eternity") 
 ;; (hoarder:fetch "FFmpeg/FFmpeg") 
 ;; (hoarder:fetch "FLIF-hub/FLIF") 
@@ -2281,14 +2289,22 @@
 ;; (hoarder:fetch "IgnorantGuru/spacefm") 
 ;; (hoarder:fetch "ImageMagick/ImageMagick") 
 ;; (hoarder:fetch "ItzBlitz98/torrentflix") 
-;; (hoarder:fetch "Jehops/swm-freebsd-battery-modeline") 
-;; (hoarder:fetch "Jehops/swm-freebsd-cpu-modeline") 
-;; (hoarder:fetch "Jehops/swm-freebsd-mem-modeline") 
-;; (hoarder:fetch "Jehops/swm-freebsd-net-modeline") 
-;; (hoarder:fetch "Jehops/swm-freebsd-volume-modeline") 
-;; (hoarder:fetch "Jehops/swm-freebsd-zfs-modeline") 
-;; (hoarder:fetch "Jehops/swm-hostname-modeline") 
-;; (hoarder:fetch "Jehops/swm-maildir-modeline") 
+(hoarder:fetch "Jehops/swm-freebsd-battery-modeline"
+  '(:tag ["stumpwm" "freebsd"])) 
+(hoarder:fetch "Jehops/swm-freebsd-cpu-modeline"
+  '(:tag ["stumpwm" "freebsd"])) 
+(hoarder:fetch "Jehops/swm-freebsd-mem-modeline"
+  '(:tag ["stumpwm" "freebsd"])) 
+(hoarder:fetch "Jehops/swm-freebsd-net-modeline"
+  '(:tag ["stumpwm" "freebsd"])) 
+(hoarder:fetch "Jehops/swm-freebsd-volume-modeline"
+  '(:tag ["stumpwm" "freebsd"])) 
+(hoarder:fetch "Jehops/swm-freebsd-zfs-modeline"
+  '(:tag ["stumpwm" "freebsd"])) 
+(hoarder:fetch "Jehops/swm-hostname-modeline"
+  '(:tag ["stumpwm" "freebsd"])) 
+(hoarder:fetch "Jehops/swm-maildir-modeline"
+  '(:tag ["stumpwm" "freebsd"])) 
 ;; (hoarder:fetch "KeenS/CIM") 
 ;; (hoarder:fetch "Kickball/awesome-selfhosted") 
 ;; (hoarder:fetch "LemonBoy/bar") 
@@ -2299,8 +2315,8 @@
 (hoarder:fetch "MirBSD/mksh") 
 ;; (hoarder:fetch "Nandaka/DanbooruDownloader") 
 ;; (hoarder:fetch "Nenuphar/Dyod") 
-;; (hoarder:fetch "NitruxSA/flattr-icons") 
-;; (hoarder:fetch "NitruxSA/plasma-next-icons") 
+(hoarder:fetch "NitruxSA/flattr-icons") 
+(hoarder:fetch "NitruxSA/plasma-next-icons") 
 ;; (hoarder:fetch "NoahBuscher/Flatron") 
 ;; (hoarder:fetch "OpenBazaar/OpenBazaar") 
 ;; (hoarder:fetch "Pewpews/happypanda") 
@@ -2415,7 +2431,7 @@
 ;; (hoarder:fetch "enaqx/awesome-react") 
 ;; (hoarder:fetch "erikw/tmux-powerline") 
 ;; (hoarder:fetch "esodax/fishystuff") 
-;; (hoarder:fetch "fabianalexisinostroza/Antu") 
+(hoarder:fetch "fabianalexisinostroza/Antu") 
 ;; (hoarder:fetch "faizilham/nyaaupdater") 
 ;; (hoarder:fetch "fantasyland/fantasy-land") 
 ;; (hoarder:fetch "fdv/platypus") 
@@ -2449,9 +2465,9 @@
 ;; (hoarder:fetch "heyalexej/awesome-images") 
 ;; (hoarder:fetch "hishamhm/htop") 
 ;; (hoarder:fetch "holman/dotfiles") 
-;; (hoarder:fetch "horst3180/Arc-theme") 
-;; (hoarder:fetch "horst3180/ceti-2-theme") 
-;; (hoarder:fetch "horst3180/ceti-theme") 
+(hoarder:fetch "horst3180/Arc-theme") 
+(hoarder:fetch "horst3180/ceti-2-theme") 
+(hoarder:fetch "horst3180/ceti-theme") 
 ;; (hoarder:fetch "huyz/less.vim") 
 ;; (hoarder:fetch "hydride0/yamazaki") 
 ;; (hoarder:fetch "hydrusnetwork/hydrus") 
@@ -2550,7 +2566,7 @@
 ;; (hoarder:fetch "nixxquality/WebMConverter") 
 ;; (hoarder:fetch "npm/npm") 
 ;; (hoarder:fetch "nrgmilk/freebsd-desktop-jp") 
-;; (hoarder:fetch "numixproject/numix-icon-theme-circle") 
+(hoarder:fetch "numixproject/numix-icon-theme-circle") 
 ;; (hoarder:fetch "ocaml/ocaml") 
 ;; (hoarder:fetch "oh-my-fish/oh-my-fish") 
 ;; (hoarder:fetch "ok100/lyvi") 
@@ -2559,7 +2575,7 @@
 ;; (hoarder:fetch "omcljs/om") 
 ;; (hoarder:fetch "onodera-punpun/dotfiles") 
 ;; (hoarder:fetch "openssh/openssh-portable") 
-;; (hoarder:fetch "ozonos/ozon-gtk-theme") 
+(hoarder:fetch "ozonos/ozon-gtk-theme") 
 ;; (hoarder:fetch "pallet/thread-expr") 
 ;; (hoarder:fetch "pannon/iocage") 
 ;; (hoarder:fetch "parro-it/awesome-microlibs") 
@@ -2620,20 +2636,20 @@
 ;; (hoarder:fetch "simonwhitaker/gibo") 
 ;; (hoarder:fetch "sindresorhus/awesome-nodejs") 
 ;; (hoarder:fetch "sindresorhus/awesome-npm") 
-;; (hoarder:fetch "sixsixfive/Glare") 
+(hoarder:fetch "sixsixfive/Glare") 
 ;; (hoarder:fetch "sjl/z-fish") 
 ;; (hoarder:fetch "skroll/privoxy-adblock") 
 (hoarder:fetch "snmsts/roswell") 
-;; (hoarder:fetch "snwh/yuyo-gtk-theme") 
+(hoarder:fetch "snwh/yuyo-gtk-theme") 
 ;; (hoarder:fetch "soimort/you-get") 
-;; (hoarder:fetch "solus-project/evopop-gtk-theme") 
-;; (hoarder:fetch "solus-project/evopop-icon-theme") 
+(hoarder:fetch "solus-project/evopop-gtk-theme") 
+(hoarder:fetch "solus-project/evopop-icon-theme") 
 ;; (hoarder:fetch "sorin-ionescu/prezto") 
 ;; (hoarder:fetch "stevemao/awesome-git-addons") 
 ;; (hoarder:fetch "streadway/simpleuuid") 
 ;; (hoarder:fetch "stumpwm/paulownia") 
 (hoarder:fetch "stumpwm/stumpwm") 
-;; (hoarder:fetch "stumpwm/stumpwm-contrib") 
+(hoarder:fetch "stumpwm/stumpwm-contrib") 
 ;; (hoarder:fetch "stumpwm/stumpwm.wiki") 
 ;; (hoarder:fetch "swannodette/mori") 
 ;; (hoarder:fetch "syl20bnr/oh-my-fish-theme-syl20bnr") 
@@ -2682,7 +2698,8 @@
 ;; (hoarder:fetch "vstakhov/libucl") 
 ;; (hoarder:fetch "weavejester/medley") 
 ;; (hoarder:fetch "webyrd/miniKanren") 
-;; (hoarder:fetch "whatyouhide/gotham-contrib") 
+(hoarder:fetch "whatyouhide/gotham-contrib"
+  '(:tag ["colorscheme"])) 
 ;; (hoarder:fetch "windelicato/dotfiles") 
 ;; (hoarder:fetch "windymelt/p2p2ch") 
 ;; (hoarder:fetch "wooorm/alex") 
@@ -2699,7 +2716,7 @@
 ;; (hoarder:fetch "zone117x/Jackett") 
 ;; (hoarder:fetch "zoppo/plugins") 
 ;; (hoarder:fetch "zoppo/zoppo") 
-;; (hoarder:fetch "zovt/papier-gtk-theme") 
+(hoarder:fetch "zovt/papier-gtk-theme") 
 ;; (hoarder:fetch "zsh-users/zsh-completions") 
 ;; (hoarder:fetch "zsh-users/zsh-syntax-highlighting") 
 ;; (hoarder:fetch "zsoltf/lsr") 
