@@ -426,6 +426,7 @@
     helm-kaomoji
     helm-swoop
     helm-describe-modes
+    ;; helm-org-rifle
     ;; swiper
     ;; helm-company
     ;; helm-delicious
