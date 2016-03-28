@@ -18,7 +18,7 @@
         ("C-p" org-previous-visible-heading "NextHeading")))
 
   (after 'outline
-      (defhydra muki:hydra-outline-minor (outline-minor-mode-map "C-c #")
+      (defhydra muki:hydra-outline-minor (outline-minor-mode-map "M-#")
         "
 ^Hide^             ^Show^           ^Move
 ^^^^^^------------------------------------------------------
