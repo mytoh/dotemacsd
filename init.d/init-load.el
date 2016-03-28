@@ -249,7 +249,7 @@
     tuareg
     nix-mode
     ranger
-    per-buffer-theme
+    ;; per-buffer-theme
     elisp-depend
     tea-time
     zygospore
