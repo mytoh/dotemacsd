@@ -21,8 +21,8 @@
     (setq-local eww-disable-colorize nil)
     (eww-reload)))
 
-;; (after 'eww
-;;     (eww-disable-colours))
+(after 'eww
+    (eww-disable-colours))
 
 (liby 'eww
   (command (eww) "eww")
