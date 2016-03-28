@@ -2222,6 +2222,9 @@
   '(:tag ["javascript"]))
 (hoarder:fetch "l3ib/nitrogen")
 (hoarder:fetch "jjk-jacky/donnatella")
+(hoarder:fetch "https://git.lysator.liu.se/nettle/nettle.git"
+  '(:tag ["gnutls" "crypto" "security"]))
+
 
 
 ;;; migrating
