@@ -2221,6 +2221,8 @@
 (hoarder:fetch "lodash/lodash"
   '(:tag ["javascript"]))
 (hoarder:fetch "l3ib/nitrogen")
+(hoarder:fetch "jjk-jacky/donnatella")
+
 
 ;;; migrating
 
