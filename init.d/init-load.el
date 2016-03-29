@@ -257,6 +257,7 @@
     magic-buffer
     edit-color-stamp
     hydra
+    vc
 
     saveplace
     

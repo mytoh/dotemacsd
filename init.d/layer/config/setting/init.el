@@ -19,9 +19,6 @@
 ;;;; dont enable this option
 (enable-option font-lock-maximum-decoration)
 
-;;;; read symlinked file
-(enable-option vc-follow-symlinks)
-
 ;;;; encodings
 (set-language-environment  'utf-8)
 (set-charset-priority 'unicode)
