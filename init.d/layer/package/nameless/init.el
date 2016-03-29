@@ -2,9 +2,9 @@
 
 ;;; Code:
 
-(req 'nameless
-  (command (nameless-mode nameless-mode-from-hook) "nameless")
-  (add-hook 'emacs-lisp-mode-hook #'nameless-mode-from-hook)
+(liby 'nameless
+  (command (nameless-mode) "nameless")
+  (add-hook 'emacs-lisp-mode-hook #'nameless-mode)
   (after 'nameless
       (set-option nameless-prefix "¦")
     (set-option nameless-separator ":")
