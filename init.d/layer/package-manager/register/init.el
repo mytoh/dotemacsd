@@ -1248,7 +1248,8 @@
 (hoarder:register "abo-abo/hydra")
 (hoarder:register "mrkkrp/para"
   '(:tag ["paredit" "smartparens"]))
-
+(hoarder:register "ikazuhiro/emoji-display"
+  '(:tag ["emoji"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
@@ -2224,6 +2225,8 @@
 (hoarder:fetch "jjk-jacky/donnatella")
 (hoarder:fetch "https://git.lysator.liu.se/nettle/nettle.git"
   '(:tag ["gnutls" "crypto" "security"]))
+(hoarder:fetch "emacs-mirror/emacs"
+  '(:branch "emacs-25"))
 
 
 
@@ -2256,7 +2259,8 @@
 (hoarder:fetch "cjdelisle/cjdns") 
 (hoarder:fetch "symbolset/ss-emoji-beta") 
 (hoarder:fetch "https://notabug.org/koz.ross/awesome-c.git") 
-(hoarder:fetch "https://notabug.org/koz.ross/awesome-cl.git") 
+;; (hoarder:fetch "https://notabug.org/koz.ross/awesome-cl.git") 
+(hoarder:fetch "CodyReichert/awesome-cl")
 (hoarder:fetch "https://notabug.org/wubthecaptain/deathwatch-pomf.git") 
 (hoarder:fetch "git://repo.or.cz/abduco.git") 
 (hoarder:fetch "git://repo.or.cz/conkeror.git") 
@@ -2645,7 +2649,8 @@
 ;; (hoarder:fetch "sindresorhus/awesome-npm") 
 (hoarder:fetch "sixsixfive/Glare") 
 ;; (hoarder:fetch "sjl/z-fish") 
-;; (hoarder:fetch "skroll/privoxy-adblock") 
+(hoarder:fetch "skroll/privoxy-adblock"
+  '(:tag ["privoxy" "adblock"])) 
 (hoarder:fetch "snmsts/roswell") 
 ;; (hoarder:fetch "soimort/you-get") 
 (hoarder:fetch "solus-project/evopop-gtk-theme") 
