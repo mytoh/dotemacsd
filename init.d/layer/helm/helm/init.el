@@ -192,6 +192,30 @@ Otherwise goto the end of minibuffer."
                         (lambda (c)
                           (string-match-p ".*/\\.+\\'" c))
                         candidates))))))
+
+    
+    (cl-defun muki:helm-ff-open-external ()
+      "Run open file externally command action from `helm-source-find-files'."
+      (interactive)
+      (with-helm-alive-p
+        (helm-exit-and-execute-action
+         (lambda (file)
+           (letf* ((ext (file-name-extension file))
+                   (found (cl-assoc
+                           ext
+                           helm-external-programs-associations
+                           :test #'equalp))
+                   (com (if found (cdr found) "xdg-open")))
+                  (start-process-shell-command "test" nil
+                                               (concat com
+                                                       " "
+                                                       file
+                                                       " &")))))))
+    (put 'muki:helm-ff-open-external 'helm-only t)
+
+    (define-key helm-find-files-map (kbd "C-c C-x")
+      #'muki:helm-ff-open-external)
+
     )
   )
 
