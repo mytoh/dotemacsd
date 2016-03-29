@@ -4,8 +4,9 @@
 
 ;;; Code:
 
-(req 'emojify
-  ;; (set-option emojify-preferred-style 'github) ; ascii, github, all
+(liby 'emojify
+  (command (emojify-mode global-emojify-mode) "emojify")
+  (set-option emojify-emoji-styles '(unicode github)) ; ascii, github, unicode
   ;; (hook 'emacs-lisp-mode-hook #'emojify-mode)
   (hook 'magit-log-mode-hook #'emojify-mode))
 
