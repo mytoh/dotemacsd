@@ -2227,7 +2227,8 @@
   '(:tag ["gnutls" "crypto" "security"]))
 (hoarder:fetch "emacs-mirror/emacs"
   '(:branch "emacs-25"))
-
+(hoarder:fetch "kentaro/cinnamon")
+(hoarder:fetch "aharris88/awesome-cli-apps")
 
 
 ;;; migrating
