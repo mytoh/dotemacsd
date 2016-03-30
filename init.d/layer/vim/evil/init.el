@@ -2,25 +2,6 @@
 
 ;;; Code:
 
-(cl-defun muki:init-evil-plugins ()
-  ;; (muki:init-evil-leader)
-  ;; (muki:init-evil-escape)
-  
-  ;; (muki:init-evil-nerd-commenter)
-  ;; (muki:init-evil-surround)
-  ;; (muki:init-evil-linewise)
-  ;; (muki:init-evil-matchit)
-  ;; (muki:init-evil-exchange)
-  ;; (muki:init-evil-operator-comment)
-  ;; (muki:init-evil-jumper)
-  ;; (muki:init-evil-visualstar)
-  ;; (muki:init-evil-search-highlight-persist)
-  ;; (muki:init-evil-textobj-between)
-  ;; (muki:init-evil-extra-operator)
-  
-  ;; (muki:init-evil-visual-mark-mode)
-  )
-
 (cl-defun muki:init-evil-mode-generals ()
   (set-option evil-toggle-key "C-`")
 
