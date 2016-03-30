@@ -318,7 +318,7 @@
     highlight-leading-spaces
     highlight-indentation
     hl-todo
-    highlight-unique-symbol
+    ;; highlight-unique-symbol
     ;; hl-indent
     ;; indent-guide
     highlight-parentheses
