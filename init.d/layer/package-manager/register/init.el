@@ -2544,7 +2544,8 @@
 ;; (hoarder:fetch "masroore/opentracker") 
 ;; (hoarder:fetch "maxogden/art-of-node") 
 ;; (hoarder:fetch "mbadolato/iTerm2-Color-Schemes") 
-;; (hoarder:fetch "mbunkus/mkvtoolnix") 
+(hoarder:fetch "mbunkus/mkvtoolnix"
+  '(:recursive t)) 
 ;; (hoarder:fetch "mcandre/modulinos") 
 ;; (hoarder:fetch "mcna/closer-mop") 
 ;; (hoarder:fetch "mcrapet/plowshare") 
