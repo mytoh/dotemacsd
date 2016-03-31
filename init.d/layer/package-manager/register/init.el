@@ -1250,6 +1250,7 @@
   '(:tag ["paredit" "smartparens"]))
 (hoarder:register "ikazuhiro/emoji-display"
   '(:tag ["emoji"]))
+(hoarder:register "NicolasPetton/seq.el")
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
@@ -1549,7 +1550,7 @@
   (add-project-root "emacs-tupper")
   (add-project-root "emacs-napron")
   (add-project-root "eshell-lista")
-  (add-project-root "emacs-colle")
+  (add-project-root "emacs-colle" '(:load-path ["lisp"]))
   (add-project-root "emacs-sis"))
 
 ;;;;;; skk
@@ -2229,6 +2230,10 @@
   '(:branch "emacs-25"))
 (hoarder:fetch "kentaro/cinnamon")
 (hoarder:fetch "aharris88/awesome-cli-apps")
+(hoarder:fetch "zythum/mama2"
+  '(:tag ["bilibili" "youku"]))
+(hoarder:fetch "yangyangwithgnu/hardseed"
+  '(:tag ["porn" ]))
 
 
 ;;; migrating
@@ -2484,7 +2489,7 @@
 ;; (hoarder:fetch "hydride0/yamazaki") 
 ;; (hoarder:fetch "hydrusnetwork/hydrus") 
 ;; (hoarder:fetch "ianstormtaylor/to-slug-case") 
-;; (hoarder:fetch "idris-lang/Idris-dev") 
+(hoarder:fetch "idris-lang/Idris-dev") 
 ;; (hoarder:fetch "install-logos/ricedb") 
 ;; (hoarder:fetch "isohuntto/openbay") 
 ;; (hoarder:fetch "itchyny/lightline.vim") 
