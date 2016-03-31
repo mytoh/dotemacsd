@@ -197,8 +197,6 @@ is a kind of temporary one which is not confirmed yet."
 
   (muki:init-evil-mode-generals)
 
-  (muki:init-evil-plugins)
-
   (req 'evil)
 
   (enable-mode evil-mode)
