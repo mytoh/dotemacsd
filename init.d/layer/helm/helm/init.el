@@ -206,6 +206,7 @@ Otherwise goto the end of minibuffer."
                            helm-external-programs-associations
                            :test #'equalp))
                    (com (if found (cdr found) "xdg-open")))
+                  (message "runnig %s with %s" com file)
                   (start-process-shell-command "test" nil
                                                (concat com
                                                        " "
