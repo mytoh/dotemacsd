@@ -31,6 +31,7 @@
   (set-option eww-home-url "file:///home/mytoh/.org/etusivu/etusivu.html")
   (disable-option shr-image-animate)
   (enable-option shr-use-fonts)
+  (set-option shr-max-image-proportion 0.4) ; default 0.9
   (after 'eww
       (set-option eww-download-directory (muki:expand-path-huone "lataukset"))
     ;; (set-option eww-search-prefix "https://duckduckgo.com/html/?q=!g+")
