@@ -2234,7 +2234,12 @@
   '(:tag ["bilibili" "youku"]))
 (hoarder:fetch "yangyangwithgnu/hardseed"
   '(:tag ["porn" ]))
-
+(hoarder:fetch "akameco/pixiv.js"
+  '(:tag ["javascript" "pixiv"]))
+(hoarder:fetch "akameco/npm-pixiv"
+  '(:tag ["javascript" "pixiv" "npm"]))
+(hoarder:fetch "vdemedes/gifi"
+  '(:tag ["javascript" "gif" "npm" "image"]))
 
 ;;; migrating
 
