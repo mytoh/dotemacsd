@@ -189,8 +189,7 @@ Otherwise goto the end of minibuffer."
                       (2 candidates)
                       (_
                        (colle:remove
-                        (lambda (c)
-                          (string-match-p ".*/\\.+\\'" c))
+                        #'helm-ff-dot-file-p
                         candidates))))))
 
     
