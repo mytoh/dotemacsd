@@ -2240,6 +2240,9 @@
   '(:tag ["javascript" "pixiv" "npm"]))
 (hoarder:fetch "vdemedes/gifi"
   '(:tag ["javascript" "gif" "npm" "image"]))
+(hoarder:fetch "https://bitbucket.org/arakiken/mlterm"
+  '(:type :hg
+    :tag ["terminal"]))
 
 ;;; migrating
 
