@@ -194,6 +194,7 @@ Otherwise goto the end of minibuffer."
                         candidates))))))
 
     
+    ;;;; fix for external program 
     (cl-defun muki:helm-ff-open-external ()
       "Run open file externally command action from `helm-source-find-files'."
       (interactive)
