@@ -2243,6 +2243,10 @@
 (hoarder:fetch "https://bitbucket.org/arakiken/mlterm"
   '(:type :hg
     :tag ["terminal"]))
+(hoarder:fetch "pcbsd/lumina"
+  '(:tag ["freebsd" "pcbsd" "fluxbox" "de"]
+    :branch "qt4/0.7.2"))
+
 
 ;;; migrating
 
