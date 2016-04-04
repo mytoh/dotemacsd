@@ -2227,7 +2227,7 @@
 (hoarder:fetch "https://git.lysator.liu.se/nettle/nettle.git"
   '(:tag ["gnutls" "crypto" "security"]))
 (hoarder:fetch "emacs-mirror/emacs"
-  '(:branch "emacs-25"))
+  '(:branch "master"))
 (hoarder:fetch "kentaro/cinnamon")
 (hoarder:fetch "aharris88/awesome-cli-apps")
 (hoarder:fetch "zythum/mama2"
