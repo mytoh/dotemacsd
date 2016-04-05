@@ -2246,6 +2246,9 @@
 (hoarder:fetch "pcbsd/lumina"
   '(:tag ["freebsd" "pcbsd" "fluxbox" "de"]
     :branch "qt4/0.7.2"))
+(hoarder:fetch "git://git.fluxbox.org/fluxbox.git"
+  '(:tag ["WM" "desktop"]))
+
 
 
 ;;; migrating
