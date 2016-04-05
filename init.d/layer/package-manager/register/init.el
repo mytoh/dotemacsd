@@ -2248,7 +2248,13 @@
     :branch "qt4/0.7.2"))
 (hoarder:fetch "git://git.fluxbox.org/fluxbox.git"
   '(:tag ["WM" "desktop"]))
-
+(hoarder:fetch "RareAMV/WeebIRC"
+  '(:tag ["irc" "anime"]))
+(hoarder:fetch "git://git.sv.gnu.org/coreutils.git"
+  '(:tag ["gnu" "coreutils"]))
+(hoarder:fetch "git://git.samba.org/rsync.git")
+(hoarder:fetch "seebi/dircolors-solarized"
+  '(:tag ["solarized" "dircolors" "ls" "colorscheme"]))
 
 
 ;;; migrating
