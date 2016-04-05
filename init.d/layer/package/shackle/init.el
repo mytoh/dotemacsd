@@ -15,7 +15,7 @@
          ;; M-x helm-miniは下部に7割の大きさで表示
          ("*helm mini*" :align below :ratio 0.7)
          ("\*helm" :regexp t :align bottom)
-         (Man-mode :select t)))
+         ("\*Man.*\*" :regexp t :select t)))
     (enable-mode shackle-mode)
     (set-option shackle-lighter "")
 
