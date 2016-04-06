@@ -2261,6 +2261,12 @@
   '(:tag ["game" "minecraft"]))
 (hoarder:fetch  "glennrp/libpng"
   '(:tag ["png" "graphic"]))
+(hoarder:fetch "gapan/xdgmenumaker"
+  '(:tag ["desktop" "xdg" "fluxbox"]))
+(hoarder:fetch "txt2tags/txt2tags"
+  '(:tag ["man" "python"]))
+
+
 
 
 ;;; migrating
