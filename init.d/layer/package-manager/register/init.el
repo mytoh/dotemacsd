@@ -2255,6 +2255,12 @@
 (hoarder:fetch "git://git.samba.org/rsync.git")
 (hoarder:fetch "seebi/dircolors-solarized"
   '(:tag ["solarized" "dircolors" "ls" "colorscheme"]))
+(hoarder:fetch "novoid/org-mode-workshop"
+  '(:tag ["orgmode"]))
+(hoarder:fetch "minetest/minetest"
+  '(:tag ["game" "minecraft"]))
+(hoarder:fetch  "glennrp/libpng"
+  '(:tag ["png" "graphic"]))
 
 
 ;;; migrating
