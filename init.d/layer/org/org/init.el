@@ -84,9 +84,9 @@
   ;; Use a real ellipsis to render an ellipsis for =org= stuff like showing that a
   ;; header is collapsed.
 
-  ;; Other interesting characters are ↴, ⬎, ⤷, and
-  ;; "⋱" "…"
-  (set-option org-ellipsis "…")
+  ;; Other interesting characters are ↴, ⬎, ⮯, 🠷,⤷, and
+  ;; "⋱" "…", ▼, 
+  (set-option org-ellipsis  " ▼")
 
   )
 
@@ -250,11 +250,11 @@
   (org-element-map (org-element-parse-buffer 'element) 'headline
     (lambda (h)
       (and (org-element-map h 'drawer
-           (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
-           nil t 'headline)
-         (let ((begin (org-element-property :begin h)))
-           (message "Entry with erroneous properties drawer at %d" begin)
-           begin)))))
+             (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
+             nil t 'headline)
+           (let ((begin (org-element-property :begin h)))
+             (message "Entry with erroneous properties drawer at %d" begin)
+             begin)))))
 
 (req 'org-protocol)
 
