@@ -2266,7 +2266,12 @@
   '(:tag ["desktop" "xdg" "fluxbox"]))
 (hoarder:fetch "txt2tags/txt2tags"
   '(:tag ["man" "python"]))
-
+(hoarder:fetch "scheme-requests-for-implementation/srfi-133"
+  '(:tag ["srfi" "vector" "scheme"]))
+(hoarder:fetch "stathissideris/dali"
+  '(:tag ["svg" "clojure" "xml" "hiccup"]))
+(hoarder:fetch "sbocq/predicat"
+  '(:tag ["clojure" "validation" "schema"]))
 
 
 
