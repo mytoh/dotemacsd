@@ -1516,7 +1516,8 @@
 (hoarder:register-theme "wasamasa/punpun-theme")
 (hoarder:register-theme "MetroWind/emacs-deviant-theme")
 (hoarder:register-theme "sainathadapa/emacs-hybrid-material")
-
+(hoarder:register-theme "ranmocy/amelie-theme")
+(hoarder:register-theme "marktran/color-theme-ujelly")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
