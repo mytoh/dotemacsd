@@ -2309,7 +2309,10 @@
   '(:tag ["json" "porn" "api"]))
 (hoarder:fetch "kana/vim-submode"
   '(:tag ["vim"]))
-
+(hoarder:fetch "jedisct1/dnscrypt-proxy"
+  '(:tag ["dns" "dnscrypt" "dnssec"])) 
+(hoarder:fetch "Cofyc/dnscrypt-wrapper"
+  '(:tag ["dns" "dnscrypt" "dnssec"]))
 
 ;; (hoarder:fetch "2xT/kaistapaa") 
 ;; (hoarder:fetch "3ofcoins/jetpack") 
@@ -2535,7 +2538,7 @@
 ;; (hoarder:fetch "jasonhemann/microKanren") 
 ;; (hoarder:fetch "jbernard/dotfiles") 
 ;; (hoarder:fetch "jduey/applicative") 
-;; (hoarder:fetch "jedisct1/dnscrypt-proxy") 
+
 (hoarder:fetch "jgm/pandoc") 
 ;; (hoarder:fetch "jhawthorn/meh") 
 ;; (hoarder:fetch "jnv/lists") 
