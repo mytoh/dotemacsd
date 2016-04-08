@@ -1251,6 +1251,8 @@
 (hoarder:register "ikazuhiro/emoji-display"
   '(:tag ["emoji"]))
 (hoarder:register "NicolasPetton/seq.el")
+(hoarder:register "mbunkus/simple-rtm"
+  '(:tag ["org" "remember_the_milk"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
@@ -2276,8 +2278,7 @@
   '(:tag ["desktop" "wm" "common-lisp"]))
 (hoarder:fetch "akroshko/emacs-otdb"
   '(:tag ["org"]))
-
-
+(hoarder:fetch "seven332/EhViewer")
 
 ;;; migrating
 
