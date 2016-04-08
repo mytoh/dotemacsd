@@ -2281,7 +2281,7 @@
   '(:tag ["org"]))
 (hoarder:fetch "seven332/EhViewer")
 
-;;; migrating
+;;;;;; migrating
 
 (hoarder:fetch "git://erdgeist.org/opentracker") 
 (hoarder:fetch "git://git.2f30.org/colors") 
