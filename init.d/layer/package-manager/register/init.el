@@ -1252,7 +1252,8 @@
   '(:tag ["emoji"]))
 (hoarder:register "NicolasPetton/seq.el")
 (hoarder:register "mbunkus/simple-rtm"
-  '(:tag ["org" "remember_the_milk"]))
+  '(:tag ["org" "remember_the_milk"]
+    :load-path "lisp"))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
