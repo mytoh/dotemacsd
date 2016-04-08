@@ -781,9 +781,9 @@
   '(:tag ["workspace"]))
 (hoarder:register "ajsquared/env-var-import"
   '(:desc "Import shell environment variables in GUI Emacs "))
-(hoarder:register "emacsmirror/ob-speak"
-  '(:tag ["org" "espeak" "org-babel"]
-    :desc "espeak speech synthesis for org-babel blocks"))
+;; (hoarder:register "emacsmirror/ob-speak"
+;;   '(:tag ["org" "espeak" "org-babel"]
+;;     :desc "espeak speech synthesis for org-babel blocks"))
 (hoarder:register "vapniks/syslog-mode"
   '(:tag ["log"]
     :dependency ["vapniks/hide-lines"]
@@ -2272,6 +2272,10 @@
   '(:tag ["svg" "clojure" "xml" "hiccup"]))
 (hoarder:fetch "sbocq/predicat"
   '(:tag ["clojure" "validation" "schema"]))
+(hoarder:fetch "mgi/wm"
+  '(:tag ["desktop" "wm" "common-lisp"]))
+(hoarder:fetch "akroshko/emacs-otdb"
+  '(:tag ["org"]))
 
 
 
