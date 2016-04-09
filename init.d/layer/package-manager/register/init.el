@@ -2286,6 +2286,7 @@
   '(:tag ["haskell" "prelude"]
     :site "http://www.stephendiehl.com/posts/protolude.html"))
 (hoarder:fetch "MrS0m30n3/youtube-dl-gui")
+(hoarder:fetch "cask/cask")
 
 
 ;;;;;; migrating
