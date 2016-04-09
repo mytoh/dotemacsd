@@ -2280,6 +2280,13 @@
 (hoarder:fetch "akroshko/emacs-otdb"
   '(:tag ["org"]))
 (hoarder:fetch "seven332/EhViewer")
+(hoarder:fetch "txus/kleisli"
+  '(:tag ["category" "kleisli" "ruby" "ruby"]))
+(hoarder:fetch "sdiehl/protolude"
+  '(:tag ["haskell" "prelude"]
+    :site "http://www.stephendiehl.com/posts/protolude.html"))
+(hoarder:fetch "MrS0m30n3/youtube-dl-gui")
+
 
 ;;;;;; migrating
 
