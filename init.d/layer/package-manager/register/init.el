@@ -1521,6 +1521,7 @@
 (hoarder:register-theme "sainathadapa/emacs-hybrid-material")
 (hoarder:register-theme "ranmocy/amelie-theme")
 (hoarder:register-theme "marktran/color-theme-ujelly")
+(hoarder:register-theme "caisah/liso-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -2289,7 +2290,12 @@
 (hoarder:fetch "cask/cask")
 (hoarder:fetch "git://g.blicky.net/ncdc.git"
   '(:tag ["DC" "download"]))
-
+(hoarder:fetch "ThomasMeier/falcon"
+  '(:tag ["clojure" "dom" "html" ]))
+(hoarder:fetch "davidsantiago/hickory"
+  '(:tag ["clojure" "dom" "html" "hiccup"]))
+(hoarder:fetch "mattduck/splitscreen"
+  '(:tag ["tmux" "vim" "emacs"]))
 
 
 ;;;;;; migrating
@@ -2384,6 +2390,7 @@
 (hoarder:fetch "whatyouhide/gotham-contrib"
   '(:tag ["colorscheme"])) 
 (hoarder:fetch "zovt/papier-gtk-theme") 
+
 
 ;; (hoarder:fetch "2xT/kaistapaa") 
 ;; (hoarder:fetch "3ofcoins/jetpack") 
