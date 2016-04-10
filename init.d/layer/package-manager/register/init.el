@@ -2287,6 +2287,9 @@
     :site "http://www.stephendiehl.com/posts/protolude.html"))
 (hoarder:fetch "MrS0m30n3/youtube-dl-gui")
 (hoarder:fetch "cask/cask")
+(hoarder:fetch "git://g.blicky.net/ncdc.git"
+  '(:tag ["DC" "download"]))
+
 
 
 ;;;;;; migrating
@@ -2371,6 +2374,8 @@
 (hoarder:fetch "sixsixfive/Glare") 
 (hoarder:fetch "skroll/privoxy-adblock"
   '(:tag ["privoxy" "adblock"])) 
+(hoarder:fetch "Andrwe/privoxy-blocklist"
+  '(:tag ["privoxy" "adblock"]))
 (hoarder:fetch "snmsts/roswell") 
 (hoarder:fetch "solus-project/evopop-gtk-theme") 
 (hoarder:fetch "solus-project/evopop-icon-theme") 
