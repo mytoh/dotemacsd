@@ -13,7 +13,8 @@
                               ".gz"
                               "/ssh:"
                               "/scp:"
-                              "/sudo:"))
+                              "/sudo:"
+                              "/recentf\\'"))
 (set-option recentf-exclude muki:recentf-exclude)
 ;; (set-option recentf-auto-cleanup 10)
 
