@@ -223,7 +223,7 @@
     erlang
     sml-mode
     beacon ; error invalid face :background
-    clipmon
+    ;; clipmon
     font-lock-studio
     emojify
     wget
