@@ -2297,6 +2297,8 @@
   '(:tag ["clojure" "dom" "html" "hiccup"]))
 (hoarder:fetch "mattduck/splitscreen"
   '(:tag ["tmux" "vim" "emacs"]))
+(hoarder:fetch "anubiann00b/AnimeDownloader"
+  '(:tag ["anime" "download" "pyhton"]))
 
 
 ;;;;;; migrating
