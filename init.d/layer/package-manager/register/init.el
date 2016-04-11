@@ -1523,6 +1523,7 @@
 (hoarder:register-theme "ranmocy/amelie-theme")
 (hoarder:register-theme "marktran/color-theme-ujelly")
 (hoarder:register-theme "caisah/liso-theme")
+(hoarder:register-theme "ksjogo/labburn-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
