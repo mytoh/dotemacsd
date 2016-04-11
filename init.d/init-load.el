@@ -258,6 +258,7 @@
     edit-color-stamp
     hydra
     vc
+    hardhat
 
     saveplace
     

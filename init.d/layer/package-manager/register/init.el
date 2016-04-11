@@ -1254,6 +1254,7 @@
 (hoarder:register "mbunkus/simple-rtm"
   '(:tag ["org" "remember_the_milk"]
     :load-path "lisp"))
+(hoarder:register "rolandwalker/hardhat")
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
