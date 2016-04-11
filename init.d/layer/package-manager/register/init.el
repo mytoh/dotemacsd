@@ -2300,6 +2300,8 @@
   '(:tag ["tmux" "vim" "emacs"]))
 (hoarder:fetch "anubiann00b/AnimeDownloader"
   '(:tag ["anime" "download" "pyhton"]))
+(hoarder:fetch "Juniper/libxo"
+  '(:tag ["printf"]))
 
 
 ;;;;;; migrating
