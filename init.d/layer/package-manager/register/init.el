@@ -1255,6 +1255,8 @@
   '(:tag ["org" "remember_the_milk"]
     :load-path "lisp"))
 (hoarder:register "rolandwalker/hardhat")
+(hoarder:register "aaron-em/niceify-info.el"
+  '(:tag ["info"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
