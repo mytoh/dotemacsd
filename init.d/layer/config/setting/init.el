@@ -30,6 +30,7 @@
 ;;;; clipboard
 (when (display-graphic-p)
   (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING)))
+(setq save-interprogram-paste-before-kill t)
 
 ;;;; start server
 (req 'server
