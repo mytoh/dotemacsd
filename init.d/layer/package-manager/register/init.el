@@ -2304,7 +2304,22 @@
   '(:tag ["anime" "download" "pyhton"]))
 (hoarder:fetch "Juniper/libxo"
   '(:tag ["printf"]))
-
+(hoarder:fetch "cloojure/tupelo"
+  '(:tag ["clojure" "utility"]))
+(hoarder:fetch "m-khvoinitsky/dark-background-light-text-extension"
+  '(:tag ["firefox" "theme" "addon" "css"]))
+(hoarder:fetch "yjh0502/comic"
+  '(:tag ["image" "viewer" "comic" "archive"]))
+(hoarder:fetch "lucy/af"
+  '(:tag ["ag" "grep"]))
+(hoarder:fetch "tsudoko/pixivrss"
+  '(:tag ["pixiv" "rss"]))
+(hoarder:fetch "Hamuko/nyaamagnet"
+  '(:tag ["torrent" "magnet_link"]))
+(hoarder:fetch "Fuuzetsu/h-booru"
+  '(:tag ["haskell" "booru" "downloader"]))
+(hoarder:fetch "Fuuzetsu/heee-lisp"
+  '(:tag ["haskell" "monad" "emacs"]))
 
 ;;;;;; migrating
 
