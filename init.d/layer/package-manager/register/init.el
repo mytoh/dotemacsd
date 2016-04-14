@@ -2320,6 +2320,9 @@
   '(:tag ["haskell" "booru" "downloader"]))
 (hoarder:fetch "Fuuzetsu/heee-lisp"
   '(:tag ["haskell" "monad" "emacs"]))
+(hoarder:fetch "ivoarch/conkeror-theme-zenburn"
+  '(:tag ["conkeror"]))
+
 
 ;;;;;; migrating
 
