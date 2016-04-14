@@ -13,6 +13,7 @@
   (mode "\\.mustache\\'"  #'web-mode)
   (mode "\\.djhtml\\'"  #'web-mode)
   (mode "\\.html?\\'"  #'web-mode)
-  (mode "\\.css\\'" #'web-mode))
+  ;; (mode "\\.css\\'" #'web-mode)
+  )
 
 ;;; init.el ends here
