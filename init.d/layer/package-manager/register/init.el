@@ -1257,6 +1257,7 @@
 (hoarder:register "rolandwalker/hardhat")
 (hoarder:register "aaron-em/niceify-info.el"
   '(:tag ["info"]))
+(hoarder:register "ALSchwalm/power-mode.el")
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
@@ -1526,6 +1527,7 @@
 (hoarder:register-theme "marktran/color-theme-ujelly")
 (hoarder:register-theme "caisah/liso-theme")
 (hoarder:register-theme "ksjogo/labburn-theme")
+(hoarder:register-theme "kootenpv/emacs-kooten-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -2330,7 +2332,22 @@
   '(:tag ["minecraft" "java" "voxel" "game"]))
 (hoarder:fetch "https://gitlab.com/procps-ng/procps.git"
   '(:tag ["linux" "procfs"]))
-
+(hoarder:fetch "ruricolist/spinneret"
+  '(:tag ["common-lisp" "html" "html5"]))
+(hoarder:fetch "nebukazar/OneeChan"
+  '(:tag ["4chan" "css" "firefox" "addon"]))
+(hoarder:fetch "Cloudef/monsterwm"
+  '(:tag ["wm" "x11"]))
+(hoarder:fetch "LemonBoy/bar"
+  '(:tag ["wm" "tiling" "x11" "bar" "panel"]))
+(hoarder:fetch "moetunes/Some_sorta_bar"
+  '(:tag ["wm" "tiling" "x11" "bar" "panel"]))
+(hoarder:fetch "moetunes/bipolarbar"
+  '(:tag ["wm" "tiling" "x11" "bar" "panel"]))
+(hoarder:fetch "c00kiemon5ter/mopag"
+  '(:tag ["wm" "tiling" "x11" "bar" "panel"]))
+(hoarder:fetch "ahushh/Monaba"
+  '(:tag ["imageboard" "haskell" "yesod" "kusaba"]))
 
 ;;;;;; migrating
 
