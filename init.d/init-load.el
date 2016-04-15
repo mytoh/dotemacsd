@@ -259,6 +259,7 @@
     hydra
     vc
     hardhat
+    ignoramus
 
     saveplace
     
