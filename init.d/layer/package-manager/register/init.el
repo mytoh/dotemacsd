@@ -2322,6 +2322,14 @@
   '(:tag ["haskell" "monad" "emacs"]))
 (hoarder:fetch "ivoarch/conkeror-theme-zenburn"
   '(:tag ["conkeror"]))
+(hoarder:fetch "lotz84/haskell"
+  '(:tag ["hasell" "reference"]))
+(hoarder:fetch "note103/dirmove"
+  '(:tag ["cd" "cli" "peco" "sentaku"]))
+(hoarder:fetch "https://gitlab.com/MovingBlocks/Terasology.git"
+  '(:tag ["minecraft" "java" "voxel" "game"]))
+(hoarder:fetch "https://gitlab.com/procps-ng/procps.git"
+  '(:tag ["linux" "procfs"]))
 
 
 ;;;;;; migrating
