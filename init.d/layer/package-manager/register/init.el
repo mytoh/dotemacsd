@@ -1258,6 +1258,16 @@
 (hoarder:register "aaron-em/niceify-info.el"
   '(:tag ["info"]))
 (hoarder:register "ALSchwalm/power-mode.el")
+(hoarder:register "https://gitlab.com/RobertCochran/neato-graph-bar.git"
+  '(:tag ["cpu" "memory" "monitor"]))
+(hoarder:register "https://gitlab.com/tarsius/epkg.git"
+  '(:tag ["emacsmirro" "package" "archive"]))
+(hoarder:register "akrito/acme-mouse"
+  '(:tag ["plan9" "acme"]))
+(hoarder:register "afainer/arview"
+  '(:tag ["archive" ]))
+(hoarder:fetch "thomp/datclip"
+  '(:tag ["clipboard" "x11" "xclip"]))
 
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
@@ -1732,7 +1742,8 @@
 (hoarder:fetch "Ramarren/cl-parser-combinators"
   '(:tag ["common_lisp" "parser"]))
 (hoarder:fetch "https://gitlab.common-lisp.net/alexandria/alexandria.git"
-  '(:tag ["common_lisp"]))
+  '(:tag ["common_lisp"]
+    :depth nil))
 (hoarder:fetch "robert-strandh/SICL"
   '(:tag ["common_lisp"]))
 (hoarder:fetch "robert-strandh/Second-Climacs"
@@ -1817,9 +1828,11 @@
 (hoarder:fetch "fniessen/refcard-org-babel"
   '(:tag ["org"]))
 (hoarder:fetch "https://gitlab.com/egh/org-cook.git"
-  '(:tag ["org" "cooking"]))
+  '(:tag ["org" "cooking"]
+    :depth nil))
 (hoarder:fetch "https://gitlab.com/egh/org-brew.git"
-  '(:tag ["org" "brewing"]))
+  '(:tag ["org" "brewing"]
+    :depth nil))
 (hoarder:fetch "krisajenkins/EvilBegins"
   '(:tag ["evil"]))
 (hoarder:fetch "bzg/org-mode-rr"
@@ -1894,7 +1907,8 @@
 (hoarder:fetch "mlf176f2/EmacsMate")
 (hoarder:fetch "https://gitlab.com/emacs-stuff/fasd-shell.git"
   '(:tag ["fasd" "shell" "ido"]
-    :desc "Use ido completion for the fasd utility in an emacs shell."))
+    :desc "Use ido completion for the fasd utility in an emacs shell."
+    :depth nil))
 (hoarder:fetch "coldnew/eshell-autojump"
   '(:tag ["eshell" "autojump"]))
 (hoarder:fetch "impaktor/unison-mode"
@@ -2080,7 +2094,8 @@
 (hoarder:fetch "tallesl/Rich-Hickey-fanclub"
   '(:tag ["clojure" "video" "youtube" "rich hickey"]))
 (hoarder:fetch "https://gitlab.com/com-informatimago/com-informatimago.git"
-  '(:tag ["common-lisp"]))
+  '(:tag ["common-lisp"]
+    :depth nil))
 (hoarder:fetch "git://git.savannah.gnu.org/emacs/elpa.git"
   '(:tag ["elpa" "gnu" "emacs"]))
 (hoarder:fetch "clojure/data.zip"
@@ -2218,7 +2233,8 @@
   '(:tag ["image" "viewer"]))
 (hoarder:fetch "taglib/taglib")
 (hoarder:fetch "https://gitlab.com/KNX32542/dotfiles.git"
-  '(:tag ["gitlab" "evil" "org" "emacs" "syndicate" "org-babel"]))
+  '(:tag ["gitlab" "evil" "org" "emacs" "syndicate" "org-babel"]
+    :depth nil))
 (hoarder:fetch "jart/hiptext"
   '(:tag ["image" "text" "sixel"]))
 (hoarder:fetch "toddmotto/public-apis"
@@ -2329,9 +2345,11 @@
 (hoarder:fetch "note103/dirmove"
   '(:tag ["cd" "cli" "peco" "sentaku"]))
 (hoarder:fetch "https://gitlab.com/MovingBlocks/Terasology.git"
-  '(:tag ["minecraft" "java" "voxel" "game"]))
+  '(:tag ["minecraft" "java" "voxel" "game"]
+    :depth nil))
 (hoarder:fetch "https://gitlab.com/procps-ng/procps.git"
-  '(:tag ["linux" "procfs"]))
+  '(:tag ["linux" "procfs"]
+    :depth nil))
 (hoarder:fetch "ruricolist/spinneret"
   '(:tag ["common-lisp" "html" "html5"]))
 (hoarder:fetch "nebukazar/OneeChan"
@@ -2348,6 +2366,13 @@
   '(:tag ["wm" "tiling" "x11" "bar" "panel"]))
 (hoarder:fetch "ahushh/Monaba"
   '(:tag ["imageboard" "haskell" "yesod" "kusaba"]))
+(hoarder:fetch "driftyco/ionicons"
+  '(:tag ["icon" "font"]))
+(hoarder:fetch "https://gitla.in/ovibos/quicksilver.git"
+  '(:tag ["imageboard" "haskell"]))
+(hoarder:fetch "gwkkwg/cl-containers"
+  '(:tag ["common_lisp" "data_structure"]))
+
 
 ;;;;;; migrating
 
