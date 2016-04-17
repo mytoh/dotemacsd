@@ -2344,9 +2344,9 @@
   '(:tag ["hasell" "reference"]))
 (hoarder:fetch "note103/dirmove"
   '(:tag ["cd" "cli" "peco" "sentaku"]))
-(hoarder:fetch "https://gitlab.com/MovingBlocks/Terasology.git"
-  '(:tag ["minecraft" "java" "voxel" "game"]
-    :depth nil))
+;; (hoarder:fetch "https://gitlab.com/MovingBlocks/Terasology.git"
+;;   '(:tag ["minecraft" "java" "voxel" "game"]
+;;     :depth nil))
 (hoarder:fetch "https://gitlab.com/procps-ng/procps.git"
   '(:tag ["linux" "procfs"]
     :depth nil))
