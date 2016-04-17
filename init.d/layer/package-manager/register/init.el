@@ -1266,9 +1266,12 @@
   '(:tag ["plan9" "acme"]))
 (hoarder:register "afainer/arview"
   '(:tag ["archive" ]))
-(hoarder:fetch "thomp/datclip"
+(hoarder:register "thomp/datclip"
   '(:tag ["clipboard" "x11" "xclip"]))
-
+(hoarder:register "chrisbarrett/ert-modeline"
+  '(tag ["ert" "test" "modeline"]))
+(hoarder:register "lujun9972/uimage"
+  '(:tag ["image" "link" "display"]))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
 ;;                     :dependency (("papaeye/go-mode.el"
