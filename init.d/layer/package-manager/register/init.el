@@ -2375,6 +2375,18 @@
   '(:tag ["imageboard" "haskell"]))
 (hoarder:fetch "gwkkwg/cl-containers"
   '(:tag ["common_lisp" "data_structure"]))
+(hoarder:fetch "dustinspecker/awesome-eslint"
+  '(:tag ["javascript" "eslint"]))
+(hoarder:fetch "stoeffel/awesome-fp-js"
+  '(:tag ["javascript" "functional" "immutable"]))
+(hoarder:fetch "redrifle/FreeView"
+  '(:tag ["image" "viewer"]))
+(hoarder:fetch "https://git.xiph.org/flac.git"
+  '(:tag ["audio"]))
+(hoarder:fetch "https://git.xiph.org/opus.git"
+  '(:tag ["audio"]))
+(hoarder:fetch "https://git.xiph.org/opus-tools.git"
+  '(:tag ["audio" "opus"]))
 
 
 ;;;;;; migrating
