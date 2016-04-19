@@ -260,6 +260,7 @@
     vc
     hardhat
     ignoramus
+    niceify-info
 
     saveplace
     
