@@ -2401,6 +2401,18 @@
   '(:tag ["awesome_list" "network"]))
 (hoarder:fetch "zenozeng/Free-Chinese-Fonts"
   '(:tag ["font" "chinese"]))
+(hoarder:fetch "vurtun/nuklear"
+  '(:tag ["gui" "toolkit"]))
+(hoarder:fetch "hayderctee/masalla-icon-theme"
+  '(:tag ["icon" "theme" "x11" "desktop"]))
+(hoarder:fetch "xenlism/wildfire"
+  '(:tag ["icon" "theme" "x11" "desktop"]))
+(hoarder:fetch "xenlism/Storm"
+  '(:tag ["icon" "theme" "x11" "desktop"]))
+(hoarder:fetch "baurigae/polar-night"
+  '(:tag ["gtk" "theme" "x11" "desktop"]))
+(hoarder:fetch "anexation/menda-icon-themes"
+  '(:tag ["icon" "theme" "x11" "desktop"]))
 
 
 ;;;;;; migrating
