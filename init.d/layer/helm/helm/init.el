@@ -52,7 +52,11 @@ Otherwise goto the end of minibuffer."
                     `(lambda ()
                        (interactive)
                        (helm-select-nth-action ,n)))))
+  ;; helm mode mappings
+  (define-key helm-map (kbd "C-j") #'helm-next-line)
+  (define-key helm-map (kbd "C-k") #'helm-previous-line)
 
+  ;; global mappings for helm commands
   (add-global-key "M-x" #'helm-M-x
                   "C-c C-m" #'helm-M-x
                   "M-y" #'helm-show-kill-ring
