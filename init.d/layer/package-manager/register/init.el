@@ -1261,7 +1261,10 @@
 (hoarder:register "https://gitlab.com/RobertCochran/neato-graph-bar.git"
   '(:tag ["cpu" "memory" "monitor"]))
 (hoarder:register "https://gitlab.com/tarsius/epkg.git"
-  '(:tag ["emacsmirro" "package" "archive"]))
+  '(:tag ["emacsmirro" "package" "archive"]
+    :dependency ["https://gitlab.com/tarsius/closql.git"
+                 "skeeto/emacsql"
+                 "skeeto/elisp-finalize"]))
 (hoarder:register "akrito/acme-mouse"
   '(:tag ["plan9" "acme"]))
 (hoarder:register "afainer/arview"
@@ -1272,6 +1275,8 @@
   '(tag ["ert" "test" "modeline"]))
 (hoarder:register "lujun9972/uimage"
   '(:tag ["image" "link" "display"]))
+(hoarder:register "Malabarba/validate.el"
+  '(:tag ["schema" "validation"]))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
 ;;                     :dependency (("papaeye/go-mode.el"
@@ -2382,11 +2387,20 @@
 (hoarder:fetch "redrifle/FreeView"
   '(:tag ["image" "viewer"]))
 (hoarder:fetch "https://git.xiph.org/flac.git"
-  '(:tag ["audio"]))
+  '(:tag ["audio"]
+    :depth nil))
 (hoarder:fetch "https://git.xiph.org/opus.git"
-  '(:tag ["audio"]))
+  '(:tag ["audio"]
+    :depth nil))
 (hoarder:fetch "https://git.xiph.org/opus-tools.git"
-  '(:tag ["audio" "opus"]))
+  '(:tag ["audio" "opus"]
+    :depth nil))
+(hoarder:fetch "bbidulock/icewm"
+  '(:tag ["wm" "desktop" "x11"]))
+(hoarder:fetch "clowwindy/Awesome-Networking"
+  '(:tag ["awesome_list" "network"]))
+(hoarder:fetch "zenozeng/Free-Chinese-Fonts"
+  '(:tag ["font" "chinese"]))
 
 
 ;;;;;; migrating
