@@ -2413,6 +2413,13 @@
   '(:tag ["gtk" "theme" "x11" "desktop"]))
 (hoarder:fetch "anexation/menda-icon-themes"
   '(:tag ["icon" "theme" "x11" "desktop"]))
+(hoarder:fetch "DrBoolean/RecursionTalk"
+  '(:tag ["javascript" "fold"]))
+(hoarder:fetch "xyzz/mpv-android"
+  '(:ag ["mpv" "android"]))
+(hoarder:fetch "dulleh/akhyou"
+  '(:tag ["anime" "android"]))
+
 
 
 ;;;;;; migrating
