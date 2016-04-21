@@ -2421,6 +2421,8 @@
   '(:tag ["anime" "android"]))
 (hoarder:fetch "gwkkwg/metabang-bind"
   '(:tag ["common-lisp" "macro" "let" "binding"]))
+(hoarder:fetch "https://gitla.in/nano/Craft.git"
+  '(:tag ["minecraft"]))
 
 
 
