@@ -2,11 +2,10 @@
 
 ;;; Code:
 
-(after 'css-mode
-    (command (cssfmt-after-save) "cssfmt")
-  (cl-defun muki:set-cssfmt ()
-    (add-hook 'after-save-hook #'cssfmt-after-save))
-  (add-hook 'css-mode-hook
-            #'muki:set-cssfmt))
+(liby 'cssfmt
+  (command (cssfmt-enable-on-save) "cssfmt")
+  (set-option cssfmt-command "stylefmt")
+  (add-hook 'css-mode-hook #'cssfmt-enable-on-save)
+  )
 
 ;;; init.el ends here
