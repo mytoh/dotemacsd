@@ -2419,6 +2419,8 @@
   '(:ag ["mpv" "android"]))
 (hoarder:fetch "dulleh/akhyou"
   '(:tag ["anime" "android"]))
+(hoarder:fetch "gwkkwg/metabang-bind"
+  '(:tag ["common-lisp" "macro" "let" "binding"]))
 
 
 
