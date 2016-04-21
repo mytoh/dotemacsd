@@ -15,6 +15,11 @@
   (defvar outline-minor-mode-prefix (kbd "C-c"))
 
   (add-hook 'outline-minor-mode-hook #'outshine-hook-function)
+  (after 'outshine
+      (define-key outline-minor-mode-map
+       (kbd "C-c C-j") #'outline-next-heading)
+    (define-key outline-minor-mode-map
+        (kbd "C-c C-k") #'outline-previous-heading))
 
   ;; (defvar outline-minor-mode-prefix "\M-#")
   (add-hook 'emacs-lisp-mode-hook #'outline-minor-mode)
