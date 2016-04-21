@@ -2287,7 +2287,8 @@
   '(:tag ["irc" "anime"]))
 (hoarder:fetch "git://git.sv.gnu.org/coreutils.git"
   '(:tag ["gnu" "coreutils"]))
-(hoarder:fetch "git://git.samba.org/rsync.git")
+(hoarder:fetch "git://git.samba.org/rsync.git"
+  '(:depth nil))
 (hoarder:fetch "seebi/dircolors-solarized"
   '(:tag ["solarized" "dircolors" "ls" "colorscheme"]))
 (hoarder:fetch "novoid/org-mode-workshop"
@@ -2423,6 +2424,8 @@
   '(:tag ["common-lisp" "macro" "let" "binding"]))
 (hoarder:fetch "https://gitla.in/nano/Craft.git"
   '(:tag ["minecraft"]))
+(hoarder:fetch "morishitter/stylefmt"
+  '(:tag ["css" "formatter" "web"]))
 
 
 
