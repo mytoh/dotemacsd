@@ -140,7 +140,8 @@
     flappymacs
     yamada
     css-eldoc
-    web-beautify
+    ;; web-beautify
+    cssfmt
     direx
     oniisama
 
