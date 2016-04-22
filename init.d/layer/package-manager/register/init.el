@@ -2426,6 +2426,8 @@
   '(:tag ["minecraft"]))
 (hoarder:fetch "morishitter/stylefmt"
   '(:tag ["css" "formatter" "web"]))
+(hoarder:fetch "alphapapa/reddit-emacs-css"
+  '(:tag ["css" "reddit"]))
 
 
 
