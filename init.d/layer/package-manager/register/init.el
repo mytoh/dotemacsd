@@ -2416,7 +2416,7 @@
   '(:tag ["icon" "theme" "x11" "desktop"]))
 (hoarder:fetch "DrBoolean/RecursionTalk"
   '(:tag ["javascript" "fold"]))
-(hoarder:fetch "xyzz/mpv-android"
+(hoarder:fetch "mpv-android/mpv-android"
   '(:ag ["mpv" "android"]))
 (hoarder:fetch "dulleh/akhyou"
   '(:tag ["anime" "android"]))
