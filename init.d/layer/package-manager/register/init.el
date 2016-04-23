@@ -1549,6 +1549,7 @@
 (hoarder:register-theme "ksjogo/labburn-theme")
 (hoarder:register-theme "kootenpv/emacs-kooten-theme")
 
+
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
               (cl-letf ((proj-path (thread-last (getenv "HUONE")
@@ -2444,6 +2445,12 @@
   '(:tag ["freebsd" "inotify" "kqueue"]))
 (hoarder:fetch "faelys/filewatcherd"
   '(:tag ["freebsd" "inotify"]))
+(hoarder:fetch "ogham/exa"
+  '(:tag ["rust" "ls" "cli"]))
+(hoarder:fetch "AurelienLourot/uncommitted"
+  '(:tag ["git" "pythhon"]))
+(hoarder:fetch "iCHAIT/awesome-subreddits"
+  '(:tag ["awesome_list" "reddit"]))
 
 
 ;;;;;; migrating
