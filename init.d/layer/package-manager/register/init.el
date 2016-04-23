@@ -1091,9 +1091,9 @@
   '(:tag ["elixir" "erlang"]))
 (hoarder:register "gromnitsky/wordnut"
   '(:tag ["wordnet" "language" "english"]))
-(hoarder:register "erlang/otp"
-  '(:tag ["erlang" "otp"]
-    :load-path "lib/tools/emacs"))
+;; (hoarder:register "erlang/otp"
+;;   '(:tag ["erlang" "otp"]
+;;     :load-path "lib/tools/emacs"))
 (hoarder:register "emacsmirror/sml-mode"
   '(:tag ["language" "Standard ML"]))
 (hoarder:register "osener/github-browse-file"
@@ -1277,6 +1277,8 @@
   '(:tag ["image" "link" "display"]))
 (hoarder:register "Malabarba/validate.el"
   '(:tag ["schema" "validation"]))
+(hoarder:register "hl-anything/hl-anything-emacs"
+  '(:tag ["highlight"]))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
 ;;                     :dependency (("papaeye/go-mode.el"
@@ -1662,13 +1664,13 @@
 (hoarder:fetch "git://orgmode.org/worg.git")
 (hoarder:fetch "roman/emacs.d")
 (hoarder:fetch "iconpin/dotemacs")
-(hoarder:fetch "jpace121/evil-ed")
+;; (hoarder:fetch "jpace121/evil-ed")
 (hoarder:fetch "sunesimonsen/evil-config")
 (hoarder:fetch "gbarta/evil-my-shims")
 (hoarder:fetch "novoid/Memacs")
 (hoarder:fetch "novoid/dot-emacs"
   '(:tag ["org"]))
-(hoarder:fetch "terhechte/emacs.d")
+;; (hoarder:fetch "terhechte/emacs.d")
 (hoarder:fetch "echosa/emacs.d")
 (hoarder:fetch "wataken44/dot.emacs.d2")
 (hoarder:fetch "scottjad/dotfiles")
@@ -1816,8 +1818,8 @@
   '(:tag ["evil" "org"]
     :desc "https://github.com/TheBB/dotfiles/blob/master/emacs/init.el#L841-975"
     :recursive nil))
-(hoarder:fetch "grettke/home"
-  '(:tag ["org"]))
+;; (hoarder:fetch "grettke/home"
+;;   '(:tag ["org"]))
 (hoarder:fetch "lunaryorn/.emacs.d"
   '(:tag ["smartparens"]))
 (hoarder:fetch "fgallina/dotemacs")
@@ -1845,9 +1847,9 @@
   '(:tag ["evil"]))
 (hoarder:fetch "bzg/org-mode-rr"
   '(:tag ["org" "reproducible_research"]))
-(hoarder:fetch "jkitchin/jmax"
-  '(:tag ["org"]
-    :recursive nil))
+;; (hoarder:fetch "jkitchin/jmax"
+;;   '(:tag ["org"]
+;;     :recursive nil))
 (hoarder:fetch "ihodes/emacs.org"
   '(:tag ["org"]))
 (hoarder:fetch "tsu-nera/dotfiles"
@@ -1953,8 +1955,8 @@
   '(:tag ["org"]))
 (hoarder:fetch "chrisdone/elisp-guide"
   '(:tag ["elisp" "programming" "guide"]))
-(hoarder:fetch "baohaojun/system-config"
-  '(:tag ["chinese" "font"]))
+;; (hoarder:fetch "baohaojun/system-config"
+;;   '(:tag ["chinese" "font"]))
 (hoarder:fetch "emacsmirror/swbuff-x"
   '(:tag ["buffer"]))
 (hoarder:fetch "alezost/emacs-utils"
@@ -2180,8 +2182,8 @@
   '(:tag ["archive" "xz" "lzma"]))
 (hoarder:fetch "brabadu/awesome-fonts"
   '(:tag ["font"]))
-(hoarder:fetch "chrissimpkins/codeface"
-  '(:tag ["font"]))
+;; (hoarder:fetch "chrissimpkins/codeface"
+;;   '(:tag ["font"]))
 (hoarder:fetch "Tecate/bitmap-fonts"
   '(:tag ["font"]))
 (hoarder:fetch "roberoonska/dotfiles"
@@ -2428,8 +2430,15 @@
   '(:tag ["css" "formatter" "web"]))
 (hoarder:fetch "alphapapa/reddit-emacs-css"
   '(:tag ["css" "reddit"]))
-
-
+(hoarder:fetch "jrockway/dotfiles"
+  '(:tag ["perl"]))
+(hoarder:fetch "ertugrulcetin/kezban"
+  '(:tag ["clojure"]))
+(hoarder:fetch "pi-hole/pi-hole"
+  '(:tag ["raspberrypi" "adblock"]))
+(hoarder:fetch "emcrisostomo/fswatch")
+(hoarder:fetch "emcrisostomo/FreeBSD-Ports"
+  '(:tag ["freebsd" "fswatch"]))
 
 ;;;;;; migrating
 
@@ -2443,7 +2452,6 @@
 ;; (hoarder:fetch "git://git.savannah.gnu.org/emacs") 
 (hoarder:fetch "git://git.savannah.gnu.org/screen.git") 
 (hoarder:fetch "git://git.savannah.gnu.org/stow.git") 
-(hoarder:fetch "git://git.savannah.gnu.org/tramp.git") 
 (hoarder:fetch "git://git.savannah.nongnu.org/gzochi.git") 
 (hoarder:fetch "git://git.savannah.nongnu.org/ranger.git") 
 (hoarder:fetch "git://git.sourceforge.jp/gitroot/ninix-aya/master.git") 
