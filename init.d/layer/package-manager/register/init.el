@@ -2436,9 +2436,13 @@
   '(:tag ["clojure"]))
 (hoarder:fetch "pi-hole/pi-hole"
   '(:tag ["raspberrypi" "adblock"]))
-(hoarder:fetch "emcrisostomo/fswatch")
+(hoarder:fetch "emcrisostomo/fswatch"
+  '(:tag ["freebsd" "inotify"]))
 (hoarder:fetch "emcrisostomo/FreeBSD-Ports"
   '(:tag ["freebsd" "fswatch"]))
+(hoarder:fetch "dmatveev/libinotify-kqueue"
+  '(:tag ["freebsd" "inotify" "kqueue"]))
+
 
 ;;;;;; migrating
 
