@@ -2442,6 +2442,8 @@
   '(:tag ["freebsd" "fswatch"]))
 (hoarder:fetch "dmatveev/libinotify-kqueue"
   '(:tag ["freebsd" "inotify" "kqueue"]))
+(hoarder:fetch "faelys/filewatcherd"
+  '(:tag ["freebsd" "inotify"]))
 
 
 ;;;;;; migrating
