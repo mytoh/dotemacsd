@@ -2548,423 +2548,838 @@
 (hoarder:fetch "zovt/papier-gtk-theme") 
 
 
-;; (hoarder:fetch "2xT/kaistapaa") 
-;; (hoarder:fetch "3ofcoins/jetpack") 
-;; (hoarder:fetch "86me/pentadactyl-scripts") 
-;; (hoarder:fetch "Ahed91/Mlterm-Color-Schames") 
-;; (hoarder:fetch "AnidevFR/NyaaAPI") 
-;; (hoarder:fetch "Argon-/mpv-stats") 
-;; (hoarder:fetch "Cloudef/dmenu-pango-imlib") 
-;; (hoarder:fetch "Cloudef/dotFiles") 
-;; (hoarder:fetch "Cloudef/dotfiles-ng") 
-;; (hoarder:fetch "Cloudef/monsterwm-xcb") 
-;; (hoarder:fetch "Cloudef/sxiv") 
-;; (hoarder:fetch "Cloudef/xcmenu") 
-;; (hoarder:fetch "DaisukeAramaki/Dotfiles") 
+(hoarder:fetch "2xT/kaistapaa"
+  '(:download nil)) 
+(hoarder:fetch "3ofcoins/jetpack"
+  '(:download nil)) 
+(hoarder:fetch "86me/pentadactyl-scripts"
+  '(:download nil)) 
+(hoarder:fetch "Ahed91/Mlterm-Color-Schames"
+  '(:download nil)) 
+(hoarder:fetch "AnidevFR/NyaaAPI"
+  '(:download nil)) 
+(hoarder:fetch "Argon-/mpv-stats"
+  '(:download nil)) 
+(hoarder:fetch "Cloudef/dmenu-pango-imlib"
+  '(:download nil)) 
+(hoarder:fetch "Cloudef/dotFiles"
+  '(:download nil)) 
+(hoarder:fetch "Cloudef/dotfiles-ng"
+  '(:download nil)) 
+(hoarder:fetch "Cloudef/monsterwm-xcb"
+  '(:download nil)) 
+(hoarder:fetch "Cloudef/sxiv"
+  '(:download nil)) 
+(hoarder:fetch "Cloudef/xcmenu"
+  '(:download nil)) 
+(hoarder:fetch "DaisukeAramaki/Dotfiles"
+  '(:download nil)) 
 
-;; (hoarder:fetch "EZ3CHI3L/Eternity") 
-;; (hoarder:fetch "FFmpeg/FFmpeg") 
-;; (hoarder:fetch "FLIF-hub/FLIF") 
-;; (hoarder:fetch "FooSoft/homemaker") 
-;; (hoarder:fetch "Fvwm-Nightshade/Fvwm-Nightshade") 
-;; (hoarder:fetch "GGLucas/vimperator-buftabs") 
-;; (hoarder:fetch "Gabriel439/Haskell-Turtle-Library") 
-;; (hoarder:fetch "Griever/userChromeJS") 
-;; (hoarder:fetch "HelloZeroNet/ZeroNet") 
-;; (hoarder:fetch "Hiroyuki-Nagata/XrossBoard") 
-;; (hoarder:fetch "Hund/Userstyles") 
-;; (hoarder:fetch "IgnorantGuru/spacefm") 
-;; (hoarder:fetch "ImageMagick/ImageMagick") 
-;; (hoarder:fetch "ItzBlitz98/torrentflix") 
-;; (hoarder:fetch "KeenS/CIM") 
-;; (hoarder:fetch "Kickball/awesome-selfhosted") 
-;; (hoarder:fetch "LemonBoy/bar") 
-;; (hoarder:fetch "MLton/mlton") 
-;; (hoarder:fetch "MagikBSD/please") 
-;; (hoarder:fetch "Masterminds/glide") 
-;; (hoarder:fetch "MidnightCommander/mc.git") 
-;; (hoarder:fetch "Nandaka/DanbooruDownloader") 
-;; (hoarder:fetch "Nenuphar/Dyod") 
-;; (hoarder:fetch "NoahBuscher/Flatron") 
-;; (hoarder:fetch "OpenBazaar/OpenBazaar") 
-;; (hoarder:fetch "Pewpews/happypanda") 
-;; (hoarder:fetch "PopcornTimeCE/popcorntimece") 
-;; (hoarder:fetch "Rabrennie/anything.js") 
-;; (hoarder:fetch "Ranks/emojione") 
-;; (hoarder:fetch "Raynes/fs") 
-;; (hoarder:fetch "RubenRocha/ricey") 
-;; (hoarder:fetch "Russell91/sshrc") 
-;; (hoarder:fetch "RuudBurger/CouchPotatoServer") 
-;; (hoarder:fetch "Shinryuu/dotfiles") 
-;; (hoarder:fetch "Shougo/dein.vim") 
-;; (hoarder:fetch "Shougo/vimshell.vim") 
-;; (hoarder:fetch "Slevinski/signwriting_2010_fonts") 
-;; (hoarder:fetch "Stephen304/bitcannon") 
-;; (hoarder:fetch "Swordfish90/cool-retro-term") 
-;; (hoarder:fetch "TBRSS/serapeum") 
-;; (hoarder:fetch "Tecate/bitmap-fonts") 
-;; (hoarder:fetch "TheMozg/awk-raycaster") 
-;; (hoarder:fetch "UniversalMediaServer/UniversalMediaServer") 
-;; (hoarder:fetch "aajanki/yle-dl") 
-;; (hoarder:fetch "adobe-fonts/source-han-code-jp") 
-;; (hoarder:fetch "adobe-type-tools/afdko") 
-;; (hoarder:fetch "agda/agda") 
-;; (hoarder:fetch "agtorre/gocolorize") 
-;; (hoarder:fetch "ahodesuka/ahoviewer") 
-;; (hoarder:fetch "ainame/mediakit") 
-;; (hoarder:fetch "alebcay/awesome-shell") 
-;; (hoarder:fetch "alezost/stumpwmrc") 
-;; (hoarder:fetch "alice0775/userChrome.js") 
-;; (hoarder:fetch "aliceml/aliceml") 
-;; (hoarder:fetch "allanjude/uclcmd") 
-;; (hoarder:fetch "alphapapa/bucket") 
-;; (hoarder:fetch "altercation/solarized") 
-;; (hoarder:fetch "andsens/homeshick") 
-;; (hoarder:fetch "andyfitz/overpass") 
-;; (hoarder:fetch "aredridel/es-shell") 
-;; (hoarder:fetch "asciimoo/searx") 
-;; (hoarder:fetch "asdfman/linux-shimeji") 
-;; (hoarder:fetch "ashinn/chibi-scheme") 
-;; (hoarder:fetch "atextor/icat") 
-;; (hoarder:fetch "aziz/tmuxinator") 
-;; (hoarder:fetch "azu/awesome-commit-english") 
-;; (hoarder:fetch "b4b4r07/zplug") 
-;; (hoarder:fetch "badele/gitcheck") 
-;; (hoarder:fetch "bamos/dotfiles") 
-;; (hoarder:fetch "baskerville/bspwm") 
-;; (hoarder:fetch "baskerville/diana") 
-;; (hoarder:fetch "baskerville/sutils") 
-;; (hoarder:fetch "baskerville/sxhkd") 
-;; (hoarder:fetch "baskerville/xtitle.git") 
-;; (hoarder:fetch "benjaminoakes/maid") 
-;; (hoarder:fetch "benlinton/bash-slugify") 
-;; (hoarder:fetch "bibanon/bibanon") 
-;; (hoarder:fetch "blakemcbride/POS") 
-;; (hoarder:fetch "bmizerany/roundup") 
-;; (hoarder:fetch "bookdraft/QPeerCastYP") 
-;; (hoarder:fetch "boot-clj/boot") 
-;; (hoarder:fetch "brpocock/shelltoys") 
-;; (hoarder:fetch "brushdemon/gen-update") 
-;; (hoarder:fetch "btpd/btpd") 
-;; (hoarder:fetch "bucaran/awesome-fish") 
-;; (hoarder:fetch "bucaran/flash") 
-;; (hoarder:fetch "bucaran/hulk") 
-;; (hoarder:fetch "buntine/Fractals") 
-;; (hoarder:fetch "burningtree/awesome-json") 
-;; (hoarder:fetch "butterproject/butter") 
-;; (hoarder:fetch "caarlos0/antibody") 
-;; (hoarder:fetch "caleb-/evilvte") 
-;; (hoarder:fetch "carnager/teiler") 
-;; (hoarder:fetch "cavalle/steak") 
-;; (hoarder:fetch "chirauraNoSakusha/chiraura") 
-;; (hoarder:fetch "chjj/compton") 
-;; (hoarder:fetch "chrisdone/ghci-ng") 
-;; (hoarder:fetch "chrissimpkins/Hack") 
-;; (hoarder:fetch "chrissimpkins/codeface") 
-;; (hoarder:fetch "chujoii/battery-scheme") 
-;; (hoarder:fetch "chujoii/xattr-tag") 
-;; (hoarder:fetch "cjb/gittorrent") 
-;; (hoarder:fetch "cjxgm/libcrude") 
-;; (hoarder:fetch "ckolivas/lrzip") 
-;; (hoarder:fetch "cldwalker/boson") 
-;; (hoarder:fetch "cldwalker/boson-more") 
-;; (hoarder:fetch "clibs/clib") 
-;; (hoarder:fetch "clojure/clojure") 
-;; (hoarder:fetch "clojure/clojure-contrib") 
-;; (hoarder:fetch "clojure/core.logic") 
-;; (hoarder:fetch "clvv/fasd") 
-;; (hoarder:fetch "cmdrkotori/mplaylist") 
-;; (hoarder:fetch "cmus/cmus") 
-;; (hoarder:fetch "coderholic/pyradio") 
-;; (hoarder:fetch "colinf/om-chat-base") 
-;; (hoarder:fetch "conformal/xombrero") 
-;; (hoarder:fetch "copiousfreetime/launchy") 
-;; (hoarder:fetch "cssnext/cssnext") 
-;; (hoarder:fetch "ctrlcctrlv/8chan") 
-;; (hoarder:fetch "dcolascione/ppgrep") 
-;; (hoarder:fetch "ded/valentine") 
-;; (hoarder:fetch "defunkt/hub") 
-;; (hoarder:fetch "denilsonsa/prettyping") 
-;; (hoarder:fetch "deterenkelt/watchsh") 
-;; (hoarder:fetch "dfkt/firefox-tweaks") 
-;; (hoarder:fetch "digego/extempore") 
-;; (hoarder:fetch "doomzhou/.fvwm") 
-;; (hoarder:fetch "dss-project/stumpmacs") 
-;; (hoarder:fetch "eXeC64/imv") 
-;; (hoarder:fetch "eijah/demoncrypt") 
-;; (hoarder:fetch "elm-lang/core") 
-;; (hoarder:fetch "emgram769/lighthouse") 
-;; (hoarder:fetch "emrehan/clojurescript-awesome") 
-;; (hoarder:fetch "enaqx/awesome-react") 
-;; (hoarder:fetch "erikw/tmux-powerline") 
-;; (hoarder:fetch "esodax/fishystuff") 
-;; (hoarder:fetch "faizilham/nyaaupdater") 
-;; (hoarder:fetch "fantasyland/fantasy-land") 
-;; (hoarder:fetch "fdv/platypus") 
-;; (hoarder:fetch "fenrus75/powertop") 
-;; (hoarder:fetch "feross/awesome-mad-science") 
-;; (hoarder:fetch "fish-bundles/root-bundle-fish-bundle") 
-;; (hoarder:fetch "fisherman/fisherman") 
-;; (hoarder:fetch "fitzgen/wu.js") 
-;; (hoarder:fetch "fizzed/font-mfizz") 
-;; (hoarder:fetch "fniessen/org-html-themes") 
-;; (hoarder:fetch "fniessen/orgmk") 
-;; (hoarder:fetch "francesco-bracchi/sake") 
-;; (hoarder:fetch "frytvm/XS") 
-;; (hoarder:fetch "fukamachi/clack") 
-;; (hoarder:fetch "g-gundam/yotsubAPI") 
-;; (hoarder:fetch "gentoo-science/eselect") 
-;; (hoarder:fetch "ghc/ghc") 
-;; (hoarder:fetch "github/octicons") 
-;; (hoarder:fetch "gka/chroma.js") 
-;; (hoarder:fetch "gmarik/vimfiles") 
-;; (hoarder:fetch "gongo/elfactory") 
-;; (hoarder:fetch "google/roboto") 
-;; (hoarder:fetch "gotbletu/dotfiles") 
-;; (hoarder:fetch "graudeejs/dot.fvwm") 
-;; (hoarder:fetch "greghendershott/rackjure") 
-;; (hoarder:fetch "guipdutra/awesome-geek-podcasts") 
-;; (hoarder:fetch "gustavnikolaj/keepass-dmenu") 
-;; (hoarder:fetch "hchbaw/auto-fu.zsh") 
-;; (hoarder:fetch "heyalexej/awesome-images") 
-;; (hoarder:fetch "hishamhm/htop") 
-;; (hoarder:fetch "holman/dotfiles") 
-;; (hoarder:fetch "huyz/less.vim") 
-;; (hoarder:fetch "hydride0/yamazaki") 
-;; (hoarder:fetch "hydrusnetwork/hydrus") 
-;; (hoarder:fetch "ianstormtaylor/to-slug-case") 
-;; (hoarder:fetch "install-logos/ricedb") 
-;; (hoarder:fetch "isohuntto/openbay") 
-;; (hoarder:fetch "itchyny/lightline.vim") 
-;; (hoarder:fetch "ivmai/bdwgc") 
-;; (hoarder:fetch "ivmai/libatomic_ops") 
-;; (hoarder:fetch "jamesob/desk") 
-;; (hoarder:fetch "jarofghosts/just-pluck") 
-;; (hoarder:fetch "jashkenas/underscore") 
-;; (hoarder:fetch "jasonhemann/microKanren") 
-;; (hoarder:fetch "jbernard/dotfiles") 
-;; (hoarder:fetch "jduey/applicative") 
+(hoarder:fetch "EZ3CHI3L/Eternity"
+  '(:download nil)) 
+(hoarder:fetch "FFmpeg/FFmpeg"
+  '(:download nil)) 
+(hoarder:fetch "FLIF-hub/FLIF"
+  '(:download nil)) 
+(hoarder:fetch "FooSoft/homemaker"
+  '(:download nil)) 
+(hoarder:fetch "Fvwm-Nightshade/Fvwm-Nightshade"
+  '(:download nil)) 
+(hoarder:fetch "GGLucas/vimperator-buftabs"
+  '(:download nil)) 
+(hoarder:fetch "Gabriel439/Haskell-Turtle-Library"
+  '(:download nil)) 
+(hoarder:fetch "Griever/userChromeJS"
+  '(:download nil)) 
+(hoarder:fetch "HelloZeroNet/ZeroNet"
+  '(:download nil)) 
+(hoarder:fetch "Hiroyuki-Nagata/XrossBoard"
+  '(:download nil)) 
+(hoarder:fetch "Hund/Userstyles"
+  '(:download nil)) 
+(hoarder:fetch "IgnorantGuru/spacefm"
+  '(:download nil)) 
+(hoarder:fetch "ImageMagick/ImageMagick"
+  '(:download nil)) 
+(hoarder:fetch "ItzBlitz98/torrentflix"
+  '(:download nil)) 
+(hoarder:fetch "KeenS/CIM"
+  '(:download nil)) 
+(hoarder:fetch "Kickball/awesome-selfhosted"
+  '(:download nil)) 
+(hoarder:fetch "LemonBoy/bar"
+  '(:download nil)) 
+(hoarder:fetch "MLton/mlton"
+  '(:download nil)) 
+(hoarder:fetch "MagikBSD/please"
+  '(:download nil)) 
+(hoarder:fetch "Masterminds/glide"
+  '(:download nil)) 
+(hoarder:fetch "MidnightCommander/mc.git"
+  '(:download nil)) 
+(hoarder:fetch "Nandaka/DanbooruDownloader"
+  '(:download nil)) 
+(hoarder:fetch "Nenuphar/Dyod"
+  '(:download nil)) 
+(hoarder:fetch "NoahBuscher/Flatron"
+  '(:download nil)) 
+(hoarder:fetch "OpenBazaar/OpenBazaar"
+  '(:download nil)) 
+(hoarder:fetch "Pewpews/happypanda"
+  '(:download nil)) 
+(hoarder:fetch "PopcornTimeCE/popcorntimece"
+  '(:download nil)) 
+(hoarder:fetch "Rabrennie/anything.js"
+  '(:download nil)) 
+(hoarder:fetch "Ranks/emojione"
+  '(:download nil)) 
+(hoarder:fetch "Raynes/fs"
+  '(:download nil)) 
+(hoarder:fetch "RubenRocha/ricey"
+  '(:download nil)) 
+(hoarder:fetch "Russell91/sshrc"
+  '(:download nil)) 
+(hoarder:fetch "RuudBurger/CouchPotatoServer"
+  '(:download nil)) 
+(hoarder:fetch "Shinryuu/dotfiles"
+  '(:download nil)) 
+(hoarder:fetch "Shougo/dein.vim"
+  '(:download nil)) 
+(hoarder:fetch "Shougo/vimshell.vim"
+  '(:download nil)) 
+(hoarder:fetch "Slevinski/signwriting_2010_fonts"
+  '(:download nil)) 
+(hoarder:fetch "Stephen304/bitcannon"
+  '(:download nil)) 
+(hoarder:fetch "Swordfish90/cool-retro-term"
+  '(:download nil)) 
+(hoarder:fetch "TBRSS/serapeum"
+  '(:download nil)) 
+(hoarder:fetch "Tecate/bitmap-fonts"
+  '(:download nil)) 
+(hoarder:fetch "TheMozg/awk-raycaster"
+  '(:download nil)) 
+(hoarder:fetch "UniversalMediaServer/UniversalMediaServer"
+  '(:download nil)) 
+(hoarder:fetch "aajanki/yle-dl"
+  '(:download nil)) 
+(hoarder:fetch "adobe-fonts/source-han-code-jp"
+  '(:download nil)) 
+(hoarder:fetch "adobe-type-tools/afdko"
+  '(:download nil)) 
+(hoarder:fetch "agda/agda"
+  '(:download nil)) 
+(hoarder:fetch "agtorre/gocolorize"
+  '(:download nil)) 
+(hoarder:fetch "ahodesuka/ahoviewer"
+  '(:download nil)) 
+(hoarder:fetch "ainame/mediakit"
+  '(:download nil)) 
+(hoarder:fetch "alebcay/awesome-shell"
+  '(:download nil)) 
+(hoarder:fetch "alezost/stumpwmrc"
+  '(:download nil)) 
+(hoarder:fetch "alice0775/userChrome.js"
+  '(:download nil)) 
+(hoarder:fetch "aliceml/aliceml"
+  '(:download nil)) 
+(hoarder:fetch "allanjude/uclcmd"
+  '(:download nil)) 
+(hoarder:fetch "alphapapa/bucket"
+  '(:download nil)) 
+(hoarder:fetch "altercation/solarized"
+  '(:download nil)) 
+(hoarder:fetch "andsens/homeshick"
+  '(:download nil)) 
+(hoarder:fetch "andyfitz/overpass"
+  '(:download nil)) 
+(hoarder:fetch "aredridel/es-shell"
+  '(:download nil)) 
+(hoarder:fetch "asciimoo/searx"
+  '(:download nil)) 
+(hoarder:fetch "asdfman/linux-shimeji"
+  '(:download nil)) 
+(hoarder:fetch "ashinn/chibi-scheme"
+  '(:download nil)) 
+(hoarder:fetch "atextor/icat"
+  '(:download nil)) 
+(hoarder:fetch "aziz/tmuxinator"
+  '(:download nil)) 
+(hoarder:fetch "azu/awesome-commit-english"
+  '(:download nil)) 
+(hoarder:fetch "b4b4r07/zplug"
+  '(:download nil)) 
+(hoarder:fetch "badele/gitcheck"
+  '(:download nil)) 
+(hoarder:fetch "bamos/dotfiles"
+  '(:download nil)) 
+(hoarder:fetch "baskerville/bspwm"
+  '(:download nil)) 
+(hoarder:fetch "baskerville/diana"
+  '(:download nil)) 
+(hoarder:fetch "baskerville/sutils"
+  '(:download nil)) 
+(hoarder:fetch "baskerville/sxhkd"
+  '(:download nil)) 
+(hoarder:fetch "baskerville/xtitle.git"
+  '(:download nil)) 
+(hoarder:fetch "benjaminoakes/maid"
+  '(:download nil)) 
+(hoarder:fetch "benlinton/bash-slugify"
+  '(:download nil)) 
+(hoarder:fetch "bibanon/bibanon"
+  '(:download nil)) 
+(hoarder:fetch "blakemcbride/POS"
+  '(:download nil)) 
+(hoarder:fetch "bmizerany/roundup"
+  '(:download nil)) 
+(hoarder:fetch "bookdraft/QPeerCastYP"
+  '(:download nil)) 
+(hoarder:fetch "boot-clj/boot"
+  '(:download nil)) 
+(hoarder:fetch "brpocock/shelltoys"
+  '(:download nil)) 
+(hoarder:fetch "brushdemon/gen-update"
+  '(:download nil)) 
+(hoarder:fetch "btpd/btpd"
+  '(:download nil)) 
+(hoarder:fetch "bucaran/awesome-fish"
+  '(:download nil)) 
+(hoarder:fetch "bucaran/flash"
+  '(:download nil)) 
+(hoarder:fetch "bucaran/hulk"
+  '(:download nil)) 
+(hoarder:fetch "buntine/Fractals"
+  '(:download nil)) 
+(hoarder:fetch "burningtree/awesome-json"
+  '(:download nil)) 
+(hoarder:fetch "butterproject/butter"
+  '(:download nil)) 
+(hoarder:fetch "caarlos0/antibody"
+  '(:download nil)) 
+(hoarder:fetch "caleb-/evilvte"
+  '(:download nil)) 
+(hoarder:fetch "carnager/teiler"
+  '(:download nil)) 
+(hoarder:fetch "cavalle/steak"
+  '(:download nil)) 
+(hoarder:fetch "chirauraNoSakusha/chiraura"
+  '(:download nil)) 
+(hoarder:fetch "chjj/compton"
+  '(:download nil)) 
+(hoarder:fetch "chrisdone/ghci-ng"
+  '(:download nil)) 
+(hoarder:fetch "chrissimpkins/Hack"
+  '(:download nil)) 
+(hoarder:fetch "chrissimpkins/codeface"
+  '(:download nil)) 
+(hoarder:fetch "chujoii/battery-scheme"
+  '(:download nil)) 
+(hoarder:fetch "chujoii/xattr-tag"
+  '(:download nil)) 
+(hoarder:fetch "cjb/gittorrent"
+  '(:download nil)) 
+(hoarder:fetch "cjxgm/libcrude"
+  '(:download nil)) 
+(hoarder:fetch "ckolivas/lrzip"
+  '(:download nil)) 
+(hoarder:fetch "cldwalker/boson"
+  '(:download nil)) 
+(hoarder:fetch "cldwalker/boson-more"
+  '(:download nil)) 
+(hoarder:fetch "clibs/clib"
+  '(:download nil)) 
+(hoarder:fetch "clojure/clojure"
+  '(:download nil)) 
+(hoarder:fetch "clojure/clojure-contrib"
+  '(:download nil)) 
+(hoarder:fetch "clojure/core.logic"
+  '(:download nil)) 
+(hoarder:fetch "clvv/fasd"
+  '(:download nil)) 
+(hoarder:fetch "cmdrkotori/mplaylist"
+  '(:download nil)) 
+(hoarder:fetch "cmus/cmus"
+  '(:download nil)) 
+(hoarder:fetch "coderholic/pyradio"
+  '(:download nil)) 
+(hoarder:fetch "colinf/om-chat-base"
+  '(:download nil)) 
+(hoarder:fetch "conformal/xombrero"
+  '(:download nil)) 
+(hoarder:fetch "copiousfreetime/launchy"
+  '(:download nil)) 
+(hoarder:fetch "cssnext/cssnext"
+  '(:download nil)) 
+(hoarder:fetch "ctrlcctrlv/8chan"
+  '(:download nil)) 
+(hoarder:fetch "dcolascione/ppgrep"
+  '(:download nil)) 
+(hoarder:fetch "ded/valentine"
+  '(:download nil)) 
+(hoarder:fetch "defunkt/hub"
+  '(:download nil)) 
+(hoarder:fetch "denilsonsa/prettyping"
+  '(:download nil)) 
+(hoarder:fetch "deterenkelt/watchsh"
+  '(:download nil)) 
+(hoarder:fetch "dfkt/firefox-tweaks"
+  '(:download nil)) 
+(hoarder:fetch "digego/extempore"
+  '(:download nil)) 
+(hoarder:fetch "doomzhou/.fvwm"
+  '(:download nil)) 
+(hoarder:fetch "dss-project/stumpmacs"
+  '(:download nil)) 
+(hoarder:fetch "eXeC64/imv"
+  '(:download nil)) 
+(hoarder:fetch "eijah/demoncrypt"
+  '(:download nil)) 
+(hoarder:fetch "elm-lang/core"
+  '(:download nil)) 
+(hoarder:fetch "emgram769/lighthouse"
+  '(:download nil)) 
+(hoarder:fetch "emrehan/clojurescript-awesome"
+  '(:download nil)) 
+(hoarder:fetch "enaqx/awesome-react"
+  '(:download nil)) 
+(hoarder:fetch "erikw/tmux-powerline"
+  '(:download nil)) 
+(hoarder:fetch "esodax/fishystuff"
+  '(:download nil)) 
+(hoarder:fetch "faizilham/nyaaupdater"
+  '(:download nil)) 
+(hoarder:fetch "fantasyland/fantasy-land"
+  '(:download nil)) 
+(hoarder:fetch "fdv/platypus"
+  '(:download nil)) 
+(hoarder:fetch "fenrus75/powertop"
+  '(:download nil)) 
+(hoarder:fetch "feross/awesome-mad-science"
+  '(:download nil)) 
+(hoarder:fetch "fish-bundles/root-bundle-fish-bundle"
+  '(:download nil)) 
+(hoarder:fetch "fisherman/fisherman"
+  '(:download nil)) 
+(hoarder:fetch "fitzgen/wu.js"
+  '(:download nil)) 
+(hoarder:fetch "fizzed/font-mfizz"
+  '(:download nil)) 
+(hoarder:fetch "fniessen/org-html-themes"
+  '(:download nil)) 
+(hoarder:fetch "fniessen/orgmk"
+  '(:download nil)) 
+(hoarder:fetch "francesco-bracchi/sake"
+  '(:download nil)) 
+(hoarder:fetch "frytvm/XS"
+  '(:download nil)) 
+(hoarder:fetch "fukamachi/clack"
+  '(:download nil)) 
+(hoarder:fetch "g-gundam/yotsubAPI"
+  '(:download nil)) 
+(hoarder:fetch "gentoo-science/eselect"
+  '(:download nil)) 
+(hoarder:fetch "ghc/ghc"
+  '(:download nil)) 
+(hoarder:fetch "github/octicons"
+  '(:download nil)) 
+(hoarder:fetch "gka/chroma.js"
+  '(:download nil)) 
+(hoarder:fetch "gmarik/vimfiles"
+  '(:download nil)) 
+(hoarder:fetch "gongo/elfactory"
+  '(:download nil)) 
+(hoarder:fetch "google/roboto"
+  '(:download nil)) 
+(hoarder:fetch "gotbletu/dotfiles"
+  '(:download nil)) 
+(hoarder:fetch "graudeejs/dot.fvwm"
+  '(:download nil)) 
+(hoarder:fetch "greghendershott/rackjure"
+  '(:download nil)) 
+(hoarder:fetch "guipdutra/awesome-geek-podcasts"
+  '(:download nil)) 
+(hoarder:fetch "gustavnikolaj/keepass-dmenu"
+  '(:download nil)) 
+(hoarder:fetch "hchbaw/auto-fu.zsh"
+  '(:download nil)) 
+(hoarder:fetch "heyalexej/awesome-images"
+  '(:download nil)) 
+(hoarder:fetch "hishamhm/htop"
+  '(:download nil)) 
+(hoarder:fetch "holman/dotfiles"
+  '(:download nil)) 
+(hoarder:fetch "huyz/less.vim"
+  '(:download nil)) 
+(hoarder:fetch "hydride0/yamazaki"
+  '(:download nil)) 
+(hoarder:fetch "hydrusnetwork/hydrus"
+  '(:download nil)) 
+(hoarder:fetch "ianstormtaylor/to-slug-case"
+  '(:download nil)) 
+(hoarder:fetch "install-logos/ricedb"
+  '(:download nil)) 
+(hoarder:fetch "isohuntto/openbay"
+  '(:download nil)) 
+(hoarder:fetch "itchyny/lightline.vim"
+  '(:download nil)) 
+(hoarder:fetch "ivmai/bdwgc"
+  '(:download nil)) 
+(hoarder:fetch "ivmai/libatomic_ops"
+  '(:download nil)) 
+(hoarder:fetch "jamesob/desk"
+  '(:download nil)) 
+(hoarder:fetch "jarofghosts/just-pluck"
+  '(:download nil)) 
+(hoarder:fetch "jashkenas/underscore"
+  '(:download nil)) 
+(hoarder:fetch "jasonhemann/microKanren"
+  '(:download nil)) 
+(hoarder:fetch "jbernard/dotfiles"
+  '(:download nil)) 
+(hoarder:fetch "jduey/applicative"
+  '(:download nil)) 
 
-;; (hoarder:fetch "jhawthorn/meh") 
-;; (hoarder:fetch "jnv/lists") 
-;; (hoarder:fetch "jodrell/unbound-block-hosts") 
-;; (hoarder:fetch "joelagnel/stumpwm-goodies") 
-;; (hoarder:fetch "joeyespo/grip") 
-;; (hoarder:fetch "jonls/redshift") 
-;; (hoarder:fetch "jstolarek/why-dependent-types-matter") 
-;; (hoarder:fetch "justintv/Twitch-API") 
-;; (hoarder:fetch "kahua/Kahua") 
-;; (hoarder:fetch "kahun/awesome-sysadmin") 
-;; (hoarder:fetch "kazesawa/kazesawa") 
-;; (hoarder:fetch "kazu-yamamoto/ghc-mod") 
-;; (hoarder:fetch "keplerproject/luarocks") 
-;; (hoarder:fetch "kfish/xsel") 
-;; (hoarder:fetch "kfl/mosml") 
-;; (hoarder:fetch "kidd/org-protocol-github-lines") 
-;; (hoarder:fetch "kidd/radios") 
-;; (hoarder:fetch "kirikx/bds") 
-;; (hoarder:fetch "knopwob/dunst") 
-;; (hoarder:fetch "koron/chalice") 
-;; (hoarder:fetch "koron/cmigemo.git") 
-;; (hoarder:fetch "kovisoft/paredit") 
-;; (hoarder:fetch "kragniz/python-pixiv") 
-;; (hoarder:fetch "krakenjs/confit") 
-;; (hoarder:fetch "kuanyui/dotfiles") 
-;; (hoarder:fetch "kumacoinproject/kumacoin") 
-;; (hoarder:fetch "kumaryu/peercaststation") 
-;; (hoarder:fetch "kyleterry/awesome-radio") 
-;; (hoarder:fetch "lastpass/lastpass-cli") 
-;; (hoarder:fetch "laurikari/tre") 
-;; (hoarder:fetch "leafo/moonscript") 
-;; (hoarder:fetch "letsgetrandy/DICSS") 
-;; (hoarder:fetch "libav/libav") 
-;; (hoarder:fetch "lzap/dancepill") 
-;; (hoarder:fetch "mWater/minimongo") 
-;; (hoarder:fetch "madmalik/monoOne") 
-;; (hoarder:fetch "mafintosh/peerflix") 
-;; (hoarder:fetch "majestrate/nntpchan") 
-;; (hoarder:fetch "manateelazycat/mrkeyboard") 
-;; (hoarder:fetch "martanne/abduco") 
-;; (hoarder:fetch "martanne/dvtm") 
-;; (hoarder:fetch "martinp26/motix") 
-;; (hoarder:fetch "mason-larobina/luakit") 
-;; (hoarder:fetch "masroore/opentracker") 
-;; (hoarder:fetch "maxogden/art-of-node") 
-;; (hoarder:fetch "mbadolato/iTerm2-Color-Schemes") 
-;; (hoarder:fetch "mcandre/modulinos") 
-;; (hoarder:fetch "mcna/closer-mop") 
-;; (hoarder:fetch "mcrapet/plowshare") 
-;; (hoarder:fetch "melaniecebula/cat-ascii-faces") 
-;; (hoarder:fetch "mietek/bashmenot") 
-;; (hoarder:fetch "mietek/halcyon") 
-;; (hoarder:fetch "minimaxir/big-list-of-naughty-strings") 
-;; (hoarder:fetch "mirror/x265") 
-;; (hoarder:fetch "mitchellh/cli") 
-;; (hoarder:fetch "mitchellh/colorstring") 
-;; (hoarder:fetch "mitmproxy/mitmproxy") 
-;; (hoarder:fetch "miyagawa/cpanminus") 
-;; (hoarder:fetch "mo-ya/tmux-agent") 
-;; (hoarder:fetch "mobile-shell/mosh") 
-;; (hoarder:fetch "monacoinproject/monacoin") 
-;; (hoarder:fetch "mooz/percol") 
-;; (hoarder:fetch "motemen/ghq") 
-;; (hoarder:fetch "moul/awesome-ssh") 
-;; (hoarder:fetch "mps-youtube/mps-youtube") 
-;; (hoarder:fetch "mps-youtube/pafy") 
-;; (hoarder:fetch "mpv-player/mpv") 
-;; (hoarder:fetch "mrowa44/emojify") 
-;; (hoarder:fetch "msiemens/tinydb") 
-;; (hoarder:fetch "muennich/sxiv") 
-;; (hoarder:fetch "myimouto/myimouto") 
-;; (hoarder:fetch "n-yuji/keyboard-font") 
-;; (hoarder:fetch "nezumisama/mpvmenu") 
-;; (hoarder:fetch "ninjaaron/bitocra") 
-;; (hoarder:fetch "nixxquality/WebMConverter") 
-;; (hoarder:fetch "npm/npm") 
-;; (hoarder:fetch "nrgmilk/freebsd-desktop-jp") 
-;; (hoarder:fetch "ocaml/ocaml") 
-;; (hoarder:fetch "oh-my-fish/oh-my-fish") 
-;; (hoarder:fetch "ok100/lyvi") 
-;; (hoarder:fetch "okuoku/mosh") 
-;; (hoarder:fetch "okuoku/r7rs-bridge") 
-;; (hoarder:fetch "omcljs/om") 
-;; (hoarder:fetch "onodera-punpun/dotfiles") 
-;; (hoarder:fetch "openssh/openssh-portable") 
-;; (hoarder:fetch "pallet/thread-expr") 
-;; (hoarder:fetch "pannon/iocage") 
-;; (hoarder:fetch "parro-it/awesome-microlibs") 
-;; (hoarder:fetch "pasky/speedread") 
-;; (hoarder:fetch "paulsmith/getting-started-llvm-c-api") 
-;; (hoarder:fetch "pavoljuhas/smart-change-directory") 
-;; (hoarder:fetch "phallus/fonts") 
-;; (hoarder:fetch "pindexis/marker") 
-;; (hoarder:fetch "pituz/webm-thread") 
-;; (hoarder:fetch "pkgng/pkgng") 
-;; (hoarder:fetch "plonk/bbiff") 
-;; (hoarder:fetch "plonk/psapi") 
-;; (hoarder:fetch "politza/pdf-tools") 
-;; (hoarder:fetch "polyml/polyml") 
-;; (hoarder:fetch "progre/pecastarter5") 
-;; (hoarder:fetch "psyrendust/alf") 
-;; (hoarder:fetch "puffnfresh/daggy") 
-;; (hoarder:fetch "pyload/pyload") 
-;; (hoarder:fetch "rakshasa/rtorrent") 
-;; (hoarder:fetch "ramda/ramda") 
-;; (hoarder:fetch "rbanffy/3270font") 
-;; (hoarder:fetch "rbenv/ruby-build") 
-;; (hoarder:fetch "retroj/conkeror") 
-;; (hoarder:fetch "rjosph/fluxbox-config") 
-;; (hoarder:fetch "robert-strandh/SICL") 
-;; (hoarder:fetch "robfig/config") 
-;; (hoarder:fetch "robfig/pathtree") 
-;; (hoarder:fetch "robm/dzen") 
-;; (hoarder:fetch "romeovs/creep") 
-;; (hoarder:fetch "rossy2401/img2xterm") 
-;; (hoarder:fetch "rplevy/swiss-arrows") 
-;; (hoarder:fetch "rupa/v") 
-;; (hoarder:fetch "rupa/z") 
-;; (hoarder:fetch "saironiq/shellscripts") 
-;; (hoarder:fetch "saitoha/libsixel") 
-;; (hoarder:fetch "samirahmed/fu") 
-;; (hoarder:fetch "sanzo12/myanimelist") 
-;; (hoarder:fetch "sashavasko/afterstep-devel") 
-;; (hoarder:fetch "sbcl/sbcl") 
-;; (hoarder:fetch "sboli/twmn") 
-;; (hoarder:fetch "scottjad/cons") 
-;; (hoarder:fetch "scottjad/dotfiles") 
-;; (hoarder:fetch "sdegutis/mjolnir") 
-;; (hoarder:fetch "sdhand/n30f") 
-;; (hoarder:fetch "seattlerb/hoe") 
-;; (hoarder:fetch "seebi/tmux-colors-solarized") 
-;; (hoarder:fetch "seven332/EhViewer") 
-;; (hoarder:fetch "sgrove/tehila") 
-;; (hoarder:fetch "sgymtic/sl") 
-;; (hoarder:fetch "shaldengeki/python-mal") 
-;; (hoarder:fetch "shellfire-dev/shellfire") 
-;; (hoarder:fetch "shingetsu/saku") 
-;; (hoarder:fetch "shingetsu/saku-ex") 
-;; (hoarder:fetch "shirok/Gauche") 
-;; (hoarder:fetch "shutterstock/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words") 
-;; (hoarder:fetch "sickill/git-dude") 
-;; (hoarder:fetch "silentbicycle/ff") 
-;; (hoarder:fetch "simonwhitaker/gibo") 
-;; (hoarder:fetch "sindresorhus/awesome-nodejs") 
-;; (hoarder:fetch "sindresorhus/awesome-npm") 
-;; (hoarder:fetch "sjl/z-fish") 
-;; (hoarder:fetch "soimort/you-get") 
-;; (hoarder:fetch "sorin-ionescu/prezto") 
-;; (hoarder:fetch "stevemao/awesome-git-addons") 
-;; (hoarder:fetch "streadway/simpleuuid") 
-;; (hoarder:fetch "stumpwm/paulownia") 
-;; (hoarder:fetch "stumpwm/stumpwm.wiki") 
-;; (hoarder:fetch "swannodette/mori") 
-;; (hoarder:fetch "syl20bnr/oh-my-fish-theme-syl20bnr") 
-;; (hoarder:fetch "syohex/byzanz-window") 
-;; (hoarder:fetch "t9md/vim-ezbar") 
-;; (hoarder:fetch "takeoutweight/bidirectional") 
-;; (hoarder:fetch "tarjoilija/zgen") 
-;; (hoarder:fetch "tastejs/awesome-app-ideas") 
-;; (hoarder:fetch "tatsuhiro-t/aria2") 
-;; (hoarder:fetch "tchoulihan/torrenttunes-client") 
-;; (hoarder:fetch "technicalpickles/homesick") 
-;; (hoarder:fetch "tekknolagi/carp") 
-;; (hoarder:fetch "tizoc/chibi-shen") 
-;; (hoarder:fetch "tj/git-extras") 
-;; (hoarder:fetch "tkengo/highway") 
-;; (hoarder:fetch "tlatsas/xcolors") 
-;; (hoarder:fetch "tmbinc/bgrep") 
-;; (hoarder:fetch "tmux-plugins/tmux-resurrect") 
-;; (hoarder:fetch "tmux-plugins/tpm") 
-;; (hoarder:fetch "tmux/tmux") 
-;; (hoarder:fetch "tolitius/mount") 
-;; (hoarder:fetch "tommy351/warehouse") 
-;; (hoarder:fetch "tomokuni/Myrica") 
-;; (hoarder:fetch "tonsky/rum") 
-;; (hoarder:fetch "toolpunk/dmenu-ee") 
-;; (hoarder:fetch "toromoti/chocomint.sh") 
-;; (hoarder:fetch "trapd00r/configs") 
-;; (hoarder:fetch "trapd00r/ls--") 
-;; (hoarder:fetch "trapd00r/utils") 
-;; (hoarder:fetch "trapd00r/zsh-syntax-highlighting-filetypes") 
-;; (hoarder:fetch "travitch/taffybar") 
-;; (hoarder:fetch "trizen/youtube-viewer") 
-;; (hoarder:fetch "tuvistavie/fundle") 
-;; (hoarder:fetch "tyru/dotto") 
-;; (hoarder:fetch "ultravideo/kvazaar") 
-;; (hoarder:fetch "underdash/underdash") 
-;; (hoarder:fetch "unixorn/awesome-zsh-plugins") 
-;; (hoarder:fetch "unot/WebRadioRecorder") 
-;; (hoarder:fetch "uobikiemukot/sdump") 
-;; (hoarder:fetch "uobikiemukot/yaft") 
-;; (hoarder:fetch "valvallow/lifegame") 
-;; (hoarder:fetch "variadico/noti") 
-;; (hoarder:fetch "victorhaggqvist/xboomx") 
-;; (hoarder:fetch "videolan/x265") 
-;; (hoarder:fetch "vikasrawal/orgpaper") 
-;; (hoarder:fetch "vstakhov/libucl") 
-;; (hoarder:fetch "weavejester/medley") 
-;; (hoarder:fetch "webyrd/miniKanren") 
-;; (hoarder:fetch "windelicato/dotfiles") 
-;; (hoarder:fetch "windymelt/p2p2ch") 
-;; (hoarder:fetch "wooorm/alex") 
-;; (hoarder:fetch "xero/dotfiles") 
-;; (hoarder:fetch "xmonad/xmonad-contrib") 
-;; (hoarder:fetch "xorg62/wmfs") 
-;; (hoarder:fetch "xyl0n/iris-light") 
-;; (hoarder:fetch "xylosper/bomi") 
-;; (hoarder:fetch "yascentur/RictyDiminished") 
-;; (hoarder:fetch "yayugu/net-radio-archive") 
-;; (hoarder:fetch "zcaudate/hara") 
-;; (hoarder:fetch "zero808/ya4cid") 
-;; (hoarder:fetch "zmalltalker/fish-nuggets") 
-;; (hoarder:fetch "zone117x/Jackett") 
-;; (hoarder:fetch "zoppo/plugins") 
-;; (hoarder:fetch "zoppo/zoppo") 
-;; (hoarder:fetch "zsh-users/zsh-completions") 
-;; (hoarder:fetch "zsh-users/zsh-syntax-highlighting") 
-;; (hoarder:fetch "zsoltf/lsr") 
-;; (hoarder:fetch "zy/zy-fvwm") 
-;; (hoarder:fetch "zzggbb/colorblocks") 
+(hoarder:fetch "jhawthorn/meh"
+  '(:download nil)) 
+(hoarder:fetch "jnv/lists"
+  '(:download nil)) 
+(hoarder:fetch "jodrell/unbound-block-hosts"
+  '(:download nil)) 
+(hoarder:fetch "joelagnel/stumpwm-goodies"
+  '(:download nil)) 
+(hoarder:fetch "joeyespo/grip"
+  '(:download nil)) 
+(hoarder:fetch "jonls/redshift"
+  '(:download nil)) 
+(hoarder:fetch "jstolarek/why-dependent-types-matter"
+  '(:download nil)) 
+(hoarder:fetch "justintv/Twitch-API"
+  '(:download nil)) 
+(hoarder:fetch "kahua/Kahua"
+  '(:download nil)) 
+(hoarder:fetch "kahun/awesome-sysadmin"
+  '(:download nil)) 
+(hoarder:fetch "kazesawa/kazesawa"
+  '(:download nil)) 
+(hoarder:fetch "kazu-yamamoto/ghc-mod"
+  '(:download nil)) 
+(hoarder:fetch "keplerproject/luarocks"
+  '(:download nil)) 
+(hoarder:fetch "kfish/xsel"
+  '(:download nil)) 
+(hoarder:fetch "kfl/mosml"
+  '(:download nil)) 
+(hoarder:fetch "kidd/org-protocol-github-lines"
+  '(:download nil)) 
+(hoarder:fetch "kidd/radios"
+  '(:download nil)) 
+(hoarder:fetch "kirikx/bds"
+  '(:download nil)) 
+(hoarder:fetch "knopwob/dunst"
+  '(:download nil)) 
+(hoarder:fetch "koron/chalice"
+  '(:download nil)) 
+(hoarder:fetch "koron/cmigemo.git"
+  '(:download nil)) 
+(hoarder:fetch "kovisoft/paredit"
+  '(:download nil)) 
+(hoarder:fetch "kragniz/python-pixiv"
+  '(:download nil)) 
+(hoarder:fetch "krakenjs/confit"
+  '(:download nil)) 
+(hoarder:fetch "kuanyui/dotfiles"
+  '(:download nil)) 
+(hoarder:fetch "kumacoinproject/kumacoin"
+  '(:download nil)) 
+(hoarder:fetch "kumaryu/peercaststation"
+  '(:download nil)) 
+(hoarder:fetch "kyleterry/awesome-radio"
+  '(:download nil)) 
+(hoarder:fetch "lastpass/lastpass-cli"
+  '(:download nil)) 
+(hoarder:fetch "laurikari/tre"
+  '(:download nil)) 
+(hoarder:fetch "leafo/moonscript"
+  '(:download nil)) 
+(hoarder:fetch "letsgetrandy/DICSS"
+  '(:download nil)) 
+(hoarder:fetch "libav/libav"
+  '(:download nil)) 
+(hoarder:fetch "lzap/dancepill"
+  '(:download nil)) 
+(hoarder:fetch "mWater/minimongo"
+  '(:download nil)) 
+(hoarder:fetch "madmalik/monoOne"
+  '(:download nil)) 
+(hoarder:fetch "mafintosh/peerflix"
+  '(:download nil)) 
+(hoarder:fetch "majestrate/nntpchan"
+  '(:download nil)) 
+(hoarder:fetch "manateelazycat/mrkeyboard"
+  '(:download nil)) 
+(hoarder:fetch "martanne/abduco"
+  '(:download nil)) 
+(hoarder:fetch "martanne/dvtm"
+  '(:download nil)) 
+(hoarder:fetch "martinp26/motix"
+  '(:download nil)) 
+(hoarder:fetch "mason-larobina/luakit"
+  '(:download nil)) 
+(hoarder:fetch "masroore/opentracker"
+  '(:download nil)) 
+(hoarder:fetch "maxogden/art-of-node"
+  '(:download nil)) 
+(hoarder:fetch "mbadolato/iTerm2-Color-Schemes"
+  '(:download nil)) 
+(hoarder:fetch "mcandre/modulinos"
+  '(:download nil)) 
+(hoarder:fetch "mcna/closer-mop"
+  '(:download nil)) 
+(hoarder:fetch "mcrapet/plowshare"
+  '(:download nil)) 
+(hoarder:fetch "melaniecebula/cat-ascii-faces"
+  '(:download nil)) 
+(hoarder:fetch "mietek/bashmenot"
+  '(:download nil)) 
+(hoarder:fetch "mietek/halcyon"
+  '(:download nil)) 
+(hoarder:fetch "minimaxir/big-list-of-naughty-strings"
+  '(:download nil)) 
+(hoarder:fetch "mirror/x265"
+  '(:download nil)) 
+(hoarder:fetch "mitchellh/cli"
+  '(:download nil)) 
+(hoarder:fetch "mitchellh/colorstring"
+  '(:download nil)) 
+(hoarder:fetch "mitmproxy/mitmproxy"
+  '(:download nil)) 
+(hoarder:fetch "miyagawa/cpanminus"
+  '(:download nil)) 
+(hoarder:fetch "mo-ya/tmux-agent"
+  '(:download nil)) 
+(hoarder:fetch "mobile-shell/mosh"
+  '(:download nil)) 
+(hoarder:fetch "monacoinproject/monacoin"
+  '(:download nil)) 
+(hoarder:fetch "mooz/percol"
+  '(:download nil)) 
+(hoarder:fetch "motemen/ghq"
+  '(:download nil)) 
+(hoarder:fetch "moul/awesome-ssh"
+  '(:download nil)) 
+(hoarder:fetch "mps-youtube/mps-youtube"
+  '(:download nil)) 
+(hoarder:fetch "mps-youtube/pafy"
+  '(:download nil)) 
+(hoarder:fetch "mpv-player/mpv"
+  '(:download nil)) 
+(hoarder:fetch "mrowa44/emojify"
+  '(:download nil)) 
+(hoarder:fetch "msiemens/tinydb"
+  '(:download nil)) 
+(hoarder:fetch "muennich/sxiv"
+  '(:download nil)) 
+(hoarder:fetch "myimouto/myimouto"
+  '(:download nil)) 
+(hoarder:fetch "n-yuji/keyboard-font"
+  '(:download nil)) 
+(hoarder:fetch "nezumisama/mpvmenu"
+  '(:download nil)) 
+(hoarder:fetch "ninjaaron/bitocra"
+  '(:download nil)) 
+(hoarder:fetch "nixxquality/WebMConverter"
+  '(:download nil)) 
+(hoarder:fetch "npm/npm"
+  '(:download nil)) 
+(hoarder:fetch "nrgmilk/freebsd-desktop-jp"
+  '(:download nil)) 
+(hoarder:fetch "ocaml/ocaml"
+  '(:download nil)) 
+(hoarder:fetch "oh-my-fish/oh-my-fish"
+  '(:download nil)) 
+(hoarder:fetch "ok100/lyvi"
+  '(:download nil)) 
+(hoarder:fetch "okuoku/mosh"
+  '(:download nil)) 
+(hoarder:fetch "okuoku/r7rs-bridge"
+  '(:download nil)) 
+(hoarder:fetch "omcljs/om"
+  '(:download nil)) 
+(hoarder:fetch "onodera-punpun/dotfiles"
+  '(:download nil)) 
+(hoarder:fetch "openssh/openssh-portable"
+  '(:download nil)) 
+(hoarder:fetch "pallet/thread-expr"
+  '(:download nil)) 
+(hoarder:fetch "pannon/iocage"
+  '(:download nil)) 
+(hoarder:fetch "parro-it/awesome-microlibs"
+  '(:download nil)) 
+(hoarder:fetch "pasky/speedread"
+  '(:download nil)) 
+(hoarder:fetch "paulsmith/getting-started-llvm-c-api"
+  '(:download nil)) 
+(hoarder:fetch "pavoljuhas/smart-change-directory"
+  '(:download nil)) 
+(hoarder:fetch "phallus/fonts"
+  '(:download nil)) 
+(hoarder:fetch "pindexis/marker"
+  '(:download nil)) 
+(hoarder:fetch "pituz/webm-thread"
+  '(:download nil)) 
+(hoarder:fetch "pkgng/pkgng"
+  '(:download nil)) 
+(hoarder:fetch "plonk/bbiff"
+  '(:download nil)) 
+(hoarder:fetch "plonk/psapi"
+  '(:download nil)) 
+(hoarder:fetch "politza/pdf-tools"
+  '(:download nil)) 
+(hoarder:fetch "polyml/polyml"
+  '(:download nil)) 
+(hoarder:fetch "progre/pecastarter5"
+  '(:download nil)) 
+(hoarder:fetch "psyrendust/alf"
+  '(:download nil)) 
+(hoarder:fetch "puffnfresh/daggy"
+  '(:download nil)) 
+(hoarder:fetch "pyload/pyload"
+  '(:download nil)) 
+(hoarder:fetch "rakshasa/rtorrent"
+  '(:download nil)) 
+(hoarder:fetch "ramda/ramda"
+  '(:download nil)) 
+(hoarder:fetch "rbanffy/3270font"
+  '(:download nil)) 
+(hoarder:fetch "rbenv/ruby-build"
+  '(:download nil)) 
+(hoarder:fetch "retroj/conkeror"
+  '(:download nil)) 
+(hoarder:fetch "rjosph/fluxbox-config"
+  '(:download nil)) 
+(hoarder:fetch "robert-strandh/SICL"
+  '(:download nil)) 
+(hoarder:fetch "robfig/config"
+  '(:download nil)) 
+(hoarder:fetch "robfig/pathtree"
+  '(:download nil)) 
+(hoarder:fetch "robm/dzen"
+  '(:download nil)) 
+(hoarder:fetch "romeovs/creep"
+  '(:download nil)) 
+(hoarder:fetch "rossy2401/img2xterm"
+  '(:download nil)) 
+(hoarder:fetch "rplevy/swiss-arrows"
+  '(:download nil)) 
+(hoarder:fetch "rupa/v"
+  '(:download nil)) 
+(hoarder:fetch "rupa/z"
+  '(:download nil)) 
+(hoarder:fetch "saironiq/shellscripts"
+  '(:download nil)) 
+(hoarder:fetch "saitoha/libsixel"
+  '(:download nil)) 
+(hoarder:fetch "samirahmed/fu"
+  '(:download nil)) 
+(hoarder:fetch "sanzo12/myanimelist"
+  '(:download nil)) 
+(hoarder:fetch "sashavasko/afterstep-devel"
+  '(:download nil)) 
+(hoarder:fetch "sbcl/sbcl"
+  '(:download nil)) 
+(hoarder:fetch "sboli/twmn"
+  '(:download nil)) 
+(hoarder:fetch "scottjad/cons"
+  '(:download nil)) 
+(hoarder:fetch "scottjad/dotfiles"
+  '(:download nil)) 
+(hoarder:fetch "sdegutis/mjolnir"
+  '(:download nil)) 
+(hoarder:fetch "sdhand/n30f"
+  '(:download nil)) 
+(hoarder:fetch "seattlerb/hoe"
+  '(:download nil)) 
+(hoarder:fetch "seebi/tmux-colors-solarized"
+  '(:download nil)) 
+(hoarder:fetch "seven332/EhViewer"
+  '(:download nil)) 
+(hoarder:fetch "sgrove/tehila"
+  '(:download nil)) 
+(hoarder:fetch "sgymtic/sl"
+  '(:download nil)) 
+(hoarder:fetch "shaldengeki/python-mal"
+  '(:download nil)) 
+(hoarder:fetch "shellfire-dev/shellfire"
+  '(:download nil)) 
+(hoarder:fetch "shingetsu/saku"
+  '(:download nil)) 
+(hoarder:fetch "shingetsu/saku-ex"
+  '(:download nil)) 
+(hoarder:fetch "shirok/Gauche"
+  '(:download nil)) 
+(hoarder:fetch "shutterstock/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words"
+  '(:download nil)) 
+(hoarder:fetch "sickill/git-dude"
+  '(:download nil)) 
+(hoarder:fetch "silentbicycle/ff"
+  '(:download nil)) 
+(hoarder:fetch "simonwhitaker/gibo"
+  '(:download nil)) 
+(hoarder:fetch "sindresorhus/awesome-nodejs"
+  '(:download nil)) 
+(hoarder:fetch "sindresorhus/awesome-npm"
+  '(:download nil)) 
+(hoarder:fetch "sjl/z-fish"
+  '(:download nil)) 
+(hoarder:fetch "soimort/you-get"
+  '(:download nil)) 
+(hoarder:fetch "sorin-ionescu/prezto"
+  '(:download nil)) 
+(hoarder:fetch "stevemao/awesome-git-addons"
+  '(:download nil)) 
+(hoarder:fetch "streadway/simpleuuid"
+  '(:download nil)) 
+(hoarder:fetch "stumpwm/paulownia"
+  '(:download nil)) 
+(hoarder:fetch "stumpwm/stumpwm.wiki"
+  '(:download nil)) 
+(hoarder:fetch "swannodette/mori"
+  '(:download nil)) 
+(hoarder:fetch "syl20bnr/oh-my-fish-theme-syl20bnr"
+  '(:download nil)) 
+(hoarder:fetch "syohex/byzanz-window"
+  '(:download nil)) 
+(hoarder:fetch "t9md/vim-ezbar"
+  '(:download nil)) 
+(hoarder:fetch "takeoutweight/bidirectional"
+  '(:download nil)) 
+(hoarder:fetch "tarjoilija/zgen"
+  '(:download nil)) 
+(hoarder:fetch "tastejs/awesome-app-ideas"
+  '(:download nil)) 
+(hoarder:fetch "tatsuhiro-t/aria2"
+  '(:download nil)) 
+(hoarder:fetch "tchoulihan/torrenttunes-client"
+  '(:download nil)) 
+(hoarder:fetch "technicalpickles/homesick"
+  '(:download nil)) 
+(hoarder:fetch "tekknolagi/carp"
+  '(:download nil)) 
+(hoarder:fetch "tizoc/chibi-shen"
+  '(:download nil)) 
+(hoarder:fetch "tj/git-extras"
+  '(:download nil)) 
+(hoarder:fetch "tkengo/highway"
+  '(:download nil)) 
+(hoarder:fetch "tlatsas/xcolors"
+  '(:download nil)) 
+(hoarder:fetch "tmbinc/bgrep"
+  '(:download nil)) 
+(hoarder:fetch "tmux-plugins/tmux-resurrect"
+  '(:download nil)) 
+(hoarder:fetch "tmux-plugins/tpm"
+  '(:download nil)) 
+(hoarder:fetch "tmux/tmux"
+  '(:download nil)) 
+(hoarder:fetch "tolitius/mount"
+  '(:download nil)) 
+(hoarder:fetch "tommy351/warehouse"
+  '(:download nil)) 
+(hoarder:fetch "tomokuni/Myrica"
+  '(:download nil)) 
+(hoarder:fetch "tonsky/rum"
+  '(:download nil)) 
+(hoarder:fetch "toolpunk/dmenu-ee"
+  '(:download nil)) 
+(hoarder:fetch "toromoti/chocomint.sh"
+  '(:download nil)) 
+(hoarder:fetch "trapd00r/configs"
+  '(:download nil)) 
+(hoarder:fetch "trapd00r/ls--"
+  '(:download nil)) 
+(hoarder:fetch "trapd00r/utils"
+  '(:download nil)) 
+(hoarder:fetch "trapd00r/zsh-syntax-highlighting-filetypes"
+  '(:download nil)) 
+(hoarder:fetch "travitch/taffybar"
+  '(:download nil)) 
+(hoarder:fetch "trizen/youtube-viewer"
+  '(:download nil)) 
+(hoarder:fetch "tuvistavie/fundle"
+  '(:download nil)) 
+(hoarder:fetch "tyru/dotto"
+  '(:download nil)) 
+(hoarder:fetch "ultravideo/kvazaar"
+  '(:download nil)) 
+(hoarder:fetch "underdash/underdash"
+  '(:download nil)) 
+(hoarder:fetch "unixorn/awesome-zsh-plugins"
+  '(:download nil)) 
+(hoarder:fetch "unot/WebRadioRecorder"
+  '(:download nil)) 
+(hoarder:fetch "uobikiemukot/sdump"
+  '(:download nil)) 
+(hoarder:fetch "uobikiemukot/yaft"
+  '(:download nil)) 
+(hoarder:fetch "valvallow/lifegame"
+  '(:download nil)) 
+(hoarder:fetch "variadico/noti"
+  '(:download nil)) 
+(hoarder:fetch "victorhaggqvist/xboomx"
+  '(:download nil)) 
+(hoarder:fetch "videolan/x265"
+  '(:download nil)) 
+(hoarder:fetch "vikasrawal/orgpaper"
+  '(:download nil)) 
+(hoarder:fetch "vstakhov/libucl"
+  '(:download nil)) 
+(hoarder:fetch "weavejester/medley"
+  '(:download nil)) 
+(hoarder:fetch "webyrd/miniKanren"
+  '(:download nil)) 
+(hoarder:fetch "windelicato/dotfiles"
+  '(:download nil)) 
+(hoarder:fetch "windymelt/p2p2ch"
+  '(:download nil)) 
+(hoarder:fetch "wooorm/alex"
+  '(:download nil)) 
+(hoarder:fetch "xero/dotfiles"
+  '(:download nil)) 
+(hoarder:fetch "xmonad/xmonad-contrib"
+  '(:download nil)) 
+(hoarder:fetch "xorg62/wmfs"
+  '(:download nil)) 
+(hoarder:fetch "xyl0n/iris-light"
+  '(:download nil)) 
+(hoarder:fetch "xylosper/bomi"
+  '(:download nil)) 
+(hoarder:fetch "yascentur/RictyDiminished"
+  '(:download nil)) 
+(hoarder:fetch "yayugu/net-radio-archive"
+  '(:download nil)) 
+(hoarder:fetch "zcaudate/hara"
+  '(:download nil)) 
+(hoarder:fetch "zero808/ya4cid"
+  '(:download nil)) 
+(hoarder:fetch "zmalltalker/fish-nuggets"
+  '(:download nil)) 
+(hoarder:fetch "zone117x/Jackett"
+  '(:download nil)) 
+(hoarder:fetch "zoppo/plugins"
+  '(:download nil)) 
+(hoarder:fetch "zoppo/zoppo"
+  '(:download nil)) 
+(hoarder:fetch "zsh-users/zsh-completions"
+  '(:download nil)) 
+(hoarder:fetch "zsh-users/zsh-syntax-highlighting"
+  '(:download nil)) 
+(hoarder:fetch "zsoltf/lsr"
+  '(:download nil)) 
+(hoarder:fetch "zy/zy-fvwm"
+  '(:download nil)) 
+(hoarder:fetch "zzggbb/colorblocks"
+  '(:download nil)) 
 
 ;; git://gitorious.org/sly/sly 
 ;; git://gitorious.org/src-vcs/src-vcs.git 
