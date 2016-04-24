@@ -25,7 +25,9 @@
           (message "auto-save-buffers-enhanced off"))))
 
     (cl-defun muki:auto-save-buffers-enhanced-enable ()
-      (unless (eq 'eshell-mode major-mode)
+      (unless (and (eq 'eshell-mode major-mode)
+                 (bound-and-true-p defining-kbd-macro)
+                 (bound-and-true-p evil-this-macro))
         (unless auto-save-buffers-enhanced-activity-flag
           (setq auto-save-buffers-enhanced-activity-flag t)
           (message "auto-save-buffers-enhanced on"))))
