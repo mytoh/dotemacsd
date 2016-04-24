@@ -2451,6 +2451,8 @@
   '(:tag ["git" "pythhon"]))
 (hoarder:fetch "iCHAIT/awesome-subreddits"
   '(:tag ["awesome_list" "reddit"]))
+(hoarder:fetch "feross/webtorrent-desktop"
+  '(:tag ["webtorrent" "torrent"]))
 
 
 ;;;;;; migrating
