@@ -1488,7 +1488,7 @@
 (hoarder:register-theme "mattly/emacs-farmhouse-theme")
 (hoarder:register-theme "evenhold/nerv-theme")
 (hoarder:register-theme "mjhanninen/liquorice.el"
-  '(:load-path "."))
+  '(:load-path ["." "themes"]))
 (hoarder:register-theme "cryon/subatomic")
 (hoarder:register-theme "Gastove/rhombus")
 (hoarder:register-theme "Fanael/colorsarenice-theme")
