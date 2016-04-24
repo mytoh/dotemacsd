@@ -2453,10 +2453,10 @@
   '(:tag ["awesome_list" "reddit"]))
 (hoarder:fetch "feross/webtorrent-desktop"
   '(:tag ["webtorrent" "torrent"]))
-
-
-;;;;;; migrating
-
+(hoarder:fetch "sindresorhus/refined-github"
+  '(:tag ["github" "chrome" "css"]))
+(hoarder:fetch "https://gitlab.com/NTPSec/ntpsec.git"
+  '(:tag ["ntp"]))
 (hoarder:fetch "git://erdgeist.org/opentracker") 
 (hoarder:fetch "git://git.2f30.org/colors") 
 (hoarder:fetch "git://git.dolezel.info/fatrat.git") 
