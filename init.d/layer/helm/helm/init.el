@@ -172,18 +172,28 @@ Otherwise goto the end of minibuffer."
   (after 'helm-files
 
       (defun muki:helm-ff-candidates-html-p (candidate)
+        (message (format "%s" candidate))
         (string-match-p "\.htm[l]*$" candidate))
 
   ;;;; Modify source attributes
     ;;
-    ;; Add actions to `helm-source-find-files' IF:
 
+    ;; Add actions to `helm-source-find-files' IF:
+    ;; open with eww
     (cl-defmethod helm-setup-user-source ((source helm-source-ffiles))
       (helm-source-add-action-to-source-if
        "Open file with eww"
-       #'eww-open-file
+       'eww-open-file
        source
-       #'muki:helm-ff-candidates-html-p))
+       'muki:helm-ff-candidates-html-p))
+
+    ;; insert a candidate
+    (cl-defmethod helm-setup-user-source ((source helm-source-ffiles))
+      (helm-source-add-action-to-source-if
+       "Insert"
+       'insert
+       source
+       'identity))
 
     ;;;; remove current and parent directory from find-files source
     (cl-defmethod helm-setup-user-source ((source helm-source-ffiles))
