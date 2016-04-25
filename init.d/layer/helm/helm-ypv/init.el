@@ -7,7 +7,8 @@
   (after 'helm-ypv
       ;; (set-option helm-ypv-local-address "localhost:7144")
       (set-option helm-ypv-local-address "peca2.koti:7144")
-    (load-file (locate-user-emacs-file "helm-ypv/yp")))
+    (when (file-exists-p (locate-user-emacs-file "helm-ypv/yp"))
+      (load-file (locate-user-emacs-file "helm-ypv/yp"))))
 
   (set-option  helm-ypv-yp-urls
                '((sp  "bayonet.ddo.jp/sp")
