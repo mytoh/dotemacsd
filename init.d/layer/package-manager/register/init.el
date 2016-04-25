@@ -1558,7 +1558,8 @@
                 (when (file-exists-p proj-path)
                   (hoarder:register proj-path option)))))
   (add-project-root  "emacs-flatline")
-  (add-project-root "helm-ypv" '(:tag "helm"))
+  (add-project-root "helm-ypv" '(:tag "helm"
+                                 :load-path ["lisp"]))
   (add-project-root "company-scheme" '(:tag ["company" "scheme"]))
   (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
   (add-project-root "emacs-lehtifile-mode")
