@@ -1548,7 +1548,8 @@
 (hoarder:register-theme "caisah/liso-theme")
 (hoarder:register-theme "ksjogo/labburn-theme")
 (hoarder:register-theme "kootenpv/emacs-kooten-theme")
-
+(hoarder:register-theme "mswift42/obsidian-theme")
+(hoarder:register-theme "j0ni/phoenix-dark-mono")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
