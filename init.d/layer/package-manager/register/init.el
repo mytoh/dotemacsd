@@ -3384,6 +3384,8 @@
   '(:download nil)) 
 (hoarder:fetch "shiroyuki/Yotsuba"
   '(:tag ["python" "xml"]))
+(hoarder:fetch "sindresorhus/cows"
+  '(:tag ["ascii_art" "cows"]))
 
 
 ;; git://gitorious.org/sly/sly 
