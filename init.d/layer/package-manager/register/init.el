@@ -3386,6 +3386,8 @@
   '(:tag ["python" "xml"]))
 (hoarder:fetch "sindresorhus/cows"
   '(:tag ["ascii_art" "cows"]))
+(hoarder:fetch "machakann/vim-colorscheme-tatami"
+  '(:tag ["vim" "colorscheme" "theme"]))
 
 
 ;; git://gitorious.org/sly/sly 
