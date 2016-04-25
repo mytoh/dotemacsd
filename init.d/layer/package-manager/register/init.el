@@ -3382,6 +3382,9 @@
   '(:download nil)) 
 (hoarder:fetch "zzggbb/colorblocks"
   '(:download nil)) 
+(hoarder:fetch "shiroyuki/Yotsuba"
+  '(:tag ["python" "xml"]))
+
 
 ;; git://gitorious.org/sly/sly 
 ;; git://gitorious.org/src-vcs/src-vcs.git 
