@@ -263,7 +263,7 @@
     ignoramus
     validate
     niceify-info
-
+    yankpad
     saveplace
     
     ;; letcheck ; not work with pcase's let pattern

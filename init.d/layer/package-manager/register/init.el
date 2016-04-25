@@ -274,6 +274,7 @@
 
 
 
+
 ;;;;;  general packages
 (hoarder:register "magnars/s.el")
 (hoarder:register "jonathanchu/emacs-powerline")
@@ -1279,6 +1280,8 @@
   '(:tag ["schema" "validation"]))
 (hoarder:register "hl-anything/hl-anything-emacs"
   '(:tag ["highlight"]))
+(hoarder:register "Kungsgeten/yankpad"
+  '(:tag ["snippet" "yasnippet" "org"]))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
 ;;                     :dependency (("papaeye/go-mode.el"
