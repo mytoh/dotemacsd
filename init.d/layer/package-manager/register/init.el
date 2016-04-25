@@ -3391,6 +3391,8 @@
   '(:tag ["ascii_art" "cows"]))
 (hoarder:fetch "machakann/vim-colorscheme-tatami"
   '(:tag ["vim" "colorscheme" "theme"]))
+(hoarder:fetch "syncthing/syncthing"
+  '(:tag ["p2p" "file_sharing"]))
 
 
 ;; git://gitorious.org/sly/sly 
