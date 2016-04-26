@@ -3395,6 +3395,8 @@
   '(:tag ["p2p" "file_sharing"]))
 (hoarder:fetch "sugitak/appdo"
   '(:desc "http://qiita.com/sugitak/items/7503f4c0b99fce29293e"))
+(hoarder:fetch "tomerfiliba/plumbum"
+  '(:tag ["shell" "python"]))
 
 
 ;; git://gitorious.org/sly/sly 
