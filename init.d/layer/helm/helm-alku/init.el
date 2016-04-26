@@ -41,7 +41,9 @@
     ;; helm-alku-twitch
     (setq helm-alku-twitch-additional-games
           '("Clicker Heroes" "Elite: Dangerous"
-            "Programming" "Splatoon"))
+            "Programming" "Splatoon"
+            "Hyper Light Drifter"
+            "Factorio"))
     )
 
   (add-global-key "C-c h" #'helm-alku)
