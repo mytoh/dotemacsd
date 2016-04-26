@@ -3393,6 +3393,8 @@
   '(:tag ["vim" "colorscheme" "theme"]))
 (hoarder:fetch "syncthing/syncthing"
   '(:tag ["p2p" "file_sharing"]))
+(hoarder:fetch "sugitak/appdo"
+  '(:desc "http://qiita.com/sugitak/items/7503f4c0b99fce29293e"))
 
 
 ;; git://gitorious.org/sly/sly 
