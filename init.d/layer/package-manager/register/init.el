@@ -3397,7 +3397,10 @@
   '(:desc "http://qiita.com/sugitak/items/7503f4c0b99fce29293e"))
 (hoarder:fetch "tomerfiliba/plumbum"
   '(:tag ["shell" "python"]))
-
+(hoarder:fetch "freebsd/freebsd-wifi-build"
+  '(:tag ["freebsd" "onionΩ"]))
+(hoarder:fetch "freebsd/freebsd-wifi-build.wiki"
+  '(:tag ["freebsd" "onionΩ"]))
 
 ;; git://gitorious.org/sly/sly 
 ;; git://gitorious.org/src-vcs/src-vcs.git 
