@@ -3401,6 +3401,11 @@
   '(:tag ["freebsd" "onionΩ"]))
 (hoarder:fetch "freebsd/freebsd-wifi-build.wiki"
   '(:tag ["freebsd" "onionΩ"]))
+(hoarder:fetch "MagikBSD/please"
+  '(:tag ["sudo" "pam"]))
+(hoarder:fetch "yacy/yacy_search_server"
+  '(:tag ["search_engine" ]))
+
 
 ;; git://gitorious.org/sly/sly 
 ;; git://gitorious.org/src-vcs/src-vcs.git 
