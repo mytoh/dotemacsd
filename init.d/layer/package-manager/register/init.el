@@ -1282,13 +1282,15 @@
   '(:tag ["highlight"]))
 (hoarder:register "Kungsgeten/yankpad"
   '(:tag ["snippet" "yasnippet" "org"]))
+(hoarder:register "hatschipuh/helm-better-defaults"
+  '(:tag ["helm" "configuration"]))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
 ;;                     :dependency (("papaeye/go-mode.el"
 ;;                                (:tag ["langfmt"])))))
 
-;; (hoarder:register "politza/pdf-tools"
-;;                  '(:tag ["pdf"]))
+(hoarder:register "politza/pdf-tools"
+  '(:tag ["pdf"]))
 ;; (hoarder:register "http://git.chise.org/git/elisp/flim.git"
 ;;                  '(:tag ["flim" "luna"]))
 
@@ -3138,8 +3140,6 @@
 (hoarder:fetch "plonk/bbiff"
   '(:download nil)) 
 (hoarder:fetch "plonk/psapi"
-  '(:download nil)) 
-(hoarder:fetch "politza/pdf-tools"
   '(:download nil)) 
 (hoarder:fetch "polyml/polyml"
   '(:download nil)) 
