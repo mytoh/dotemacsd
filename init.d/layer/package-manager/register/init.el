@@ -3418,8 +3418,10 @@
   '(:tag ["anime" "android"]))
 (hoarder:fetch "rizo/awesome-ocaml"
   '(:tag ["ocaml"]))
-(hoarder:register "StylishThemes/GitHub-Dark"
+(hoarder:fetch "StylishThemes/GitHub-Dark"
   '(:tag ["firefox" "css" "github"]))
+(hoarder:fetch "git://git.code.sf.net/p/cdesktopenv/code"
+  '(:tag ["cde" "desktop" "x11"]))
 
 ;; git://gitorious.org/sly/sly 
 ;; git://gitorious.org/src-vcs/src-vcs.git 
