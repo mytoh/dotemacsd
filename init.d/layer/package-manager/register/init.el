@@ -1284,6 +1284,10 @@
   '(:tag ["snippet" "yasnippet" "org"]))
 (hoarder:register "hatschipuh/helm-better-defaults"
   '(:tag ["helm" "configuration"]))
+(hoarder:register "yuya373/emacs-dwm"
+  '(:tag ["dwm" "window_management"]))
+(hoarder:register "lujun9972/verify-url")
+(hoarder:register "lujun9972/el-start-menu")
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
 ;;                     :dependency (("papaeye/go-mode.el"
@@ -3405,7 +3409,17 @@
   '(:tag ["sudo" "pam"]))
 (hoarder:fetch "yacy/yacy_search_server"
   '(:tag ["search_engine" ]))
-
+(hoarder:fetch "spolu/dwm.vim"
+  '(:tag ["vim" "dwm"]))
+(hoarder:fetch "nghttp2/nghttp2")
+(hoarder:fetch "belluzj/fantasque-sans"
+  '(:tag ["font"]))
+(hoarder:fetch "Tlaster/OneEchan"
+  '(:tag ["anime" "android"]))
+(hoarder:fetch "rizo/awesome-ocaml"
+  '(:tag ["ocaml"]))
+(hoarder:register "StylishThemes/GitHub-Dark"
+  '(:tag ["firefox" "css" "github"]))
 
 ;; git://gitorious.org/sly/sly 
 ;; git://gitorious.org/src-vcs/src-vcs.git 
