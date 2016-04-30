@@ -3421,7 +3421,14 @@
 (hoarder:fetch "StylishThemes/GitHub-Dark"
   '(:tag ["firefox" "css" "github"]))
 (hoarder:fetch "git://git.code.sf.net/p/cdesktopenv/code"
-  '(:tag ["cde" "desktop" "x11"]))
+  '(:tag ["cde" "desktop" "x11"]
+    :desc ["https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/"]))
+(hoarder:fetch "xbmc/xbmc")
+(hoarder:fetch "exdownloader/exDownloader"
+  '(:tag ["download" "ehen" "doujin"]))
+(hoarder:fetch "rzl24ozi/cmigemo-module"
+  '(:tag ["emacs" "migemo" "module"]))
+
 
 ;; git://gitorious.org/sly/sly 
 ;; git://gitorious.org/src-vcs/src-vcs.git 
