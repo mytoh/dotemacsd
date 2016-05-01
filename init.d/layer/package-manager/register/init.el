@@ -1293,6 +1293,8 @@
   '(:tag ["dwm" "window_management"]))
 (hoarder:register "lujun9972/verify-url")
 (hoarder:register "lujun9972/el-start-menu")
+(hoarder:register "gizmomogwai/org-kanban"
+  '(:tag ["org-mode" "kanban" "pomodoro"]))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
 ;;                     :dependency (("papaeye/go-mode.el"
