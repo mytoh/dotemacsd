@@ -437,6 +437,8 @@
 (hoarder:register "k-talo/smooth-scroll.el")
 (hoarder:register "m2ym/yascroll-el")
 (hoarder:register "emacs-jp/migemo")
+(hoarder:fetch "rzl24ozi/cmigemo-module"
+  '(:tag ["emacs" "migemo" "module"]))
 (hoarder:register "taksatou/flappymacs")
 (hoarder:register "gongo/yamada-el")
 (hoarder:register "jiyoo/flyparens")
@@ -3429,8 +3431,6 @@
 (hoarder:fetch "xbmc/xbmc")
 (hoarder:fetch "exdownloader/exDownloader"
   '(:tag ["download" "ehen" "doujin"]))
-(hoarder:fetch "rzl24ozi/cmigemo-module"
-  '(:tag ["emacs" "migemo" "module"]))
 (hoarder:fetch "ugexe/zef"
   '(:tag ["perl6" "package_manager"]))
 (hoarder:fetch "Mononofu/P2P-DNS"
