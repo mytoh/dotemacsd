@@ -115,13 +115,16 @@
   '(:tag ["helm" "lobste.rs" "news" "web"]))
 (hoarder:register "syohex/emacs-helm-hackernews"
   '(:tag ["helm" "hackernews" "news" "web"]))
-(hoarder:register "tetracat/sallet"
+(hoarder:register "Fuco1/sallet"
   '(:tag ["helm"]
     :dependency ["lewang/flx"
                  ("magnars/dash.el" ( :compile nil))
                  "magnars/s.el"
                  "jwiegley/emacs-async"
-                 "cask/shut-up"]))
+                 "cask/shut-up"
+                 "lewang/flx"
+                 "jwiegley/emacs-async"
+                 "ShingoFukuyama/ov.el"]))
 (hoarder:register "Sliim/helm-github-stars"
   '(:tag ["helm" "github"]))
 (hoarder:register "ralesi/helm-pt"
