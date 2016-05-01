@@ -3431,7 +3431,10 @@
   '(:tag ["download" "ehen" "doujin"]))
 (hoarder:fetch "rzl24ozi/cmigemo-module"
   '(:tag ["emacs" "migemo" "module"]))
-
+(hoarder:fetch "ugexe/zef"
+  '(:tag ["perl6" "package_manager"]))
+(hoarder:fetch "Mononofu/P2P-DNS"
+  '(:tag ["p2p" "dns"]))
 
 ;; git://gitorious.org/sly/sly 
 ;; git://gitorious.org/src-vcs/src-vcs.git 
