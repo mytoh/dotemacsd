@@ -3439,6 +3439,9 @@
   '(:tag ["perl6" "package_manager"]))
 (hoarder:fetch "Mononofu/P2P-DNS"
   '(:tag ["p2p" "dns"]))
+(hoarder:fetch "dirruk1/gnome-breeze"
+  '(:tag ["theme" "gtk" "x11"]))
+(hoarder:fetch "Cloudef/macopix-fork")
 
 ;; git://gitorious.org/sly/sly 
 ;; git://gitorious.org/src-vcs/src-vcs.git 
