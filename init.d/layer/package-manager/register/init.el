@@ -1295,6 +1295,8 @@
 (hoarder:register "lujun9972/el-start-menu")
 (hoarder:register "gizmomogwai/org-kanban"
   '(:tag ["org-mode" "kanban" "pomodoro"]))
+(hoarder:register "hinrik/perl6-mode"
+  '(:tag ["perl6"]))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
 ;;                     :dependency (("papaeye/go-mode.el"
