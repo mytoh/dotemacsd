@@ -399,7 +399,7 @@
 (muki-layer:load-layers 'helm
   '(helm
     helm-hoarder
-    helm-ypv
+    helm-yplistener
     helm-alku
     helm-project-buffer
     helm-ag-r
