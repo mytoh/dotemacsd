@@ -186,9 +186,8 @@ Otherwise goto the end of minibuffer."
       ;;    source
       ;;    'muki:helm-ff-candidates-html-p))
 
-      (setq helm-find-files-actions
-       (cons '("EWW" . eww-open-file)
-             helm-find-files-actions))
+      (add-to-list 'helm-find-files-actions
+       '("EWW" . eww-open-file) 'append)
 
     ;; insert a candidate
     (cl-defmethod helm-setup-user-source ((source helm-source-ffiles))
