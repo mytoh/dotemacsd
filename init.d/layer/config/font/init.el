@@ -290,8 +290,8 @@
   (cond
     ((cl-equalp type 'bitmap)
      ;; (set-ascii-font)
-     ;; (set-naga10-font)
-     (set-neep-font)
+     (set-naga10-font)
+     ;; (set-neep-font)
      ;; (set-symbol-font)
      (set-cyrillic-font)
      ;; (set-japanese-font)
