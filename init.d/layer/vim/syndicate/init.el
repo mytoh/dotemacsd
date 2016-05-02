@@ -5,6 +5,8 @@
 ;;; Code:
 
 (after 'org
-    (req 'syndicate))
+    (req 'syndicate
+      (evil-define-key 'normal syndicate-mode-map
+        "o" #'evil-open-below)))
 
 ;;; init.el ends here
