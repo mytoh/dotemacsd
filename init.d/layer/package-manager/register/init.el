@@ -1297,6 +1297,8 @@
   '(:tag ["org-mode" "kanban" "pomodoro"]))
 (hoarder:register "hinrik/perl6-mode"
   '(:tag ["perl6"]))
+(hoarder:register "Malabarba/emacs-google-this"
+  '(:tag ["google" "search"]))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
 ;;                     :dependency (("papaeye/go-mode.el"
@@ -3442,6 +3444,26 @@
 (hoarder:fetch "dirruk1/gnome-breeze"
   '(:tag ["theme" "gtk" "x11"]))
 (hoarder:fetch "Cloudef/macopix-fork")
+(hoarder:fetch "nixers-projects/podcast"
+  '(:tag ["unix" "nixers" "podcast"]
+    :desc "https://nixers.net/showthread.php?tid=1656"))
+(hoarder:fetch "git://arcetera.moe/bin.git"
+  '(:desc "https://www.reddit.com/r/unixporn/comments/4h5aai/cwm_lacking/"
+    :tag ["OpenBSD"]))
+(hoarder:fetch "git://arcetera.moe/etc.git"
+  '(:desc "https://www.reddit.com/r/unixporn/comments/4h5aai/cwm_lacking/"
+    :tag ["OpenBSD"]))
+(hoarder:fetch "IonicaBizau/scrape-it"
+  '(:tag ["javascript" "scraping"]))
+(hoarder:fetch "looterz/grimd"
+  '(:tag ["dns" "proxy" "advertisements"]))
+(hoarder:fetch "racaljk/hosts"
+  '(:tag ["dns" "hosts"]))
+(hoarder:fetch "kciter/awesome-style-guide"
+  '(:tag ["style-guide" "awesome_list"]))
+(hoarder:fetch "gavindinubilo/jam-api"
+  '(:tag ["scraping" "api"]))
+
 
 ;; git://gitorious.org/sly/sly 
 ;; git://gitorious.org/src-vcs/src-vcs.git 
