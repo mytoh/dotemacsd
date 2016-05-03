@@ -1570,7 +1570,7 @@
 (hoarder:register-theme "kootenpv/emacs-kooten-theme")
 (hoarder:register-theme "mswift42/obsidian-theme")
 (hoarder:register-theme "j0ni/phoenix-dark-mono")
-
+(hoarder:register-theme "nanzhong/nine27-theme")
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
               (cl-letf ((proj-path (thread-last (getenv "HUONE")
@@ -3463,6 +3463,9 @@
   '(:tag ["style-guide" "awesome_list"]))
 (hoarder:fetch "gavindinubilo/jam-api"
   '(:tag ["scraping" "api"]))
+(hoarder:fetch "LibreELEC/LibreELEC.tv"
+  '(:tag ["mediacenter" "htpc" "linux" "openelec"]
+    :download nil))
 
 
 ;; git://gitorious.org/sly/sly 
