@@ -3466,6 +3466,17 @@
 (hoarder:fetch "LibreELEC/LibreELEC.tv"
   '(:tag ["mediacenter" "htpc" "linux" "openelec"]
     :download nil))
+(hoarder:fetch "greymd/egzact.git"
+  '(:tag ["shellscript" "egison" "haskell" "cli"]
+    :desc "http://qiita.com/greymd/items/3515869d9ed2a1a61a49"))
+(hoarder:fetch "askucher/nixar"
+  '(:tag ["shellscript" "linux" "cli"]))
+(hoarder:fetch "usp-engineers-community/Open-usp-Tukubai"
+  '(:tag ["shellscript" "cli"]))
+(hoarder:fetch "sriramkswamy/dotemacs"
+  '(:tag ["dotemacs" "emacs" "hydra" "evil" "modalka"]
+    :desc "[[https://www.reddit.com/r/emacs/comments/4hmmla/how_much_evil_in_emacs/d2rdj2p][aerobug comments on how much evil in emacs]]
+[[https://github.com/sriramkswamy/dotemacs/blob/master/config/sk-org-hydra.el][dotemacs/sk-org-hydra.el at master · sriramkswamy/dotemacs · GitHub]] "))
 
 
 ;; git://gitorious.org/sly/sly 
