@@ -95,6 +95,7 @@
 ;;       scroll-preserve-screen-position 1)
 (setq hscroll-step 1
       scroll-step 1 ;; keyboard scroll one line at a time
+      scroll-margin 1
       scroll-conservatively 1000
       scroll-preserve-screen-position t)
 
