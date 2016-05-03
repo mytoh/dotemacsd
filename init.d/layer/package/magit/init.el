@@ -14,17 +14,28 @@
 ;; (after 'magit
 ;;        (muki:magit-highlights))
 
+(cl-defun muki:magit-commit-add-log-insert (buffer file defun)
+  (cl-letf ((modified (if (string-match-p "^init\.d/layer/.*/init\.el" file)
+                          (seq-take (seq-subseq file 13)
+                                    (- (seq-length (seq-subseq file 13))
+                                       (+ 1 (seq-length "init.el"))))
+                        file)))
+    (magit-commit-add-log-insert buffer modified defun)))
+
+
 (cl-defun muki:magit-setup ()
   (after 'magit
- (set-option magit-diff-refine-hunk 'all)
-  (set-option magit-repository-directories `(,(muki:expand-path-huone "ateljee")))
-  (set-option magit-revision-show-gravatars
-              '("^Author:     " . "^Commit:     "))
+      (set-option magit-diff-refine-hunk 'all)
+    (set-option magit-repository-directories `(,(muki:expand-path-huone "ateljee")))
+    (set-option magit-revision-show-gravatars
+                '("^Author:     " . "^Commit:     "))
+    (set-option magit-commit-add-log-insert-function
+                'muki:magit-commit-add-log-insert)
     
-  (add-to-list 'magit-diff-arguments "--ignore-blank-lines")
-  (add-to-list 'magit-diff-arguments "--ignore-space-at-eol")
-  (add-to-list 'magit-diff-arguments "--ignore-space-change")
-  (add-to-list 'magit-diff-arguments "--ignore-all-space"))
+    (add-to-list 'magit-diff-arguments "--ignore-blank-lines")
+    (add-to-list 'magit-diff-arguments "--ignore-space-at-eol")
+    (add-to-list 'magit-diff-arguments "--ignore-space-change")
+    (add-to-list 'magit-diff-arguments "--ignore-all-space"))
   
   ;; auto fill
   (hook 'magit-log-edit-mode-hook
