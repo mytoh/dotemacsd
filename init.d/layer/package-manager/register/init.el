@@ -158,7 +158,7 @@
 (hoarder:register "emacs-helm/helm-describe-modes")
 (hoarder:register "alphapapa/helm-org-rifle"
   '(:tag ["org" "helm"]))
-
+(hoarder:register "masutaka/emacs-helm-qiita")
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]
 ;;                    :dependency ["michael-heerdegen/iterators.el"]))
@@ -1571,6 +1571,7 @@
 (hoarder:register-theme "mswift42/obsidian-theme")
 (hoarder:register-theme "j0ni/phoenix-dark-mono")
 (hoarder:register-theme "nanzhong/nine27-theme")
+(hoarder:register-theme "onurtemizkan/paganini")
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
               (cl-letf ((proj-path (thread-last (getenv "HUONE")
