@@ -3478,6 +3478,14 @@
   '(:tag ["dotemacs" "emacs" "hydra" "evil" "modalka"]
     :desc "[[https://www.reddit.com/r/emacs/comments/4hmmla/how_much_evil_in_emacs/d2rdj2p][aerobug comments on how much evil in emacs]]
 [[https://github.com/sriramkswamy/dotemacs/blob/master/config/sk-org-hydra.el][dotemacs/sk-org-hydra.el at master · sriramkswamy/dotemacs · GitHub]] "))
+(hoarder:fetch "Project-ShangriLa/shangrila_api_doc"
+  '(:tag ["anime" "api" "project_shangrila"]
+    :site "http://akibalab.info/"))
+(hoarder:fetch "TomokiAburatani/anime-api-cl"
+  '(:tag ["anime" "api"  "project_shangrila" "common_lisp"]
+    :site "http://dbym4820.hatenablog.com/entry/2016/05/04/132241"))
+(hoarder:fetch "spf13/cobra"
+  '(:tag ["golang" "cli" "script"]))
 
 
 ;; git://gitorious.org/sly/sly 
