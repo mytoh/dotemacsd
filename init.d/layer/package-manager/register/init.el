@@ -3499,6 +3499,9 @@
   '(:tag ["music" "streaming"]))
 (hoarder:fetch "MadMarty/madsonic-server-5.1"
   '(:tag ["music" "streaming" "subsonic"]))
+(hoarder:fetch "mhiramat/mincs"
+  '(:tag ["container" "shellscript"]
+    :desc "https://www.youtube.com/watch?v=69sEJZb2i-E"))
 
 ;; git://gitorious.org/sly/sly 
 ;; git://gitorious.org/src-vcs/src-vcs.git 
