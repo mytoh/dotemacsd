@@ -185,9 +185,9 @@
     (bind-map-set-keys my-base-leader-buffer-map
         "b" #'helm-project-buffer))
   
-  (liby 'helm-ypv
+  (liby 'helm-yplistener
     (bind-map-set-keys my-base-leader-application-map
-        "y" #'helm-ypv))
+        "y" #'helm-yplistener))
 
   
   (liby 'helm-alku

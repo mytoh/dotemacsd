@@ -1,16 +1,16 @@
-;;; init-helm-ypv.el -*- lexical-binding: t -*-
+;;; init-helm-yplistener.el -*- lexical-binding: t -*-
 
-(liby 'helm-ypv
-  (command (helm-ypv helm-ypv-bookmarks helm-ypv-channels)
-           "helm-ypv")
+(liby 'helm-yplistener
+  (command (helm-yplistener helm-yplistener-bookmarks helm-yplistener-channels)
+           "helm-yplistener")
 
-  (after 'helm-ypv
-      ;; (set-option helm-ypv-local-address "localhost:7144")
-      (set-option helm-ypv-local-address "peca2.koti:7144")
-    (when (file-exists-p (locate-user-emacs-file "helm-ypv/yp"))
-      (load-file (locate-user-emacs-file "helm-ypv/yp"))))
+  (after 'helm-yplistener
+      ;; (set-option helm-yplistener-local-address "localhost:7144")
+      (set-option helm-yplistener-local-address "peca2.koti:7144")
+    (when (file-exists-p (locate-user-emacs-file "helm-yplistener/yp"))
+      (load-file (locate-user-emacs-file "helm-yplistener/yp"))))
 
-  (set-option  helm-ypv-yp-urls
+  (set-option  helm-yplistener-yp-urls
                '((sp  "bayonet.ddo.jp/sp")
                  (tp  "temp.orz.hm/yp")
                  ;; (dp  "dp.prgrssv.net")
@@ -21,10 +21,10 @@
                  ;; (message "peercast.takami98.net/message-yp")
                  ))
 
-  (set-option helm-ypv-player-type 'mpv)
-  (set-option helm-ypv-default-protocol "mmshttp")
+  (set-option helm-yplistener-player-type 'mpv)
+  (set-option helm-yplistener-default-protocol "mmshttp")
 
-  ;; (helm-migemize-command 'helm-ypv)
+  ;; (helm-migemize-command 'helm-yplistener)
   )
 
 ;; Local Variables:
