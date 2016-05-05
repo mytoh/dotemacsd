@@ -2203,7 +2203,8 @@
 (hoarder:fetch "maio/smagit"
   '(:tag ["magit" "git"]))
 (hoarder:fetch "http://git.tukaani.org/xz.git"
-  '(:tag ["archive" "xz" "lzma"]))
+  '(:tag ["archive" "xz" "lzma"]
+    :depth nil))
 (hoarder:fetch "brabadu/awesome-fonts"
   '(:tag ["font"]))
 ;; (hoarder:fetch "chrissimpkins/codeface"
@@ -3486,7 +3487,18 @@
     :site "http://dbym4820.hatenablog.com/entry/2016/05/04/132241"))
 (hoarder:fetch "spf13/cobra"
   '(:tag ["golang" "cli" "script"]))
-
+(hoarder:fetch "mecab/emspect"
+  '(:tag ["emoji" "javascript" "node"]))
+(hoarder:fetch "tredly/tredly-host"
+  '(:tag ["freebsd" "container" ]))
+(hoarder:fetch "Sonerezh/sonerezh"
+  '(:tag ["music" "streaming"]))
+(hoarder:fetch "Libresonic/libresonic"
+  '(:tag ["music" "streaming" "subsonic"]))
+(hoarder:fetch "devsnd/cherrymusic"
+  '(:tag ["music" "streaming"]))
+(hoarder:fetch "MadMarty/madsonic-server-5.1"
+  '(:tag ["music" "streaming" "subsonic"]))
 
 ;; git://gitorious.org/sly/sly 
 ;; git://gitorious.org/src-vcs/src-vcs.git 
