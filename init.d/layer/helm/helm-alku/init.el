@@ -43,7 +43,8 @@
           '("Clicker Heroes" "Elite: Dangerous"
             "Programming" "Splatoon"
             "Hyper Light Drifter"
-            "Factorio"))
+            "Factorio"
+            "Xenoblade Chronicles X"))
     )
 
   (add-global-key "C-c h" #'helm-alku)
