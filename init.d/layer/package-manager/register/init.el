@@ -1299,6 +1299,8 @@
   '(:tag ["perl6"]))
 (hoarder:register "Malabarba/emacs-google-this"
   '(:tag ["google" "search"]))
+(hoarder:register "egison/egison"
+  '(:load-path ["elisp"]))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
 ;;                     :dependency (("papaeye/go-mode.el"
@@ -1572,6 +1574,7 @@
 (hoarder:register-theme "j0ni/phoenix-dark-mono")
 (hoarder:register-theme "nanzhong/nine27-theme")
 (hoarder:register-theme "onurtemizkan/paganini")
+(hoarder:register-theme "sjrmanning/darkokai")
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
               (cl-letf ((proj-path (thread-last (getenv "HUONE")
@@ -3494,14 +3497,22 @@
 (hoarder:fetch "Sonerezh/sonerezh"
   '(:tag ["music" "streaming"]))
 (hoarder:fetch "Libresonic/libresonic"
-  '(:tag ["music" "streaming" "subsonic"]))
+  '(:tag ["music" "streaming" "subsonic"]
+    :download nil))
 (hoarder:fetch "devsnd/cherrymusic"
   '(:tag ["music" "streaming"]))
 (hoarder:fetch "MadMarty/madsonic-server-5.1"
-  '(:tag ["music" "streaming" "subsonic"]))
+  '(:tag ["music" "streaming" "subsonic"]
+    :download nil))
 (hoarder:fetch "mhiramat/mincs"
   '(:tag ["container" "shellscript"]
     :desc "https://www.youtube.com/watch?v=69sEJZb2i-E"))
+(hoarder:fetch "jshawl/updog"
+  '(:tag ["dropbox" "website"]))
+(hoarder:fetch "wdenton/conforguration"
+  '(:tag ["emacs" "org-mode" "configuration"]))
+(hoarder:fetch "carrotflakes/cleson"
+  '(:tag ["common_lisp" "egison"]))
 
 ;; git://gitorious.org/sly/sly 
 ;; git://gitorious.org/src-vcs/src-vcs.git 
