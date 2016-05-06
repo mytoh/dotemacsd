@@ -3513,7 +3513,30 @@
   '(:tag ["emacs" "org-mode" "configuration"]))
 (hoarder:fetch "carrotflakes/cleson"
   '(:tag ["common_lisp" "egison"]))
+(hoarder:fetch "https://bitbucket.org/luisangelsm/yacreader"
+  '(:tag ["comic" "image_viewer"]
+    :type :hg))
+(hoarder:fetch "davide-romanini/comictagger"
+  '(:tag ["comic" "tag" "comic_vine"]
+    :desc "fork of original
+[[https://code.google.com/p/comictagger/][original site]]"))
+(hoarder:fetch "cbanack/comic-vine-scraper"
+  '(:tag ["comic_vine" "api" "comicrack"]))
+(hoarder:fetch "http://hg.code.sf.net/p/quivi/code"
+  '(:tag ["comic" "viewer"]
+    :type :hg))
+(hoarder:fetch "davide-romanini/comicapi"
+  '(:tag ["comictagger" "comic" "comic_vine" "comic_book_info" "api"
+          "metadata"]))
+(hoarder:fetch "iComics/comicbookinfo"
+  '(:tag ["comic_book_info" "comic" "metadata"]))
+(hoarder:fetch "git://git.code.sf.net/p/bdreader/code"
+  '(:tag ["comic" "viewer"]))
+(hoarder:fetch "funcol/lentes"
+  '(:tag ["clojure" "lens" "monad" "haskell"]))
 
+
+;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
 ;; git://gitorious.org/src-vcs/src-vcs.git 
 ;; gitpub@162.252.242.77:morphis.git 
