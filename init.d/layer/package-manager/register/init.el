@@ -3537,6 +3537,8 @@
   '(:tag ["comic" "viewer"]))
 (hoarder:fetch "funcool/lentes"
   '(:tag ["clojure" "lens" "monad" "haskell"]))
+(hoarder:fetch "yuki-kimoto/gitprep"
+  '(:tag ["github" "perl" ]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
