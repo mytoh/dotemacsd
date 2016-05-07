@@ -36,7 +36,7 @@
 
   ;; all keywords arguments are still supported
   (general-define-key
-   "ap" #'helm-alku)
+   "ap" #'helm-muki)
   )
 
 ;;; init.el ends here

@@ -1,26 +1,26 @@
-;;; init-helm-alku.el -*- lexical-binding: t -*-
+;;; init-helm-muki.el -*- lexical-binding: t -*-
 
-(liby 'helm-alku
+(liby 'helm-muki
 
-  (command (helm-alku
-            helm-alku-program
-            helm-alku-directory
-            helm-alku-vihko
-            helm-alku-ääliö
-            helm-alku-layer
-            helm-alku-twitch)
-           "helm-alku")
+  (command (helm-muki
+            helm-muki-program
+            helm-muki-directory
+            helm-muki-vihko
+            helm-muki-ääliö
+            helm-muki-layer
+            helm-muki-twitch)
+           "helm-muki")
 
-  (after 'helm-alku
-      (set-option helm-alku-directory-list
+  (after 'helm-muki
+      (set-option helm-muki-directory-list
        `(("sarjakuva" . ,(muki:expand-path-huone "kuvat/sarjakuva"))
          ("paketti" . ,(locate-user-emacs-file "init.d/paketit"))
          ("hoarder" . ,(locate-user-emacs-file "vendor"))
          ("elpa" . ,(locate-user-emacs-file "elpa"))))
-    (helm-alku-directory-add-subdirectories (muki:expand-path-huone "ateljee/"))
-    (helm-alku-directory-add-subdirectories (muki:expand-path-huone "kuvat/sivusto"))
-    (helm-alku-directory-add-subdirectories (getenv "HUONE"))
-    (set-option helm-alku-program-list
+    (helm-muki-directory-add-subdirectories (muki:expand-path-huone "ateljee/"))
+    (helm-muki-directory-add-subdirectories (muki:expand-path-huone "kuvat/sivusto"))
+    (helm-muki-directory-add-subdirectories (getenv "HUONE"))
+    (set-option helm-muki-program-list
                 '("v2c"
                   "conkeror"
                   "firefox"
@@ -36,10 +36,10 @@
                   "xombrero"
                   "lxappearance"))
     ;; remove bookmark source temporally
-    (cl-delete 'helm-source-bookmarks helm-alku-sources)
+    (cl-delete 'helm-source-bookmarks helm-muki-sources)
 
-    ;; helm-alku-twitch
-    (setq helm-alku-twitch-additional-games
+    ;; helm-muki-twitch
+    (setq helm-muki-twitch-additional-games
           '("Clicker Heroes" "Elite: Dangerous"
             "Programming" "Splatoon"
             "Hyper Light Drifter"
@@ -47,7 +47,7 @@
             "Xenoblade Chronicles X"))
     )
 
-  (add-global-key "C-c h" #'helm-alku)
+  (add-global-key "C-c h" #'helm-muki)
 
   )
 

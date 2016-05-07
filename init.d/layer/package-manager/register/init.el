@@ -1588,7 +1588,6 @@
   (add-project-root "company-scheme" '(:tag ["company" "scheme"]))
   (add-project-root "emacs-scheme-keywords" '(:tag "scheme"))
   (add-project-root "emacs-lehtifile-mode")
-  (add-project-root "helm-alku" '(:tag ["helm"]))
   (add-project-root "emacs-navi2ch-file-mode" '(:tag "navi2ch"))
   ;; (add-project-root "emacs-eshell-switch" '(:tag "eshell"))
   (add-project-root "emacs-mesh" '(:tag "eshell"))

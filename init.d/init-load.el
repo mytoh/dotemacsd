@@ -400,7 +400,7 @@
   '(helm
     helm-hoarder
     helm-yplistener
-    helm-alku
+    helm-muki
     helm-project-buffer
     helm-ag-r
     helm-ag

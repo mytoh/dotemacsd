@@ -190,14 +190,14 @@
         "y" #'helm-yplistener))
 
   
-  (liby 'helm-alku
+  (liby 'helm-muki
     (bind-map-set-keys my-base-leader-application-map
-        "h" #'helm-alku
-        "c" #'helm-alku-program
-        "n" #'helm-alku-vihko
-        "ä" #'helm-alku-ääliö)
+        "h" #'helm-muki
+        "c" #'helm-muki-program
+        "n" #'helm-muki-vihko
+        "ä" #'helm-muki-ääliö)
     (bind-map-set-keys my-base-leader-application-web-map
-        "t" #'helm-alku-twitch))
+        "t" #'helm-muki-twitch))
 
   (bind-map-set-keys my-base-leader-application-multimedia-map
       "v" #'muki:play-mpv)
@@ -289,7 +289,7 @@
       "g" #'helm-ls-git-ls
       "s" #'evil-write
       "S" #'evil-write-all
-      "eh" #'helm-alku-layer
+      "eh" #'helm-muki-layer
       "el" #'muki:open-file-init-load
       "er" #'muki:open-file-package-registers)
 
