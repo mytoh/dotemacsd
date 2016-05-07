@@ -3535,7 +3535,7 @@
   '(:tag ["comic_book_info" "comic" "metadata"]))
 (hoarder:fetch "git://git.code.sf.net/p/bdreader/code"
   '(:tag ["comic" "viewer"]))
-(hoarder:fetch "funcol/lentes"
+(hoarder:fetch "funcool/lentes"
   '(:tag ["clojure" "lens" "monad" "haskell"]))
 
 
