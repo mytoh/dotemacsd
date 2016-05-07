@@ -2434,11 +2434,14 @@
 (hoarder:fetch "vurtun/nuklear"
   '(:tag ["gui" "toolkit"]))
 (hoarder:fetch "hayderctee/masalla-icon-theme"
-  '(:tag ["icon" "theme" "x11" "desktop"]))
+  '(:tag ["icon" "theme" "x11" "desktop"]
+    :download nil))
 (hoarder:fetch "xenlism/wildfire"
-  '(:tag ["icon" "theme" "x11" "desktop"]))
+  '(:tag ["icon" "theme" "x11" "desktop"]
+    :download nil))
 (hoarder:fetch "xenlism/Storm"
-  '(:tag ["icon" "theme" "x11" "desktop"]))
+  '(:tag ["icon" "theme" "x11" "desktop"]
+    :download nil))
 (hoarder:fetch "baurigae/polar-night"
   '(:tag ["gtk" "theme" "x11" "desktop"]))
 (hoarder:fetch "anexation/menda-icon-themes"
@@ -3438,7 +3441,8 @@
 (hoarder:fetch "git://git.code.sf.net/p/cdesktopenv/code"
   '(:tag ["cde" "desktop" "x11"]
     :desc ["https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/"]))
-(hoarder:fetch "xbmc/xbmc")
+(hoarder:fetch "xbmc/xbmc"
+  '(:download nil))
 (hoarder:fetch "exdownloader/exDownloader"
   '(:tag ["download" "ehen" "doujin"]))
 (hoarder:fetch "ugexe/zef"
