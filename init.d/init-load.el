@@ -266,6 +266,7 @@
     yankpad
     saveplace
     perl6
+    spu
     
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error

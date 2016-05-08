@@ -1301,6 +1301,11 @@
   '(:tag ["google" "search"]))
 (hoarder:register "egison/egison"
   '(:load-path ["elisp"]))
+(hoarder:register "mola-T/spu"
+  '(:tag ["package" "elpa"]
+    :dependency ["mola-T/signal"
+                 "mola-T/timp"
+                 "mola-T/fifo-class"]))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
 ;;                     :dependency (("papaeye/go-mode.el"
