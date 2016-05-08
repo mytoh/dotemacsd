@@ -3539,6 +3539,10 @@
   '(:tag ["clojure" "lens" "monad" "haskell"]))
 (hoarder:fetch "yuki-kimoto/gitprep"
   '(:tag ["github" "perl" ]))
+(hoarder:fetch "thestinger/termite"
+  '(:tag ["terminal"]))
+(hoarder:fetch "dbohdan/structured-text-tools"
+  '(:tag ["awesome_list"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
