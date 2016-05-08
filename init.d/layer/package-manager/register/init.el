@@ -3543,6 +3543,14 @@
   '(:tag ["terminal"]))
 (hoarder:fetch "dbohdan/structured-text-tools"
   '(:tag ["awesome_list"]))
+(hoarder:fetch "zkat/sheeple"
+  '(:tag ["common_lisp" "clos" "oop"]))
+(hoarder:fetch "mmontone/descriptions"
+  '(:tag ["common_lisp"]))
+(hoarder:fetch "vseloved/rutils"
+  '(:tag ["common_lisp"]))
+(hoarder:fetch "F1LT3R/youtube-to-gif"
+  '(:tag ["youtube" "gif"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
