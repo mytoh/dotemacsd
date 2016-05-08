@@ -1310,6 +1310,9 @@
   '(:tag ["pdf"]))
 ;; (hoarder:register "http://git.chise.org/git/elisp/flim.git"
 ;;                  '(:tag ["flim" "luna"]))
+(hoarder:fetch "tetracat/emacsrepl"
+  '(:tag ["emacs" "repl"]))
+
 
 
 ;;;;; org
@@ -3551,6 +3554,9 @@
   '(:tag ["common_lisp"]))
 (hoarder:fetch "F1LT3R/youtube-to-gif"
   '(:tag ["youtube" "gif"]))
+(hoarder:fetch "cbednarski/hostess"
+  '(:tag ["dns" "/etc/hosts"]
+    :desc "[[https://www.youtube.com/watch?v=A-TxiI5Ja9E][OSDC 2016 - DNS for Developers by Jan-Piet Mens - YouTube]]"))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
