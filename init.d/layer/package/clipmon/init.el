@@ -7,6 +7,7 @@
            "clipmon")
   (after 'clipmon
       (enable-option clipmon-autoinsert-sound))     ; t for included beep, or path or nil
-  (clipmon-mode-start))
+  ;; (clipmon-mode-start)
+  )
 
 ;;; init.el ends here
