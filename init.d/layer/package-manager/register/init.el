@@ -1308,6 +1308,10 @@
                  "mola-T/fifo-class"]))
 (hoarder:register "TsubasaWp/Emoticon"
   '(:tag ["emoticon"]))
+(hoarder:register "zzkt/quiet"
+  '(:tag ["distraction_free" "multi_tasking"]
+    :desc " Mihaly Csikszentmihályi (1990). Flow: The Psychology of Optimal Experience. Harper & Row. ISBN 9780060162535
+    The Myth of Monotasking. https://hbr.org/2011/11/the-myth-of-monotasking/ "))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
 ;;                     :dependency (("papaeye/go-mode.el"
