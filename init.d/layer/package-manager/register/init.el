@@ -322,7 +322,7 @@
   '(:tag ["emms" "mpv"]))
 (hoarder:register "momomo5717/emms-player-mpv-volume"
   '(:tag ["emms" "mpv"]))
-(hoarder:register "alezost/emms-status.el"
+(hoarder:register "alezost/emms-state.el"
   '(:tag ["emms"]))
 (hoarder:register "r0man/soundklaus.el"
   '(:dependency [("magnars/dash.el" ( :compile nil))
