@@ -224,7 +224,7 @@
     erlang
     sml-mode
     beacon ; error invalid face :background
-    ;; clipmon
+    clipmon
     font-lock-studio
     emojify
     wget
@@ -266,7 +266,7 @@
     yankpad
     saveplace
     perl6
-    spu
+    ;;    spu
     
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
