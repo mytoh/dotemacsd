@@ -416,7 +416,7 @@
 
 ;; frame title
 (setq frame-title-format '(multiple-frames "%b"
-                           ("" "GNU Vim" "@" system-name)))
+                           ("" "GNU Vim" "@" (system-name))))
 
 ;; disable cursor in non selected windows
 (disable-option cursor-in-non-selected-windows)
