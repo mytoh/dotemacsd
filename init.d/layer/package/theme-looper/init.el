@@ -21,6 +21,6 @@
           reykjavik morning-star majapahit-dark redbelly badwolf
           hamburg omtose-phellack base16-harmonic16-dark
           Motoko motoko-night base16-oceanicnext-dark
-          hyperplane iceberg)))))
+          hyperplane iceberg myth)))))
 
 ;;; init.el ends here

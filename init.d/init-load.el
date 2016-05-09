@@ -517,7 +517,8 @@
   '(color-theme-sanityinc-tomorrow
     color-theme-sanityinc-solarized
     apropospriate
-    moe-theme))
+    moe-theme
+    myth))
 
 ;;;;; el-get
 ;; (require 'init-el-get)

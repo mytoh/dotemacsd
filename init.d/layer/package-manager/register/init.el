@@ -1583,6 +1583,7 @@
 (hoarder:register-theme "nanzhong/nine27-theme")
 (hoarder:register-theme "onurtemizkan/paganini")
 (hoarder:register-theme "sjrmanning/darkokai")
+(hoarder:register-theme "ivanlukianchuk/myth-theme")
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
               (cl-letf ((proj-path (thread-last (getenv "HUONE")
