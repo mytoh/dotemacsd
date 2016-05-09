@@ -1306,6 +1306,8 @@
     :dependency ["mola-T/signal"
                  "mola-T/timp"
                  "mola-T/fifo-class"]))
+(hoarder:register "TsubasaWp/Emoticon"
+  '(:tag ["emoticon"]))
 ;; (hoarder:register "papaeye/emacs-jscs"
 ;;                   '(:tag ["language" "javascript" "jscs" "format"]
 ;;                     :dependency (("papaeye/go-mode.el"
@@ -3563,6 +3565,10 @@
 (hoarder:fetch "cbednarski/hostess"
   '(:tag ["dns" "/etc/hosts"]
     :desc "[[https://www.youtube.com/watch?v=A-TxiI5Ja9E][OSDC 2016 - DNS for Developers by Jan-Piet Mens - YouTube]]"))
+(hoarder:fetch "silverwind/normalize-git-url"
+  '(:tag ["node" "javascript" "git"]))
+(hoarder:fetch "silverwind/overlay-scrollbars"
+  '(:tag ["firefox" "css"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
