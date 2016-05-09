@@ -86,6 +86,7 @@
 
     emms
     emms-info
+    emms-state
     ;; emms-mpd
     ;; emms-player-mpv
     ;; emms-player-mpv-volume
