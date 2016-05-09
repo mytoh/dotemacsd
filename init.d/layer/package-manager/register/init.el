@@ -1404,6 +1404,8 @@
   '(:tag ["org" "org-capture" "html"]))
 (hoarder:register "linktohack/org-breadcrumbs"
   '(:tag ["org"]))
+(hoarder:fetch "tumashu/org-capture-pop-frame"
+  '(:tag ["org-mode" "org-capture" "firefox"]))
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
