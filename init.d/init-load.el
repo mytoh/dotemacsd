@@ -355,7 +355,7 @@
     evil-visualstar
     evil-search-highlight-persist
     evil-textobj-between
-    evil-extra-operator
+    ;; evil-extra-operator
 
     evil-escape
     evil-easymotion
@@ -374,6 +374,7 @@
     ;; evil-lisp-state
     evil-magit
     syndicate
+    evil-ReplaceWithRegister
     ;; evil-org-mode
     ;; pure-evil
 

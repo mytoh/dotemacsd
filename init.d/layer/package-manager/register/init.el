@@ -274,8 +274,7 @@
   '(:tag ["evil" "org"]))
 (hoarder:register "edwtjo/evil-org-mode"
   '(:tag "evil"))
-
-
+(hoarder:register "Dewdrops/evil-ReplaceWithRegister")
 
 
 ;;;;;  general packages
