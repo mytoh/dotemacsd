@@ -3578,7 +3578,8 @@
   '(:tag ["firefox" "css"]))
 (hoarder:fetch "rmloveland/hn2org"
   '(:tag ["org-mode" "hacker_news"]))
-
+(hoarder:fetch "slburson/misc-extensions"
+  '(:tag ["common-lisp"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
