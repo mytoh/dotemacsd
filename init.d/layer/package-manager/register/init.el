@@ -1322,6 +1322,8 @@
 ;;                  '(:tag ["flim" "luna"]))
 (hoarder:fetch "tetracat/emacsrepl"
   '(:tag ["emacs" "repl"]))
+(hoarder:register "zonuexe/right-click-context"
+  '(:tag ["mouse"]))
 
 
 
