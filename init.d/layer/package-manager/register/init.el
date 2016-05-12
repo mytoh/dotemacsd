@@ -1324,7 +1324,7 @@
   '(:tag ["emacs" "repl"]))
 (hoarder:register "zonuexe/right-click-context"
   '(:tag ["mouse"]))
-
+(hoarder:register "ahungry/baby-gnu")
 
 
 ;;;;; org
@@ -1593,6 +1593,9 @@
 (hoarder:register-theme "onurtemizkan/paganini")
 (hoarder:register-theme "sjrmanning/darkokai")
 (hoarder:register-theme "ivanlukianchuk/myth-theme")
+(hoarder:register-theme "maio/eink-emacs")
+(hoarder:register-theme "caffo/monotropic-theme")
+
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
               (cl-letf ((proj-path (thread-last (getenv "HUONE")
@@ -3580,6 +3583,11 @@
   '(:tag ["org-mode" "hacker_news"]))
 (hoarder:fetch "slburson/misc-extensions"
   '(:tag ["common-lisp"]))
+(hoarder:fetch "et2010/Han"
+  '(:tag ["spacemacs" "chinese"]))
+(hoarder:fetch "MediaBrowser/Emby"
+  '(:tag ["htpc" "kodi" "plex"]
+    :download nil))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
