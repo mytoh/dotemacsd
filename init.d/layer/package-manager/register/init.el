@@ -3588,6 +3588,11 @@
 (hoarder:fetch "MediaBrowser/Emby"
   '(:tag ["htpc" "kodi" "plex"]
     :download nil))
+(hoarder:fetch "pr1ntf/iohyve"
+  '(:tag ["freebsd" "bhyve" "zfs"]))
+(hoarder:fetch "Flat/daunroda"
+  '(:tag ["golang" "danbooru"]))
+
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
