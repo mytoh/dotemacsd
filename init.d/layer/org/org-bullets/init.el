@@ -7,8 +7,7 @@
 (req 'org-bullets
   (cl-defun enable-org-bullets ()
     (org-bullets-mode 1))
-  ;; (add-hook 'org-mode-hook 'enable-org-bullets)
-  )
+  (add-hook 'org-mode-hook 'enable-org-bullets))
 
 
 ;;; init.el ends here
