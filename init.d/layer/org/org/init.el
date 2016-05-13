@@ -147,6 +147,7 @@
   (muki:org-babel-options)
   (muki:org-set-modules)
   (muki:org-capture-setting)
+  (muki:org-better-list-bullets)
   (add-hook 'org-mode-hook
             (lambda ()
               (add-hook 'before-save-hook
@@ -250,11 +251,11 @@
   (org-element-map (org-element-parse-buffer 'element) 'headline
     (lambda (h)
       (and (org-element-map h 'drawer
-             (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
-             nil t 'headline)
-           (let ((begin (org-element-property :begin h)))
-             (message "Entry with erroneous properties drawer at %d" begin)
-             begin)))))
+           (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
+           nil t 'headline)
+         (let ((begin (org-element-property :begin h)))
+           (message "Entry with erroneous properties drawer at %d" begin)
+           begin)))))
 
 (cl-defun muki:org-open-link-mpv ()
   (interactive)
@@ -266,6 +267,13 @@
       (`[:nothing]
         (message "can't find any link!")))
     ))
+
+(cl-defun muki:org-better-list-bullets ()
+  ;; [[http://www.howardism.org/Technical/Emacs/orgmode-wordprocessor.html][Org as a Word Processor]]
+  (font-lock-add-keywords 'org-mode
+                          '(("^ +\\([-*]\\) "
+                             (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•")))))))
+
 
 (req 'org-protocol)
 
