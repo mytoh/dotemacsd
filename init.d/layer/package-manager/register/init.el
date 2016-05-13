@@ -3592,6 +3592,9 @@
   '(:tag ["freebsd" "bhyve" "zfs"]))
 (hoarder:fetch "Flat/daunroda"
   '(:tag ["golang" "danbooru"]))
+(hoarder:fetch "filebot/filebot"
+  '(:tag ["tv" "drama" "anime" "renamer"]
+    :desc "http://www.filebot.net/"))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
