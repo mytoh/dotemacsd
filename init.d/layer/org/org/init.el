@@ -140,6 +140,12 @@
           ("i" "Inbox" entry (file "~/.org/inbox.org")
            "* %?\n%U"))))
 
+(cl-defun muki:org-better-list-bullets ()
+  ;; [[http://www.howardism.org/Technical/Emacs/orgmode-wordprocessor.html][Org as a Word Processor]]
+  (font-lock-add-keywords 'org-mode
+                          '(("^ +\\([-*]\\) "
+                             (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•")))))))
+
 (cl-defun muki:org-mode-hook-function ()
   (muki:org-general-options)
   (muki:org-startup-options)
@@ -268,11 +274,7 @@
         (message "can't find any link!")))
     ))
 
-(cl-defun muki:org-better-list-bullets ()
-  ;; [[http://www.howardism.org/Technical/Emacs/orgmode-wordprocessor.html][Org as a Word Processor]]
-  (font-lock-add-keywords 'org-mode
-                          '(("^ +\\([-*]\\) "
-                             (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•")))))))
+
 
 
 (req 'org-protocol)
