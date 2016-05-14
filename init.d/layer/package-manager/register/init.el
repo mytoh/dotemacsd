@@ -2596,7 +2596,8 @@
 (hoarder:fetch "whatyouhide/gotham-contrib"
   '(:tag ["colorscheme"])) 
 (hoarder:fetch "zovt/papier-gtk-theme") 
-
+(hoarder:fetch "libav/libav"
+  '(:tag ["multimedia" "video"])) 
 
 (hoarder:fetch "2xT/kaistapaa"
   '(:download nil)) 
@@ -3053,8 +3054,6 @@
 (hoarder:fetch "leafo/moonscript"
   '(:download nil)) 
 (hoarder:fetch "letsgetrandy/DICSS"
-  '(:download nil)) 
-(hoarder:fetch "libav/libav"
   '(:download nil)) 
 (hoarder:fetch "lzap/dancepill"
   '(:download nil)) 
@@ -3595,6 +3594,10 @@
 (hoarder:fetch "filebot/filebot"
   '(:tag ["tv" "drama" "anime" "renamer"]
     :desc "http://www.filebot.net/"))
+(hoarder:fetch "git://git.code.sf.net/p/sox/code"
+  '(:name "sox"))
+(hoarder:fetch "icy/pacapt"
+  '(:tag ["arch" "pacman" "freebsd" "pkgng"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
