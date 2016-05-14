@@ -438,6 +438,7 @@
     helm-kaomoji
     helm-swoop
     helm-describe-modes
+    helm-gitignore
     ;; helm-org-rifle
     ;; swiper
     ;; helm-company
