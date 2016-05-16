@@ -159,6 +159,7 @@
 (hoarder:register "alphapapa/helm-org-rifle"
   '(:tag ["org" "helm"]))
 (hoarder:register "masutaka/emacs-helm-qiita")
+(hoarder:register "markus1189/helm-proc")
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]
 ;;                    :dependency ["michael-heerdegen/iterators.el"]))
@@ -1595,7 +1596,8 @@
 (hoarder:register-theme "ivanlukianchuk/myth-theme")
 (hoarder:register-theme "maio/eink-emacs")
 (hoarder:register-theme "caffo/monotropic-theme")
-
+(hoarder:register-theme "0x414A/glacier-theme")
+(hoarder:register-theme "fade/deepsky-theme")
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
               (cl-letf ((proj-path (thread-last (getenv "HUONE")
@@ -3598,6 +3600,22 @@
   '(:name "sox"))
 (hoarder:fetch "icy/pacapt"
   '(:tag ["arch" "pacman" "freebsd" "pkgng"]))
+(hoarder:fetch "jschx/ufetch"
+  '(:tag ["screenfetch" "rice"]))
+(hoarder:fetch "enna-project/Enna-Media-Server"
+  '(:tag ["xbmc" "plex" "htpc"]
+    :desc "http://enna.geexbox.org/index.html"))
+(hoarder:fetch "ytaniike/mlterm_conf_with_ja.utf8"
+  '(:tag ["mlterm" "japanese" "configuration"]))
+(hoarder:fetch "ManuelSchneid3r/albert"
+  '(:tag ["qt" "launcher"]))
+(hoarder:fetch "igoradamenko/awsm.css"
+  '(:tag ["css"]))
+(hoarder:fetch "savonet/liquidsoap"
+  '(:tag ["streaming" "ffmpeg" "video"]
+    :desc "http://liquidsoap.fm/"))
+(hoarder:fetch "deech/shen-elisp"
+  '(:tag ["shen"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
