@@ -427,4 +427,7 @@
 ;; tooltip optimize
 (enable-option tooltip-reuse-hidden-frame)
 
+;; run gc when lose focus [[https://www.reddit.com/r/emacs/comments/4j828f/til_setq_gcconsthreshold_100000000/]]
+(add-hook 'focus-out-hook 'garbage-collect)
+
 ;;; config-setting.el ends here
