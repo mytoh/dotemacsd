@@ -3615,6 +3615,19 @@
     :desc "http://liquidsoap.fm/"))
 (hoarder:fetch "deech/shen-elisp"
   '(:tag ["shen"]))
+(hoarder:fetch "ctjhoa/spacevim"
+  '(:tag ["vim" "spacemacs"]))
+(hoarder:fetch "GNOME/adwaita-icon-theme"
+  '(:tag ["x111" "desktop" "theme"]))
+(hoarder:fetch "KaOSx/midna"
+  '(:tag ["x111" "desktop" "theme"]))
+(hoarder:fetch "KDE/peruse"
+  '(:tag ["comic" "viewer" "kde" "qt"]
+    :download nil))
+(hoarder:fetch "KDE/breeze-icons"
+  '(:tag ["x11" "kde" "icon" "theme"]))
+(hoarder:fetch "GNOME/girl"
+  '(:tag ["gnome" "radio" "streaming"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
