@@ -2568,8 +2568,7 @@
 (hoarder:fetch "Jehops/swm-maildir-modeline"
   '(:tag ["stumpwm" "freebsd"])) 
 (hoarder:fetch "MirBSD/mksh") 
-(hoarder:fetch "NitruxSA/flattr-icons") 
-(hoarder:fetch "NitruxSA/plasma-next-icons") 
+(hoarder:fetch "NitruxSA/luv-icon-theme") 
 (hoarder:fetch "derf/feh") 
 (hoarder:fetch "fabianalexisinostroza/Antu") 
 (hoarder:fetch "fish-shell/fish-shell") 
