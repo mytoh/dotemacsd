@@ -3618,9 +3618,9 @@
 (hoarder:fetch "ctjhoa/spacevim"
   '(:tag ["vim" "spacemacs"]))
 (hoarder:fetch "GNOME/adwaita-icon-theme"
-  '(:tag ["x111" "desktop" "theme"]))
+  '(:tag ["x11" "desktop" "theme"]))
 (hoarder:fetch "KaOSx/midna"
-  '(:tag ["x111" "desktop" "theme"]))
+  '(:tag ["x11" "desktop" "theme"]))
 (hoarder:fetch "KDE/peruse"
   '(:tag ["comic" "viewer" "kde" "qt"]
     :download nil))
@@ -3628,6 +3628,32 @@
   '(:tag ["x11" "kde" "icon" "theme"]))
 (hoarder:fetch "GNOME/girl"
   '(:tag ["gnome" "radio" "streaming"]))
+(hoarder:fetch "anshicat/dotfiles"
+  '(:tag ["firefox" "css"]
+    :desc "https://github.com/anshicat/dotfiles/tree/master/css"))
+(hoarder:fetch "xenlism/Xdwaita"
+  '(:tag ["x11" "desktop" "theme"]))
+(hoarder:fetch "MartinBriza/adwaita-qt"
+  '(:tag ["x11" "kde" "theme" "qt" "gnome"]))
+(hoarder:fetch "axxapy/Adwaita-dark-gtk2"
+  '(:tag ["x11" "desktop" "theme"]))
+(hoarder:fetch "rgcjonas/adwaita-semidark"
+  '(:tag ["x11" "desktop" "theme"]))
+(hoarder:fetch "chekavy/cheser-gtk2-theme"
+  '(:tag ["x11" "desktop" "theme"]))
+(hoarder:fetch "GNOME/gnome-themes-standard"
+  '(:tag ["x11" "desktop" "theme" "gnome"]))
+(hoarder:fetch "GNOME/gtk"
+  '(:tag ["x11" "desktop" "theme" "gnome"]))
+(hoarder:fetch "diegogangl/adwaita-neutral"
+  '(:tag ["x11" "desktop" "theme" "gnome"]))
+(hoarder:fetch "madmalik/mononoki"
+  '(:tag ["font"]))
+(hoarder:fetch "ewust/telex"
+  '(:tag ["tor" "censorship" "proxy"]
+    :desc "https://telex.cc
+ https://www.youtube.com/feed/subscriptions"))
+
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
