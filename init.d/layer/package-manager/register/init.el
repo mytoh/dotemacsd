@@ -3656,6 +3656,10 @@
 (hoarder:fetch "https://gitlab.com/gnutls/gnutls.git"
   '(:tag ["tls" "security"]
     :recursive t))
+(hoarder:fetch "novoid/filetags"
+  '(:tag ["tagging" "file_management"]))
+(hoarder:fetch "key-amb/clenv"
+  '(:tag ["shell" "rbenv"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
