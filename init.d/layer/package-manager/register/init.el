@@ -3653,8 +3653,9 @@
   '(:tag ["tor" "censorship" "proxy"]
     :desc "https://telex.cc
  https://www.youtube.com/feed/subscriptions"))
-
-
+(hoarder:fetch "https://gitlab.com/gnutls/gnutls.git"
+  '(:tag ["tls" "security"]
+    :recursive t))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
