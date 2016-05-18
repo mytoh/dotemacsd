@@ -439,6 +439,7 @@
     helm-swoop
     helm-describe-modes
     helm-gitignore
+    helm-proc
     ;; helm-org-rifle
     ;; swiper
     ;; helm-company
