@@ -1327,6 +1327,7 @@
   '(:tag ["mouse"]))
 (hoarder:register "ahungry/baby-gnu")
 
+(hoarder:register "netromdk/annotate-depth")
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"

@@ -268,6 +268,7 @@
     saveplace
     perl6
     right-click-context
+    annotate-depth
     ;;    spu
     
     ;; letcheck ; not work with pcase's let pattern
