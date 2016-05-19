@@ -1326,8 +1326,11 @@
 (hoarder:register "zonuexe/right-click-context"
   '(:tag ["mouse"]))
 (hoarder:register "ahungry/baby-gnu")
-
+(hoarder:fetch "xuchunyang/epm"
+  '(:tag ["elpa" "emacs" "package_manager"]))
 (hoarder:register "netromdk/annotate-depth")
+(hoarder:register "NicolasPetton/xref-js2"
+  '(:tag ["xref" "javascript"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -3661,6 +3664,12 @@
   '(:tag ["tagging" "file_management"]))
 (hoarder:fetch "key-amb/clenv"
   '(:tag ["shell" "rbenv"]))
+(hoarder:fetch "git://git.xfce.org/xfce/thunar"
+  '(:tag ["xfce" "file_manager"]))
+(hoarder:fetch "git://git.xfce.org/xfce/xfce4-dev-tools"
+  '(:tag ["xfce" "file_manager"]))
+(hoarder:fetch " https://git.torproject.org/tor.git")
+
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
