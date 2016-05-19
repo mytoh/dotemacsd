@@ -2336,7 +2336,9 @@
     :tag ["terminal"]))
 (hoarder:fetch "pcbsd/lumina"
   '(:tag ["freebsd" "pcbsd" "fluxbox" "de"]
-    :branch "qt4/0.7.2"))
+    ;; :branch "qt4/0.7.2"
+    :branch "qt5/0.8.8"
+    ))
 (hoarder:fetch "git://git.fluxbox.org/fluxbox.git"
   '(:tag ["WM" "desktop"]))
 (hoarder:fetch "RareAMV/WeebIRC"
@@ -3669,6 +3671,11 @@
 (hoarder:fetch "git://git.xfce.org/xfce/xfce4-dev-tools"
   '(:tag ["xfce" "file_manager"]))
 (hoarder:fetch " https://git.torproject.org/tor.git")
+(hoarder:fetch "https://code.qt.io/qt/qt5.git"
+  '(:tag ["qt" "qt5" "desktop" "toolkit"]))
+(hoarder:fetch "ryukinix/mal"
+  '(:tag ["python" "MyAnimeList" "MAL" "lainchan"]
+    :desc "https://lainchan.org/%CE%BB/res/16486.html"))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
