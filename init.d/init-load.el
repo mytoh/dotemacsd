@@ -269,6 +269,7 @@
     perl6
     right-click-context
     annotate-depth
+    xref-js2
     ;;    spu
     
     ;; letcheck ; not work with pcase's let pattern
