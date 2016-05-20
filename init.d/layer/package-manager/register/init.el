@@ -3678,6 +3678,8 @@
 (hoarder:fetch "ryukinix/mal"
   '(:tag ["python" "MyAnimeList" "MAL" "lainchan"]
     :desc "https://lainchan.org/%CE%BB/res/16486.html"))
+(hoarder:fetch "cutestrap/cutestrap"
+  '(:tag ["css" "bootstrap" "framework"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
