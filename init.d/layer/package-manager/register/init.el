@@ -1331,6 +1331,8 @@
 (hoarder:register "netromdk/annotate-depth")
 (hoarder:register "NicolasPetton/xref-js2"
   '(:tag ["xref" "javascript"]))
+(hoarder:register "cosmicexplorer/f3"
+  '(:tag ["helm"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"

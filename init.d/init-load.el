@@ -441,6 +441,7 @@
     helm-describe-modes
     helm-gitignore
     helm-proc
+    f3
     ;; helm-org-rifle
     ;; swiper
     ;; helm-company
