@@ -1333,6 +1333,7 @@
   '(:tag ["xref" "javascript"]))
 (hoarder:register "cosmicexplorer/f3"
   '(:tag ["helm"]))
+(hoarder:register "ankurdave/color-identifiers-mode")
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
