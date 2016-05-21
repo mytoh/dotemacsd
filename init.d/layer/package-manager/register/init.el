@@ -1605,6 +1605,9 @@
 (hoarder:register-theme "caffo/monotropic-theme")
 (hoarder:register-theme "0x414A/glacier-theme")
 (hoarder:register-theme "fade/deepsky-theme")
+(hoarder:register-theme "sjahl/emacs-theme-afterglow")
+(hoarder:register-theme "mesaMason/mbl-terminal-theme")
+
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
               (cl-letf ((proj-path (thread-last (getenv "HUONE")
@@ -3681,6 +3684,8 @@
     :desc "https://lainchan.org/%CE%BB/res/16486.html"))
 (hoarder:fetch "cutestrap/cutestrap"
   '(:tag ["css" "bootstrap" "framework"]))
+(hoarder:fetch "andlabs/libui"
+  '(:tag ["gui" "gtk" "linux" "mac" "windows"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
