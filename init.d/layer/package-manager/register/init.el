@@ -3699,6 +3699,7 @@
     :desc "http://cedeela.fr/%7Esimon/software/sequence/Sequence.html"))
 (hoarder:fetch "cute-jumper/monad.el"
   '(:tag ["monad" "emacs"]))
+(hoarder:fetch "blyxxyz/remotely")
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
