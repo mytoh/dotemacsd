@@ -1150,8 +1150,8 @@
           "syntax_checking"]))
 (hoarder:register "febuiles/tumble"
   '(:tag ["tumblr"]))
-;;(hoarder:register "emacsmirror/highlight-tail"
-;;  '(:tag ["highlight"]))
+(hoarder:register "emacsmirror/highlight-tail"
+  '(:tag ["highlight"]))
 (hoarder:register "rbanffy/selectric-mode"
   '(:tag ["sound" "typewriter"]))
 (hoarder:register "nicferrier/emacs-proc-net"
@@ -1338,6 +1338,18 @@
   '(:dependency ["doublep/datetime"]))
 (hoarder:fetch "git://git.sv.gnu.org/hook-helpers-el.git"
   '(:tag ["hook"]))
+(hoarder:register "http://www.rupert-lane.org/inform-mode/inform-mode.git"
+  '(:tag ["game" "inform" "z-code" "z-machine" "interactive_fiction"]))
+(hoarder:register "bloat/emacs-glulx"
+  '(:tag ["game" "inform" "z-machine" "glulx" "glk"]
+    :load-path ["src" "glk/src"]))
+(hoarder:register "alezost/ducpel"
+  '(:tag ["game" "sokoban"]))
+(hoarder:register "emacsmirror/random-idle-quote")
+(hoarder:register "https://gist.github.com/dto/4112806.git"
+  '(:tag ["rougelike" "game"]))
+(hoarder:register "killdash9/tron.el"
+  '(:tag ["game" "TRON"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -3700,6 +3712,8 @@
 (hoarder:fetch "cute-jumper/monad.el"
   '(:tag ["monad" "emacs"]))
 (hoarder:fetch "blyxxyz/remotely")
+(hoarder:fetch "afollestad/impression"
+  '(:tag ["android" "photo" "gallery"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
@@ -3715,6 +3729,9 @@
 ;; '(:tag ["common_lisp"]
 ;; :type hg))
 
+;; TODO cvs support
+;; nethack-el
+;; cvs -d:pserver:anonymous@cvs.sv.gnu.org:/sources/nethack-el co . 
 
 ;;; init-hoarder-registers.el ends here
 ;;

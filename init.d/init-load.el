@@ -272,6 +272,9 @@
     xref-js2
     color-identifiers-mode
     logview
+    ducpel ;; game
+    random-idle-quote
+    tron
     ;;    spu
     
     ;; letcheck ; not work with pcase's let pattern
@@ -338,7 +341,7 @@
     ;; mic-paren
     ;; paren
     ;; highlight-sexp
-    ;; highlight-tail
+    highlight-tail
     ;; auto-highlight-symbol
     ;; highlight-stages
     ;; highlight-backquotes-mode
