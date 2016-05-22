@@ -44,7 +44,9 @@
             "Programming" "Splatoon"
             "Hyper Light Drifter"
             "Factorio"
-            "Xenoblade Chronicles X"))
+            "Xenoblade Chronicles X"
+            "Project Reality: BF2"
+            "Stellaris"))
     )
 
   (add-global-key "C-c h" #'helm-muki)

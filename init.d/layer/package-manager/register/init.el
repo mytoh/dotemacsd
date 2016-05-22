@@ -1334,6 +1334,10 @@
 (hoarder:register "cosmicexplorer/f3"
   '(:tag ["helm"]))
 (hoarder:register "ankurdave/color-identifiers-mode")
+(hoarder:register "doublep/logview"
+  '(:dependency ["doublep/datetime"]))
+(hoarder:fetch "git://git.sv.gnu.org/hook-helpers-el.git"
+  '(:tag ["hook"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -3686,6 +3690,15 @@
   '(:tag ["css" "bootstrap" "framework"]))
 (hoarder:fetch "andlabs/libui"
   '(:tag ["gui" "gtk" "linux" "mac" "windows"]))
+(hoarder:fetch "caskroom/homebrew-fonts"
+  '(:tag ["homebrew" "font"]))
+(hoarder:fetch "Lacsap-/4scanner"
+  '(:tag ["4chan" "lainchan" "python"]))
+(hoarder:fetch "c-cube/sequence"
+  '(:tag ["ocaml" "sequence" "utility"]
+    :desc "http://cedeela.fr/%7Esimon/software/sequence/Sequence.html"))
+(hoarder:fetch "cute-jumper/monad.el"
+  '(:tag ["monad" "emacs"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files

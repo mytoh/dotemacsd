@@ -270,7 +270,8 @@
     right-click-context
     annotate-depth
     xref-js2
-    color-identifiers
+    color-identifiers-mode
+    logview
     ;;    spu
     
     ;; letcheck ; not work with pcase's let pattern
