@@ -4,7 +4,7 @@
 
 ;;;;; css-eldoc
 (req 'css-eldoc
-  (turn-on-css-eldoc))
+  (css-eldoc-enable))
 
 
 ;;; init.el ends here
