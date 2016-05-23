@@ -1350,7 +1350,7 @@
   '(:tag ["rougelike" "game"]))
 (hoarder:register "killdash9/tron.el"
   '(:tag ["game" "TRON"]))
-
+(hoarder:register "https://gitlab.com/fommil/elisp-fmt.git")
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
   '(:load-path ["lisp" "contrib/lisp"]
@@ -3714,6 +3714,22 @@
 (hoarder:fetch "blyxxyz/remotely")
 (hoarder:fetch "afollestad/impression"
   '(:tag ["android" "photo" "gallery"]))
+(hoarder:fetch "ciromattia/kcc"
+  '(:tag ["kindle" "mobi" "epub"]))
+(hoarder:fetch "ballsackwm/ballsackwm"
+  '(:tag ["wm" "x11"]))
+(hoarder:fetch "bhilburn/powerlevel9k"
+  '(:tag ["zsh" "powerline"]))
+(hoarder:fetch "gabrielelana/awesome-terminal-fonts"
+  '(:tag ["terminal" "powerline" "font" "icon"]))
+(hoarder:fetch "Lokaltog/powerline-fonts"
+  '(:tag ["powerline" "font" "icon"]))
+(hoarder:fetch "Mayccoll/Gogh"
+  '(:tag ["colorscheme" "gnome" "elementaryos" "terminal"]))
+(hoarder:fetch "supermarin/YosemiteSanFranciscoFont"
+  '(:tag ["font" "OSX"]))
+(hoarder:fetch "horst3180/arc-firefox-theme"
+  '(:tag ["theme" "firefox"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
