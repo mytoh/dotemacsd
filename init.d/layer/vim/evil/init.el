@@ -19,6 +19,8 @@
                  evil-cjk-emacs-word-boundary)
   (disable-option evil-move-cursor-back)
   (set-option evil-esc-delay 0.001)
+  ;; fix for undor behaviour on emacs-25
+  (enable-option evil-in-single-undo)
 
   ;; * Prevent the visual selection overriding my system clipboard?
   ;; +On some operating systems, there is only one clipboard for both *copied* and
