@@ -1626,7 +1626,7 @@
 (hoarder:register-theme "fade/deepsky-theme")
 (hoarder:register-theme "sjahl/emacs-theme-afterglow")
 (hoarder:register-theme "mesaMason/mbl-terminal-theme")
-
+(hoarder:register-theme "hlissner/emacs-doom-theme")
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
               (cl-letf ((proj-path (thread-last (getenv "HUONE")
