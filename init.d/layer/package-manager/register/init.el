@@ -1351,6 +1351,9 @@
 (hoarder:register "killdash9/tron.el"
   '(:tag ["game" "TRON"]))
 (hoarder:register "https://gitlab.com/fommil/elisp-fmt.git")
+(hoarder:register "ksjogo/mini-header-line"
+  '(:tag ["header-line"]))
+
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
   '(:load-path ["lisp" "contrib/lisp"]

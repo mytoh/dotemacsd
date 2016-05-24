@@ -275,6 +275,7 @@
     ducpel ;; game
     random-idle-quote
     tron
+    mini-header-line
     ;;    spu
     
     ;; letcheck ; not work with pcase's let pattern
