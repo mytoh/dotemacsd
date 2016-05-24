@@ -3733,6 +3733,8 @@
   '(:tag ["font" "OSX"]))
 (hoarder:fetch "horst3180/arc-firefox-theme"
   '(:tag ["theme" "firefox"]))
+(hoarder:fetch "derekstavis/plugin-fonts"
+  '(:tag ["fish" "font" "oh-my-fish"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
