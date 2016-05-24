@@ -1354,6 +1354,8 @@
 (hoarder:register "ksjogo/mini-header-line"
   '(:tag ["header-line"]))
 (hoarder:register "tarsius/no-littering")
+(hoarder:register "davep/festival.el"
+  '(:tag ["festival" "audio" "synthesis"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
