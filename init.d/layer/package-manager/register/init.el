@@ -1353,6 +1353,7 @@
 (hoarder:register "https://gitlab.com/fommil/elisp-fmt.git")
 (hoarder:register "ksjogo/mini-header-line"
   '(:tag ["header-line"]))
+(hoarder:register "tarsius/no-littering")
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"

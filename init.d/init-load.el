@@ -51,6 +51,7 @@
 
 (muki-layer:load-layers 'package
   '(
+    no-littering
     migemo
     ssh-config-mode
     emacs-refactor
