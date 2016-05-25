@@ -46,7 +46,8 @@
             "Factorio"
             "Xenoblade Chronicles X"
             "Project Reality: BF2"
-            "Stellaris"))
+            "Stellaris"
+            "The Elder Scrolls V: Skyrim"))
     )
 
   (add-global-key "C-c h" #'helm-muki)
