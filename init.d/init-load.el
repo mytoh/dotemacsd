@@ -116,7 +116,7 @@
     hi2
     ghc
     sunrise-commander
-    multiple-cursors
+    ;; multiple-cursors
     google-translate
     form-feed
     aumix-mode
