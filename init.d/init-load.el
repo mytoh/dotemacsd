@@ -51,7 +51,7 @@
 
 (muki-layer:load-layers 'package
   '(
-    no-littering
+    ;; no-littering
     migemo
     ssh-config-mode
     emacs-refactor
@@ -277,7 +277,7 @@
     random-idle-quote
     tron
     mini-header-line
-    ;;    spu
+    spu
     
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
