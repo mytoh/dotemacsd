@@ -1190,7 +1190,8 @@
 (hoarder:register "jcollard/elm-mode"
   '(:tag ["elm" "language" "haskell"]))
 (hoarder:register "EricCrosson/unkillable-scratch")
-(hoarder:register "ryuslash/mode-icons")
+(hoarder:register "ryuslash/mode-icons"
+  '(:tag ["mode-line" "emoji" "icon"]))
 (hoarder:register "mrkkrp/char-menu"
   '(:tag ["unicode"]
     :dependency ["mrkkrp/avy-menu"]))
