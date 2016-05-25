@@ -3738,6 +3738,17 @@
   '(:tag ["theme" "firefox"]))
 (hoarder:fetch "derekstavis/plugin-fonts"
   '(:tag ["fish" "font" "oh-my-fish"]))
+(hoarder:fetch "flok99/httping"
+  '(:tag ["http" "ping"]))
+(hoarder:fetch "farrokhi/dnsdiag"
+  '(:recursive t
+    :tag ["dns" "ping" "network"]))
+(hoarder:fetch "mozilla/gecko-dev"
+  '(:tag ["firefox" "browser"]))
+(hoarder:fetch "tudurom/rainbou"
+  '(:tag ["colorscheme" "firefox" "st" "urxvt" "vimperator" "webcolors"]))
+(hoarder:fetch "tudurom/cloudy-gtk"
+  '(:tag ["theme" "gtk"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
