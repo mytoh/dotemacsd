@@ -3750,6 +3750,8 @@
   '(:tag ["colorscheme" "firefox" "st" "urxvt" "vimperator" "webcolors"]))
 (hoarder:fetch "tudurom/cloudy-gtk"
   '(:tag ["theme" "gtk"]))
+(hoarder:fetch "uasi/skk-emoji-jisyo"
+  '(:tag ["skk" "emoji"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
