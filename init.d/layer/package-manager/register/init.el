@@ -1357,6 +1357,9 @@
 (hoarder:register "tarsius/no-littering")
 (hoarder:register "davep/festival.el"
   '(:tag ["festival" "audio" "synthesis"]))
+(hoarder:register "aaronbieber/tiny-menu.el")
+(hoarder:register "rlupton20/sshman"
+  '(:tag ["ssh" "term"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -3745,13 +3748,18 @@
   '(:recursive t
     :tag ["dns" "ping" "network"]))
 (hoarder:fetch "mozilla/gecko-dev"
-  '(:tag ["firefox" "browser"]))
+  '(:tag ["firefox" "browser"]
+    :download nil))
 (hoarder:fetch "tudurom/rainbou"
   '(:tag ["colorscheme" "firefox" "st" "urxvt" "vimperator" "webcolors"]))
 (hoarder:fetch "tudurom/cloudy-gtk"
   '(:tag ["theme" "gtk"]))
 (hoarder:fetch "uasi/skk-emoji-jisyo"
   '(:tag ["skk" "emoji"]))
+(hoarder:fetch "Fuuzetsu/torrentinfo"
+  '(:tag ["python" "torrent"]))
+(hoarder:fetch "dymatic/Archimedes"
+  '(:tag ["haskell"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
