@@ -1692,6 +1692,7 @@
 ;; (hoarder:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
 ;;;;; not library
+(hoarder:fetch "onodera-punpun/dotfiles") 
 (hoarder:fetch "purcell/emacs.d")
 (hoarder:fetch "redguardtoo/mastering-emacs-in-one-year-guide")
 (hoarder:fetch "git://git.savannah.nongnu.org/emacs-tiny-tools.git")
@@ -3194,8 +3195,6 @@
   '(:download nil)) 
 (hoarder:fetch "omcljs/om"
   '(:download nil)) 
-(hoarder:fetch "onodera-punpun/dotfiles"
-  '(:download nil)) 
 (hoarder:fetch "openssh/openssh-portable"
   '(:download nil)) 
 (hoarder:fetch "pallet/thread-expr"
@@ -3760,6 +3759,33 @@
   '(:tag ["python" "torrent"]))
 (hoarder:fetch "dymatic/Archimedes"
   '(:tag ["haskell"]))
+(hoarder:fetch "git://git.openbox.org/mikachu/openbox"
+  '(:tag ["openbox"]
+    :depth nil))
+(hoarder:fetch "git://git.openbox.org/dana/obconf"
+  '(:depth nil
+    :tag ["openbox"]))
+(hoarder:fetch "https://gitlab.com/o9000/tint2.git"
+  '(:tag ["panel" "openbox" "x11" "wm"]))
+(hoarder:fetch "dglava/arc-openbox"
+  '(:tag ["theme" "openbox"]))
+(hoarder:fetch "https://bitbucket.org/fabriceT/openbox-menu"
+  '(:type :hg
+    :tag ["openbox"]))
+(hoarder:fetch "https://chromium.googlesource.com/webm/libvpx"
+  '(:tag ["video" "format" "webm"]
+    :type :git
+    :depth nil))
+(hoarder:fetch "grassmunk/Platinum9"
+  '(:tag ["theme" "gtk" "icon" "macos9"]))
+(hoarder:fetch "actionless/oomox"
+  '(:tag ["theme" "gtk" "openbox"]))
+(hoarder:fetch "dylanaraps/dotfiles"
+  '(:tag ["openbox"]))
+(hoarder:fetch "jurassicplayer/Weeb-Themes"
+  '(:tag ["gtk" "openbox" "SDDM" "ksplashx"]))
+(hoarder:fetch "fvwmorg/fvwm"
+  '(:tag ["wm" "desktop" "x11"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
