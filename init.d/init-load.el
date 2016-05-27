@@ -278,6 +278,7 @@
     tron
     mini-header-line
     spu
+    sshman
     
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
