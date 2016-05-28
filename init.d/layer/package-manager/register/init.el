@@ -1634,6 +1634,8 @@
 (hoarder:register-theme "sjahl/emacs-theme-afterglow")
 (hoarder:register-theme "mesaMason/mbl-terminal-theme")
 (hoarder:register-theme "hlissner/emacs-doom-theme")
+(hoarder:register-theme "chris-etheridge/alabaster-emacs")
+
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
               (cl-letf ((proj-path (thread-last (getenv "HUONE")
@@ -3786,6 +3788,18 @@
   '(:tag ["gtk" "openbox" "SDDM" "ksplashx"]))
 (hoarder:fetch "fvwmorg/fvwm"
   '(:tag ["wm" "desktop" "x11"]))
+(hoarder:fetch "itstaken/dot-files"
+  '(:tag ["dotfiles" "fvwm"]))
+(hoarder:fetch "vakuum/fvwm-mtp"
+  '(:tag ["fvwm"]))
+(hoarder:fetch "dkeg/crayolo"
+  '(:tag ["xresources" "colorscheme"]))
+(hoarder:fetch "awesomeWM/awesome")
+(hoarder:fetch "agentd00nut/watch_shows"
+  '(:tag ["anime" "anime_on_hand" "python" "mpv"]))
+(hoarder:fetch "bellflower2015/pspkg"
+  '(:tag ["freebsd" "pkgng" "ports"]
+    :desc "http://qiita.com/bellflower2015/items/4aa2f388a29b1702dc0e"))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
