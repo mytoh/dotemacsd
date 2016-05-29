@@ -34,7 +34,8 @@
                   "qcomicbook"
                   "mlterm"
                   "xombrero"
-                  "lxappearance"))
+                  "lxappearance"
+                  "corebird"))
     ;; remove bookmark source temporally
     (cl-delete 'helm-source-bookmarks helm-muki-sources)
 
