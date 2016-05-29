@@ -1360,6 +1360,9 @@
 (hoarder:register "aaronbieber/tiny-menu.el")
 (hoarder:register "rlupton20/sshman"
   '(:tag ["ssh" "term"]))
+(hoarder:register "theBlackDragon/fvwm-mode")
+(hoarder:fetch "myrkr/dictionary-el"
+  '(:tag ["dictionary" "english"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -3367,8 +3370,7 @@
   '(:download nil)) 
 (hoarder:fetch "tmux-plugins/tpm"
   '(:download nil)) 
-(hoarder:fetch "tmux/tmux"
-  '(:download nil)) 
+(hoarder:fetch "tmux/tmux") 
 (hoarder:fetch "tolitius/mount"
   '(:download nil)) 
 (hoarder:fetch "tommy351/warehouse"
@@ -3800,6 +3802,23 @@
 (hoarder:fetch "bellflower2015/pspkg"
   '(:tag ["freebsd" "pkgng" "ports"]
     :desc "http://qiita.com/bellflower2015/items/4aa2f388a29b1702dc0e"))
+(hoarder:fetch "bibanon/BASC-py4chan"
+  '(:tag ["python" "4chan"]))
+(hoarder:fetch "snwh/paper-icon-theme"
+  '(:tag ["icon"]))
+(hoarder:fetch "snwh/paper-gtk-theme"
+  '(:tag ["gtk" "theme"]))
+(hoarder:fetch "usk81/cook_recipe"
+  '(:tag ["recipe" "cooking"]))
+(hoarder:fetch "baedert/corebird"
+  '(:tag ["gtk" "twitter"]
+    :site "http://corebird.baedert.org/"))
+(hoarder:fetch "lyricat/Hotot"
+  '(:tag ["gtk" "qt" "twitter"]))
+(hoarder:fetch "muan/emojilib"
+  '(:tag ["emoji" "javascript"]))
+(hoarder:fetch "notwaldorf/emoji-translate"
+  '(:tag ["emoji" "javascript"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
