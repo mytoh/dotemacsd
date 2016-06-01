@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: pcs
+# key: pcs
+# --
+(pcase $1
+($2
+ $3)
+(_ $4))
