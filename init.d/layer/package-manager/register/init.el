@@ -1361,9 +1361,12 @@
 (hoarder:register "rlupton20/sshman"
   '(:tag ["ssh" "term"]))
 (hoarder:register "theBlackDragon/fvwm-mode")
-(hoarder:fetch "myrkr/dictionary-el"
+(hoarder:register "myrkr/dictionary-el"
   '(:tag ["dictionary" "english"]))
-
+(hoarder:register "mrkkrp/common-lisp-snippets"
+  '(:tag ["yasnippet" "common-lisp"]))
+(hoarder:register "bcbcarl/emacs-wttrin"
+  '(:tag ["weather" "wttr.in"]))
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
   '(:load-path ["lisp" "contrib/lisp"]
@@ -2390,7 +2393,8 @@
 (hoarder:fetch "novoid/org-mode-workshop"
   '(:tag ["orgmode"]))
 (hoarder:fetch "minetest/minetest"
-  '(:tag ["game" "minecraft"]))
+  '(:tag ["game" "minecraft"]
+    :download nil))
 (hoarder:fetch  "glennrp/libpng"
   '(:tag ["png" "graphic"]))
 (hoarder:fetch "gapan/xdgmenumaker"
@@ -3428,7 +3432,7 @@
 (hoarder:fetch "webyrd/miniKanren"
   '(:download nil)) 
 (hoarder:fetch "windelicato/dotfiles"
-  '(:download nil)) 
+  '(:tag ["dotfiles" "fvwm"])) 
 (hoarder:fetch "windymelt/p2p2ch"
   '(:download nil)) 
 (hoarder:fetch "wooorm/alex"
@@ -3521,8 +3525,9 @@
   '(:desc "https://www.reddit.com/r/unixporn/comments/4h5aai/cwm_lacking/"
     :tag ["OpenBSD"]))
 (hoarder:fetch "git://arcetera.moe/etc.git"
-  '(:desc "https://www.reddit.com/r/unixporn/comments/4h5aai/cwm_lacking/"
-    :tag ["OpenBSD"]))
+  '(:desc "https://www.reddit.com/r/unixporn/comments/4h5aai/cwm_lacking/
+https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
+    :tag ["OpenBSD" "cwm"]))
 (hoarder:fetch "IonicaBizau/scrape-it"
   '(:tag ["javascript" "scraping"]))
 (hoarder:fetch "looterz/grimd"
@@ -3819,7 +3824,16 @@
   '(:tag ["emoji" "javascript"]))
 (hoarder:fetch "notwaldorf/emoji-translate"
   '(:tag ["emoji" "javascript"]))
-
+(hoarder:fetch "sriramkswamy/dotemacs"
+  '(:tag ["emacs"]))
+(hoarder:fetch "chneukirchen/cwm"
+  '(:tag ["openbsd" "wm"]))
+(hoarder:fetch "Keyamoon/IcoMoon-Free"
+  '(:tag ["icon" "font"]))
+(hoarder:fetch "tudurom/dotfiles"
+  '(:tag ["cwm" "bspwm" "firefox" "reddit" "unixporn"]))
+(hoarder:fetch "git://arcetera.moe/git/pg.git"
+  '(:tag ["pager"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
