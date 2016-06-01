@@ -5,6 +5,7 @@
 ;;; Code:
 
 (req 'mini-header-line
-  (add-hook 'emacs-lisp-mode-hook #'mini-header-line-mode-on))
+  (add-hook 'emacs-lisp-mode-hook
+            #'mini-header-line-minor-mode))
 
 ;;; init.el ends here
