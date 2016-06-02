@@ -3258,8 +3258,6 @@
   '(:download nil)) 
 (hoarder:fetch "robfig/pathtree"
   '(:download nil)) 
-(hoarder:fetch "robm/dzen"
-  '(:download nil)) 
 (hoarder:fetch "romeovs/creep"
   '(:download nil)) 
 (hoarder:fetch "rossy2401/img2xterm"
@@ -3834,6 +3832,26 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
   '(:tag ["cwm" "bspwm" "firefox" "reddit" "unixporn"]))
 (hoarder:fetch "git://arcetera.moe/git/pg.git"
   '(:tag ["pager"]))
+(hoarder:fetch "cboxdoerfer/fsearch"
+  '(:tag ["qt" "gtk" "everything" "search"]))
+(hoarder:fetch "urob/fvwm-tiling"
+  '(:tag ["fvwm" "tiling" "wm"]
+    :desc "https://www.reddit.com/r/unixporn/comments/1oxszb/debian_fvwm2_what_lives_on_my_stable_partition/ccwrtt6"))
+(hoarder:fetch "rubykat/FvwmPiazza"
+  '(:tag ["fvwm" "tiling" "wm"]
+    :desc "https://www.reddit.com/r/unixporn/comments/1oxszb/debian_fvwm2_what_lives_on_my_stable_partition/ccwrtt6"))
+(hoarder:fetch "u-ra/bar"
+  '(:tag ["bar" "panel" "lemonbar" "wm" "desktop"]))
+(hoarder:fetch "venam/2bwm"
+  '(:tag ["wm" "bar" "panel" "desktop"]))
+(hoarder:fetch "cursedhydra/dotfilles-Dracula"
+  '(:tag ["i3" "lemonbar" "termite"]
+    :desc "https://www.reddit.com/r/unixporn/comments/4lsuj1/i3my_first_rice/"))
+(hoarder:fetch "Verb656/Dotfiles"
+  '(:tag ["i3" "yabar"]))
+(hoarder:fetch "robm/dzen"
+  '(:tag ["bar" "panel" "wm"])) 
+
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
