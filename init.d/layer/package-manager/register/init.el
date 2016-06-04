@@ -3851,7 +3851,30 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
   '(:tag ["i3" "yabar"]))
 (hoarder:fetch "robm/dzen"
   '(:tag ["bar" "panel" "wm"])) 
-
+(hoarder:fetch "jaagr/lemonbuddy"
+  '(:tag ["bar" "panel" "lemonbar" "wm"]))
+(hoarder:fetch "dcat/swm"
+  '(:tag ["wm"]))
+(hoarder:fetch "arcetera/wmrc"
+  '(:tag ["wm" "wmutils"]))
+(hoarder:fetch "antonio-malcolm/satin"
+  '(:tag ["gtk" "theme" "openbox"]))
+(hoarder:fetch "antonio-malcolm/corgi-scripts"
+  '(:tag ["openbox" "menu" "pipe"]))
+(hoarder:fetch "mrshampoo/jeti-filemanager"
+  '(:tag ["file" "manager" "ncurses" "cli"]
+    :desc "https://www.youtube.com/watch?v=5ejIgvBTOc8"))
+(hoarder:fetch "moviuro/net-tools"
+  '(:tag ["dns"]
+    :desc "lie-to-me"))
+(hoarder:fetch "noctuid/evil-guide"
+  '(:tag ["evil" "guide"]))
+(hoarder:fetch "MorbZ/OpenSansEmoji"
+  '(:tag ["font" "opensans" "emoji" "android"]))
+(hoarder:fetch "isaacs/nave"
+  '(:tag ["setup" "node" "javascript"]))
+(hoarder:fetch "fullermd/ctwm-mirror"
+  '(:tag ["twm" "ctwm" "mirror" "wm"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
