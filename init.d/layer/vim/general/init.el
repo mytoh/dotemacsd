@@ -6,7 +6,7 @@
 
 (req 'general
 
-  (setq general-define-keymaps 'evil-normal-state-map)
+  (setq general-default-keymaps 'evil-normal-state-map)
   (setq general-default-prefix "SPC")
   (setq general-default-states '(normal motion visual))
   
