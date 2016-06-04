@@ -3877,6 +3877,23 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
   '(:tag ["twm" "ctwm" "mirror" "wm"]))
 (hoarder:fetch "git://git.savannah.nongnu.org/ratpoison.git"
   '(:tag ["wm" "tiling" "stumpwm"]))
+(hoarder:fetch "gandelman-a/ratpoison"
+  '(:tag ["wm" "ratpoison" "configuration"]))
+(hoarder:fetch "git://z3bra.org/dotfiles"
+  '(:tag ["dotfiles"]))
+(hoarder:fetch "dimatura/rpbar"
+  '(:tag ["bar" "ratpoison" "panel"]))
+(hoarder:fetch "jbaber/ratpoison_scripts"
+  '(:tag ["ratpoison"]))
+(hoarder:fetch "raboof/notion"
+  '(:tag ["tiling" "wm"]))
+(hoarder:fetch "http://git.suckless.org/dwm"
+  '(:type :git
+    :depth nil
+    :tag ["dwm" "wm" "tiling"]))
+(hoarder:fetch "http://www.6809.org.uk/repos/evilwm.git"
+  '(:tag ["wm"]
+    :depth nil))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
