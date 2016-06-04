@@ -3875,6 +3875,8 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
   '(:tag ["setup" "node" "javascript"]))
 (hoarder:fetch "fullermd/ctwm-mirror"
   '(:tag ["twm" "ctwm" "mirror" "wm"]))
+(hoarder:fetch "git://git.savannah.nongnu.org/ratpoison.git"
+  '(:tag ["wm" "tiling" "stumpwm"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
