@@ -3830,7 +3830,7 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
   '(:tag ["icon" "font"]))
 (hoarder:fetch "tudurom/dotfiles"
   '(:tag ["cwm" "bspwm" "firefox" "reddit" "unixporn"]))
-(hoarder:fetch "git://arcetera.moe/git/pg.git"
+(hoarder:fetch "git://arcetera.moe/pg.git"
   '(:tag ["pager"]))
 (hoarder:fetch "cboxdoerfer/fsearch"
   '(:tag ["qt" "gtk" "everything" "search"]))
