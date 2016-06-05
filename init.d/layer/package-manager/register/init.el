@@ -3894,6 +3894,14 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
 (hoarder:fetch "http://www.6809.org.uk/repos/evilwm.git"
   '(:tag ["wm"]
     :depth nil))
+(hoarder:fetch "bwesterb/claviger"
+  '(:tag ["ssh" "python"]))
+(hoarder:fetch "Shinmera/portacle"
+  '(:tag ["lisp" "sbcl" "emacs" "build" "portable"]
+    :desc "static building of emacs memo https://github.com/Shinmera/portacle/blob/master/build/STATICEMACS.md"))
+(hoarder:fetch "http://offog.org/git/vdesk.git"
+  '(:tag ["virtual_desktop" "workspace" "twm"]
+    :depth nil))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
