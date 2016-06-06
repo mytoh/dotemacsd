@@ -2698,7 +2698,7 @@
 (hoarder:fetch "Hund/Userstyles"
   '(:download nil)) 
 (hoarder:fetch "IgnorantGuru/spacefm"
-  '(:download nil)) 
+  '(:branch "alpha")) 
 (hoarder:fetch "ImageMagick/ImageMagick"
   '(:download nil)) 
 (hoarder:fetch "ItzBlitz98/torrentflix"
@@ -3902,6 +3902,77 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
 (hoarder:fetch "http://offog.org/git/vdesk.git"
   '(:tag ["virtual_desktop" "workspace" "twm"]
     :depth nil))
+(hoarder:fetch "git://git.code.sf.net/p/vtwm/code"
+  '(:name "vtwm"
+    :tag ["wm" "twm"]))
+(hoarder:fetch "git://git.code.sf.net/p/flwm/flwm"
+  '(:tag ["wm" "fltk"]))
+(hoarder:fetch "teracow/bulk-google-image-download"
+  '(:tag ["google" "image" "search" "download" "shellscript"]))
+(hoarder:fetch "http://projects.pekdon.net/git/geh.git"
+  '(:depth nil
+    :tag ["image" "viewer" "feh"]))
+(hoarder:fetch "syythe/tangerine"
+  '(:tag ["artwiz" "lemon" "font" "bitmap"]))
+(hoarder:fetch "http://www.pekwm.org/git/pekwm.git"
+  '(:tag ["wm"]
+    :depth nil))
+(hoarder:fetch "http://projects.pekdon.net/git/pekwm_menu_tools.git"
+  '(:tag ["pekwm"]
+    :depth nil))
+(hoarder:fetch "tbilik/timix-dark"
+  '(:tag ["gtk" "theme" "numix" "oomox"]))
+(hoarder:fetch "tbilik/Linux-Configs"
+  '(:tag ["i3" "dotfiles" "emacs"]))
+(hoarder:fetch "https://bitbucket.org/portix/dwb.git"
+  '(:depth nil
+    :tag ["browser" "webkit" "gtk"]))
+(hoarder:fetch "xero/stylez"
+  '(:tag ["css" "firefox" "stylish"]))
+(hoarder:fetch "http://hack.org/mc/git/mcwm"
+  '(:type :git
+    :tag ["wm" "2bwm"]
+    :depth nil))
+(hoarder:fetch "nealey/9wm"
+  '(:tag ["wm" "plan9" "rio"]))
+(hoarder:fetch "Cloudef/monsterwm-xcb"
+  '(:tag ["wm" "monsterwm" "xcb"]))
+(hoarder:fetch "c00kiemon5ter/monsterwm"
+  '(:tag ["wm"]))
+(hoarder:fetch "hchargois/gohufont"
+  '(:tag ["font" "bitmap"]))
+(hoarder:fetch "kori/metis-font"
+  '(:tag ["font" "gofu" "bitmap" "tewi" "profont"]))
+(hoarder:fetch "Lucy/tewi-font"
+  '(:tag ["font" "bitmap"]))
+(hoarder:fetch "conformal/xombrero"
+  '(:tag ["browser" "webkit"]))
+(hoarder:fetch "inakido/dotfiles"
+  '(:tag ["dotfiles" "dwm"]))
+(hoarder:fetch "git://git.osdn.jp/gitroot/ninix-aya/ruby-gtk3.git"
+  '(:tag ["ukagaka" "gtk" "ruby" "python"]
+    :name "ninix-ruby"))
+(hoarder:fetch "https://git.pantsu.cat/pantsu/pomf"
+  '(:tag ["image" "uploader" "pomf"]))
+(hoarder:fetch "Nutomic/ensichat"
+  '(:tag ["android" "chat" "p2p"]))
+(hoarder:fetch "https://notabug.org/zPlus/freepost"
+  '(:type :git
+    :depth nil
+    :tag ["news" "hacker_news"]))
+(hoarder:fetch "cquanu/github-dark"
+  '(:tag ["github" "css" "theme"]))
+(hoarder:fetch "https://notabug.org/zPlus/meta"
+  '(:tag ["metadata" "information" "database" ]
+    :desc "http://meta.peers.community/"
+    :type :git
+    :depth nil))
+(hoarder:fetch "schandinat/green"
+  '(:tag ["pdf" "terminal" "cli"]))
+(hoarder:fetch "https://notabug.org/desktopd/hls-fetch"
+  '(:type :git
+    :depth nil
+    :tag ["hls" "http_live_streaming" "download" "ios"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
