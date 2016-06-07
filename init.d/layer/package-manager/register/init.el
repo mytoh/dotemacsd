@@ -1591,8 +1591,7 @@
 (hoarder:register-theme "jonathanchu/atom-one-dark-theme")
 (hoarder:register-theme "yuttie/hydrangea-theme")
 (hoarder:register-theme "bmastenbrook/termbright-theme-el")
-(hoarder:register-theme "zenorocha/dracula-theme"
-  '(:load-path "emacs"))
+(hoarder:register-theme "dracula/emacs")
 (hoarder:register-theme "rdallasgray/graphene-meta-theme")
 (hoarder:register-theme "waymondo/apropospriate-theme")
 (hoarder:register-theme "https://gitlab.com/franksn/majapahit-theme.git")
