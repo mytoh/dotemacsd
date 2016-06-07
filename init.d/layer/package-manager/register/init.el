@@ -3975,6 +3975,8 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
   '(:type :git
     :depth nil
     :tag ["hls" "http_live_streaming" "download" "ios"]))
+(hoarder:fetch "Usuka/Dotfiles-Ricing"
+  '(:tag ["rice" "firefox" "dotfiles" "4chan" "desktop"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
