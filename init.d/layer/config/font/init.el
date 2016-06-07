@@ -74,8 +74,11 @@
       (set-fontset-font nil 'symbol (font-spec :name "Symbola" :size 11))))
 
 (cl-defun set-cyrillic-font ()
-  (if (font-exists-p "CosmicSansNeueMono")
-      (set-fontset-font nil 'cyrillic (font-spec :name "CosmicSansNeueMono"))))
+  (cond ((font-exists-p "PT Mono")
+         (set-fontset-font nil 'cyrillic
+                           (font-spec :name "PT Mono")))
+        ((font-exists-p "CosmicSansNeueMono")
+         (set-fontset-font nil 'cyrillic (font-spec :name "CosmicSansNeueMono")))))
 
 (cl-defun set-mplus-font ()
   "[[http://mplus-fonts.osdn.jp/mplus-bitmap-fonts/download/]]"
