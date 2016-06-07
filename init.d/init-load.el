@@ -276,7 +276,7 @@
     ducpel ;; game
     random-idle-quote
     tron
-    mini-header-line
+    ;; mini-header-line
     spu
     sshman
     
