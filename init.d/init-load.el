@@ -336,7 +336,7 @@
     highlight-defined
     highlight-leading-spaces
     highlight-indentation
-    hl-todo
+    ;; hl-todo
     ;; highlight-unique-symbol
     ;; hl-indent
     ;; indent-guide
