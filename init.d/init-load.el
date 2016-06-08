@@ -274,7 +274,7 @@
     color-identifiers-mode
     logview
     ducpel ;; game
-    random-idle-quote
+    ;; random-idle-quote
     tron
     ;; mini-header-line
     spu
