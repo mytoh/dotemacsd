@@ -3976,6 +3976,38 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
     :tag ["hls" "http_live_streaming" "download" "ios"]))
 (hoarder:fetch "Usuka/Dotfiles-Ricing"
   '(:tag ["rice" "firefox" "dotfiles" "4chan" "desktop"]))
+(hoarder:fetch "joewing/jwm"
+  '(:tag ["wm"]))
+(hoarder:fetch "i3/i3"
+  '(:tag ["wm" "tiling"]))
+(hoarder:fetch "melezhik/sparrow"
+  '(:tag ["make" "task"]))
+(hoarder:fetch "kbrgl/scroller"
+  '(:tag ["panel" "bar" "lemonbar"]))
+(hoarder:fetch "RizonRice/rizonrice.github.io"
+  '(:tag ["rice" "desktop" "x11" "linux"]
+    :desc " http://rizonrice.github.io/resources#wallpapers
+https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
+(hoarder:fetch "azu/JavaScript-Plugin-Architecture"
+  '(:tag ["javascript" "reading" "plugin"]))
+(hoarder:fetch "br101/horst"
+  '(:tag ["network" "lan" "analyzer"]))
+(hoarder:fetch "https://notabug.org/GNU/FM"
+  '(:tag ["gnufm" "streaming" "music"]
+    :type :git
+    :depth nil))
+(hoarder:fetch "https://notabug.org/kl3/scripts"
+  '(:tag ["dwm" "shellscript"]
+    :type :git
+    :depth nil))
+(hoarder:fetch "https://neetco.de/killthejava/yourec"
+  '(:tag ["live" "streamnig" "younow"]
+    :type :git
+    :depth nil))
+(hoarder:fetch "https://neetco.de/killthejava/comix-plus"
+  '(:tag ["comix" "comic" "python" "gtk"]
+    :tye :git
+    :depth nil))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
