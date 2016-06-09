@@ -39,7 +39,7 @@
     org-download
     outline-magic
     org-cliplink
-    orglink
+    ;; orglink
     toc-org
     org-query
     org-bullets
