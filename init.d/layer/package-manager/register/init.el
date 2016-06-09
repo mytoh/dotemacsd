@@ -4006,8 +4006,27 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
     :depth nil))
 (hoarder:fetch "https://neetco.de/killthejava/comix-plus"
   '(:tag ["comix" "comic" "python" "gtk"]
-    :tye :git
+    :type :git
     :depth nil))
+(hoarder:fetch "https://neetco.de/apt-get/touhou-linux-guide"
+  '(:tag ["touhou" "linux" "wine" "playonlinux" "game"]
+    :type :git
+    :depth nil))
+(hoarder:fetch "https://neetco.de/apt-get/visual-novel-linux-guide"
+  '(:tag ["visual_novel" "linux" "wine" "playonlinux" "game"]
+    :type :git
+    :depth nil))
+(hoarder:fetch "https://neetco.de/softashell/patchy"
+  '(:tag ["mpd" "golang"]
+    :desc "A synchronized online jukebox - Forked from tenshi"
+    :type :git
+    :depth nil))
+(hoarder:fetch "https://neetco.de/appwl/nyaa-cli"
+  '(:tag ["nyaa" "torrent" "golang"]
+    :type :git
+    :depth nil))
+(hoarder:fetch "TaylanUB/misc"
+  '(:tag ["dotfiles"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
