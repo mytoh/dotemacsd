@@ -1,7 +1,7 @@
 
 ;; (add-to-list 'load-path (locate-user-emacs-file "init.d/lib"))
 (add-to-list 'load-path (expand-file-name
-                         "huone/ateljee/emacs-muki"
+                         "huone/ateljee/emacs-muki/lisp"
                          (getenv "HOME")))
 (require 'muki)
 
