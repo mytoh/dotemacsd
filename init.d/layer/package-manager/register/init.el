@@ -1640,6 +1640,7 @@
 (hoarder:register-theme "mesaMason/mbl-terminal-theme")
 (hoarder:register-theme "hlissner/emacs-doom-theme")
 (hoarder:register-theme "chris-etheridge/alabaster-emacs")
+(hoarder:register-theme "olkinn/forest-blue-emacs")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -4029,6 +4030,7 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["dotfiles"]))
 (hoarder:fetch "pfraze/beaker"
   '(:tag ["p2p" "hyperdrive"]))
+(hoarder:fetch "nodejs/node")
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
