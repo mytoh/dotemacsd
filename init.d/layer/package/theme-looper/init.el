@@ -8,11 +8,13 @@
   (defery 'theme-looper)
   (after 'theme-looper
       (cl-defun muki:theme-looper-filter-available-themes (themes)
-        (colle:filter
-         (lambda (theme)
-           (colle:find (lambda (tm) (eq tm theme))
-                    (custom-available-themes)))
-         themes))
+        (cl-letf ((availables
+                   (custom-available-themes)))         
+          (colle:filter
+           (lambda (theme)
+             (colle:find (lambda (tm) (eq tm theme))
+                      availables))
+           themes)))
     (theme-looper-set-theme-set
      (muki:theme-looper-filter-available-themes
       '(comidia planet monokai molokai firebelly
