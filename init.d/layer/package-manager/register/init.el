@@ -4027,6 +4027,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
     :depth nil))
 (hoarder:fetch "TaylanUB/misc"
   '(:tag ["dotfiles"]))
+(hoarder:fetch "pfraze/beaker"
+  '(:tag ["p2p" "hyperdrive"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
