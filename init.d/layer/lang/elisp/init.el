@@ -84,7 +84,7 @@
   (add-hook 'before-save-hook #'muki:indent-buffer nil t))
 
 (cl-defun muki:elisp-check-parens ()
-  (add-hook 'after-save-hook #'check-parens))
+  (add-hook 'after-save-hook #'check-parens nil t))
 
 ;;; Auto Byte-Compile Emacs Lisp Files
 ;;; [[http://ergoemacs.org/emacs/emacs_byte_compile.html]]
