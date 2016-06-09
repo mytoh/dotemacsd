@@ -80,11 +80,11 @@
                         t) ; HOW (append to highlighting list, i.e., keep old
 
 (cl-defun muki:elisp-buffer-enable-reindent ()
-  (add-hook 'before-save-hook #'muki:lisp-cleanup nil t)
-  (add-hook 'before-save-hook #'muki:indent-buffer nil t))
+  (muki:add-hook-local 'before-save-hook #'muki:lisp-cleanup)
+  (muki:add-hook-local 'before-save-hook #'muki:indent-buffer))
 
 (cl-defun muki:elisp-check-parens ()
-  (add-hook 'after-save-hook #'check-parens nil t))
+  (muki:add-hook-local 'after-save-hook #'check-parens))
 
 ;;; Auto Byte-Compile Emacs Lisp Files
 ;;; [[http://ergoemacs.org/emacs/emacs_byte_compile.html]]
