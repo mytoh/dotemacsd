@@ -4032,6 +4032,10 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "pfraze/beaker"
   '(:tag ["p2p" "hyperdrive"]))
 (hoarder:fetch "nodejs/node")
+(hoarder:fetch "ubuntufag/System6-theme"
+  '(:tag ["theme" "xfce" "macintosh"]))
+(hoarder:fetch "SamVerschueren/listr"
+  '(:tag ["task" "make" "javascript"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
