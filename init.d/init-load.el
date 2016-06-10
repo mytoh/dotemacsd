@@ -451,6 +451,7 @@
     helm-gitignore
     helm-proc
     f3
+    helm-browse
     ;; helm-org-rifle
     ;; swiper
     ;; helm-company

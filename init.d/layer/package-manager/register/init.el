@@ -160,6 +160,7 @@
   '(:tag ["org" "helm"]))
 (hoarder:register "masutaka/emacs-helm-qiita")
 (hoarder:register "markus1189/helm-proc")
+(hoarder:register "michael-heerdegen/helm-browse")
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]
 ;;                    :dependency ["michael-heerdegen/iterators.el"]))
