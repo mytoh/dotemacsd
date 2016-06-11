@@ -4039,6 +4039,10 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["theme" "xfce" "macintosh"]))
 (hoarder:fetch "SamVerschueren/listr"
   '(:tag ["task" "make" "javascript"]))
+(hoarder:fetch "sargon/trayer-srg"
+  '(:tag ["tray" "panel" "desktop"]))
+(hoarder:fetch "raboof/notion"
+  '(:tag ["lua" "wm" "tiling" "tabbed"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
