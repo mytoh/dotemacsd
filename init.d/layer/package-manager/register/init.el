@@ -1368,6 +1368,9 @@
   '(:tag ["yasnippet" "common-lisp"]))
 (hoarder:register "bcbcarl/emacs-wttrin"
   '(:tag ["weather" "wttr.in"]))
+(hoarder:register "nqpz/emacs-reaction-sounds"
+  '(:tag ["sound"]))
+
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
   '(:load-path ["lisp" "contrib/lisp"]

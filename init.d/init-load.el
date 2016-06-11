@@ -279,6 +279,7 @@
     ;; mini-header-line
     spu
     sshman
+    emacs-reaction-sounds
     
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error
