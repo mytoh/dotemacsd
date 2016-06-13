@@ -257,11 +257,11 @@
   (org-element-map (org-element-parse-buffer 'element) 'headline
     (lambda (h)
       (and (org-element-map h 'drawer
-             (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
-             nil t 'headline)
-           (let ((begin (org-element-property :begin h)))
-             (message "Entry with erroneous properties drawer at %d" begin)
-             begin)))))
+           (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
+           nil t 'headline)
+         (let ((begin (org-element-property :begin h)))
+           (message "Entry with erroneous properties drawer at %d" begin)
+           begin)))))
 
 (cl-defun muki:org-open-link-mpv ()
   (interactive)
@@ -358,8 +358,6 @@
     (turn-on-prettify-symbols-mode)
     (add-hook 'post-command-hook 'rasmus/org-prettify-src t t))
   (add-hook 'org-mode-hook #'rasmus/org-prettify-symbols))
-
-(provide 'init-org)
 
 ;;; init-org.el ends here
 
