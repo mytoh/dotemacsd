@@ -110,7 +110,8 @@
             (r10 "-misc-fixed-medium-r-normal--10-*-75-75-c-50-jisx0201.1976-0")
             (misc-iso "-misc-fixed-medium-r-normal--10-*-75-75-c-60-iso10646-1")
             (mplus-fxd "-mplus-fxd-normal-normal-normal-*-10-*-*-*-c-60-iso10646-1")
-            (symbola "-unknown-Symbola-normal-normal-semicondensed-*-*-*-*-*-*-0-iso10646-1")
+            (symbola (font-spec :family "Symbola"))
+            (emojione (font-spec :family "EmojiOne Color"))
             (fontset "fontset-naga10"))
     (create-fontset-from-ascii-font
      "-misc-fixed-medium-r-normal--10-*-*-*-*-*"
@@ -125,8 +126,20 @@
       (set 'kana k10)
       (set 'cjk-misc misc-iso)
       (set 'han k10)
-      (set 'symbol symbola))
+      (set 'symbol symbola)
+      ;;(set 'symbol emojione)
+      )
 
+
+    (colle:map
+     (pcase-lambda (`(,font . ,ratio))
+         (add-to-list 'face-font-rescale-alist
+          (cons
+           (rx-to-string `(: (* anything) ,font (* anything)))
+           ratio)))
+     '(("EmojiOne" . 1.0)
+       ("Symbola" . 1.3)))
+    
     (cl-pushnew `(font . ,fontset) default-frame-alist)
     ))
 
