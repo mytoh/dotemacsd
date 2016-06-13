@@ -1370,6 +1370,8 @@
   '(:tag ["weather" "wttr.in"]))
 (hoarder:register "nqpz/emacs-reaction-sounds"
   '(:tag ["sound"]))
+(hoarder:register "syohex/emacs-octicons"
+  '(:tag ["emoji" "github" "octicon" "unicode" "icon"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
