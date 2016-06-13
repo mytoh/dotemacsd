@@ -1372,6 +1372,8 @@
   '(:tag ["sound"]))
 (hoarder:register "syohex/emacs-octicons"
   '(:tag ["emoji" "github" "octicon" "unicode" "icon"]))
+(hoarder:register "mutbuerger/twitch-streamer"
+  '(:tag ["twitch" "livestreamer"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -4045,6 +4047,13 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["tray" "panel" "desktop"]))
 (hoarder:fetch "raboof/notion"
   '(:tag ["lua" "wm" "tiling" "tabbed"]))
+(hoarder:fetch "ncw/rclone"
+  '(:tag ["cloud" "storage" "dropbox" "google_drive" "golang"]))
+(hoarder:fetch "i3/i3lock"
+  '(:tag ["i3" "desktop" "screen" "lock"]))
+(hoarder:fetch "lahwaacz/sxlock"
+  '(:tag ["desktop" "screen" "lock" "screen_locker"]))
+
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
