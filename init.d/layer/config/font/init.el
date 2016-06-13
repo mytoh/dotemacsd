@@ -144,6 +144,55 @@
     ))
 
 
+(cl-defun set-naga10-font-fix ()
+  ;; [[http://qiita.com/melito/items/238bdf72237290bc6e42][Emacs のフォント設定について - Qiita]]
+  ;; #+begin_quote
+  ;; (set-face-attribute 'default nil :family "Inconsolata" :height 110)
+  ;;  ;(set-face-attribute 'default nil :family "Consolas" :height 104)
+  ;; (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "MeiryoKe_Console"))
+  ;; (setq face-font-rescale-alist '(("MeiryoKe_Console" . 1.08)))
+  ;; #+end_quote
+
+  (cl-letf ((k10  "-misc-fixed-medium-r-normal--10-*-75-75-c-100-jisx0208.1983-0")
+            (a10 "-misc-fixed-medium-r-normal--10-*-75-75-c-50-iso8859-1")
+            (r10 "-misc-fixed-medium-r-normal--10-*-75-75-c-50-jisx0201.1976-0")
+            (misc-iso "-misc-fixed-medium-r-normal--10-*-75-75-c-60-iso10646-1")
+            (mplus-fxd "-mplus-fxd-normal-normal-normal-*-10-*-*-*-c-60-iso10646-1")
+            (symbola (font-spec :family "Symbola"))
+            (emojione (find-font (font-spec :name "EmojiOne Color")))
+            (fontset "fontset-naga10"))
+
+    (set-face-attribute 'default nil
+                        :font "-misc-fixed-medium-r-normal--10-*-*-*-*-*")
+    (cl-labels ((set-font (script font) (set-fontset-font nil script font)))
+      (set-font 'ascii       a10)
+      (set-font 'latin       a10)
+      (set-font 'japanese-jisx0208 k10)
+      (set-font 'katakana-jisx0201       r10)
+      (set-font 'kana k10)
+      (set-font 'cjk-misc misc-iso)
+      (set-font 'han k10)
+      ;; (set 'symbol symbola)
+      (set 'symbol emojione)
+      )
+
+    (setq face-font-rescale-alist
+          (list
+           (cons
+            (rx-to-string `(: (* anything) "EmojiOne"  (* anything)))
+            1.2)
+           (cons
+            (rx-to-string `(: (* anything) "Symbola"  (* anything)))
+            1.2)
+           face-font-rescale-alist))
+    ;; (colle:map
+    ;;  (pcase-lambda (`(,font . ,ratio))
+    ;;      )
+    ;;  '((. 1.2)
+    ;;    ("Symbola" . 1.3)))
+    ))
+
+
 (cl-defun set-neep-font ()
   (cl-letf ((k10  "-misc-fixed-medium-r-normal--10-*-75-75-c-100-jisx0208.1983-0")
             (neep "-jmk-Neep-normal-normal-semicondensed-*-11-*-*-*-c-50-iso10646-1")
@@ -307,6 +356,7 @@
     ((cl-equalp type 'bitmap)
      ;; (set-ascii-font)
      (set-naga10-font)
+     ;; (set-naga10-font-fix)
      ;; (set-neep-font)
      ;; (set-symbol-font)
      (set-cyrillic-font)
