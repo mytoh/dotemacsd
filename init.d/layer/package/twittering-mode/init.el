@@ -20,7 +20,7 @@
     "" :group 'faces)
   (setq twittering-status-format
         "%i  %S, %RT{%FACE[bold]{%S}} %@  %FACE[shadow]{%p%f%L%r}
-%FOLD[        ]{%T}
+%FOLD[ ]{%T}
  %FACE[muki:twit-status-format-line]{────────────────────────────────────────────}")
   ;; (setq twittering-status-format "%i @%s %S %p: n %T  [%@]%r %R %f%Ln -------------------------------------------")
 
