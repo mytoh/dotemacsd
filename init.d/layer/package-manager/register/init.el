@@ -3287,7 +3287,7 @@
 (hoarder:fetch "sashavasko/afterstep-devel"
   '(:download nil)) 
 (hoarder:fetch "sbcl/sbcl"
-  '(:download nil)) 
+  '(:tag ["common-lisp"])) 
 (hoarder:fetch "sboli/twmn"
   '(:download nil)) 
 (hoarder:fetch "scottjad/cons"
@@ -4053,7 +4053,32 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["i3" "desktop" "screen" "lock"]))
 (hoarder:fetch "lahwaacz/sxlock"
   '(:tag ["desktop" "screen" "lock" "screen_locker"]))
-
+(hoarder:fetch "https://notabug.org/Digit/nightman.git"
+  '(:type :git
+    :depth nil
+    :tag ["css"]))
+(hoarder:fetch "https://notabug.org/isengaara/qtau.git"
+  '(:type :git
+    :depth nil
+    :tag ["UTAU" "qt"]))
+(hoarder:fetch "ln-north/svg_font"
+  '(:tag ["svg" "font" "javascript"]))
+(hoarder:fetch "CristianHenzel/ClipIt"
+  '(:tag ["clipboard" "clipboard_manager" "gtk" "desktop"]))
+(hoarder:fetch "manjaro/desktop-settings"
+  '(:tag ["dotfiles" "configuration" "i3wm" "desktop" "manjaro"]
+    :desc "https://forum.manjaro.org/t/manjaro-i3-16-06-rc-stable/537/78"))
+(hoarder:fetch "tvraman/emacspeak"
+  '(:tag ["audio" "emacs" "audible" "speech" "synthesis" "flite" "festival"]
+    :desc "https://opensource.com/life/16/6/emacspeak-brings-linux-blind"))
+(hoarder:fetch "googlei18n/noto-fonts"
+  '(:tag ["font" "google"]))
+(hoarder:fetch "dj95/lemonbarpy"
+  '(:tag ["lemonbar" "i3status" "python" "bar" "panel" "x11"]))
+(hoarder:fetch "base16-builder/base16-builder"
+  '(:tag ["base16" "colorscheme" "theme"]))
+(hoarder:fetch "seenaburns/dex-ui"
+  '(:tag ["desktop" "openframeworks"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
