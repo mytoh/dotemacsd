@@ -3,6 +3,8 @@
 ;;; Code:
 
 (req 'package
+  (setq package-check-signature nil
+        package-enable-at-startup nil) ;; Prevent double loading of libraries
   (setq package-archives '())
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") 'append)
   (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") 'append)
