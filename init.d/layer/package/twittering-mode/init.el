@@ -4,7 +4,8 @@
 
 ;;;;; twittering-mode
 (liby 'twittering-mode
-  (command (twit twittering-icon-mode) "twittering-mode")
+  (command (twit twittering-icon-mode muki:twittering-open-user)
+           "twittering-mode")
   (setq twittering-use-master-password t)
   (setq twittering-allow-insecure-server-cert t)
   (setq twittering-icon-mode t)
@@ -31,8 +32,7 @@
 
   (cl-defun muki:twittering-open-user (user)
     (interactive "sUser: ")
-    (req 'twittering-mode
-      (twittering-visit-timeline `(user ,user))))
+    (twittering-visit-timeline `(user ,user)))
 
   ;; [[https://encrypted.google.com/search?hl=en&q=fermentation]]
   ;; Nofity-OSDを利用して新着ツイートを通知する
