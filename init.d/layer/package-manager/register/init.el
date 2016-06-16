@@ -4094,6 +4094,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "urbit/urbit"
   '(:tag ["p2p" "os" ]
     :desc "https://www.youtube.com/watch?v=I94qbWBGsDs"))
+(hoarder:fetch "kevinarefunny/my-homepage"
+  '(:tag ["homepage" "startpage" "website" "css" ]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
