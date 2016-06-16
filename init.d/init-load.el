@@ -281,6 +281,7 @@
     sshman
     emacs-reaction-sounds
     hyperbole
+    ;; pretty-mode
     
     ;; letcheck ; not work with pcase's let pattern
     ;; flyparens ; load error

@@ -1374,6 +1374,8 @@
   '(:tag ["emoji" "github" "octicon" "unicode" "icon"]))
 (hoarder:register "mutbuerger/twitch-streamer"
   '(:tag ["twitch" "livestreamer"]))
+(hoarder:register "akatov/pretty-mode"
+  '(:tag ["unicode" "prettify" "symbol"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -4079,6 +4081,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["base16" "colorscheme" "theme"]))
 (hoarder:fetch "seenaburns/dex-ui"
   '(:tag ["desktop" "openframeworks"]))
+(hoarder:fetch "janbrennen/rice"
+  '(:tag ["rice" "desktop" "x11"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
