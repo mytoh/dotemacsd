@@ -4083,6 +4083,12 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["desktop" "openframeworks"]))
 (hoarder:fetch "janbrennen/rice"
   '(:tag ["rice" "desktop" "x11"]))
+(hoarder:fetch "rrooij/youtube-dl-qt"
+  '(:tag ["youtube-dl" "qt" "youtube"]))
+(hoarder:fetch "atareao/youtube-indicator"
+  '(:tag ["youtube-dl" "youtube" "python" "gtk"]))
+(hoarder:fetch "fent/node-youtube-dl"
+  '(:tag ["node" "javascript" "youtube-dl"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
