@@ -4089,6 +4089,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["youtube-dl" "youtube" "python" "gtk"]))
 (hoarder:fetch "fent/node-youtube-dl"
   '(:tag ["node" "javascript" "youtube-dl"]))
+(hoarder:fetch "4k1k0/homepage"
+  '(:tag ["homepage" "startpage" "website" "css" "javascript"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
