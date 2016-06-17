@@ -2588,7 +2588,7 @@
 (hoarder:fetch "git://git.sv.gnu.org/guile.git") 
 (hoarder:fetch "git://git.sv.gnu.org/librejs.git") 
 (hoarder:fetch "git://git.sv.gnu.org/smalltalk.git") 
-(hoarder:fetch "http://neetco.de/chibi/sshchan"
+(hoarder:fetch "https://neetco.de/chibi/sshchan.git"
   '(:type :git)) 
 (hoarder:fetch "cjdelisle/cjdns") 
 (hoarder:fetch "symbolset/ss-emoji-beta") 
