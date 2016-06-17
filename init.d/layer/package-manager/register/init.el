@@ -4096,6 +4096,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
     :desc "https://www.youtube.com/watch?v=I94qbWBGsDs"))
 (hoarder:fetch "kevinarefunny/my-homepage"
   '(:tag ["homepage" "startpage" "website" "css" ]))
+(hoarder:fetch "arclanguage/anarki"
+  '(:tag ["scheme" "racket" "arc"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
