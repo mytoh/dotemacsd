@@ -4098,6 +4098,12 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["homepage" "startpage" "website" "css" ]))
 (hoarder:fetch "arclanguage/anarki"
   '(:tag ["scheme" "racket" "arc"]))
+(hoarder:fetch "curl/curl"
+  '(:tag ["web" "http" "request"]))
+(hoarder:fetch "alejandroerickson/spacemacs"
+  '(:desc "https://github.com/alejandroerickson/spacemacs/tree/myconfig/layers/media"
+    :branch "myconfig"
+    :tag ["emms" "spacemacs" "configuration"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
