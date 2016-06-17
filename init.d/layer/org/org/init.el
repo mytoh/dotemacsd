@@ -45,6 +45,7 @@
   (set-option org-use-speed-commands
               (clambda () (and (looking-at org-outline-regexp) (looking-back "^\**"))))
   (set-option org-catch-invisible-edits 'smart)
+  (set-option org-log-into-drawer t)
   (cl-pushnew  '("N" org-narrow-to-subtree) org-speed-commands-user)
   (cl-pushnew  '("W" widen) org-speed-commands-user)
   (cl-defun muki:org-speed-command-user-next (arg)
