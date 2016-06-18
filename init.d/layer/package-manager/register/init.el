@@ -4110,6 +4110,10 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["github" "addon" "firefox" "chrome"]))
 (hoarder:fetch "libretro/Lakka"
   '(:tag ["game" "emulation" "console" "linux" "openelec" "libretro" "raspberrypi"]))
+(hoarder:fetch "jfurrow/flood"
+  '(:tag ["rtorrent" "node" "react" "javascript"]))
+(hoarder:fetch "dhowe/AdNauseam"
+  '(:tag ["adblock" "addon" "firefox" "chrome"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
