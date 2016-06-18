@@ -4104,6 +4104,12 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:desc "https://github.com/alejandroerickson/spacemacs/tree/myconfig/layers/media"
     :branch "myconfig"
     :tag ["emms" "spacemacs" "configuration"]))
+(hoarder:fetch "jkbrzt/httpie"
+  '(:tag ["http" "curl" "web" "request"]))
+(hoarder:fetch "buunguyen/octotree"
+  '(:tag ["github" "addon" "firefox" "chrome"]))
+(hoarder:fetch "libretro/Lakka"
+  '(:tag ["game" "emulation" "console" "linux" "openelec" "libretro" "raspberrypi"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
