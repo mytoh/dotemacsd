@@ -1376,6 +1376,7 @@
   '(:tag ["twitch" "livestreamer"]))
 (hoarder:register "akatov/pretty-mode"
   '(:tag ["unicode" "prettify" "symbol"]))
+(hoarder:register "purcell/disable-mouse")
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
