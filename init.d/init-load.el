@@ -269,7 +269,7 @@
     saveplace
     perl6
     right-click-context
-    annotate-depth
+    ;; annotate-depth
     xref-js2
     color-identifiers-mode
     logview
