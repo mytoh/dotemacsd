@@ -3742,8 +3742,6 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
 (hoarder:fetch "cute-jumper/monad.el"
   '(:tag ["monad" "emacs"]))
 (hoarder:fetch "blyxxyz/remotely")
-(hoarder:fetch "afollestad/impression"
-  '(:tag ["android" "photo" "gallery"]))
 (hoarder:fetch "ciromattia/kcc"
   '(:tag ["kindle" "mobi" "epub"]))
 (hoarder:fetch "ballsackwm/ballsackwm"
@@ -4121,7 +4119,9 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "https://notabug.org/SylvieLorxu/Pext.git"
   '(:tag ["python3" "python" "qt" "qml" "gopass" "dmenu" "rofi"]))
 (hoarder:fetch "sector-f/admiral"
-  '(tag ["lemonbar" "i3" "i3bar" "bar" "panel" "rust"]))
+  '(:tag ["lemonbar" "i3" "i3bar" "bar" "panel" "rust"]))
+(hoarder:fetch "zsisco/maxwelm"
+  '(:tag ["dwm" "catwm" "wm"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
