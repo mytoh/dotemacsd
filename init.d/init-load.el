@@ -413,6 +413,7 @@
     expand-region
     skk-mode
     magit
+    package-menu-mode
     ))
 
 (muki-layer:load-layers 'helm
