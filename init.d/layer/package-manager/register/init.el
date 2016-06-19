@@ -4120,6 +4120,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["adblock" "addon" "firefox" "chrome"]))
 (hoarder:fetch "https://notabug.org/SylvieLorxu/Pext.git"
   '(:tag ["python3" "python" "qt" "qml" "gopass" "dmenu" "rofi"]))
+(hoarder:fetch "sector-f/admiral"
+  '(tag ["lemonbar" "i3" "i3bar" "bar" "panel" "rust"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
