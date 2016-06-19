@@ -4118,6 +4118,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["rtorrent" "node" "react" "javascript"]))
 (hoarder:fetch "dhowe/AdNauseam"
   '(:tag ["adblock" "addon" "firefox" "chrome"]))
+(hoarder:fetch "https://notabug.org/SylvieLorxu/Pext.git"
+  '(:tag ["python3" "python" "qt" "qml" "gopass" "dmenu" "rofi"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
