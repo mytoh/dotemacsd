@@ -210,7 +210,7 @@ is a kind of temporary one which is not confirmed yet."
   (muki:init-evil-mode-multiple-cursors)
   (muki:init-evil-mode-elisp-slime-nav)
 
-  (muki:init-evil-initial-state)
+  ;; (muki:init-evil-initial-state)
 
   ;; advice for evil search
   (advice-add 'evil-ex-search-next :after #'recenter)
