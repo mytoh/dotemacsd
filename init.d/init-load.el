@@ -282,6 +282,7 @@
     emacs-reaction-sounds
     hyperbole
     disable-mouse
+    ;; handoff
     ;; pretty-mode
     
     ;; letcheck ; not work with pcase's let pattern
