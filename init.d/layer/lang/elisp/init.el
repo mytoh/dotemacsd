@@ -54,7 +54,7 @@
          (or "cl-defun" "cl-defmacro")
          (+ space)
          (submatch (+ (or (syntax word)
-                         (syntax symbol)))))
+                          (syntax symbol)))))
      (1 'font-lock-function-name-face))))
 
 ;; [[https://groups.google.com/forum/#!topic/gnu.emacs.help/3EoQjpr5Kfk]]
@@ -92,7 +92,7 @@
   "`byte-compile' current buffer if it's emacs-lisp-mode and compiled file exists."
   (interactive)
   (when (and (eq major-mode 'emacs-lisp-mode)
-           (file-exists-p (byte-compile-dest-file buffer-file-name)))
+             (file-exists-p (byte-compile-dest-file buffer-file-name)))
     (byte-compile-file buffer-file-name)))
 
 (cl-defun muki:elisp-byte-compile-buffer ()
@@ -119,7 +119,7 @@
 
 (cl-defun muki:elisp-reload-package ()
   (when (and (eq major-mode 'emacs-lisp-mode)
-           (buffer-file-name))
+             (buffer-file-name))
     (cl-letf* ((file-name (buffer-file-name))
                (base-name (intern (file-name-base file-name)))
                (found-feature (muki:elisp-find-provided-feature))
@@ -134,6 +134,46 @@
              (unload-feature base-name 'force)
              (require base-name file-name)
              (message "feature %s reloaded" base-name))))))
+
+;;; highlight old cl functions
+;;; [[https://yoo2080.wordpress.com/2013/08/12/highlighting-old-style-cl-function-names-in-emacs-lisp/][highlighting old style CL function names in Emacs Lisp | Yoo Box]]
+(defconst my-old-style-cl-functions
+  '(acons adjoin assert assoc* assoc-if assoc-if-not block caaaar caaadr
+    caaar caadar caaddr caadr cadaar cadadr cadar caddar cadddr caddr
+    callf callf2 case cdaaar cdaadr cdaar cdadar cdaddr cdadr cddaar
+    cddadr cddar cdddar cddddr cdddr ceiling* check-type coerce
+    compiler-macroexpand concatenate copy-list copy-seq count count-if
+    count-if-not decf declaim define-compiler-macro define-modify-macro
+    define-setf-expander define-setf-method defmacro* defsetf defstruct
+    defsubst* deftype defun* delete* delete-duplicates delete-if
+    delete-if-not destructuring-bind do do* do-all-symbols do-symbols
+    ecase eighth endp equalp etypecase eval-when evenp every fifth fill
+    find find-if find-if-not first flet floatp-safe floor* fourth
+    function* gcd gensym gentemp get* getf incf intersection isqrt labels
+    lcm ldiff letf letf* lexical-let lexical-let* list* list-length
+    load-time-value locally loop macrolet make-random-state map mapcan
+    mapcar* mapcon mapl maplist member* member-if member-if-not merge
+    minusp mismatch mod* multiple-value-apply multiple-value-bind
+    multiple-value-call multiple-value-list multiple-value-setq
+    nintersection ninth notany notevery nreconc nset-difference
+    nset-exclusive-or nsublis nsubst nsubst-if nsubst-if-not nsubstitute
+    nsubstitute-if nsubstitute-if-not nth-value nunion oddp pairlis plusp
+    position position-if position-if-not proclaim progv psetf psetq
+    pushnew random* random-state-p rassoc* rassoc-if rassoc-if-not reduce
+    rem* remf remove* remove-duplicates remove-if remove-if-not remprop
+    replace rest return return-from revappend rotatef round* search second
+    set-difference set-exclusive-or seventh shiftf signum sixth some sort*
+    stable-sort sublis subseq subsetp subst subst-if subst-if-not
+    substitute substitute-if substitute-if-not svref symbol-macrolet tailp
+    tenth the third tree-equal truncate* typecase typep union values
+    values-list))
+(defconst my-rx-old-style-cl-functions
+  (eval `(rx bow (or ,@(mapcar #'symbol-name my-old-style-cl-functions)) eow)))
+(with-eval-after-load 'lisp-mode
+  (req 'flyspell ; for the flyspell-incorrect face
+    (font-lock-add-keywords 'emacs-lisp-mode
+                            `((,my-rx-old-style-cl-functions . 'flyspell-incorrect)))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (add-hook 'emacs-lisp-mode-hook #'muki:elisp-byte-compile-buffer)
 (add-hook 'emacs-lisp-mode-hook #'muki:elisp-buffer-enable-reindent)
