@@ -175,6 +175,19 @@
                             `((,my-rx-old-style-cl-functions . 'flyspell-incorrect)))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;; highlight special variable without hyphen in its name
+;; These should not be used as names of lexically scoped variables.
+;; [[https://yoo2080.wordpress.com/2013/08/07/built-in-special-variables-with-simple-names-in-emacs-lisp/][built-in special variables with simple names in Emacs Lisp | Yoo Box]]
+(with-eval-after-load 'lisp-mode
+  (defconst my-special-variables-without-hyphen
+    '(debugger features nil noninteractive obarray)
+    "list of special variables with names without hyphen")
+  (defconst my-regexp-special-variables-without-hyphen
+    (eval `(rx bow (or ,@(mapcar #'symbol-name my-special-variables-without-hyphen)) eow)))
+  (font-lock-add-keywords 'emacs-lisp-mode
+                          `((,my-regexp-special-variables-without-hyphen . font-lock-keyword-face))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (add-hook 'emacs-lisp-mode-hook #'muki:elisp-byte-compile-buffer)
 (add-hook 'emacs-lisp-mode-hook #'muki:elisp-buffer-enable-reindent)
 (add-hook 'emacs-lisp-mode-hook #'muki:elisp-check-parens)
