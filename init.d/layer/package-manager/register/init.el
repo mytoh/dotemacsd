@@ -1380,6 +1380,8 @@
   '(:tag ["mouse"]))
 (hoarder:register "rejeep/handoff.el"
   '(:tag ["mouse"]))
+(hoarder:register "azagoruyko/keep-temp-buffers"
+  '(:desc "Save and load buffers automatically."))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1655,6 +1657,7 @@
 (hoarder:register-theme "hlissner/emacs-doom-theme")
 (hoarder:register-theme "chris-etheridge/alabaster-emacs")
 (hoarder:register-theme "olkinn/forest-blue-emacs")
+(hoarder:register-theme "shafayetkhan/materialistic-seti")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -4122,6 +4125,12 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["lemonbar" "i3" "i3bar" "bar" "panel" "rust"]))
 (hoarder:fetch "zsisco/maxwelm"
   '(:tag ["dwm" "catwm" "wm"]))
+(hoarder:fetch "Sonarr/Sonarr"
+  '(:tag ["usenet" "torrent" "tv" "movie" "download" "couchpotato" "sickbeard"]))
+(hoarder:fetch "Airblader/i3"
+  '(:tag ["i3wm" "wm" "tiling" "gap"]))
+(hoarder:fetch "qrac/yakuhanjp"
+  '(:tag ["font" "noto_sans"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
