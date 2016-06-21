@@ -282,6 +282,7 @@
     emacs-reaction-sounds
     hyperbole
     disable-mouse
+    swiper
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers
@@ -460,7 +461,6 @@
     f3
     helm-browse
     ;; helm-org-rifle
-    ;; swiper
     ;; helm-company
     ;; helm-delicious
     ))

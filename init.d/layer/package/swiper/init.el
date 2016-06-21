@@ -2,9 +2,10 @@
 
 ;;; Code:
 
+;; [[https://www.youtube.com/watch?v=0mwwN0S1dnQ][Using Emacs 6 - Search (Swiper) - YouTube]]
 (liby 'swiper
   (command (swiper) "swiper")
-  (add-global-key "M-i" #'swiper)
+  (add-global-key "C-s" #'swiper)
   (after 'swiper
       (set-face-attribute 'swiper-match-face-1 nil
        :foreground "yellow"
