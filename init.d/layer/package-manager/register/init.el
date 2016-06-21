@@ -4131,6 +4131,12 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["i3wm" "wm" "tiling" "gap"]))
 (hoarder:fetch "qrac/yakuhanjp"
   '(:tag ["font" "noto_sans"]))
+(hoarder:fetch "GitAlias/gitalias"
+  '(:tag ["git" "alias" "shell"]))
+(hoarder:fetch "https://gitlab.com/someshell/someshell"
+  '(:tag ["common-lisp" "shell" "eshell"]))
+(hoarder:fetch "noctuid/evil-guide"
+  '(:tag ["evil" "reading" "tutorial"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
