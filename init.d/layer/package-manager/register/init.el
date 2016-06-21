@@ -4133,7 +4133,7 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["font" "noto_sans"]))
 (hoarder:fetch "GitAlias/gitalias"
   '(:tag ["git" "alias" "shell"]))
-(hoarder:fetch "https://gitlab.com/someshell/someshell"
+(hoarder:fetch "https://gitlab.com/someshell/someshell.git"
   '(:tag ["common-lisp" "shell" "eshell"]))
 (hoarder:fetch "noctuid/evil-guide"
   '(:tag ["evil" "reading" "tutorial"]))
