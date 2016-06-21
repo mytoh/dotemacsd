@@ -3,8 +3,8 @@
   (defery 'smartparens)
   (after 'smartparens
       (req 'smartparens-config)
-      (after 'evil
-	(set-option sp-show-pair-from-inside (not evil-move-beyond-eol)))
+    (after 'evil
+        (set-option sp-show-pair-from-inside (not evil-move-beyond-eol)))
     (disable-option sp-cancel-autoskip-on-backward-movement)
 
      ;;;;;;;;;;;;
@@ -70,7 +70,7 @@
         common-lisp-mode))
 
     (sp-with-modes muki:lisp-modes
-      (sp-local-pair "(" nil :bind "M-("))
+                   (sp-local-pair "(" nil :bind "M-("))
 
     (cl-defun muki:smartparens-setup-strict-modes ()
       (seq-each
@@ -94,7 +94,10 @@
         (after 'smartparens
             (diminish 'smartparens-mode " ⚖")))
 
-    (smartparens-global-mode))
+    ;; (smartparens-global-mode)
+    (add-hook 'emacs-lisp-mode-hook
+              #'smartparens-mode)
+    )
   ;; (smartparens-global-strict-mode t)
   ;; highlights matching pairs
   ;; (show-smartparens-global-mode t)
