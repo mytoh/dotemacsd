@@ -4137,6 +4137,11 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["common-lisp" "shell" "eshell"]))
 (hoarder:fetch "noctuid/evil-guide"
   '(:tag ["evil" "reading" "tutorial"]))
+(hoarder:fetch "tista500/Adapta"
+  '(:tag ["gtk" "gnome" "theme"]))
+(hoarder:fetch "antirez/dump1090"
+  '(:tag ["rtl-sdr" "radio" "ham"]
+    :desc " [[http://adrianchadd.blogspot.jp/PRIVOXY-FORCE/2015/06/rtl-sdr-on-freebsd-or-hey-cool-i-live.html][Adrian Chadd's Ramblings]] "))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
