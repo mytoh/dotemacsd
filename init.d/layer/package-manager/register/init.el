@@ -1658,7 +1658,7 @@
 (hoarder:register-theme "chris-etheridge/alabaster-emacs")
 (hoarder:register-theme "olkinn/forest-blue-emacs")
 (hoarder:register-theme "shafayetkhan/materialistic-seti")
-
+(hoarder:register-theme "mssola/soria")
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
               (cl-letf ((proj-path (thread-last (getenv "HUONE")
@@ -4167,6 +4167,11 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
     :desc "[[https://www.youtube.com/watch?v=DzRYGudfu0s][2016 - Writing Command Line Tools for Other People‎ - BradLhotsky - YouTube]]"))
 (hoarder:fetch "PurpleI2P/i2pd"
   '(:tag ["i2p" "c++" ]))
+(hoarder:fetch "ManrajGrover/SingleDivProject"
+  '(:tag ["html" "css"]))
+(hoarder:fetch "https://git.xiph.org/libao.git"
+  '(:tag ["audio" "wav"]
+    :depth nil))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
