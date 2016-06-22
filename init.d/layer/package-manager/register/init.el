@@ -4142,6 +4142,24 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "antirez/dump1090"
   '(:tag ["rtl-sdr" "radio" "ham"]
     :desc " [[http://adrianchadd.blogspot.jp/PRIVOXY-FORCE/2015/06/rtl-sdr-on-freebsd-or-hey-cool-i-live.html][Adrian Chadd's Ramblings]] "))
+(hoarder:fetch "https://notabug.org/PangolinTurtle/muobj-r7rs.git"
+  '(:tag ["scheme" "oop" "r7rs"]))
+(hoarder:fetch "https://notabug.org/PangolinTurtle/prometheus-r7rs.git"
+  '(:tag ["scheme" "oop" "r7rs"]))
+(hoarder:fetch "scheme/scsh"
+  '(:tag ["scheme" "shell" "scheme48"]))
+(hoarder:fetch "https://notabug.org/PangolinTurtle/yasos-r7rs.git"
+  '(:tag ["scheme" "oop" "r7rs"]))
+(hoarder:fetch "pindexis/marker"
+  '(:tag ["zsh" "bash" "python" "shell" "tldr"]))
+(hoarder:fetch "tldr-pages/tldr"
+  '(:tag ["man" "tldr"]))
+(hoarder:fetch "torbsd/openbsd-ports"
+  '(:tag ["tor" "tor_browser_bundle" "firefox" "openbsd"]))
+(hoarder:fetch "sindresorhus/conf"
+  '(:tag ["configuration" "npm" "javascript"]))
+(hoarder:fetch "sindresorhus/env-paths"
+  '(:tag ["npm" "javascript" "evironment" "variable" "path" "xdg"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
