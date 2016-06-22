@@ -4165,6 +4165,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "reyjrar/CLI-Helpers"
   '(:tag ["prel" "cli" "color"]
     :desc "[[https://www.youtube.com/watch?v=DzRYGudfu0s][2016 - Writing Command Line Tools for Other People‎ - BradLhotsky - YouTube]]"))
+(hoarder:fetch "PurpleI2P/i2pd"
+  '(:tag ["i2p" "c++" ]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
