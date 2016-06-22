@@ -4160,6 +4160,11 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["configuration" "npm" "javascript"]))
 (hoarder:fetch "sindresorhus/env-paths"
   '(:tag ["npm" "javascript" "evironment" "variable" "path" "xdg"]))
+(hoarder:fetch "gentoo/portage"
+  '(:tag ["gentoo" "portage" "package"]))
+(hoarder:fetch "reyjrar/CLI-Helpers"
+  '(:tag ["prel" "cli" "color"]
+    :desc "[[https://www.youtube.com/watch?v=DzRYGudfu0s][2016 - Writing Command Line Tools for Other People‎ - BradLhotsky - YouTube]]"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
