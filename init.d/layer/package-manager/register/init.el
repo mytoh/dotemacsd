@@ -4174,11 +4174,11 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
     :depth nil))
 (hoarder:fetch "tbds/FreeContributor"
   '(:tag ["dns" "adblock" "hosts" "dnsmasq" "unbound" "pdnsd"]))
-(hoarder:fetch "https://gist.github.com/xguse/6259275"
+(hoarder:fetch "https://gist.github.com/xguse/6259275.git"
   '(:type :git
     :tag ["noise" "sox" "audio" "synthesis"]
     :name "noise.sh"))
-(hoarder:fetch "https://gist.github.com/rsvp/1209835"
+(hoarder:fetch "https://gist.github.com/rsvp/1209835.git"
   '(:type :git
     :tag ["noise" "sox" "audio" "synthesis"]
     :name "noise.sh"))
