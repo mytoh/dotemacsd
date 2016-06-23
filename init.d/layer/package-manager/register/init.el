@@ -4188,6 +4188,12 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "fictivekin/openrecipes"
   '(:tag ["cooking" "recipe" "json" "schema"]
     :desc "[[http://schema.org/Recipe]]"))
+(hoarder:fetch "torque/mpv-progressbar"
+  '(:tag ["mpv" "lua" "moonscript"]))
+(hoarder:fetch "donmaiq/Mpv-Radio"
+  '(:tag ["mpv" "lua" "radio"]))
+(hoarder:fetch "donmaiq/Mpv-Playlistmanager"
+  '(:tag ["mpv" "lua" "playlist"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
