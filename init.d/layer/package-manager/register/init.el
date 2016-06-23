@@ -4210,7 +4210,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:name "substack-12stepes"
     :desc "Substack’s 12 Steps"
     :tag ["substack" "npm" "development" "javascript"]))
-
+(hoarder:fetch "yasm/yasm"
+  '(:tag ["assembler"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
