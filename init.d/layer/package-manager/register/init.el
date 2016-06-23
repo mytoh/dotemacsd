@@ -3118,8 +3118,7 @@
   '(:download nil)) 
 (hoarder:fetch "laurikari/tre"
   '(:download nil)) 
-(hoarder:fetch "leafo/moonscript"
-  '(:download nil)) 
+(hoarder:fetch "leafo/moonscript") 
 (hoarder:fetch "letsgetrandy/DICSS"
   '(:download nil)) 
 (hoarder:fetch "lzap/dancepill"
