@@ -3081,7 +3081,7 @@
 (hoarder:fetch "kazu-yamamoto/ghc-mod"
   '(:download nil)) 
 (hoarder:fetch "keplerproject/luarocks"
-  '(:download nil)) 
+  '(:tag [ "lua" "package" "package_manager"])) 
 (hoarder:fetch "kfish/xsel"
   '(:download nil)) 
 (hoarder:fetch "kfl/mosml"
@@ -4194,6 +4194,9 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["mpv" "lua" "radio"]))
 (hoarder:fetch "donmaiq/Mpv-Playlistmanager"
   '(:tag ["mpv" "lua" "playlist"]))
+(hoarder:fetch "https://gist.github.com/haasn/7919afd765e308fa91cbe19a64631d0f.git"
+  '(:tag ["mpv" "image" "image_viewer" "lua"]
+    :name "image.lua"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
