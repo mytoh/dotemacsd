@@ -4206,6 +4206,10 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "https://gist.github.com/khoomeister/5010943.git"
   '(:name "the-way-of-the-substack.md"
     :tag ["substack" "npm" "development" "javascript"]))
+(hoarder:fetch " https://gist.github.com/substack/5075355.git"
+  '(:name "substack-12stepes"
+    :desc "Substack’s 12 Steps"
+    :tag ["substack" "npm" "development" "javascript"]))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
