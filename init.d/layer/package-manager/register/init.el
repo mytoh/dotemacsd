@@ -4172,6 +4172,18 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "https://git.xiph.org/libao.git"
   '(:tag ["audio" "wav"]
     :depth nil))
+(hoarder:fetch "tbds/FreeContributor"
+  '(:tag ["dns" "adblock" "hosts" "dnsmasq" "unbound" "pdnsd"]))
+(hoarder:fetch "https://gist.github.com/xguse/6259275"
+  '(:type :git
+    :tag ["noise" "sox" "audio" "synthesis"]
+    :name "noise.sh"))
+(hoarder:fetch "https://gist.github.com/rsvp/1209835"
+  '(:type :git
+    :tag ["noise" "sox" "audio" "synthesis"]
+    :name "noise.sh"))
+(hoarder:fetch "sindresorhus/emoj"
+  '(:tag ["emoji" "npm" "javascript" "deep_learning" "suggestion"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
