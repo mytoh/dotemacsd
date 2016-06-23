@@ -283,6 +283,7 @@
     hyperbole
     disable-mouse
     swiper
+    moonscript-mode
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers

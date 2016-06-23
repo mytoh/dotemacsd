@@ -1382,6 +1382,8 @@
   '(:tag ["mouse"]))
 (hoarder:register "azagoruyko/keep-temp-buffers"
   '(:desc "Save and load buffers automatically."))
+(hoarder:register "k2052/moonscript-mode"
+  '(:tag ["moonscript" "lua"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
