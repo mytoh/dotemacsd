@@ -4203,7 +4203,7 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "substack/hyperlog-talk"
   '(:tag ["hyperlog" "p2p" "npm" "javascript" ]
     :desc " [[https://www.youtube.com/watch?v=5jA6vSOwY1Y][JSCamp Romania 2016 - "P2P ARCHITECTURE" with James Halliday - YouTube]] "))
-(hoarder:fetch "https://gist.github.com/khoomeister/5010943"
+(hoarder:fetch "https://gist.github.com/khoomeister/5010943.git"
   '(:name "the-way-of-the-substack.md"
     :tag ["substack" "npm" "development" "javascript"]))
 
