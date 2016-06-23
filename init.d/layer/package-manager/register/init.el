@@ -2694,8 +2694,7 @@
 
 (hoarder:fetch "EZ3CHI3L/Eternity"
   '(:download nil)) 
-(hoarder:fetch "FFmpeg/FFmpeg"
-  '(:download nil)) 
+(hoarder:fetch "FFmpeg/FFmpeg") 
 (hoarder:fetch "FLIF-hub/FLIF"
   '(:download nil)) 
 (hoarder:fetch "FooSoft/homemaker"
@@ -3188,7 +3187,7 @@
 (hoarder:fetch "mps-youtube/pafy"
   '(:download nil)) 
 (hoarder:fetch "mpv-player/mpv"
-  '(:download nil)) 
+  ) 
 (hoarder:fetch "mrowa44/emojify"
   '(:download nil)) 
 (hoarder:fetch "msiemens/tinydb"
@@ -3922,8 +3921,8 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
     :tag ["wm" "twm"]))
 (hoarder:fetch "git://git.code.sf.net/p/flwm/flwm"
   '(:tag ["wm" "fltk"]))
-(hoarder:fetch "teracow/bulk-google-image-download"
-  '(:tag ["google" "image" "search" "download" "shellscript"]))
+(hoarder:fetch "teracow/googliser"
+  '(:tag ["bash" "wget" "google" "image" "search" "download" "shellscript"]))
 (hoarder:fetch "http://projects.pekdon.net/git/geh.git"
   '(:depth nil
     :tag ["image" "viewer" "feh"]))
@@ -4184,6 +4183,11 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
     :name "noise.sh"))
 (hoarder:fetch "sindresorhus/emoj"
   '(:tag ["emoji" "npm" "javascript" "deep_learning" "suggestion"]))
+(hoarder:fetch "sleepypikachu/still-good-food"
+  '(:tag ["cooking" "bbc" "bbc_good_food" "recipe" "open_recpe_format" "json" "golang" "scraping"]))
+(hoarder:fetch "fictivekin/openrecipes"
+  '(:tag ["cooking" "recipe" "json" "schema"]
+    :desc "[[http://schema.org/Recipe]]"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
