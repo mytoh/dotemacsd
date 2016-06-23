@@ -4198,6 +4198,15 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "https://gist.github.com/haasn/7919afd765e308fa91cbe19a64631d0f.git"
   '(:tag ["mpv" "image" "image_viewer" "lua"]
     :name "image.lua"))
+(hoarder:fetch "substack/hyperkv"
+  '(:tag ["hyperlog" "p2p" "npm" "javascript" "database" "key_value_store"]))
+(hoarder:fetch "substack/hyperlog-talk"
+  '(:tag ["hyperlog" "p2p" "npm" "javascript" ]
+    :desc " [[https://www.youtube.com/watch?v=5jA6vSOwY1Y][JSCamp Romania 2016 - "P2P ARCHITECTURE" with James Halliday - YouTube]] "))
+(hoarder:fetch "https://gist.github.com/khoomeister/5010943"
+  '(:name "the-way-of-the-substack.md"
+    :tag ["substack" "npm" "development" "javascript"]))
+
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
