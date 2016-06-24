@@ -4216,6 +4216,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "https://bitbucket.org/multicoreware/x265"
   '(:type :hg
     :tag ["multimedia" "video" "codec" "h265" "hevc"]))
+(hoarder:fetch "NixOS/patchelf"
+  '(:tag ["elf" "binary" "library" "rpath" "ldconfig" "homebrew" "ld_library_path"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
