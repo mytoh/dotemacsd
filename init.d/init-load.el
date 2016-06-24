@@ -284,6 +284,7 @@
     disable-mouse
     swiper
     moonscript-mode
+    node-ac
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers

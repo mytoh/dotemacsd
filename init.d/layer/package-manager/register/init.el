@@ -1384,6 +1384,8 @@
   '(:desc "Save and load buffers automatically."))
 (hoarder:register "k2052/moonscript-mode"
   '(:tag ["moonscript" "lua"]))
+(hoarder:register "MaokaiLin/node-ac"
+  '(:tag ["node" "javascript" "auto-complete"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
