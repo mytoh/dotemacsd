@@ -4220,6 +4220,12 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["elf" "binary" "library" "rpath" "ldconfig" "homebrew" "ld_library_path"]))
 (hoarder:fetch "neeasade/xst"
   '(:tag ["st" "terminal"]))
+(hoarder:fetch "AleXoundOS/mpv-cut"
+  '(:tag ["mpv" "video" "video_editing" "lua" "haskell"]))
+(hoarder:fetch "Kagami/mpv_slicing"
+  '(:tag ["mpv" "video" "video_editing" "lua" ]))
+(hoarder:fetch "ccd0/mpv-cutting-scripts"
+  '(:tag ["mpv" "video" "video_editing" "lua" ]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
