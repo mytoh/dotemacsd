@@ -4228,6 +4228,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["mpv" "video" "video_editing" "lua" ]))
 (hoarder:fetch "Matroska-Org/libmatroska"
   '(:tag ["mkv" "video" "format" "container"]))
+(hoarder:fetch "Matroska-Org/libebml"
+  '(:tag ["mkv" "video" "format" "container"]))
 (hoarder:fetch "gcc-mirror/gcc"
   '(:tag ["c" "compiler"]))
 (hoarder:fetch "kovetskiy/spin"
