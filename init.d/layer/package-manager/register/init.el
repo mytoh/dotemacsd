@@ -4226,6 +4226,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["mpv" "video" "video_editing" "lua" ]))
 (hoarder:fetch "ccd0/mpv-cutting-scripts"
   '(:tag ["mpv" "video" "video_editing" "lua" ]))
+(hoarder:fetch "Matroska-Org/libmatroska"
+  '(:tag ["mkv" "video" "format" "container"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
