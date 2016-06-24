@@ -3438,8 +3438,7 @@
   '(:download nil)) 
 (hoarder:fetch "victorhaggqvist/xboomx"
   '(:download nil)) 
-(hoarder:fetch "videolan/x265"
-  '(:download nil)) 
+(hoarder:fetch "videolan/x265") 
 (hoarder:fetch "vikasrawal/orgpaper"
   '(:download nil)) 
 (hoarder:fetch "vstakhov/libucl"
@@ -4214,6 +4213,9 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
     :tag ["substack" "npm" "development" "javascript"]))
 (hoarder:fetch "yasm/yasm"
   '(:tag ["assembler"]))
+(hoarder:fetch "https://bitbucket.org/multicoreware/x265"
+  '(:type :hg
+    :tag ["multimedia" "video" "codec" "h265" "hevc"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
