@@ -4244,6 +4244,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["game" "awesome_list"]))
 (hoarder:fetch "nholstein/OpenDoas"
   '(:tag ["openbsd" "sudo" "doas" "root"]))
+(hoarder:fetch "slicer69/doas"
+  '(:tag ["openbsd" "sudo" "doas" "root" "freebsd"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
