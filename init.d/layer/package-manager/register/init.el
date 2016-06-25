@@ -4236,6 +4236,14 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["golang" "cli" "spinner" "indicator" "progress"]))
 (hoarder:fetch "rxse/crud"
   '(:tag ["slop" "x11" "desktop"]))
+(hoarder:fetch "https://gist.github.com/XVilka/8346728.git"
+  '(:tag ["color" "colorscheme" "cui" "terminal" "tmux" "urxvt" "st"]))
+(hoarder:fetch "digidem/osm-p2p-db"
+  '(:tag ["osm" "open_street_map" "p2p" "hyperlog"]))
+(hoarder:fetch "https://notabug.org/koz.ross/awesome-gamedev.git"
+  '(:tag ["game" "awesome_list"]))
+
+
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
