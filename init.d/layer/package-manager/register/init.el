@@ -4242,8 +4242,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["osm" "open_street_map" "p2p" "hyperlog"]))
 (hoarder:fetch "https://notabug.org/koz.ross/awesome-gamedev.git"
   '(:tag ["game" "awesome_list"]))
-
-
+(hoarder:fetch "nholstein/OpenDoas"
+  '(:tag ["openbsd" "sudo" "doas" "root"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
