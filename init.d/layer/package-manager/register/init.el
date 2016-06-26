@@ -1663,6 +1663,8 @@
 (hoarder:register-theme "olkinn/forest-blue-emacs")
 (hoarder:register-theme "shafayetkhan/materialistic-seti")
 (hoarder:register-theme "mssola/soria")
+(hoarder:register-theme "vjohansen/dark-nature-theme")
+
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
               (cl-letf ((proj-path (thread-last (getenv "HUONE")
@@ -4246,6 +4248,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["openbsd" "sudo" "doas" "root"]))
 (hoarder:fetch "slicer69/doas"
   '(:tag ["openbsd" "sudo" "doas" "root" "freebsd"]))
+(hoarder:fetch "SawfishWM/sawfish"
+  '(:tag ["wm" "rep" "scheme"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
@@ -4263,6 +4267,7 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 ;; TODO cvs support
 ;; nethack-el
 ;; cvs -d:pserver:anonymous@cvs.sv.gnu.org:/sources/nethack-el co . 
+;; cvs -z3 -d:pserver:anonymous@cvs.savannah.nongnu.org:/sources/xwem co <modulename>
 
 ;;; init-hoarder-registers.el ends here
 ;;
