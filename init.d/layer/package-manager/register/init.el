@@ -4250,6 +4250,9 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["openbsd" "sudo" "doas" "root" "freebsd"]))
 (hoarder:fetch "SawfishWM/sawfish"
   '(:tag ["wm" "rep" "scheme"]))
+(hoarder:fetch "i-tu/Hasklig"
+  '(:tag ["font" "ligature" "haskell"]
+    :download nil))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
