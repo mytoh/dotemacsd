@@ -4253,6 +4253,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "i-tu/Hasklig"
   '(:tag ["font" "ligature" "haskell"]
     :download nil))
+(hoarder:fetch "nikolas/jmk-x11-fonts"
+  '(:tag ["font" "neep"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
