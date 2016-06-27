@@ -1386,7 +1386,8 @@
   '(:tag ["moonscript" "lua"]))
 (hoarder:register "MaokaiLin/node-ac"
   '(:tag ["node" "javascript" "auto-complete"]))
-
+(hoarder:register "hiddenlotus/pcmpl-homebrew"
+  '(:tag ["eshell" "pcomplete" "homebrew" "macOS"]))
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
   '(:load-path ["lisp" "contrib/lisp"]
