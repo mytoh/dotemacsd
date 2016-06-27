@@ -4268,6 +4268,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["fvwm" "configuration"]))
 (hoarder:fetch "RaoulSchaffranek/Modelling-A-Purely-Functional-Subset-Of-ECMAScript-2015"
   '(:tag ["functional_programming" "javascript"]))
+(hoarder:fetch "domus123/hashDiskDB"
+  '(:tag ["common_lisp" "database" "hash"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
