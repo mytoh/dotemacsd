@@ -4259,6 +4259,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["rofi" "clipboard" "python"]))
 (hoarder:fetch "cantino/huginn"
   '(:tag ["ifttt" "yahoo_pipes" "automation"]))
+(hoarder:fetch "salty-horse/ibus-uniemoji"
+  '(:tag ["unicode" "emoji" "ibus" "python" "input_method"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
