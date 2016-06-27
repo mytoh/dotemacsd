@@ -4270,6 +4270,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["functional_programming" "javascript"]))
 (hoarder:fetch "domus123/hashDiskDB"
   '(:tag ["common_lisp" "database" "hash"]))
+(hoarder:fetch "A1phaZer0/monsterwm-xinerama"
+  '(:tag ["monsterwm" "wm" "tiling_wm"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
