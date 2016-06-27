@@ -4255,6 +4255,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
     :download nil))
 (hoarder:fetch "nikolas/jmk-x11-fonts"
   '(:tag ["font" "neep"]))
+(hoarder:fetch "https://bitbucket.org/pandozer/rofi-clipboard-manager.git"
+  '(:tag ["rofi" "clipboard" "python"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
