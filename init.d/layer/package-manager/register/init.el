@@ -4262,6 +4262,12 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["ifttt" "yahoo_pipes" "automation"]))
 (hoarder:fetch "salty-horse/ibus-uniemoji"
   '(:tag ["unicode" "emoji" "ibus" "python" "input_method"]))
+(hoarder:fetch "mpv-player/mpv-build"
+  '(:tag ["mpv" "build" "compile"]))
+(hoarder:fetch "Jerry-SDC/fvwmx"
+  '(:tag ["fvwm" "configuration"]))
+(hoarder:fetch "RaoulSchaffranek/Modelling-A-Purely-Functional-Subset-Of-ECMAScript-2015"
+  '(:tag ["functional_programming" "javascript"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
