@@ -4257,6 +4257,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["font" "neep"]))
 (hoarder:fetch "https://bitbucket.org/pandozer/rofi-clipboard-manager.git"
   '(:tag ["rofi" "clipboard" "python"]))
+(hoarder:fetch "cantino/huginn"
+  '(:tag ["ifttt" "yahoo_pipes" "automation"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
