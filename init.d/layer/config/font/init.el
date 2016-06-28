@@ -111,6 +111,7 @@
             (misc-iso "-misc-fixed-medium-r-normal--10-*-75-75-c-60-iso10646-1")
             (mplus-fxd "-mplus-fxd-normal-normal-normal-*-10-*-*-*-c-60-iso10646-1")
             (symbola (font-spec :family "Symbola"))
+            (notoemoji (font-spec :family "Noto Emoji"))
             (emojione (font-spec :family "EmojiOne Color"))
             (fontset "fontset-naga10"))
     (create-fontset-from-ascii-font
@@ -126,7 +127,8 @@
       (set 'kana k10)
       (set 'cjk-misc misc-iso)
       (set 'han k10)
-      (set 'symbol symbola)
+      ;; (set 'symbol symbola)
+      (set 'symbol notoemoji)
       ;;(set 'symbol emojione)
       )
 
