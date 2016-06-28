@@ -4272,6 +4272,13 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["common_lisp" "database" "hash"]))
 (hoarder:fetch "A1phaZer0/monsterwm-xinerama"
   '(:tag ["monsterwm" "wm" "tiling_wm"]))
+(hoarder:fetch "https://notabug.org/kl3/dwm.git"
+  '(:tag ["fork" "dwm" "wm" "tilling_wm"]))
+(hoarder:fetch "https://notabug.org/rain1/catbuf.git"
+  '(:tag ["c" "programming" "string"]))
+(hoarder:fetch "https://notabug.org/shymega/dotfiles.git"
+  '(:tag ["dotfiles" "configuration" "stumpwm" "tmux" "mpv" ]))
+
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
