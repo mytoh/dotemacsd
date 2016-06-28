@@ -4278,7 +4278,14 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["c" "programming" "string"]))
 (hoarder:fetch "https://notabug.org/shymega/dotfiles.git"
   '(:tag ["dotfiles" "configuration" "stumpwm" "tmux" "mpv" ]))
-
+(hoarder:fetch "tewe/uroboro"
+  '(:tag ["uroboro" "haskell" "pattern_match" "language"]))
+(hoarder:fetch "bashrc/gnu-social-mode"
+  '(:tag ["gnu_social" "twitter" "quitter.se" "gnu" "sns"]))
+(hoarder:fetch "larsmagne/meme"
+  '(:tag ["meme" "svg" "image"]))
+(hoarder:fetch "NOBUTOKA/niconama.el"
+  '(:tag ["niconico" "niconame" "comment_viewer"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
@@ -4297,6 +4304,7 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 ;; nethack-el
 ;; cvs -d:pserver:anonymous@cvs.sv.gnu.org:/sources/nethack-el co . 
 ;; cvs -z3 -d:pserver:anonymous@cvs.savannah.nongnu.org:/sources/xwem co <modulename>
+
 
 ;;; init-hoarder-registers.el ends here
 ;;
