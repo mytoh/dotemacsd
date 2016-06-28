@@ -1388,6 +1388,15 @@
   '(:tag ["node" "javascript" "auto-complete"]))
 (hoarder:register "hiddenlotus/pcmpl-homebrew"
   '(:tag ["eshell" "pcomplete" "homebrew" "macOS"]))
+(hoarder:register "bashrc/gnu-social-mode"
+  '(:tag ["gnu_social" "twitter" "quitter.se" "gnu" "sns"]))
+(hoarder:register "larsmagne/meme"
+  '(:tag ["meme" "svg" "image"]))
+(hoarder:register "NOBUTOKA/niconama.el"
+  '(:tag ["niconico" "niconame" "comment_viewer"]))
+(hoarder:register "zonuexe/pandoc.el"
+  '(:tag ["pandoc" "eww" "ms_word" "epub" "docx" "markdown" "org-mode"]))
+
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
   '(:load-path ["lisp" "contrib/lisp"]
@@ -4280,12 +4289,6 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["dotfiles" "configuration" "stumpwm" "tmux" "mpv" ]))
 (hoarder:fetch "tewe/uroboro"
   '(:tag ["uroboro" "haskell" "pattern_match" "language"]))
-(hoarder:fetch "bashrc/gnu-social-mode"
-  '(:tag ["gnu_social" "twitter" "quitter.se" "gnu" "sns"]))
-(hoarder:fetch "larsmagne/meme"
-  '(:tag ["meme" "svg" "image"]))
-(hoarder:fetch "NOBUTOKA/niconama.el"
-  '(:tag ["niconico" "niconame" "comment_viewer"]))
 (hoarder:fetch "Homebrew/homebrew-core"
   '(:tag ["macOS" "package" "package_manager"]))
 (hoarder:fetch "Linuxbrew/homebrew-core"
