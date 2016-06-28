@@ -4286,6 +4286,10 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["meme" "svg" "image"]))
 (hoarder:fetch "NOBUTOKA/niconama.el"
   '(:tag ["niconico" "niconame" "comment_viewer"]))
+(hoarder:fetch "Homebrew/homebrew-core"
+  '(:tag ["macOS" "package" "package_manager"]))
+(hoarder:fetch "Linuxbrew/homebrew-core"
+  '(:tag ["package" "package_manager" "homebrew" "linux"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
