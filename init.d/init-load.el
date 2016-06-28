@@ -285,6 +285,7 @@
     swiper
     moonscript-mode
     node-ac
+    pandoc
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers
