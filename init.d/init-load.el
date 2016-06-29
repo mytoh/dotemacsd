@@ -287,6 +287,7 @@
     node-ac
     pandoc
     macrostep
+    imgur
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers
