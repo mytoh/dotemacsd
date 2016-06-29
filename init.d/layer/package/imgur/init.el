@@ -5,6 +5,6 @@
 ;;; Code:
 
 (liby 'imgur
-  (command (imgur-upload-image) "imgure"))
+  (command (imgur-upload-image) "imgur"))
 
 ;;; init.el ends here
