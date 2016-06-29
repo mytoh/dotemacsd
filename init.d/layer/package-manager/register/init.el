@@ -1401,7 +1401,8 @@
 (hoarder:register "larsmagne/imgur.el"
   '(:tag ["imgur" "api" "upload"]))
 (hoarder:register "kuangdash/org-iv"
-  '(:tag ["org-mode"]))
+  '(:tag ["org-mode" "html" "preview"]
+    :dependency ["netguy204/imp.el"]))
 (hoarder:register "zonuexe/interface-detector"
   '(:tag ["helm" "ido" "anything" "ivy" "counsel"]))
 
