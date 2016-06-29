@@ -1398,6 +1398,8 @@
   '(:tag ["pandoc" "eww" "ms_word" "epub" "docx" "markdown" "org-mode"]))
 (hoarder:register "joddie/macrostep"
   '(:tag ["macro" "debugger" "debug"]))
+(hoarder:fetch "inbasic/turbo-download-manager"
+  '(:tag ["download_manager" "addon" "firefox" "linux" "android"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
