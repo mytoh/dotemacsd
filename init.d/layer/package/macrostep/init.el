@@ -4,6 +4,7 @@
 
 ;;; Code:
 
+;; [[https://www.youtube.com/watch?v=odkYXXYOxpo][Debugging basics - YouTube]]
 (liby 'macrostep
   (command (macrostep-expand) "macrostep"))
 
