@@ -3265,8 +3265,6 @@
   '(:download nil)) 
 (hoarder:fetch "pituz/webm-thread"
   '(:download nil)) 
-(hoarder:fetch "pkgng/pkgng"
-  '(:download nil)) 
 (hoarder:fetch "plonk/bbiff"
   '(:download nil)) 
 (hoarder:fetch "plonk/psapi"
@@ -4307,6 +4305,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["download" "python" "batoto" "manga"]))
 (hoarder:fetch "inbasic/turbo-download-manager"
   '(:tag ["download_manager" "addon" "firefox" "linux" "android"]))
+(hoarder:fetch "freebsd/pkg"
+  '(:tag ["pkgng" "freebsd" "package" "package_manager"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
