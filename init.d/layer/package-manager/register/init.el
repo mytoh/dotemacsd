@@ -4297,6 +4297,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["package" "package_manager" "homebrew" "linux"]))
 (hoarder:fetch "vitalif/grive2"
   '(:tag ["google_drive" "grive"]))
+(hoarder:fetch "koroshiya/batoto-downloader-py"
+  '(:tag ["download" "python" "batoto" "manga"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
