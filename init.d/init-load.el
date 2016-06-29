@@ -286,6 +286,7 @@
     moonscript-mode
     node-ac
     pandoc
+    macrostep
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers

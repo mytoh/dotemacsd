@@ -1396,6 +1396,8 @@
   '(:tag ["niconico" "niconame" "comment_viewer"]))
 (hoarder:register "zonuexe/pandoc.el"
   '(:tag ["pandoc" "eww" "ms_word" "epub" "docx" "markdown" "org-mode"]))
+(hoarder:register "joddie/macrostep"
+  '(:tag ["macro" "debugger" "debug"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
