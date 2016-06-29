@@ -4295,6 +4295,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["macOS" "package" "package_manager"]))
 (hoarder:fetch "Linuxbrew/homebrew-core"
   '(:tag ["package" "package_manager" "homebrew" "linux"]))
+(hoarder:fetch "vitalif/grive2"
+  '(:tag ["google_drive" "grive"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
