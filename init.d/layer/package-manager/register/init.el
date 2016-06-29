@@ -3982,10 +3982,8 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
 (hoarder:fetch "git://git.osdn.jp/gitroot/ninix-aya/ruby-gtk3.git"
   '(:tag ["ukagaka" "gtk" "ruby" "python"]
     :name "ninix-ruby"))
-(hoarder:fetch "https://git.pantsu.cat/pantsu/pomf"
-  '(:tag ["image" "uploader" "pomf"]
-    :type :git
-    :depth nil))
+(hoarder:fetch "pomf/pomf"
+  '(:tag ["image" "uploader" "pomf"]))
 (hoarder:fetch "Nutomic/ensichat"
   '(:tag ["android" "chat" "p2p"]))
 (hoarder:fetch "https://notabug.org/zPlus/freepost"
