@@ -1398,8 +1398,12 @@
   '(:tag ["pandoc" "eww" "ms_word" "epub" "docx" "markdown" "org-mode"]))
 (hoarder:register "joddie/macrostep"
   '(:tag ["macro" "debugger" "debug"]))
-(hoarder:fetch "inbasic/turbo-download-manager"
-  '(:tag ["download_manager" "addon" "firefox" "linux" "android"]))
+(hoarder:register "larsmagne/imgur.el"
+  '(:tag ["imgur" "api" "upload"]))
+(hoarder:register "kuangdash/org-iv"
+  '(:tag ["org-mode"]))
+(hoarder:register "zonuexe/interface-detector"
+  '(:tag ["helm" "ido" "anything" "ivy" "counsel"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1678,6 +1682,7 @@
 (hoarder:register-theme "shafayetkhan/materialistic-seti")
 (hoarder:register-theme "mssola/soria")
 (hoarder:register-theme "vjohansen/dark-nature-theme")
+(hoarder:register-tehme "rdallasgray/graphene-meta-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -4299,6 +4304,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["google_drive" "grive"]))
 (hoarder:fetch "koroshiya/batoto-downloader-py"
   '(:tag ["download" "python" "batoto" "manga"]))
+(hoarder:fetch "inbasic/turbo-download-manager"
+  '(:tag ["download_manager" "addon" "firefox" "linux" "android"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
