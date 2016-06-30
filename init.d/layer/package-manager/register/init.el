@@ -1405,6 +1405,14 @@
     :dependency ["netguy204/imp.el"]))
 (hoarder:register "zonuexe/interface-detector"
   '(:tag ["helm" "ido" "anything" "ivy" "counsel"]))
+(hoarder:register "syohex/emacs-sound-wav"
+  '(:tag ["sound" "wav"]))
+(hoarder:register "swflint/pushover.el"
+  '(:tag ["notification"]))
+(hoarder:register "ajsquared/env-var-import"
+  '(:tag ["shell" "environment_variable"]))
+(hoarder:register "juergenhoetzel/babel"
+  '(:tag ["translation"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1684,6 +1692,7 @@
 (hoarder:register-theme "mssola/soria")
 (hoarder:register-theme "vjohansen/dark-nature-theme")
 (hoarder:register-theme "rdallasgray/graphene-meta-theme")
+(hoarder:register-theme "Donearm/Ubaryd-emacs")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)

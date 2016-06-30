@@ -288,6 +288,7 @@
     pandoc
     macrostep
     imgur
+    babel
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers
