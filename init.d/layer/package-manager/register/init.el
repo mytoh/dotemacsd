@@ -4318,6 +4318,10 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["pkgng" "freebsd" "package" "package_manager"]))
 (hoarder:fetch "Bionus/imgbrd-grabber"
   '(:tag ["booru" "image_board" "qt"]))
+(hoarder:fetch "https://gist.github.com/jabranham/31279f60d490b10d101652923706ba19.git"
+  '(:tag ["evernote" "org-mode"]
+    :name "evernote-to-org-mode.org"
+    :memo "[[https://www.reddit.com/r/emacs/comments/4qmi0u/evernote_to_org_mode/][Evernote to org mode : emacs]]"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
