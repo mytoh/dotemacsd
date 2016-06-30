@@ -1683,7 +1683,7 @@
 (hoarder:register-theme "shafayetkhan/materialistic-seti")
 (hoarder:register-theme "mssola/soria")
 (hoarder:register-theme "vjohansen/dark-nature-theme")
-(hoarder:register-tehme "rdallasgray/graphene-meta-theme")
+(hoarder:register-theme "rdallasgray/graphene-meta-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
