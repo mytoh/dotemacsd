@@ -4307,6 +4307,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["download_manager" "addon" "firefox" "linux" "android"]))
 (hoarder:fetch "freebsd/pkg"
   '(:tag ["pkgng" "freebsd" "package" "package_manager"]))
+(hoarder:fetch "Bionus/imgbrd-grabber"
+  '(:tag ["booru" "image_board" "qt"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
