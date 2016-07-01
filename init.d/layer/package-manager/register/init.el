@@ -4330,6 +4330,32 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["aria2" "server" "image"]))
 (hoarder:fetch "https://bitbucket.org/alekseyt/leech.git"
   '(:tag ["torrent" "rss" "feed" "aria2"]))
+(hoarder:fetch "orangeduck/imgcurses"
+  '(:tag ["ncurses" "image" "terminal" "image_viewer"]))
+(hoarder:fetch "https://gitgud.io/RomeIsBurning/ClearView-Qt"
+  '(:tag ["qt" "image" "image_viewer"]))
+(hoarder:fetch "https://gitgud.io/jangoknight7/uranium-browser"
+  '(:tag ["browser" "chromium"]))
+(hoarder:fetch "https://gitgud.io/drylemon/bitslut"
+  '(:tag ["torrent" "libtorrent"]))
+(hoarder:fetch "https://gitgud.io/sn0w75/MMP"
+  '(:tag ["MMD" "MikuMikuDance" "linux" "PMX" "VMD"]))
+(hoarder:fetch "https://gitgud.io/raidh0/beorc-gothic"
+  '(:tag ["font" "runic"]))
+(hoarder:fetch "https://gitgud.io/fbt/sx-open"
+  '(:tag ["xdg-open"]))
+(hoarder:fetch "https://gitgud.io/Se7en/user.js"
+  '(:tag ["userjs" "firefox"]))
+(hoarder:fetch "https://gitgud.io/dwarvenbuffet/80s-skeleton"
+  '(:tag ["game" "lua" "löve"]))
+(hoarder:fetch "https://gitgud.io/KonaKona/nettool"
+  '(:tag ["network" "linux"]))
+(hoarder:fetch "https://gitgud.io/Apogate/saguaro")
+(hoarder:fetch "spootTheLousy/saguaro"
+  '(:tag ["imageboard"]
+    :memo "[[http://saguaroimgboard.tk/][Saguaro Imageboard Software]]"))
+(hoarder:fetch "https://gitgud.io/dtluna/soundgasm-dl"
+  '(:tag ["soundgasm" "download" "javascript"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
