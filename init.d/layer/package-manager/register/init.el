@@ -1413,6 +1413,8 @@
   '(:tag ["shell" "environment_variable"]))
 (hoarder:register "juergenhoetzel/babel"
   '(:tag ["translation"]))
+(hoarder:register "dk87/avandu"
+  '(:tag ["tiny_tiny_rss" "rss"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
