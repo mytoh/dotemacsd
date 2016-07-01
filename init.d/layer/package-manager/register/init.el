@@ -4322,6 +4322,12 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["evernote" "org-mode"]
     :name "evernote-to-org-mode.org"
     :memo "[[https://www.reddit.com/r/emacs/comments/4qmi0u/evernote_to_org_mode/][Evernote to org mode : emacs]]"))
+(hoarder:fetch "Wildog/Ariafred"
+  '(:tag ["macOS" "alfred" "aria2"]))
+(hoarder:fetch "gini-modules/image-cache"
+  '(:tag ["aria2" "server" "image"]))
+(hoarder:fetch "https://bitbucket.org/alekseyt/leech.git"
+  '(:tag ["torrent" "rss" "feed" "aria2"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
