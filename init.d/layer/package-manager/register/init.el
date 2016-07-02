@@ -4363,6 +4363,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["soundgasm" "download" "javascript"]))
 (hoarder:fetch "ocochard/BSDRP"
   '(:tag ["freebsd" "bsd" "router" "quagga" "bird"]))
+(hoarder:fetch "https://gist.github.com/10553721.git"
+  '(:name "box-linux.sh"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
