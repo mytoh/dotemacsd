@@ -161,6 +161,8 @@
 (hoarder:register "masutaka/emacs-helm-qiita")
 (hoarder:register "markus1189/helm-proc")
 (hoarder:register "michael-heerdegen/helm-browse")
+(hoarder:register "hatschipuh/helm-intuitive"
+  '(:tag ["helm" "helm-fuzzier" "helm-flx"]))
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]
 ;;                    :dependency ["michael-heerdegen/iterators.el"]))
@@ -1415,6 +1417,8 @@
   '(:tag ["translation"]))
 (hoarder:register "dk87/avandu"
   '(:tag ["tiny_tiny_rss" "rss"]))
+(hoarder:register "cjohansson/emacs-ssh-deploy"
+  '(:tag ["ssh" "deploy"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -4332,29 +4336,30 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["torrent" "rss" "feed" "aria2"]))
 (hoarder:fetch "orangeduck/imgcurses"
   '(:tag ["ncurses" "image" "terminal" "image_viewer"]))
-(hoarder:fetch "https://gitgud.io/RomeIsBurning/ClearView-Qt"
+(hoarder:fetch "https://gitgud.io/RomeIsBurning/ClearView-Qt.git"
   '(:tag ["qt" "image" "image_viewer"]))
-(hoarder:fetch "https://gitgud.io/jangoknight7/uranium-browser"
-  '(:tag ["browser" "chromium"]))
-(hoarder:fetch "https://gitgud.io/drylemon/bitslut"
+(hoarder:fetch "https://gitgud.io/jangoknight7/uranium-browser.git"
+  '(:tag ["browser" "chromium"]
+    :download nil))
+(hoarder:fetch "https://gitgud.io/drylemon/bitslut.git"
   '(:tag ["torrent" "libtorrent"]))
-(hoarder:fetch "https://gitgud.io/sn0w75/MMP"
+(hoarder:fetch "https://gitgud.io/sn0w75/MMP.git"
   '(:tag ["MMD" "MikuMikuDance" "linux" "PMX" "VMD"]))
-(hoarder:fetch "https://gitgud.io/raidh0/beorc-gothic"
+(hoarder:fetch "https://gitgud.io/raidh0/beorc-gothic.git"
   '(:tag ["font" "runic"]))
-(hoarder:fetch "https://gitgud.io/fbt/sx-open"
+(hoarder:fetch "https://gitgud.io/fbt/sx-open.git"
   '(:tag ["xdg-open"]))
-(hoarder:fetch "https://gitgud.io/Se7en/user.js"
+(hoarder:fetch "https://gitgud.io/Se7en/user.js.git"
   '(:tag ["userjs" "firefox"]))
-(hoarder:fetch "https://gitgud.io/dwarvenbuffet/80s-skeleton"
+(hoarder:fetch "https://gitgud.io/dwarvenbuffet/80s-skeleton.git"
   '(:tag ["game" "lua" "löve"]))
-(hoarder:fetch "https://gitgud.io/KonaKona/nettool"
+(hoarder:fetch "https://gitgud.io/KonaKona/nettool.git"
   '(:tag ["network" "linux"]))
-(hoarder:fetch "https://gitgud.io/Apogate/saguaro")
+(hoarder:fetch "https://gitgud.io/Apogate/saguaro.git")
 (hoarder:fetch "spootTheLousy/saguaro"
   '(:tag ["imageboard"]
     :memo "[[http://saguaroimgboard.tk/][Saguaro Imageboard Software]]"))
-(hoarder:fetch "https://gitgud.io/dtluna/soundgasm-dl"
+(hoarder:fetch "https://gitgud.io/dtluna/soundgasm-dl.git"
   '(:tag ["soundgasm" "download" "javascript"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
