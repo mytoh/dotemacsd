@@ -4365,6 +4365,12 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["freebsd" "bsd" "router" "quagga" "bird"]))
 (hoarder:fetch "https://gist.github.com/10553721.git"
   '(:name "box-linux.sh"))
+(hoarder:fetch "xtetsuji/encoreutils"
+  '(:tag ["perl" "coreutils" "xargs" "rm" "rmdir"]
+    :memo "[[http://post.tetsuji.jp/2016/06/gentle_unlink/][穏やかな速度でファイルを削除するプログラム gentle_unlink を書いた | #interest_ae]]"))
+(hoarder:fetch "haasn/gentoo-conf"
+  '(:tag ["mpv"]
+    :memo "[[https://github.com/haasn/gentoo-conf/blob/nanodesu/home/nand/.mpv/scripts/avail/skipchapters.lua][gentoo-conf/skipchapters.lua at nanodesu · haasn/gentoo-conf · GitHub]]"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
