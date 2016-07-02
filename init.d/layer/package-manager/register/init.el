@@ -4361,6 +4361,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
     :memo "[[http://saguaroimgboard.tk/][Saguaro Imageboard Software]]"))
 (hoarder:fetch "https://gitgud.io/dtluna/soundgasm-dl.git"
   '(:tag ["soundgasm" "download" "javascript"]))
+(hoarder:fetch "ocochard/BSDRP"
+  '(:tag ["freebsd" "bsd" "router" "quagga" "bird"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
