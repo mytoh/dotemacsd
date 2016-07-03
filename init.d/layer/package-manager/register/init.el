@@ -4371,6 +4371,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "haasn/gentoo-conf"
   '(:tag ["mpv"]
     :memo "[[https://github.com/haasn/gentoo-conf/blob/nanodesu/home/nand/.mpv/scripts/avail/skipchapters.lua][gentoo-conf/skipchapters.lua at nanodesu · haasn/gentoo-conf · GitHub]]"))
+(hoarder:fetch "Nakilon/mll"
+  '(:tag ["ruby" "utility" "function" "wolfram" "wolfram_mathematica" "haskell"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
