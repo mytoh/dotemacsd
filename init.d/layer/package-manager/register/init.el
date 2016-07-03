@@ -161,7 +161,7 @@
 (hoarder:register "masutaka/emacs-helm-qiita")
 (hoarder:register "markus1189/helm-proc")
 (hoarder:register "michael-heerdegen/helm-browse")
-(hoarder:register "hatschipuh/helm-intuitive"
+(hoarder:register "hatschipuh/helm-ido-like-guide"
   '(:tag ["helm" "helm-fuzzier" "helm-flx"]))
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]
