@@ -4401,6 +4401,9 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
     :site "https://z.cash"
     :memo "[[https://archive.org/details/DecentralizedWeb20160609pt1?start=21490][Decentralized Web Summit Meetup - June 9 - Day 3 : Internet Archive : Free Do...]]"))
 
+(hoarder:fetch "kgryte/awesome-peer-to-peer"
+  '(:tag ["p2p" "awesome_list"]))
+
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
 ;; git://gitorious.org/src-vcs/src-vcs.git 
