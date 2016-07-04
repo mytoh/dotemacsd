@@ -4382,6 +4382,9 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["moka" "icon" "x11"]))
 (hoarder:fetch "moka-project/moka-icon-theme"
   '(:tag ["moka" "icon" "x11"]))
+(hoarder:fetch "tahoe-lafs/tahoe-lafs"
+  '(:tag ["storage" "dropbox" "backup" "python"]
+    :memo "[[https://archive.org/details/DecentralizedWeb20160609pt1?start=21490][Decentralized Web Summit Meetup - June 9 - Day 3 : Internet Archive : Free Do...]]"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
