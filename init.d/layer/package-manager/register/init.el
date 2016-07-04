@@ -4385,6 +4385,21 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "tahoe-lafs/tahoe-lafs"
   '(:tag ["storage" "dropbox" "backup" "python"]
     :memo "[[https://archive.org/details/DecentralizedWeb20160609pt1?start=21490][Decentralized Web Summit Meetup - June 9 - Day 3 : Internet Archive : Free Do...]]"))
+(hoarder:fetch "mediachain/mediachain"
+  '(:tag ["database" "ipfs" "media"]
+    :memo "[[https://archive.org/details/DecentralizedWeb20160609pt1?start=21490][Decentralized Web Summit Meetup - June 9 - Day 3 : Internet Archive : Free Do...]]"))
+(hoarder:fetch "dloa/alexandria-browser"
+  '(:tag ["p2p" "media" "ipfs" "decentralized" "decentralized_library_of_alexandria" "alexandria" "bitcoin" "florincoin" "imogen_heap"]
+    :site "http://alexandria.io/browser/#/media"
+    :memo "[[https://archive.org/details/DecentralizedWeb20160609pt1?start=21490][Decentralized Web Summit Meetup - June 9 - Day 3 : Internet Archive : Free Do...]]"   ))
+(hoarder:fetch "openannotation/annotator"
+  '(:tag ["annotation" "chrome" "javascript" "open_annotation"]
+    :site "http://annotatorjs.org/"
+    :memo "[[https://archive.org/details/DecentralizedWeb20160609pt1?start=21490][Decentralized Web Summit Meetup - June 9 - Day 3 : Internet Archive : Free Do...]]"))
+(hoarder:fetch "zcash/zcash"
+  '(:tag ["bitcoin" "ethereum" "currency"]
+    :site "https://z.cash"
+    :memo "[[https://archive.org/details/DecentralizedWeb20160609pt1?start=21490][Decentralized Web Summit Meetup - June 9 - Day 3 : Internet Archive : Free Do...]]"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
