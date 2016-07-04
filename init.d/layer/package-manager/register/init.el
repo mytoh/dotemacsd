@@ -4376,6 +4376,12 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "git://git.code.sf.net/p/roxterm/code"
   '(:name "roxterm"
     :tag ["terminal" "x11"]))
+(hoarder:fetch "moka-project/faba-icon-theme"
+  '(:tag ["moka" "icon" "x11"]))
+(hoarder:fetch "moka-project/faba-mono-icons"
+  '(:tag ["moka" "icon" "x11"]))
+(hoarder:fetch "moka-project/moka-icon-theme"
+  '(:tag ["moka" "icon" "x11"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
