@@ -4412,6 +4412,9 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["awesome_list" "ipfs"]))
 (hoarder:fetch "joshbuchea/HEAD"
   '(:tag ["head" "html"]))
+(hoarder:fetch "https://gist.github.com/nownabe/85d8595fd142adc426fbfaf2bab015e0.git"
+  '(:name "git_commit_template"
+    :site "http://memo.goodpatch.co/2016/07/beautiful-commits-with-emojis/"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
