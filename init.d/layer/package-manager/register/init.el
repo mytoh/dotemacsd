@@ -4402,6 +4402,10 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 
 (hoarder:fetch "kgryte/awesome-peer-to-peer"
   '(:tag ["p2p" "awesome_list"]))
+(hoarder:fetch "nginnever/swarmchan"
+  '(:tag ["ipfs" "chan" "bbs" "ethereum"]))
+(hoarder:fetch "fazo96/ipfs-boards"
+  '(:tag ["ipfs" "chan" "bbs"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
