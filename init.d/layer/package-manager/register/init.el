@@ -1673,7 +1673,6 @@
 (hoarder:register-theme "jefflasslett/positive-reinforcement-theme")
 (hoarder:register-theme "wasamasa/punpun-theme")
 (hoarder:register-theme "MetroWind/emacs-deviant-theme")
-(hoarder:register-theme "sainathadapa/emacs-hybrid-material")
 (hoarder:register-theme "ranmocy/amelie-theme")
 (hoarder:register-theme "marktran/color-theme-ujelly")
 (hoarder:register-theme "caisah/liso-theme")
