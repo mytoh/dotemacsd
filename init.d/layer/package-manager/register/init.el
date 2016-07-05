@@ -4424,6 +4424,11 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["mpv" "qt" "gui"]))
 (hoarder:fetch "gnome-mpv/gnome-mpv"
   '(:tag ["mpv" "gnome" "gtk" "gui"]))
+(hoarder:fetch "git://git.sv.gnu.org/autoconf-archive.git"
+  '(:tag ["gnu" "autoconf"]))
+(hoarder:fetch "https://gist.github.com/ElegantMonkey/bba287693830055a6bad90081c1ad4e2.git"
+  '(:name "peerflix-hook.lua"
+    :tag ["peerflix" "mpv" "lua"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
