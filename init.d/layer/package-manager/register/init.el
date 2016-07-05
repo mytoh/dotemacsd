@@ -4418,6 +4418,12 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "https://gist.github.com/nownabe/85d8595fd142adc426fbfaf2bab015e0.git"
   '(:name "git_commit_template"
     :site "http://memo.goodpatch.co/2016/07/beautiful-commits-with-emojis/"))
+(hoarder:fetch "kokoko3k/xt7-player-mpv"
+  '(:tag ["mpv" "qt" "gambas" "gui"]))
+(hoarder:fetch "u8sand/Baka-MPlayer"
+  '(:tag ["mpv" "qt" "gui"]))
+(hoarder:fetch "gnome-mpv/gnome-mpv"
+  '(:tag ["mpv" "gnome" "gtk" "gui"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
