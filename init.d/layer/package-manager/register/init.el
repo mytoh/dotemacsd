@@ -1419,6 +1419,9 @@
   '(:tag ["tiny_tiny_rss" "rss"]))
 (hoarder:register "cjohansson/emacs-ssh-deploy"
   '(:tag ["ssh" "deploy"]))
+(hoarder:register "https://bitbucket.org/shackra/font-man.git"
+  '(:tag ["font"]
+    :dependency ["10sr/switch-buffer-functions-el"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"

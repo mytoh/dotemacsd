@@ -289,6 +289,7 @@
     macrostep
     imgur
     babel
+    font-man
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers
