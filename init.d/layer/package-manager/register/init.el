@@ -4406,6 +4406,10 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["ipfs" "chan" "bbs" "ethereum"]))
 (hoarder:fetch "fazo96/ipfs-boards"
   '(:tag ["ipfs" "chan" "bbs"]))
+(hoarder:fetch "ipfs/examples"
+  '(:tag ["ipfs"]))
+(hoarder:fetch "ipfs/awesome-ipfs"
+  '(:tag ["awesome_list" "ipfs"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
