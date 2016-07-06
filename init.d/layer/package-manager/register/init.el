@@ -4429,6 +4429,12 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "https://gist.github.com/ElegantMonkey/bba287693830055a6bad90081c1ad4e2.git"
   '(:name "peerflix-hook.lua"
     :tag ["peerflix" "mpv" "lua"]))
+(hoarder:fetch "sindresorhus/matcher"
+  '(:tag ["javascript" "glob" "regex"]))
+(hoarder:fetch "NamPNQ/You-Dont-Need-Javascript"
+  '(:tag ["javascript" "css" "example"]))
+(hoarder:fetch "vifm/vifm"
+  '(:tag ["vim" "file_manager"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
