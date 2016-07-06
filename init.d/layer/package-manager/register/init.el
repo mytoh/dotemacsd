@@ -2751,7 +2751,7 @@
 (hoarder:fetch "Griever/userChromeJS"
   '(:download nil)) 
 (hoarder:fetch "HelloZeroNet/ZeroNet"
-  '(:download nil)) 
+  '(:tag ["decentralized" "p2p" "bittorrent" "bitcoin"])) 
 (hoarder:fetch "Hiroyuki-Nagata/XrossBoard"
   '(:download nil)) 
 (hoarder:fetch "Hund/Userstyles"
