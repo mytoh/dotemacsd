@@ -4,7 +4,7 @@
 
 ;;; Code:
 
-(req 'font-man
-  (font-man-mode))
+(liby 'font-man
+  (command (font-man-mode) "font-man"))
 
 ;;; init.el ends here
