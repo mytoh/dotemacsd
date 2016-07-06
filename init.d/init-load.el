@@ -225,7 +225,7 @@
     wordnut
     erlang
     sml-mode
-    beacon ; error invalid face :background
+    ;; beacon ; error invalid face :background
     clipmon
     font-lock-studio
     emojify
@@ -358,7 +358,7 @@
     ;; mic-paren
     ;; paren
     ;; highlight-sexp
-    highlight-tail
+    ;; highlight-tail
     ;; auto-highlight-symbol
     ;; highlight-stages
     ;; highlight-backquotes-mode
