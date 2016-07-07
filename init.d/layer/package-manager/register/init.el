@@ -1423,6 +1423,8 @@
   '(:tag ["font"]
     :dependency ["10sr/switch-buffer-functions-el"]))
 (hoarder:register "michael-heerdegen/interaction-log.el")
+(hoarder:register "emacsmirror/srfi"
+  '(:tag ["scheme" "srfi" "document" "reference"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -4438,6 +4440,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["vim" "file_manager"]))
 (hoarder:fetch "pornel/giflossy"
   '(:tag ["gif" "image" "gifsicle"]))
+(hoarder:fetch "scheme-requests-for-implementation/srfi-116"
+  '(:tag ["scheme" "srfi" "list" "immutable"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
