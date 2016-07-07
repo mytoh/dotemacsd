@@ -4436,6 +4436,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["javascript" "css" "example"]))
 (hoarder:fetch "vifm/vifm"
   '(:tag ["vim" "file_manager"]))
+(hoarder:fetch "pornel/giflossy"
+  '(:tag ["gif" "image" "gifsicle"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
