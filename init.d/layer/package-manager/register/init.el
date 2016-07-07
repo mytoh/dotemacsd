@@ -4442,6 +4442,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["gif" "image" "gifsicle"]))
 (hoarder:fetch "scheme-requests-for-implementation/srfi-116"
   '(:tag ["scheme" "srfi" "list" "immutable"]))
+(hoarder:fetch "VictorBjelkholm/ipfscrape"
+  '(:tag ["ipfs" "wget" "bash"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
