@@ -4444,6 +4444,15 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["scheme" "srfi" "list" "immutable"]))
 (hoarder:fetch "VictorBjelkholm/ipfscrape"
   '(:tag ["ipfs" "wget" "bash"]))
+(hoarder:fetch "c-base/ipfs-ringpin"
+  '(:tag ["ipfs"]))
+(hoarder:fetch "orinocoz/pirateflix"
+  '(:tag ["javascript" "npm"]))
+(hoarder:fetch "haadcode/orbit"
+  '(:tag ["ipfs" "chat"]))
+(hoarder:fetch "download13/ipfstube"
+  '(:tag ["ipfs" "video"]
+    :site "http://ipfstube.erindachtler.me/"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
