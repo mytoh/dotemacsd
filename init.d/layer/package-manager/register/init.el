@@ -1422,6 +1422,7 @@
 (hoarder:register "https://bitbucket.org/shackra/font-man.git"
   '(:tag ["font"]
     :dependency ["10sr/switch-buffer-functions-el"]))
+(hoarder:register "michael-heerdegen/interaction-log.el")
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"

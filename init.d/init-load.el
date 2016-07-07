@@ -290,6 +290,7 @@
     imgur
     babel
     font-man
+    interaction-log
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers
