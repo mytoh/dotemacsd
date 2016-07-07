@@ -291,6 +291,7 @@
     babel
     font-man
     interaction-log
+    escr
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers

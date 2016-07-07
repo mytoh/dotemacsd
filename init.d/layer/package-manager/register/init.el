@@ -1425,6 +1425,8 @@
 (hoarder:register "michael-heerdegen/interaction-log.el")
 (hoarder:register "emacsmirror/srfi"
   '(:tag ["scheme" "srfi" "document" "reference"]))
+(hoarder:register "atykhonov/escr"
+  '(:tag ["screenshot"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
