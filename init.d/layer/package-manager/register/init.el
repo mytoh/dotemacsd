@@ -1429,6 +1429,8 @@
   '(:tag ["screenshot"]))
 (hoarder:register "cute-jumper/parsec.el"
   '(:tag ["haskell" "parsec" "parser"]))
+(hoarder:register "yuutayamada/contrast-color-picker-el"
+  '(:tag ["material_design" "color_palette" "colorscheme"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
