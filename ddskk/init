@@ -122,7 +122,16 @@
 ;;    ))
 
 ;;;; itaiji
-(setq skk-itaiji-jisyo (muki:skk-dic-path "SKK-JISYO.itaiji"))
+
+(cl-letf ((jisyoutf8 (expand-file-name "ddskk/dic/SKK-JISYO.itaiji.utf8"
+                                       user-emacs-directory))
+          (jisyoeuc (expand-file-name "ddskk/dic/SKK-JISYO.itaiji"
+                                      user-emacs-directory)))
+  (pcase (file-exists-p jisyoutf8)
+    (`nil
+     (setq skk-itaiji-jisyo jisyoeuc))
+    (_
+     (setq skk-itaiji-jisyo jisyoutf8))))
 
 ;;;; github emoji
 
