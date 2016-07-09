@@ -239,7 +239,7 @@
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
 ;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson, noctilux, erosiond, material
-(defvar muki:x-theme 'omtose-phellack)
+(defvar muki:x-theme 'metalheart)
 (defvar muki:term-theme 'flatland)
 (defconst muki:favorite-themes
   '(comidia planet monokai molokai firebelly
@@ -251,7 +251,7 @@
     reykjavik morning-star majapahit-dark redbelly badwolf
     hamburg omtose-phellack base16-harmonic16-dark
     Motoko motoko-night base16-oceanicnext-dark
-    hyperplane iceberg myth forest-blue soria))
+    hyperplane iceberg myth forest-blue soria metalheart))
 
 ;; (enable-option select-enable-clipboard
 ;;                select-enable-primary)

@@ -1708,6 +1708,7 @@
 (hoarder:register-theme "vjohansen/dark-nature-theme")
 (hoarder:register-theme "rdallasgray/graphene-meta-theme")
 (hoarder:register-theme "Donearm/Ubaryd-emacs")
+(hoarder:register-theme "mswift42/MetalHeart-Emacs")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
