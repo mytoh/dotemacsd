@@ -1427,6 +1427,8 @@
   '(:tag ["scheme" "srfi" "document" "reference"]))
 (hoarder:register "atykhonov/escr"
   '(:tag ["screenshot"]))
+(hoarder:register "cute-jumper/parsec.el"
+  '(:tag ["haskell" "parsec" "parser"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -4455,6 +4457,23 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "download13/ipfstube"
   '(:tag ["ipfs" "video"]
     :site "http://ipfstube.erindachtler.me/"))
+(hoarder:fetch "kohler/gifsicle"
+  '(:tag ["gif" "image"]))
+(hoarder:fetch "https://gist.github.com/mcandre/eab4166938ed4205bef4.git"
+  '(:tag ["torrent" "tracker"]
+    :memo " reddit: https://www.reddit.com/r/opentrackerproject/
+udp://trackr.sytes.net:80
+http://trackr.sytes.net/
+udp://tracker.ccc.de:80/announce
+ http://tracker.edoardocolombo.eu:6969/announce
+udp://tracker.bittor.pw:1337
+http://tracker.bittor.pw:1337/announce
+udp://tracker.grepler.com:6969/announce
+http://tracker.grepler.com:6969/announce
+udp://tracker.openbittorrent.com:80/announce
+http://opentracker-milanesi.rhcloud.com/announce "))
+(hoarder:fetch "ngosang/trackerslist"
+  '(:tag ["torrent" "tracker"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
