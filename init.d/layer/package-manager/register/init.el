@@ -4482,6 +4482,8 @@ http://opentracker-milanesi.rhcloud.com/announce "))
 (hoarder:fetch "https://gist.github.com/4430197.git"
   '(:name "inspector-only-black-text.css"
     :tag ["firefox" "css" ]))
+(hoarder:fetch "icu-project/icu4c"
+  '(:tag ["unicode"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
@@ -4503,4 +4505,3 @@ http://opentracker-milanesi.rhcloud.com/announce "))
 
 
 ;;; init-hoarder-registers.el ends here
-;;
