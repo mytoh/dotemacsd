@@ -4477,6 +4477,11 @@ udp://tracker.openbittorrent.com:80/announce
 http://opentracker-milanesi.rhcloud.com/announce "))
 (hoarder:fetch "ngosang/trackerslist"
   '(:tag ["torrent" "tracker"]))
+(hoarder:fetch "cyber-user/Amber"
+  '(:tag ["css" "firefox" "cyberpunk"]))
+(hoarder:fetch "https://gist.github.com/4430197.git"
+  '(:name "inspector-only-black-text.css"
+    :tag ["firefox" "css" ]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
