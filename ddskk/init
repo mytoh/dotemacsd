@@ -8,14 +8,25 @@
 
 
 ;;;; large dict
-;; (setq skk-large-jisyo (expand-file-name "ddskk/dic/SKK-JISYO.L"
-;;                                         user-emacs-directory))
-(setq skk-large-jisyo (cons
-                       (locate-user-emacs-file "ddskk/dic/npiiii4skk/npiiii.l.euc")
-                       'euc))
+;; [[http://arat.xyz/wordpress/?p=129][Emacsで使用するSKKの辞書の文字コードをutf-8にする | My備忘録]]
+;; nkf -w -Lu /usr/local/share/skk/SKK-JISYO.L > SKK-JISYO.L.utf8
+;; nkf -w -Lu .skk-jisyo > skk-jisyo.utf8
+(cl-letf ((jisyoutf8 (expand-file-name "ddskk/dic/SKK-JISYO.L.utf8"
+                                       user-emacs-directory))
+          (jisyoeuc (expand-file-name "ddskk/dic/SKK-JISYO.L"
+                                      user-emacs-directory)))
+  (pcase (file-exists-p jisyoutf8)
+    (`nil
+     (setq skk-large-jisyo jisyoeuc))
+    (_
+     (setq skk-large-jisyo jisyoutf8))))
+
+;; (setq skk-large-jisyo (cons
+;;                        (locate-user-emacs-file "ddskk/dic/npiiii4skk/npiiii.l.euc")
+;;                        'euc))
 ;; (setq skk-large-jisyo "/usr/local/share/skk/SKK-JISYO.L")
 ;;;;; cdb
-(setq skk-cdb-large-jisyo "/usr/local/share/skk/SKK-JISYO.L.cdb")
+;; (setq skk-cdb-large-jisyo "/usr/local/share/skk/SKK-JISYO.L.cdb")
 
 ;;;; use act for dvorak
 (setq skk-use-act t)
