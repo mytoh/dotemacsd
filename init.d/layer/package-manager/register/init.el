@@ -4484,6 +4484,10 @@ http://opentracker-milanesi.rhcloud.com/announce "))
     :tag ["firefox" "css" ]))
 (hoarder:fetch "icu-project/icu4c"
   '(:tag ["unicode"]))
+(hoarder:fetch "pypa/virtualenv"
+  '(:tag ["python"]))
+(hoarder:fetch "indiehosters/awesome-librehosters"
+  '(:tag ["free" "libre" "server" "code_hosting"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
