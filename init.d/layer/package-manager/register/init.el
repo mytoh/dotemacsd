@@ -4488,6 +4488,9 @@ http://opentracker-milanesi.rhcloud.com/announce "))
   '(:tag ["python"]))
 (hoarder:fetch "indiehosters/awesome-librehosters"
   '(:tag ["free" "libre" "server" "code_hosting"]))
+(hoarder:fetch "bitwhacker/Anizb"
+  '(:tag ["anime" "usenet" "news"]
+    :site "https://anizb.org/"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
