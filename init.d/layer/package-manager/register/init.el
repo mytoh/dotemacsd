@@ -4491,6 +4491,8 @@ http://opentracker-milanesi.rhcloud.com/announce "))
 (hoarder:fetch "bitwhacker/Anizb"
   '(:tag ["anime" "usenet" "news"]
     :site "https://anizb.org/"))
+(hoarder:fetch "ployground/bsdploy"
+  '(:tag ["freebsd" "python" "ansible" "amazon_ec2" "ezjail"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
