@@ -4495,6 +4495,8 @@ http://opentracker-milanesi.rhcloud.com/announce "))
 (hoarder:fetch "https://git.sayonara-player.com/sayonara.git"
   '(:depth nil
     :tag ["qt" "music" "music_player"]))
+(hoarder:fetch "bpkg/bpkg"
+  '(:tag ["package" "package_manager" "bash"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
