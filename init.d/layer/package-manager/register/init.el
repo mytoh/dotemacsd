@@ -1431,6 +1431,8 @@
   '(:tag ["haskell" "parsec" "parser"]))
 (hoarder:register "yuutayamada/contrast-color-picker-el"
   '(:tag ["material_design" "color_palette" "colorscheme"]))
+(hoarder:register "uemurax/uzbl-manager.el"
+  '(:tag ["uzbl" "browser"]))
 (hoarder:register "justbur/emacs-vdiff"
   '(:tag ["diff" "vimdiff" "evil"]))
 
@@ -4499,6 +4501,14 @@ http://opentracker-milanesi.rhcloud.com/announce "))
     :tag ["qt" "music" "music_player"]))
 (hoarder:fetch "bpkg/bpkg"
   '(:tag ["package" "package_manager" "bash"]))
+(hoarder:fetch "Pita/ueberDB"
+  '(:tag ["database" "couchdb" "elasticsearch" "leveldb" "mongodb" "mysql" "postgres" "redis" "rethinkdb" "sqlite"]))
+(hoarder:fetch "i2p/i2p.i2p"
+  '(:tag ["p2p"]))
+(hoarder:fetch "Continuities/adarkroom"
+  '(:tag ["text_adventure" "a_dark_room" "browser"]))
+(hoarder:fetch "dragonstudio/ADarkRoomAndroid"
+  '(:tag ["text_adventure" "a_dark_room" "a_dark_night" "android"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
