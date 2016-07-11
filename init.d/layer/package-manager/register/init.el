@@ -1431,6 +1431,8 @@
   '(:tag ["haskell" "parsec" "parser"]))
 (hoarder:register "yuutayamada/contrast-color-picker-el"
   '(:tag ["material_design" "color_palette" "colorscheme"]))
+(hoarder:register "justbur/emacs-vdiff"
+  '(:tag ["diff" "vimdiff" "evil"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"

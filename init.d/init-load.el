@@ -292,6 +292,7 @@
     font-man
     interaction-log
     escr
+    vdiff
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers
