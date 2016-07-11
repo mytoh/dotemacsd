@@ -2688,7 +2688,6 @@
 (hoarder:fetch "MirBSD/mksh") 
 (hoarder:fetch "NitruxSA/luv-icon-theme") 
 (hoarder:fetch "derf/feh") 
-(hoarder:fetch "fabianalexisinostroza/Antu") 
 (hoarder:fetch "fish-shell/fish-shell") 
 (hoarder:fetch "git/git") 
 (hoarder:fetch "horst3180/Arc-theme") 
