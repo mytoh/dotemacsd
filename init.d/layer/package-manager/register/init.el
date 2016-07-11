@@ -4492,6 +4492,9 @@ http://opentracker-milanesi.rhcloud.com/announce "))
     :site "https://anizb.org/"))
 (hoarder:fetch "ployground/bsdploy"
   '(:tag ["freebsd" "python" "ansible" "amazon_ec2" "ezjail"]))
+(hoarder:fetch "https://git.sayonara-player.com/sayonara.git"
+  '(:depth nil
+    :tag ["qt" "music" "music_player"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
