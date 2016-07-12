@@ -1435,6 +1435,36 @@
   '(:tag ["uzbl" "browser"]))
 (hoarder:register "justbur/emacs-vdiff"
   '(:tag ["diff" "vimdiff" "evil"]))
+(hoarder:register "http://git.savannah.gnu.org/r/delight.git"
+  '(:tag ["diminsh" "mode-line"]))
+(hoarder:register "emacsmirror/multi-eshell"
+  '(:tag ["eshell"]))
+(hoarder:register "technomancy/lein.el"
+  '(:tag ["eshell" "clojure" "leiningen"]))
+(hoarder:register "PuercoPop/nyan-prompt"
+  '(:tag ["eshell" "prompt" "nyancat"]))
+(hoarder:register "osanai3/eshell-git"
+  '(:tag ["eshell" "git"]))
+(hoarder:register "shushuang/honey-eshell"
+  '(:tag ["eshell"]))
+(hoarder:register "osanai3/eshell-tree"
+  '(:tag ["eshell"]))
+(hoarder:register "kozikow/eshell-notify"
+  '(:tag ["eshell" "notification"]))
+(hoarder:register "emacsattic/lein"
+  '(:tag ["eshell" "clojure" "leiningen"]))
+(hoarder:register "tom-tan/esh-help"
+  '(:tag ["eshell"]))
+(hoarder:fetch "travisjeffery/eshell-z.el"
+  '(:tag ["eshell" "z" "autojump"]))
+(hoarder:register "akicho8/ecd"
+  '(:tag ["eshell"]))
+(hoarder:register "emacsattic/em-zle"
+  '(:tag ["eshell" "zsh" "zle"]))
+(hoarder:fetch "lujun9972/el-todo"
+  '(:tag ["eshell" "script" "todo"]))
+(hoarder:register "aaron-em/nethack-luck.el"
+  '(:tag ["eshell" "nethack" "fortune"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -4279,7 +4309,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "Matroska-Org/libebml"
   '(:tag ["mkv" "video" "format" "container"]))
 (hoarder:fetch "gcc-mirror/gcc"
-  '(:tag ["c" "compiler"]))
+  '(:tag ["c" "compiler"]
+    :download nil))
 (hoarder:fetch "kovetskiy/spin"
   '(:tag ["golang" "cli" "spinner" "indicator" "progress"]))
 (hoarder:fetch "rxse/crud"
@@ -4509,6 +4540,17 @@ http://opentracker-milanesi.rhcloud.com/announce "))
   '(:tag ["text_adventure" "a_dark_room" "browser"]))
 (hoarder:fetch "dragonstudio/ADarkRoomAndroid"
   '(:tag ["text_adventure" "a_dark_room" "a_dark_night" "android"]))
+(hoarder:fetch "mafintosh/subleveldown"
+  '(:tag ["leveldb" "sublevel" "leveldown" "levelup" "namespace"  "node" "javascript"]))
+(hoarder:fetch "juliangruber/level-secondary"
+  '(:tag ["leveldb" "sublevel" "multilevel" "index" "node" "javascript"]))
+(hoarder:fetch "rvagg/level-spaces"
+  '(:tag ["leveldb" "sublevel" "leveldown" "levelup" "namespace"  "node" "javascript"]))
+(hoarder:fetch "zimbatm/ffmpeg-static"
+  '(:tag ["ffmpeg" "compilation" "static"]))
+(hoarder:fetch "false-git/libstudy"
+  '(:tag ["freebsd" "library" "gcc" "compilation" "ldconfig"]
+    :site "http://qiita.com/false-git@github/items/4b531467788b446a18d2"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
