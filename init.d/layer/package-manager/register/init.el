@@ -1429,7 +1429,7 @@
   '(:tag ["screenshot"]))
 (hoarder:register "cute-jumper/parsec.el"
   '(:tag ["haskell" "parsec" "parser"]))
-(hoarder:register "yuutayamada/contrast-color-picker-el"
+(hoarder:register "yuutayamada/contrast-color-el"
   '(:tag ["material_design" "color_palette" "colorscheme"]))
 (hoarder:register "uemurax/uzbl-manager.el"
   '(:tag ["uzbl" "browser"]))
