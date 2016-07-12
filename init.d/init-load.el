@@ -26,7 +26,8 @@
 (muki-layer:load-layers 'package
   '(
     ;; diminish
-    dim
+    ;; dim
+    delight
     ))
 
 (muki-layer:load-layers 'org
