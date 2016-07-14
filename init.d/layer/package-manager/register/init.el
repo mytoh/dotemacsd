@@ -4587,6 +4587,30 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
   '(:tag ["guile" "hydra" "scheme" "guix"]
     :type :git
     :depth nil))
+(hoarder:fetch "lisp/de.setf.asdf.x"
+  '(:tag ["common_lisp" "asdf" "xcvb"]))
+(hoarder:fetch "triclops200/quickapp"
+  '(:tag ["common_lisp" "project"]))
+(hoarder:fetch "fare/xcvb"
+  '(:tag ["common_lisp" "asdf"]))
+(hoarder:fetch "fare/cl-scripting"
+  '(:tag ["common_lisp" "script" "cli"]))
+(hoarder:fetch "fare/fare-scripts"
+  '(:tag ["common_lisp" "script" "cli"]))
+(hoarder:fetch "fare/cl-launch"
+  '(:tag ["common_lisp" "script" "cli"]))
+(hoarder:fetch "0ncorhynchus/subcmd"
+  '(:tag ["common_lisp" "script" "cli"]))
+(hoarder:fetch "erjoalgo/erjoalgo-stumpwmrc"
+  '(:tag ["common_lisp" "stumpwm" "dotfiles" "configuration"]))
+(hoarder:fetch "d2718/dmenu_ex"
+  '(:tag ["dmenu" "common_lisp"]))
+(hoarder:fetch "hmdev/AozoraEpub3"
+  '(:tag ["novel" "epub" "java"]))
+(hoarder:fetch "whiteleaf7/narou"
+  '(:tag ["novel" "epub" "ruby" "aozora_epub"]))
+(hoarder:fetch "hashcat/hashcat"
+  '(:tag ["password" "crack"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
