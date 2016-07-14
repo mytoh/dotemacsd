@@ -1467,6 +1467,15 @@
   '(:tag ["eshell" "nethack" "fortune"]))
 (hoarder:register "heow/fpl-moo"
   '(:tag ["moo" "mud" "lambdamoo"]))
+(hoarder:register "dpom/ent"
+  '(:tag ["emacs" "build" "ant"]))
+(hoarder:register "czipperz/elisp-type-lint"
+  '(:tag ["type" "type_check" "linter"]))
+(hoarder:register "bdc34/helm-taskswitch"
+  '(:tag ["helm" "x11" "desktop" "window" "wmctrl"]
+    :dependency ["flexibeast/ewmctrl"]))
+(hoarder:register "flexibeast/ewmctrl"
+  '(:tag ["wmctrl"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1748,6 +1757,8 @@
 (hoarder:register-theme "Donearm/Ubaryd-emacs")
 (hoarder:register-theme "mswift42/MetalHeart-Emacs")
 (hoarder:register-theme "philiparvidsson/zweilight-emacs")
+(hoarder:register-theme "mattly/emacs-farmhouse-theme")
+
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -2135,8 +2146,6 @@
 (hoarder:fetch "yuratomo/w3m.vim"
   '(:tag ["vim" "w3m"]))
 
-(hoarder:fetch "flexibeast/ewmctrl"
-  '(:tag ["wmctrl"]))
 (hoarder:fetch "abo-abo/org-fu"
   '(:tag ["org"]))
 (hoarder:fetch "tumashu/chinese-fonts-setup"
@@ -4566,6 +4575,18 @@ http://opentracker-milanesi.rhcloud.com/announce "))
 (hoarder:fetch "https://gist.github.com/kwf/dea7bc51101083acb95c875140e2a96d.git"
   '(:tag ["font" "pragmatapro" "ligature" "emacs" "font-lock"]
     :name "pretty-pragmata.el"))
+(hoarder:fetch "kaushalmodi/.emacs.d"
+  '(:tag ["emacs" "dotfiles" "configuration" "org-mode" "outline" "outhsine"]
+    :memo "https://github.com/kaushalmodi/.emacs.d/blob/master/setup-files/setup-outshine.el
+http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
+(hoarder:fetch "https://notabug.org/Sorch/PyESPEAK"
+  '(:tag ["python" "espeak"]
+    :type :git
+    :depth nil))
+(hoarder:fetch "https://notabug.org/mthl/cuirass"
+  '(:tag ["guile" "hydra" "scheme" "guix"]
+    :type :git
+    :depth nil))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
