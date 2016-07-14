@@ -251,7 +251,8 @@
     reykjavik morning-star majapahit-dark redbelly badwolf
     hamburg omtose-phellack base16-harmonic16-dark
     Motoko motoko-night base16-oceanicnext-dark
-    hyperplane iceberg myth forest-blue soria metalheart))
+    hyperplane iceberg myth forest-blue soria metalheart
+    zweilight))
 
 ;; (enable-option select-enable-clipboard
 ;;                select-enable-primary)
