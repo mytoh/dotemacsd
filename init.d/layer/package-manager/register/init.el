@@ -1465,6 +1465,8 @@
   '(:tag ["eshell" "script" "todo"]))
 (hoarder:register "aaron-em/nethack-luck.el"
   '(:tag ["eshell" "nethack" "fortune"]))
+(hoarder:register "heow/fpl-moo"
+  '(:tag ["moo" "mud" "lambdamoo"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1745,6 +1747,7 @@
 (hoarder:register-theme "rdallasgray/graphene-meta-theme")
 (hoarder:register-theme "Donearm/Ubaryd-emacs")
 (hoarder:register-theme "mswift42/MetalHeart-Emacs")
+(hoarder:register-theme "philiparvidsson/zweilight-emacs")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -4551,6 +4554,18 @@ http://opentracker-milanesi.rhcloud.com/announce "))
 (hoarder:fetch "false-git/libstudy"
   '(:tag ["freebsd" "library" "gcc" "compilation" "ldconfig"]
     :site "http://qiita.com/false-git@github/items/4b531467788b446a18d2"))
+(hoarder:fetch "thcipriani/stdgif"
+  '(:tag ["terminal" "gif" "image_viewer" "python" "pillow"]))
+(hoarder:fetch "1egoman/biome"
+  '(:tag ["node" "javascript" "environment" "environment_variable" "project"]))
+(hoarder:fetch "uwm-utility/core"
+  '(:tag ["wm" "utility" "uwm"]))
+(hoarder:fetch "https://gist.github.com/DeLaGuardo/fe1f3d9397d6ef7468460d54d5601156.git"
+  '(:tag ["font" "pragmatapro" "ligature" "emacs" "font-lock"]
+    :name "pragmatapro-font-lock-symbols.el"))
+(hoarder:fetch "https://gist.github.com/kwf/dea7bc51101083acb95c875140e2a96d.git"
+  '(:tag ["font" "pragmatapro" "ligature" "emacs" "font-lock"]
+    :name "pretty-pragmata.el"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
