@@ -4612,6 +4612,10 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
   '(:tag ["novel" "epub" "ruby" "aozora_epub"]))
 (hoarder:fetch "hashcat/hashcat"
   '(:tag ["password" "crack"]))
+(hoarder:fetch "xen0l/awesome-dtrace"
+  '(:tag ["dtrace" "freebsd" "trace" "macos" "solaris" "awesome_list"]))
+(hoarder:fetch "detailyang/awesome-cheatsheet"
+  '(:tag ["awesome_list" "cheatsheet"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
