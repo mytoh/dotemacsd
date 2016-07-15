@@ -1476,6 +1476,7 @@
     :dependency ["flexibeast/ewmctrl"]))
 (hoarder:register "flexibeast/ewmctrl"
   '(:tag ["wmctrl"]))
+(hoarder:register "gongo/pokemon-emacs")
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"

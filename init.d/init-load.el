@@ -294,6 +294,7 @@
     interaction-log
     escr
     vdiff
+    pokemon-emacs
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers
