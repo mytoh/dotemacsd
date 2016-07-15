@@ -361,7 +361,7 @@
     ;; indent-guide
     highlight-parentheses
     ;; mic-paren
-    ;; paren
+    paren
     ;; highlight-sexp
     ;; highlight-tail
     ;; auto-highlight-symbol
