@@ -1475,6 +1475,7 @@
 (hoarder:register "flexibeast/ewmctrl"
   '(:tag ["wmctrl"]))
 (hoarder:register "gongo/pokemon-emacs")
+(hoarder:register "git://git.sv.gnu.org/so-long.git")
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"

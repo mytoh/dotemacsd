@@ -295,6 +295,7 @@
     escr
     vdiff
     pokemon-emacs
+    so-long
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers
