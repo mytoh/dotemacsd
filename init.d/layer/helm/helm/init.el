@@ -113,7 +113,8 @@ Otherwise goto the end of minibuffer."
   (enable-option helm-ff-lynx-style-map
                  helm-ff-transformer-show-only-basename
                  helm-ff-search-library-in-sexp
-                 helm-ff-skip-boring-files)
+                 helm-ff-skip-boring-files
+                 helm-find-file-ignore-thing-at-point)
   (disable-option helm-ff-newfile-prompt-p
                   helm-ff-guess-ffap-urls)
   ;; disable auto completion
