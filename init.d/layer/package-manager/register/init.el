@@ -288,8 +288,6 @@
   '(:tag ["evil" "mode-line"]))
 (hoarder:register "milkypostman/powerline"
   '(:tag ["mode-line"]))
-(hoarder:register "unic0rn/powerline"
-  '(:tag ["mode-line"]))
 (hoarder:register "TeMPOraL/nyan-mode")
 (hoarder:register "daimrod/highlight-sexp")
 (hoarder:register "m2ym/undohist-el")
