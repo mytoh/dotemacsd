@@ -2240,7 +2240,8 @@
 (hoarder:fetch "NightBlues/deploy-framework"
   '(:tag ["deploy"]
     :dependency ["sviridov/undercover.el"]))
-(hoarder:fetch "https://bitbucket.org/hoangtu/.emacs.d.git")
+(hoarder:fetch "https://bitbucket.org/hoangtu/.emacs.d.git"
+  '(:download nil))
 (hoarder:fetch "wiedzmin/stumpwm-config"
   '(:tag ["stumpwm"]))
 (hoarder:fetch "abo-abo/oremacs"
@@ -3601,7 +3602,8 @@
 (hoarder:fetch "MagikBSD/please"
   '(:tag ["sudo" "pam"]))
 (hoarder:fetch "yacy/yacy_search_server"
-  '(:tag ["search_engine" ]))
+  '(:tag ["search_engine" ]
+    :download nil))
 (hoarder:fetch "spolu/dwm.vim"
   '(:tag ["vim" "dwm"]))
 (hoarder:fetch "nghttp2/nghttp2")
@@ -3615,7 +3617,8 @@
   '(:tag ["firefox" "css" "github"]))
 (hoarder:fetch "git://git.code.sf.net/p/cdesktopenv/code"
   '(:tag ["cde" "desktop" "x11"]
-    :desc ["https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/"]))
+    :desc ["https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/"]
+    :download nil))
 (hoarder:fetch "xbmc/xbmc"
   '(:download nil))
 (hoarder:fetch "exdownloader/exDownloader"
@@ -3666,7 +3669,8 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
     :site "http://akibalab.info/"))
 (hoarder:fetch "TomokiAburatani/anime-api-cl"
   '(:tag ["anime" "api"  "project_shangrila" "common_lisp"]
-    :site "http://dbym4820.hatenablog.com/entry/2016/05/04/132241"))
+    :site "http://dbym4820.hatenablog.com/entry/2016/05/04/132241"
+    :download nil))
 (hoarder:fetch "spf13/cobra"
   '(:tag ["golang" "cli" "script"]))
 (hoarder:fetch "mecab/emspect"
@@ -3749,7 +3753,8 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
   '(:tag ["golang" "danbooru"]))
 (hoarder:fetch "filebot/filebot"
   '(:tag ["tv" "drama" "anime" "renamer"]
-    :desc "http://www.filebot.net/"))
+    :desc "http://www.filebot.net/"
+    :download nil))
 (hoarder:fetch "git://git.code.sf.net/p/sox/code"
   '(:name "sox"))
 (hoarder:fetch "icy/pacapt"
@@ -4137,7 +4142,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["dotfiles"]))
 (hoarder:fetch "pfraze/beaker"
   '(:tag ["p2p" "hyperdrive"]))
-(hoarder:fetch "nodejs/node")
+(hoarder:fetch "nodejs/node"
+  '(:download nil))
 (hoarder:fetch "ubuntufag/System6-theme"
   '(:tag ["theme" "xfce" "macintosh"]))
 (hoarder:fetch "SamVerschueren/listr"
@@ -4440,7 +4446,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "moka-project/faba-mono-icons"
   '(:tag ["moka" "icon" "x11"]))
 (hoarder:fetch "moka-project/moka-icon-theme"
-  '(:tag ["moka" "icon" "x11"]))
+  '(:tag ["moka" "icon" "x11"]
+    :download nil))
 (hoarder:fetch "tahoe-lafs/tahoe-lafs"
   '(:tag ["storage" "dropbox" "backup" "python"]
     :memo "[[https://archive.org/details/DecentralizedWeb20160609pt1?start=21490][Decentralized Web Summit Meetup - June 9 - Day 3 : Internet Archive : Free Do...]]"))
@@ -4530,7 +4537,8 @@ http://opentracker-milanesi.rhcloud.com/announce "))
   '(:name "inspector-only-black-text.css"
     :tag ["firefox" "css" ]))
 (hoarder:fetch "icu-project/icu4c"
-  '(:tag ["unicode"]))
+  '(:tag ["unicode"]
+    :download nil))
 (hoarder:fetch "pypa/virtualenv"
   '(:tag ["python"]))
 (hoarder:fetch "indiehosters/awesome-librehosters"
