@@ -4627,6 +4627,13 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
     :memo " URI::Heuristic https://github.com/libwww-perl/URI/blob/master/lib/URI/Heuristic.pm"))
 (hoarder:fetch "cafe01/xml-libxml-jquery"
   '(:tag ["xml" "libxml" "jquery" "perl"]))
+(hoarder:fetch "ligurio/ttygames"
+  '(:tag ["tty" "cli" "terminal" "game"]
+    :site "https://bronevichok.ru/ttygames/"))
+(hoarder:fetch "bolknote/shellgames"
+  '(:tag ["tty" "cli" "terminal" "game" "bash"]))
+(hoarder:fetch "0p1pp1/mplayer"
+  '(:tag ["mplayer" "tv" "isdb"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
