@@ -4616,6 +4616,11 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
   '(:tag ["dtrace" "freebsd" "trace" "macos" "solaris" "awesome_list"]))
 (hoarder:fetch "detailyang/awesome-cheatsheet"
   '(:tag ["awesome_list" "cheatsheet"]))
+(hoarder:fetch "libwww-perl/URI"
+  '(:tag ["uri" "url" "uri-heuristic" "perl"]
+    :memo " URI::Heuristic https://github.com/libwww-perl/URI/blob/master/lib/URI/Heuristic.pm"))
+(hoarder:fetch "cafe01/xml-libxml-jquery"
+  '(:tag ["xml" "libxml" "jquery" "perl"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
