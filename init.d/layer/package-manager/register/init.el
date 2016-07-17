@@ -4639,6 +4639,21 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
   '(:tag ["mplayer" "tv" "isdb"]))
 (hoarder:fetch "possatti/pokemonsay"
   '(:tag ["cowsay" "pokemon"]))
+(hoarder:fetch "dvehrs/podget"
+  '(:tag ["podcast" "linux"]))
+(hoarder:fetch "alexanderby/darkreader"
+  '(:tag ["chrome" "css" "theme"]))
+(hoarder:fetch "venam/Ascii-Arts"
+  '(:tag ["ascii_art"]))
+(hoarder:fetch "luminousmen/Kgif"
+  '(:tag ["gif" "screen" "screen_capture"]))
+(hoarder:fetch "ichinaski/pxl"
+  '(:tag ["image" "terminal" "golang"]))
+(hoarder:fetch "https://git.pwmt.org/pwmt/zathura.git"
+  '(:tag ["pdf"]
+    :depth nil))
+(hoarder:fetch "egoist/hack"
+  '(:tag ["css" "html" "javascript"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
