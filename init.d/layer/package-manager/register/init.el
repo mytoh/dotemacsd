@@ -283,7 +283,7 @@
 
 ;;;;;  general packages
 (hoarder:register "magnars/s.el")
-(hoarder:register "jonathanchu/emacs-powerline")
+;; (hoarder:register "jonathanchu/emacs-powerline")
 (hoarder:register "raugturi/powerline-evil"
   '(:tag ["evil" "mode-line"]))
 (hoarder:register "milkypostman/powerline"
@@ -4637,6 +4637,8 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
   '(:tag ["tty" "cli" "terminal" "game" "bash"]))
 (hoarder:fetch "0p1pp1/mplayer"
   '(:tag ["mplayer" "tv" "isdb"]))
+(hoarder:fetch "possatti/pokemonsay"
+  '(:tag ["cowsay" "pokemon"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
