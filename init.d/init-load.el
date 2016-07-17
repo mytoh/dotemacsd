@@ -296,6 +296,7 @@
     vdiff
     pokemon-emacs
     so-long
+    vs-comment
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers

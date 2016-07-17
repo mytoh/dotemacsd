@@ -1476,6 +1476,8 @@
   '(:tag ["wmctrl"]))
 (hoarder:register "gongo/pokemon-emacs")
 (hoarder:register "git://git.sv.gnu.org/so-long.git")
+(hoarder:register "Xaldew/vs-comment-el"
+  '(:tag ["highlight" "comment" "visual_studio"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
