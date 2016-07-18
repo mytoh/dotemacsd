@@ -3,7 +3,8 @@
   (command (helm-swoop
             helm-swoop-back-to-last-point
             helm-multi-swoop
-            helm-multi-swoop-all)
+            helm-multi-swoop-all
+            helm-swoop-without-pre-input)
            "helm-swoop")
 
   ;; キーバインドはお好みで
@@ -29,5 +30,5 @@
   (set-option helm-swoop-split-direction #'split-window-vertically)
 
   ;; nilなら一覧のテキストカラーを失う代わりに、起動スピードをほんの少し上げる
-  (set-option helm-swoop-speed-or-color t)
+  (set-option helm-swoop-speed-or-color nil)
   )

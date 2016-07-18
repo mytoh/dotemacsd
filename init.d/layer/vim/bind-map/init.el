@@ -258,7 +258,7 @@
 
   (liby 'helm-swoop
     (bind-map-set-keys my-base-leader-search-map
-        "i" #'helm-swoop))
+        "i" #'helm-swoop-without-pre-input))
   
   (liby 'emms
     (bind-map-set-keys my-base-leader-emms-map
