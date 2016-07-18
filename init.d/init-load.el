@@ -238,7 +238,7 @@
     erefactor
     elm-mode
     unkillable-scratch
-    mode-icons
+    ;; mode-icons
     char-menu
     aggressive-indent
     link-hint
