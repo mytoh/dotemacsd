@@ -1478,6 +1478,8 @@
 (hoarder:register "git://git.sv.gnu.org/so-long.git")
 (hoarder:register "Xaldew/vs-comment-el"
   '(:tag ["highlight" "comment" "visual_studio"]))
+(hoarder:register "tuhdo/xwidgete"
+  '(:tag ["xwidget" "gtk" "webkit"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -4656,6 +4658,14 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
   '(:tag ["css" "html" "javascript"]))
 (hoarder:fetch "tonsky/FiraCode"
   '(:tag ["font" "programming" "ligature"]))
+(hoarder:fetch "AvisoNovate/pretty"
+  '(:tag ["clojure" "color" "ansi_color"]))
+(hoarder:fetch "razum2um/aprint"
+  '(:tag ["clojure" "pretty_print" "color"]))
+(hoarder:fetch "sindresorhus/cli-spinners"
+  '(:tag ["cli" "terminal" "spinner" "node" "javascript"]))
+(hoarder:fetch "sindresorhus/ora"
+  '(:tag ["cli" "terminal" "spinner" "node" "javascript"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
