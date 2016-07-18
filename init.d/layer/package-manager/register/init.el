@@ -1760,7 +1760,7 @@
 (hoarder:register-theme "mswift42/MetalHeart-Emacs")
 (hoarder:register-theme "philiparvidsson/zweilight-emacs")
 (hoarder:register-theme "mattly/emacs-farmhouse-theme")
-
+(hoarder:register-theme "JayZar21/orangespacs")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -4654,6 +4654,8 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
     :depth nil))
 (hoarder:fetch "egoist/hack"
   '(:tag ["css" "html" "javascript"]))
+(hoarder:fetch "tonsky/FiraCode"
+  '(:tag ["font" "programming" "ligature"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
