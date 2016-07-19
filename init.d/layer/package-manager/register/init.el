@@ -4667,6 +4667,8 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
   '(:tag ["cli" "terminal" "spinner" "node" "javascript"]))
 (hoarder:fetch "sindresorhus/ora"
   '(:tag ["cli" "terminal" "spinner" "node" "javascript"]))
+(hoarder:fetch "cmdrkotori/mpc-qt"
+  '(:tag  ["mpc" "qt" "mpv"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
