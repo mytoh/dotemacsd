@@ -1434,7 +1434,8 @@
 (hoarder:register "justbur/emacs-vdiff"
   '(:tag ["diff" "vimdiff" "evil"]))
 (hoarder:register "http://git.savannah.gnu.org/r/delight.git"
-  '(:tag ["diminsh" "mode-line"]))
+  '(:tag ["diminsh" "mode-line"]
+    :site "https://www.emacswiki.org/emacs/DelightedModes"))
 (hoarder:register "emacsmirror/multi-eshell"
   '(:tag ["eshell"]))
 (hoarder:register "technomancy/lein.el"
