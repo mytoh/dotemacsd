@@ -1481,6 +1481,10 @@
   '(:tag ["highlight" "comment" "visual_studio"]))
 (hoarder:register "tuhdo/xwidgete"
   '(:tag ["xwidget" "gtk" "webkit"]))
+(hoarder:register "punchagan/html-preview"
+  '(:tag ["html" "preview" "webkit" "xwidget"]))
+(hoarder:register "dryman/toml-mode.el"
+  '(:tag ["toml"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
