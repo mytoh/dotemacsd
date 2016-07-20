@@ -34,7 +34,7 @@
                             (color-lighten-name background percent)))))
 
   (after 'helm
-      (hook 'helm-update-hook #'muki:helm-set-face))
+      (hook 'helm-after-update-hook #'muki:helm-set-face))
 
   (defun helm-select-2nd-action-or-end-of-line ()
     "Select the 2nd action for the currently selected candidate.

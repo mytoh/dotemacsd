@@ -8,7 +8,7 @@
   (add-hook 'scheme-mode-hook #'company-mode)
   (add-hook 'org-mode-hook #'company-mode)
   ;; (add-hook 'eshell-mode-hook #'company-mode)
-  (add-hook 'git-commit-mode #'company-mode)
+  ;; (add-hook 'git-commit-mode #'company-mode)
 
   (after 'company
       (setq company-idle-delay 0.3)
@@ -16,8 +16,8 @@
     (setq company-minimum-prefix-length 2)
 
     (add-key company-active-map
-      "C-n" #'company-select-next
-      "C-p" #'company-select-previous)
+      "C-j" #'company-select-next
+      "C-k" #'company-select-previous)
 
     (set-face-attribute 'company-tooltip-selection nil
                         :background (muki:colour-hsl-to-hex 19 60 50))

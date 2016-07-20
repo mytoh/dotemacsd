@@ -24,6 +24,21 @@
 (after 'eww
     (eww-disable-colours))
 
+;; [[http://rubikitch.com/2016/07/20/eww-width/][Emacs組み込みWebブラウザEWWでテキストの横幅を指定する方法 | るびきち「日刊Emacs」]]
+(cl-defun eww-strict-width ()
+  (defun shr-insert-document--for-eww (&rest them)
+    (let ((shr-width 80))
+      (apply them)))
+  (defun eww-display-html--fill-column (&rest them)
+    (advice-add 'shr-insert-document :around 'shr-insert-document--for-eww)
+    (unwind-protect
+         (apply them)
+      (advice-remove 'shr-insert-document 'shr-insert-document--for-eww)))
+  (advice-add 'eww-display-html :around 'eww-display-html--fill-column))
+
+(after 'eww
+    (eww-strict-width))
+
 (liby 'eww
   (command (eww) "eww")
   ;; (set-option url-user-agent  "Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0")

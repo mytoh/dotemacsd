@@ -4669,6 +4669,19 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
   '(:tag ["cli" "terminal" "spinner" "node" "javascript"]))
 (hoarder:fetch "cmdrkotori/mpc-qt"
   '(:tag  ["mpc" "qt" "mpv"]))
+(hoarder:fetch "The-Compiler/qutebrowser"
+  '(:tag ["qt" "qt5" "pyqt5" "browser" "webkit"]))
+(hoarder:fetch "AeroNotix/lispkit"
+  '(:tag ["common_lisp" "webkit" "gtk"]))
+(hoarder:fetch "uzbl/uzbl"
+  '(:tag ["gtk" "web_browser" "webkit"]
+    :site "http://www.uzbl.org/"))
+(hoarder:fetch "olzraiti/dotfiles"
+  '(:tag ["qutebrowser" "bspwm" "vim"]
+    :memo "https://www.reddit.com/r/unixporn/comments/4tklii/bspwm_workflowgif/"))
+(hoarder:fetch "https://notabug.org/anthk/dotfiles"
+  '(:tag ["fvwm" "libertybsd" "openbsd"]
+    :type :git))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 

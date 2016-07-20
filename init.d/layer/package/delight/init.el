@@ -13,6 +13,10 @@
   (delight 'outline-minor-mode " 📇" 'outline)
   (delight 'golden-ratio-mode " ⊞" 'golden-ratio-mode)
   (delight 'helm-mode " ⎈" 'helm)
-  (delight 'mesh-mode " 𐄳" 'mesh))
+  (delight 'mesh-mode " 𐄳" 'mesh)
+  ;; (delight 'emacs-lisp-mode
+  ;;          '("Elisp" (lexical-binding ":Lex" ":Dyn"))
+  ;;          :major)
+  )
 
 ;;; init.el ends here

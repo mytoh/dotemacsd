@@ -12,6 +12,7 @@
 (add-to-list 'load-path (expand-file-name
                          "vendor/github.com/tuhdo/xwidgete"
                          user-emacs-directory))
+
 ;; (require 'xwidgete)
 
 (cl-defun my-xwidget-init ()
@@ -23,5 +24,19 @@
 
 (run-with-timer 5 nil #'delete-other-windows)
 (my-xwidget-init)
+
+;; (define-key xwidget-webkit-mode-map
+;;     (kbd "C-n") #'xwidget-webkit-scroll-up)
+(define-key xwidget-webkit-mode-map
+    (kbd "j") #'xwidget-webkit-scroll-up)
+(define-key xwidget-webkit-mode-map
+    [mouse-4] #'xwidget-webkit-scroll-up)
+
+;; (define-key xwidget-webkit-mode-map
+;;     (kbd "C-p") #'xwidget-webkit-scroll-down)
+(define-key xwidget-webkit-mode-map
+    (kbd "k") #'xwidget-webkit-scroll-down)
+(define-key xwidget-webkit-mode-map
+    [mouse-5] #'xwidget-webkit-scroll-down)
 
 ;;; init-xwidget.el ends here
