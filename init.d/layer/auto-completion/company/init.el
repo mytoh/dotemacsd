@@ -49,3 +49,11 @@
   ;;   (add-to-list 'company-backends 'company-scheme-backend t))
 
   )
+
+(after 'company
+    (req 'company-yasnippet
+      (add-hook 'emacs-lisp-mode-hook
+                (lambda ()
+                  (set (make-local-variable 'company-backends)
+                       (cl-pushnew 'company-yasnippet company-backends))))))
+
