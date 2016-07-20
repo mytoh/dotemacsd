@@ -297,6 +297,8 @@
     pokemon-emacs
     so-long
     vs-comment
+    toml-mode
+    html-preview
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers
