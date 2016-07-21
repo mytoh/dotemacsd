@@ -483,26 +483,26 @@
 
 (muki-layer:load-layers 'auto-completion
   '(
-    company
-    company-emoji
-    company-quickhelp
-    company-statistics
-    company-org-headings
-    company-dict
-    company-shell
-    company-web
-    company-flx
-    company-words
-    company-org-headings
+    ;; company
+    ;; company-emoji
+    ;; company-quickhelp
+    ;; company-statistics
+    ;; company-org-headings
+    ;; company-dict
+    ;; company-shell
+    ;; company-web
+    ;; company-flx
+    ;; company-words
+    ;; company-org-headings
     ;; sly-company
 
-    ;; auto-complete
-    ;; ac-capf
-    ;; ac-emoji
-    ;; ac-skk
+    auto-complete
+    ac-capf
+    ac-emoji
+    ac-skk
     ;; org-ac
-    ;; ac-shell
-    ;; ac-kill-ring
+    ac-shell
+    ac-kill-ring
     ))
 
 (muki-layer:load-layers 'source-control
