@@ -488,6 +488,12 @@
     company-quickhelp
     company-statistics
     company-org-headings
+    company-dict
+    company-shell
+    company-web
+    company-flx
+    company-words
+    company-org-headings
     ;; sly-company
 
     ;; auto-complete
