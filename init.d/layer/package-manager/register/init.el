@@ -383,7 +383,8 @@
 (hoarder:register "Alexander-Miller/company-shell"
   '(:tag ["company" "shell" "fish_shell"]))
 (hoarder:register "osv/company-web"
-  '(:tag ["company" "web" "html"]))
+  '(:tag ["company" "web" "html"]
+	 :dependency ["osv/web-completion-data"]))
 (hoarder:register "PythonNut/company-flx"
   '(:tag ["company" "fuzzy_match"]))
 (hoarder:register "wushuaibuaa/emacscompanywords"
