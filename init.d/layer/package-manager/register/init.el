@@ -378,6 +378,20 @@
 (hoarder:register "company-mode/company-statistics"
   '(:tag ["company" "auto_completion"]
     :dependency ["company-mode/company-mode"]))
+(hoarder:register "hlissner/emacs-company-dict"
+  '(:tag ["company"]))
+(hoarder:register "Alexander-Miller/company-shell"
+  '(:tag ["company" "shell" "fish_shell"]))
+(hoarder:register "osv/company-web"
+  '(:tag ["company" "web" "html"]))
+(hoarder:register "PythonNut/company-flx"
+  '(:tag ["company" "fuzzy_match"]))
+(hoarder:register "wushuaibuaa/emacscompanywords"
+  '(:tag ["company" "dictionary" "english"]))
+(hoarder:register "mutbuerger/company-org-headings"
+  '(:tag ["company" "org"]))
+(hoarder:register "zargener/company-web-mode"
+  '(:tag ["company" "web"]))
 (hoarder:register "syohex/emacs-git-gutter"
   '(:tag "git"))
 (hoarder:register "syohex/emacs-git-gutter-fringe"
