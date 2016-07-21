@@ -388,8 +388,6 @@
   '(:tag ["company" "fuzzy_match"]))
 (hoarder:register "wushuaibuaa/emacscompanywords"
   '(:tag ["company" "dictionary" "english"]))
-(hoarder:register "mutbuerger/company-org-headings"
-  '(:tag ["company" "org"]))
 (hoarder:register "zargener/company-web-mode"
   '(:tag ["company" "web"]))
 (hoarder:register "syohex/emacs-git-gutter"
