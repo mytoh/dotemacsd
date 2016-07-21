@@ -1499,6 +1499,9 @@
   '(:tag ["html" "preview" "webkit" "xwidget"]))
 (hoarder:register "dryman/toml-mode.el"
   '(:tag ["toml"]))
+(hoarder:register "domtronn/all-the-icons.el"
+  '(:tag ["icon" "font"]
+    :load-path "data"))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -3459,8 +3462,7 @@
   '(:download nil)) 
 (hoarder:fetch "sjl/z-fish"
   '(:download nil)) 
-(hoarder:fetch "soimort/you-get"
-  '(:download nil)) 
+(hoarder:fetch "soimort/you-get") 
 (hoarder:fetch "sorin-ionescu/prezto"
   '(:download nil)) 
 (hoarder:fetch "stevemao/awesome-git-addons"
@@ -4700,6 +4702,21 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
 (hoarder:fetch "https://notabug.org/anthk/dotfiles"
   '(:tag ["fvwm" "libertybsd" "openbsd"]
     :type :git))
+(hoarder:fetch "tofuness/Toshocat"
+  '(:tag ["node" "electron" "desktop"]))
+(hoarder:fetch "shadowproject/shadow"
+  '(:tag ["bitcoin" "currency" "anonymity"]))
+(hoarder:fetch "mpeterv/hererocks"
+  '(:tag ["lua"]))
+(hoarder:fetch "un-def/luamb"
+  '(:tag ["lua"]))
+(hoarder:fetch "https://gist.github.com/livibetter/4fc92125d672da3b392583bfd1035fe8.git"
+  '(:name "gh-watch.py"
+    :tag ["github" "python"]
+    :memo "https://www.youtube.com/watch?v=zNNHO5z650w"))
+(hoarder:fetch "https://gist.github.com/livibetter/7140262.git"
+  '(:name "gh-trend.py"
+    :tag ["github" "python"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
