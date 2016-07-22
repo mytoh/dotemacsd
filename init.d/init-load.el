@@ -476,7 +476,7 @@
     helm-proc
     f3
     helm-browse
-    ;; helm-org-rifle
+    helm-org-rifle
     ;; helm-company
     ;; helm-delicious
     ))
