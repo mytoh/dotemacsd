@@ -299,6 +299,7 @@
     vs-comment
     toml-mode
     html-preview
+    ert-modeline
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers
