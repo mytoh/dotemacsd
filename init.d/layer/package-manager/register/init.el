@@ -384,7 +384,7 @@
   '(:tag ["company" "shell" "fish_shell"]))
 (hoarder:register "osv/company-web"
   '(:tag ["company" "web" "html"]
-	 :dependency ["osv/web-completion-data"]))
+    :dependency ["osv/web-completion-data"]))
 (hoarder:register "PythonNut/company-flx"
   '(:tag ["company" "fuzzy_match"]))
 (hoarder:register "wushuaibuaa/emacscompanywords"
@@ -4716,6 +4716,26 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
 (hoarder:fetch "https://gist.github.com/livibetter/7140262.git"
   '(:name "gh-trend.py"
     :tag ["github" "python"]))
+(hoarder:fetch "dbjergaard/stumpwm-freetype-fonts"
+  '(:tag ["stumpwm" "freetype" "font"]))
+(hoarder:fetch "Hamuko/nyaamagnet"
+  '(:tag ["torrent" "magnet_link" "python"]))
+(hoarder:fetch "Hamuko/cum"
+  '(:tag ["comic"]))
+(hoarder:fetch "Nandaka/PixivUtil2"
+  '(:tag ["pixiv" "python"]))
+(hoarder:fetch "sketchpunk/opencomicreader"
+  '(:tag ["comic" "android"]))
+(hoarder:fetch "e40/tget"
+  '(:tag ["flexget" "torrent" "common_lisp"]))
+(hoarder:fetch "Shinmera/ubiquitous"
+  '(:tag ["common_lisp" "configuration"]))
+(hoarder:fetch "nibbula/useless-pile-of-junk-with-a-catchy-name"
+  '(:tag ["common_lisp" "utility"]))
+(hoarder:fetch "OlafMerkert/ol-utils"
+  '(:tag ["common_lisp" "utility" "on_lisp" "let_over_lambda"]))
+(hoarder:fetch "singy15/lclos"
+  '(:tag ["common_lisp" "clos" "oop" "prototypal" "prototype"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
