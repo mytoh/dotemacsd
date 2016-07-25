@@ -10,4 +10,5 @@
 (cl-letf ((file-name-handler-alist nil)) 
   (add-to-list 'load-path (concat user-emacs-directory "init.d"))
   (require 'init-load)
-  (put 'downcase-region 'disabled nil))
+  (put 'downcase-region 'disabled nil)
+  (put 'timer-list 'disabled nil))
