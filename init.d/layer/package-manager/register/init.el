@@ -4759,6 +4759,10 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
 (hoarder:fetch "https://neetco.de/Tomoko/fourchex.git"
   '(:tag ["4chan" "elixir"]
     :depth nil))
+(hoarder:fetch "nbari/freebsd"
+  '(:tag  ["freebsd" "configuration" "kernel" "jail"]))
+(hoarder:fetch "hemanth/functional-programming-jargon"
+  '(:tag ["functional" "programming" "jargon" "term" "reference" "example" "javascript" "monad"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
