@@ -320,7 +320,7 @@ of the matching compound command or nil if no match found."
             (setq balance-list (list)))
         ;; Now search forward from matching start keyword for end keyword
         (while (and (consp nest-list) (zerop (cdr nest-list))
-                    (re-search-forward end-re anchor-point t))
+                  (re-search-forward end-re anchor-point t))
           (if (not (memq (point) balance-list))
               (progn
                 (setq balance-list (cons (point) balance-list))
@@ -342,16 +342,16 @@ of the matching compound command or nil if no match found."
 current line should nest."
   (cl-letf ((case-fold-search)
             (level))
-    (save-excursion
+    (save-mark-and-excursion
       (forward-line -1)
       (while (and (not (bobp))
-                  (null level))
+                (null level))
         (if (and (not (looking-at "^\\s *$"))
-                 (not (save-excursion
-                        (forward-line -1)
-                        (beginning-of-line)
-                        (looking-at csh-multiline-re)))
-                 (not (looking-at csh-comment-regexp)))
+               (not (save-mark-and-excursion
+                    (forward-line -1)
+                    (beginning-of-line)
+                    (looking-at csh-multiline-re)))
+               (not (looking-at csh-comment-regexp)))
             (setq level (cons (current-indentation)
                               (csh-current-line)))
           (forward-line -1)))
@@ -362,7 +362,7 @@ current line should nest."
 (cl-defun csh-get-nester-column (nest-line)
   "Return the column to indent to with respect to nest-line taking
 into consideration keywords and other nesting constructs."
-  (save-excursion
+  (save-mark-and-excursion
     (cl-letf ((fence-post)
               (case-fold-search)
               (start-line (csh-current-line)))
@@ -370,9 +370,9 @@ into consideration keywords and other nesting constructs."
       ;; Handle case item indentation constructs for this line
       (cond ((looking-at csh-case-item-re)
              ;; This line is a case item...
-             (save-excursion
+             (save-mark-and-excursion
                (goto-line nest-line)
-               (cl-letf ((fence-post (save-excursion (end-of-line) (point))))
+               (cl-letf ((fence-post (save-mark-and-excursion (end-of-line) (point))))
                  (cond ((re-search-forward csh-switch-re fence-post t)
                         ;; If this is the first case under the switch, indent.
                         (goto-char (match-beginning 0))
@@ -387,17 +387,17 @@ into consideration keywords and other nesting constructs."
                         ;; Else, this is a new case.  Outdent.
                         (- (current-indentation) csh-case-item-offset))))))
             (t;; Not a case-item.  What to do relative to the nest-line?
-             (save-excursion
+             (save-mark-and-excursion
                (goto-line nest-line)
-               (setq fence-post (save-excursion (end-of-line) (point)))
-               (save-excursion
+               (setq fence-post (save-mark-and-excursion (end-of-line) (point)))
+               (save-mark-and-excursion
                  (cond
                    ;;
                    ;; Check if we are in a continued statement
                    ((and (looking-at csh-multiline-re)
-                         (save-excursion
-                           (goto-line (1- start-line))
-                           (looking-at csh-multiline-re)))
+                       (save-mark-and-excursion
+                         (goto-line (1- start-line))
+                         (looking-at csh-multiline-re)))
                     (if (looking-at ".*[\'\"]\\\\")
                         ;; If this is a continued string, indent under
                         ;; opening quote.
@@ -458,12 +458,12 @@ into consideration keywords and other nesting constructs."
 csh-tab-always-indent customization"
   (interactive)
   (cl-letf ((case-fold-search))
-    (cond ((save-excursion
+    (cond ((save-mark-and-excursion
              (skip-chars-backward " \t")
              (bolp))
            (csh-indent-line))
           (csh-tab-always-indent
-           (save-excursion
+           (save-mark-and-excursion
              (csh-indent-line)))
           (t (insert-tab)))))
 
@@ -472,7 +472,7 @@ csh-tab-always-indent customization"
 to the syntax/context"
   (interactive)
   (cl-letf ((case-fold-search))
-    (save-excursion
+    (save-mark-and-excursion
       (beginning-of-line)
       (if (bobp)
           nil
@@ -495,7 +495,7 @@ to the syntax/context"
             (indent-to nester-column)))))
     ;; Position point on this line
     (cl-letf* ((this-line-level (current-indentation))
-               (this-bol (save-excursion
+               (this-bol (save-mark-and-excursion
                            (beginning-of-line)
                            (point)))
                (this-point (- (point) this-bol)))
@@ -507,7 +507,7 @@ to the syntax/context"
   "From start to end, indent each line."
   ;; The algorithm is just moving through the region line by line with
   ;; the match noise turned off.  Only modifies nonempty lines.
-  (save-excursion
+  (save-mark-and-excursion
     (cl-letf (csh-match-and-tell
               (endmark (copy-marker end)))
 
@@ -542,7 +542,7 @@ indentation to use for this line otherwise."
   (interactive)
   (cl-letf* ((case-fold-search)
              (nest-list
-              (save-excursion
+              (save-mark-and-excursion
                 (csh-get-compound-level begin-re end-re (point)))))
     (if (null nest-list)
         (progn
@@ -552,7 +552,7 @@ indentation to use for this line otherwise."
           (cl-letf* ((nest-level (car nest-list))
                      (match-line (cdr nest-list)))
             (if csh-match-and-tell
-                (save-excursion
+                (save-mark-and-excursion
                   (goto-line match-line)
                   (message "Matched ... %s" (csh-line-to-string))))
             nest-level ;;Propagate a hit.
@@ -565,7 +565,7 @@ if csh-match-and-tell is non-nil the matching structure will echo in
 the minibuffer"
   (interactive)
   (cl-letf ((case-fold-search))
-    (save-excursion
+    (save-mark-and-excursion
       (beginning-of-line)
       (cond ((looking-at csh-else-re)
              (csh-match-indent-level csh-if-re csh-endif-re))
@@ -584,7 +584,7 @@ the minibuffer"
 
 ;;;###autoload
 (define-derived-mode csh-mode  prog-mode "Csh"
-  "csh-mode 2.0 - Major mode for editing csh and tcsh scripts.
+                     "csh-mode 2.0 - Major mode for editing csh and tcsh scripts.
 Special key bindings and commands:
 \\{csh-mode-map}
 Variables controlling indentation style:
@@ -680,29 +680,29 @@ Installation:
          (setq csh-match-and-tell t)
          (setq csh-align-to-keyword t)  ;; Turn on keyword alignment
      )))"
-  :syntax-table csh-mode-syntax-table
-  :abbrev-table csh-mode-abbrev-table
-  (use-local-map csh-mode-map)
-  (make-local-variable 'indent-line-function)
-  (setq indent-line-function 'csh-indent-line)
-  (make-local-variable 'indent-region-function)
-  (setq indent-region-function 'csh-indent-region)
-  (make-local-variable 'comment-start)
-  (setq comment-start "# ")
-  (make-local-variable 'comment-end)
-  (setq comment-end "")
-  (make-local-variable 'comment-column)
-  (setq comment-column 32)
-  (make-local-variable 'comment-start-skip)
-  (setq comment-start-skip "#+ *")
-  ;;
-  ;; config font-lock mode
-  (make-local-variable 'font-lock-defaults)
-  (setq font-lock-defaults
-        (list
-         csh-font-lock-keywords
-         t t nil nil))
-  )
+                     :syntax-table csh-mode-syntax-table
+                     :abbrev-table csh-mode-abbrev-table
+                     (use-local-map csh-mode-map)
+                     (make-local-variable 'indent-line-function)
+                     (setq indent-line-function 'csh-indent-line)
+                     (make-local-variable 'indent-region-function)
+                     (setq indent-region-function 'csh-indent-region)
+                     (make-local-variable 'comment-start)
+                     (setq comment-start "# ")
+                     (make-local-variable 'comment-end)
+                     (setq comment-end "")
+                     (make-local-variable 'comment-column)
+                     (setq comment-column 32)
+                     (make-local-variable 'comment-start-skip)
+                     (setq comment-start-skip "#+ *")
+                     ;;
+                     ;; config font-lock mode
+                     (make-local-variable 'font-lock-defaults)
+                     (setq font-lock-defaults
+                           (list
+                            csh-font-lock-keywords
+                            t t nil nil))
+                     )
 
 ;; Completion code supplied by Haavard Rue <hrue@imf.unit.no>.
 ;;
@@ -715,7 +715,7 @@ Installation:
                 (list (cons completion type)))))
 
 (cl-defun csh-bol-point ()
-  (save-excursion
+  (save-mark-and-excursion
     (beginning-of-line)
     (point)))
 
@@ -725,7 +725,7 @@ Installation:
   (cl-letf* ((case-fold-search)
              (end (point))
              (beg (unwind-protect
-                       (save-excursion
+                       (save-mark-and-excursion
                          (backward-sexp 1)
                          (while (= (char-syntax (following-char)) ?\')
                            (forward-char 1))
@@ -735,13 +735,13 @@ Installation:
               ;;
               ;; ` or $(mark a function
               ;;
-              (save-excursion
+              (save-mark-and-excursion
                 (goto-char beg)
                 (if (or
-                     (save-excursion
+                     (save-mark-and-excursion
                        (backward-char 1)
                        (looking-at "`"))
-                     (save-excursion
+                     (save-mark-and-excursion
                        (backward-char 2)
                        (looking-at "\\$(")))
                     (function (lambda (sym)
@@ -750,13 +750,13 @@ Installation:
                   ;; a $, ${ or ${# mark a variable
                   ;;
                   (if (or
-                       (save-excursion
+                       (save-mark-and-excursion
                          (backward-char 1)
                          (looking-at "\\$"))
-                       (save-excursion
+                       (save-mark-and-excursion
                          (backward-char 2)
                          (looking-at "\\${"))
-                       (save-excursion
+                       (save-mark-and-excursion
                          (backward-char 3)
                          (looking-at "\\${#")))
                       (function (lambda (sym)
@@ -819,7 +819,7 @@ Installation:
          (cons "while"  csh-completion-type-misc))))
 
 (cl-defun csh-eol-point ()
-  (save-excursion
+  (save-mark-and-excursion
     (end-of-line)
     (point)))
 
@@ -832,7 +832,7 @@ Installation:
   "Pickup completion in region and addit to the list, if not already
 there."
   (cl-letf ((i 0) kw obj)
-    (save-excursion
+    (save-mark-and-excursion
       (goto-char pmin)
       (while (and
               (re-search-forward regexp pmax t)
@@ -843,8 +843,8 @@ there."
         (progn
           (setq obj (assoc kw csh-completion-list))
           (if (or (equal nil obj)
-                  (and (not (equal nil obj))
-                       (not (= type (cdr obj)))))
+                 (and (not (equal nil obj))
+                    (not (= type (cdr obj)))))
               (progn
                 (setq i (1+ i))
                 (csh-addto-alist kw type))))))

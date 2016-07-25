@@ -8,7 +8,7 @@
 (cl-defun muki:after-save-hook ()
   (if (string-match-p (rx (or "config" "package" "init" "lang") "-" (* anything) "el" eol)
                       (buffer-file-name))
-      (save-excursion
+      (save-mark-and-excursion
         (byte-compile-file (buffer-file-name)))))
 ;;(add-hook 'after-save-hook
 ;;      #'muki:after-save-hook)

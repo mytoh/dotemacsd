@@ -298,7 +298,7 @@
     (let ((case-fold-search t)
           (re "^[ \t]*#\\+begin_src[ \t]+[^ \f\t\n\r\v]+[ \t]*")
           found)
-      (save-excursion
+      (save-mark-and-excursion
         (goto-char (point-min))
         (while (re-search-forward re nil t)
           (goto-char (match-end 0))
@@ -330,7 +330,7 @@
   `prettify-symbols-mode' is used because it has uncollpasing. It's
   may not be efficient."
     (let* ((case-fold-search t)
-           (at-src-block (save-excursion
+           (at-src-block (save-mark-and-excursion
                            (beginning-of-line)
                            (looking-at "^[ \t]*#\\+begin_src[ \t]+[^ \f\t\n\r\v]+[ \t]*"))))
       ;; Test if we moved out of a block.

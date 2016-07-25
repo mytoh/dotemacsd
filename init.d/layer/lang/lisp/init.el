@@ -3,11 +3,11 @@
 (defun muki:in-string-or-comment ()
   (let ((ppss (syntax-ppss)))
     (or (car (setq ppss (nthcdr 3 ppss)))
-        (car (setq ppss (cdr ppss)))
-        (nth 3 ppss))))
+       (car (setq ppss (cdr ppss)))
+       (nth 3 ppss))))
 
 (cl-defun muki:lisp-cleanup-support (regex replace)
-  (save-excursion
+  (save-mark-and-excursion
     (save-match-data
       (while (ignore-errors (re-search-forward regex nil t))
         (unless (muki:in-string-or-comment)
@@ -15,7 +15,7 @@
 
 (cl-defun muki:lisp-cleanup ()
   (interactive)
-  (save-excursion
+  (save-mark-and-excursion
     (goto-char (point-min))
 
     (muki:lisp-cleanup-support ")\s+)"  "))")
