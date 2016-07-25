@@ -299,7 +299,8 @@
     vs-comment
     toml-mode
     html-preview
-    ert-modeline
+    ;; ert-modeline ; cause yatemplate error
+    ert-flash-modeline
     ;; handoff
     ;; pretty-mode
     ;; keep-temp-buffers
