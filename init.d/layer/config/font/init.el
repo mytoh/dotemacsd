@@ -127,8 +127,8 @@
       (set 'kana k10)
       (set 'cjk-misc misc-iso)
       (set 'han k10)
-      ;; (set 'symbol symbola)
-      (set 'symbol notoemoji)
+      (set 'symbol symbola)
+      ;; (set 'symbol notoemoji)
       ;;(set 'symbol emojione)
       )
 
