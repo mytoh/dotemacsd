@@ -1501,6 +1501,16 @@
 (hoarder:register "domtronn/all-the-icons.el"
   '(:tag ["icon" "font"]
     :load-path "data"))
+(hoarder:register "mutbuerger/ert-flash-modeline"
+  '(:tag ["ert" "modeline"]))
+(hoarder:register "emacs-pe/lyrics.el"
+  '(:tag ["music" "lyric"]))
+(hoarder:register "Fuco1/blablabla"
+  '(:tag ["lightable"]))
+(hoarder:register "https://bitbucket.org/jpkotta/openwith"
+  '(:type :hg))
+(hoarder:register "SebastianRose/org-osm"
+  '(:tag ["org-mode" "osm" "map"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1771,7 +1781,6 @@
 (hoarder:register-theme "0x414A/glacier-theme")
 (hoarder:register-theme "fade/deepsky-theme")
 (hoarder:register-theme "sjahl/emacs-theme-afterglow")
-(hoarder:register-theme "mesaMason/mbl-terminal-theme")
 (hoarder:register-theme "hlissner/emacs-doom-theme")
 (hoarder:register-theme "chris-etheridge/alabaster-emacs")
 (hoarder:register-theme "olkinn/forest-blue-emacs")
@@ -3289,8 +3298,7 @@
   '(:download nil)) 
 (hoarder:fetch "mitchellh/colorstring"
   '(:download nil)) 
-(hoarder:fetch "mitmproxy/mitmproxy"
-  '(:download nil)) 
+(hoarder:fetch "mitmproxy/mitmproxy") 
 (hoarder:fetch "miyagawa/cpanminus"
   '(:download nil)) 
 (hoarder:fetch "mo-ya/tmux-agent"
@@ -3543,8 +3551,7 @@
   '(:download nil)) 
 (hoarder:fetch "unixorn/awesome-zsh-plugins"
   '(:download nil)) 
-(hoarder:fetch "unot/WebRadioRecorder"
-  '(:download nil)) 
+(hoarder:fetch "unot/WebRadioRecorder") 
 (hoarder:fetch "uobikiemukot/sdump"
   '(:download nil)) 
 (hoarder:fetch "uobikiemukot/yaft"
@@ -4736,6 +4743,22 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
   '(:tag ["common_lisp" "utility" "on_lisp" "let_over_lambda"]))
 (hoarder:fetch "singy15/lclos"
   '(:tag ["common_lisp" "clos" "oop" "prototypal" "prototype"]))
+(hoarder:fetch "sotojuan/excows"
+  '(:tag ["elixir" "cows"]))
+(hoarder:fetch "tobiasbueschel/awesome-pokemon"
+  '(:tag ["pokemon" "awesome_list"]))
+(hoarder:fetch "sotojuan/tapes"
+  '(:tag ["download" "african" "music"]))
+(hoarder:fetch "sotojuan/anilixir"
+  '(:tag ["anilist" "elixir"]))
+(hoarder:fetch "sotojuan/nani"
+  '(:tag ["anilist" "node" "javascript"]))
+(hoarder:fetch "https://notabug.org/kl3/dotfiles"
+  '(:type :git
+    :tag ["dotfiles" "configuration"]))
+(hoarder:fetch "https://neetco.de/Tomoko/fourchex.git"
+  '(:tag ["4chan" "elixir"]
+    :depth nil))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
