@@ -11,9 +11,9 @@
     (cl-labels ((add-alias (icon name)
                   (add-to-list 'nameless-global-aliases
                                (cons icon name))))
-      (add-alias "⚢" "sis")
+      (add-alias "👭" "sis") ; "⚢" 
       (add-alias "☠"  "hoarder")
-      (add-alias "🍺" "muki") ; glass of milk 🥛, can't find font supporting this character
+      (add-alias "🥛" "muki") 
       (add-alias "🍱" "colle")
       (add-alias "👚" "mesh"))))
 
