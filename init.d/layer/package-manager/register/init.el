@@ -279,7 +279,7 @@
 (hoarder:register "edwtjo/evil-org-mode"
   '(:tag "evil"))
 (hoarder:register "Dewdrops/evil-ReplaceWithRegister")
-
+(hoarder:register "troyp/evil-visual-replace")
 
 ;;;;;  general packages
 (hoarder:register "magnars/s.el")

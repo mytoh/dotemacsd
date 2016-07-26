@@ -411,6 +411,7 @@
     evil-magit
     syndicate
     evil-ReplaceWithRegister
+    evil-visual-replace
     ;; evil-org-mode
     ;; pure-evil
 
