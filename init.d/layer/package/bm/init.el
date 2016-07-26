@@ -9,6 +9,9 @@
   (autoload 'bm-next     "bm" "Goto bookmark."                     t)
   (autoload 'bm-previous "bm" "Goto previous bookmark."            t)
 
+  (setq-default bm-buffer-persistence t)
+  (setq bm-restore-repository-on-load t)
+
   ;; M$ Visual Studio key setup.
   (global-set-key (kbd "<C-f2>") 'bm-toggle)
   (global-set-key (kbd "<f2>")   'bm-next)
