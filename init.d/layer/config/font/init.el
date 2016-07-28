@@ -113,6 +113,7 @@
             (symbola (font-spec :family "Symbola"))
             (notoemoji (font-spec :family "Noto Emoji"))
             (emojione (font-spec :family "EmojiOne Color"))
+            (mplus (font-spec :family "M+ 1mn"))
             (fontset "fontset-naga10"))
     (create-fontset-from-ascii-font
      "-misc-fixed-medium-r-normal--10-*-*-*-*-*"
@@ -127,6 +128,8 @@
       (set 'kana k10)
       (set 'cjk-misc misc-iso)
       (set 'han k10)
+
+      ;; (set 'symbol mplus)
       (set 'symbol symbola)
       ;; (set 'symbol notoemoji)
       ;;(set 'symbol emojione)
