@@ -4763,6 +4763,33 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
   '(:tag  ["freebsd" "configuration" "kernel" "jail"]))
 (hoarder:fetch "hemanth/functional-programming-jargon"
   '(:tag ["functional" "programming" "jargon" "term" "reference" "example" "javascript" "monad"]))
+(hoarder:fetch "sindresorhus/pure"
+  '(:tag ["zsh" "pure" "terminal" "prompt"]))
+(hoarder:fetch "Ranks/emoji-alpha-codes"
+  '(:tag ["emoji" "emoji_alpha_codes" "github" "json" "csv"]))
+(hoarder:fetch "sindresorhus/superb"
+  '(:tag ["json" "word" "english"]))
+(hoarder:fetch "meh/screenruster-saver-laughing_man"
+  '(:tag ["screensaver" "rust"]
+    :memo "https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing_of_animated/"))
+(hoarder:fetch "BasedArno/scripts"
+  '(:tag ["script" "wallpaper" "screensaver" "webm" "gif" "xwinwrap"]
+    :memo " https://github.com/BasedArno/scripts/blob/master/wp
+https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing_of_animated/"))
+(hoarder:fetch "sxthe/yuki"
+  '(:tag ["bitmap" "font"]))
+(hoarder:fetch "jsphsnkr/dotfiles"
+  '(:tag ["bspwm"]
+    :memo "https://www.reddit.com/r/unixporn/comments/4ue769/bspwm_minimowl/"))
+(hoarder:fetch "Luke-Nukem/dot_configs2"
+  '(:memo "https://www.reddit.com/r/unixporn/comments/4uf9gy/difference_between_bspwm_and_i3wm/"))
+(hoarder:fetch "k2jp/abp-japanese-filters"
+  '(:tag ["advertisement" "adblock"]))
+(hoarder:fetch "git://git.gnome.org/gucharmap"
+  '(:tag ["unicode" "character" "font"]))
+(hoarder:fetch "mochi-player/mochi-player"
+  '(:tag ["mpv" "qt" "qml" "qt5"]
+    :branch "qml"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
