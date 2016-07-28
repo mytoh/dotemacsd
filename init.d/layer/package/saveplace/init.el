@@ -5,7 +5,7 @@
 ;;; Code:
 
 ;;;;; save cursor position
-(liby 'saveplace
+(req 'saveplace
   (enable-mode save-place-mode))
 
 ;;; init.el ends here
