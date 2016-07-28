@@ -49,7 +49,8 @@
             "Project Reality: BF2"
             "Stellaris"
             "Crea"
-            "The Elder Scrolls V: Skyrim"))
+            "The Elder Scrolls V: Skyrim"
+            "Stardew Valley"))
     )
 
   (add-global-key "C-c h" #'helm-muki)
