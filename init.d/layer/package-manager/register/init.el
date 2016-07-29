@@ -1132,8 +1132,6 @@
 (hoarder:register "Lindydancer/font-lock-studio"
   '(:tag ["font-lock" "highlight" "syntax"]))
 (hoarder:register "michael-heerdegen/on-screen.el")
-(hoarder:register "mutbuerger/company-org-headings"
-  '(:tag ["company" "org" "completion"]))
 (hoarder:register "samisalkosuo/elite-for-emacs"
   '(:tag ["game" "elite"]))
 (hoarder:register "death/reddit-mode"
@@ -4790,6 +4788,19 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
 (hoarder:fetch "mochi-player/mochi-player"
   '(:tag ["mpv" "qt" "qml" "qt5"]
     :branch "qml"))
+(hoarder:fetch "KingSann/CLD"
+  '(:tag ["common_lisp" "database"]))
+(hoarder:fetch "SamSkulls/cl-searx"
+  '(:tag ["searx" "common_lisp"]
+    :site "searx.me"))
+(hoarder:fetch "zhongke/spacemacs_shortcut"
+  '(:tag ["spacemacs" "cheatsheet"]))
+(hoarder:fetch "ticki/termion"
+  '(:tag ["terminal" "color" "escape_sequence" "rust"]))
+(hoarder:fetch "redox-os/ransid"
+  '(:tag ["terminal" "color" "escape_sequence" "rust" "redox"]))
+(hoarder:fetch "redox-os/coreutils"
+  '(:tag ["coreutils" "gnu" "rust" "redox"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
