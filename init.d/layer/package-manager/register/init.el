@@ -1509,6 +1509,8 @@
   '(:type :hg))
 (hoarder:register "SebastianRose/org-osm"
   '(:tag ["org-mode" "osm" "map"]))
+(hoarder:register "AndreaCrotti/yasnippet-snippets"
+  '(:tag ["snippet" "yasnippet"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"

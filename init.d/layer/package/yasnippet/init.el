@@ -9,6 +9,11 @@
               (list (expand-file-name
                      "init.d/snippets"
                      user-emacs-directory)))
+  (cl-letf ((sd (expand-file-name
+                 "github.com/AndreaCrotti/yasnippet-snippets"
+                 hoarder-directory)))
+    (when (file-exists-p sd)
+      (add-to-list 'yas-snippet-dirs sd)))
   (yas-global-mode 1))
 
 ;;; init.el ends here
