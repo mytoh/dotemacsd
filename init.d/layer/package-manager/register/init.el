@@ -4803,6 +4803,12 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["terminal" "color" "escape_sequence" "rust" "redox"]))
 (hoarder:fetch "redox-os/coreutils"
   '(:tag ["coreutils" "gnu" "rust" "redox"]))
+(hoarder:fetch "gotbletu/shownotes"
+  '(:tag ["linux" "youtube"]))
+(hoarder:fetch "SteamOnFreeBSD/SteamOnFreeBSD"
+  '(:tag ["freebsd" "steam"]))
+(hoarder:fetch "chros73/rtorrent-ps"
+  '(:tag ["rtorrent" "pyroscope"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
