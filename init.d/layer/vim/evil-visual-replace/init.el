@@ -5,6 +5,6 @@
 ;;; Code:
 
 (req 'evil-visual-replace
-  (evil-virep-visual-bindings))
+  (evil-visual-replace-visual-bindings))
 
 ;;; init.el ends here
