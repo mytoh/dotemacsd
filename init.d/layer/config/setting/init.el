@@ -185,7 +185,7 @@
 (disable-option electric-layout-mode)
 
 ;;;; electric indent
-;; (disable-option electric-indent-mode)
+(disable-option electric-indent-mode)
 
 ;;;; add newline to end of file
 (enable-option require-final-newline)
