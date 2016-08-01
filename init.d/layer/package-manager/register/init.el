@@ -1511,6 +1511,8 @@
   '(:tag ["org-mode" "osm" "map"]))
 (hoarder:register "AndreaCrotti/yasnippet-snippets"
   '(:tag ["snippet" "yasnippet"]))
+(hoarder:register "tumashu/exwm-x"
+  '(:tag ["exwm"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1592,6 +1594,8 @@
   '(:tag ["org"]))
 (hoarder:fetch "tumashu/org-capture-pop-frame"
   '(:tag ["org-mode" "org-capture" "firefox"]))
+(hoarder:fetch "thi-ng/org-spec"
+  '(:tag ["org" "html" "documentation"]))
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
@@ -1793,6 +1797,7 @@
 (hoarder:register-theme "philiparvidsson/zweilight-emacs")
 (hoarder:register-theme "mattly/emacs-farmhouse-theme")
 (hoarder:register-theme "JayZar21/orangespacs")
+(hoarder:register-theme "terry3/oceanic-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -4809,6 +4814,8 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["freebsd" "steam"]))
 (hoarder:fetch "chros73/rtorrent-ps"
   '(:tag ["rtorrent" "pyroscope"]))
+(hoarder:fetch "haecker-felix/gradio"
+  '(:tag ["radio" "gtk"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
