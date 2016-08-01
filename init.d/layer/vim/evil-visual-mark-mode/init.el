@@ -2,8 +2,9 @@
 
 ;;; Code:
 
-(cl-defun muki:init-evil-visual-mark-mode ()
-  (req 'evil-visual-mark-mode))
+(req 'evil-visual-mark-mode
+  (add-hook 'emacs-lisp-mode-hook
+            #'evil-visual-mark-mode))
 
 
 ;;; init.el ends here
