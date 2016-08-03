@@ -1513,6 +1513,12 @@
   '(:tag ["snippet" "yasnippet"]))
 (hoarder:register "tumashu/exwm-x"
   '(:tag ["exwm"]))
+(hoarder:register "hassy/http-twiddle"
+  '(:tag ["http"]))
+(hoarder:register "porterjamesj/virtualenvwrapper.el"
+  '(:tag ["virtualenv" "virtualenvwrapper" "python"]))
+(hoarder:register "tomterl/fullframe"
+  '(:tag ["fullscreen" "fullframe"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -3340,6 +3346,10 @@
   '(:download nil)) 
 (hoarder:fetch "nixxquality/WebMConverter"
   '(:download nil)) 
+(hoarder:fetch "https://gitgud.io/nixx/WebMConverter"
+  '(:type :git
+    :tag ["webm" "video"]))
+
 (hoarder:fetch "npm/npm"
   '(:download nil)) 
 (hoarder:fetch "nrgmilk/freebsd-desktop-jp"
@@ -4816,6 +4826,22 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["rtorrent" "pyroscope"]))
 (hoarder:fetch "haecker-felix/gradio"
   '(:tag ["radio" "gtk"]))
+(hoarder:fetch "wooorm/vfile"
+  '(:tag ["vinyl" "node" "javascript" "object"]))
+(hoarder:fetch "CherryPerry/ffmpeg-vp9-wrap"
+  '(:tag ["ffmpeg" "video" "vp9" "webm"]))
+(hoarder:fetch "https://bitbucket.org/dhellmann/virtualenvwrapper.git"
+  '(:tag ["python" "virtualenv"]))
+(hoarder:fetch "https://gitlab.com/corbie/twitch-curses.git"
+  '(:tag ["twitch" "livestreamer" "ncurses"]))
+(hoarder:fetch "kulpae/cloudruby"
+  '(:tag ["ruby" "soundcloud" "mpg123"]))
+(hoarder:fetch "FedeDP/ncursesFM"
+  '(:tag ["ncurses" "file_manager"]))
+(hoarder:fetch "vain/katriawm"
+  '(:tag ["wm" "tiling_wm"]))
+(hoarder:fetch "vain/xiate"
+  '(:tag ["terminal" "vte"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
