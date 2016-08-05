@@ -294,8 +294,6 @@
       "er" #'muki:open-file-package-registers)
 
 
-  (bind-map-set-keys my-base-leader-org-map
-      "c" #'org-capture)
 
   (liby 'theme-looper
     (bind-map-set-keys my-base-leader-theme-map

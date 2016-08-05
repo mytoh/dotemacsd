@@ -39,4 +39,11 @@
     ;; helm
     "hl" #'helm-org-in-buffer-headings)
 
+(bind-map-set-keys my-base-leader-org-map
+    "c" #'org-capture
+    "l" #'org-cliplink)
+
+(evil-define-key 'normal org-mode-map
+  "o" #'evil-open-below)
+
 ;;; init.el ends here
