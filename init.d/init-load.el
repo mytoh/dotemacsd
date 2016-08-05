@@ -299,6 +299,7 @@
     vs-comment
     toml-mode
     html-preview
+    read-aloud
     gitlab
     ;; ert-modeline ; cause yatemplate error
     ert-flash-modeline
