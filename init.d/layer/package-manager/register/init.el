@@ -1519,6 +1519,13 @@
   '(:tag ["virtualenv" "virtualenvwrapper" "python"]))
 (hoarder:register "tomterl/fullframe"
   '(:tag ["fullscreen" "fullframe"]))
+(hoarder:register "KenetJervet/emacs-bad-apple")
+(hoarder:register "gromnitsky/read-aloud.el"
+  '(:tag ["speech-dispatcher" "festival" "flite"]))
+(hoarder:register "https://gitlab.com/dto/elo.git"
+  '(:desc "elo: simple project scripting for emacs"))
+(hoarder:register "nlamirault/emacs-gitlab"
+  '(:tag ["gitlab"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -4102,7 +4109,7 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
   '(:tag ["font" "bitmap"]))
 (hoarder:fetch "kori/metis-font"
   '(:tag ["font" "gofu" "bitmap" "tewi" "profont"]))
-(hoarder:fetch "Lucy/tewi-font"
+(hoarder:fetch "lucy/tewi-font"
   '(:tag ["font" "bitmap"]))
 (hoarder:fetch "conformal/xombrero"
   '(:tag ["browser" "webkit"]))
@@ -4842,6 +4849,12 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["wm" "tiling_wm"]))
 (hoarder:fetch "vain/xiate"
   '(:tag ["terminal" "vte"]))
+(hoarder:fetch "orthecreedence/cl-rethinkdb"
+  '(:tag ["rethinkdb" "common_lisp" "database"]))
+(hoarder:fetch "apa512/clj-rethinkdb"
+  '(:tag ["rethinkdb" "clojure" "database"]))
+(hoarder:fetch "fintechdev/Milieu"
+  '(:tag ["configuration" "node" "javascript" "rc" "ini"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
