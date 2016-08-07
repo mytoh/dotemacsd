@@ -3377,8 +3377,9 @@
   '(:download nil)) 
 (hoarder:fetch "omcljs/om"
   '(:download nil)) 
-(hoarder:fetch "openssh/openssh-portable"
-  '(:download nil)) 
+(hoarder:fetch "https://anongit.mindrot.org/openssh.git"
+  '(:tag ["ssh" "openbsd"]
+    :depth nil)) 
 (hoarder:fetch "pallet/thread-expr"
   '(:download nil)) 
 (hoarder:fetch "pannon/iocage"
