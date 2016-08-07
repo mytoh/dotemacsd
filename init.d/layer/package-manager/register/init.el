@@ -4860,6 +4860,8 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["rethinkdb" "clojure" "database"]))
 (hoarder:fetch "fintechdev/Milieu"
   '(:tag ["configuration" "node" "javascript" "rc" "ini"]))
+(hoarder:fetch "sindresorhus/today-i-liked"
+  '(:tag ["sindresorhus" "project" "interest" "favorite"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
