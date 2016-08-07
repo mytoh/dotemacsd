@@ -40,8 +40,15 @@
     "hl" #'helm-org-in-buffer-headings)
 
 (bind-map-set-keys my-base-leader-org-map
-    "c" #'org-capture
-    "l" #'org-cliplink)
+    "c" #'org-capture)
+
+(when (commandp 'muki:org-open-link-mpv)
+  (bind-map-set-keys my-base-leader-org-map
+      "m" #'muki:org-open-link-mpv))
+
+(liby 'org-cliplink
+  (bind-map-set-keys my-base-leader-org-map
+      "l" #'org-cliplink))
 
 (evil-define-key 'normal org-mode-map
   "o" #'evil-open-below)
