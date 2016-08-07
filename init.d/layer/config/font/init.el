@@ -108,6 +108,7 @@
   (cl-letf ((k10  "-misc-fixed-medium-r-normal--10-*-75-75-c-100-jisx0208.1983-0")
             (a10 "-misc-fixed-medium-r-normal--10-*-75-75-c-50-iso8859-1")
             (r10 "-misc-fixed-medium-r-normal--10-*-75-75-c-50-jisx0201.1976-0")
+            (kana10 "-misc-fixed-medium-r-normal--10-*-75-75-c-50-jisx0201.1976-0")
             (misc-iso "-misc-fixed-medium-r-normal--10-*-75-75-c-60-iso10646-1")
             (mplus-fxd "-mplus-fxd-normal-normal-normal-*-10-*-*-*-c-60-iso10646-1")
             (symbola (font-spec :family "Symbola"))
@@ -120,6 +121,8 @@
      nil
      "naga10")
 
+    (set-frame-font a10)
+
     (cl-flet ((set (script font) (set-fontset-font fontset script font)))
       (set 'ascii       a10)
       (set 'latin       a10)
@@ -128,6 +131,9 @@
       (set 'kana k10)
       (set 'cjk-misc misc-iso)
       (set 'han k10)
+      (set 'katakana-jisx0201 kana10) ; 半角カナ
+      (set  '(#x0080 . #x024F) a10)    ; 分音符付きラテン
+      (set '(#x0370 . #x03FF) a10)    ; ギリシャ文字
 
       ;; (set 'symbol mplus)
       (set 'symbol symbola)
@@ -145,7 +151,8 @@
      '(("EmojiOne" . 1.0)
        ("Symbola" . 1.3)))
     
-    (cl-pushnew `(font . ,fontset) default-frame-alist)
+    (add-to-list 'default-frame-alist `(font . ,fontset))
+    (set-face-font 'default fontset)
     ))
 
 
