@@ -1526,6 +1526,8 @@
   '(:desc "elo: simple project scripting for emacs"))
 (hoarder:register "nlamirault/emacs-gitlab"
   '(:tag ["gitlab"]))
+(hoarder:register "ieure/uuid-el"
+  '(:tag ["uuid" "id"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
