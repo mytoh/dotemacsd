@@ -1526,6 +1526,8 @@
   '(:desc "elo: simple project scripting for emacs"))
 (hoarder:register "nlamirault/emacs-gitlab"
   '(:tag ["gitlab"]))
+(hoarder:fetch "skeeto/emacs-torrent")
+(hoarder:fetch "sverrejoh/emacs-torrent ")
 (hoarder:register "ieure/uuid-el"
   '(:tag ["uuid" "id"]))
 
