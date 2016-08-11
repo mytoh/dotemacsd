@@ -1530,6 +1530,13 @@
 (hoarder:fetch "sverrejoh/emacs-torrent ")
 (hoarder:register "ieure/uuid-el"
   '(:tag ["uuid" "id"]))
+(hoarder:register "troyp/ls.el"
+  '(:tag ["dash" "list" "cl"]
+    :dependency ["magnars/dash.el"]))
+(hoarder:register "troyp/fn.el"
+  '(:tag ["functional_programming" "dash"]))
+(hoarder:fetch "rhoit/powerline-iconic-theme"
+  '(:tag ["icon" "powerline"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1815,6 +1822,10 @@
 (hoarder:register-theme "mattly/emacs-farmhouse-theme")
 (hoarder:register-theme "JayZar21/orangespacs")
 (hoarder:register-theme "terry3/oceanic-theme")
+(hoarder:register-theme "vyp/redbelly")
+(hoarder:register-theme "franksn/ambience-theme"
+  '(:load-path ["variants"]))
+(hoarder:register-theme "11111000000/tao-theme-emacs")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -2650,8 +2661,6 @@
   '(:tag ["imageboard" "haskell" "yesod" "kusaba"]))
 (hoarder:fetch "driftyco/ionicons"
   '(:tag ["icon" "font"]))
-(hoarder:fetch "https://gitla.in/ovibos/quicksilver.git"
-  '(:tag ["imageboard" "haskell"]))
 (hoarder:fetch "gwkkwg/cl-containers"
   '(:tag ["common_lisp" "data_structure"]))
 (hoarder:fetch "dustinspecker/awesome-eslint"
@@ -3689,7 +3698,8 @@
 (hoarder:fetch "Cloudef/macopix-fork")
 (hoarder:fetch "nixers-projects/podcast"
   '(:tag ["unix" "nixers" "podcast"]
-    :desc "https://nixers.net/showthread.php?tid=1656"))
+    :desc "https://nixers.net/showthread.php?tid=1656"
+    :download nil))
 (hoarder:fetch "git://arcetera.moe/bin.git"
   '(:desc "https://www.reddit.com/r/unixporn/comments/4h5aai/cwm_lacking/"
     :tag ["OpenBSD"]))
@@ -4860,8 +4870,62 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["rethinkdb" "clojure" "database"]))
 (hoarder:fetch "fintechdev/Milieu"
   '(:tag ["configuration" "node" "javascript" "rc" "ini"]))
-(hoarder:fetch "sindresorhus/today-i-liked"
+(hoarder:fetch "sindresorhus/likes"
   '(:tag ["sindresorhus" "project" "interest" "favorite"]))
+(hoarder:fetch "VoLuong/Awesome-Ubuntu-Linux"
+  '(:tag ["linux" "ubuntu" "awesome_list"]))
+(hoarder:fetch "AshyIsMe/enex2org"
+  '(:tag ["evernote" "org"]))
+(hoarder:fetch "dkeg/inspin"
+  '(:tag ["script" "shell"]))
+(hoarder:fetch "michael-lazar/rtv"
+  '(:tag ["terminal" "cli" "reddit"]))
+(hoarder:fetch "shiyanhui/dht"
+  '(:tag ["dht" "p2p"]))
+(hoarder:fetch "https://gitlab.namibsun.net/namboy94/toktokkie.git"
+  '(:tag ["python" "media"]))
+(hoarder:fetch "flipflop97/Mato"
+  '(:tag ["icon" "theme"]))
+(hoarder:fetch "micheloosterhof/cowrie"
+  '(:tag ["ssh" "honeypot"]))
+(hoarder:fetch "https://gitlab.com/manaplus/manaplus.git"
+  '(:tag ["game"]))
+(hoarder:fetch "https://notabug.org/koz.ross/fp-in-js"
+  '(:type :git
+    :tag ["functional_programming" "javascript" "video"]
+    :download nil))
+(hoarder:fetch "https://framagit.org/tuxicoman/googleplaydownloader.git"
+  '(:tag ["android" "google" "play_store" "apk"]))
+(hoarder:fetch "https://framagit.org/tuxicoman/mysearch.git"
+  '(:tag ["google" "wikipedia" "openstreetmap" "yacy" "search" "search_engine"]
+    :site "https://search.jesuislibre.net/"))
+(hoarder:fetch "Librevault/librevault"
+  '(:tag ["p2p" "sync"]))
+(hoarder:fetch "andreberg/Meslo-Font"
+  '(:tag ["font" "menlo"]))
+(hoarder:fetch "jimmay5469/vim-spacemacs"
+  '(:tag ["vim" "spacemacs"]))
+(hoarder:fetch "be5invis/Iosevka"
+  '(:tag ["font"]))
+(hoarder:fetch "fredokun/lisp-list-comprehensions"
+  '(:tag ["common_lisp" "python" "list_comprehension"]))
+(hoarder:fetch "tlikonen/tagdb"
+  '(:tag ["tag" "database" "cli"]))
+(hoarder:fetch "y2q-actionman/symbolic-object"
+  '(:tag ["common_lisp" "oop"]
+    :site "http://y2q-actionman.hatenablog.com/entry/2016/07/31/Mathematica%E3%81%AE%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E7%9A%84%E6%A9%9F%E8%83%BD%E3%82%92Common_Lisp%E3%81%A7%E7%9C%9F%E4%BC%BC%E3%81%A6%E3%81%BF%E3%81%9F"))
+(hoarder:fetch "eadmund/cl-sxml"
+  '(:tag ["common_lisp" "xml" "sxml"]))
+(hoarder:fetch "data-x-ware/xdb2"
+  '(:tag ["database" "memory" "common_lisp" "document"]))
+(hoarder:fetch "orthecreedence/vom"
+  '(:tag ["common_lisp" "logging"]))
+(hoarder:fetch "rajasegar/cl-simple-database"
+  '(:tag ["common_lisp" "database"]))
+(hoarder:fetch "dakrone/eos"
+  '(:tag ["configuration" "org-mode"]))
+(hoarder:fetch "Usuka/Homepage"
+  '(:tag ["css" "homepage" "twily"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
