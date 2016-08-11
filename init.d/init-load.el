@@ -301,7 +301,8 @@
     html-preview
     read-aloud
     gitlab
-    uuid
+    bug-hunter
+    ;; uuid
     ;; ert-modeline ; cause yatemplate error
     ;; ert-flash-modeline
     ;; handoff
