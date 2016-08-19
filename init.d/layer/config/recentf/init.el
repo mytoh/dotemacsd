@@ -32,7 +32,8 @@
     (hook 'kill-emacs-hook #'recentf-cleanup))
 
 
-(after 'recentf
-    (hook 'find-file-hook #'recentf-save-list))
+;; (hook 'after-init-hook
+;;       (lambda ()
+;;         (hook 'find-file-hook #'recentf-save-list)))
 
 ;;; init.el ends here

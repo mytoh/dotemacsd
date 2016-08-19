@@ -21,7 +21,7 @@
                  ;; (message "peercast.takami98.net/message-yp")
                  ))
 
-  (set-option helm-yplistener-player-type 'mpv)
+  (set-option helm-yplistener-player-type :mpv)
   (set-option helm-yplistener-default-protocol "mmshttp")
 
   ;; (helm-migemize-command 'helm-yplistener)

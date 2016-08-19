@@ -252,7 +252,7 @@
     hamburg omtose-phellack base16-harmonic16-dark
     Motoko motoko-night base16-oceanicnext-dark
     hyperplane iceberg myth forest-blue soria metalheart
-    zweilight oceanic))
+    zweilight oceanic redbelly doom-one doom-dark firewatch))
 
 ;; (enable-option select-enable-clipboard
 ;;                select-enable-primary)

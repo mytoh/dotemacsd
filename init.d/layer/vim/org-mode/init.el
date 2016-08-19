@@ -35,6 +35,7 @@
     ;; insertion of common elements
     "il" #'org-insert-link
     "if" #'org-footnote-new
+    "tl" #'org-toggle-link-display
 
     ;; helm
     "hl" #'helm-org-in-buffer-headings)

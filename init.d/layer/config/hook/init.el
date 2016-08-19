@@ -24,11 +24,6 @@
 ;;                                 )
 ;;                 (read-only-mode 1))))
 
-;;; customize file
-(defun-add-hook muki:set-custom-el-file (emacs-startup-hook)
-  (setq custom-file (locate-user-emacs-file "custom.el"))
-  (load (file-name-sans-extension custom-file) t t))
-
 
 ;; ;;; banish mouse pointer
 ;; (cl-defun banish ()

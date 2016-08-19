@@ -143,7 +143,7 @@
     flappymacs
     yamada
     css-eldoc
-    ;; web-beautify
+    web-beautify
     cssfmt
     direx
     oniisama
@@ -302,6 +302,12 @@
     read-aloud
     gitlab
     bug-hunter
+    lupin-title
+    lispxmp
+    cl-indent
+    sound-wav
+    cabledolphin
+    digit-groups
     ;; uuid
     ;; ert-modeline ; cause yatemplate error
     ;; ert-flash-modeline

@@ -5,6 +5,10 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 (package-initialize)
 
+;;; customize file
+(setq custom-file (locate-user-emacs-file "custom.el"))
+(load (file-name-sans-extension custom-file) t t)
+
 (require 'cl-lib)
 
 (cl-letf ((file-name-handler-alist nil)) 

@@ -48,13 +48,14 @@ Otherwise goto the end of minibuffer."
   (after 'helm
       ;; bind C-1 to C-9 to actions
       (cl-loop for n from 0 to 8 do
-           (add-key helm-map (format "C-%s" (1+ n))
-                    `(lambda ()
-                       (interactive)
-                       (helm-select-nth-action ,n)))))
+            (add-key helm-map (format "C-%s" (1+ n))
+                     `(lambda ()
+                        (interactive)
+                        (helm-select-nth-action ,n)))))
   ;; helm mode mappings
   (define-key helm-map (kbd "C-j") #'helm-next-line)
   (define-key helm-map (kbd "C-k") #'helm-previous-line)
+  (define-key helm-map (kbd "C-c C-l") #'delete-minibuffer-contents)
 
   ;; global mappings for helm commands
   (add-global-key "M-x" #'helm-M-x

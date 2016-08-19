@@ -1537,6 +1537,19 @@
   '(:tag ["functional_programming" "dash"]))
 (hoarder:fetch "rhoit/powerline-iconic-theme"
   '(:tag ["icon" "powerline"]))
+(hoarder:register "mugijiru/lupin-title")
+(hoarder:register "emacsmirror/lispxmp")
+(hoarder:fetch "exercism/xelisp"
+  '(:tag ["exercise" "exercism" "emacs" "emacs_lisp"]))
+(hoarder:register "Wilfred/loop.el"
+  '(:tag ["loop" "emacs" "utility"]))
+(hoarder:register "Malabarba/threads-list-mode")
+(hoarder:register "orgcandman/pcap-mode"
+  '(:tag ["wireshark" "pcap" "packet_capture"]))
+(hoarder:register "https://bitbucket.org/adamsmd/digit-groups"
+  '(:type :hg))
+(hoarder:register "syohex/emacs-pcre"
+  '(:tag ["emacs_module" "pcre" "regex"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1826,6 +1839,10 @@
 (hoarder:register-theme "franksn/ambience-theme"
   '(:load-path ["variants"]))
 (hoarder:register-theme "11111000000/tao-theme-emacs")
+(hoarder:register-theme "osener/emacs-afternoon-theme")
+(hoarder:register-theme "hlissner/emacs-doom-theme")
+(hoarder:register-theme "hydandata/hydandata-light-theme")
+(hoarder:register-theme "sjahl/emacs-theme-firewatch")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -2065,7 +2082,8 @@
 ;;               '(:tag ["org"]))
 (hoarder:fetch "bodil/emacs.d")
 (hoarder:fetch "jixiuf/emacs_conf"
-  '(:tag ["evil"]))
+  '(:tag ["evil"]
+    :download nil))
 (hoarder:fetch "m00natic/dot-emacs")
 (hoarder:fetch "holguinj/evil-clojure-emacs"
   '(:tag ["evil" "clojure"]))
@@ -2324,7 +2342,8 @@
 (hoarder:fetch "renard/o-blog"
   '(:tag ["org" "blog"]))
 (hoarder:fetch "tuhdo/tuhdo.github.io"
-  '(:tag ["org" "emacs-tutor"]))
+  '(:tag ["org" "emacs-tutor"]
+    :download nil))
 (hoarder:fetch "olewhalehunter/kommissar"
   '(:tag ["common_lisp" "browser" "mozrepl"]))
 (hoarder:fetch "caiorss/Emacs-Elisp-Programming"
@@ -2698,7 +2717,8 @@
 (hoarder:fetch "baurigae/polar-night"
   '(:tag ["gtk" "theme" "x11" "desktop"]))
 (hoarder:fetch "anexation/menda-icon-themes"
-  '(:tag ["icon" "theme" "x11" "desktop"]))
+  '(:tag ["icon" "theme" "x11" "desktop"]
+    :download nil))
 (hoarder:fetch "DrBoolean/RecursionTalk"
   '(:tag ["javascript" "fold"]))
 (hoarder:fetch "mpv-android/mpv-android"
@@ -2761,7 +2781,8 @@
 (hoarder:fetch "git://git.sv.gnu.org/librejs.git") 
 (hoarder:fetch "git://git.sv.gnu.org/smalltalk.git") 
 (hoarder:fetch "https://neetco.de/chibi/sshchan.git"
-  '(:type :git)) 
+  '(:type :git
+    :download nil)) 
 (hoarder:fetch "cjdelisle/cjdns") 
 (hoarder:fetch "symbolset/ss-emoji-beta") 
 (hoarder:fetch "https://notabug.org/koz.ross/awesome-c.git") 
@@ -3845,7 +3866,8 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
 (hoarder:fetch "ctjhoa/spacevim"
   '(:tag ["vim" "spacemacs"]))
 (hoarder:fetch "GNOME/adwaita-icon-theme"
-  '(:tag ["x11" "desktop" "theme"]))
+  '(:tag ["x11" "desktop" "theme"]
+    :download nil))
 (hoarder:fetch "KaOSx/midna"
   '(:tag ["x11" "desktop" "theme"]))
 (hoarder:fetch "KDE/peruse"
@@ -3854,7 +3876,8 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
 (hoarder:fetch "KDE/breeze-icons"
   '(:tag ["x11" "kde" "icon" "theme"]))
 (hoarder:fetch "GNOME/girl"
-  '(:tag ["gnome" "radio" "streaming"]))
+  '(:tag ["gnome" "radio" "streaming"]
+    :download nil))
 (hoarder:fetch "anshicat/dotfiles"
   '(:tag ["firefox" "css"]
     :desc "https://github.com/anshicat/dotfiles/tree/master/css"))
@@ -3869,9 +3892,11 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
 (hoarder:fetch "chekavy/cheser-gtk2-theme"
   '(:tag ["x11" "desktop" "theme"]))
 (hoarder:fetch "GNOME/gnome-themes-standard"
-  '(:tag ["x11" "desktop" "theme" "gnome"]))
+  '(:tag ["x11" "desktop" "theme" "gnome"]
+    :download nil))
 (hoarder:fetch "GNOME/gtk"
-  '(:tag ["x11" "desktop" "theme" "gnome"]))
+  '(:tag ["x11" "desktop" "theme" "gnome"]
+    :download nil))
 (hoarder:fetch "diegogangl/adwaita-neutral"
   '(:tag ["x11" "desktop" "theme" "gnome"]))
 (hoarder:fetch "madmalik/mononoki"
@@ -4183,28 +4208,34 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "https://neetco.de/killthejava/yourec"
   '(:tag ["live" "streamnig" "younow"]
     :type :git
-    :depth nil))
+    :depth nil
+    :download nil))
 (hoarder:fetch "https://neetco.de/killthejava/comix-plus"
   '(:tag ["comix" "comic" "python" "gtk"]
     :type :git
-    :depth nil))
+    :depth nil
+    :download nil))
 (hoarder:fetch "https://neetco.de/apt-get/touhou-linux-guide"
   '(:tag ["touhou" "linux" "wine" "playonlinux" "game"]
     :type :git
-    :depth nil))
+    :depth nil
+    :download nil))
 (hoarder:fetch "https://neetco.de/apt-get/visual-novel-linux-guide"
   '(:tag ["visual_novel" "linux" "wine" "playonlinux" "game"]
     :type :git
-    :depth nil))
+    :depth nil
+    :download nil))
 (hoarder:fetch "https://neetco.de/softashell/patchy"
   '(:tag ["mpd" "golang"]
     :desc "A synchronized online jukebox - Forked from tenshi"
     :type :git
-    :depth nil))
+    :depth nil
+    :download nil))
 (hoarder:fetch "https://neetco.de/appwl/nyaa-cli"
   '(:tag ["nyaa" "torrent" "golang"]
     :type :git
-    :depth nil))
+    :depth nil
+    :download nil))
 (hoarder:fetch "TaylanUB/misc"
   '(:tag ["dotfiles"]))
 (hoarder:fetch "pfraze/beaker"
@@ -4242,9 +4273,11 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
     :desc "https://forum.manjaro.org/t/manjaro-i3-16-06-rc-stable/537/78"))
 (hoarder:fetch "tvraman/emacspeak"
   '(:tag ["audio" "emacs" "audible" "speech" "synthesis" "flite" "festival"]
-    :desc "https://opensource.com/life/16/6/emacspeak-brings-linux-blind"))
+    :desc "https://opensource.com/life/16/6/emacspeak-brings-linux-blind"
+    :download nil))
 (hoarder:fetch "googlei18n/noto-fonts"
-  '(:tag ["font" "google"]))
+  '(:tag ["font" "google"]
+    :download nil))
 (hoarder:fetch "dj95/lemonbarpy"
   '(:tag ["lemonbar" "i3status" "python" "bar" "panel" "x11"]))
 (hoarder:fetch "base16-builder/base16-builder"
@@ -4795,7 +4828,8 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
     :tag ["dotfiles" "configuration"]))
 (hoarder:fetch "https://neetco.de/Tomoko/fourchex.git"
   '(:tag ["4chan" "elixir"]
-    :depth nil))
+    :depth nil
+    :download nil))
 (hoarder:fetch "nbari/freebsd"
   '(:tag  ["freebsd" "configuration" "kernel" "jail"]))
 (hoarder:fetch "hemanth/functional-programming-jargon"
@@ -4872,8 +4906,8 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["configuration" "node" "javascript" "rc" "ini"]))
 (hoarder:fetch "sindresorhus/likes"
   '(:tag ["sindresorhus" "project" "interest" "favorite"]))
-(hoarder:fetch "VoLuong/Awesome-Ubuntu-Linux"
-  '(:tag ["linux" "ubuntu" "awesome_list"]))
+(hoarder:fetch "VoLuong/Awesome-Linux-Software"
+  '(:tag ["linux" "awesome_list"]))
 (hoarder:fetch "AshyIsMe/enex2org"
   '(:tag ["evernote" "org"]))
 (hoarder:fetch "dkeg/inspin"
@@ -4926,6 +4960,73 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["configuration" "org-mode"]))
 (hoarder:fetch "Usuka/Homepage"
   '(:tag ["css" "homepage" "twily"]))
+(hoarder:fetch "https://gitlab.com/gitlab-org/gitlab-shell.git"
+  '(:tag ["gitlab" "ruby"]))
+(hoarder:fetch "https://gitlab.com/luspi/photoqt.git"
+  '(:tag ["photo" "qt5" "viewer"]))
+(hoarder:fetch "mrjoelkemp/awesome-paid-open-source"
+  '(:tag ["awesome_list" "opensource"]))
+(hoarder:fetch "https://gitlab.com/j-pb/franz.git"
+  '(:tag ["logging" "reframe" "samza" "kafka" "clojurescript"]))
+(hoarder:fetch "fitojb/anka-coder-fonts"
+  '(:tag ["font"]))
+(hoarder:fetch "json-ld/json-ld.org"
+  '(:tag ["json" "schema" "linked_data" "json-ld"]))
+(hoarder:fetch "dbpedia/dbpedia"
+  '(:tag ["database" "wikipedia" "wiki" "json-ld"]
+    :download nil))
+(hoarder:fetch "papers-we-love/papers-we-love"
+  '(:tag ["paper" "science" "math" "pdf" "document"]
+    :memo "'Out of the Tar Pit' mentioned in [[https://www.youtube.com/watch?v=Cym4TZwTCNU][Rich Hickey: Deconstructing the Database - YouTube]] "
+    :download nil))
+(hoarder:fetch "git://git.freebsoft.org/git/speechd"
+  '(:tag ["speech_synthesis"]))
+(hoarder:fetch "Shinmera/for"
+  '(:tag ["common_lisp" "loop" "for"]))
+(hoarder:fetch "matthunz/riceinator"
+  '(:tag ["configuration" "template" "rice" "desktop"]))
+(hoarder:fetch "matthunz/dotfiles"
+  '(:tag ["dotfiles"]))
+(hoarder:fetch "Mon-Ouie/blocky"
+  '(:tag ["common_lisp" "game"]
+    :memo " [[https://www.youtube.com/watch?v=i03_VzOmDko][emacs glass demo - YouTube]]
+[[https://github.com/Mon-Ouie/blocky/blob/master/glass.el][blocky/glass.el at master · Mon-Ouie/blocky · GitHub]] "))
+(hoarder:fetch "guarinogabriel/Mac-CLI"
+  '(:tag ["macos" "cli" "shellscript"]))
+(hoarder:fetch "rgcr/m-cli"
+  '(:tag ["macos" "cli" "shellscript"]))
+(hoarder:fetch "rpominov/static-land"
+  '(:tag ["javascript" "fantasyland" "monad" "type"]))
+(hoarder:fetch "gcanti/flow-static-land"
+  '(:tag ["javascript" "static-land" "monad" "type" "flow"]
+    :memo "https://www.cl.cam.ac.uk/%7Ejdy22/papers/lightweight-higher-kinded-polymorphism.pdf"))
+(hoarder:fetch "gnunn1/terminix"
+  '(:tag ["terminal" "gtk" "gtk3" "vte"]))
+(hoarder:fetch "ligurio/openbsd-awesome"
+  '(:tag ["openbsd" "awesome_list"]))
+(hoarder:fetch "mirrorer/libbpg"
+  '(:tag ["image" "gif" "bpg" "hevc"]))
+(hoarder:fetch "mchav/with"
+  '(:tag ["cli" "shell" "repl"]))
+(hoarder:fetch "danklammer/bytesize-icons"
+  '(:tag ["icon" "svg"]))
+(hoarder:fetch "tomahawk-player/tomahawk"
+  '(:tag ["music" "player" "youtube" "lastfm" "spotify" "soundcloud" "qt5"]))
+(hoarder:fetch "urwid/urwid"
+  '(:tag ["python" "cli"]
+    :memo " [[https://www.youtube.com/watch?v=4UwhXC1OP2A][Console Applications with Urwid - YouTube]] "))
+(hoarder:fetch "Wildefyr/mpvc"
+  '(:tag ["mpv" "mpc"]))
+(hoarder:fetch "ElessarWebb/positron-bar"
+  '(:tag ["javascript" "bar" "panel"]))
+(hoarder:fetch "larchlinux/bark/tree/master"
+  '(:tag ["javascript" "bar" "panel" "electron"]
+    :memo "https://www.reddit.com/r/unixporn/comments/4y2prp/im_creating_a_new_bar_what_would_you_most_like_to/"))
+(hoarder:fetch "ndantam/sycamore"
+  '(:tag ["common_lisp" "binary_tree" "set" "queue" "data_structure"]))
+(hoarder:fetch "ksjogo/ksjogo-guix"
+  '(:tag ["guix" "emacs" "package"]))
+
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
