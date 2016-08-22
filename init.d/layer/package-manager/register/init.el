@@ -5019,14 +5019,44 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["mpv" "mpc"]))
 (hoarder:fetch "ElessarWebb/positron-bar"
   '(:tag ["javascript" "bar" "panel"]))
-(hoarder:fetch "larchlinux/bark/tree/master"
+(hoarder:fetch "https://gitlab.com/larchlinux/bark.git"
   '(:tag ["javascript" "bar" "panel" "electron"]
     :memo "https://www.reddit.com/r/unixporn/comments/4y2prp/im_creating_a_new_bar_what_would_you_most_like_to/"))
 (hoarder:fetch "ndantam/sycamore"
   '(:tag ["common_lisp" "binary_tree" "set" "queue" "data_structure"]))
 (hoarder:fetch "ksjogo/ksjogo-guix"
   '(:tag ["guix" "emacs" "package"]))
-
+(hoarder:fetch "l-n-s/transmission-i2p"
+  '(:tag ["i2p" "i2pd" "transmission"]))
+(hoarder:fetch "l-n-s/libtorrent-i2p"
+  '(:tag ["i2p" "libtorrent"]))
+(hoarder:fetch "shule517/PeerstPlayer"
+  '(:tag ["peercast"]))
+(hoarder:fetch "mfikes/planck"
+  '(:tag ["clojure" "clojurescript" "repl" "macos" "linux" "script"]))
+(hoarder:fetch "https://notabug.org/zorro/radioslibres-mpv.bash"
+  '(:type :git
+    :depth nil
+    :tag ["radio" "spanish" "bash" "shellscript"]))
+(hoarder:fetch "nelkana/PurePlayer_As"
+  '(:tag ["peercast"]))
+(hoarder:fetch "mcandre/cl-quickcheck"
+  '(:tag ["common_lisp" "quickcheck" "test"]))
+(hoarder:fetch "cbaggers/pathology"
+  '(:tag ["path" "common_lisp"]))
+(hoarder:fetch "https://gitla.in/zannix/neews.git"
+  '(:tag ["common_lisp" "feed"]))
+(hoarder:fetch "https://gitla.in/nilesrogoff/lain-ipfs-scraper.git"
+  '(:tag ["python" "scraping" "lainchan"]))
+(hoarder:fetch "shamazmazum/image-downloader"
+  '(:tag ["common_lisp" "4chan"]))
+(hoarder:fetch "chancejs/chancejs"
+  '(:tag ["javascript" "generator" "random"]))
+(hoarder:fetch "sindresorhus/guides")
+(hoarder:fetch "shinkwhek/Cipher"
+  '(:tag ["algorithm" "cipher" "common_lisp"]))
+(hoarder:fetch "ccqpein/Arithmetic-Exercises"
+  '(:tag ["common_lisp" "swift" "go" "python" "algorithm"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
