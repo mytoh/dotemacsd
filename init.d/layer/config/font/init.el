@@ -9,7 +9,7 @@
 
 
 (cl-defun set-ascii-font ()
-  (cond ((eq window-system nil) nil)
+  (cond ((null window-system) nil)
         ((font-exists-p "Comic Sans MS")
          (set-fontset-font nil 'ascii (font-spec :name  "Comic Sans MS" )))
         ((font-exists-p "-Comic Neue Angular")
@@ -48,7 +48,7 @@
 ;; うゐのおくやま　けふこえて
 ;; あさきゆめみし　ゑひもせす
 (cl-defun set-japanese-font ()
-  (cond ((eq window-system nil) nil)
+  (cond ((null window-system) nil)
         ((font-exists-p "Source Han Code JP")
          (set-fontset-font nil 'japanese-jisx0208
                            (font-spec :name  "Source Han Code JP" :size 9 :weight 'normal))
@@ -102,7 +102,7 @@
     ascii:-mplus-gothic-bold-r-normal--12-*-iso8859-1,
     japanese-jisx0208:-mplus-gothic-bold-r-normal--12-*-jisx0208.1990-0,
     katakana-jisx0201:-mplus-gothic-bold-r-normal--12-*-jisx0201.1976-0")
-  (set-default-font "fontset-mplus_10r"))
+  (set-frame-font "fontset-mplus_10r"))
 
 (cl-defun set-naga10-font ()
   (cl-letf ((k10  "-misc-fixed-medium-r-normal--10-*-75-75-c-100-jisx0208.1983-0")
@@ -338,7 +338,7 @@
 (cl-defun muki:set-up-fira-code ()
   ;; [[https://github.com/tonsky/FiraCode/wiki/Setting-up-Emacs]]
   (when (window-system)
-    (set-default-font "Fira Code"))
+    (set-frame-font "Fira Code"))
   (let ((alist '((33 . ".\\(?:\\(?:==\\)\\|[!=]\\)")
                  (35 . ".\\(?:[(?[_{]\\)")
                  (38 . ".\\(?:\\(?:&&\\)\\|&\\)")
