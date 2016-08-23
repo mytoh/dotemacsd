@@ -224,8 +224,8 @@
         "hl" #'helm-resume
         "hL" #'helm-locate-library
         "hf" #'helm-features
-        "hCl" #'helm-colo
-        "hb" #'helm-pp-bookmarks
+        "hCl" #'helm-colors
+        "hb" #'helm-bookmarks
         "hi" #'helm-info-at-point
         "hm" #'helm-man-woman
         "ha" #'helm-apropos
