@@ -60,10 +60,10 @@
 (auto-image-file-mode 1)
 (enable-option image-animate-loop)
 (add-hook 'image-mode-hook
-          (clambda ()
-              (cl-letf ((image (image-get-display-property)))
-                (if (image-multi-frame-p image)
-                    (image-toggle-animation)))))
+          (lambda ()
+            (cl-letf ((image (image-get-display-property)))
+              (if (image-multi-frame-p image)
+                  (image-toggle-animation)))))
 ;; (set-option image-transform-resize 'fit-height)
 
 ;;;; add file types
@@ -279,11 +279,11 @@
 ;;;; info
 (after 'info
     (seq-each
-     (clambda (dir)
-         (cl-pushnew dir Info-additional-directory-list))
+     (lambda (dir)
+       (cl-pushnew dir Info-additional-directory-list))
      (seq-filter
-      (clambda (dir) (and (file-directory-p dir)
-                      (file-exists-p dir)))
+      (lambda (dir) (and (file-directory-p dir)
+                  (file-exists-p dir)))
       (directory-files (muki:expand-path-huone "komero/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
