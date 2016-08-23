@@ -532,7 +532,7 @@
     face
     eshell
     whitespace
-    ;; autoinsert
+    ;; autoinsert ; using yatemplate
     dired
     eww
     newsticker
