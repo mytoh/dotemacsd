@@ -1550,6 +1550,10 @@
   '(:type :hg))
 (hoarder:register "syohex/emacs-pcre"
   '(:tag ["emacs_module" "pcre" "regex"]))
+(hoarder:register "GuiltyDolphin/hook"
+  '(:tag ["hook"]))
+(hoarder:register "atheriel/splash-buffer.el"
+  '(:tag ["scratch" "splash" "spacemacs"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -5057,6 +5061,15 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["algorithm" "cipher" "common_lisp"]))
 (hoarder:fetch "ccqpein/Arithmetic-Exercises"
   '(:tag ["common_lisp" "swift" "go" "python" "algorithm"]))
+(hoarder:fetch "jieverson/animeapi"
+  '(:tag ["javascript"]))
+(hoarder:fetch "creationix/nvm"
+  '(:tag ["javascript" "node"]))
+(hoarder:fetch "rakanalh/dotemacs"
+  '(:memo "https://github.com/rakanalh/dotemacs/blob/master/vendor/spacemacs-startup.el"
+    :tag ["emacs" "scratch" "splash" "spacemacs"]))
+(hoarder:fetch "andywer/npm-launch"
+  '(:tag ["npm" "javascript" "task_runner" "listr" "make"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
