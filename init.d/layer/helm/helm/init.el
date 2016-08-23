@@ -61,13 +61,13 @@ Otherwise goto the end of minibuffer."
   (add-global-key "M-x" #'helm-M-x
                   "C-c C-m" #'helm-M-x
                   "M-y" #'helm-show-kill-ring
-                  "C-M-z" #'helm-resume
-                  [remap find-file] #'helm-find-files
-                  [remap occur] #'helm-occur
-                  [remap list-buffers] #'helm-buffers-list
-                  [remap jump-to-register] #'helm-register
-                  [remap dabbrev-expand]   #'helm-dabbrev
-                  [remap find-tag]         #'helm-etags-select)
+                  "C-M-z" #'helm-resume)
+  (global-set-key [remap find-file] #'helm-find-files)
+  (global-set-key [remap occur] #'helm-occur)
+  (global-set-key [remap list-buffers] #'helm-buffers-list)
+  (global-set-key [remap jump-to-register] #'helm-register)
+  (global-set-key [remap dabbrev-expand]   #'helm-dabbrev)
+  (global-set-key [remap find-tag]         #'helm-etags-select)
 
   (after 'helm
       (add-key helm-map
@@ -129,7 +129,7 @@ Otherwise goto the end of minibuffer."
 
   ;; use curl
   (when (executable-find "curl")
-    (enable-option helm-google-suggest-use-curl-p))
+    (enable-option helm-net-prefer-curl))
 
   (set-option helm-external-programs-associations
               '(("cbz" . "mcomix")
