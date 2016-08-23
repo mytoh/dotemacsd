@@ -46,5 +46,13 @@
 (command (magit-status magit-log magit-init)
          "magit")
 
+(cl-defun with-editor-setup ()
+  (command (with-editor-finish
+               with-editor-cancel
+             with-editor-finish
+             with-editor-cancel)
+           "with-editor"))
+
 (liby 'magit
-  (muki:magit-setup))
+  (muki:magit-setup)
+  (with-editor-setup))

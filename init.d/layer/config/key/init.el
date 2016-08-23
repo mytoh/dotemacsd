@@ -1,5 +1,7 @@
 ;;; config-key.el  -*- lexical-binding: t -*-
 
+(req 'muki)
+
 ;;;; indent
 (add-key lisp-interaction-mode-map "C-m" #'newline-and-indent)
 
@@ -8,7 +10,7 @@
 
 (add-global-key "C-w" #'kill-region-or-backward-kill-word)
 
-(add-global-key [remap kill-whole-line] #'smart-kill-whole-line)
+(global-set-key [remap kill-whole-line] #'smart-kill-whole-line)
 
 (add-global-key "C-<tab>" #'other-window)
 

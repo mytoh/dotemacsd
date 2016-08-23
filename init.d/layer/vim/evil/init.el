@@ -46,10 +46,10 @@
 
   ;; [[https://github.com/supermomonga/dot-emacs/blob/master/package-config/evil.el]]
   (add-key evil-normal-state-map  "C-h"
-           (clambda ()
-               (interactive)
+           (lambda ()
+             (interactive)
              (evil-insert-state)
-             (insert-string " ")
+             (insert " ")
              (evil-normal-state)))
 
   ;; 物理行移動と論理行移動を入れ替え
@@ -168,20 +168,20 @@ is a kind of temporary one which is not confirmed yet."
 
 (cl-defun muki:init-evil-initial-state ()
   (cl-loop for (mode . state)
-     in '((git-commit-mode . insert)
-          (git-rebase-mode . emacs)
-          (ebib-entry-mode              . emacs)
-          (ebib-index-mode              . emacs)
-          (ebib-log-mode                . emacs)
-          (elfeed-show-mode             . emacs)
-          (elfeed-search-mode           . emacs)
-          (navi2ch-message-mode           . emacs)
-          (navi2ch-board-mode           . emacs)
-          (navi2ch-article-mode           . emacs)
-          (navi2ch-bookmark-mode           . emacs)
-          (navi2ch-list-mode           . emacs)
-          (dired-mode . emacs))
-     do (evil-set-initial-state mode state)))
+        in '((git-commit-mode . insert)
+             (git-rebase-mode . emacs)
+             (ebib-entry-mode              . emacs)
+             (ebib-index-mode              . emacs)
+             (ebib-log-mode                . emacs)
+             (elfeed-show-mode             . emacs)
+             (elfeed-search-mode           . emacs)
+             (navi2ch-message-mode           . emacs)
+             (navi2ch-board-mode           . emacs)
+             (navi2ch-article-mode           . emacs)
+             (navi2ch-bookmark-mode           . emacs)
+             (navi2ch-list-mode           . emacs)
+             (dired-mode . emacs))
+        do (evil-set-initial-state mode state)))
 
 (cl-defun muki:init-evil-modify-syntax-table ()
   (modify-syntax-entry ?_ "w" (standard-syntax-table)))
