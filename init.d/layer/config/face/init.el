@@ -28,7 +28,7 @@
 
 ;;;; disable bold face
 ;;;;; [[http://stackoverflow.com/questions/2064904/how-to-disable-bold-font-weight-globally-in-emacs]]
-(set-face-bold-p 'bold nil)
+(set-face-bold 'bold nil)
 (cl-defun muki:disable-bold-face ()
   (mapc
    (lambda (face)
