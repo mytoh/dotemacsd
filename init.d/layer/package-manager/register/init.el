@@ -280,6 +280,7 @@
   '(:tag "evil"))
 (hoarder:register "Dewdrops/evil-ReplaceWithRegister")
 (hoarder:register "troyp/evil-visual-replace")
+(hoarder:register "wbolster/evil-swap-keys")
 
 ;;;;;  general packages
 (hoarder:register "magnars/s.el")
@@ -1554,6 +1555,12 @@
   '(:tag ["hook"]))
 (hoarder:register "atheriel/splash-buffer.el"
   '(:tag ["scratch" "splash" "spacemacs"]))
+(hoarder:register "vapniks/regex-collection"
+  '(:tag ["regex" ]))
+(hoarder:fetch "emacsattic/emhacks")
+(hoarder:register "ieure/spite"
+  '(:desc " Emacs Lisp REPL for interacting with web services"
+    :tag ["api" "repl"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1637,7 +1644,8 @@
   '(:tag ["org-mode" "org-capture" "firefox"]))
 (hoarder:fetch "thi-ng/org-spec"
   '(:tag ["org" "html" "documentation"]))
-
+(hoarder:register "scallywag/org-board"
+  '(:tag ["org-attach" "bookmarking" "pinboard"]))
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
 ;;                    :dependency ["dbrock/bongo"]
@@ -5070,6 +5078,40 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
     :tag ["emacs" "scratch" "splash" "spacemacs"]))
 (hoarder:fetch "andywer/npm-launch"
   '(:tag ["npm" "javascript" "task_runner" "listr" "make"]))
+(hoarder:fetch "wifiextender/pinky-bar"
+  '(:tag ["bar" "panel" "wm"]))
+(hoarder:fetch "Truttix/AhriStartpage"
+  '(:tag ["homepage"]))
+(hoarder:fetch "DrummerHead/DHomepage"
+  '(:tag ["homepage"]))
+(hoarder:fetch "kevinarefunny/my-homepage"
+  '(:tag ["homepage"]))
+(hoarder:fetch "Blue-Sky-Skunkworks/cl-ascii-art"
+  '(:tag ["common_lisp" "ascii_art"]))
+(hoarder:fetch "GiedriusS/TwitchNotifier"
+  '(:tag ["twitch" "notification"]))
+(hoarder:fetch "jrmarino/synth"
+  '(:tag ["ports" "freebsd"]))
+(hoarder:fetch "HaCk3Dq/spectrumyzer"
+  '(:tag ["desktop"]))
+(hoarder:fetch "tayumpee/start_page2_firefox_and_chrome"
+  '(:tag ["homepage" "firefox" "chrome"]))
+(hoarder:fetch "https://gitlab.com/iain/hamburger-menu-mode"
+  '(:type :git))
+(hoarder:fetch "apngasm/apngasm"
+  '(:tag ["png" "gif" "apng" "animated_png"]))
+(hoarder:fetch "aborn/learn-elisp-by-examples"
+  '(:tag ["emacs_lisp" "example"]))
+(hoarder:fetch "jagracey/Awesome-Unicode"
+  '(:tag ["awesome_list" "unicode"]))
+(hoarder:fetch "finnishtransportagency/harja"
+  '(:tag ["clojure" "clojurescript"]))
+(hoarder:fetch "mewo2/naming-language"
+  '(:tag ["language" "generator" "random" "javascript"]
+    :desc "A generator for naming languages"))
+(hoarder:fetch "mewo2/terrain"
+  '(:tag ["javascript" "map" "generator"]
+    :desc "Fantasy map generator"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
