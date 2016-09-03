@@ -6,6 +6,11 @@
 
 (req 'sound-wav
 
+  (defvar muki:sound-wav-find-file
+    (expand-file-name
+     "sounds/Typewriter_Sound_FXs/Antique_Typewriter_Sound_FXs/Paper_load.wav"
+     user-emacs-directory))
+
   ;; [[http://rubikitch.com/2016/08/17/sound-wav/][emacs sound-wav.el : Emacsに効果音(SE)を付けて作業効率を3倍にする方法 | MELPA Emacs Lisp Elisp パ...]]
   (defun sound-wav--do-play-by-sox (files)
     (deferred:$
@@ -14,9 +19,7 @@
 
 ;;; ファイルを開くときの効果音, sound for opening files
   (defun find-file-hook--sound ()
-    (cl-letf ((file (expand-file-name
-                     "sounds/Typewriter_Sound_FXs/Antique_Typewriter_Sound_FXs/Paper_load.wav"
-                     user-emacs-directory)))
+    (cl-letf ((file muki:sound-wav-find-file))
       (when (file-exists-p file)
         (sound-wav-play file))))
 
