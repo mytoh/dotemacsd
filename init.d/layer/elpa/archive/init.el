@@ -10,6 +10,9 @@
   (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") 'append)
   (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") 'append)
   ;; (add-to-list 'package-archives '("SC" . "http://joseito.republika.pl/sunrise-commander/") 'append)
+
+  (setq package-archive-priorities
+        '(("org" . 99)))
   )
 
 ;;; init.el ends here
