@@ -1022,8 +1022,6 @@
 (hoarder:register "zonuexe/emoji-fontset.el"
   '(:tag ["font" "emoji" "unicode"]))
 (hoarder:register "purcell/exec-path-from-shell")
-(hoarder:register "myuhe/imgur.el"
-  '(:tag ["imgur" "anything"]))
 (hoarder:register "gongo/emacs-gimei"
   '(:tag ["japanese"]))
 (hoarder:register "emacs-pe/ssh-modes"
@@ -1412,6 +1410,8 @@
   '(:tag ["macro" "debugger" "debug"]))
 (hoarder:register "larsmagne/imgur.el"
   '(:tag ["imgur" "api" "upload"]))
+;; (hoarder:register "myuhe/imgur.el"
+;;   '(:tag ["imgur" "anything"]))
 (hoarder:register "kuangdash/org-iv"
   '(:tag ["org-mode" "html" "preview"]
     :dependency ["netguy204/imp.el"]))
@@ -1561,6 +1561,11 @@
 (hoarder:register "ieure/spite"
   '(:desc " Emacs Lisp REPL for interacting with web services"
     :tag ["api" "repl"]))
+(hoarder:register "bogolisk/leo"
+  '(:tag ["oop" "clso" "class"]))
+(hoarder:register "https://gitlab.com/tarsius/glab"
+  '(:type :git
+    :tag ["gitlab"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1855,6 +1860,9 @@
 (hoarder:register-theme "hlissner/emacs-doom-theme")
 (hoarder:register-theme "hydandata/hydandata-light-theme")
 (hoarder:register-theme "sjahl/emacs-theme-firewatch")
+(hoarder:register-theme "habamax/kosmos-theme")
+(hoarder:register-theme "rxse/emacs-rin-theme")
+
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -2590,7 +2598,7 @@
 (hoarder:fetch "https://bitbucket.org/arakiken/mlterm"
   '(:type :hg
     :tag ["terminal"]))
-(hoarder:fetch "pcbsd/lumina"
+(hoarder:fetch "trueos/lumina"
   '(:tag ["freebsd" "pcbsd" "fluxbox" "de"]
     ;; :branch "qt4/0.7.2"
     :branch "qt5/0.8.8"
@@ -4316,7 +4324,7 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "curl/curl"
   '(:tag ["web" "http" "request"]))
 (hoarder:fetch "alejandroerickson/spacemacs"
-  '(:desc "https://github.com/alejandroerickson/spacemacs/tree/myconfig/layers/media"
+  '(:memo "https://github.com/alejandroerickson/spacemacs/tree/myconfig/layers/media"
     :branch "myconfig"
     :tag ["emms" "spacemacs" "configuration"]))
 (hoarder:fetch "jkbrzt/httpie"
@@ -4401,8 +4409,9 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
     :desc "[[http://schema.org/Recipe]]"))
 (hoarder:fetch "torque/mpv-progressbar"
   '(:tag ["mpv" "lua" "moonscript"]))
-(hoarder:fetch "donmaiq/Mpv-Radio"
-  '(:tag ["mpv" "lua" "radio"]))
+(hoarder:fetch "donmaiq/mpvconfigs"
+  '(:tag ["mpv" "lua" "radio"]
+    :memo "https://github.com/donmaiq/mpvconfigs/blob/master/scripts/radio.lua"))
 (hoarder:fetch "donmaiq/Mpv-Playlistmanager"
   '(:tag ["mpv" "lua" "playlist"]))
 (hoarder:fetch "https://gist.github.com/haasn/7919afd765e308fa91cbe19a64631d0f.git"
@@ -5112,6 +5121,90 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
 (hoarder:fetch "mewo2/terrain"
   '(:tag ["javascript" "map" "generator"]
     :desc "Fantasy map generator"))
+(hoarder:fetch "Chinachu/Chinachu"
+  '(:tag ["tv"]))
+(hoarder:fetch "niieani/bash-oo-framework"
+  '(:tag ["bash" "oop"]))
+(hoarder:fetch "rancher/trash"
+  '(:tag ["golang" "package_manager"]))
+(hoarder:fetch "dschep/ntfy"
+  '(:tag ["notification" "android" "pushbullet" "pushover" "xmpp"]))
+(hoarder:fetch "repl-electric/d-_-b"
+  '(:tag ["clojure" "overtone" "repl_electric"]
+    :memo "https://twitter.com/josephwilk/status/769271489594068996"))
+(hoarder:fetch "thejameskyle/itsy-bitsy-data-structures"
+  '(:tag ["data_structure" "algorithm" "javascript"]))
+(hoarder:fetch "golang/crypto"
+  '(:tag ["ssh" "golang"]
+    :memo "https://github.com/golang/crypto/tree/master/ssh"))
+(hoarder:fetch "GNUnet/gnunet"
+  '(:tag ["p2p"]))
+(hoarder:fetch "git://git.savannah.gnu.org/wget.git"
+  '(:tag ["wget" "downloader" "curl"]))
+(hoarder:fetch "politza/ealias"
+  '(:tag ["shell" "bash" "alias"]))
+(hoarder:fetch "HollyAdele/awesome-programming-for-kids"
+  '(:tag ["awesome_list" "programming" "education"]))
+(hoarder:fetch "alandipert/intension"
+  '(:tag ["datascript" "query" "database" "clojure"]))
+(hoarder:fetch "takoeight0821/octo"
+  '(:tag ["utility" "common_lisp"]))
+(hoarder:fetch "vtomole/cl-puri-1.5.5"
+  '(:tag ["uri" "common_lisp" "urll"]))
+(hoarder:fetch "rudolfochrist/nancy"
+  '(:tag ["web" "ningle" "clack" "common_lisp"]))
+(hoarder:fetch "git-tips/tips"
+  '(:tag ["git" "tips"]))
+(hoarder:fetch "gabriel-laddel/clim"
+  '(:tag ["common_lisp" "mcclim" "gui"]))
+(hoarder:fetch "scrapy/scrapy"
+  '(:tag ["crawler" "scraping" "python" "cli"]))
+(hoarder:fetch "daleroberts/tv"
+  '(:tag ["terminal" "image" "image_viewer"]))
+(hoarder:fetch "hzeller/timg"
+  '(:tag ["terminal" "image" "image_viewer"]))
+(hoarder:fetch "DoTheEvo/ANGRYsearch"
+  '(:tag ["search" "linux"]))
+(hoarder:fetch "karandesai-96/yolog"
+  '(:tag ["git" "log" "cli" "python"]))
+(hoarder:fetch "kimmel/colordiff"
+  '(:tag ["diff" "color" "cli"]))
+(hoarder:fetch "jeffkaufman/icdiff"
+  '(:tag ["diff" "color" "cli" "git" "svn"]))
+(hoarder:fetch "qqueue/ANSICHAN"
+  '(:tag ["4chan" "terminal" "cli"]))
+(hoarder:fetch "jarun/googler"
+  '(:tag ["google" "cli"]))
+(hoarder:fetch "git://git.2f30.org/noice.git"
+  '(:tag ["file_manager" "cli"]))
+(hoarder:fetch "http://www.brettcsmith.org/2007/dtrx/dtrx"
+  '(:type :hg
+    :tag ["archive" "extractor" "zip" "tar"]))
+(hoarder:fetch "tumugi/tumugi"
+  '(:tag ["task_runner" "workflow"]))
+(hoarder:fetch "fcarlier/fbida"
+  '(:tag ["image_viewer" "image" "framebuffer" "terminal"]))
+(hoarder:fetch "djjolicoeur/datamaps"
+  '(:tag ["map" "query" "datascript" "clojure"]))
+(hoarder:fetch "astoeckley/Eat-Static"
+  '(:tag ["clojure" "map" "validation" "type_checking"]))
+(hoarder:fetch "elarkin/fw.matching"
+  '(:tag ["clojure" "let" "map" "destructuring"]))
+(hoarder:fetch "foretagsplatsen/emacs-js"
+  '(:tag ["javascript" "emacs" "configuration"]))
+(hoarder:fetch "scymtym/configuration.options"
+  '(:tag ["common_lisp" "configuration"]))
+(hoarder:fetch "robert-strandh/Clump"
+  '(:tag ["common_lisp" "btree" "tree_structure"]))
+(hoarder:fetch "ewwhite/zfs-ha.wiki"
+  '(:tag ["zfs" "wiki" "linux"]))
+(hoarder:fetch "moosotc/llpp"
+  '(:desc " PDF pager "
+    :tag ["pdf" "pager" "mupdf"]))
+(hoarder:fetch "mobius-eng/keyword-dispatch"
+  '(:tag ["keyword" "dispatch" "common_lisp" "protocol" "method" "oop"]))
+(hoarder:fetch "pyr/emenv"
+  '(:tag ["emacs" "package" "package_manager" "golang" "dependency"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
@@ -5131,5 +5224,7 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
 ;; cvs -d:pserver:anonymous@cvs.sv.gnu.org:/sources/nethack-el co . 
 ;; cvs -z3 -d:pserver:anonymous@cvs.savannah.nongnu.org:/sources/xwem co <modulename>
 
+;; TODO svn support
+;; svn checkout svn://svn.code.sf.net/p/porg/code/ porg-code
 
 ;;; init-hoarder-registers.el ends here
