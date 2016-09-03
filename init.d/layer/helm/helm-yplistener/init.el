@@ -6,7 +6,9 @@
 
   (after 'helm-yplistener
       ;; (set-option helm-yplistener-local-address "localhost:7144")
-      (set-option helm-yplistener-local-address "peca2.koti:7144")
+      (set-option helm-yplistener-local-address
+       '(:host "peca2.koti"
+         :port 7144))
     (when (file-exists-p (locate-user-emacs-file "helm-yplistener/yp"))
       (load-file (locate-user-emacs-file "helm-yplistener/yp"))))
 
@@ -15,7 +17,7 @@
                  (tp  "temp.orz.hm/yp")
                  ;; (dp  "dp.prgrssv.net")
                  (hktv "games.himitsukichi.com/hktv")
-                 (turf-page "peercast.takami98.net/turf-page")
+                 ;; (turf-page "peercast.takami98.net/turf-page")
                  (oekaki "oekakiyp.appspot.com")
                  (event "eventyp.xrea.jp")
                  ;; (message "peercast.takami98.net/message-yp")
