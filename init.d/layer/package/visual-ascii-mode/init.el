@@ -2,6 +2,7 @@
 
 ;;; Code:
 
-(req 'visual-ascii-mode)
+(req 'visual-ascii-mode
+  (setq visual-ascii-mode-show-unprintable-character nil))
 
 ;;; init.el ends here
