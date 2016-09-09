@@ -1498,8 +1498,7 @@
 (hoarder:register "dryman/toml-mode.el"
   '(:tag ["toml"]))
 (hoarder:register "domtronn/all-the-icons.el"
-  '(:tag ["icon" "font"]
-    :load-path "data"))
+  '(:tag ["icon" "font"]))
 (hoarder:register "mutbuerger/ert-flash-modeline"
   '(:tag ["ert" "modeline"]))
 (hoarder:register "emacs-pe/lyrics.el"
@@ -1566,6 +1565,24 @@
 (hoarder:register "https://gitlab.com/tarsius/glab"
   '(:type :git
     :tag ["gitlab"]))
+(hoarder:register "bddean/emacs-ereader"
+  '(:tag ["epub" "ebook" "org-mode"]))
+(hoarder:register "mrhmouse/rc-mode.el"
+  '(:tag ["shell" "syntax" "plan9" "rc"]))
+(hoarder:register "tarsius/dim-autoload")
+(hoarder:register "francisco-colaco/xdg-directories-el"
+  '(:tag ["xdg" "freedesktop" "configuration"]))
+(hoarder:register "pmiddend/emacs-rtm"
+  '(:tag ["remember_the_milk"]))
+(hoarder:register "xuchunyang/gitter.el"
+  '(:tag ["gitter"]))
+(hoarder:register "mutbuerger/twitch-streamer"
+  '(:tag ["twitch" "livestreamer"]))
+(hoarder:register "emacsmirror/flash-paren"
+  '(:tag ["parenthesis" "highlghit"]))
+(hoarder:register "atykhonov/emacs-netspeak"
+  '(:tag ["english"]
+    :site "http://www.netspeak.org/"))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1689,7 +1706,6 @@
 (hoarder:register-theme "Fanael/colorsarenice-theme")
 (hoarder:register-theme "kodx/TangoDark")
 (hoarder:register-theme "wasamasa/gotham-theme")
-(hoarder:register-theme "neil477/base16-emacs")
 (hoarder:register-theme "oneKelvinSmith/monokai-emacs")
 ;; (hoarder:register-theme "hbin/molokai-theme")
 (hoarder:register-theme "hos/molokai-emacs")
@@ -1862,7 +1878,9 @@
 (hoarder:register-theme "sjahl/emacs-theme-firewatch")
 (hoarder:register-theme "habamax/kosmos-theme")
 (hoarder:register-theme "rxse/emacs-rin-theme")
-
+(hoarder:register-theme "thomasschimper/violet-dream-theme")
+(hoarder:register "belak/base16-emacs")
+(hoarder:register-theme "protonpopsicle/arise-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -5087,8 +5105,9 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
     :tag ["emacs" "scratch" "splash" "spacemacs"]))
 (hoarder:fetch "andywer/npm-launch"
   '(:tag ["npm" "javascript" "task_runner" "listr" "make"]))
-(hoarder:fetch "wifiextender/pinky-bar"
-  '(:tag ["bar" "panel" "wm"]))
+;; (hoarder:fetch "wifiextender/pinky-bar"
+;;   '(:tag ["bar" "panel" "wm"]
+;;     :desc "https://forums.freebsd.org/threads/57370/"))
 (hoarder:fetch "Truttix/AhriStartpage"
   '(:tag ["homepage"]))
 (hoarder:fetch "DrummerHead/DHomepage"
@@ -5205,6 +5224,45 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["keyword" "dispatch" "common_lisp" "protocol" "method" "oop"]))
 (hoarder:fetch "pyr/emenv"
   '(:tag ["emacs" "package" "package_manager" "golang" "dependency"]))
+(hoarder:fetch "pyr/unilog"
+  '(:tag ["clojure" "logging"]))
+(hoarder:fetch "git://fsociety.info/dotfiles.git"
+  '(:tag ["dotfiles" "configuration" "bspwm"]
+    :site "https://code.fsociety.info/"
+    :memo "[[https://www.reddit.com/r/unixporn/comments/50x8pa/bspwm_way_too_much_synthwave_lately/][Too Many Requests]]"))
+(hoarder:fetch "alexbooker/awesome-urxvt"
+  '(:tag ["awesome_lisp" "urxvt" "terminal"]))
+(hoarder:fetch "bayandin/awesome-awesomeness"
+  '(:tag ["awesome_list"]))
+(hoarder:fetch "tmrts/go-patterns"
+  '(:tag ["golang" "awesome_list"]))
+(hoarder:fetch "rizo/awesome-ocaml"
+  '(:tag ["awesome_list" "ocaml"]
+    :desc "[[https://www.reddit.com/r/ocaml/comments/50n3wm/whats_missing_in_the_ecosystem/][What's missing in the ecosystem? : ocaml]]"))
+(hoarder:fetch "areina/elfeed-cljsrn"
+  '(:tag ["elfeed" "clojurescript" "clojure" "react" "rss"]))
+(hoarder:fetch "iampox/androidapps"
+  '(:tag ["android"]))
+(hoarder:fetch "NanXiao/FreeBSD-101-Hacks"
+  '(:tag ["freebsd" "tips" ]))
+(hoarder:fetch "ta2gch/UFO"
+  '(:tag ["common_lisp" "roswell" "script" "gist"]))
+(hoarder:fetch "fukamachi/shelly"
+  '(:tag ["common_lisp" "script"]))
+(hoarder:fetch "eshamster/kv-kneader"
+  '(:tag ["common_lisp" "alist"]))
+(hoarder:fetch "sixteencolors/sixteencolors-archive"
+  '(:tag ["ascii_art" "ansi_color"]
+    :download nil))
+(hoarder:fetch "halgari/odin"
+  '(:tag ["clojure" "logic" "logic_programming" "minikanren" "datalog"]
+    :site "https://www.youtube.com/channel/UC6yONKYeoE2P3bsahDtsimg"))
+(hoarder:fetch "https://gitlab.com/zuozam/kogaion-theme.git"
+  '(:tag ["gtk" "xfce" "openbox" "theme"]))
+(hoarder:fetch "okabeR/configs"
+  '(:tag ["configuration" "dotfiles" "colorscheme"]
+    :memo "https://github.com/okabeR/configs/blob/master/.Xresources
+https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 

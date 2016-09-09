@@ -3,6 +3,6 @@
 ;;; Code:
 
 (liby 'picpocket
-  (command (picpocket) "picpocket"))
+  (command (picpocket picp-dired) "picpocket"))
 
 ;;; init.el ends here

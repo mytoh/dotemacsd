@@ -358,7 +358,8 @@
                                ("#+end_quote" . ?«)))))
     (turn-on-prettify-symbols-mode)
     (add-hook 'post-command-hook 'rasmus/org-prettify-src t t))
-  (add-hook 'org-mode-hook #'rasmus/org-prettify-symbols))
+  ;; (add-hook 'org-mode-hook #'rasmus/org-prettify-symbols)
+  )
 
 ;;; init-org.el ends here
 

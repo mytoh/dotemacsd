@@ -308,6 +308,9 @@
     sound-wav
     cabledolphin
     digit-groups
+    dim-autoload    
+    all-the-icons
+    netspeak
     ;; uuid
     ;; ert-modeline ; cause yatemplate error
     ;; ert-flash-modeline
@@ -377,7 +380,8 @@
     ;; indent-guide
     highlight-parentheses
     ;; mic-paren
-    paren
+    flash-paren
+    ;; paren
     ;; highlight-sexp
     ;; highlight-tail
     ;; auto-highlight-symbol
@@ -445,6 +449,7 @@
     skk-mode
     magit
     package-menu-mode
+    ;; picpocket
     ))
 
 (muki-layer:load-layers 'helm
@@ -577,7 +582,8 @@
     color-theme-sanityinc-solarized
     apropospriate
     ;; moe-theme
-    myth))
+    myth
+    base16-theme))
 
 ;;;;; el-get
 ;; (require 'init-el-get)
