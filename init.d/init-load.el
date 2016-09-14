@@ -311,6 +311,9 @@
     dim-autoload    
     all-the-icons
     netspeak
+    neotree
+    auto-img-link-insert
+    adaptive-wrap
     ;; uuid
     ;; ert-modeline ; cause yatemplate error
     ;; ert-flash-modeline
@@ -403,7 +406,7 @@
     evil-matchit
     evil-exchange
     evil-visualstar
-    evil-search-highlight-persist
+    ;; evil-search-highlight-persist
     evil-textobj-between
     ;; evil-extra-operator
 
@@ -426,7 +429,10 @@
     syndicate
     evil-ReplaceWithRegister
     evil-visual-replace
+
     ;; evil-org-mode
+    ;; org-evil
+    
     ;; pure-evil
 
     bind-map
@@ -449,7 +455,7 @@
     skk-mode
     magit
     package-menu-mode
-    ;; picpocket
+    picpocket
     ))
 
 (muki-layer:load-layers 'helm
@@ -495,6 +501,7 @@
     f3
     helm-browse
     helm-org-rifle
+    helm-descbinds
     ;; helm-company
     ;; helm-delicious
     ))

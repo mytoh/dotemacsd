@@ -47,6 +47,10 @@
   (disable-option shr-image-animate)
   (enable-option shr-use-fonts)
   (set-option shr-max-image-proportion 0.4) ; default 0.9
+
+  (set-option shr-width 100)
+  (setq shr-indentation 80)
+
   (after 'eww
       (set-option eww-download-directory (muki:expand-path-huone "lataukset"))
     ;; (set-option eww-search-prefix "https://duckduckgo.com/html/?q=!g+")

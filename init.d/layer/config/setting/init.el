@@ -20,12 +20,14 @@
 (enable-option font-lock-maximum-decoration)
 
 ;;;; encodings
-(set-language-environment  'utf-8)
+;; (set-language-environment  'utf-8)
 (set-charset-priority 'unicode)
 (prefer-coding-system 'utf-8)
-(set-option default-process-coding-system '(utf-8-unix . utf-8-unix))
-(set-option coding-system-for-read 'utf-8
-            coding-system-for-write 'utf-8)
+(setq-default buffer-file-coding-system 'utf-8)
+;; (set-option default-process-coding-system '(utf-8-unix . utf-8-unix))
+;; help document says do not set these variables globally
+(setq-default coding-system-for-read 'utf-8
+              coding-system-for-write 'utf-8)
 
 ;;;; clipboard
 (when (display-graphic-p)
@@ -285,7 +287,7 @@
        (cl-pushnew dir Info-additional-directory-list))
      (seq-filter
       (lambda (dir) (and (file-directory-p dir)
-                  (file-exists-p dir)))
+                         (file-exists-p dir)))
       (directory-files (muki:expand-path-huone "komero/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
@@ -353,7 +355,7 @@
 ;; (modify-frame-parameters nil '((wait-for-wm . nil)))
 
 ;; maximize screen
-;; (set-frame-parameter nil  'fullscreen 'fullboth)
+(set-frame-parameter nil 'fullscreen 'maximized)
 
 ;; dont support bidi
 (setq-default bidi-display-reordering nil)

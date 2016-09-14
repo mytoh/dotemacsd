@@ -247,8 +247,6 @@ Otherwise goto the end of minibuffer."
 ;; misc
 (req 'helm-misc)
 
-;; descbinds
-(req 'helm-descbinds (helm-descbinds-mode))
 
 ;; cmd-t
 (liby 'helm-cmd-t

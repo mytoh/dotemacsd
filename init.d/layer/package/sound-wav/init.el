@@ -21,7 +21,9 @@
   (defun find-file-hook--sound ()
     (cl-letf ((file muki:sound-wav-find-file))
       (when (file-exists-p file)
-        (sound-wav-play file))))
+        (cond
+          ((executable-find "play")
+           (sound-wav-play file))))))
 
   (add-hook 'find-file-hook 'find-file-hook--sound)
 

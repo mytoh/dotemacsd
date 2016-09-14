@@ -193,9 +193,9 @@
   '(:tag "evil"))
 (hoarder:register "AshleyMoni/evil-sneak"
   '(:tag "evil"))
-;;(hoarder:register "juanjux/evil-search-highlight-persist"
-;;                 '(:tag "evil"
-;;                   :dependency ["emacsmirror/highlight"]))
+(hoarder:register "juanjux/evil-search-highlight-persist"
+  '(:tag "evil"
+    :dependency ["emacsmirror/highlight"]))
 (hoarder:register "sunesimonsen/evil-walk-on-the-edge"
   '(:tag "evil"))
 (hoarder:register "roman/evil-paredit"
@@ -278,6 +278,10 @@
   '(:tag ["evil" "org"]))
 (hoarder:register "edwtjo/evil-org-mode"
   '(:tag "evil"))
+(hoarder:register "GuiltyDolphin/org-evil"
+  '(:tag ["evil" "org-mode"]
+    :dependency ["GuiltyDolphin/monitor"
+                 ("magnars/dash.el" ( :compile nil))]))
 (hoarder:register "Dewdrops/evil-ReplaceWithRegister")
 (hoarder:register "troyp/evil-visual-replace")
 (hoarder:register "wbolster/evil-swap-keys")
@@ -1499,6 +1503,8 @@
   '(:tag ["toml"]))
 (hoarder:register "domtronn/all-the-icons.el"
   '(:tag ["icon" "font"]))
+(hoarder:fetch"domtronn/all-the-icons.el.wiki"
+  '(:tag ["emacs" "icon" "font"]))
 (hoarder:register "mutbuerger/ert-flash-modeline"
   '(:tag ["ert" "modeline"]))
 (hoarder:register "emacs-pe/lyrics.el"
@@ -1583,6 +1589,19 @@
 (hoarder:register "atykhonov/emacs-netspeak"
   '(:tag ["english"]
     :site "http://www.netspeak.org/"))
+(hoarder:register "tashrifsanil/auto-img-link-insert")
+(hoarder:register "FrancisMurillo/transducer.el"
+  '(:tag ["emacs" "clojure" "tranceducer" "reduce"]))
+(hoarder:register "hober/html5-el"
+  '(:tag ["html" "html5"]
+    :site "http://tess.oconnor.cx/elisp/"))
+(hoarder:register "emacsmirror/scrape"
+  '(:tag ["scraping" "web" "html"]
+    :site "http://tess.oconnor.cx/elisp/"))
+(hoarder:register "jaypei/emacs-neotree"
+  '(:tag ["file" "browser"]))
+(hoarder:register "emacsmirror/adaptive-wrap")
+(hoarder:register "luque/emacs-giphy")
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1881,6 +1900,9 @@
 (hoarder:register-theme "thomasschimper/violet-dream-theme")
 (hoarder:register "belak/base16-emacs")
 (hoarder:register-theme "protonpopsicle/arise-theme")
+(hoarder:register-theme "mswift42/breezy-fall-theme")
+(hoarder:register-theme "avkoval/avk-emacs-themes")
+(hoarder:register-theme "lbolla/emacs-quasi-monochrome")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -5263,6 +5285,51 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["configuration" "dotfiles" "colorscheme"]
     :memo "https://github.com/okabeR/configs/blob/master/.Xresources
 https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/"))
+(hoarder:fetch "matburt/mobileorg-android"
+  '(:tag ["android" "mobile" "org-mode"]))
+(hoarder:fetch "missingfaktor/akar"
+  '(:tag ["clojure" "pattern_match" "variant"]
+    :memo "https://skillsmatter.com/skillscasts/7854-london-clojurians-meetup"))
+(hoarder:fetch "HotBitmapGG/OhMyBiliBili"
+  '(:tag ["android" "bilibili"]))
+(hoarder:fetch "https://gist.github.com/Shudouken/be8c3b34ebd3ead1b2b8.git"
+  '(:tag ["mpv" "lua"]
+    :name "history.lua"))
+(hoarder:fetch "wm4/mpv-scripts"
+  '(:tag ["lua" "mpv"]))
+(hoarder:fetch "tshatrov/webgunk"
+  '(:tag ["scraping" "crawler" "common_lisp" "cxml" "closure-html" "css-selectors" "html"]
+    :site "http://readevalprint.tumblr.com/post/80764585017/web-scraping-with-common-lisp-introduction"))
+(hoarder:fetch "git://repo.or.cz/w/closure-html.git"
+  '(:tag ["common_lisp" "html"]))
+(hoarder:fetch "git://repo.or.cz/w/cxml.git"
+  '(:tag ["common_lisp" "html" "xml"]))
+(hoarder:fetch "AccelerationNet/css-selectors"
+  '(:tag ["common_lisp" "css" "xpath" "jquery" "dom"]))
+(hoarder:fetch "kitanow/webscrapper"
+  '(:tag ["python" "scraping" "beautiful_soup"]
+    :site "http://mkitano.hatenablog.jp/entry/2014/12/21/190434"))
+(hoarder:fetch " git://git.savannah.gnu.org/bash.git"
+  '(:tag ["bash" "shell"]))
+(hoarder:fetch "vyp/ui"
+  '(:tag ["configuration" "vim"]))
+(hoarder:fetch "xach/buildapp"
+  '(:tag ["common_lisp"]
+    :site "http://xach.com/lisp/buildapp/"))
+(hoarder:fetch "hipeta/arrow-macros"
+  '(:tag ["common_lisp" "macro" "threading_macro"]))
+(hoarder:fetch "https://bitbucket.org/skypher/cl-prevalence"
+  '(:tag ["common_lisp" "object_prevalence" "database"]
+    :type :hg))
+(hoarder:fetch "yanqirenshi/upanishad"
+  '(:tag ["common_lisp" "object_prevalence" "database"]))
+(hoarder:fetch "alamminsalo/orion"
+  '(:tag ["twitch" "qt" "linux"]))
+(hoarder:fetch "mrossini-ethz/parseq"
+  '(:tag ["common_lisp"]
+    :desc " Parseq is a package for Common Lisp used for parsing sequences such as strings, lists and vectors. "))
+(hoarder:fetch "miner/herbert"
+  '(:tag ["clojure" "test" "generator" "property_based_testing" "schema" "spec"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
