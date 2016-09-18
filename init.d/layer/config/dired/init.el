@@ -2,8 +2,8 @@
 (req 'dired
 
   ;; optins for ls
-  (set-option dired-listing-switches
-              (concat dired-listing-switches "-h"))
+  (validate-setq dired-listing-switches
+                 (concat dired-listing-switches "-h"))
 
   ;; diredを2つのウィンドウで開いている時に、デフォルトの移動orコピー先をもう一方のdiredで開いているディレクトリにする
   (enable-option dired-dwim-target)
@@ -54,11 +54,11 @@
 ;; dired
 (add-hook 'dired-load-hook
           (clambda () (load "dired-x")))
-(set-option dired-guess-shell-alist-user
-            `(( ,(rx  "."
-                      (or "jpg"
-                         "png"
-                         "bmp"
-                         "gif")
-                      line-end)
-                 "kuva.sh")))
+(validate-setq dired-guess-shell-alist-user
+               `(( ,(rx  "."
+                         (or "jpg"
+                            "png"
+                            "bmp"
+                            "gif")
+                         line-end)
+                    "kuva.sh")))

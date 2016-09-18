@@ -4,17 +4,17 @@
 (require 'autoinsert)
 
 ;; テンプレートのディレクトリ
-(setq auto-insert-directory (locate-user-emacs-file "init.d/insert" ))
+(validate-setq auto-insert-directory (locate-user-emacs-file "init.d/insert" ))
 
 ;; dont show prompt
-(setq auto-insert-query nil)
+(validate-setq auto-insert-query nil)
 
 ;; 各ファイルによってテンプレートを切り替える
-(setq auto-insert-alist
-      (nconc '(("\\.el\\'" . ["template.el" muki:elisp-template])
-               ("\\.scm\\'" . ["template.scm" muki:scheme-template])
-               ("\\.sh\\'" . ["template.sh" muki:shell-template]))
-             auto-insert-alist))
+(validate-setq auto-insert-alist
+               (nconc '(("\\.el\\'" . ["template.el" muki:elisp-template])
+                        ("\\.scm\\'" . ["template.scm" muki:scheme-template])
+                        ("\\.sh\\'" . ["template.sh" muki:shell-template]))
+                      auto-insert-alist))
 (require 'cl-lib)
 
 ;; ここが腕の見せ所

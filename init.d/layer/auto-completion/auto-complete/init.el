@@ -8,12 +8,12 @@
 
   (require 'auto-complete-config)
   (add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/github.com/auto-complete/auto-complete/dict")
-  (setq ac-auto-start 3
-        ac-delay 0.2
-        ac-quick-help-delay 1.
-        ac-use-fuzzy t
-        ac-fuzzy-enable t
-        ac-dwim t)
+  (validate-setq ac-auto-start 3
+                 ac-delay 0.2
+                 ac-quick-help-delay 1.0
+                 ac-use-fuzzy t
+                 ac-fuzzy-enable t
+                 ac-dwim t)
   (setq-default ac-sources '(ac-source-abbrev
                              ac-source-dictionary
                              ac-source-words-in-same-mode-buffers))

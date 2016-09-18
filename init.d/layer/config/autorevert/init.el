@@ -6,9 +6,9 @@
 (global-auto-revert-mode 1)
 ;; (set-option auto-revert-interval 5)
 (req 'vc
-  (enable-option auto-revert-check-vc-info))
-(disable-option global-auto-revert-non-file-buffers)
-(disable-option auto-revert-verbose)
-(set-option revert-without-query '(".*\\.scm\\'" ".*\\.el\\'" ".*\\.tcsh\\'"))
+  (validate-setq auto-revert-check-vc-info t))
+(validate-setq global-auto-revert-non-file-buffers nil)
+(validate-setq auto-revert-verbose nil)
+(validate-setq revert-without-query '(".*\\.scm\\'" ".*\\.el\\'" ".*\\.tcsh\\'"))
 
 ;;; init.el ends here
