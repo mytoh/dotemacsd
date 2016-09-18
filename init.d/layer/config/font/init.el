@@ -231,6 +231,59 @@
     (cl-pushnew `(font . ,fontset) default-frame-alist)
     ))
 
+(cl-defun set-yuki-font ()
+  (cl-letf ((k10  "-misc-fixed-medium-r-normal--10-*-75-75-c-100-jisx0208.1983-0")
+            (a10 "-misc-fixed-medium-r-normal--10-*-75-75-c-50-iso8859-1")
+            (r10 "-misc-fixed-medium-r-normal--10-*-75-75-c-50-jisx0201.1976-0")
+            (kana10 "-misc-fixed-medium-r-normal--10-*-75-75-c-50-jisx0201.1976-0")
+            (misc-iso "-misc-fixed-medium-r-normal--10-*-75-75-c-60-iso10646-1")
+            (mplus-fxd "-mplus-fxd-normal-normal-normal-*-10-*-*-*-c-60-iso10646-1")
+            (yuki "-sxthe-yuki-normal-normal-normal-*-10-*-*-*-m-50-iso10646-1")
+            (symbola (font-spec :family "Symbola"))
+            (notoemoji (font-spec :family "Noto Emoji"))
+            (emojione (font-spec :family "EmojiOne Color"))
+            (mplus (font-spec :family "M+ 1mn"))
+            (fontset "fontset-naga10"))
+    (create-fontset-from-ascii-font
+     "-misc-fixed-medium-r-normal--10-*-*-*-*-*"
+     nil
+     "naga10")
+
+    (set-frame-font yuki)
+
+    (cl-flet ((set (script font) (set-fontset-font fontset script font)))
+      ;; (set 'ascii       a10)
+      (set 'ascii       yuki)
+      (set 'latin       yuki)
+      (set 'japanese-jisx0208 k10)
+      (set 'katakana-jisx0201       r10)
+      (set 'kana k10)
+      (set 'cjk-misc misc-iso)
+      (set 'han k10)
+      (set 'katakana-jisx0201 kana10) ; 半角カナ
+      (set  '(#x0080 . #x024F) a10)    ; 分音符付きラテン
+      (set '(#x0370 . #x03FF) a10)    ; ギリシャ文字
+
+      ;; (set 'symbol mplus)
+      (set 'symbol symbola)
+      ;; (set 'symbol notoemoji)
+      ;;(set 'symbol emojione)
+      )
+
+
+    (colle:map
+     (pcase-lambda (`(,font . ,ratio))
+         (add-to-list 'face-font-rescale-alist
+          (cons
+           (rx-to-string `(: (* anything) ,font (* anything)))
+           ratio)))
+     '(("EmojiOne" . 1.0)
+       ("Symbola" . 1.3)))
+    
+    (add-to-list 'default-frame-alist `(font . ,fontset))
+    (set-face-font 'default fontset)
+    ))
+
 (cl-defun set-ricty-font ()
   ;; [[http://mgi.hatenablog.com/entry/2014/02/11/085108]]
   (set-fontset-font (frame-parameter nil 'font)
@@ -367,7 +420,8 @@
   (cond
     ((cl-equalp type 'bitmap)
      ;; (set-ascii-font)
-     (set-naga10-font)
+     (set-yuki-font)
+     ;; (set-naga10-font)
      ;; (set-naga10-font-fix)
      ;; (set-neep-font)
      ;; (set-symbol-font)
