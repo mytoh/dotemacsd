@@ -113,6 +113,8 @@
 
 (setq mouse-wheel-follow-mouse t) ;; scroll window under mouse
 
+;; fast scrolling
+(setq fast-but-imprecise-scrolling t)
 
 ;;;; disable bars
 (if (fboundp 'menu-bar-mode) (disable-mode menu-bar-mode))
@@ -256,7 +258,7 @@
     hyperplane iceberg myth forest-blue soria metalheart
     zweilight oceanic redbelly doom-one doom-dark firewatch
     base16-ashes base16-atelier-cave base16-atelier-lakeside
-    base16-ocean-brian))
+    base16-ocean-brian acai))
 
 ;; (enable-option select-enable-clipboard
 ;;                select-enable-primary)
@@ -287,7 +289,7 @@
        (cl-pushnew dir Info-additional-directory-list))
      (seq-filter
       (lambda (dir) (and (file-directory-p dir)
-                         (file-exists-p dir)))
+                  (file-exists-p dir)))
       (directory-files (muki:expand-path-huone "komero/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise

@@ -16,4 +16,6 @@
 (req 'eshell-script
   (mode "\\.esh\\'"  #'eshell-script-mode))
 
+(req 'ja-period-newline)
+
 (provide 'init-elisp)

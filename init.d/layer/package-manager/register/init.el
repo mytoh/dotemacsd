@@ -163,6 +163,8 @@
 (hoarder:register "michael-heerdegen/helm-browse")
 (hoarder:register "hatschipuh/helm-ido-like-guide"
   '(:tag ["helm" "helm-fuzzier" "helm-flx"]))
+(hoarder:register "vapniks/helm-delicious"
+  '(:tag ["helm" "delicious" "bookmark"]))
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]
 ;;                    :dependency ["michael-heerdegen/iterators.el"]))
@@ -448,7 +450,7 @@
 (hoarder:register "remyhonig/elfeed-org"
   '(:dependency ["skeeto/elfeed"]
     :tag ["org" "rss"]))
-(hoarder:register "zk-phi/spray")
+(hoarder:register "ian-kelling/spray")
 (hoarder:register "dominikh/go-mode.el")
 (hoarder:register "immerrr/lua-mode")
 (hoarder:register "daic-h/emacs-rotate")
@@ -1589,7 +1591,7 @@
 (hoarder:register "atykhonov/emacs-netspeak"
   '(:tag ["english"]
     :site "http://www.netspeak.org/"))
-(hoarder:register "tashrifsanil/auto-img-link-insert")
+(hoarder:register "tashrifsanil/org-easy-img-insert")
 (hoarder:register "FrancisMurillo/transducer.el"
   '(:tag ["emacs" "clojure" "tranceducer" "reduce"]))
 (hoarder:register "hober/html5-el"
@@ -1602,6 +1604,10 @@
   '(:tag ["file" "browser"]))
 (hoarder:register "emacsmirror/adaptive-wrap")
 (hoarder:register "luque/emacs-giphy")
+(hoarder:register "cdddr/ewm")
+(hoarder:register "deepadhurka/idutils")
+(hoarder:register "vermiculus/magithub"
+  '(:tag ["magit" "git" "github"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1903,6 +1909,9 @@
 (hoarder:register-theme "mswift42/breezy-fall-theme")
 (hoarder:register-theme "avkoval/avk-emacs-themes")
 (hoarder:register-theme "lbolla/emacs-quasi-monochrome")
+(hoarder:register-theme "tashrifsanil/emacs-acai-theme")
+(hoarder:register-theme "cs14095/civic-theme.el")
+(hoarder:register-theme "nuncostans/sexy-monochrome-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -2821,7 +2830,9 @@
   '(:tag ["ntp"]))
 (hoarder:fetch "git://erdgeist.org/opentracker") 
 (hoarder:fetch "git://git.2f30.org/colors") 
-(hoarder:fetch "git://git.dolezel.info/fatrat.git") 
+(hoarder:fetch "LubosD/fatrat"
+  '(:desc "an open source download manager for Linux written in C++ and built on top of the Qt 4 library (Git version uses Qt 5). It is rich in features and is continuously extended. "
+    :tag ["qt" "downloader" "download"])) 
 (hoarder:fetch "git://git.gnome.org/byzanz") 
 (hoarder:fetch "git://git.gnupg.org/gnupg.git") 
 (hoarder:fetch "git://git.kernel.org/pub/scm/editors/uemacs/uemacs.git") 
@@ -3415,8 +3426,7 @@
   '(:download nil)) 
 (hoarder:fetch "mo-ya/tmux-agent"
   '(:download nil)) 
-(hoarder:fetch "mobile-shell/mosh"
-  '(:download nil)) 
+(hoarder:fetch "mobile-shell/mosh") 
 (hoarder:fetch "monacoinproject/monacoin"
   '(:download nil)) 
 (hoarder:fetch "mooz/percol"
@@ -4082,6 +4092,9 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
 (hoarder:fetch "baedert/corebird"
   '(:tag ["gtk" "twitter"]
     :site "http://corebird.baedert.org/"))
+(hoarder:fetch "Turpial/Turpial"
+  '(:tag ["qt" "gtk" "twitter"]
+    :site "http://turpial.org.ve/"))
 (hoarder:fetch "lyricat/Hotot"
   '(:tag ["gtk" "qt" "twitter"]))
 (hoarder:fetch "muan/emojilib"
@@ -4945,8 +4958,7 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["radio" "gtk"]))
 (hoarder:fetch "wooorm/vfile"
   '(:tag ["vinyl" "node" "javascript" "object"]))
-(hoarder:fetch "CherryPerry/ffmpeg-vp9-wrap"
-  '(:tag ["ffmpeg" "video" "vp9" "webm"]))
+'(:tag ["ffmpeg" "video" "vp9" "webm"])
 (hoarder:fetch "https://bitbucket.org/dhellmann/virtualenvwrapper.git"
   '(:tag ["python" "virtualenv"]))
 (hoarder:fetch "https://gitlab.com/corbie/twitch-curses.git"
@@ -5300,9 +5312,9 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "tshatrov/webgunk"
   '(:tag ["scraping" "crawler" "common_lisp" "cxml" "closure-html" "css-selectors" "html"]
     :site "http://readevalprint.tumblr.com/post/80764585017/web-scraping-with-common-lisp-introduction"))
-(hoarder:fetch "git://repo.or.cz/w/closure-html.git"
+(hoarder:fetch "git://repo.or.cz/closure-html.git"
   '(:tag ["common_lisp" "html"]))
-(hoarder:fetch "git://repo.or.cz/w/cxml.git"
+(hoarder:fetch "git://repo.or.cz/cxml.git"
   '(:tag ["common_lisp" "html" "xml"]))
 (hoarder:fetch "AccelerationNet/css-selectors"
   '(:tag ["common_lisp" "css" "xpath" "jquery" "dom"]))
@@ -5330,6 +5342,39 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
     :desc " Parseq is a package for Common Lisp used for parsing sequences such as strings, lists and vectors. "))
 (hoarder:fetch "miner/herbert"
   '(:tag ["clojure" "test" "generator" "property_based_testing" "schema" "spec"]))
+(hoarder:fetch "git://git.savannah.gnu.org/womb/hacks.git"
+  '(:tag ["rms" "gnu"]
+    :site "https://stallman.org/stallman-computing.html#internetuse"))
+(hoarder:fetch "ta2gch/cl-emoji"
+  '(tag ["common_lisp" "emoji" "unicode"]))
+(hoarder:fetch "mikeyhc/practical-cl"
+  '(:tag ["common_lisp" "book" ]))
+(hoarder:fetch "arnoo/clutch"
+  '(:tag ["common_lisp" "utility"]))
+(hoarder:fetch "behdad/fonttools"
+  '(:tag ["font"]))
+(hoarder:fetch "trufont/trufont"
+  '(:tag ["font"]))
+(hoarder:fetch "elendirx/web2web"
+  '(:tag ["p2p" "blockchain" "bitcoin" "torrent"]))
+(hoarder:fetch "git://git.iridiumbrowser.de/iridium-browser"
+  '(:tag ["browser" "chromium" "web"]
+    :download nil))
+(hoarder:fetch "OtterBrowser/otter-browser"
+  '(:tag ["browser" "opera" "web"]
+    :download nil))
+(hoarder:fetch "jcbeaudoin/MKCL"
+  '(:tag ["common_lisp" "compiler"]))
+(hoarder:fetch "q5sys/BUGtracker"
+  '(:tag ["bsd" "user_group" "freebsd"]))
+(hoarder:fetch "leereilly/games"
+  '(:tag ["game" "open_source" "awesome_list"]))
+(hoarder:fetch "CyberShadow/aconfmgr"
+  '(:tag ["configuration" "arch_linux" "puppet" "ansible" "nixos" "etckeeper"]))
+(hoarder:fetch "Tehnix/spaceneovim"
+  '(:tag ["spacevim" "spacemacs" "vim" "configuration"]))
+(hoarder:fetch "Tehnix/spaceneovim-layers"
+  '(:tag ["spacevim" "spacemacs" "vim" "configuration"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 

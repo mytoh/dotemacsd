@@ -25,6 +25,8 @@
 
 (muki-layer:load-layers 'package
   '(
+    validate
+
     ;; diminish
     ;; dim
     delight
@@ -309,11 +311,12 @@
     cabledolphin
     digit-groups
     dim-autoload    
-    all-the-icons
+    ;; all-the-icons
     netspeak
     neotree
-    auto-img-link-insert
     adaptive-wrap
+    org-easy-img-insert
+    magithub
     ;; uuid
     ;; ert-modeline ; cause yatemplate error
     ;; ert-flash-modeline

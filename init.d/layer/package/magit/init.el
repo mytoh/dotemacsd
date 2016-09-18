@@ -43,7 +43,8 @@
             (set (make-local-variable 'fill-column) 72)
           (turn-on-auto-fill))))
 
-(command (magit-status magit-log magit-init)
+(command (magit-status magit-log magit-init
+                       magit-list-repositories)
          "magit")
 
 (cl-defun with-editor-setup ()

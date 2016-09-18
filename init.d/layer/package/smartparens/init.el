@@ -3,6 +3,15 @@
   (defery 'smartparens)
   (after 'smartparens
       (req 'smartparens-config)
+
+    (setq sp-show-pair-delay 0.2
+          ;; fix paren highlighting in normal mode
+          sp-show-pair-from-inside t
+          sp-cancel-autoskip-on-backward-movement nil
+          sp-highlight-pair-overlay nil
+          sp-highlight-wrap-overlay nil
+          sp-highlight-wrap-tag-overlay nil)
+
     (after 'evil
         (set-option sp-show-pair-from-inside (not evil-move-beyond-eol)))
     (disable-option sp-cancel-autoskip-on-backward-movement)
@@ -10,7 +19,7 @@
      ;;;;;;;;;;;;
     ;; keys
 
-    (add-key sp-keymap
+    (add-key smartparens-mode-map
       "C-M-f"       #'sp-forward-sexp ;; navigation
       "C-M-b"       #'sp-backward-sexp
       "C-M-u"       #'sp-backward-up-sexp
@@ -36,12 +45,12 @@
 
 
     ;; added
-    (add-key sp-keymap
+    (add-key smartparens-mode-map
       "M-f"   #'sp-forward-whitespace
       "M-b"   #'sp-backward-symbol
       "C-M-k" #'sp-kill-sexp)
 
-    (add-key sp-keymap
+    (add-key smartparens-mode-map
       "C-]"   #'sp-select-next-thing-exchange
       "C-M-]" #'sp-select-next-thing
       "M-S" #'sp-split-sexp
@@ -54,8 +63,7 @@
       (sp-select-next-thing-exchange arg)
       (execute-kbd-macro (kbd "(")))
 
-    (add-key sp-keymap "M-(" #'muki:sp-wrap-with-paren)
-
+    (add-key smartparens-mode-map "M-(" #'muki:sp-wrap-with-paren)
 
     ;; lisp modes
     (defvar muki:lisp-modes
@@ -70,7 +78,7 @@
         common-lisp-mode))
 
     (sp-with-modes muki:lisp-modes
-                   (sp-local-pair "(" nil :bind "M-("))
+      (sp-local-pair "(" nil :bind "M-("))
 
     (cl-defun muki:smartparens-setup-strict-modes ()
       (seq-each

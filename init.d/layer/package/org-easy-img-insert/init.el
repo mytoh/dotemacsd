@@ -4,7 +4,7 @@
 
 ;;; Code:
 
-(liby 'auto-img-link-insert
-  (command (auto-img-link-insert) "auto-img-link-insert"))
+(liby 'org-easy-img-insert
+  (command (org-easy-img-insert) "org-easy-img-insert"))
 
 ;;; init.el ends here
