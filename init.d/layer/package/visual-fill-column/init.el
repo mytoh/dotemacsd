@@ -4,7 +4,6 @@
 
 ;;; Code:
 
-(liby 'magithub
-  (command (magithub-create magithub-browse) "magithub"))
+(req 'visual-fill-column)
 
 ;;; init.el ends here

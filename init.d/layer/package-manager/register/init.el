@@ -537,7 +537,11 @@
   '(:tag ["twitter"]))
 (hoarder:register "defunkt/coffee-mode")
 (hoarder:register "fbkante/recycle")
-(hoarder:register "kawabata/ids-edit")
+(hoarder:register "kawabata/ids-edit"
+  '(:tag ["chinese" "character" "cjkvi"]))
+(hoarder:register "kawabata/emacs-ivariants"
+  '(:tag ["chinese" "character" "cjkvi"]
+    :dependency ["kawabata/ivs-edit"]))
 (hoarder:register "gbalats/autodisass-llvm-bitcode")
 (hoarder:register "sachac/artbollocks-mode")
 (hoarder:register "alpaker/Fill-Column-Indicator"
@@ -1608,6 +1612,10 @@
 (hoarder:register "deepadhurka/idutils")
 (hoarder:register "vermiculus/magithub"
   '(:tag ["magit" "git" "github"]))
+(hoarder:register "jml/direnv-el"
+  '(:tag ["direnv" "dotenv" "enviroment_variable" "configuration" "shell"]))
+(hoarder:register "coldnew/pangu-spacing"
+  '(:tag ["chinese" "english"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1881,7 +1889,6 @@
 (hoarder:register-theme "fade/deepsky-theme")
 (hoarder:register-theme "sjahl/emacs-theme-afterglow")
 (hoarder:register-theme "hlissner/emacs-doom-theme")
-(hoarder:register-theme "chris-etheridge/alabaster-emacs")
 (hoarder:register-theme "olkinn/forest-blue-emacs")
 (hoarder:register-theme "shafayetkhan/materialistic-seti")
 (hoarder:register-theme "mssola/soria")
@@ -1970,7 +1977,7 @@
 
 ;; (hoarder:register ("emacs-evernote-mode" "http://emacs-evernote-mode.google.com/svn/trunk"))
 
-;;;;; not library
+
 (hoarder:fetch "onodera-punpun/dotfiles") 
 (hoarder:fetch "purcell/emacs.d")
 (hoarder:fetch "redguardtoo/mastering-emacs-in-one-year-guide")
@@ -3189,8 +3196,8 @@
   '(:download nil)) 
 (hoarder:fetch "ded/valentine"
   '(:download nil)) 
-(hoarder:fetch "defunkt/hub"
-  '(:download nil)) 
+(hoarder:fetch "github/hub"
+  '(:tag ["github" "git" "golang"])) 
 (hoarder:fetch "denilsonsa/prettyping"
   '(:download nil)) 
 (hoarder:fetch "deterenkelt/watchsh"
@@ -5375,6 +5382,48 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["spacevim" "spacemacs" "vim" "configuration"]))
 (hoarder:fetch "Tehnix/spaceneovim-layers"
   '(:tag ["spacevim" "spacemacs" "vim" "configuration"]))
+(hoarder:fetch "direnv/direnv"
+  '(:tag ["direnv" "dotenv" "enviroment_variable" "configuration" "shell"]
+    :memo " [[https://skillsmatter.com/skillscasts/7348-using-direnv-with-ruby-and-12factor-apps][Using direnv with ruby and 12factor apps | SkillsCast | 11th January 2016]]
+[[https://direnv.github.io/direnv-and-ruby-talk/#_how_it_works][Using direnv with ruby and 12factor apps]] "))
+(hoarder:fetch "adobe-fonts/kenten-generic"
+  '(:tag ["font" "japanese"]))
+(hoarder:fetch "massivedynamic/openftp4"
+  '(:tag ["ftp" "server" "public"]))
+(hoarder:fetch "inikep/lz5"
+  '(:tag ["archive" "compression"]))
+(hoarder:fetch "chris-etheridge/i-like-this")
+(hoarder:fetch "kenjimyzk/spacemacs-japanese"
+  '(:tag ["spacemacs" "ddskk" "pangu-spacing"]))
+(hoarder:fetch "tulip-lang/tulip"
+  '(:tag ["programming" "language"]
+    :memo " [[https://www.youtube.com/watch?v=lvclTCDeIsY]["Tulip: A Language for Humans" by Sig Cox, Jeanine Adkisson - YouTube]]
+[[https://www.youtube.com/watch?v=WWlnRWbOlho][Tulip: A Well-Balanced Language - Jeanine Adkisson - YouTube]] "))
+(hoarder:fetch "jneen/moonconf-tulip"
+  '(:tag ["language" "tulip" "moonconf" "conference"]
+    :memo "[[https://www.youtube.com/watch?v=WWlnRWbOlho][Tulip: A Well-Balanced Language - Jeanine Adkisson - YouTube]]"))
+(hoarder:fetch "sananth12/ImageScraper"
+  '(:tag ["scraping" "html" "xpath" "python"]))
+(hoarder:fetch "miyakogi/conoline.vim"
+  '(:tag ["color" "highlight" "vim" "cursor"]))
+(hoarder:fetch "eigengrau/x-highlight-region"
+  '(:tag ["x" "slop" "screencast" "highlight" "python"]))
+(hoarder:fetch "ekmett/bifunctors"
+  '(:tag ["haskell" "bimap" "functor"]))
+(hoarder:fetch "https://anongit.freedesktop.org/git/cairo"
+  '(:type :git
+    :tag ["graphics" "freedesktop" "2d"]))
+(hoarder:fetch "gfx/p5-Mouse"
+  '(:tag ["perl" "oop" "mouse" "type" "constraints"]
+    :memo "[[https://github.com/gfx/p5-Mouse/blob/master/lib/Mouse/Util/TypeConstraints.pm][p5-Mouse/TypeConstraints.pm at master · gfx/p5-Mouse · GitHub]]"))
+(hoarder:fetch "tokuhirom/Smart-Args"
+  '(:tag ["perl" "validation" "type"]))
+(hoarder:fetch "phw/peek")
+(hoarder:fetch "dropbox/dbxcli"
+  '(:tag ["dropbox"]))
+(hoarder:fetch "rmanfredi/dist")
+(hoarder:fetch "zsoltf/kryten"
+  '(:memo "[[https://github.com/zsoltf/kryten/blob/master/lib/kryten/version.rb][kryten/version.rb at master · zsoltf/kryten · GitHub]]"))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 

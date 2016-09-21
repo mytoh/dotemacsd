@@ -447,4 +447,6 @@
   ;;   )
   )
 
+;; (font-info "Symbola)
+
 ;; [[http://nya-0.hatenablog.com/entry/2014/03/17/174309]]

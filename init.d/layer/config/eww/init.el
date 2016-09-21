@@ -45,7 +45,8 @@
     (validate-setq shr-use-fonts t)
     (validate-setq shr-max-image-proportion 0.4) ; default 0.9
     (validate-setq shr-width 100)
-    (validate-setq shr-indentation 80))
+    ;; (validate-setq shr-indentation 80)
+    )
 
   (after 'eww
       (validate-setq eww-download-directory (muki:expand-path-huone "lataukset"))

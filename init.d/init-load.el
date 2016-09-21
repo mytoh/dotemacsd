@@ -311,12 +311,15 @@
     cabledolphin
     digit-groups
     dim-autoload    
-    ;; all-the-icons
+    all-the-icons
     netspeak
     neotree
     adaptive-wrap
     org-easy-img-insert
     magithub
+    ids-edit
+    visual-fill-column
+    ;; pangu-spacing
     ;; uuid
     ;; ert-modeline ; cause yatemplate error
     ;; ert-flash-modeline
@@ -339,7 +342,6 @@
     ;; yascroll
     ;; nyan-mode
     ;; aria2
-    ;; ids-edit
     ;; recycle
     ;; slideview
     ;; command-dwim-2
