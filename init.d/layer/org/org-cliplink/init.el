@@ -4,7 +4,9 @@
 
 (liby 'org-cliplink
   (command (org-cliplink) "org-cliplink")
-  (set-option org-cliplink-transport-implementation
-              'curl))
+  (after 'org-cliplink
+      (validate-setq org-cliplink-transport-implementation
+       'curl)
+    (validate-setq org-cliplink-max-length 120)))
 
 ;;; init.el ends here
