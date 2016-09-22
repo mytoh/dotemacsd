@@ -7,16 +7,21 @@
 
 (cl-defun muki:org-set-faces ()
   (set-face-attribute 'org-block-begin-line nil :background "#202e31")
-  (set-face-attribute 'org-block-end-line nil :background "#202e31"))
+  (set-face-attribute 'org-block-end-line nil :background "#202e31")
+  (setq org-src-block-faces
+        '(("emacs-lisp" (:background "#EEE2FF"))
+          ("python" (:background "#e5ffb8"
+                     (muki:color-hsl->hex 130 40 49)))
+          ("shell" (:background "#b53fb8")))))
 
 ;; give us some hint we are running
-(defadvice org-babel-execute-src-block (around progress nil activate)
-  (set-face-attribute
-   'org-block-background nil :background "LightSteelBlue")
-  (message "Running your code block")
-  ad-do-it
-  (set-face-attribute 'org-block-background nil :background "gray")
-  (message "Done with code block"))
+;; (defadvice org-babel-execute-src-block (around progress nil activate)
+;;   (set-face-attribute
+;;    'org-block-background nil :background "LightSteelBlue")
+;;   (message "Running your code block")
+;;   ad-do-it
+;;   (set-face-attribute 'org-block-background nil :background "gray")
+;;   (message "Done with code block"))
 
 (cl-defun muki:org-mode-before-save-hook ()
   ;; (muki:delete-trailing-whitespace)
@@ -155,6 +160,7 @@
   (muki:org-set-modules)
   (muki:org-capture-setting)
   (muki:org-better-list-bullets)
+  (muki:org-set-faces)
   (add-hook 'org-mode-hook
             (lambda ()
               (add-hook 'before-save-hook
