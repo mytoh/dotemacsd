@@ -9,9 +9,8 @@
   (set-face-attribute 'org-block-begin-line nil :background "#202e31")
   (set-face-attribute 'org-block-end-line nil :background "#202e31")
   (setq org-src-block-faces
-        '(("emacs-lisp" (:background "#EEE2FF"))
-          ("python" (:background "#e5ffb8"
-                     (muki:color-hsl->hex 130 40 49)))
+        `(("emacs-lisp" (:background "#EEE2FF"))
+          ("python" (:background ,(muki:color-hsl->hex 30 20 29)))
           ("shell" (:background "#b53fb8")))))
 
 ;; give us some hint we are running
@@ -264,11 +263,11 @@
   (org-element-map (org-element-parse-buffer 'element) 'headline
     (lambda (h)
       (and (org-element-map h 'drawer
-           (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
-           nil t 'headline)
-         (let ((begin (org-element-property :begin h)))
-           (message "Entry with erroneous properties drawer at %d" begin)
-           begin)))))
+             (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
+             nil t 'headline)
+           (let ((begin (org-element-property :begin h)))
+             (message "Entry with erroneous properties drawer at %d" begin)
+             begin)))))
 
 (cl-defun muki:org-open-link-mpv ()
   (interactive)
@@ -341,9 +340,9 @@
                            (looking-at "^[ \t]*#\\+begin_src[ \t]+[^ \f\t\n\r\v]+[ \t]*"))))
       ;; Test if we moved out of a block.
       (when (or (and rasmus/org-at-src-begin
-                  (not at-src-block))
-               ;; File was just opened.
-               (eq rasmus/org-at-src-begin -1))
+                   (not at-src-block))
+                ;; File was just opened.
+                (eq rasmus/org-at-src-begin -1))
         (rasmus/org-prettify-src--update))
       ;; Remove composition if at line; doesn't work properly.
       ;; (when at-src-block
