@@ -1435,8 +1435,6 @@
   '(:tag ["shell" "environment_variable"]))
 (hoarder:register "juergenhoetzel/babel"
   '(:tag ["translation"]))
-(hoarder:register "dk87/avandu"
-  '(:tag ["tiny_tiny_rss" "rss"]))
 (hoarder:register "cjohansson/emacs-ssh-deploy"
   '(:tag ["ssh" "deploy"]))
 (hoarder:register "https://bitbucket.org/shackra/font-man.git"
@@ -1616,6 +1614,8 @@
   '(:tag ["direnv" "dotenv" "enviroment_variable" "configuration" "shell"]))
 (hoarder:register "coldnew/pangu-spacing"
   '(:tag ["chinese" "english"]))
+(hoarder:register "https://gitlab.com/dustyweb/soci-el.git"
+  '(:tag ["web" "activitypub" "jsonld"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -5019,6 +5019,10 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["font" "menlo"]))
 (hoarder:fetch "jimmay5469/vim-spacemacs"
   '(:tag ["vim" "spacemacs"]))
+(hoarder:fetch "sthysel/vim-spacemacs"
+  '(:tag ["vim" "spacemacs"]))
+(hoarder:fetch "meitham/vim-spacemacs"
+  '(:tag ["vim" "spacemacs"]))
 (hoarder:fetch "be5invis/Iosevka"
   '(:tag ["font"]))
 (hoarder:fetch "fredokun/lisp-list-comprehensions"
@@ -5424,6 +5428,12 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "rmanfredi/dist")
 (hoarder:fetch "zsoltf/kryten"
   '(:memo "[[https://github.com/zsoltf/kryten/blob/master/lib/kryten/version.rb][kryten/version.rb at master · zsoltf/kryten · GitHub]]"))
+(hoarder:fetch "paramiko/paramiko"
+  '(:tag ["ssh" "python"]))
+(hoarder:fetch "mvdan/sh"
+  '(:tag ["golang" "shell_script"]))
+(hoarder:fetch "jmercouris/emacs_logo"
+  '(:download nil))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
