@@ -9,7 +9,7 @@
   (set-face-attribute 'org-block-begin-line nil :background "#202e31")
   (set-face-attribute 'org-block-end-line nil :background "#202e31")
   (setq org-src-block-faces
-        `(("emacs-lisp" (:background "#EEE2FF"))
+        `(("emacs-lisp" (:background ,(muki:color-hsl->hex 300 20 30)))
           ("python" (:background ,(muki:color-hsl->hex 30 20 29)))
           ("shell" (:background "#b53fb8")))))
 

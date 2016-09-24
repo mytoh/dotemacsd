@@ -183,6 +183,17 @@ is a kind of temporary one which is not confirmed yet."
              (dired-mode . emacs))
         do (evil-set-initial-state mode state)))
 
+(cl-defun muki:reset-initial-states ()
+  ;; Since evil-default-state defaults to normal, you can simply clear the other mode lists. If you want to be more explicit, you can do this before clearing them.
+  (setq evil-normal-state-modes
+        (append evil-emacs-state-modes
+                evil-insert-state-modes
+                evil-normal-state-modes
+                evil-motion-state-modes))
+  (setq evil-emacs-state-modes nil)
+  (setq evil-insert-state-modes nil)
+  (setq evil-motion-state-modes nil))
+
 (cl-defun muki:init-evil-modify-syntax-table ()
   (modify-syntax-entry ?_ "w" (standard-syntax-table)))
 
@@ -211,6 +222,7 @@ is a kind of temporary one which is not confirmed yet."
   (muki:init-evil-mode-elisp-slime-nav)
 
   ;; (muki:init-evil-initial-state)
+  (muki:reset-initial-states)
 
   ;; advice for evil search
   (advice-add 'evil-ex-search-next :after #'recenter)
@@ -219,6 +231,13 @@ is a kind of temporary one which is not confirmed yet."
   (muki:init-evil-mode-skk)
   (muki:init-evil-modify-syntax-table)
   ;; (muki:init-evil-leave-insert-mode-on-focus-out)
+
+  ;; [[https://github.com/noctuid/evil-guide][GitHub - noctuid/evil-guide: Draft of a guide for using emacs with evil]]
+  (cl-defun my-center-line (&rest _)
+    (evil-scroll-line-to-center nil))
+
+  (advice-add 'evil-search-next :after #'my-center-line)
+
   )
 
 ;; (req 'evil-org)

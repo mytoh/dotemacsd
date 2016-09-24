@@ -1616,6 +1616,11 @@
   '(:tag ["chinese" "english"]))
 (hoarder:register "https://gitlab.com/dustyweb/soci-el.git"
   '(:tag ["web" "activitypub" "jsonld"]))
+(hoarder:register "hrs/engine-mode"
+  '(:tag ["google" "search_engine" "web"]))
+(hoarder:register "leoliu/id3")
+(hoarder:fetch "flycheck/emacs-travis"
+  '(:tag ["travis-ci" "emacs"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -5434,6 +5439,15 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["golang" "shell_script"]))
 (hoarder:fetch "jmercouris/emacs_logo"
   '(:download nil))
+(hoarder:fetch "BurntSushi/ripgrep"
+  '(:tag ["rust" "grep" "ag" "ack"]))
+(hoarder:fetch "rust-lang/rust")
+(hoarder:fetch "jamespic/pwgen"
+  '(:tag ["password" "html"]))
+(hoarder:fetch "ocornut/imgui"
+  '(:tag ["gui" "c++"]))
+(hoarder:fetch "sam217pa/emacs-config"
+  '(:tag ["general.el" "evil"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 

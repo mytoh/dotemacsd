@@ -319,6 +319,7 @@
     magithub
     ids-edit
     visual-fill-column
+    engine-mode
     ;; pangu-spacing
     ;; uuid
     ;; ert-modeline ; cause yatemplate error
@@ -435,13 +436,13 @@
     evil-ReplaceWithRegister
     evil-visual-replace
 
-    ;; evil-org-mode
+    evil-org-mode
     ;; org-evil
     
     ;; pure-evil
 
-    bind-map
-    ;; general
+    ;; bind-map
+    general
     ))
 
 (muki-layer:load-layers 'vim
@@ -450,17 +451,17 @@
 
 (muki-layer:load-layers 'vim
   '(
-    eww-mode
-    image-mode
-    paradox-mode
-    emms-mode
-    emacs-lisp-mode
-    org-mode
-    expand-region
-    skk-mode
-    magit
-    package-menu-mode
-    picpocket
+    ;; eww-mode
+    ;; image-mode
+    ;; paradox-mode
+    ;; emms-mode
+    ;; emacs-lisp-mode
+    ;; org-mode
+    ;; expand-region
+    ;; skk-mode
+    ;; magit
+    ;; package-menu-mode
+    ;; picpocket
     ))
 
 (muki-layer:load-layers 'helm
