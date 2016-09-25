@@ -238,8 +238,11 @@
       "g" #'helm-git-grep))
 
   (liby 'helm-ag
+    (bind-map-set-keys my-base-leader-map
+      "/" #'muki:helm-project-do-ag)
     (bind-map-set-keys my-base-leader-search-map
-      "a" #'helm-do-ag))
+      "a" #'helm-do-ag
+      "p"  #'muki:helm-project-do-ag))
 
   ;; (liby 'swiper
   ;;   (bind-map-set-keys my-base-leader-search-map
