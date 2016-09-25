@@ -25,12 +25,12 @@
 
 (cl-defun muki:magit-setup ()
   (after 'magit
-      (set-option magit-diff-refine-hunk 'all)
-    (set-option magit-repository-directories `(,(muki:expand-path-huone "ateljee")))
-    (set-option magit-revision-show-gravatars
-                '("^Author:     " . "^Commit:     "))
-    (set-option magit-commit-add-log-insert-function
-                'muki:magit-commit-add-log-insert)
+    (validate-setq magit-diff-refine-hunk 'all)
+    (validate-setq magit-repository-directories `(,(muki:expand-path-huone "ateljee")))
+    (validate-setq magit-revision-show-gravatars
+                   '("^Author:     " . "^Commit:     "))
+    (validate-setq magit-commit-add-log-insert-function
+                   'muki:magit-commit-add-log-insert)
     
     (add-to-list 'magit-diff-arguments "--ignore-blank-lines")
     (add-to-list 'magit-diff-arguments "--ignore-space-at-eol")
@@ -40,20 +40,22 @@
   ;; auto fill
   (hook 'magit-log-edit-mode-hook
         (clambda ()
-            (set (make-local-variable 'fill-column) 72)
-          (turn-on-auto-fill))))
+          (set (make-local-variable 'fill-column) 72)
+          (turn-on-auto-fill)))
 
-(command (magit-status magit-log magit-init
-                       magit-list-repositories)
-         "magit")
-
-(cl-defun with-editor-setup ()
-  (command (with-editor-finish
-               with-editor-cancel
-             with-editor-finish
-             with-editor-cancel)
-           "with-editor"))
+  ;; evil setting
+  (evil-set-initial-state 'magit-popup-mode 'emacs)
+  )
 
 (liby 'magit
+  (command (magit-status magit-log magit-init
+                         magit-list-repositories)
+           "magit")
+  (command (with-editor-finish
+            with-editor-cancel
+            with-editor-finish
+            with-editor-cancel)
+           "with-editor")
+
   (muki:magit-setup)
-  (with-editor-setup))
+  )
