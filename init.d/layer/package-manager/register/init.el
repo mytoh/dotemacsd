@@ -5452,6 +5452,30 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["comic" "download" ]))
 (hoarder:fetch "davecheney/httpstat"
   '(:tag ["golang" "http" "curl"]))
+(hoarder:fetch "interplinternet/hooks-and-forks"
+  '(:tag ["racket" "scheme"]))
+(hoarder:fetch "fau/utility-arguments"
+  '(:tag ["common_lisp" "commandline"]))
+(hoarder:fetch "vain/katriawm"
+  '(:tag ["wm" "desktop"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/54aok0/katriawm_a_more_traditional_look/][Too Many Requests]]"))
+(hoarder:fetch "vain/bevelbar"
+  '(:tag ["wm" "desktop" "bar"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/54aok0/katriawm_a_more_traditional_look/][Too Many Requests]]"))
+(hoarder:fetch "vain/infofeld"
+  '(:tag ["screenfetch" "farbfeld"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/54aok0/katriawm_a_more_traditional_look/][Too Many Requests]]"))
+(hoarder:fetch "vain/xiate"
+  '(:tag ["terminal" "gtk" "vte"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/54aok0/katriawm_a_more_traditional_look/][Too Many Requests]]"))
+(hoarder:fetch "git://repo.or.cz/llpp.git"
+  '(:tag ["pdf" "mupdf"]))
+(hoarder:fetch "deluxo/gotwitch"
+  '(:tag ["golang" "twitch"]))
+(hoarder:fetch "wavexx/screenkey"
+  '(:tag ["screencast" "desktop"]))
+(hoarder:fetch "wildefyr/fyre"
+  '(:tag ["wm" "wmutils" "desktop"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 
