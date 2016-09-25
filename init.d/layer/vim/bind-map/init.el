@@ -16,18 +16,18 @@
                                                    "SPC")))
                                 (glof:update args
                                              :evil-keys
-                                             (lambda (keys)
-                                               (colle:map
-                                                (lambda (key)
-                                                  (concat prefix " " key))
-                                                keys)))))
+                                  (lambda (keys)
+                                    (colle:map
+                                     (lambda (key)
+                                       (concat prefix " " key))
+                                     keys)))))
       `(bind-map ,mapname ,@args)))
 
   (bind-map my-base-leader-map
-      :evil-keys ("SPC")
-      :evil-states (normal motion visual)
-      :override-minor-modes t
-      :override-mode-name muki-leader-override-map)
+    :evil-keys ("SPC")
+    :evil-states (normal motion visual)
+    :override-minor-modes t
+    :override-mode-name muki-leader-override-map)
 
   (muki:bind-leader-map my-base-leader-application-map
     :evil-keys ("a")
@@ -95,70 +95,59 @@
 
 
   (bind-map-set-keys my-base-leader-map
-      ;; Universal argument ---------------------------------------------------------
-      "u" #'universal-argument)
+    ;; Universal argument ---------------------------------------------------------
+    "u" #'universal-argument)
 
   (bind-map-set-keys my-base-leader-quit-map
-      "Q" #'evil-quit-all
-      "q" #'kill-buffer-and-window
-      "r" #'muki:restart-emacs
-      "R" #'muki:restart-emacs-debug)
+    "Q" #'evil-quit-all
+    "q" #'kill-buffer-and-window
+    "r" #'muki:restart-emacs
+    "R" #'muki:restart-emacs-debug)
 
-  (cl-defun switch-to-scratch-buffer ()
-    (interactive)
-    (switch-to-buffer
-     (get-buffer-create "*scratch*")))
 
   
   (bind-map-set-keys my-base-leader-help-describe-map
-      "b" #'describe-bindings
-      "f" #'describe-function
-      "k" #'describe-key
-      "m" #'describe-mode
-      "c" #'describe-char
-      "v" #'describe-variable
-      "p" #'describe-package
-      "F" #'describe-face
-      "t" #'describe-theme)
+    "b" #'describe-bindings
+    "f" #'describe-function
+    "k" #'describe-key
+    "m" #'describe-mode
+    "c" #'describe-char
+    "v" #'describe-variable
+    "p" #'describe-package
+    "F" #'describe-face
+    "t" #'describe-theme)
 
   (liby 'which-key
     (bind-map-set-keys my-base-leader-map
-        "h k" 'which-key-show-top-level))
+      "h k" 'which-key-show-top-level))
 
   
   (bind-map-set-keys my-base-leader-buffer-map
-      "K"  #'muki:kill-other-buffers
-      "n"  #'switch-to-next-buffer
-      "p"  #'switch-to-prev-buffer
-      "s" #'switch-to-scratch-buffer
-      "r" #'revert-buffer)
+    "K"  #'muki:kill-other-buffers
+    "n"  #'switch-to-next-buffer
+    "p"  #'switch-to-prev-buffer
+    "s" #'switch-to-scratch-buffer
+    "r" #'revert-buffer)
   
-
-  (defun muki:switch-to-minibuffer-window ()
-    ;; spacemacs
-    "switch to minibuffer window (if active)"
-    (interactive)
-    (when (active-minibuffer-window)
-      (select-window (active-minibuffer-window))))
   
   (bind-map-set-keys my-base-leader-window-map
-      "c"  #'delete-window
-      "H"  #'evil-window-move-far-left
-      "h"  #'evil-window-left
-      "J"  #'evil-window-move-very-bottom
-      "j"  #'evil-window-down
-      "K"  #'evil-window-move-very-top
-      "k"  #'evil-window-up
-      "L"  #'evil-window-move-far-right
-      "l"  #'evil-window-right
-      "o"  #'delete-other-windows
-      "s"  #'split-window-below
-      "b"  #'muki:switch-to-minibuffer-window
-      "-"  #'split-window-below
-      "v"  #'split-window-right
-      "w"  #'other-window
-      "/"  #'split-window-right
-      "="  #'balance-windows)
+    "c"  #'delete-window
+    "H"  #'evil-window-move-far-left
+    "h"  #'evil-window-left
+    "J"  #'evil-window-move-very-bottom
+    "j"  #'evil-window-down
+    "K"  #'evil-window-move-very-top
+    "k"  #'evil-window-up
+    "L"  #'evil-window-move-far-right
+    "l"  #'evil-window-right
+    "o"  #'delete-other-windows
+    "s"  #'split-window-below
+    "b"  #'muki:switch-to-minibuffer-window
+    "-"  #'split-window-below
+    "v"  #'split-window-right
+    "w"  #'other-window
+    "/"  #'split-window-right
+    "="  #'balance-windows)
 
 
   (liby 'mesh
@@ -167,90 +156,90 @@
       :major-modes (eshell-mode)
       :minor-modes (mesh-mode))
     (bind-map-set-keys my-base-leader-map
-        "z z" #'mesh:switch)
+      "z z" #'mesh:switch)
     (bind-map-set-keys my-mesh-leader-map
-        "z" #'mesh:switch
-        "c" #'mesh:new-tab
-        "n" #'mesh:next-tab
-        "p" #'mesh:prev-tab
-        "s" #'mesh:split-tab
-        "S" #'mesh:vsplit-tab
-        "x" #'mesh:kill-pane
-        ")" #'mesh:next-session
-        "(" #'mesh:prev-session
-        "C" #'mesh:new-session
-        "<tab>" #'mesh:next-pane)) 
+      "z" #'mesh:switch
+      "c" #'mesh:new-tab
+      "n" #'mesh:next-tab
+      "p" #'mesh:prev-tab
+      "s" #'mesh:split-tab
+      "S" #'mesh:vsplit-tab
+      "x" #'mesh:kill-pane
+      ")" #'mesh:next-session
+      "(" #'mesh:prev-session
+      "C" #'mesh:new-session
+      "<tab>" #'mesh:next-pane)) 
 
   (liby 'helm-project-buffer
     (bind-map-set-keys my-base-leader-buffer-map
-        "b" #'helm-project-buffer))
+      "b" #'helm-project-buffer))
   
   (liby 'helm-yplistener
     (bind-map-set-keys my-base-leader-application-map
-        "y" #'helm-yplistener))
+      "y" #'helm-yplistener))
 
   
   (liby 'helm-muki
     (bind-map-set-keys my-base-leader-application-map
-        "h" #'helm-muki
-        "c" #'helm-muki-program
-        "n" #'helm-muki-vihko
-        "ä" #'helm-muki-ääliö)
+      "h" #'helm-muki
+      "c" #'helm-muki-program
+      "n" #'helm-muki-vihko
+      "ä" #'helm-muki-ääliö)
     (bind-map-set-keys my-base-leader-application-web-map
-        "t" #'helm-muki-twitch))
+      "t" #'helm-muki-twitch))
 
   (bind-map-set-keys my-base-leader-application-multimedia-map
-      "v" #'muki:play-mpv)
+    "v" #'muki:play-mpv)
 
   (liby 'hoarder
     (bind-map-set-keys my-base-leader-application-package-manager-map
-        "u" #'hoarder:update
-        "k" #'hoarder:check
-        ;; "c" #'hoarder:clean
-        "l" #'helm-hoarder))
+      "u" #'hoarder:update
+      "k" #'hoarder:check
+      ;; "c" #'hoarder:clean
+      "l" #'helm-hoarder))
 
   (liby 'magit
     (bind-map-set-keys my-base-leader-git-map
-        "l" (lambda ()
-              (interactive)
-              (magit-log '("HEAD")))
-        "s" #'magit-status))
+      "l" (lambda ()
+            (interactive)
+            (magit-log '("HEAD")))
+      "s" #'magit-status))
 
   (liby 'helm
     (bind-map-set-keys my-base-leader-map
-        "SPC" #'helm-M-x
-        "?" #'helm-descbinds)
+      "SPC" #'helm-M-x
+      "?" #'helm-descbinds)
     (bind-map-set-keys my-base-leader-map
-        "hl" #'helm-resume
-        "hL" #'helm-locate-library
-        "hf" #'helm-features
-        "hCl" #'helm-colors
-        "hb" #'helm-bookmarks
-        "hi" #'helm-info-at-point
-        "hm" #'helm-man-woman
-        "ha" #'helm-apropos
-        "hry" #'helm-show-kill-ring
-        "hrr" #'helm-register
-        "hrm" #'helm-all-mark-rings)
+      "hl" #'helm-resume
+      "hL" #'helm-locate-library
+      "hf" #'helm-features
+      "hCl" #'helm-colors
+      "hb" #'helm-bookmarks
+      "hi" #'helm-info-at-point
+      "hm" #'helm-man-woman
+      "ha" #'helm-apropos
+      "hry" #'helm-show-kill-ring
+      "hrr" #'helm-register
+      "hrm" #'helm-all-mark-rings)
     (bind-map-set-keys my-base-leader-theme-map
-        "h" #'helm-themes))
+      "h" #'helm-themes))
 
   (liby 'paradox
     (bind-map-set-keys my-base-leader-application-map
-        "P" #'muki:paradox-list-packages))
+      "P" #'muki:paradox-list-packages))
 
   (liby 'eww
     (bind-map-set-keys my-base-leader-application-web-map
-        "e" #'muki:eww
-        "E" #'eww))
+      "e" #'muki:eww
+      "E" #'eww))
 
   (liby 'helm-git-grep
     (bind-map-set-keys my-base-leader-search-map
-        "g" #'helm-git-grep))
+      "g" #'helm-git-grep))
 
   (liby 'helm-ag
     (bind-map-set-keys my-base-leader-search-map
-        "a" #'helm-do-ag))
+      "a" #'helm-do-ag))
 
   ;; (liby 'swiper
   ;;   (bind-map-set-keys my-base-leader-search-map
@@ -258,61 +247,50 @@
 
   (liby 'helm-swoop
     (bind-map-set-keys my-base-leader-search-map
-        "i" #'helm-swoop-without-pre-input))
+      "i" #'helm-swoop-without-pre-input))
   
   (liby 'emms
     (bind-map-set-keys my-base-leader-emms-map
-        "P" #'emms-pause
-        "s" #'emms-stop
-        "p" #'emms-previous
-        "n" #'emms-next
-        "b" #'emms-smart-browse
-        "a f" #'emms-add-file
-        "a d" #'emms-add-directory-tree
-        "+" #'emms-volume-raise
-        "-" #'emms-volume-lower))
+      "P" #'emms-pause
+      "s" #'emms-stop
+      "p" #'emms-previous
+      "n" #'emms-next
+      "b" #'emms-smart-browse
+      "a f" #'emms-add-file
+      "a d" #'emms-add-directory-tree
+      "+" #'emms-volume-raise
+      "-" #'emms-volume-lower))
   
-  (cl-defun muki:open-file-init-load ()
-    (interactive)
-    (find-file (expand-file-name
-                "init.d/init-load.el"
-                user-emacs-directory)))
-
-  (cl-defun muki:open-file-package-registers ()
-    (interactive)
-    (find-file (expand-file-name
-                "package-manager/register/init.el"
-                muki-layer:root)))
 
   (bind-map-set-keys my-base-leader-file-map
-      "f" #'helm-find-files
-      "g" #'helm-ls-git-ls
-      "s" #'evil-write
-      "S" #'evil-write-all
-      "eh" #'helm-muki-layer
-      "el" #'muki:open-file-init-load
-      "er" #'muki:open-file-package-registers)
+    "f" #'helm-find-files
+    "g" #'helm-ls-git-ls
+    "s" #'evil-write
+    "S" #'evil-write-all
+    "eh" #'helm-muki-layer
+    "el" #'muki:open-file-init-load
+    "er" #'muki:open-file-package-registers)
 
 
 
   (liby 'theme-looper
     (bind-map-set-keys my-base-leader-theme-map
-        "r" #'theme-looper-enable-random-theme
-        "n" #'theme-looper-enable-next-theme))
+      "r" #'theme-looper-enable-random-theme
+      "n" #'theme-looper-enable-next-theme))
 
   
   (liby 'github-browse-file
     (bind-map-set-keys my-base-leader-git-map
-        "ho" 'github-browse-file))
+      "ho" 'github-browse-file))
 
   (liby 'evil-iedit-state
     (bind-map-set-keys my-base-leader-search-map
-        "e" 'evil-iedit-state/iedit-mode))
+      "e" 'evil-iedit-state/iedit-mode))
 
   (liby 'link-hint
     (bind-map-set-keys my-base-leader-text-minip-map
-        "o" 'link-hint-open-link
-        "O" 'link-hint-open-multiple-links))
+      "o" 'link-hint-open-link
+      "O" 'link-hint-open-multiple-links))
 
   )
 

@@ -70,28 +70,28 @@
 (hoarder:register "k1LoW/helm-dirset"
   '(:dependency ["rejeep/f.el"
                  "magnars/s.el"
-                 ( "emacs-helm/helm"
+                 ("emacs-helm/helm"
                   (:build ["gmake"]
-                          :dependency ["jwiegley/emacs-async"]
-                          :tag "helm"))]))
+                   :dependency ["jwiegley/emacs-async"]
+                   :tag "helm"))]))
 (hoarder:register "pronobis/helm-words"
-  '(:dependency [( "emacs-helm/helm"
+  '(:dependency [("emacs-helm/helm"
                   (:build ["gmake"]
-                          :dependency ["jwiegley/emacs-async"]
-                          :tag "helm"))]
+                   :dependency ["jwiegley/emacs-async"]
+                   :tag "helm"))]
     :tag ["helm" "dictionary"]))
 (hoarder:register "emacs-jp/helm-orgcard"
   '(:tag ["helm" "org"]
-    :dependency [( "emacs-helm/helm"
+    :dependency [("emacs-helm/helm"
                   (:build ["gmake"]
-                          :dependency ["jwiegley/emacs-async"]
-                          :tag "helm"))]))
+                   :dependency ["jwiegley/emacs-async"]
+                   :tag "helm"))]))
 (hoarder:register "lins05/helm-org-files"
   '(:tag ["helm" "org"]
-    :dependency [( "emacs-helm/helm"
+    :dependency [("emacs-helm/helm"
                   (:build ["gmake"]
-                          :dependency ["jwiegley/emacs-async"]
-                          :tag "helm"))]))
+                   :dependency ["jwiegley/emacs-async"]
+                   :tag "helm"))]))
 (hoarder:register "abo-abo/helm-org-wiki"
   '(:tag ["helm" "org"]))
 (hoarder:register "csantosb/helm-perso-wiki"
@@ -649,7 +649,7 @@
   '(:dependency ["magnars/s.el"
                  ("magnars/dash.el" ( :compile nil))
                  ( "lunaryorn/pkg-info.el"
-                  (:dependency ["cask/epl"]))
+                   (:dependency ["cask/epl"]))
                  "tkf/emacs-request"]
     :tag ["travis"]))
 (hoarder:register "aJchemist/linkmap.el")
@@ -938,11 +938,11 @@
 (hoarder:register "kljohann/mpv.el"
   '(:dependency ["Bruce-Connor/names"
                  ( "git://orgmode.org/org-mode.git"
-                  (:load-path ["lisp" "contrib/lisp"]
-                              :compile nil
-                              :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
-                              :info "doc"
-                              :tag "org"))]))
+                   (:load-path ["lisp" "contrib/lisp"]
+                    :compile nil
+                    :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
+                    :info "doc"
+                    :tag "org"))]))
 (hoarder:register "danielsz/Palimpsest")
 (hoarder:register "rolandwalker/ignoramus")
 (hoarder:register "anler/centered-window-mode"
@@ -1621,6 +1621,7 @@
 (hoarder:register "leoliu/id3")
 (hoarder:fetch "flycheck/emacs-travis"
   '(:tag ["travis-ci" "emacs"]))
+(hoarder:register "Malabarba/speed-of-thought-lisp")
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1651,10 +1652,10 @@
 (hoarder:register "rlister/org-present"
   '(:dependency [("git://orgmode.org/org-mode.git"
                   (:load-path ["lisp" "contrib/lisp"]
-                              :compile nil
-                              :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
-                              :info "doc"
-                              :tag "org"))]))
+                   :compile nil
+                   :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
+                   :info "doc"
+                   :tag "org"))]))
 (hoarder:register "kawabata/ox-pandoc"
   '(:dependency ["Wilfred/ht.el"
                  "magnars/dash.el"]
@@ -1927,11 +1928,11 @@
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
-              (cl-letf ((proj-path (thread-last (getenv "HUONE")
-                                     (expand-file-name "ateljee")
-                                     (expand-file-name path))))
-                (when (file-exists-p proj-path)
-                  (hoarder:register proj-path option)))))
+                              (cl-letf ((proj-path (thread-last (getenv "HUONE")
+                                                     (expand-file-name "ateljee")
+                                                     (expand-file-name path))))
+                                (when (file-exists-p proj-path)
+                                  (hoarder:register proj-path option)))))
   (add-project-root  "emacs-flatline")
   (add-project-root "helm-yplistener" '(:tag "helm"
                                         :load-path ["lisp"]))
@@ -4425,8 +4426,6 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "antirez/dump1090"
   '(:tag ["rtl-sdr" "radio" "ham"]
     :desc " [[http://adrianchadd.blogspot.jp/PRIVOXY-FORCE/2015/06/rtl-sdr-on-freebsd-or-hey-cool-i-live.html][Adrian Chadd's Ramblings]] "))
-(hoarder:fetch "https://notabug.org/PangolinTurtle/muobj-r7rs.git"
-  '(:tag ["scheme" "oop" "r7rs"]))
 (hoarder:fetch "https://notabug.org/PangolinTurtle/prometheus-r7rs.git"
   '(:tag ["scheme" "oop" "r7rs"]))
 (hoarder:fetch "scheme/scsh"
@@ -5441,13 +5440,18 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:download nil))
 (hoarder:fetch "BurntSushi/ripgrep"
   '(:tag ["rust" "grep" "ag" "ack"]))
-(hoarder:fetch "rust-lang/rust")
+(hoarder:fetch "rust-lang/rust"
+  '(:download nil))
 (hoarder:fetch "jamespic/pwgen"
   '(:tag ["password" "html"]))
 (hoarder:fetch "ocornut/imgui"
   '(:tag ["gui" "c++"]))
 (hoarder:fetch "sam217pa/emacs-config"
   '(:tag ["general.el" "evil"]))
+(hoarder:fetch "https://gitlab.com/oded/comix-spider.git"
+  '(:tag ["comic" "download" ]))
+(hoarder:fetch "davecheney/httpstat"
+  '(:tag ["golang" "http" "curl"]))
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 

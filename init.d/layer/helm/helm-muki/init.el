@@ -51,7 +51,8 @@
                      "Stellaris"
                      "Crea"
                      "The Elder Scrolls V: Skyrim"
-                     "Stardew Valley"))
+                     "Stardew Valley"
+                     "Banished"))
     )
 
   (add-global-key "C-c h" #'helm-muki)

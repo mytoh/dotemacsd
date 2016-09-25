@@ -307,7 +307,7 @@
     lupin-title
     lispxmp
     cl-indent
-    sound-wav
+    ;;    sound-wav
     cabledolphin
     digit-groups
     dim-autoload    
@@ -441,8 +441,8 @@
     
     ;; pure-evil
 
-    ;; bind-map
-    general
+    bind-map
+    ;; general
     ))
 
 (muki-layer:load-layers 'vim
@@ -451,17 +451,17 @@
 
 (muki-layer:load-layers 'vim
   '(
-    ;; eww-mode
-    ;; image-mode
-    ;; paradox-mode
-    ;; emms-mode
-    ;; emacs-lisp-mode
-    ;; org-mode
-    ;; expand-region
-    ;; skk-mode
-    ;; magit
-    ;; package-menu-mode
-    ;; picpocket
+    eww-mode
+    image-mode
+    paradox-mode
+    emms-mode
+    emacs-lisp-mode
+    org-mode
+    expand-region
+    skk-mode
+    magit
+    package-menu-mode
+    picpocket
     ))
 
 (muki-layer:load-layers 'helm
