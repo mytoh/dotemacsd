@@ -5534,6 +5534,9 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
     :site "https://ravichugh.github.io/sketch-n-sketch/"
     :memo " [[https://www.youtube.com/watch?v=YuGVC8VqXz0][\"Sketch-n-Sketch: Interactive SVG Programming with Direct Manipulation\" by Ra...]]
 [[https://www.youtube.com/watch?v=Yv9rOGHU-4k][Sketch-n-Sketch — Section 1 — Intro to Sketch-n-Sketch - YouTube]] "))
+(hoarder:fetch "wingo/fibers"
+  '(:tag ["guile" "scheme" "channel" "concurrency"]
+    :memo " [[https://www.youtube.com/watch?v=uwiaT3MoDVs]["Knit, Chisel, Hack: Building Programs in Guile Scheme" by Andy Wingo - YouTube]] :scheme:guile: "))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
