@@ -50,6 +50,8 @@
     org-hlc
     ob-browser
     org-breadcrumbs
+    org-bookmark-heading
+    org-tree-slide
     ))
 
 (muki-layer:load-layers 'package
@@ -187,7 +189,7 @@
     gitignore
     region-bindings-mode
     jaword
-    visual-ascii-mode
+    ;; visual-ascii-mode
     itunes-bgm
     ;; imagex
     browse-at-remote
@@ -320,6 +322,7 @@
     ids-edit
     visual-fill-column
     engine-mode
+    ztree
     ;; pangu-spacing
     ;; uuid
     ;; ert-modeline ; cause yatemplate error
@@ -514,7 +517,7 @@
 
 (muki-layer:load-layers 'auto-completion
   '(
-    ;; company
+    company
     ;; company-emoji
     ;; company-quickhelp
     ;; company-statistics
@@ -527,13 +530,13 @@
     ;; company-org-headings
     ;; sly-company
 
-    auto-complete
-    ac-capf
-    ac-emoji
-    ac-skk
-    ;; org-ac
-    ac-shell
-    ac-kill-ring
+    ;; auto-complete
+    ;; ac-capf
+    ;; ac-emoji
+    ;; ac-skk
+    ;; ;; org-ac
+    ;; ac-shell
+    ;; ac-kill-ring
     ))
 
 (muki-layer:load-layers 'source-control

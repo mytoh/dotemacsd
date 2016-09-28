@@ -44,7 +44,8 @@
           (turn-on-auto-fill)))
 
   ;; evil setting
-  (evil-set-initial-state 'magit-popup-mode 'emacs)
+  (after 'evil
+  (evil-set-initial-state 'magit-popup-mode 'emacs))
   )
 
 (liby 'magit

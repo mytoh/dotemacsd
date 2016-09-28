@@ -247,18 +247,18 @@
 (defvar muki:term-theme 'flatland)
 (defconst muki:favorite-themes
   '(comidia planet monokai molokai firebelly
-    gruvbox base16-tomorrow odersky jazz purple-haze
-    warm-night brin gotham soothe spolsky wilson noctilux erosiond
-    material subatomic ectoplasm spacemacs-dark
-    base16-ocean-dark zerodark plan9 spacegray atom-one-dark
-    aurora arjen-grey dracula inkpot idea-darkula
-    reykjavik morning-star majapahit-dark redbelly badwolf
-    hamburg omtose-phellack base16-harmonic16-dark
-    Motoko motoko-night base16-oceanicnext-dark
-    hyperplane iceberg myth forest-blue soria metalheart
-    zweilight oceanic redbelly doom-one doom-dark firewatch
-    base16-ashes base16-atelier-cave base16-atelier-lakeside
-    base16-ocean-brian acai))
+            gruvbox base16-tomorrow odersky jazz purple-haze
+            warm-night brin gotham soothe spolsky wilson noctilux erosiond
+            material subatomic ectoplasm spacemacs-dark
+            base16-ocean-dark zerodark plan9 spacegray atom-one-dark
+            aurora arjen-grey dracula inkpot idea-darkula
+            reykjavik morning-star majapahit-dark redbelly badwolf
+            hamburg omtose-phellack base16-harmonic16-dark
+            Motoko motoko-night base16-oceanicnext-dark
+            hyperplane iceberg myth forest-blue soria metalheart
+            zweilight oceanic redbelly doom-one doom-dark firewatch
+            base16-ashes base16-atelier-cave base16-atelier-lakeside
+            base16-ocean-brian acai))
 
 ;; (enable-option select-enable-clipboard
 ;;                select-enable-primary)
@@ -284,13 +284,13 @@
 
 ;;;; info
 (after 'info
-    (seq-each
-     (lambda (dir)
-       (cl-pushnew dir Info-additional-directory-list))
-     (seq-filter
-      (lambda (dir) (and (file-directory-p dir)
-                  (file-exists-p dir)))
-      (directory-files (muki:expand-path-huone "komero/info") 'full "^[^.]+"))))
+  (seq-each
+   (lambda (dir)
+     (cl-pushnew dir Info-additional-directory-list))
+   (seq-filter
+    (lambda (dir) (and (file-directory-p dir)
+                (file-exists-p dir)))
+    (directory-files (muki:expand-path-huone "komero/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
 (defvar muki:external-programs-associations nil)
@@ -368,6 +368,11 @@
 ;; decrease gc cycle
 ;; (set-option gc-cons-threshold (* 10 gc-cons-threshold))
 
+(add-hook 'after-init-hook
+          (lambda () 
+            (set-option gc-cons-threshold (/ gc-cons-threshold 5))
+            (set-option garbage-collection-messages t)))
+
 ;; message log line counts
 (set-option message-log-max 10000)
 
@@ -434,7 +439,7 @@
 
 ;; frame title
 (setq frame-title-format '(multiple-frames "%b"
-                           ("" "GNU Vim" "@" (system-name))))
+                                           ("" "GNU Vim" "@" (system-name))))
 
 ;; disable cursor in non selected windows
 (disable-option cursor-in-non-selected-windows)
@@ -447,5 +452,6 @@
 
 ;; run gc when lose focus [[https://www.reddit.com/r/emacs/comments/4j828f/til_setq_gcconsthreshold_100000000/]]
 (add-hook 'focus-out-hook 'garbage-collect)
+
 
 ;;; config-setting.el ends here

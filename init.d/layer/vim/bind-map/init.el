@@ -295,6 +295,12 @@
       "o" 'link-hint-open-link
       "O" 'link-hint-open-multiple-links))
 
+  (liby 'helm-mode-manager
+    (bind-map-set-keys my-base-leader-map
+      "hM"    'helm-switch-major-mode
+      ;; "hm"    'helm-disable-minor-mode
+      "h C-m" 'helm-enable-minor-mode))
+
   )
 
 ;;; init.el ends here

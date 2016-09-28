@@ -1622,6 +1622,12 @@
 (hoarder:fetch "flycheck/emacs-travis"
   '(:tag ["travis-ci" "emacs"]))
 (hoarder:register "Malabarba/speed-of-thought-lisp")
+(hoarder:register "fourier/ztree"
+  '(:tag ["file_manager" "dired"]))
+(hoarder:register "xahlee/xah-find"
+  '(:tag ["find" "grep"]))
+(hoarder:register "paul-issartel/nnreddit"
+  '(:tag ["reddit" "gnus"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1707,6 +1713,8 @@
   '(:tag ["org" "html" "documentation"]))
 (hoarder:register "scallywag/org-board"
   '(:tag ["org-attach" "bookmarking" "pinboard"]))
+(hoarder:register "alphapapa/org-bookmark-heading")
+(hoarder:register "takaxp/org-tree-slide")
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
 ;;                    :dependency ["dbrock/bongo"]
@@ -1925,6 +1933,7 @@
 (hoarder:register-theme "tashrifsanil/emacs-acai-theme")
 (hoarder:register-theme "cs14095/civic-theme.el")
 (hoarder:register-theme "nuncostans/sexy-monochrome-theme")
+(hoarder:register-theme "kootenpv/emacs-kooten-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -3093,7 +3102,8 @@
 (hoarder:fetch "azu/awesome-commit-english"
   '(:download nil)) 
 (hoarder:fetch "b4b4r07/zplug"
-  '(:download nil)) 
+  '(:memo "[[https://github.com/zplug/zplug/blob/master/init.zsh][zplug/init.zsh at master · zplug/zplug · GitHub]]"
+    :download nil)) 
 (hoarder:fetch "badele/gitcheck"
   '(:download nil)) 
 (hoarder:fetch "bamos/dotfiles"
@@ -4136,7 +4146,7 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
   '(:tag ["bar" "panel" "lemonbar" "wm" "desktop"]))
 (hoarder:fetch "venam/2bwm"
   '(:tag ["wm" "bar" "panel" "desktop"]))
-(hoarder:fetch "cursedhydra/dotfilles-Dracula"
+(hoarder:fetch "cursedhydra/dotfiles-Dracula"
   '(:tag ["i3" "lemonbar" "termite"]
     :desc "https://www.reddit.com/r/unixporn/comments/4lsuj1/i3my_first_rice/"))
 (hoarder:fetch "Verb656/Dotfiles"
@@ -5454,7 +5464,7 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["golang" "http" "curl"]))
 (hoarder:fetch "interplinternet/hooks-and-forks"
   '(:tag ["racket" "scheme"]))
-(hoarder:fetch "fau/utility-arguments"
+(hoarder:fetch "https://gitlab.com/fau/utility-arguments.git"
   '(:tag ["common_lisp" "commandline"]))
 (hoarder:fetch "vain/katriawm"
   '(:tag ["wm" "desktop"]
@@ -5476,6 +5486,55 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["screencast" "desktop"]))
 (hoarder:fetch "wildefyr/fyre"
   '(:tag ["wm" "wmutils" "desktop"]))
+(hoarder:fetch "lambdaisland/uniontypes"
+  '(:tag ["clojure" "clojure.spec" "union_type" "variant" "core.match" "pattern_match"]))
+(hoarder:fetch "https://gitlab.com/barrel-db/barrel.git"
+  '(:tag ["database" "p2p" "erlang" "couchdb"]
+    :site "https://gitlab.com/barrel-db/barrel"
+    :memo "[[https://www.youtube.com/watch?v=de6TYu1j7Gg][Building a P2P Multi-Purpose Database by Benoit Chesneau - YouTube]]"))
+(hoarder:fetch "sonian/carica"
+  '(:tag ["configuration" "clojure"]
+    :memo "http://realworldclojure.com/application-configuration/"))
+(hoarder:fetch "weavejester/environ"
+  '(:tag ["configuration" "clojure"]
+    :memo "http://realworldclojure.com/application-configuration/"))
+(hoarder:fetch "outpace/config"
+  '(:tag ["configuration" "clojure"]
+    :memo "http://realworldclojure.com/application-configuration/"))
+(hoarder:fetch "adzerk-oss/env"
+  '(:tag ["configuration" "clojure"]
+    :memo "http://realworldclojure.com/application-configuration/"))
+(hoarder:fetch "cheeriojs/cheerio"
+  '(:tag ["javascript" "scraping" "jquery"]))
+(hoarder:fetch "jprichardson/node-batchflow"
+  '(:tag ["javascript"]))
+(hoarder:fetch "Shinmera/lquery"
+  '(:tag ["common_lisp" "jquery" "html" "dom"]))
+(hoarder:fetch "wireshark/wireshark"
+  '(:tag ["packet_capture" "tcpdump" "pcap" "network"]
+    :download nil))
+(hoarder:fetch "calvis/cKanren"
+  '(:tag ["minikanren" "logic_programming" "scheme"]))
+(hoarder:fetch "haasnhoff/mpvconfigurator"
+  '(:tag ["mpv"]))
+(hoarder:fetch "leonardoborges/bouncer"
+  '(:tag ["dsl" "clojure" "validaton" "schema"]))
+(hoarder:fetch "metakirby5/scripts"
+  '(:tag ["screenfetch" "script" "linux" "macos"]
+    :memo "https://github.com/metakirby5/scripts/blob/master/fetch"))
+(hoarder:fetch "metakirby5/.dots"
+  '(:tag ["screenfetch" "script" "linux" "macos" "configuration" "dotfiles"]
+    :memo "https://github.com/metakirby5/scripts/blob/master/fetch"))
+(hoarder:fetch "cacalabs/toilet"
+  '(:tag ["figlet" "ascii_art" "terminal"]))
+(hoarder:fetch "yeun/open-color"
+  '(:tag ["css" "scss" "less"]))
+(hoarder:fetch "ravichugh/sketch-n-sketch"
+  '(:tag ["svg" "graphic" "elm"]
+    :site "https://ravichugh.github.io/sketch-n-sketch/"
+    :memo " [[https://www.youtube.com/watch?v=YuGVC8VqXz0][\"Sketch-n-Sketch: Interactive SVG Programming with Direct Manipulation\" by Ra...]]
+[[https://www.youtube.com/watch?v=Yv9rOGHU-4k][Sketch-n-Sketch — Section 1 — Intro to Sketch-n-Sketch - YouTube]] "))
+
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 

@@ -2,7 +2,7 @@
 (req 'org)
 
 (defface org-block-background
-    '((t (:background "#2b2948")))
+  '((t (:background "#2b2948")))
   "Face used for the source block background")
 
 (cl-defun muki:org-set-faces ()
@@ -10,8 +10,8 @@
   (set-face-attribute 'org-block-end-line nil :background "#202e31")
   (setq org-src-block-faces
         `(("emacs-lisp" (:background ,(muki:color-hsl->hex 300 20 30)))
-          ("python" (:background ,(muki:color-hsl->hex 30 20 29)))
-          ("shell" (:background "#b53fb8")))))
+          ("python" (:background ,(muki:color-hsl->hex 230 20 29)))
+          ("shell" (:background ,(muki:color-hsl->hex 140 20 20))))))
 
 ;; give us some hint we are running
 ;; (defadvice org-babel-execute-src-block (around progress nil activate)
@@ -166,7 +166,7 @@
                         #'muki:org-mode-before-save-hook))))
 
 (after 'org
-    (muki:org-mode-hook-function))
+  (muki:org-mode-hook-function))
 
 ;; (add-hook 'org-mode-hook
 ;;           #'muki:org-mode-hook-function)
@@ -182,34 +182,34 @@
   ;; http://emacs.stackexchange.com/questions/2869/turn-a-list-or-data-structure-into-an-org-document/
   (insert (org-element-interpret-data
            '((property-drawer nil
-              ((node-property (:key "title" :value ""))
-               (node-property (:key "btype" :value "book"))
-               (node-property (:key "author" :value ""))
-               (node-property (:key "journal" :value ""))
-               (node-property (:key "isbn" :value ""))
-               (node-property (:key "publisher" :value ""))
-               (node-property (:key "year" :value ""))
-               (node-property (:key "month" :value ""))
-               (node-property (:key "volume" :value ""))
-               (node-property (:key "url" :value ""))))))))
+                              ((node-property (:key "title" :value ""))
+                               (node-property (:key "btype" :value "book"))
+                               (node-property (:key "author" :value ""))
+                               (node-property (:key "journal" :value ""))
+                               (node-property (:key "isbn" :value ""))
+                               (node-property (:key "publisher" :value ""))
+                               (node-property (:key "year" :value ""))
+                               (node-property (:key "month" :value ""))
+                               (node-property (:key "volume" :value ""))
+                               (node-property (:key "url" :value ""))))))))
 
 (add-hook 'org-mode-hook
           (clambda ()
-              (add-key org-mode-map
-                "C-c o o" #'helm-org-headlines
-                "C-c o b" #'muki:org-insert-book-drawer)))
+            (add-key org-mode-map
+              "C-c o o" #'helm-org-headlines
+              "C-c o b" #'muki:org-insert-book-drawer)))
 
 ;;;; Viewing, navigating, and editing the Org tree
 ;;     I often cut and paste subtrees. This makes it easier to cut
 ;;     something and paste it elsewhere in the hierarchy.
 ;;     #+begin_src emacs-lisp
 (after 'org
-    (add-key org-mode-map "C-c k" #'org-cut-subtree)
+  (add-key org-mode-map "C-c k" #'org-cut-subtree)
   (setq org-yank-adjusted-subtrees t))
 
 (add-hook 'org-mode-hook
           (clambda ()
-              (local-set-key (kbd "M-n") #'outline-next-visible-heading)
+            (local-set-key (kbd "M-n") #'outline-next-visible-heading)
             (local-set-key (kbd "M-p") #'outline-previous-visible-heading)
             (local-set-key (kbd "M-u") #'outline-up-heading)
             ;; table
@@ -248,13 +248,13 @@
   (interactive)
   (org-element-map (org-element-parse-buffer 'element) 'src-block
     (clambda (src-block)
-        (let ((language (org-element-property :language src-block)))
-          (cond ((null language)
-                 (error "Missing language at position %d"
-                        (org-element-property :post-affiliated src-block)))
-                ((not (assoc-string language org-babel-load-languages))
-                 (error "Unknown language at position %d"
-                        (org-element-property :post-affiliated src-block)))))))
+      (let ((language (org-element-property :language src-block)))
+        (cond ((null language)
+               (error "Missing language at position %d"
+                      (org-element-property :post-affiliated src-block)))
+              ((not (assoc-string language org-babel-load-languages))
+               (error "Unknown language at position %d"
+                      (org-element-property :post-affiliated src-block)))))))
   (message "Source blocks checked in %s." (buffer-name (buffer-base-buffer))))
 
 (cl-defun org-find-duplicate-drawers ()
@@ -263,21 +263,21 @@
   (org-element-map (org-element-parse-buffer 'element) 'headline
     (lambda (h)
       (and (org-element-map h 'drawer
-             (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
-             nil t 'headline)
-           (let ((begin (org-element-property :begin h)))
-             (message "Entry with erroneous properties drawer at %d" begin)
-             begin)))))
+           (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
+           nil t 'headline)
+         (let ((begin (org-element-property :begin h)))
+           (message "Entry with erroneous properties drawer at %d" begin)
+           begin)))))
 
 (cl-defun muki:org-open-link-mpv ()
   (interactive)
   (cl-letf ((link (glof:lookup  :raw-link
-                                (cadr (org-element-context)))))
+                    (cadr (org-element-context)))))
     (pcase link
       (`[:just ,l]
-        (muki:play-mpv l))
+       (muki:play-mpv l))
       (`[:nothing]
-        (message "can't find any link!")))
+       (message "can't find any link!")))
     ))
 
 
@@ -287,8 +287,7 @@
 
 ;; (req 'org-eldoc)
 
-
-(add-hook 'org-mode-hook #'turn-off-auto-fill)
+;; (add-hook 'org-mode-hook #'turn-off-auto-fill)
 
 
 ;;; [[https://pank.eu/blog/pretty-babel-src-blocks.html]]
