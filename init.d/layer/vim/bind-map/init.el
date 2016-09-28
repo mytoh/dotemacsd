@@ -203,7 +203,11 @@
       "l" (lambda ()
             (interactive)
             (magit-log '("HEAD")))
-      "s" #'magit-status))
+      "s"   #'magit-status
+      "fh" #'magit-log-buffer-file
+      "m"  #'magit-dispatch-popup
+      "S"  #'magit-stage-file
+      "U"  #'magit-unstage-file))
 
   (liby 'helm
     (bind-map-set-keys my-base-leader-map
