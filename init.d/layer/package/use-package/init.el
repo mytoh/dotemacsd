@@ -4,10 +4,6 @@
 
 ;;; Code:
 
-
-(req 'company-shell
-  (after 'company
-    (add-to-list 'company-backends 'company-shell)))
-
+(require 'use-package)
 
 ;;; init.el ends here

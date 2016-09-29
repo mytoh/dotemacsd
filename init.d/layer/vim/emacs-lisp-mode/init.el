@@ -17,12 +17,12 @@
   (interactive)
   (if-let ((root (vc-root-dir)))
       (cl-labels ((test-file-p (name)
-                    (and (string-equal (file-name-nondirectory
-                                        (directory-file-name
-                                         (file-name-directory
-                                          (buffer-file-name))))
-                                       "test")
-                         (string-match-p "-tests.el\\'" name))))
+                               (and (string-equal (file-name-nondirectory
+                                                 (directory-file-name
+                                                  (file-name-directory
+                                                   (buffer-file-name))))
+                                                "test")
+                                  (string-match-p "-tests.el\\'" name))))
         (pcase (buffer-file-name)
           ((pred test-file-p)
            (cl-letf* ((buffers (buffer-list))
@@ -52,30 +52,35 @@
 ;; from spacemacs github.com/syl20bnr/spacemacs/spacemacs/keybindings.el
 ;; emacs-lisp -----------------------------------------------------------------
 (bind-map my-elisp-leader-map
-    :evil-keys ("SPC m" ",")
-    :evil-states (normal)
-    :major-modes (emacs-lisp-mode
-                  lisp-interaction-mode))
+  :evil-keys ("SPC m" ",")
+  :evil-states (normal)
+  :major-modes (emacs-lisp-mode
+                lisp-interaction-mode))
 (bind-map-set-keys my-elisp-leader-map
-    "e$" #'lisp-state-eval-sexp-end-of-line
-    "eb" #'eval-buffer
-    "ee" #'eval-last-sexp
-    "ep" #'pp-eval-last-sexp
-    "ef" #'eval-defun
-    "er" 'eval-region
-    "el" #'lisp-state-eval-sexp-end-of-line
-    ","  #'lisp-state-toggle-lisp-state
-    "tf" #'muki:emacs-lisp-test-open-alternate-file
-    "tb" #'muki:emacs-lisp-test-run-buffer
-    "tq" #'ert
+  "e$" #'lisp-state-eval-sexp-end-of-line
+  "eb" #'eval-buffer
+  "ee" #'eval-last-sexp
+  "ep" #'pp-eval-last-sexp
+  "ef" #'eval-defun
+  "er" 'eval-region
+  "el" #'lisp-state-eval-sexp-end-of-line
+  ","  #'lisp-state-toggle-lisp-state
+  "tf" #'muki:emacs-lisp-test-open-alternate-file
+  "tb" #'muki:emacs-lisp-test-run-buffer
+  "tq" #'ert
 
-    "gg" #'xref-find-definitions-other-window
-    "hh" #'elisp-slime-nav-describe-elisp-thing-at-point
+  "gg" #'xref-find-definitions-other-window
+  "hh" #'elisp-slime-nav-describe-elisp-thing-at-point
 
-    "=b" #'srefactor-lisp-format-buffer
-    "=d" #'srefactor-lisp-format-defun
-    "=o" #'srefactor-lisp-one-line
-    "=s" #'srefactor-lisp-format-sexp
-    )
+  "=b" #'srefactor-lisp-format-buffer
+  "=d" #'srefactor-lisp-format-defun
+  "=o" #'srefactor-lisp-one-line
+  "=s" #'srefactor-lisp-format-sexp
+  )
+
+(liby 'macrostep
+  (bind-map-set-keys my-elisp-leader-map
+    "dme" #'macrostep-expand))
+
 
 ;;; init.el ends here

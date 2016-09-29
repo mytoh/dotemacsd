@@ -1,5 +1,7 @@
 ;;; lang-elisp.el -*- lexical-binding: t -*-
 
+(require 'muki)
+
 (cl-pushnew '("\\.emacs-w3m\\'" .  emacs-lisp-mode)
             auto-mode-alist)
 
@@ -86,14 +88,6 @@
 (cl-defun muki:elisp-check-parens ()
   (muki:add-hook-local 'after-save-hook #'check-parens))
 
-;;; Auto Byte-Compile Emacs Lisp Files
-;;; [[http://ergoemacs.org/emacs/emacs_byte_compile.html]]
-(cl-defun muki:byte-compile-current-buffer ()
-  "`byte-compile' current buffer if it's emacs-lisp-mode and compiled file exists."
-  (interactive)
-  (when (and (eq major-mode 'emacs-lisp-mode)
-           (file-exists-p (byte-compile-dest-file buffer-file-name)))
-    (byte-compile-file buffer-file-name)))
 
 (cl-defun muki:elisp-byte-compile-buffer ()
   (add-hook 'after-save-hook #'muki:byte-compile-current-buffer nil t))

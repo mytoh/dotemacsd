@@ -1628,6 +1628,7 @@
   '(:tag ["find" "grep"]))
 (hoarder:register "paul-issartel/nnreddit"
   '(:tag ["reddit" "gnus"]))
+(hoarder:register "jwiegley/use-package")
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -5536,7 +5537,7 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 [[https://www.youtube.com/watch?v=Yv9rOGHU-4k][Sketch-n-Sketch — Section 1 — Intro to Sketch-n-Sketch - YouTube]] "))
 (hoarder:fetch "wingo/fibers"
   '(:tag ["guile" "scheme" "channel" "concurrency"]
-    :memo " [[https://www.youtube.com/watch?v=uwiaT3MoDVs]["Knit, Chisel, Hack: Building Programs in Guile Scheme" by Andy Wingo - YouTube]] :scheme:guile: "))
+    :memo " [[https://www.youtube.com/watch?v=uwiaT3MoDVs][\"Knit, Chisel, Hack: Building Programs in Guile Scheme\" by Andy Wingo - YouTube]] :scheme:guile: "))
 
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files

@@ -4,10 +4,7 @@
 
 ;;; Code:
 
-
-(req 'company-shell
-  (after 'company
-    (add-to-list 'company-backends 'company-shell)))
-
+(use-package elisp-format
+  :ensure t)
 
 ;;; init.el ends here

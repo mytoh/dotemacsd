@@ -23,8 +23,10 @@
     hoarder
     ))
 
+;; essential
 (muki-layer:load-layers 'package
   '(
+    ;; use-package
     validate
 
     ;; diminish
@@ -323,6 +325,7 @@
     visual-fill-column
     engine-mode
     ztree
+    elisp-format
     ;; pangu-spacing
     ;; uuid
     ;; ert-modeline ; cause yatemplate error
@@ -518,12 +521,12 @@
 (muki-layer:load-layers 'auto-completion
   '(
     company
+    company-shell
+    company-statistics
     ;; company-emoji
     ;; company-quickhelp
-    ;; company-statistics
     ;; company-org-headings
     ;; company-dict
-    ;; company-shell
     ;; company-web
     ;; company-flx
     ;; company-words
@@ -562,7 +565,8 @@
     recentf
     font ; this cause slow displaying
 
-    ;; autorevert
+    autorevert
+
     ;;clipboard
     ;; erc
     ;; eshell-prompt
