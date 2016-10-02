@@ -26,7 +26,7 @@
 ;; essential
 (muki-layer:load-layers 'package
   '(
-    ;; use-package
+    use-package
     validate
 
     ;; diminish
@@ -326,6 +326,10 @@
     engine-mode
     ztree
     elisp-format
+    el-search
+    elisp-refs
+    podcaster
+    lisp-extra-font-lock
     ;; pangu-spacing
     ;; uuid
     ;; ert-modeline ; cause yatemplate error

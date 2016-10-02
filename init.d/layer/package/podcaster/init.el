@@ -4,6 +4,6 @@
 
 ;;; Code:
 
-(req 'elisp-format)
+(req 'podcaster)
 
 ;;; init.el ends here

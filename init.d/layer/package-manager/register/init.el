@@ -1629,6 +1629,10 @@
 (hoarder:register "paul-issartel/nnreddit"
   '(:tag ["reddit" "gnus"]))
 (hoarder:register "jwiegley/use-package")
+(hoarder:register "emacsmirror/el-search")
+(hoarder:register "Wilfred/elisp-refs.el")
+(hoarder:register "lujun9972/podcaster"
+  '(:tag ["podcast" "rss" "feed"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -2851,7 +2855,7 @@
   '(:tag ["github" "chrome" "css"]))
 (hoarder:fetch "https://gitlab.com/NTPSec/ntpsec.git"
   '(:tag ["ntp"]))
-(hoarder:fetch "git://erdgeist.org/opentracker") 
+;; (hoarder:fetch "git://erdgeist.org/opentracker") 
 (hoarder:fetch "git://git.2f30.org/colors") 
 (hoarder:fetch "LubosD/fatrat"
   '(:desc "an open source download manager for Linux written in C++ and built on top of the Qt 4 library (Git version uses Qt 5). It is rich in features and is continuously extended. "
@@ -3605,7 +3609,7 @@
 (hoarder:fetch "shingetsu/saku-ex"
   '(:download nil)) 
 (hoarder:fetch "shirok/Gauche"
-  '(:download nil)) 
+  '(:tag ["scheme"])) 
 (hoarder:fetch "shutterstock/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words"
   '(:download nil)) 
 (hoarder:fetch "sickill/git-dude"
@@ -4610,8 +4614,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["font" "runic"]))
 (hoarder:fetch "https://gitgud.io/fbt/sx-open.git"
   '(:tag ["xdg-open"]))
-(hoarder:fetch "https://gitgud.io/Se7en/user.js.git"
-  '(:tag ["userjs" "firefox"]))
+(hoarder:fetch "https://gitgud.io/Se7en/Network-config.git"
+  '(:tag ["configuration"]))
 (hoarder:fetch "https://gitgud.io/dwarvenbuffet/80s-skeleton.git"
   '(:tag ["game" "lua" "löve"]))
 (hoarder:fetch "https://gitgud.io/KonaKona/nettool.git"
@@ -5538,7 +5542,43 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "wingo/fibers"
   '(:tag ["guile" "scheme" "channel" "concurrency"]
     :memo " [[https://www.youtube.com/watch?v=uwiaT3MoDVs][\"Knit, Chisel, Hack: Building Programs in Guile Scheme\" by Andy Wingo - YouTube]] :scheme:guile: "))
+(hoarder:fetch "https://gitlab.com/PyQT/tumbly.git"
+  '(:tag ["tumblr" "python"]))
+(hoarder:fetch "https://gitlab.com/BobSteagall/clang-builder.git"
+  '(:tag ["freebsd" "clang" "compilation" "build"]))
+(hoarder:fetch "leetreveil/musicmetadata"
+  '(:tag ["javascript" "mp3" "ogg" "flac" "metadata" "tag"]
+    :download nil))
+(hoarder:fetch "mehrdadrad/mylg"
+  '(:tag ["netwark" "linux" "macos" ]))
+(hoarder:fetch "ktakashi/scheme-concurrent"
+  '(:tag ["gauche" "r7rs" "r6rs" "multi-thread"]))
+(hoarder:fetch "RealDolos/volapi"
+  '(:tag ["volafile" "python"]))
+(hoarder:fetch "wbkd/awesome-interactive-journalism"
+  '(:tag ["awesome_list" "inforamiton" "data" "visualization"]))
+(hoarder:fetch "detailyang/awesome-cheatsheet"
+  '(:tag ["awesome_list" "cheatsheet"]))
+(hoarder:fetch "arachne-framework/arachne-core"
+  '(:tag ["clojure" "scraping" "crawler" "web"]))
+(hoarder:fetch "eudoxia0/arachne"
+  '(:tag ["common_lisp" "scraping" "crawler" "web"]))
+(hoarder:fetch "Mikerah/GenreExplorer"
+  '(:tag ["genre" "music" "wikipedia"]))
+(hoarder:fetch "cardigann/cardigann"
+  '(:tag ["jacket" "usenet" "torrent" "sonarr" "sickrage" "couchpotato"]))
+(hoarder:fetch "git://git.corpit.ru/rbldnsd.git"
+  '(:tag ["dns" "dnsbl" "black_list"]))
+(hoarder:fetch "lk-geimfari/cuttlefish"
+  '(:tag ["erlang" "color" "cli" "terminal"]))
+(hoarder:fetch "slamdata/matryoshka"
+  '(:tag ["recursion" "scala" "fold" "unfold" "recursion_scheme"]
+    :memo "[[https://www.youtube.com/watch?v=D8LdznWynyw][Greg Pfeil - Fix-ing Your Types with Matryoshka - YouTube]]"))
+(hoarder:fetch "pgrho/animedb")
+(hoarder:fetch "openimages/dataset"
+  '(:tag ["image" "photo" "data"]))
 
+;;; end
 
 ;; http://bazaar.launchpad.net/~acbf-development-team/acbf/trunk/files
 ;; git://gitorious.org/sly/sly 

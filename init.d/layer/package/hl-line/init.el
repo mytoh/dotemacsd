@@ -20,7 +20,6 @@
 
   ;; [[http://rubikitch.com/2015/05/14/global-hl-line-mode-timer/]]
 
-  (require 'hl-line)
   (defun global-hl-line-timer-function ()
     (unless (eq major-mode 'eshell-mode)
       (global-hl-line-unhighlight-all)

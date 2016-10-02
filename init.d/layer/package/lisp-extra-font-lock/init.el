@@ -4,6 +4,7 @@
 
 ;;; Code:
 
-(req 'elisp-format)
+(req 'lisp-extra-font-lock
+  (lisp-extra-font-lock-global-mode 1))
 
 ;;; init.el ends here

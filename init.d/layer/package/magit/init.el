@@ -45,7 +45,8 @@
 
   ;; evil setting
   (after 'evil
-  (evil-set-initial-state 'magit-popup-mode 'emacs))
+    (after 'magit
+      (evil-set-initial-state 'magit-popup-mode 'emacs)))
   )
 
 (liby 'magit

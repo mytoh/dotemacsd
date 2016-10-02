@@ -3,10 +3,10 @@
 (liby 'company
   (command (global-company-mode) "company")
   (add-hook 'after-init-hook #'global-company-mode)
-
-  (add-key company-active-map
-    "C-j" #'company-select-next
-    "C-k" #'company-select-previous))
+  (after 'company
+      (add-key company-active-map
+	"C-j" #'company-select-next
+	"C-k" #'company-select-previous)))
 
 ;; (liby 'company
 ;;   (command (company-mode) "company")

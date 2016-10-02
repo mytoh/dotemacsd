@@ -4,6 +4,7 @@
 
 ;;; Code:
 
-(req 'elisp-format)
+(liby 'el-search
+  (command (el-search-pattern) "el-search-x"))
 
 ;;; init.el ends here
