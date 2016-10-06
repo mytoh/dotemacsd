@@ -340,6 +340,7 @@
     lisp-extra-font-lock
     treemacs
     japanese-holidays
+    undo-tree
     ;; pangu-spacing
     ;; uuid
     ;; ert-modeline ; cause yatemplate error

@@ -4,6 +4,7 @@
 
 ;;; Code:
 
-(req 'elisp-format)
+(use-package elisp-format
+  :ensure t)
 
 ;;; init.el ends here

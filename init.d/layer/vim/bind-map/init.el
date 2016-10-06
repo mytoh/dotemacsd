@@ -308,6 +308,18 @@
       ;; "hm"    'helm-disable-minor-mode
       "h C-m" 'helm-enable-minor-mode))
 
+  (liby 'undo-tree
+    (bind-map-set-keys my-base-leader-map
+      "au"  'undo-tree-visualize))
+
+  (bind-map-set-keys my-base-leader-map
+    "atp" #'list-processes
+    "atP" #'proced)
+
+  (liby 'helm-proc
+    (bind-map-set-keys my-base-leader-map
+      "ath" #'helm-proc))
+
   )
 
 ;;; init.el ends here

@@ -4,6 +4,7 @@
 
 ;;; Code:
 
-(req 'base16-theme)
+(use-package base16-theme
+  :ensure t)
 
 ;;; init.el ends here
