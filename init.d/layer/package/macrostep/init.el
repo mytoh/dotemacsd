@@ -13,6 +13,6 @@
   (progn
     (after 'macrostep
       (after 'evil
-	(evil-define-key 'normal macrostep-keymap "q" 'macrostep-collapse-all)))))
+        (evil-define-key 'normal macrostep-keymap "q" 'macrostep-collapse-all)))))
 
 ;;; init.el ends here

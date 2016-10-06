@@ -330,6 +330,8 @@
     elisp-refs
     podcaster
     lisp-extra-font-lock
+    treemacs
+    japanese-holidays
     ;; pangu-spacing
     ;; uuid
     ;; ert-modeline ; cause yatemplate error
@@ -447,6 +449,7 @@
     evil-visual-replace
 
     evil-org-mode
+    evil-ediff
     ;; org-evil
     
     ;; pure-evil

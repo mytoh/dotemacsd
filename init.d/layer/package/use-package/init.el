@@ -4,8 +4,7 @@
 
 ;;; Code:
 
-(eval-when-compile
-  (require 'use-package))
+(require 'use-package)
 (require 'diminish)                ;; if you use :diminish
 (require 'delight)                ;; if you use :delight
 (require 'bind-key)                ;; if you use any :bind variant

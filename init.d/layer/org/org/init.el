@@ -10,6 +10,7 @@
   (set-face-attribute 'org-block-end-line nil :background "#202e31")
   (setq org-src-block-faces
         `(("emacs-lisp" (:background ,(muki:color-hsl->hex 300 20 30)))
+          ("lisp" (:background ,(muki:color-hsl->hex 300 20 30)))
           ("python" (:background ,(muki:color-hsl->hex 230 20 29)))
           ("shell" (:background ,(muki:color-hsl->hex 140 20 20))))))
 
@@ -339,9 +340,9 @@
                            (looking-at "^[ \t]*#\\+begin_src[ \t]+[^ \f\t\n\r\v]+[ \t]*"))))
       ;; Test if we moved out of a block.
       (when (or (and rasmus/org-at-src-begin
-                   (not at-src-block))
-                ;; File was just opened.
-                (eq rasmus/org-at-src-begin -1))
+                  (not at-src-block))
+               ;; File was just opened.
+               (eq rasmus/org-at-src-begin -1))
         (rasmus/org-prettify-src--update))
       ;; Remove composition if at line; doesn't work properly.
       ;; (when at-src-block

@@ -1633,6 +1633,15 @@
 (hoarder:register "Wilfred/elisp-refs.el")
 (hoarder:register "lujun9972/podcaster"
   '(:tag ["podcast" "rss" "feed"]))
+(hoarder:register "Alexander-Miller/treemacs"
+  '(:tag ["neotree"]))
+(hoarder:register "emacs-jp/japanese-holidays"
+  '(:tag ["calendar"]))
+(hoarder:register "emacsfodder/html-entities-helper")
+(hoarder:register "yati-sagade/orch"
+  '(:tag ["org-mode" "android"]))
+(hoarder:register "justbur/evil-ediff"
+  '(:tag ["ediff" "evil" "diff" "keybinding"]))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1898,7 +1907,6 @@
 (hoarder:register-theme "kootenpv/emacs-kooten-theme")
 (hoarder:register-theme "mswift42/obsidian-theme")
 (hoarder:register-theme "j0ni/phoenix-dark-mono")
-(hoarder:register-theme "nanzhong/nine27-theme")
 (hoarder:register-theme "onurtemizkan/paganini")
 (hoarder:register-theme "sjrmanning/darkokai")
 (hoarder:register-theme "ivanlukianchuk/myth-theme")
@@ -1939,6 +1947,7 @@
 (hoarder:register-theme "cs14095/civic-theme.el")
 (hoarder:register-theme "nuncostans/sexy-monochrome-theme")
 (hoarder:register-theme "kootenpv/emacs-kooten-theme")
+(hoarder:register-theme "techquila/melancholy-theme")
 
 ;;;;; local packages
 (cl-labels ((add-project-root (path &optional option)
@@ -4855,6 +4864,10 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
   '(:tag ["css" "html" "javascript"]))
 (hoarder:fetch "tonsky/FiraCode"
   '(:tag ["font" "programming" "ligature"]))
+(hoarder:fetch "tonsky/FiraCode.wiki"
+  '(:tag ["firacode" "font" "wiki"]))
+(hoarder:fetch "https://gist.github.com/mordocai/50783defab3c3d1650e068b4d1c91495.git"
+  '(:tag ["firacode" "font" "emacs"]))
 (hoarder:fetch "AvisoNovate/pretty"
   '(:tag ["clojure" "color" "ansi_color"]))
 (hoarder:fetch "razum2um/aprint"
@@ -5577,6 +5590,62 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "pgrho/animedb")
 (hoarder:fetch "openimages/dataset"
   '(:tag ["image" "photo" "data"]))
+(hoarder:fetch "jaspervdj/patat"
+  '(:tag ["presentation" "haskell" "markdown" "pandoc"]))
+(hoarder:fetch "faissaloo/Yukko"
+  '(:tag ["terminal" "python" "nntpchan" "bbs"]
+    :memo "[[https://www.reddit.com/r/coolgithubprojects/comments/55ht55/a_textbased_client_for_a_decentralised_imageboard/][Too Many Requests]]"))
+(hoarder:fetch "pickhardt/betty"
+  '(:tag ["cli" "ruby"]))
+(hoarder:fetch "SimonAlfie/fabricate"
+  '(:tag ["build" "make" "compile" "task" "python"]))
+(hoarder:fetch "rizsotto/Bear"
+  '(:tag ["clang" "make" "compile" "task" "build" "json_compilation_database"]))
+(hoarder:fetch "gittup/tup"
+  '(:tag ["build" "make" "compile" "task" "python"]
+    :site "http://gittup.org/tup"
+    :memo "[[https://news.ycombinator.com/item?id=12622097][Tup – A file-based build system for Linux, OS X, and Windows | Hacker News]]"))
+(hoarder:fetch "sdg-mit/gitless"
+  '(:tag ["git" "python"]
+    :site "http://gitless.com/"
+    :memo "[[https://news.ycombinator.com/item?id=12621837][Gitless: a version control system | Hacker News]]"))
+(hoarder:fetch "josuah/Config"
+  '(:tag ["configuration" "desktop" "unixporn" "screenshot"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/55d64v/dwm_tmux_23_with_pane_title/][{dwm} tmux 2.3 with pane title : unixporn]]"))
+(hoarder:fetch "poinck/ocelot"
+  '(:tag ["tiling_wm" "monsterwm" "dwm" "dzen" "desktop"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/55abb7/ocelot_a_dwmlike_desktop_with_sidepanel/][Too Many Requests]]"))
+(hoarder:fetch "https://gitlab.com/buildfunthings/emacs-config.git"
+  '(:tag ["emacs" "configuration" ]
+    :memo "[[https://www.youtube.com/watch?v=I28jFkpN5Zk][My GNU Emacs configuration for programming - YouTube]]"))
+(hoarder:fetch "jgthms/web-design-in-4-minutes"
+  '(:site "http://jgthms.com/web-design-in-4-minutes/"
+    :tag ["web" "design" "css" "html"]))
+(hoarder:fetch "fullsalvo/wzb-utils"
+  '(:tag ["configuration" "theme" "desktop" "rice" "zenbu" "whizkers"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/55oxoa/2bwm_themes/][Too Many Requests]]"))
+(hoarder:fetch "metakirby5/whizkers"
+  '(:tag ["configuration" "theme" "desktop" "rice" ]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/55oxoa/2bwm_themes/][Too Many Requests]]"))
+(hoarder:fetch "metakirby5/zenbu"
+  '(:tag ["configuration" "theme" "desktop" "rice" ]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/55oxoa/2bwm_themes/][Too Many Requests]]"))
+(hoarder:fetch "skr0tm/themes"
+  '(:tag ["configuration" "theme" "desktop" "rice" ]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/55oxoa/2bwm_themes/][Too Many Requests]]"))
+(hoarder:fetch "halfwit/dotfiles"
+  '(:memo " [[https://www.reddit.com/r/unixporn/comments/55otxh/general_searching_github_from_dmenupangoimlib/][Too Many Requests]]
+[[https://github.com/halfwit/dotfiles/blob/master/share/dsearch/gh][dotfiles/gh at master · halfwit/dotfiles · GitHub]]"))
+(hoarder:fetch "Floctioncers/Fi"
+  '(:tag ["prolog" "4chan"]))
+(hoarder:fetch "SnootyMonkey/clj-json-ld"
+  '(:tag ["clojure" "json-ld" "json"]))
+(hoarder:fetch "slburson/fset"
+  '(:tag ["common_lisp"]))
+(hoarder:fetch "trapd00r/LS_COLORS"
+  '(:tag ["ls" "colorscheme"]))
+(hoarder:fetch "arecker/emacs.d"
+  '(:tag ["configuration" "emacs" "use-package"]))
 
 ;;; end
 

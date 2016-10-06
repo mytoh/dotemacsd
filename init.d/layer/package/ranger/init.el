@@ -5,8 +5,9 @@
 ;;; Code:
 
 (liby 'ranger
-  (enable-option ranger-override-dired)
-  (req 'ranger
+  (command (ranger deer deer-dual-pane) "ranger")
+  (after 'ranger
+    (enable-option ranger-override-dired)
     (enable-option ranger-preview-file)))
 
 ;;; init.el ends here
