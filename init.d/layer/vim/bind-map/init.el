@@ -214,17 +214,20 @@
       "SPC" #'helm-M-x
       "?" #'helm-descbinds)
     (bind-map-set-keys my-base-leader-map
-      "hl" #'helm-resume
-      "hL" #'helm-locate-library
+      "rl" #'helm-resume
+      "fr" #'helm-recentf
+      "fel" #'helm-locate-library
       "hf" #'helm-features
-      "hCl" #'helm-colors
-      "hb" #'helm-bookmarks
+      "Cl" #'helm-colors
+      "fb" #'helm-filtered-bookmarks
       "hi" #'helm-info-at-point
       "hm" #'helm-man-woman
-      "ha" #'helm-apropos
-      "hry" #'helm-show-kill-ring
-      "hrr" #'helm-register
-      "hrm" #'helm-all-mark-rings)
+      "iu"   'helm-ucs
+      "hdd" #'helm-apropos
+      "<f1>" #'helm-apropos
+      "ry" #'helm-show-kill-ring
+      "rr" #'helm-register
+      "rm" #'helm-all-mark-rings)
     (bind-map-set-keys my-base-leader-theme-map
       "h" #'helm-themes))
 
