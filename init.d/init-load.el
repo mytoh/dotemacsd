@@ -18,10 +18,18 @@
 
 (muki-layer:load-layers 'package-manager
   '(boot
-    register
     ;; check
-    hoarder
     ))
+
+(muki-layer:load-layers 'package-registers
+  '(register
+    emacs
+    local
+    themes
+    general-packages))
+
+(muki-layer:load-layers 'elpa
+  '(archive))
 
 ;; essential
 (muki-layer:load-layers 'package
@@ -583,8 +591,6 @@
 
 ;;;;; packages
 ;; (require 'init-paketti)
-(muki-layer:load-layers 'elpa
-  '(archive))
 
 ;;;;; lang
 (muki-layer:load-layers 'lang
