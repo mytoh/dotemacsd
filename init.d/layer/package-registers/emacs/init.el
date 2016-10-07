@@ -1654,12 +1654,12 @@
 (hoarder:register "tj64/org-hlc")
 
 (hoarder:register "tj64/outorg" '(:compile nil
-                                  :branch "trunk"
-                                  :tag ["org" "outline"]))
+                            :branch "trunk"
+                            :tag ["org" "outline"]))
 (hoarder:register "tj64/outshine" '(:compile nil
-                                    :branch "trunk"
-                                    :tag ["org" "outline"]
-                                    :dependency ["tj64/outorg"]))
+                              :branch "trunk"
+                              :tag ["org" "outline"]
+                              :dependency ["tj64/outorg"]))
 ;; (hoarder:register "jleechpe/outorg-export")
 (hoarder:register "tj64/navi"
   '(:tag ["org" "outline"]))
@@ -1730,6 +1730,9 @@
   '(:tag ["org-attach" "bookmarking" "pinboard"]))
 (hoarder:register "alphapapa/org-bookmark-heading")
 (hoarder:register "takaxp/org-tree-slide")
+(hoarder:register "rejeep/commander.el"
+  '(:tag ["cli" "command" "option" "parse"]))
+
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
 ;;                    :dependency ["dbrock/bongo"]

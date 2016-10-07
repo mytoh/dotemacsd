@@ -3654,6 +3654,16 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["gnu_social"]))
 (hoarder:fetch "JackofSpades707/instant_torrent"
   '(:tag ["cli" "torrent" "python"]))
+(hoarder:fetch "RyanZim/awesome-npm-scripts"
+  '(:tag ["awesome_list" "npm"]))
+(hoarder:fetch "moebooru/moebooru"
+  '(:tag ["danbooru" "myimouto"]))
+(hoarder:fetch "http://code.acr.moe/kazari/sequenzia.git"
+  '(:tag ["danbooru" "myimouto" "moebooru"]
+    :site "https://sequenzia.acr.moe/"
+    :memo "[[https://acr.moe/index.php?title=Sequenzia_Project][Sequenzia Project - WinterLab Docs]]"))
+(hoarder:fetch "janlelis/whirly"
+  '(:tag ["cli" "spinners" "cli-spinners" "ruby"]))
 
 ;;; end
 
