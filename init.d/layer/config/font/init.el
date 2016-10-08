@@ -437,7 +437,7 @@
                      (compose-region (match-beginning 1)
                                      (match-end 1)
                                      ;; The first argument to concat is a string containing a literal tab
-                                     ,(concat "   " (list (decode-char 'ucs char))))))))
+                                     ,(concat "\t" (list (decode-char 'ucs char))))))))
             '(("\\(www\\)"                   #Xe100)
               ("[^/]\\(\\*\\*\\)[^/]"        #Xe101)
               ("\\(\\*\\*\\*\\)"             #Xe102)
