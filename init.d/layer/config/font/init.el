@@ -1,4 +1,8 @@
 ;;; config-font.el -*- lexical-binding: t -*-
+
+(require 'glof)
+(require 'colle)
+
 ;;;; font
 (cl-defun font-exists-p (font)
   "Check to see if the named FONT is available"
@@ -282,7 +286,81 @@
     
     (add-to-list 'default-frame-alist `(font . ,fontset))
     (set-face-font 'default fontset)
+    (muki:setup-yuki-ligature)
     ))
+
+(cl-defun muki:setup-yuki-ligature ()
+  ;; [[https://github.com/tonsky/FiraCode/issues/211][Add glyphs to unicode reserved plane · Issue #211 · tonsky/FiraCode · GitHub]]
+  ;; And if you're using the prettify-symbols-mode extension for vscode,
+  ;; you can use the following substitution settings.
+  ;; (prettify-symbols-mode for Emacs should look similar-ish, but you'll
+  ;; combine the pre, ugly, and post into the same regex and \ue00a0
+  ;; maybe can be replaced with a normal space.)
+  ;; "prettifySymbolsMode.substitutions": [
+  ;;   {
+  ;;     "language": "*",
+  ;;     "substitutions": [
+  ;;       { "ugly": "\\{2}", "pretty": "\u03bb", "post": "\\s*(?:\\w|_).*?\\s*->" },
+  ;;       { "ugly": "\\.=", "pretty": " \ue123", "pre": "[^.=:!/<>]|^", "post": "[^.=:!/<>]|$" },
+  ;;       { "ugly": "\\.-", "pretty": " \ue122", "pre": "[^.=:!/<>]|^", "post": "[^.=:!/<>]|$" },
+  
+  (defconst yuki-ligature-regex/chars-list
+    `((:ugly "->"
+             :pretty "Ä→"
+             :pre "[^-]"
+             :post "[^>]"
+             :from "\\(->\\)"
+             :to (?\Ä (base-right . base-center) ?\→)
+             :chars (#xc4 #x2192))
+      (:ugly "thread-first"
+             :pretty ""
+             :from "\\(thread-first\\)"
+             :to (?\Ä (base-right . base-center) ?\→)
+             :chars (#xc4 #x2192))
+      (:ugly "->>"
+             :pretty "->>"
+             :pre "[^-]"
+             :post "[^>]"
+             :from "\\(->>\\)"
+             :to (?\s (Br . Bl) ?\s (Br . Bl) ?\s
+                      (Bl . Bl) ?\Ä (Bc . Br) ?\Ä (Bc . Bc) ?>
+                      (base-center . base-left) ?\Ä (base-right . base-right) ?\→)
+             :chars (#xc4 #x2192
+                          ;; #x3e
+                          ))
+      (:ugly "lambda"
+             :pretty "λ"
+             :from "\\(lambda\\)"
+             :to (?\s (base-right . base-center) #x3bb)
+             :chars (#x3bb))
+      ))
+
+  (defconst yuki-ligature-font-lock-keywords-alist
+    (mapcar (lambda (r_or_c)
+              `(,(concat (glof:get r_or_c :pre "")
+                         (glof:get r_or_c :from)
+                         (glof:get r_or_c :post ""))
+                 (0 (prog1 ()
+                      (compose-region (match-beginning 1)
+                                      (match-end 1)
+                                      ',(glof:get r_or_c :to))))))
+            yuki-ligature-regex/chars-list))
+
+  (cl-letf ((yuki "-sxthe-yuki-normal-normal-normal-*-10-*-*-*-m-50-iso10646-1"))
+    (seq-each
+     (lambda (reps)
+       (seq-each
+        (lambda (c)
+          (set-fontset-font "fontset-yuki" (decode-char 'ucs c) yuki))
+        (glof:get reps :chars)))
+     yuki-ligature-regex/chars-list))
+
+  (defun add-yuki-ligature-symbol-keywords ()
+    (font-lock-add-keywords nil yuki-ligature-font-lock-keywords-alist))
+
+  (add-hook 'prog-mode-hook
+            #'add-yuki-ligature-symbol-keywords)
+  )
 
 (cl-defun set-ricty-font ()
   ;; [[http://mgi.hatenablog.com/entry/2014/02/11/085108]]
