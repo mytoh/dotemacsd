@@ -390,8 +390,38 @@
 
 (cl-defun muki:setup-fira-code-symbol ()
   ;;  [[https://github.com/tonsky/FiraCode/wiki/Setting-up-Emacs][Setting up Emacs · tonsky/FiraCode Wiki · GitHub]]
-  ;; [[https://github.com/tonsky/FiraCode/issues/211][Add glyphs to unicode reserved plane · Issue #211 · tonsky/FiraCode · GitHub]]
   ;; [[https://github.com/tonsky/FiraCode/files/412440/FiraCode-Regular-Symbol.zip]]
+  ;;
+  ;; [[https://github.com/tonsky/FiraCode/issues/211][Add glyphs to unicode reserved plane · Issue #211 · tonsky/FiraCode · GitHub]]
+  ;;  www  \ue100     **   \ue101    ***  \ue102    **/  \ue103
+  ;;  *>  \ue104     */   \ue105     \\  \ue106    \\\  \ue107
+  ;;  {-  \ue108     []   \ue109     ::  \ue10a    :::  \ue10b
+  ;;  :=  \ue10c     !!   \ue10d     !=  \ue10e    !==  \ue10f
+  ;;  -}  \ue110     --   \ue111    ---  \ue112    -->  \ue113
+  ;;  ->  \ue114    ->>   \ue115     -<  \ue116    -<<  \ue117
+  ;;  -~  \ue118     #{   \ue119     #[  \ue11a     ##  \ue11b
+  ;; ###  \ue11c   ####   \ue11d     #(  \ue11e     #?  \ue11f
+  ;;  #_  \ue120    #_(   \ue121     .-  \ue122     .=  \ue123
+  ;;  ..  \ue124    ..<   \ue125    ...  \ue126     ?=  \ue127
+  ;;  ??  \ue128     ;;   \ue129     /*  \ue12a    /**  \ue12b
+  ;;  /=  \ue12c    /==   \ue12d     />  \ue12e     //  \ue12f
+  ;; ///  \ue130     &&   \ue131     ||  \ue132    ||=  \ue133
+  ;;  |=  \ue134     |>   \ue135     ^=  \ue136     $>  \ue137
+  ;;  ++  \ue138    +++   \ue139     +>  \ue13a     +>  \ue13a
+  ;; =:=  \ue13b     ==   \ue13c    ===  \ue13d    ==>  \ue13e
+  ;;  =>  \ue13f    =>>   \ue140     <=  \ue141    =<<  \ue142
+  ;; =/=  \ue143     >-   \ue144     >=  \ue145    >=>  \ue146
+  ;;  >>  \ue147    >>-   \ue148    >>=  \ue149    >>>  \ue14a
+  ;;  <*  \ue14b    <*>   \ue14c     <|  \ue14d    <|>  \ue14e
+  ;;  <$  \ue14f    <$>   \ue150   <!--  \ue151     <-  \ue152
+  ;; <--  \ue153    <->   \ue154     <+  \ue155    <+>  \ue156
+  ;;  <=  \ue157    <==   \ue158    <=>  \ue159    <=<  \ue15a
+  ;;  <>  \ue15b     <<   \ue15c    <<-  \ue15d    <<=  \ue15e
+  ;; <<<  \ue15f     <~   \ue160    <~~  \ue161     </  \ue162
+  ;; </>  \ue163     ~@   \ue164     ~-  \ue165     ~=  \ue166
+  ;;  ~>  \ue167     ~~   \ue168    ~~>  \ue169     %%  \ue16a
+  ;;   x  \ue16b      :   \ue16c      +  \ue16d      *  \ue16f
+
 
 ;;; Fira code
   ;; This works when using emacs --daemon + emacsclient
