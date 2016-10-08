@@ -587,7 +587,7 @@
   ;;   (set-source-han-code-jp)
   ;;   (muki:font-set-rescale-alist)
   ;;   )
-  (muki:setup-fira-code-symbol)
+  ;; (muki:setup-fira-code-symbol)
   )
 
 ;; (font-info "Symbola)
