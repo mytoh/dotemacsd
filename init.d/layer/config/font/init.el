@@ -306,33 +306,34 @@
   
   (defconst yuki-ligature-regex/chars-list
     `((:ugly "->"
-             :pretty "Ä→"
-             :pre "[^-]"
-             :post "[^>]"
-             :from "\\(->\\)"
-             :to (?\Ä (base-right . base-center) ?\→)
-             :chars (#xc4 #x2192))
+       :pretty "Ä→"
+       :pre "[^-]"
+       :post "[^>]"
+       :from "\\(->\\)"
+       :to (?\Ä (base-right . base-center) ?\→)
+       :chars (#xc4 #x2192))
       (:ugly "thread-first"
-             :pretty ""
-             :from "\\(thread-first\\)"
-             :to (?\Ä (base-right . base-center) ?\→)
-             :chars (#xc4 #x2192))
+       :pretty ""
+       :from "\\(thread-first\\)"
+       :to (?\Ä (base-right . base-center) ?\→)
+       :chars (#xc4 #x2192))
       (:ugly "->>"
-             :pretty "->>"
-             :pre "[^-]"
-             :post "[^>]"
-             :from "\\(->>\\)"
-             :to (?\s (Br . Bl) ?\s (Br . Bl) ?\s
-                      (Bl . Bl) ?\Ä (Bc . Br) ?\Ä (Bc . Bc) ?>
-                      (base-center . base-left) ?\Ä (base-right . base-right) ?\→)
-             :chars (#xc4 #x2192
-                          ;; #x3e
-                          ))
+       :pretty "->>"
+       :pre "[^-]"
+       :post "[^>]"
+       :from "\\(->>\\)"
+       :to (?\s (Br . Bl) ?\s (Br . Bl) ?\s
+                ;; (Bl . Bl) ?\Ä (Bc . Br) ?\Ä (Bc . Bc) ?>
+                (base-left . base-left) ?\Ä (base-center . base-right) ?\Ä (base-center . base-center) ?\→
+                (base-center . base-left) ?\Ä (base-right . base-right) ?\→)
+       :chars (#xc4 #x2192
+                    ;; #x3e
+                    ))
       (:ugly "lambda"
-             :pretty "λ"
-             :from "\\(lambda\\)"
-             :to (?\s (base-right . base-center) #x3bb)
-             :chars (#x3bb))
+       :pretty "λ"
+       :from "\\(lambda\\)"
+       :to (?\s (base-right . base-center) #x3bb)
+       :chars (#x3bb))
       ))
 
   (defconst yuki-ligature-font-lock-keywords-alist
@@ -340,10 +341,10 @@
               `(,(concat (glof:get r_or_c :pre "")
                          (glof:get r_or_c :from)
                          (glof:get r_or_c :post ""))
-                 (0 (prog1 ()
-                      (compose-region (match-beginning 1)
-                                      (match-end 1)
-                                      ',(glof:get r_or_c :to))))))
+                (0 (prog1 ()
+                     (compose-region (match-beginning 1)
+                                     (match-end 1)
+                                     ',(glof:get r_or_c :to))))))
             yuki-ligature-regex/chars-list))
 
   (cl-letf ((yuki "-sxthe-yuki-normal-normal-normal-*-10-*-*-*-m-50-iso10646-1"))
