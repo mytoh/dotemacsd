@@ -3664,6 +3664,12 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
     :memo "[[https://acr.moe/index.php?title=Sequenzia_Project][Sequenzia Project - WinterLab Docs]]"))
 (hoarder:fetch "janlelis/whirly"
   '(:tag ["cli" "spinners" "cli-spinners" "ruby"]))
+(hoarder:fetch "nvbn/clj-di"
+  '(:tag ["clojure" "dependency_injection"]
+    :memo "[[https://www.youtube.com/watch?v=g7W6n47mur4][Dependency management in Clojure by Holger Schauer - YouTube]]"))
+(hoarder:fetch "schaueho/funsig"
+  '(:tag ["clojure" "dependency_injection"]
+    :memo "[[https://www.youtube.com/watch?v=g7W6n47mur4][Dependency management in Clojure by Holger Schauer - YouTube]]"))
 
 ;;; end
 

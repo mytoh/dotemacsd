@@ -320,6 +320,12 @@
     (bind-map-set-keys my-base-leader-map
       "ath" #'helm-proc))
 
+  (liby 'neotree
+    (bind-map-set-keys my-base-leader-map
+      "ft" #'neotree-toggle
+      ;; "pt" #'neotree-find-project-root
+      ))
+
   )
 
 ;;; init.el ends here

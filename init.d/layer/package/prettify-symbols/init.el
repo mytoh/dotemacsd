@@ -21,11 +21,11 @@
 ;; We're going to play with this below.
 (defvar endless/emacs-lisp-prettify-alist '())
 
-(add-to-list 'endless/emacs-lisp-prettify-alist
-             '("thread-first" . (?\s (Br . Bl) ?\s (Bc . Bc) ?🠊)))
-(add-to-list 'endless/emacs-lisp-prettify-alist
-             '("thread-last" . (?\s (Br . Bl) ?\s (Br . Bl) ?\s
-                                (Bc . Br) ?🠊 (Bc . Bl) ?🠊)))
+;; (add-to-list 'endless/emacs-lisp-prettify-alist
+;;              '("thread-first" . (?\s (Br . Bl) ?\s (Bc . Bc) ?🠊)))
+;; (add-to-list 'endless/emacs-lisp-prettify-alist
+;;              '("thread-last" . (?\s (Br . Bl) ?\s (Br . Bl) ?\s
+;;                                 (Bc . Br) ?🠊 (Bc . Bl) ?🠊)))
 
 ;; (add-to-list 'endless/emacs-lisp-prettify-alist
 ;;              '("thread-first" . (?- (Br . Bc) ?- (Br . Bc) ?>)))
@@ -38,8 +38,8 @@
   (setq-local prettify-symbols-alist
               (seq-concatenate 'list prettify-symbols-alist endless/emacs-lisp-prettify-alist))
   (cl-labels ((add (name char)
-                (add-to-list 'prettify-symbols-alist
-                             (sis:pair name char))))
+                   (add-to-list 'prettify-symbols-alist
+                                (sis:pair name char))))
     (add "pcase-lambda"  ?\꓀
          ;; ?\⫍ ?\⌦ ?\⍍ ?\⍃ ?\⎇ ?\⑁ ?\𝈑 ?\꓀ ?\꓃ ?\𝈄
          )

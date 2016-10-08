@@ -337,10 +337,11 @@
     el-search
     elisp-refs
     podcaster
-    lisp-extra-font-lock
+    ;; lisp-extra-font-lock
     treemacs
     japanese-holidays
     undo-tree
+    help-mode
     ;; pangu-spacing
     ;; uuid
     ;; ert-modeline ; cause yatemplate error

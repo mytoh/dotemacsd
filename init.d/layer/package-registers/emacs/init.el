@@ -1290,7 +1290,7 @@
 (hoarder:register "https://gitlab.com/RobertCochran/neato-graph-bar.git"
   '(:tag ["cpu" "memory" "monitor"]))
 (hoarder:register "https://gitlab.com/tarsius/epkg.git"
-  '(:tag ["emacsmirro" "package" "archive"]
+  '(:tag ["emacsmirror" "package" "archive"]
     :dependency ["https://gitlab.com/tarsius/closql.git"
                  "skeeto/emacsql"
                  "skeeto/elisp-finalize"]))
@@ -1507,7 +1507,8 @@
 (hoarder:register "dryman/toml-mode.el"
   '(:tag ["toml"]))
 (hoarder:register "domtronn/all-the-icons.el"
-  '(:tag ["icon" "font"]))
+  '(:tag ["icon" "font"]
+    :dependency ["emacsmirror/font-lock-plus"]))
 (hoarder:fetch"domtronn/all-the-icons.el.wiki"
   '(:tag ["emacs" "icon" "font"]))
 (hoarder:register "mutbuerger/ert-flash-modeline"
@@ -1732,7 +1733,7 @@
 (hoarder:register "takaxp/org-tree-slide")
 (hoarder:register "rejeep/commander.el"
   '(:tag ["cli" "command" "option" "parse"]))
-
+(hoarder:register "emacsmirror/font-lock-plus")
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
 ;;                    :dependency ["dbrock/bongo"]
