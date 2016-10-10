@@ -51,7 +51,7 @@
   '(:tag ["helm" "flycheck"]))
 (hoarder:register "emacs-helm/helm-descbinds"
   '(:tag ["helm"]))
-(hoarder:register "yasuyk/helm-company"
+(hoarder:register "manuel-uberti/helm-company"
   '(:dependency ["rejeep/f.el"]
     :tag ["helm" "company"]))
 (hoarder:register "emacs-helm/helm-dictionary"
@@ -1759,8 +1759,13 @@
   '(:tag ["kodi"]))
 (hoarder:register "nschum/window-numbering.el")
 (hoarder:register "kshramt/company-ngram")
-(hoarder:register "Yuki-Inoue/tblui.el")
-(hoarder:register "abo-abo/pamparam")
+(hoarder:register "Yuki-Inoue/tblui.el"
+  '(:dependency ["politza/tablist"]))
+(hoarder:register "abo-abo/pamparam"
+  '(:dependency ["abo-abo/worf"]))
+(hoarder:register "https://bitbucket.org/agriggio/ahg"
+  '(:tag ["mercurial"]
+    :type :hg))
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
