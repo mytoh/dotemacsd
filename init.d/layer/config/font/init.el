@@ -307,21 +307,17 @@
   (defconst yuki-ligature-regex/chars-list
     `((:ugly "->"
        :pretty "Ä→"
-       :pre "[^-]"
-       :post "[^>]"
-       :from "\\(->\\)"
+       :from "\\_<\\(?1:->\\)\\_>"
        :to (?\Ä (base-right . base-center) ?\→)
        :chars (#xc4 #x2192))
       (:ugly "thread-first"
        :pretty ""
-       :from "\\(thread-first\\)"
+       :from "\\_<\\(?1:thread-first\\)\\_>"
        :to (?\Ä (base-right . base-center) ?\→)
        :chars (#xc4 #x2192))
       (:ugly "->>"
        :pretty "->>"
-       :pre "[^-]"
-       :post "[^>]"
-       :from "\\(->>\\)"
+       :from "\\_<\\(?1:->>\\)\\_>"
        :to (?\s (Br . Bl) ?\s (Br . Bl) ?\s
                 ;; (Bl . Bl) ?\Ä (Bc . Br) ?\Ä (Bc . Bc) ?>
                 (base-left . base-left) ?\Ä (base-center . base-right) ?\Ä (base-center . base-center) ?\→
@@ -331,7 +327,7 @@
                     ))
       (:ugly "lambda"
        :pretty "λ"
-       :from "\\(lambda\\)"
+       :from "\\(1?:lambda\\)"
        :to (?\s (base-right . base-center) #x3bb)
        :chars (#x3bb))
       ))

@@ -182,7 +182,7 @@
                           `((,my-regexp-special-variables-without-hyphen . font-lock-keyword-face))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-hook 'emacs-lisp-mode-hook #'muki:elisp-byte-compile-buffer)
+;; (add-hook 'emacs-lisp-mode-hook #'muki:elisp-byte-compile-buffer)
 (add-hook 'emacs-lisp-mode-hook #'muki:elisp-buffer-enable-reindent)
 (add-hook 'emacs-lisp-mode-hook #'muki:elisp-check-parens)
 (add-hook 'emacs-lisp-mode-hook #'checkdoc-minor-mode)

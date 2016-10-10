@@ -53,11 +53,5 @@
   (command (magit-status magit-log magit-init
                          magit-list-repositories)
            "magit")
-  (command (with-editor-finish
-            with-editor-cancel
-            with-editor-finish
-            with-editor-cancel)
-           "with-editor")
-
   (muki:magit-setup)
   )

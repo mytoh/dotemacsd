@@ -3101,10 +3101,6 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["configuration" "template" "rice" "desktop"]))
 (hoarder:fetch "matthunz/dotfiles"
   '(:tag ["dotfiles"]))
-(hoarder:fetch "Mon-Ouie/blocky"
-  '(:tag ["common_lisp" "game"]
-    :memo " [[https://www.youtube.com/watch?v=i03_VzOmDko][emacs glass demo - YouTube]]
-[[https://github.com/Mon-Ouie/blocky/blob/master/glass.el][blocky/glass.el at master · Mon-Ouie/blocky · GitHub]] "))
 (hoarder:fetch "guarinogabriel/Mac-CLI"
   '(:tag ["macos" "cli" "shellscript"]))
 (hoarder:fetch "rgcr/m-cli"
@@ -3609,7 +3605,9 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
     :memo "[[https://news.ycombinator.com/item?id=12621837][Gitless: a version control system | Hacker News]]"))
 (hoarder:fetch "josuah/Config"
   '(:tag ["configuration" "desktop" "unixporn" "screenshot"]
-    :memo "[[https://www.reddit.com/r/unixporn/comments/55d64v/dwm_tmux_23_with_pane_title/][{dwm} tmux 2.3 with pane title : unixporn]]"))
+    :memo "[[https://www.reddit.com/r/unixporn/comments/55d64v/dwm_tmux_23_with_pane_title/][{dwm} tmux 2.3 with pane title : unixporn]]
+[[https://www.reddit.com/r/unixporn/comments/55kjdb/tmux_tty_with_custom_theme/][Too Many Requests]]
+"))
 (hoarder:fetch "poinck/ocelot"
   '(:tag ["tiling_wm" "monsterwm" "dwm" "dzen" "desktop"]
     :memo "[[https://www.reddit.com/r/unixporn/comments/55abb7/ocelot_a_dwmlike_desktop_with_sidepanel/][Too Many Requests]]"))
@@ -3670,6 +3668,41 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "schaueho/funsig"
   '(:tag ["clojure" "dependency_injection"]
     :memo "[[https://www.youtube.com/watch?v=g7W6n47mur4][Dependency management in Clojure by Holger Schauer - YouTube]]"))
+(hoarder:fetch "drikin/backspace"
+  '(:tag ["podcast" "backspacefm"]))
+(hoarder:fetch "smxi/inxi"
+  '(:tag ["hardware" "infomation" "system" "linux"]))
+(hoarder:fetch "baron42bba/.emacs.d"
+  '(:tag ["emacs" "tmux" "org-mode" "screenshot"]
+    :memo "[[https://github.com/baron42bba/.emacs.d/commit/ed5da7dda894eec20658208f3b40e5b334d77f36][capture screenshots of ncurses tools · baron42bba/.emacs.d@ed5da7d · GitHub]]"))
+(hoarder:fetch "bogem/nehm"
+  '(:tag ["id3" "soundcloud" "itunes"]))
+(hoarder:fetch "vhf/free-programming-books"
+  '(:tag ["programming" "book"]))
+(hoarder:fetch "Lukas-W/font-linux"
+  '(:download nil
+    :tag ["font" "icon" "linux"]))
+(hoarder:fetch "horst3180/vertex-theme"
+  '(:tag ["theme" "gtk" "desktop" "linux"]))
+(hoarder:fetch "deluxo/csw"
+  '(:tag ["openweathermap" "weather" "csharp" "mono"]))
+(hoarder:fetch "nixers-projects/urnn"
+  '(:tag ["unix" "linux" "image" "fann" "neural_network"]))
+(hoarder:fetch "apierz/dotfiles"
+  '(:tag ["macos" "emacs" "configuration" "dotfiles" "nerdbar"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/4y65u3/osxkwm_spooky_osx_emacs_iterm_dracula_theme_tmux/][{OSX/KWM} spooky OSX: Emacs, iterm, dracula Theme, tmux, nerdbar : unixporn]]
+[[https://www.reddit.com/r/unixporn/comments/55kdc2/kwm_doom_comes_to_macos/][{kwm} Doom Comes to macOS : unixporn]] "))
+(hoarder:fetch "alexanderjeurissen/dotfiles"
+  '(:tag ["gotham" "dotfiles" "configuration" "tmux" "vim" "iterm"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/44gvt3/tmux_gotham_tmux_iterm_vim_setup/][Too Many Requests]]"))
+(hoarder:fetch "r7kamura/somemoji"
+  '(:tag ["ruby" "emoji" "json" "noto" "twemoji" "emojione"]))
+(hoarder:fetch "internetarchive/heritrix3"
+  '(:site "https://webarchive.jira.com/wiki/display/Heritrix"
+    :tag ["web_archive" "warc" "crawler" "archive"]
+    :memo "[[https://www.youtube.com/watch?v=8gcu2GQf7PI][Collections as Data: Stewardship and Use Models to Enhance Access - YouTube]] 05:21:28"))
+(hoarder:fetch "MunGell/awesome-for-beginners"
+  '(:tag ["awesome_list" "github"]))
 
 ;;; end
 

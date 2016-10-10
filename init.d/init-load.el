@@ -342,6 +342,11 @@
     japanese-holidays
     undo-tree
     help-mode
+    auto-compile
+    with-editor
+    pcap-mode
+    window-numbering
+    ;; golden-ratio
     ;; pangu-spacing
     ;; uuid
     ;; ert-modeline ; cause yatemplate error
@@ -381,7 +386,6 @@
     ;; camcorder
     ;; init-chart
     ;; spray
-    ;; golden-ratio
     ;; writing-utils
     ;; elnode
     ;; tabbar
@@ -460,6 +464,7 @@
 
     evil-org-mode
     evil-ediff
+    opener
     ;; org-evil
     
     ;; pure-evil
@@ -482,7 +487,7 @@
     org-mode
     expand-region
     skk-mode
-    magit
+    with-editor
     package-menu-mode
     picpocket
     ))
@@ -531,6 +536,7 @@
     helm-browse
     helm-org-rifle
     helm-descbinds
+    helm-smex
     ;; helm-company
     ;; helm-delicious
     ))
@@ -540,6 +546,7 @@
     company
     company-shell
     company-statistics
+    company-ngram
     ;; company-emoji
     ;; company-quickhelp
     ;; company-org-headings

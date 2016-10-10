@@ -141,7 +141,9 @@
   '(:tag ["helm" "emms"]))
 (hoarder:register "cute-jumper/ace-jump-helm-line"
   '(:dependency ["abo-abo/ace-window"]))
-(hoarder:register "shosti/helm-unicode"
+;; (hoarder:register "shosti/helm-unicode"
+;;   '(:tag ["helm" "unicode"]))
+(hoarder:register "bomgar/helm-unicode"
   '(:tag ["helm" "unicode"]))
 (hoarder:register "jupl/helm-gitignore"
   '(:tag ["helm" "git" "gitignore"]))
@@ -166,6 +168,9 @@
   '(:tag ["helm" "helm-fuzzier" "helm-flx"]))
 (hoarder:register "vapniks/helm-delicious"
   '(:tag ["helm" "delicious" "bookmark"]))
+(hoarder:register "ptrv/helm-smex"
+  '(:tag ["helm" "smex" "M-x"]
+    :dependency ["nonsequitur/smex"]))
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]
 ;;                    :dependency ["michael-heerdegen/iterators.el"]))
@@ -288,6 +293,8 @@
 (hoarder:register "Dewdrops/evil-ReplaceWithRegister")
 (hoarder:register "troyp/evil-visual-replace")
 (hoarder:register "wbolster/evil-swap-keys")
+(hoarder:register "0robustus1/opener.el"
+  '(:dependency ["tkf/emacs-request"]))
 
 ;;;;;  general packages
 (hoarder:register "magnars/s.el")
@@ -1734,6 +1741,27 @@
 (hoarder:register "rejeep/commander.el"
   '(:tag ["cli" "command" "option" "parse"]))
 (hoarder:register "emacsmirror/font-lock-plus")
+(hoarder:register "alphapapa/mosey.el")
+(hoarder:register "alezost/mwim.el")
+(hoarder:register "ejmr/php-mode")
+(hoarder:register "fukamachi/kindly-mode"
+  '(:tag ["kindle"]))
+(hoarder:register "TheBB/spaceline"
+  '(:tag ["mode-line" "spacemacs" "powerline"]))
+(hoarder:register "tarsius/auto-compile"
+  '(:tag ["compile"]))
+(hoarder:register "swannodette/clojure-snippets"
+  '(:tag ["clojure" "snippet" "yasnippet"]))
+(hoarder:fetch "https://bitbucket.org/shackra/secretaria.el.git"
+  '(:memo "[[https://www.reddit.com/r/emacs/comments/56l1z2/can_the_community_review_my_package_secretariael/][Too Many Requests]]"
+    :tag ["org"]))
+(hoarder:register "spiderbit/kodi-remote.el"
+  '(:tag ["kodi"]))
+(hoarder:register "nschum/window-numbering.el")
+(hoarder:register "kshramt/company-ngram")
+(hoarder:register "Yuki-Inoue/tblui.el")
+(hoarder:register "abo-abo/pamparam")
+
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
 ;;                    :dependency ["dbrock/bongo"]
@@ -1756,6 +1784,13 @@
 ;;                             :info "info")))
 ;;   ((file-directory-p "/usr/local/share/emacs/24.3/site-lisp/skk")
 ;;    (hoarder:register-local "/usr/local/share/emacs/24.3/site-lisp/skk")))
+
+(hoarder:fetch "tromey/el-compilador"
+  '(:tag ["emacs" "emcas-lisp" "compiler"]))
+(hoarder:fetch "Mon-Ouie/blocky"
+  '(:tag ["common_lisp" "game" "emacs"]
+    :memo " [[https://www.youtube.com/watch?v=i03_VzOmDko][emacs glass demo - YouTube]]
+[[https://github.com/Mon-Ouie/blocky/blob/master/glass.el][blocky/glass.el at master · Mon-Ouie/blocky · GitHub]] "))
 
 
 ;;; init.el ends here
