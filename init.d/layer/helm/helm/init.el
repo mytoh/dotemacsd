@@ -19,7 +19,7 @@
 
   (enable-mode helm-autoresize-mode)
   (after 'migemo
-      (enable-mode helm-migemo-mode))
+    (enable-mode helm-migemo-mode))
 
   (setq helm-autoresize-max-height 35)
   (setq helm-autoresize-min-height 35)
@@ -31,10 +31,10 @@
       (when (display-graphic-p)
         (set-face-attribute 'helm-selection nil
                             :background
-                            (color-lighten-name background percent)))))
+          (color-lighten-name background percent)))))
 
   (after 'helm
-      (hook 'helm-after-update-hook #'muki:helm-set-face))
+    (hook 'helm-after-update-hook #'muki:helm-set-face))
 
   (defun helm-select-2nd-action-or-end-of-line ()
     "Select the 2nd action for the currently selected candidate.
@@ -46,12 +46,12 @@ Otherwise goto the end of minibuffer."
       (end-of-line)))
 
   (after 'helm
-      ;; bind C-1 to C-9 to actions
-      (cl-loop for n from 0 to 8 do
-            (add-key helm-map (format "C-%s" (1+ n))
-                     `(lambda ()
-                        (interactive)
-                        (helm-select-nth-action ,n)))))
+    ;; bind C-1 to C-9 to actions
+    (cl-loop for n from 0 to 8 do
+             (add-key helm-map (format "C-%s" (1+ n))
+                      `(lambda ()
+                         (interactive)
+                         (helm-select-nth-action ,n)))))
   ;; helm mode mappings
   (define-key helm-map (kbd "C-j") #'helm-next-line)
   (define-key helm-map (kbd "C-k") #'helm-previous-line)
@@ -70,11 +70,11 @@ Otherwise goto the end of minibuffer."
   (global-set-key [remap find-tag]         #'helm-etags-select)
 
   (after 'helm
-      (add-key helm-map
-        "C-M-n" #'helm-next-source
-        "C-M-p" #'helm-previous-source))
+    (add-key helm-map
+      "C-M-n" #'helm-next-source
+      "C-M-p" #'helm-previous-source))
   (after 'helm
-      (add-key helm-read-file-map "C-h" #'delete-backward-char))
+    (add-key helm-read-file-map "C-h" #'delete-backward-char))
   ;; (add-key helm-read-file-map "TAB" #'helm-execute-persistent-action)
 
   (set-option helm-idle-delay          0.01
@@ -174,22 +174,22 @@ Otherwise goto the end of minibuffer."
   (after 'helm-files
 
   ;;;; Modify source attributes
-      ;;
-      ;; (defun muki:helm-ff-candidates-html-p (candidate)
-      ;;   (message (format "%s" candidate))
-      ;;   (string-match-p "\.htm[l]*$" candidate))
+    ;;
+    ;; (defun muki:helm-ff-candidates-html-p (candidate)
+    ;;   (message (format "%s" candidate))
+    ;;   (string-match-p "\.htm[l]*$" candidate))
 
-      ;; Add actions to `helm-source-find-files' IF:
-      ;; open with eww
-      ;; (cl-defmethod helm-setup-user-source ((source helm-source-ffiles))
-      ;;   (helm-source-add-action-to-source-if
-      ;;    "Open file with eww"
-      ;;    'eww-open-file
-      ;;    source
-      ;;    'muki:helm-ff-candidates-html-p))
+    ;; Add actions to `helm-source-find-files' IF:
+    ;; open with eww
+    ;; (cl-defmethod helm-setup-user-source ((source helm-source-ffiles))
+    ;;   (helm-source-add-action-to-source-if
+    ;;    "Open file with eww"
+    ;;    'eww-open-file
+    ;;    source
+    ;;    'muki:helm-ff-candidates-html-p))
 
-      (add-to-list 'helm-find-files-actions
-       '("EWW" . eww-open-file) 'append)
+    (add-to-list 'helm-find-files-actions
+                 '("EWW" . eww-open-file) 'append)
 
     ;; insert a candidate
     (cl-defmethod helm-setup-user-source ((source helm-source-ffiles))
@@ -224,12 +224,12 @@ Otherwise goto the end of minibuffer."
                            helm-external-programs-associations
                            :test #'equalp))
                    (com (if found (cdr found) "xdg-open")))
-                  (message "runnig %s with %s" com file)
-                  (start-process-shell-command "test" nil
-                                               (concat com
-                                                       " "
-                                                       file
-                                                       " &")))))))
+             (message "runnig %s with %s" com file)
+             (start-process-shell-command "test" nil
+                                          (concat com
+                                                  " "
+                                                  file
+                                                  " &")))))))
     (put 'muki:helm-ff-open-external 'helm-only t)
 
     (define-key helm-find-files-map (kbd "C-c C-x")
@@ -261,10 +261,6 @@ Otherwise goto the end of minibuffer."
   (command (helm-list-elisp-packages) "helm-elisp-package")
   )
 
-;; helm-git-grep
-(liby 'helm-git-grep
-  (command (helm-git-grep) "helm-git-grep")
-  )
 
 
 ;;; init-helm.el ends here

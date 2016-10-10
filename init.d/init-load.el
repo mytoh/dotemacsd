@@ -538,8 +538,8 @@
     helm-org-rifle
     helm-descbinds
     helm-smex
-    ;; helm-company
     helm-company
+    helm-git-grep
     ;; helm-delicious
     ))
 
