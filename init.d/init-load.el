@@ -547,7 +547,7 @@
     company-shell
     company-statistics
     company-ngram
-    ;; company-emoji
+    company-emoji
     ;; company-quickhelp
     ;; company-org-headings
     ;; company-dict
