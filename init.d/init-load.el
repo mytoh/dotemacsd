@@ -539,6 +539,7 @@
     helm-descbinds
     helm-smex
     ;; helm-company
+    helm-company
     ;; helm-delicious
     ))
 
