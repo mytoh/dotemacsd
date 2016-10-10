@@ -346,6 +346,7 @@
     with-editor
     pcap-mode
     window-numbering
+    ;; ahg
     ;; golden-ratio
     ;; pangu-spacing
     ;; uuid
