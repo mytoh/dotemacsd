@@ -8,7 +8,7 @@
   (command (beacon-mode) "beacon")
   (hook 'emacs-lisp-mode-hook #'beacon-mode)
   (after 'beacon
-      (add-to-list 'beacon-dont-blink-major-modes
-       'eshell-mode)))
+    (cl-pushnew 'eshell-mode
+                beacon-dont-blink-major-modes)))
 
 ;;; init.el ends here

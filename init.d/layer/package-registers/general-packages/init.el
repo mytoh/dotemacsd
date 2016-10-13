@@ -3703,6 +3703,70 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
     :memo "[[https://www.youtube.com/watch?v=8gcu2GQf7PI][Collections as Data: Stewardship and Use Models to Enhance Access - YouTube]] 05:21:28"))
 (hoarder:fetch "MunGell/awesome-for-beginners"
   '(:tag ["awesome_list" "github"]))
+(hoarder:fetch "devfake/flox"
+  '(:desc "Flox is a self hosted Movie watch list. It's build on top of PHP (Laravel), MySQL and Vue.js and uses The Movie Database API. "
+    :tag ["movie" "php" "vuejs" "database" "tmdb"]))
+(hoarder:fetch "guyzmo/git-repo"
+  '(:tag ["git" "github" "bitbucket" "gitlab"]
+    :memo "[[https://news.ycombinator.com/item?id=12677870][Git-repo – Manage Gitlab, GitHub and Bitbucket from the command line | Hacker News]]"))
+(hoarder:fetch "ingydotnet/git-hub"
+  '(:tag ["git" "github"]))
+(hoarder:fetch "seveas/git-spindle"
+  '(:tag ["git" "github"]))
+(hoarder:fetch "tagspaces/tagspaces"
+  '(:tag ["file_manager" "note" "tagging" "document"]))
+(hoarder:fetch "pjhalsli/configs"
+  '(:tag ["bspwm" "configuration"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/56r2qr/bspwm_having_fun_with_colors/][Too Many Requests]]"))
+(hoarder:fetch "thelostt/etc"
+  '(:tag ["muxx" "configuration" "dotfiles"]
+    :memo "[[https://github.com/muxx-utils][muxx-utils · GitHub]]
+[[https://www.reddit.com/r/unixporn/comments/56pi5o/muxx_working_on_that_ricing_book/][Too Many Requests]]"))
+(hoarder:fetch "muxx-utils/muxx"
+  '(:tag ["muxx" "configuration" "dotfiles"]
+    :memo "[[https://github.com/muxx-utils][muxx-utils · GitHub]]
+[[https://www.reddit.com/r/unixporn/comments/56pi5o/muxx_working_on_that_ricing_book/][Too Many Requests]]"))
+(hoarder:fetch "neg-serg/neg-dark"
+  '(:tag ["arc-dark" "gtk" "desktop" "theme" "lollypop"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/56p2p2/notion_arcmoredark_or_negdark/][Too Many Requests]]"))
+(hoarder:fetch "Bfgeshka/dotfiles"
+  '(:tag ["dwm" "configuration" "dotfiles"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/56mgcd/dwm_siht_gnidaer_uoy_era_yhw/][{dwm} siht gnidaer uoy era yhw : unixporn]]"))
+(hoarder:fetch "b4b4r07/enhancd"
+  '(:tag ["autojump" "z" "cli" "cd"]))
+(hoarder:fetch "fsharp/fsharp"
+  '(:memo " [[https://www.youtube.com/watch?v=Jhks5pYbHbI][Learning F# - YouTube]]
+[[https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.seq-module-%5bfsharp%5d][Collections.Seq Module (F#)]]
+[[https://docs.microsoft.com/en-us/dotnet/articles/fsharp/language-reference/fsharp-collection-types][F# Collection Types]]"))
+(hoarder:fetch "ninrod/dotfiles"
+  '(:tag ["emacs" "dotfiles" "org-mode" "use-package"]
+    :memo "[[https://github.com/ninrod/dotfiles/blob/master/emacs.d/boot.org][dotfiles/boot.org at master · ninrod/dotfiles · GitHub]]
+[[https://www.reddit.com/r/emacs/comments/570xgw/wanting_to_try_org_is_bringing_me_to_emacs/][Too Many Requests]]"))
+(hoarder:fetch "michaeldfallen/git-radar"
+  '(:tag ["shell" "propmpt"]))
+(hoarder:fetch "vincpa/git-psradar"
+  '(:tag ["shell" "propmpt"]))
+(hoarder:fetch "stobenski/pro"
+  '(:tag ["awesomewm" "theme"]))
+(hoarder:fetch "nicholasglazer/arch-cheat-sheet"
+  '(:tag ["cheatsheet" "archlinux" "linux"]
+    :site "http://nicholasglazer.github.io/arch-cheat-sheet/"
+    :memo "[[https://www.reddit.com/r/unixporn/comments/56yyo0/no_desktop_environment_archlinux_cheat_sheet/][Too Many Requests]]"))
+(hoarder:fetch "dvdhrm/kmscon"
+  '(:tag ["terminal" "console" "linux" "kms"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/571na6/kmscontmuxomxplayer_raspberry_pi_2_b_bored_again/][Too Many Requests]]"))
+(hoarder:fetch "http://hg.dillo.org/dillo"
+  '(:type :hg
+    :tag ["browser" "fltk"]))
+(hoarder:fetch "microsounds/akari-bbs"
+  '(:tag ["4chan" "bbs"]
+    :site "http://akaribbs.mooo.com/"
+    :memo "[[https://boards.4chan.org/g/thread/57038921][/g/ - Why aren't you running Debian GNU/Linux on all you - Technology - 4chan]]"))
+(hoarder:fetch "ryotakato/gauenv"
+  '(:tag ["gauche" "scheme" "rbenv" "ruby-build" "bash"]))
+(hoarder:fetch "BruceDone/awesome-crawler"
+  '(:tag ["awesome_list" "crawler" "scraping"]))
+
 
 ;;; end
 

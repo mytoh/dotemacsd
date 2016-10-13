@@ -16,6 +16,11 @@
 (muki-layer:load-layers 'system
   '(freebsd darwin))
 
+(muki-layer:load-layers 'config
+  '(
+    setting
+    ))
+
 (muki-layer:load-layers 'package-manager
   '(boot
     ;; check
@@ -67,7 +72,8 @@
 (muki-layer:load-layers 'package
   '(
     ;; no-littering
-    migemo
+    ;; migemo
+    cmigemo
     ssh-config-mode
     emacs-refactor
     ;; artbollocks-mode
@@ -240,7 +246,7 @@
     wordnut
     erlang
     sml-mode
-    ;; beacon ; error invalid face :background
+    ;; beacon 
     clipmon
     font-lock-studio
     emojify
@@ -254,7 +260,6 @@
     unkillable-scratch
     ;; mode-icons
     char-menu
-    aggressive-indent
     link-hint
     tldr
     party-mode
@@ -346,6 +351,12 @@
     with-editor
     pcap-mode
     window-numbering
+    vlfi
+    copyit
+
+    aggressive-indent
+    ;; parinfer
+
     ;; ahg
     ;; golden-ratio
     ;; pangu-spacing
@@ -575,7 +586,6 @@
 ;;;;; config
 (muki-layer:load-layers 'config
   '(
-    setting
     key
     hook
     path

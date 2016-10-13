@@ -14,6 +14,7 @@
   (mode "\\.djhtml\\'"  #'web-mode)
   (mode "\\.html?\\'"  #'web-mode)
   (mode "\\.json\\'"  #'web-mode)
+  (mode "\\.js\\'"  #'web-mode)
   ;; (mode "\\.css\\'" #'web-mode)
   )
 

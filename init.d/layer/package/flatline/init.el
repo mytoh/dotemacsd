@@ -4,21 +4,21 @@
 (req 'flatline
 
   (defface flatline-theme-muki-edge
-      '((t (:foreground "gray10"
-            :background "Darkorange3"
-            :box nil)))
+    '((t (:foreground "gray10"
+          :background "Darkorange3"
+          :box nil)))
     "face for left")
 
   (defface flatline-theme-muki-middle
-      '((t (:foreground "gray10"
-            :background  "yellow4"
-            :box nil)))
+    '((t (:foreground "gray10"
+          :background  "yellow4"
+          :box nil)))
     "face for sub")
 
   (defface flatline-theme-muki-fill
-      '((t (:foreground  "white"
-            :background  "#112230"
-            :box nil)))
+    '((t (:foreground  "white"
+          :background  "#112230"
+          :box nil)))
     "face for left sub sub")
 
   (cl-defun muki:flatline:vc-mode ()
@@ -46,7 +46,7 @@
   (cl-defun muki:flatline:buffer-name ()
     (cl-letf ((ro (propertize "🔒" 'face
                               `(:foreground "#bfcf3f"
-                                            :background ,(face-background (flatline:theme-get-face :left-sub))))))
+                                :background ,(face-background (flatline:theme-get-face :left-sub))))))
       (if buffer-read-only
           (cl-concatenate 'string
                           (propertize " " 'face (flatline:theme-get-face :left-sub))
@@ -77,26 +77,28 @@
           (format-mode-line (flycheck-status-emoji-mode-line-text))
         (format-mode-line (flycheck-mode-line-status-text)))))
 
-  (flatline:set-theme 'solarized-dark)
+  (progn 
+    (flatline:set-theme 'solarized-dark)
 
-  (setq flatline:mode-line '())
-  (flatline:add 'flatline:evil-tag)
-  (flatline:add 'muki:flatline:major-mode)
-  (flatline:add 'muki:flatline:buffer-name)
-  (flatline:add '(:body muki:flatline:vc-mode :face flatline:vc-mode))
-  (flatline:add '(:body flatline:buffer-directory :face :middle))
-  (flatline:add '(:body flatline:nyan-mode :face :middle))
-  ;; (flatline:add '(:fill . :middle))
-  (flatline:add :fill)
-  (flatline:add '(:body flatline:eol-desc :face :middle))
-  (flatline:add '(:body "<" :face :middle))
-  (flatline:add '(:body muki:flatline:coding-system :face :middle))
-  (flatline:add muki:flatline:position)
-  (flatline:add '(:body muki:flatline:flycheck :face :right-sub))
-  (flatline:add '(:body flatline:minor-mode :face :right))
-  (flatline:update)
+    (setq flatline:mode-line '())
+    (flatline:add 'flatline:evil-tag)
+    (flatline:add 'muki:flatline:major-mode)
+    (flatline:add 'muki:flatline:buffer-name)
+    (flatline:add '(:body muki:flatline:vc-mode :face flatline:vc-mode))
+    (flatline:add '(:body flatline:buffer-directory :face :middle))
+    (flatline:add '(:body flatline:nyan-mode :face :middle))
+    ;; (flatline:add '(:fill . :middle))
+    (flatline:add :fill)
+    (flatline:add '(:body flatline:eol-desc :face :middle))
+    (flatline:add '(:body "<" :face :middle))
+    (flatline:add '(:body muki:flatline:coding-system :face :middle))
+    (flatline:add muki:flatline:position)
+    (flatline:add '(:body muki:flatline:flycheck :face :right-sub))
+    (flatline:add '(:body flatline:minor-mode :face :right))
+    (flatline:update)
 
-  (enable-mode flatline-mode)
+    (enable-mode flatline-mode))
+
   )
 
 ;; Local Variables:

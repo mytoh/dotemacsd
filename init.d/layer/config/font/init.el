@@ -269,9 +269,9 @@
       (set '(#x0370 . #x03FF) a10)    ; ギリシャ文字
 
       ;; (set 'symbol mplus)
-      (set 'symbol symbola)
-      ;; (set 'symbol notoemoji)
-      ;;(set 'symbol emojione)
+      ;; (set 'symbol symbola)
+      (set 'symbol notoemoji)
+      ;; (set 'symbol emojione)
       )
 
 
@@ -281,7 +281,9 @@
                     (cons
                      (rx-to-string `(: (* anything) ,font (* anything)))
                      ratio)))
-     '(("EmojiOne" . 1.0)
+     '(("Noto Emoji" . 1.1)
+       ("Noto Color Emoji" . 1.1)
+       ("EmojiOne Color" . 0.1)
        ("Symbola" . 1.3)))
     
     (add-to-list 'default-frame-alist `(font . ,fontset))

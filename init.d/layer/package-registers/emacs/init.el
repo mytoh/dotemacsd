@@ -466,7 +466,7 @@
 (hoarder:register "k-talo/smooth-scroll.el")
 (hoarder:register "m2ym/yascroll-el")
 (hoarder:register "emacs-jp/migemo")
-(hoarder:fetch "rzl24ozi/cmigemo-module"
+(hoarder:register "rzl24ozi/cmigemo-module"
   '(:tag ["emacs" "migemo" "module"]))
 (hoarder:register "taksatou/flappymacs")
 (hoarder:register "gongo/yamada-el")
@@ -1766,6 +1766,11 @@
 (hoarder:register "https://bitbucket.org/agriggio/ahg"
   '(:tag ["mercurial"]
     :type :hg))
+(hoarder:register "jordonbiondo/promises.el"
+  '(:tag ["promise"]))
+(hoarder:register "m00natic/vlfi")
+(hoarder:register "zonuexe/emacs-copyit")
+(hoarder:register "DogLooksGood/parinfer-mode")
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
@@ -1796,6 +1801,9 @@
   '(:tag ["common_lisp" "game" "emacs"]
     :memo " [[https://www.youtube.com/watch?v=i03_VzOmDko][emacs glass demo - YouTube]]
 [[https://github.com/Mon-Ouie/blocky/blob/master/glass.el][blocky/glass.el at master · Mon-Ouie/blocky · GitHub]] "))
+(hoarder:fetch "ludwigpacifici/algorithm-mnemonics-emacs"
+  '(:tag ["clojure" "emacs" "yasnippet" "snippet" "c++" ]
+    :memo "[[https://www.youtube.com/watch?v=tSq7yDwS1vM][CppCon 2016: Tommy Bennett \“Algorithm Mnemonics: Increase your Productivity with STL Algorithms\" - YouTube]]"))
 
 
 ;;; init.el ends here

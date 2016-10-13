@@ -4,7 +4,6 @@
 
 ;;; Code:
 
-(use-package all-the-icons
-  :if window-system)
+(req 'vlf-setup)
 
 ;;; init.el ends here

@@ -456,4 +456,20 @@
 ;; debugger
 (setq debugger-stack-frame-as-list t)
 
+;; font
+;;; ** New variable 'use-default-font-for-symbols' for backward compatibility.
+;; This variable allows to get back pre-Emacs 25 behavior whereby the
+;; font for displaying symbol and punctuation characters was always
+;; selected according to your fontset setup.  Emacs 25 by default tries
+;; to use the default face's font for such characters, disregarding the
+;; fontsets if the default font supports these characters.  Set this
+;; variable to nil to disable the new behavior and get back the old
+;; behavior.
+(setq use-default-font-for-symbols t)
+;;; ** New variable 'inhibit-compacting-font-caches'.
+;; Set this variable to a non-nil value to speed up display of characters
+;; using large fonts, at the price of a larger memory footprint of the
+;; Emacs session.
+;; (setq inhibit-compacting-font-caches t)
+
 ;;; config-setting.el ends here

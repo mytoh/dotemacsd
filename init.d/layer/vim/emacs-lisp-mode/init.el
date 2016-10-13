@@ -82,5 +82,11 @@
   (bind-map-set-keys my-elisp-leader-map
     "dme" #'macrostep-expand))
 
+(liby 'semantic-refactor
+  (bind-map-set-keys my-elisp-leader-map
+    "=b" #'srefactor-lisp-format-buffer
+    "=d" #'srefactor-lisp-format-defun
+    "=o" #'srefactor-lisp-one-line
+    "=s" #'srefactor-lisp-format-sexp))
 
 ;;; init.el ends here
