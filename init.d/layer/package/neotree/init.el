@@ -13,7 +13,6 @@
                  neo-show-updir-line nil
                  neo-mode-line-type 'neotree
                  neo-smart-open t
-                 neo-dont-be-alone t
                  neo-persist-show nil
                  neo-show-hidden-files t
                  neo-auto-indent-point t
