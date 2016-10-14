@@ -438,8 +438,8 @@
 (require 'generic-x)
 
 ;; frame title
-(setq frame-title-format '(multiple-frames "%b"
-                                           ("" "GNU Vim" "@" (system-name))))
+(setq frame-title-format `(multiple-frames "%b"
+                                           ("" "GNU Vim" "@" ,(system-name))))
 
 ;; disable cursor in non selected windows
 (disable-option cursor-in-non-selected-windows)
