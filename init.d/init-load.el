@@ -353,6 +353,7 @@
     window-numbering
     vlfi
     copyit
+    pdf-tools
 
     aggressive-indent
     ;; parinfer

@@ -1347,8 +1347,12 @@
 ;;                     :dependency (("papaeye/go-mode.el"
 ;;                                (:tag ["langfmt"])))))
 
-(hoarder:register "politza/pdf-tools"
-  '(:tag ["pdf"]))
+(hoarder:fetch"politza/pdf-tools"
+  '(:tag ["pdf"]
+    :build ["gmake -s zlib_CFLAGS='-lz -L/usr/lib'  zlib_LIBS='-lz -L/usr/lib'"
+            "gmake install-package"]
+    ;; :load-path ["lisp"]
+    ))
 ;; (hoarder:register "http://git.chise.org/git/elisp/flim.git"
 ;;                  '(:tag ["flim" "luna"]))
 (hoarder:fetch "tetracat/emacsrepl"
@@ -1771,7 +1775,6 @@
 (hoarder:register "m00natic/vlfi")
 (hoarder:register "zonuexe/emacs-copyit")
 (hoarder:register "DogLooksGood/parinfer-mode")
-
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
 ;;                    :dependency ["dbrock/bongo"]
