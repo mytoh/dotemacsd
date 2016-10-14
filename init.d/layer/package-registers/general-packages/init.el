@@ -3766,7 +3766,17 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["gauche" "scheme" "rbenv" "ruby-build" "bash"]))
 (hoarder:fetch "BruceDone/awesome-crawler"
   '(:tag ["awesome_list" "crawler" "scraping"]))
-
+(hoarder:fetch "deeepaaa/rana"
+  '(:tag ["sgml" "html"]))
+(hoarder:fetch "r0adrunner/Space2Ctrl"
+  '(:tag ["keyboard" "x11"]))
+(hoarder:fetch "https://gitlab.com/dustyweb/pubstrate.git"
+  '(:tag ["activitypub" "activitystreams" "guile" "twitter" "soci-el"]
+    :memo "[[http://mediagoblin.org/news/tpac-2016-and-review-activitypub.html][ActivityPub and MediaGoblin at TPAC 2016 (or: ActivityPub needs your review!) | MediaGoblin]]
+[[https://identi.ca/cwebber/note/z5wCQEArRE63Wk6LS9Z5Sg][Pubstrate + soci-el + ActivityPub update for 2016-09-10 - Identi.ca]]"))
+(hoarder:fetch "shmibs/dotfiles"
+  '(:tag ["linux" "desktop" "dotfiles" "configuration" "herbstluftwm" "lainchan"]
+    :memo "[[https://lainchan.org/tech/res/28768.html][tech - Desktop thread]]"))
 
 ;;; end
 
