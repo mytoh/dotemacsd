@@ -95,6 +95,7 @@
 
 
   (bind-map-set-keys my-base-leader-map
+    "h SPC" #'helm-muki-layer
     ;; Universal argument ---------------------------------------------------------
     "u" #'universal-argument)
 
@@ -277,7 +278,6 @@
     "g" #'helm-ls-git-ls
     "s" #'evil-write
     "S" #'evil-write-all
-    "eh" #'helm-muki-layer
     "el" #'muki:open-file-init-load
     "er" #'muki:open-file-package-registers)
 
