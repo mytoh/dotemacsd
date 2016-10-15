@@ -3777,6 +3777,52 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "shmibs/dotfiles"
   '(:tag ["linux" "desktop" "dotfiles" "configuration" "herbstluftwm" "lainchan"]
     :memo "[[https://lainchan.org/tech/res/28768.html][tech - Desktop thread]]"))
+(hoarder:fetch "i-tsvetkov/recolor"
+  '(:tag ["colorscheme" "chrome"]))
+(hoarder:fetch "https://git.javispedro.com/cgit/topmenu-gtk.git"
+  '(:tag ["gtk" "menubar" "xfce" "mate"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/577zic/xfce_vaguely_retro_desktop/][Too Many Requests]]"))
+(hoarder:fetch "kosys/kosys-ep01"
+  '(:tag ["anime"]))
+(hoarder:fetch "sotojuan/exchalk"
+  '(:tag ["elixir" "color" "terminal" "ansi_escape"]))
+(hoarder:fetch "rrrene/bunt"
+  '(:tag ["elixir" "color" "terminal" "ansi_escape"]))
+(hoarder:fetch "jbnicolai/ansi-256-colors"
+  '(:tag ["javascript" "color" "terminal" "ansi_escape"]))
+(hoarder:fetch "schachmat/ingo"
+  '(:tag ["golang" "configuration"]))
+(hoarder:fetch "AppliedGo/random"
+  '(:tag ["golang" "random"]
+    :memo "[[https://appliedgo.net/random/][A Random Blog Post · Applied Go]]"))
+(hoarder:fetch "DexterLB/traytor"
+  '(:tag ["golang" "random"]
+    :memo "https://github.com/DexterLB/traytor/blob/master/random/random.go
+[[https://appliedgo.net/random/][A Random Blog Post · Applied Go]] "))
+(hoarder:fetch "gonum/stat"
+  '(:tag ["golang" "random"]
+    :memo "https://github.com/gonum/stat/tree/master/distuv
+[[https://appliedgo.net/random/][A Random Blog Post · Applied Go]] "))
+(hoarder:fetch "dustinkirkland/golang-petname"
+  '(:tag ["golang" "random"]
+    :memo " [[https://appliedgo.net/random/][A Random Blog Post · Applied Go]] "))
+(hoarder:fetch "Pallinder/go-randomdata"
+  '(:tag ["golang" "random"]
+    :memo " [[https://appliedgo.net/random/][A Random Blog Post · Applied Go]] "))
+(hoarder:fetch "https://gitlab.com/monwarez/sysinfo-bsd.git"
+  '(:tag ["freebsd" "system_infomation" "sysinfo"]))
+(hoarder:fetch "Screetsec/Dracnmap"
+  '(:tag ["nmap" "network"]))
+(hoarder:fetch "verekia/js-stack-from-scratch"
+  '(:tag ["javascript" "tutorial" "framework"]))
+(hoarder:fetch "FormidableLabs/nodejs-dashboard"
+  '(:tag ["javascript" "terminal" "metrics" "graaph"]))
+(hoarder:fetch "arthepsy/ssh-audit"
+  '(:tag ["ssh" "auditing"]))
+(hoarder:fetch "ecarlisle/Easy-Layouts-with-Flexbox"
+  '(:tag ["css" "html" "flexbox" "web"]
+    :memo "[[https://www.youtube.com/watch?v=2hak2xElAKI][Devnexus 2015 - Ridiculously Easy Layouts with Flexbox by Eric Carlisle - YouTube]]"))
+
 
 ;;; end
 

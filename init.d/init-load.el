@@ -72,7 +72,7 @@
 (muki-layer:load-layers 'package
   '(
     ;; no-littering
-    ;; migemo
+    migemo
     cmigemo
     ssh-config-mode
     emacs-refactor
@@ -354,6 +354,7 @@
     vlfi
     copyit
     pdf-tools
+    sauron
 
     aggressive-indent
     ;; parinfer
@@ -469,7 +470,7 @@
     ;; evil-iedit-state
     ;; evil-mc
     evil-quickscope
-    ;; evil-lisp-state
+    evil-lisp-state
     evil-magit
     syndicate
     evil-ReplaceWithRegister

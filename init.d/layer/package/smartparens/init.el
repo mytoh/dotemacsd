@@ -2,7 +2,7 @@
 (liby 'smartparens
   (defery 'smartparens)
   (after 'smartparens
-      (req 'smartparens-config)
+    (req 'smartparens-config)
 
     (setq sp-show-pair-delay 0.2
           ;; fix paren highlighting in normal mode
@@ -13,7 +13,7 @@
           sp-highlight-wrap-tag-overlay nil)
 
     (after 'evil
-        (set-option sp-show-pair-from-inside (not evil-move-beyond-eol)))
+      (set-option sp-show-pair-from-inside (not evil-move-beyond-eol)))
     (disable-option sp-cancel-autoskip-on-backward-movement)
 
      ;;;;;;;;;;;;
@@ -83,11 +83,11 @@
     (cl-defun muki:smartparens-setup-strict-modes ()
       (seq-each
        (clambda (mode)
-           (let ((hook (intern (format "%s-hook" (symbol-name mode)))))
-             (add-hook hook #'smartparens-strict-mode)))
+         (let ((hook (intern (format "%s-hook" (symbol-name mode)))))
+           (add-hook hook #'smartparens-strict-mode)))
        muki:lisp-modes))
 
-    (muki:smartparens-setup-strict-modes)
+    ;; (muki:smartparens-setup-strict-modes)
 
 
     ;; (sp-with-modes '(org-mode)
@@ -99,8 +99,8 @@
     ;;                     :foreground "#073642")
 
     (after 'diminish
-        (after 'smartparens
-            (diminish 'smartparens-mode " ⚖")))
+      (after 'smartparens
+        (diminish 'smartparens-mode " ⚖")))
 
     ;; (smartparens-global-mode)
     (add-hook 'emacs-lisp-mode-hook

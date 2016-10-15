@@ -622,8 +622,8 @@
                  "nicferrier/emacs-web"
                  "nicferrier/emacs-noflet"
                  "nicferrier/elnode"]))
-;; (hoarder:register "https://bitbucket.org/ukaszg/aria2.git"
-;;                  '(:tag "aria2" ))
+(hoarder:register "https://gitlab.com/ukaszg/aria2.git"
+  '(:tag ["aria2"]))
 (hoarder:register "m00natic/eww-lnum"
   '(:tag "eww"))
 (hoarder:register "yoshiki/yaml-mode")
@@ -1775,6 +1775,11 @@
 (hoarder:register "m00natic/vlfi")
 (hoarder:register "zonuexe/emacs-copyit")
 (hoarder:register "DogLooksGood/parinfer-mode")
+(hoarder:register "ardekantur/gopher.el"
+  '(:tag ["gopher"]))
+(hoarder:register "djcb/sauron")
+(hoarder:register "zallison/sauron-goodies")
+
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
 ;;                    :dependency ["dbrock/bongo"]

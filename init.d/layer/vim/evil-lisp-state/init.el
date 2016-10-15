@@ -3,13 +3,14 @@
 ;;; Code:
 
 (cl-defun muki:init-evil-lisp-state ()
-  (liby 'evil-lisp-state
-    (setq evil-lisp-state-leader-prefix "k")
-    (after 'bind-map
-      (req 'evil-lisp-state
-	(hook 'emacs-lisp-mode-hook #'evil-lisp-state)
-	(disable-option evil-lisp-state-enter-lisp-state-on-command)
-	(add-key evil-lisp-state-map "C-g" #'evil-normal-state)))))
+  (use-package evil-lisp-state
+      :init
+    (progn
+      (setq evil-lisp-state-global t)
+      (setq evil-lisp-state-enter-lisp-state-on-command nil))
+    :config
+    (bind-key "C-g" #'evil-normal-state evil-lisp-state-map)
+    ))
 
 (muki:init-evil-lisp-state)
 

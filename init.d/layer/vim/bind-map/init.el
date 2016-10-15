@@ -326,6 +326,9 @@
       ;; "pt" #'neotree-find-project-root
       ))
 
+  (bind-map-set-keys my-base-leader-map
+    "k" #'evil-lisp-state-map)
+
   )
 
 ;;; init.el ends here
