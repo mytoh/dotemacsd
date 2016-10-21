@@ -3,9 +3,10 @@
 ;;; Code:
 
 ;;;;; flycheck
-(liby 'flycheck-package
-  (command (flycheck-package-setup) "flycheck-package")
-  (after 'flycheck
-      (flycheck-package-setup)))
+(use-package flycheck-package
+  :commands (flycheck-package-setup)
+  :after (flycheck)
+  :config
+  (flycheck-package-setup))
 
 ;;; init.el ends here

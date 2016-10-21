@@ -208,7 +208,8 @@
       "fh" #'magit-log-buffer-file
       "m"  #'magit-dispatch-popup
       "S"  #'magit-stage-file
-      "U"  #'magit-unstage-file))
+      "U"  #'magit-unstage-file
+      "L"  #'magit-list-repositories))
 
   (liby 'helm
     (bind-map-set-keys my-base-leader-map

@@ -258,7 +258,7 @@
             hyperplane iceberg myth forest-blue soria metalheart
             zweilight oceanic redbelly doom-one doom-dark firewatch
             base16-ashes base16-atelier-cave base16-atelier-lakeside
-            base16-ocean-brian acai))
+            base16-ocean-brian acai sourcerer))
 
 ;; (enable-option select-enable-clipboard
 ;;                select-enable-primary)

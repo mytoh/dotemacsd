@@ -355,6 +355,9 @@
     copyit
     pdf-tools
     sauron
+    hide-comnt
+    insert-shebang
+    dired-icon
 
     aggressive-indent
     ;; parinfer
@@ -553,6 +556,8 @@
     helm-smex
     helm-company
     helm-git-grep
+    helm-rage
+    helm-hunks
     ;; helm-delicious
     ))
 
