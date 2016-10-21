@@ -2167,6 +2167,9 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
   '(:tag ["bar" "panel" "wm"])) 
 (hoarder:fetch "jaagr/lemonbuddy"
   '(:tag ["bar" "panel" "lemonbar" "wm"]))
+(hoarder:fetch "jaagr/dots"
+  '(:tag ["dotfiles" "lemonbuddy"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/57g6wp/bspwm_lemonbuddy_my_current_setup/][Too Many Requests]]"))
 (hoarder:fetch "dcat/swm"
   '(:tag ["wm"]))
 (hoarder:fetch "arcetera/wmrc"
@@ -3822,7 +3825,51 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "ecarlisle/Easy-Layouts-with-Flexbox"
   '(:tag ["css" "html" "flexbox" "web"]
     :memo "[[https://www.youtube.com/watch?v=2hak2xElAKI][Devnexus 2015 - Ridiculously Easy Layouts with Flexbox by Eric Carlisle - YouTube]]"))
-
+(hoarder:fetch "baurigae/polar-night"
+  '(:tag ["gtk" "theme" "unity"]))
+(hoarder:fetch "SeasonalRice/.files"
+  '(:tag ["dotfiles" "i3wm"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/579vko/i3gaps_my_current_fall_rice/][Too Many Requests]]"))
+(hoarder:fetch "davidsantiago/hickory"
+  '(:tag ["clojure" "hiccup" "html" "dom"]))
+(hoarder:fetch "weavejester/hop"
+  '(:tag ["clojure" "boot" "leiningen"]))
+(hoarder:fetch "pogodevorg/awesome-pokemongo"
+  '(:tag ["awesome_list"]))
+(hoarder:fetch "inesita-rb/inesita"
+  '(:tag ["web" "ruby" "framework"]))
+(hoarder:fetch "gvalkov/xrectsel")
+(hoarder:fetch "metosin/muuntaja"
+  '(:tag ["clojure" "data_format" "json" "edn" "yaml" "messagepack"]))
+(hoarder:fetch "metosin/potpuri"
+  '(:tag ["clojure" "utility"]))
+(hoarder:fetch "lk-geimfari/smokkfiskur"
+  '(:tag ["erlang" "color" "ansi"]))
+(hoarder:fetch "git://git.osdn.net/gitroot/nkf/nkf.git")
+(hoarder:fetch "git://git.sv.gnu.org/libiconv.git"
+  '(:tag ["conversion" "encoding"]))
+(hoarder:fetch "getify/Functional-Light-JS"
+  '(:tag ["book" "javascript" "functional_programming"]))
+(hoarder:fetch "nsf/termbox"
+  '(:tag ["terminal" "ncurses"]))
+(hoarder:fetch "wentin/cssicon"
+  '(:tag ["html" "css" "icon"]))
+(hoarder:fetch "Qqwy/elixir_fun_land"
+  '(:tag ["elixir" "monad" "fantasyland"]))
+(hoarder:fetch "rmies/monad"
+  '(:tag ["elixir" "monad"]))
+(hoarder:fetch "malcolmstill/ulubis"
+  '(:tag ["common_lisp" "wayland" "composition"]))
+(hoarder:fetch "motersen/pot"
+  '(:tag ["scheme" "tag" "file" "database" "cli"]))
+(hoarder:fetch "motersen/pits"
+  '(:tag ["picolisp" "tag" "file" "database" "cli"]))
+(hoarder:fetch "carrois/Fira"
+  '(:tag ["font"]
+    :download nil))
+(hoarder:fetch "fuyuneko/startpage"
+  '(:tag ["4chan" "startpage" "web" "html" "css"]
+    :memo "[[https://boards.4chan.org/g/thread/57171332][/g/ - Startpage and CSS General - Technology - 4chan]]"))
 
 ;;; end
 

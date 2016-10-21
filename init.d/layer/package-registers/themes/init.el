@@ -46,8 +46,10 @@
 ;; (hoarder:register-theme "nhunzaker/spacegray-emacs")
 (hoarder:register-theme "juba/color-theme-tangotango")
 (hoarder:register-theme "ccann/badger-theme")
-(hoarder:register-theme "xzerocode/hipster-theme")
-(hoarder:register-theme "xzerocode/aurora-theme")
+;; (hoarder:register-theme "xzerocode/hipster-theme")
+;; (hoarder:register-theme "xzerocode/aurora-theme")
+(hoarder:register-theme "purcell/hipster-theme")
+(hoarder:register-theme "purcell/aurora-theme")
 (hoarder:register-theme "fommil/darcula-theme-emacs")
 (hoarder:register-theme "emacsfodder/emacs-waher-theme")
 (hoarder:register-theme "emacsfodder/emacs-purple-haze-theme")
@@ -218,5 +220,5 @@
 (hoarder:register-theme "nuncostans/sexy-monochrome-theme")
 (hoarder:register-theme "kootenpv/emacs-kooten-theme")
 (hoarder:register-theme "techquila/melancholy-theme")
-
+(hoarder:register-theme "gilbertw1/sourcerer-emacs")
 ;;; init.el ends here

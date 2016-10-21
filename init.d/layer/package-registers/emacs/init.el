@@ -171,6 +171,8 @@
 (hoarder:register "ptrv/helm-smex"
   '(:tag ["helm" "smex" "M-x"]
     :dependency ["nonsequitur/smex"]))
+(hoarder:register "bomgar/helm-rage")
+(hoarder:register "torgeir/helm-hunks.el")
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]
 ;;                    :dependency ["michael-heerdegen/iterators.el"]))
@@ -478,7 +480,8 @@
 (hoarder:register "flycheck/flycheck-pos-tip"
   '(:dependency ["auto-complete/popup-el"]))
 (hoarder:register "purcell/flycheck-package"
-  '(:tag ["flycheck"]))
+  '(:tag ["flycheck"]
+    :dependency ["purcell/package-lint"]))
 (hoarder:register "zenozeng/css-eldoc")
 (hoarder:register "yasuyk/web-beautify")
 (hoarder:register "mhayashi1120/Emacs-slideview")
@@ -1742,6 +1745,10 @@
   '(:tag ["org-attach" "bookmarking" "pinboard"]))
 (hoarder:register "alphapapa/org-bookmark-heading")
 (hoarder:register "takaxp/org-tree-slide")
+(hoarder:register "unhammer/org-random-todo"
+  '(:tag ["orgmode" "agenda" "todo"]))
+
+
 (hoarder:register "rejeep/commander.el"
   '(:tag ["cli" "command" "option" "parse"]))
 (hoarder:register "emacsmirror/font-lock-plus")
@@ -1779,6 +1786,15 @@
   '(:tag ["gopher"]))
 (hoarder:register "djcb/sauron")
 (hoarder:register "zallison/sauron-goodies")
+(hoarder:register "peterwvj/eshell-up"
+  '(:tag ["eshell" "bd"]))
+(hoarder:register "emacsmirror/hide-comnt")
+(hoarder:register "psachin/insert-shebang")
+(hoarder:register "https://gitlab.com/xuhdev/dired-icon.git"
+  '(:tag ["dired" "icon"]))
+(hoarder:register "david-christiansen/dr-racket-like-unicode"
+  '(:tag ["drracket" "unicode"]))
+(hoarder:register "bmag/imenu-list")
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
@@ -1812,6 +1828,8 @@
 (hoarder:fetch "ludwigpacifici/algorithm-mnemonics-emacs"
   '(:tag ["clojure" "emacs" "yasnippet" "snippet" "c++" ]
     :memo "[[https://www.youtube.com/watch?v=tSq7yDwS1vM][CppCon 2016: Tommy Bennett \“Algorithm Mnemonics: Increase your Productivity with STL Algorithms\" - YouTube]]"))
+(hoarder:fetch "caisah/emacs.dz"
+  '(:tag ["emacs" "dotfiles" "configuration"]))
 
 
 ;;; init.el ends here
