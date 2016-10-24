@@ -358,10 +358,12 @@
     hide-comnt
     insert-shebang
     dired-icon
+    aggressive-fill-paragraph-mode
 
     aggressive-indent
     ;; parinfer
 
+    ;; idle-highlight-mode
     ;; ahg
     ;; golden-ratio
     ;; pangu-spacing

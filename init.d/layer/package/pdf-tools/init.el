@@ -9,6 +9,8 @@
   :mode (("\\.pdf\\'" . pdf-view-mode))
   :config
   (progn
-    (pdf-tools-install)))
+    (pdf-tools-install)
+    (add-hook 'pdf-view-mode-hook
+              #'pdf-view-midnight-minor-mode)))
 
 ;;; init.el ends here
