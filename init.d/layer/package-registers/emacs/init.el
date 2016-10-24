@@ -1795,6 +1795,13 @@
 (hoarder:register "david-christiansen/dr-racket-like-unicode"
   '(:tag ["drracket" "unicode"]))
 (hoarder:register "bmag/imenu-list")
+(hoarder:register "nonsequitur/idle-highlight-mode")
+(hoarder:register "alezost/bui.el"
+  '(:tag ["tabulated-list" "table" "buffer" "ui"]))
+(hoarder:register"davidshepherd7/aggressive-fill-paragraph-mode"
+  '(:tag ["fill-paragraph"]))
+(hoarder:register "kuanyui/fsc.el")
+(hoarder:register "konr/tomatinho")
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]

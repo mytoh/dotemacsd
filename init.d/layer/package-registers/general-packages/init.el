@@ -3782,11 +3782,12 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
     :memo "[[https://lainchan.org/tech/res/28768.html][tech - Desktop thread]]"))
 (hoarder:fetch "i-tsvetkov/recolor"
   '(:tag ["colorscheme" "chrome"]))
-(hoarder:fetch "https://git.javispedro.com/cgit/topmenu-gtk.git"
+(hoarder:fetch "https://git.javispedro.com/topmenu-gtk.git"
   '(:tag ["gtk" "menubar" "xfce" "mate"]
     :memo "[[https://www.reddit.com/r/unixporn/comments/577zic/xfce_vaguely_retro_desktop/][Too Many Requests]]"))
-(hoarder:fetch "kosys/kosys-ep01"
-  '(:tag ["anime"]))
+(hoarder:fetch "https://gitlab.com/kosys/kosys-ep01.git"
+  '(:tag ["anime"]
+    :download nil))
 (hoarder:fetch "sotojuan/exchalk"
   '(:tag ["elixir" "color" "terminal" "ansi_escape"]))
 (hoarder:fetch "rrrene/bunt"
@@ -3870,6 +3871,27 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "fuyuneko/startpage"
   '(:tag ["4chan" "startpage" "web" "html" "css"]
     :memo "[[https://boards.4chan.org/g/thread/57171332][/g/ - Startpage and CSS General - Technology - 4chan]]"))
+(hoarder:fetch "git://git.gnome.org/libxml2"
+  '(:tag ["xml" "xmllint"]))
+(hoarder:fetch "binaryage/env-config"
+  '(:tag ["clojure" "configuration" "settings" "environment_variable"]))
+(hoarder:fetch "CrowdHailer/OK"
+  '(:tag ["elixir" "pipeline" "monad"]))
+(hoarder:fetch "jarun/Buku"
+  '(:tag ["bookmark" "terminal"]))
+(hoarder:fetch "Code-Hex/battery"
+  '(:tag ["golang" "battery" "linux" "tmux"]))
+(hoarder:fetch "eikek/chee"
+  '(:tag ["photo" "emacs" "scala"]))
+(hoarder:fetch "swiftb/clicker-heroes-sw1ft-bot"
+  '(:tag ["clicker_heroes" "swift" "bot"]))
+(hoarder:fetch "jordansissel/xdotool")
+(hoarder:fetch "autokey/autokey"
+  '(:tag ["automation" "linux" "autoclicker"]))
+(hoarder:fetch "guoci/autokey-py3"
+  '(:tag ["automation" "linux" "autoclicker"]))
+(hoarder:fetch "bzzzzzu/chsimulator"
+  '(:tag ["clicker_heroes" "game" "java"]))
 
 ;;; end
 

@@ -221,4 +221,6 @@
 (hoarder:register-theme "kootenpv/emacs-kooten-theme")
 (hoarder:register-theme "techquila/melancholy-theme")
 (hoarder:register-theme "gilbertw1/sourcerer-emacs")
+(hoarder:register-theme "rails-to-cosmos/danneskjold-theme")
+
 ;;; init.el ends here
