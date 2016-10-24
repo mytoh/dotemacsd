@@ -4,7 +4,9 @@
 
 ;;; Code:
 
-(req 'spu
+(use-package spu
+  :defer 5
+  :config
   (spu-package-upgrade-daily))
 
 ;;; init.el ends here
