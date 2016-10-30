@@ -9,7 +9,6 @@
 (hoarder:register "kuanyui/moe-theme.el")
 (hoarder:register-theme "caisah/seti-theme")
 (hoarder:register-theme "j0ni/phoenix-dark-pink")
-(hoarder:register-theme "Fanael/stekene-theme")
 (hoarder:register-theme "sabof/hyperplane-theme")
 (hoarder:register-theme "niflheim-theme/emacs" '(:name "niflheim-theme"))
 (hoarder:register-theme "emacs-jp/replace-colorthemes")
@@ -34,7 +33,6 @@
 (hoarder:register-theme "mswift42/warm-night-theme")
 (hoarder:register-theme "jasonm23/emacs-bubbleberry-theme")
 (hoarder:register-theme "n3mo/cyberpunk-theme.el")
-(hoarder:register-theme "Fanael/colorsarenice-theme")
 (hoarder:register-theme "kodx/TangoDark")
 (hoarder:register-theme "wasamasa/gotham-theme")
 (hoarder:register-theme "oneKelvinSmith/monokai-emacs")
@@ -122,7 +120,6 @@
   '(:load-path ["." "themes"]))
 (hoarder:register-theme "cryon/subatomic")
 (hoarder:register-theme "Gastove/rhombus")
-(hoarder:register-theme "Fanael/colorsarenice-theme")
 (hoarder:register-theme "aalpern/emacs-color-theme-green-phosphor")
 (hoarder:register-theme "Alexander-Miller/morning-star-theme")
 (hoarder:register-theme "nhunzaker/emacs-ectoplasm-theme")
@@ -222,5 +219,7 @@
 (hoarder:register-theme "techquila/melancholy-theme")
 (hoarder:register-theme "gilbertw1/sourcerer-emacs")
 (hoarder:register-theme "rails-to-cosmos/danneskjold-theme")
+(hoarder:register-theme "emacsfodder/emacs-theme-creamsody")
+(hoarder:register-theme "emacsfodder/emacs-deep-thought-theme")
 
 ;;; init.el ends here
