@@ -95,17 +95,6 @@
                    :tag "helm"))]))
 (hoarder:register "abo-abo/helm-org-wiki"
   '(:tag ["helm" "org"]))
-(hoarder:register "csantosb/helm-perso-wiki"
-  '(:tag ["helm" "wiki" "org"]
-    :dependency ["git://jblevins.org/git/deft.git"
-                 ("bbatsov/projectile"
-                  (:dependency ["magnars/s.el"
-                                "rejeep/f.el"
-                                ("magnars/dash.el" (:compile nil))
-                                ("lunaryorn/pkg-info.el"
-                                 (:dependency ["cask/epl"]))]))
-                 "nex3/perspective-el"
-                 "Bruce-Connor/names"]))
 (hoarder:register "yuutayamada/helm-shell-history"
   '(:tag ["helm" "term"]))
 (hoarder:register "david-christiansen/helm-pages"
