@@ -125,8 +125,8 @@
   
   (bind-map-set-keys my-base-leader-buffer-map
     "K"  #'muki:kill-other-buffers
-    "n"  #'switch-to-next-buffer
-    "p"  #'switch-to-prev-buffer
+    "n"  #'next-buffer
+    "p"  #'previous-buffer
     "s" #'switch-to-scratch-buffer
     "r" #'revert-buffer)
   
