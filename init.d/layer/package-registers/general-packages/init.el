@@ -892,6 +892,7 @@
 (hoarder:fetch "symbolset/ss-emoji-beta") 
 (hoarder:fetch "https://notabug.org/koz.ross/awesome-c.git") 
 ;; (hoarder:fetch "https://notabug.org/koz.ross/awesome-cl.git") 
+(hoarder:fetch "aleksandar-todorovic/awesome-c")
 (hoarder:fetch "CodyReichert/awesome-cl")
 (hoarder:fetch "https://notabug.org/wubthecaptain/deathwatch-pomf.git") 
 (hoarder:fetch "git://repo.or.cz/abduco.git") 
@@ -3339,6 +3340,8 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
 https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/"))
 (hoarder:fetch "matburt/mobileorg-android"
   '(:tag ["android" "mobile" "org-mode"]))
+(hoarder:fetch "wizmer/syncorg"
+  '(:tag ["android" "mobile" "org-mode"]))
 (hoarder:fetch "missingfaktor/akar"
   '(:tag ["clojure" "pattern_match" "variant"]
     :memo "https://skillsmatter.com/skillscasts/7854-london-clojurians-meetup"))
@@ -3892,6 +3895,66 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["automation" "linux" "autoclicker"]))
 (hoarder:fetch "bzzzzzu/chsimulator"
   '(:tag ["clicker_heroes" "game" "java"]))
+(hoarder:fetch "pocke/lemonade"
+  '(:tag ["clipboard" "ssh" "windows" "linux"]))
+(hoarder:fetch "git://git.webkit.org/WebKit.git"
+  '(:depth nil
+    :download nil))
+(hoarder:fetch "mattn/files"
+  '(:tag ["golang" "ripgrep"]))
+(hoarder:fetch "kayac/go-katsubushi"
+  '(:tag ["unique_id" "id" "random" "golang"]
+    :memo "[[http://tech.kayac.com/archive/katsubushi-introduction.html][分散環境でユニークなidを発番するGo製プロダクト「katsubushi」のご紹介 | tech.kayac.com - KAYAC engineers' blog]]"))
+(hoarder:fetch "twitter/snowflake"
+  '(:branch "snowflake-2010"
+    :tag ["unique_id" "id" "random" "scala"]))
+(hoarder:fetch "gpakosz/.tmux"
+  '(:memo "[[http://pempek.net/blog/2016/10/27/here-i-rewrote-my-tmux-configuration/][Here, I rewrote My Self Contained Tmux Configuration | PEMPEK.NET]]
+[[https://www.reddit.com/r/unixporn/comments/59qmu5/tmux_pimping_my_tmux/][Too Many Requests]]"))
+(hoarder:fetch "tov/shcaml"
+  '(:tag ["shell" "shellscript" "ocaml"]))
+(hoarder:fetch "dirkvdb/ffmpegthumbnailer"
+  '(:tag ["ffmpeg" "video" "thumbnail"]))
+(hoarder:fetch "ageitgey/node-unfluff"
+  '(:tag ["javascript" "html" "readability"]))
+(hoarder:fetch "Pella86/Schrodinger-religion"
+  '(:tag ["religion"]
+    :memo "[[https://boards.4chan.org/g/thread/57282011][/g/ - GitHub Schrodinger Religion - Technology - 4chan]]"))
+(hoarder:fetch "MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-"
+  '(:tag ["google_music" "music_player"]))
+(hoarder:fetch "vhodges/flexstatus"
+  '(:tag ["desktop" "statusbar" "panel" "golang" "dzen" "lemonbar"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/59xigd/oc_flexstatus_a_flexible_statusbar_generator/][Too Many Requests]]"))
+(hoarder:fetch "joewing/jwm"
+  '(:tag ["window_manager"]))
+(hoarder:fetch "manjaro/artwork-vertex-maia"
+  '(:tag ["gtk" "theme"]))
+(hoarder:fetch "manjaro/vertex-maia-icon-themes"
+  '(:tag ["gtk" "theme"]))
+(hoarder:fetch "sos4nt/dynamic-colors"
+  '(:tag ["terminal" "colorscheme"]))
+(hoarder:fetch "anmoljagetia/Flatabulous"
+  '(:tag ["gtk" "theme" "unity"]))
+(hoarder:fetch "Mayccoll/Gogh"
+  '(:tag ["gnome-terminal" "pantheon" "colorscheme"]))
+(hoarder:fetch "jh3y/driveway"
+  '(:tag ["css" "html" "masonry_layout" "web"]))
+(hoarder:fetch "MostlyAdequate/mostly-adequate-guide"
+  '(:tag ["javascript" "book" "functional_programming" "functor" "monad"]))
+(hoarder:fetch "https://gitlab.com/CartesianDuelist/CodeOfCoding.git"
+  '(:tag ["code_of_conduct"]))
+(hoarder:fetch "haesbaert/mdnsd"
+  '(:tag ["mdns" "openbsd" "bonjour" "avahi"]))
+(hoarder:fetch "git://git.code.sf.net/p/flwm/flwm"
+  '(:tag ["window_manager" "fltk"]))
+(hoarder:fetch "tek/amino"
+  '(:tag ["python" "monad"]))
+(hoarder:fetch "tobgu/pyrsistent"
+  '(:tag ["python" "persistent" "data_structure"]))
+(hoarder:fetch "void0/pinky-bar"
+  '(:tag ["bar" "panel" "desktop"]))
+(hoarder:fetch "VoLuong/Begin-Latex-in-minutes"
+  '(:tag ["latex"]))
 
 ;;; end
 

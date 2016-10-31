@@ -162,6 +162,11 @@
     :dependency ["nonsequitur/smex"]))
 (hoarder:register "bomgar/helm-rage")
 (hoarder:register "torgeir/helm-hunks.el")
+(hoarder:register "maximus12793/helm-youtube"
+  '(:tag ["youtube"]))
+(hoarder:register "emacsorphanage/helm-ls-svn"
+  '(:tag ["svn"]))
+
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]
 ;;                    :dependency ["michael-heerdegen/iterators.el"]))
@@ -1061,7 +1066,7 @@
   '(:tag ["convinience" "syntax_check"]))
 (hoarder:register "k-talo/volatile-highlights.el"
   '(:tag ["highlight" "feedback" "undo" "paste"]))
-(hoarder:register "KeenS/cssfmt.el"
+(hoarder:register "KeenS/stylefmt.el"
   '(:tag ["css"]))
 (hoarder:register "mutbuerger/not-from-scratch"
   '(:tag ["scratch"]))
@@ -1736,7 +1741,7 @@
 (hoarder:register "takaxp/org-tree-slide")
 (hoarder:register "unhammer/org-random-todo"
   '(:tag ["orgmode" "agenda" "todo"]))
-
+(hoarder:register "talwrii/bho")
 
 (hoarder:register "rejeep/commander.el"
   '(:tag ["cli" "command" "option" "parse"]))
@@ -1791,6 +1796,18 @@
   '(:tag ["fill-paragraph"]))
 (hoarder:register "kuanyui/fsc.el")
 (hoarder:register "konr/tomatinho")
+(hoarder:register "abo-abo/auto-yasnippet"
+  '(:tag ["snippet" "yasnippet"]))
+(hoarder:register "demyanrogozhin/elhome"
+  '(:tag ["configuration" "dotfiles"]))
+(hoarder:register "ensime/emacs-scala-mode"
+  '(:tag ["scala"]))
+(hoarder:register "seanirby/commando")
+(hoarder:register "plexus/html-to-hiccup"
+  '(:tag ["html" "dom" "hiccup" "clojure"]))
+(hoarder:register "dgutov/highlight-escape-sequences"
+  '(:tag ["highlight" "escape_sequences"]))
+(hoarder:register "alezost/make-color.el")
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
@@ -1826,6 +1843,8 @@
     :memo "[[https://www.youtube.com/watch?v=tSq7yDwS1vM][CppCon 2016: Tommy Bennett \“Algorithm Mnemonics: Increase your Productivity with STL Algorithms\" - YouTube]]"))
 (hoarder:fetch "caisah/emacs.dz"
   '(:tag ["emacs" "dotfiles" "configuration"]))
+(hoarder:fetch "knu/emacsc"
+  '(:tag ["emacs" "cli"]))
 
 
 ;;; init.el ends here
