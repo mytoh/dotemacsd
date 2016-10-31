@@ -359,6 +359,9 @@
     insert-shebang
     dired-icon
     aggressive-fill-paragraph-mode
+    scala-mode
+    highlight-escape-sequences
+    make-color
 
     aggressive-indent
     ;; parinfer
@@ -560,6 +563,8 @@
     helm-git-grep
     helm-rage
     helm-hunks
+    helm-ls-svn
+    helm-youtube
     ;; helm-delicious
     ))
 
