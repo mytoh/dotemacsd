@@ -243,7 +243,7 @@
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
 ;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson, noctilux, erosiond, material
-(defvar muki:x-theme 'spacemacs-dark)
+(defvar muki:x-theme 'creamsody)
 (defvar muki:term-theme 'flatland)
 (defconst muki:favorite-themes
   '(comidia planet monokai molokai firebelly
@@ -258,7 +258,7 @@
             hyperplane iceberg myth forest-blue soria metalheart
             zweilight oceanic redbelly doom-one doom-dark firewatch
             base16-ashes base16-atelier-cave base16-atelier-lakeside
-            base16-ocean-brian acai sourcerer))
+            base16-ocean-brian acai sourcerer creamsody))
 
 ;; (enable-option select-enable-clipboard
 ;;                select-enable-primary)
