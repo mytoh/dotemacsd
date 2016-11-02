@@ -3834,8 +3834,6 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "SeasonalRice/.files"
   '(:tag ["dotfiles" "i3wm"]
     :memo "[[https://www.reddit.com/r/unixporn/comments/579vko/i3gaps_my_current_fall_rice/][Too Many Requests]]"))
-(hoarder:fetch "davidsantiago/hickory"
-  '(:tag ["clojure" "hiccup" "html" "dom"]))
 (hoarder:fetch "weavejester/hop"
   '(:tag ["clojure" "boot" "leiningen"]))
 (hoarder:fetch "pogodevorg/awesome-pokemongo"
