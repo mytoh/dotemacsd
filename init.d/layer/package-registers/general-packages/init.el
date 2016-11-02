@@ -3953,6 +3953,23 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["bar" "panel" "desktop"]))
 (hoarder:fetch "VoLuong/Begin-Latex-in-minutes"
   '(:tag ["latex"]))
+(hoarder:fetch "GNOME/sushi")
+(hoarder:fetch "git://anongit.kde.org/choqok.git"
+  '(:tag ["kde" "twitter"]))
+(hoarder:fetch "e-stat-api/adaptor"
+  '(:tag ["python" "e-stat" "api" "statistics"]
+    :site "https://www.e-stat.go.jp/"))
+(hoarder:fetch "what3words/w3w-node-wrapper"
+  '(:tag ["node" "what3words" "api"]))
+(hoarder:fetch "witheve/Eve"
+  '(:tag ["javascript"]
+    :site "http://witheve.com/"))
+(hoarder:fetch "sqreen/awesome-nodejs-projects"
+  '(:tag ["node" "javascript" "awesome_list"]))
+(hoarder:fetch "esrlabs/git-repo"
+  '(:tag ["git"]))
+(hoarder:fetch "talwrii/jsdb"
+  '(:tag ["json" "python" "database"]))
 
 ;;; end
 

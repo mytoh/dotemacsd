@@ -1808,6 +1808,9 @@
 (hoarder:register "dgutov/highlight-escape-sequences"
   '(:tag ["highlight" "escape_sequences"]))
 (hoarder:register "alezost/make-color.el")
+(hoarder:register "emacsmirror/dired-plus")
+(hoarder:register "emacsmirror/echo-bell"  )
+(hoarder:register "Fanael/wordgen.el")
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
