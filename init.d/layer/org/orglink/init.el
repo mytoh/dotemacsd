@@ -2,9 +2,11 @@
 
 ;;; Code:
 
-(liby 'orglink
-  (command (orglink-mode) "orglink")
-  (set-option orglink-activate-links '(bracket))
-  (hook 'emacs-lisp-mode-hook #'orglink-mode))
+(use-package orglink
+  :commands (orglink-mode)
+  :init
+  (hook 'emacs-lisp-mode-hook #'orglink-mode)
+  :config
+  (validate-setq  orglink-activate-links '(bracket)))
 
 ;;; init.el ends here
