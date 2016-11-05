@@ -597,7 +597,8 @@
   '(:tag ["gtk" "colorscheme"]))
 (hoarder:fetch "gstk/color-scripts")
 (hoarder:fetch "Floens/uchan"
-  '(:tag ["4chan" "chan" "bbs"]))
+  '(:tag ["4chan" "chan" "bbs"]
+    :site "https://uchan.plebco.de/"))
 (hoarder:fetch "get-iplayer/get_iplayer"
   '(:tag ["radio" "bbc"]))
 (hoarder:fetch "fanglingsu/vimb"
@@ -780,7 +781,8 @@
 (hoarder:fetch "c00kiemon5ter/mopag"
   '(:tag ["wm" "tiling" "x11" "bar" "panel"]))
 (hoarder:fetch "ahushh/Monaba"
-  '(:tag ["imageboard" "haskell" "yesod" "kusaba"]))
+  '(:tag ["imageboard" "haskell" "yesod" "kusaba"]
+    :site "https://haibane.ru"))
 (hoarder:fetch "driftyco/ionicons"
   '(:tag ["icon" "font"]))
 (hoarder:fetch "gwkkwg/cl-containers"
@@ -3643,7 +3645,10 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "SnootyMonkey/clj-json-ld"
   '(:tag ["clojure" "json-ld" "json"]))
 (hoarder:fetch "slburson/fset"
-  '(:tag ["common_lisp"]))
+  '(:tag ["common_lisp"]
+    :memo "[[http://blog.thezerobit.com/2012/07/21/immutable-persistent-data-structures-in-common-lisp.html][Immutable Persistent Data Structures in Common Lisp - the zero bit stream]]"))
+(hoarder:fetch "mikelevins/folio"
+  '(:tag ["common_lisp" "fset"]))
 (hoarder:fetch "trapd00r/LS_COLORS"
   '(:tag ["ls" "colorscheme"]))
 (hoarder:fetch "arecker/emacs.d"
@@ -3949,7 +3954,7 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["python" "monad"]))
 (hoarder:fetch "tobgu/pyrsistent"
   '(:tag ["python" "persistent" "data_structure"]))
-(hoarder:fetch "void0/pinky-bar"
+(hoarder:fetch "https://notabug.org/void0/pinky-bar.git"
   '(:tag ["bar" "panel" "desktop"]))
 (hoarder:fetch "VoLuong/Begin-Latex-in-minutes"
   '(:tag ["latex"]))
@@ -3970,6 +3975,40 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["git"]))
 (hoarder:fetch "talwrii/jsdb"
   '(:tag ["json" "python" "database"]))
+(hoarder:fetch "ryanoasis/nerd-fonts"
+  '(:download nil))
+(hoarder:fetch "strainer/Fdrandom.js"
+  '(:tag ["javascript" "random"]))
+(hoarder:fetch "rdnetto/powerline-hs"
+  '(:tag ["powerline" "haskell" "terminal"]))
+(hoarder:fetch "installgen2/rustchan"
+  '(:tag ["4chan" "bbs" "rust"]))
+(hoarder:fetch "https://git.kfarwell.org/tokumei"
+  '(:type :git
+    :site "https://tokumei.co/"
+    :memo "[[https://lainchan.org/tech/res/30995.html][tech - Tokumei 1.0 Release Party]]"))
+(hoarder:fetch "jlbyrey/1chan"
+  '(:tag ["4chan" "bbs"]))
+(hoarder:fetch "urweb/urweb"
+  '(:tag ["ml" "haskell"]
+    :site "http://www.impredicative.com/ur/"))
+(hoarder:fetch "Wukix/LambdaLite"
+  '(:tag ["common_lisp" "database"]))
+(hoarder:fetch "k1LoW/sconb"
+  '(:tag ["ssh" "configuration" "json" "ruby"]
+    :memo "[[http://k1low.hatenablog.com/entry/2014/09/10/193435][.ssh/configをバックアップ(?)するツール sconb を作ってみた - Copy/Cut/Paste/Hatena]]"))
+(hoarder:fetch "k1LoW/koma"
+  '(:tag ["ssh" "os"]))
+(hoarder:fetch "joeyh/propellor"
+  '(:tag ["haskell" "configuration"]))
+(hoarder:fetch "sindresorhus/ua-string"
+  '(:tag ["chrome" "user_agent" "browser" "javascript"]))
+(hoarder:fetch "pguth/random-tree-names"
+  '(:tag ["random" "generator"]))
+(hoarder:fetch "getstream/winds"
+  '(:tag ["javascript" "rss" "feed"]))
+(hoarder:fetch "jsvine/waybackpack"
+  '(:tag ["archive" "wayback_machine" "web"]))
 
 ;;; end
 

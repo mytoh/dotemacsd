@@ -1293,9 +1293,9 @@
 (hoarder:register "ALSchwalm/power-mode.el")
 (hoarder:register "https://gitlab.com/RobertCochran/neato-graph-bar.git"
   '(:tag ["cpu" "memory" "monitor"]))
-(hoarder:register "https://gitlab.com/tarsius/epkg.git"
+(hoarder:register "emacscollective/epkg"
   '(:tag ["emacsmirror" "package" "archive"]
-    :dependency ["https://gitlab.com/tarsius/closql.git"
+    :dependency ["emacscollective/closql"
                  "skeeto/emacsql"
                  "skeeto/elisp-finalize"]))
 (hoarder:register "akrito/acme-mouse"
@@ -1742,6 +1742,7 @@
 (hoarder:register "unhammer/org-random-todo"
   '(:tag ["orgmode" "agenda" "todo"]))
 (hoarder:register "talwrii/bho")
+(hoarder:register "marcowahl/org-ephermal-section-numbers")
 
 (hoarder:register "rejeep/commander.el"
   '(:tag ["cli" "command" "option" "parse"]))
@@ -1811,6 +1812,13 @@
 (hoarder:register "emacsmirror/dired-plus")
 (hoarder:register "emacsmirror/echo-bell"  )
 (hoarder:register "Fanael/wordgen.el")
+(hoarder:register "IvanMalison/tile"
+  '(:tag ["xmonad"]))
+(hoarder:register "skeeto/emacs-pastebin"
+  '(:tag ["pastebin"]))
+(hoarder:register "rakanalh/emacs-dashboard"
+  '(:dependency ["purcell/page-break-lines"
+                 "bbatsov/projectile"]))
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]

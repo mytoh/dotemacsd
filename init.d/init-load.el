@@ -67,6 +67,7 @@
     org-breadcrumbs
     org-bookmark-heading
     org-tree-slide
+    org-ephermal-section-numbers
     ))
 
 (muki-layer:load-layers 'package
@@ -74,6 +75,7 @@
     ;; no-littering
     migemo
     cmigemo
+    dashboard
     ssh-config-mode
     emacs-refactor
     ;; artbollocks-mode
@@ -139,7 +141,8 @@
     sunrise-commander
     ;; multiple-cursors
     google-translate
-    form-feed
+    ;; form-feed
+    ;; page-break-lines
     aumix-mode
     scheme-keywords
     seijiseikana
@@ -362,6 +365,8 @@
     scala-mode
     highlight-escape-sequences
     make-color
+    tile
+    projectile
 
     aggressive-indent
     ;; parinfer
@@ -430,14 +435,14 @@
     volatile-highlights
     highlight-defined
     highlight-leading-spaces
-    highlight-indentation
+    ;; highlight-indentation
     ;; hl-todo
     ;; highlight-unique-symbol
     ;; hl-indent
     ;; indent-guide
-    highlight-parentheses
+    ;; highlight-parentheses
     ;; mic-paren
-    flash-paren
+    ;; flash-paren
     ;; paren
     ;; highlight-sexp
     ;; highlight-tail

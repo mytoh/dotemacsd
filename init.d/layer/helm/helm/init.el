@@ -53,8 +53,8 @@ Otherwise goto the end of minibuffer."
                          (interactive)
                          (helm-select-nth-action ,n)))))
   ;; helm mode mappings
-  (define-key helm-map (kbd "C-j") #'helm-next-line)
-  (define-key helm-map (kbd "C-k") #'helm-previous-line)
+  ;; (define-key helm-map (kbd "C-j") #'helm-next-line)
+  ;; (define-key helm-map (kbd "C-k") #'helm-previous-line)
   (define-key helm-map (kbd "C-c C-l") #'delete-minibuffer-contents)
 
   ;; global mappings for helm commands
