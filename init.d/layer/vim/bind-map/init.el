@@ -130,6 +130,14 @@
     "s" #'switch-to-scratch-buffer
     "r" #'revert-buffer)
   
+  (liby 'dashboard
+    (cl-defun muki:switch-to-dashboard-buffer ()
+      (interactive)
+      (if (buffer-live-p (get-buffer "*dashboard*"))
+          (switch-to-buffer "*dashboard*")
+        (message "No dashboard!")))
+    (bind-map-set-keys my-base-leader-buffer-map
+      "h" #'muki:switch-to-dashboard-buffer))
   
   (bind-map-set-keys my-base-leader-window-map
     "c"  #'delete-window
