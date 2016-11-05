@@ -21,7 +21,6 @@ ref: [[https://github.com/syl20bnr/spacemacs/blob/develop/layers/+completion/hel
       (interactive)
       (helm-ag user-emacs-directory)))
   :config
-  (validate-setq helm-ag-source-type 'file-line)
   (validate-setq helm-ag-insert-at-point 'symbol)
 
   (when (executable-find "hw")
