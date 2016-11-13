@@ -142,9 +142,9 @@
   '(:tag ["migemo" "japanese"]))
 (hoarder:register "EphramPerdition/helm-fuzzier"
   '(:tag "fuzzy_matching"))
-(hoarder:register "PythonNut/helm-flx"
-  '(:tag "fuzzy_matching"
-    :dependency ["lewang/flx"]))
+;; (hoarder:register "PythonNut/helm-flx"
+;;  '(:tag "fuzzy_matching"
+;;    :dependency ["lewang/flx"]))
 (hoarder:register "syohex/emacs-helm-japanese-weather")
 (hoarder:register "syohex/emacs-helm-kaomoji")
 (hoarder:register "emacs-helm/helm-describe-modes")
@@ -397,7 +397,9 @@
   '(:tag ["company" "web" "html"]
     :dependency ["osv/web-completion-data"]))
 (hoarder:register "PythonNut/company-flx"
-  '(:tag ["company" "fuzzy_match"]))
+  '(:tag ["company" "fuzzy_match"]
+    :dependency ["lewang/flx"
+                 "company-mode/company-mode"]))
 (hoarder:register "wushuaibuaa/emacscompanywords"
   '(:tag ["company" "dictionary" "english"]))
 (hoarder:register "zargener/company-web-mode"
@@ -463,7 +465,8 @@
 (hoarder:register "m2ym/yascroll-el")
 (hoarder:register "emacs-jp/migemo")
 (hoarder:register "rzl24ozi/cmigemo-module"
-  '(:tag ["emacs" "migemo" "module"]))
+  '(:tag ["emacs" "migemo" "module"]
+    :build ["gmake CMIGEMO=/home/mytoh/huone/ohjelmat/cmigemo"]))
 (hoarder:register "taksatou/flappymacs")
 (hoarder:register "gongo/yamada-el")
 (hoarder:register "jiyoo/flyparens")
@@ -641,7 +644,8 @@
   '(:dependency ["winterTTr/ace-jump-mode"
                  "nicferrier/emacs-noflet"]))
 (hoarder:register "kenoss/erfi"
-  '(:tag ["scheme" "srfi"]))
+  '(:tag ["scheme" "srfi"]
+    :memo "[[http://www.slideshare.net/takeshiokada184/20140511-34538055][XMonad-oid on Emacs & More functional Emacs Lisp | 関数型LT大会]]"))
 (hoarder:register "nicferrier/eshell-manual"
   '(:load-path ["dist"]
     :build ["gmake"]
@@ -1742,7 +1746,10 @@
 (hoarder:register "unhammer/org-random-todo"
   '(:tag ["orgmode" "agenda" "todo"]))
 (hoarder:register "talwrii/bho")
-(hoarder:register "marcowahl/org-ephermal-section-numbers")
+(hoarder:register "marcowahl/org-section-numbers")
+(hoarder:register "tarsius/org-elisp-help")
+
+;;;;; general packages
 
 (hoarder:register "rejeep/commander.el"
   '(:tag ["cli" "command" "option" "parse"]))
@@ -1819,6 +1826,20 @@
 (hoarder:register "rakanalh/emacs-dashboard"
   '(:dependency ["purcell/page-break-lines"
                  "bbatsov/projectile"]))
+(hoarder:register "https://gitlab.com/iankelling/visible-mark.git")
+(hoarder:register "vava/i3-emacs"
+  '(:tag ["i3" "frame"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/5at7lg/vanquishing_emacs_displaybuffer_for_use_with_i3/d9jldgq/][Too Many Requests]]"))
+(hoarder:register "davidshepherd7/frames-only-mode"
+  '(:tag ["frame"]))
+(hoarder:register "git://git.freebsoft.org/git/speechd-el"
+  '(:tag ["speech_synthesis"]))
+(hoarder:register "renard/indicate-change"
+  '(:dependency ["Fuco1/indicators.el"]))
+(hoarder:register "Fuco1/clippy.el")
+(hoarder:register "Fuco1/ETable"
+  '(:tag ["jtable" "table" "mvc"]))
+(hoarder:register "iqbalansari/restart-emacs")
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
@@ -1856,6 +1877,10 @@
   '(:tag ["emacs" "dotfiles" "configuration"]))
 (hoarder:fetch "knu/emacsc"
   '(:tag ["emacs" "cli"]))
+(hoarder:fetch "tacticiankerala/awesome-emacs"
+  '(:tag ["emacs" "awesome_list"]))
+(hoarder:fetch "sefakilic/awesome-emacs"
+  '(:tag ["emacs" "awesome_list"]))
 
 
 ;;; init.el ends here

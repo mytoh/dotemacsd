@@ -6,6 +6,8 @@
 
 (use-package dashboard
   :config
-  (dashboard/setup-startup-hook))
+  (setq dashboard-items '((recents  . 5)
+                          (projects . 5)))
+  (dashboard-setup-startup-hook))
 
 ;;; init.el ends here

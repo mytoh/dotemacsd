@@ -2,8 +2,13 @@
 
 ;;; Code:
 
-(liby 'aggressive-indent
-  (command (aggressive-indent-mode) "aggressive-indent")
-  (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode))
+(use-package aggressive-indent
+  :commands (aggressive-indent-mode)
+  :init
+  (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
+  :config
+  (after 'evil
+    (add-to-list 'aggressive-indent-protected-commands
+                 'evil-undo-pop)))
 
 ;;; init.el ends here

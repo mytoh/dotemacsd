@@ -6,10 +6,14 @@
 (require 'files)
 
 ;;;;; libs
-(eval-when-compile (require 'init-lib "lib/init-lib"))
-(add-subdirs-to-load-path (locate-user-emacs-file "init.d"))
 
+(add-to-list 'load-path (expand-file-name
+                         "huone/ateljee/emacs-muki/lisp"
+                         (getenv "HOME")))
 (require 'muki)
+(add-subdirs-to-load-path (locate-user-emacs-file "init.d"))
+(add-subdirs-to-load-path (locate-user-emacs-file "init.d/elisp"))
+
 (require 'muki-layer)
 
 ;;;;; system
@@ -67,7 +71,8 @@
     org-breadcrumbs
     org-bookmark-heading
     org-tree-slide
-    org-ephermal-section-numbers
+    org-section-numbers
+    org-elisp-help
     ))
 
 (muki-layer:load-layers 'package
@@ -108,9 +113,9 @@
     flatline
     git-gutter
 
-    emms
-    emms-info
-    emms-state
+    ;; emms
+    ;; emms-info
+    ;; emms-state
     ;; emms-mpd
     ;; emms-player-mpv
     ;; emms-player-mpv-volume
@@ -336,7 +341,7 @@
     neotree
     adaptive-wrap
     org-easy-img-insert
-    magithub
+    ;; magithub
     ids-edit
     visual-fill-column
     engine-mode
@@ -367,8 +372,12 @@
     make-color
     tile
     projectile
-
-    aggressive-indent
+    proced
+    indicate-change
+    clippy
+    restart-emacs
+    visible-mark
+    ;; aggressive-indent
     ;; parinfer
 
     ;; idle-highlight-mode
@@ -656,7 +665,8 @@
     apropospriate
     ;; moe-theme
     myth
-    base16-theme))
+    base16-theme
+    birds-of-paradise-plus-theme))
 
 ;;;;; el-get
 ;; (require 'init-el-get)

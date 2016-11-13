@@ -105,6 +105,13 @@
     "r" #'muki:restart-emacs
     "R" #'muki:restart-emacs-debug)
 
+  (liby 'restart-emacs
+    (bind-map-set-keys my-base-leader-quit-map
+      "r" #'restart-emacs
+      "R" (lambda ()
+            (let ((current-prefix-arg '(4)))
+              (call-interactively #'restart-emacs)))))
+
 
   
   (bind-map-set-keys my-base-leader-help-describe-map

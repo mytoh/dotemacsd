@@ -5,41 +5,41 @@
 ;; The sr-rainbow macro allows to easily manipulate the font locking of file and directory names in
 ;; Sunrise using regular expressions. For instance, in order to highlight files and directories that have read/write permissions set for users other than their owner you could add to your .emacs file a snippet like the following:
 
-(after 'sunrise-commander
-    (sr-rainbow sr-gorw-dir
-     (:background "misty rose"
-                  :foreground "blue1"
-                  :bold t)
-     "^..\\(d....\\(...\\)?w..*$\\)")
-  (sr-rainbow sr-gorw
-              (:background "misty rose")
-              "^..\\(-....\\(...\\)?w..*$\\)")
+'(after 'sunrise-commander
+   (sr-rainbow sr-gorw-dir
+               (:background "misty rose"
+                :foreground "blue1"
+                :bold t)
+               "^..\\(d....\\(...\\)?w..*$\\)")
+   (sr-rainbow sr-gorw
+               (:background "misty rose")
+               "^..\\(-....\\(...\\)?w..*$\\)")
 
-  (sr-rainbow sr-jpeg (:foreground nil)
-              "\\(^[^!].[^d].*\\.\\(jpeg\\|jpg\\)$\\)")
-  (set-face-attribute 'sr-jpeg nil :foreground (muki:random-hex-colour))
+   (sr-rainbow sr-jpeg (:foreground nil)
+               "\\(^[^!].[^d].*\\.\\(jpeg\\|jpg\\)$\\)")
+   (set-face-attribute 'sr-jpeg nil :foreground (muki:random-hex-colour))
 
-  (sr-rainbow sr-png (:foreground nil)
-              "\\(^[^!].[^d].*\\.png$\\)")
-  (set-face-attribute 'sr-png nil :foreground (muki:random-hex-colour))
+   (sr-rainbow sr-png (:foreground nil)
+               "\\(^[^!].[^d].*\\.png$\\)")
+   (set-face-attribute 'sr-png nil :foreground (muki:random-hex-colour))
 
-  (sr-rainbow sr-pdf (:foreground nil)
-              "\\(^[^!].[^d].*\\.pdf$\\)")
-  (set-face-attribute 'sr-pdf nil :foreground (muki:random-hex-colour))
+   (sr-rainbow sr-pdf (:foreground nil)
+               "\\(^[^!].[^d].*\\.pdf$\\)")
+   (set-face-attribute 'sr-pdf nil :foreground (muki:random-hex-colour))
 
-  (sr-rainbow sr-org (:foreground nil)
-              "\\(^[^!].[^d].*\\.org$\\)")
-  (set-face-attribute 'sr-org nil :foreground (muki:random-hex-colour))
+   (sr-rainbow sr-org (:foreground nil)
+               "\\(^[^!].[^d].*\\.org$\\)")
+   (set-face-attribute 'sr-org nil :foreground (muki:random-hex-colour))
 
-  (sr-rainbow sr-torrent (:foreground nil)
-              "\\(^[^!].[^d].*\\.torrent$\\)")
-  (set-face-attribute 'sr-torrent nil :foreground (muki:random-hex-colour))
+   (sr-rainbow sr-torrent (:foreground nil)
+               "\\(^[^!].[^d].*\\.torrent$\\)")
+   (set-face-attribute 'sr-torrent nil :foreground (muki:random-hex-colour))
 
-  (sr-rainbow sr-aria2 (:foreground nil)
-              "\\(^[^!].[^d].*\\.aria2$\\)")
-  (set-face-attribute 'sr-aria2 nil :foreground (muki:random-hex-colour))
+   (sr-rainbow sr-aria2 (:foreground nil)
+               "\\(^[^!].[^d].*\\.aria2$\\)")
+   (set-face-attribute 'sr-aria2 nil :foreground (muki:random-hex-colour))
 
-  )
+   )
 
 (cl-defun muki:random-hex-colour ()
   (cl-letf* ((cvalues '(1 2 3 4 5 6 7 8 9 a b c d e f))
@@ -50,16 +50,16 @@
     (concat "#"
             (mapconcat
              (clambda (x)
-                 (cond ((numberp x)
-                        (number-to-string x))
-                       ((symbolp x)
-                        (symbol-name x))))
+               (cond ((numberp x)
+                      (number-to-string x))
+                     ((symbolp x)
+                      (symbol-name x))))
              nums ""))))
 
 (liby 'sunrise-commander
   (after 'sunrise-commander
-      (req 'sunrise-x-modeline
-        (enable-option sr-modeline-use-utf8-marks))
+    (req 'sunrise-x-modeline
+      (enable-option sr-modeline-use-utf8-marks))
     (req 'sunrise-x-tabs
       (add-key sr-tabs-mode-map "C-n"  #'dired-next-line)
       (add-key sr-tabs-mode-map "C-p"  #'dired-previous-line)
@@ -108,7 +108,7 @@
         (message "can't find associated program!"))))
 
   (after 'sunrise-commander
-      (add-key sr-mode-map "C-c C-x" #'muki:sunrise-open-external)
+    (add-key sr-mode-map "C-c C-x" #'muki:sunrise-open-external)
     (add-key sr-mode-map "C-n" #'dired-next-line)
     (add-key sr-mode-map "C-p" #'dired-previous-line))
 

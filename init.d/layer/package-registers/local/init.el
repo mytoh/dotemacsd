@@ -37,7 +37,8 @@
   (add-project-root "emacs-napron")
   (add-project-root "eshell-lista")
   (add-project-root "emacs-colle" '(:load-path ["lisp"]))
-  (add-project-root "emacs-sis"))
+  (add-project-root "emacs-sis")
+  (add-project-root "emacs-lab"))
 
 ;; (hoarder:register "~/.stumpwm.d/modules/util/swm-emacs")
 

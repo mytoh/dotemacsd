@@ -4,8 +4,8 @@
 
 ;;; Code:
 
-(use-package org-ephermal-section-numbers
+(use-package org-section-numbers
   :after org
-  :commands (org-ephermal-section-numbers-toggle))
+  :commands (org-section-numbers-toggle))
 
 ;;; init.el ends here

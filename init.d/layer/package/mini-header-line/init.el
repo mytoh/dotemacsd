@@ -4,8 +4,10 @@
 
 ;;; Code:
 
-(req 'mini-header-line
+(use-package mini-header-line
+  :commands (mini-header-line-mode)
+  :init
   (add-hook 'emacs-lisp-mode-hook
-            #'mini-header-line-minor-mode))
+            #'mini-header-line-mode))
 
 ;;; init.el ends here

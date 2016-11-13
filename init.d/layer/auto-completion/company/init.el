@@ -1,13 +1,19 @@
 
 
-(liby 'company
-  (command (global-company-mode) "company")
-  (add-hook 'after-init-hook #'global-company-mode)
-  (setq company-require-match 'never)
-  (after 'company
-    (add-key company-active-map
-      "C-j" #'company-select-next
-      "C-k" #'company-select-previous)))
+(use-package company
+  :commands (global-company-mode)
+  :init
+  (progn
+    (add-hook 'after-init-hook #'global-company-mode)
+    (setq company-require-match 'never))
+  :config
+  (progn
+    (bind-key "C-j" #'company-select-next
+              company-active-map)
+    (bind-key "C-k" #'company-select-previous
+              company-active-map)
+    (bind-key "C-w" #'evil-delete-backward-word
+              company-active-map)))
 
 ;; (liby 'company
 ;;   (command (company-mode) "company")

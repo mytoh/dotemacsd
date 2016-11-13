@@ -970,6 +970,8 @@
   '(:download nil)) 
 (hoarder:fetch "Argon-/mpv-stats"
   '(:download nil)) 
+(hoarder:fetch "Argon-/mpv-config"
+  '(:memo "[[https://github.com/Argon-/mpv-config/blob/master/mpv.conf][mpv-config/mpv.conf at master · Argon-/mpv-config · GitHub]]"))
 (hoarder:fetch "Cloudef/dmenu-pango-imlib"
   '(:download nil)) 
 (hoarder:fetch "Cloudef/dotFiles"
@@ -2172,7 +2174,8 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
   '(:tag ["bar" "panel" "lemonbar" "wm"]))
 (hoarder:fetch "jaagr/dots"
   '(:tag ["dotfiles" "lemonbuddy"]
-    :memo "[[https://www.reddit.com/r/unixporn/comments/57g6wp/bspwm_lemonbuddy_my_current_setup/][Too Many Requests]]"))
+    :memo "[[https://www.reddit.com/r/unixporn/comments/57g6wp/bspwm_lemonbuddy_my_current_setup/][Too Many Requests]]"
+    :download nil))
 (hoarder:fetch "dcat/swm"
   '(:tag ["wm"]))
 (hoarder:fetch "arcetera/wmrc"
@@ -2298,7 +2301,8 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
 (hoarder:fetch "joewing/jwm"
   '(:tag ["wm"]))
 (hoarder:fetch "i3/i3"
-  '(:tag ["wm" "tiling"]))
+  '(:tag ["wm" "tiling" "i3bar" "ldjson" "json"]
+    :memo "[[https://i3wm.org/docs/i3bar-protocol.html][i3: i3bar input protocol]]"))
 (hoarder:fetch "melezhik/sparrow"
   '(:tag ["make" "task"]))
 (hoarder:fetch "kbrgl/scroller"
@@ -2708,8 +2712,9 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
     :tag ["peerflix" "mpv" "lua"]))
 (hoarder:fetch "sindresorhus/matcher"
   '(:tag ["javascript" "glob" "regex"]))
-(hoarder:fetch "NamPNQ/You-Dont-Need-Javascript"
-  '(:tag ["javascript" "css" "example"]))
+(hoarder:fetch "you-dont-need/You-Dont-Need-Javascript"
+  '(:tag ["javascript" "css" "example"]
+    :download nil))
 (hoarder:fetch "vifm/vifm"
   '(:tag ["vim" "file_manager"]))
 (hoarder:fetch "pornel/giflossy"
@@ -2867,7 +2872,8 @@ http://lists.gnu.org/archive/html/help-gnu-emacs/2016-07/msg00093.html "))
 (hoarder:fetch "egoist/hack"
   '(:tag ["css" "html" "javascript"]))
 (hoarder:fetch "tonsky/FiraCode"
-  '(:tag ["font" "programming" "ligature"]))
+  '(:tag ["font" "programming" "ligature"]
+    :download nil))
 (hoarder:fetch "tonsky/FiraCode.wiki"
   '(:tag ["firacode" "font" "wiki"]))
 (hoarder:fetch "https://gist.github.com/mordocai/50783defab3c3d1650e068b4d1c91495.git"
@@ -3440,6 +3446,8 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "jneen/moonconf-tulip"
   '(:tag ["language" "tulip" "moonconf" "conference"]
     :memo "[[https://www.youtube.com/watch?v=WWlnRWbOlho][Tulip: A Well-Balanced Language - Jeanine Adkisson - YouTube]]"))
+(hoarder:fetch "lexi-lambda/racket-tulip"
+  '(:tag ["racket" "tulip"]))
 (hoarder:fetch "sananth12/ImageScraper"
   '(:tag ["scraping" "html" "xpath" "python"]))
 (hoarder:fetch "miyakogi/conoline.vim"
@@ -3748,7 +3756,8 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "fsharp/fsharp"
   '(:memo " [[https://www.youtube.com/watch?v=Jhks5pYbHbI][Learning F# - YouTube]]
 [[https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.seq-module-%5bfsharp%5d][Collections.Seq Module (F#)]]
-[[https://docs.microsoft.com/en-us/dotnet/articles/fsharp/language-reference/fsharp-collection-types][F# Collection Types]]"))
+[[https://docs.microsoft.com/en-us/dotnet/articles/fsharp/language-reference/fsharp-collection-types][F# Collection Types]]"
+:download nil))
 (hoarder:fetch "ninrod/dotfiles"
   '(:tag ["emacs" "dotfiles" "org-mode" "use-package"]
     :memo "[[https://github.com/ninrod/dotfiles/blob/master/emacs.d/boot.org][dotfiles/boot.org at master · ninrod/dotfiles · GitHub]]
@@ -4009,6 +4018,139 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["javascript" "rss" "feed"]))
 (hoarder:fetch "jsvine/waybackpack"
   '(:tag ["archive" "wayback_machine" "web"]))
+(hoarder:fetch "https://gist.github.com/selsta/ce3fb37e775dbd15c698.git"
+  '(:name "autosub.lua"
+    :tag ["mpv" "lua" "subtitle"]))
+(hoarder:fetch "plexinc/plex-media-player"
+  '(:tag ["mpv" "plex" "qt"]))
+(hoarder:fetch "shingetsu-gou/shingetsu-gou"
+  '(:tag ["p2p" "shingetsu" "saku" "golang"]))
+(hoarder:fetch "mottalrd/hash_dig_and_collect"
+  '(:tag ["ruby" "hash"]
+    :memo "[[http://www.alfredo.motta.name/making-ruby-hashdig-even-more-awesome-introducing-hashdig_and_collect/][Making Ruby Hash#dig even more awesome. Introducing Hash#dig_and_collect – Alfredo Motta]]"))
+(hoarder:fetch "demouth/mario-go"
+  '(:tag ["golang" "terminal" "game"]))
+(hoarder:fetch "piotrmurach/tty-file"
+  '(:tag ["ruby" "file"]))
+(hoarder:fetch "https://gist.github.com/53ningen/689a0f97253ee7b7a7b762b793bc7c70.git"
+  '(:tag ["sakura_ayane"]))
+(hoarder:fetch "mifi/lossless-cut"
+  '(:tag ["ffmpeg" "video" "node" "electron"]))
+(hoarder:fetch "nkh/P5-App-Asciio"
+  '(:tag ["perl" "ascii_art"]))
+(hoarder:fetch "technomancy/atreus"
+  '(:tag ["keyboard" "ergodox" "mechanical_keyboard" "cherry_mx"]
+    :site "https://atreus.technomancy.us/"))
+(hoarder:fetch "https://gitlab.com/eggcaker/org-mode-gitlab-pages.git"
+  '(:tag ["gitlab" "orgmode"]))
+(hoarder:fetch "stephen-riley/ex_optionals"
+  '(:tag ["elixir" "optional"]
+    :memo "[[https://www.reddit.com/r/elixir/comments/5938dn/what_are_you_working_on_oct2016/d9ndn4i/][Too Many Requests]]
+[[http://fsharpforfunandprofit.com/posts/recipe-part2/][Railway oriented programming | F# for fun and profit]]"))
+(hoarder:fetch "jbernardo95/cronex"
+  '(:tag ["elixir" "cron"]))
+(hoarder:fetch "domnikl/kindle-clippings"
+  '(:tag ["kindle" "elixir"]))
+(hoarder:fetch "lubien/bookmarker"
+  '(:tag ["google_chrome" "markdown" "bookmark"]))
+(hoarder:fetch "cosmicpuppet/cosmicpuppet.github.io"
+  '(:tag ["lainchan"]))
+(hoarder:fetch "the-little-prover/j-bob"
+  '(:site "http://the-little-prover.github.io/"
+    :tag ["scheme" "logic_programming" "proof_assistant"]))
+(hoarder:fetch "maxogden/ldjson-stream"
+  '(:tag ["json" "node" "ldjson"]))
+(hoarder:fetch "DogMan8/CatChan"
+  '(:tag ["catalog" "4chan" "bbs" "userjs" "javascript"]))
+(hoarder:fetch "eschulte/graph"
+  '(:tag ["common_lisp" "graph" "digraph"]))
+(hoarder:fetch "sjl/cl-digraph"
+  '(:tag ["common_lisp" "graph" "digraph"]))
+(hoarder:fetch "RasPlex/OpenPHT"
+  '(:tag ["plex" "xbmc"]
+    :download nil))
+(hoarder:fetch "nfjinjing/miku"
+  '(:tag ["haskell"]))
+(hoarder:fetch "scymtym/xml.location"
+  '(:tag ["common_lisp" "xml" "xpath" "dom"]))
+(hoarder:fetch "jperson/cl-reddit"
+  '(:tag ["common_lisp" "reddit" "api"]))
+(hoarder:fetch "kltm/tanuki"
+  '(:tag ["common_lisp" "web" "crawler"]))
+(hoarder:fetch "kltm/kappa"
+  '(:tag ["common_lisp" "web" "crawler" "mechanize" "drakma"]))
+(hoarder:fetch "eikek/dlm"
+  '(:tag ["common_lisp" "downloader" "curl" "cli"]))
+(hoarder:fetch "rongarret/ergolib"
+  '(:tag ["common_lisp" "utility"]))
+(hoarder:fetch "TeMPOraL/scrap-gumtree"
+  '(:tag ["common_lisp" "gumstree" "scraping" "crawler"]))
+(hoarder:fetch "nathancorvussolis/skkdic"
+  '(:tag ["skk" "dictionary"]))
+(hoarder:fetch "wohonajax/DHTiCL"
+  '(:tag ["dht" "common_lisp" "protocol"]))
+(hoarder:fetch "zhoujd/zzstumpwm"
+  '(:tag ["common_lisp" "stumpwm" "clfswm" "configuration"]))
+(hoarder:fetch "VitoVan/cl-spider"
+  '(:tag ["crawler" "common_lisp"]))
+(hoarder:fetch "orthecreedence/cl-hash-util"
+  '(:tag ["common_lisp" "hashtable" "utility"]))
+(hoarder:fetch "timgrossmann/StorageSystem"
+  '(:tag ["java" "raspberry_pi" "personal_information_management"]))
+(hoarder:fetch "francoisdevlin/devlinsf-clojure-utils"
+  '(:tag ["clojure" "utility"]))
+(hoarder:fetch "ralph-schleicher/rs-colors"
+  '(:tag ["common_lisp" "color" "rgb" "hex" "hsl"]))
+(hoarder:fetch "AccelerationNet/a-cl-logger"
+  '(:tag ["common_lisp" "logging"]))
+(hoarder:fetch "hanshuebner/bknr-datastore"
+  '(:tag ["common_lisp" "database"]))
+(hoarder:fetch "javaslang/javaslang"
+  '(:tag ["java" "functional_programming"]
+    :memo "https://github.com/javaslang/javaslang/blob/master/javaslang/src/main/java/javaslang/collection/HashMap.java"))
+(hoarder:fetch "shazow/ssh-chat"
+  '(:memo "[[https://medium.com/swlh/ssh-how-does-it-even-9e43586e4ffc#.85hs7itt1][Why aren’t we using SSH for everything? – The Startup – Medium]]"))
+(hoarder:fetch "exupero/islands"
+  '(:site "http://exupero.org/islands/"
+    :download nil))
+(hoarder:fetch "PragTob/deep_merge"
+  '(:tag ["elixir" "maps"]))
+(hoarder:fetch "cstockton/go-iter"
+  '(:tag ["golang" "iterator"]))
+(hoarder:fetch "dhamaniasad/HeadlessBrowsers"
+  '(:tag ["headless" "browser" "webkit"]))
+(hoarder:fetch "jeapostrophe/remix"
+  '(:tag ["racket" "dsl"]))
+(hoarder:fetch "adhokku/adhokku"
+  '(:tag ["jail" "freebsd"]))
+(hoarder:fetch "johnmorrisbeck/bashUserRepository"
+  '(:tag ["bash" "script"]
+    :site "https://www.reddit.com/r/bur/"))
+(hoarder:fetch "https://bitbucket.org/tux_/rssparser.lisp"
+  '(:type :hg
+    :tag ["common_lisp" "rss" "web" "dom" "xml"]))
+(hoarder:fetch "Shinmera/random-state"
+  '(:tag ["common_lisp" "random" "generator"]))
+(hoarder:fetch "RichardLitt/standard-readme"
+  '(:tag ["node" "readme"]))
+(hoarder:fetch "whizzml/examples"
+  '(:tag ["machine_learning" "lisp"]))
+(hoarder:fetch "csujedihy/proximac"
+  '(:tag ["proxy" "macos"]))
+(hoarder:fetch "knarka/fikaba"
+  '(:tag ["imageboard" "bbs"]
+    :site "http://chanola.netau.net/board/"))
+(hoarder:fetch "anilogia/animedb"
+  '(:tag ["anime" "database"]
+    :download nil))
+(hoarder:fetch "fln/addrwatch"
+  '(:tag ["network" "monitoring"]))
+(hoarder:fetch "lesspass/lesspass"
+  '(:tag ["password"]))
+(hoarder:fetch "afaqurk/linux-dash"
+  '(:tag ["linux" "dashboard" "monitoring"]))
+(hoarder:fetch "timakin/ts"
+  '(:tag ["news" "rss"]))
 
 ;;; end
 

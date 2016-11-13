@@ -264,7 +264,8 @@
 ;;                select-enable-primary)
 
 ;; kill-ring and clipboard are same now!
-;; (set-option save-interprogram-paste-before-kill t)
+;; [[http://pragmaticemacs.com/emacs/add-the-system-clipboard-to-the-emacs-kill-ring/][Add the system clipboard to the Emacs kill-ring | Pragmatic Emacs]]
+(set-option save-interprogram-paste-before-kill t)
 
 ;;;; browse web
 (set-option browse-url-generic-program "conkeror")

@@ -10,9 +10,9 @@
 (muki:comment
  ;; debug players
  (emms-player-for '(*track* (type . file)
-                    (name . "myfile.pls")))
+                            (name . "myfile.pls")))
  (emms-player-for '(*track* (type . url)
-                    (name . "http://test")))
+                            (name . "http://test")))
  (emms-player-for '(*track* (type . file)
-                    (name . "test.flac")))
+                            (name . "test.flac")))
  )

@@ -221,5 +221,6 @@
 (hoarder:register-theme "rails-to-cosmos/danneskjold-theme")
 (hoarder:register-theme "emacsfodder/emacs-theme-creamsody")
 (hoarder:register-theme "emacsfodder/emacs-deep-thought-theme")
+(hoarder:register-theme "jimeh/birds-of-paradise-plus-theme.el")
 
 ;;; init.el ends here
