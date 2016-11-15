@@ -212,7 +212,7 @@
 (hoarder:register-theme "mswift42/breezy-fall-theme")
 (hoarder:register-theme "avkoval/avk-emacs-themes")
 (hoarder:register-theme "lbolla/emacs-quasi-monochrome")
-(hoarder:register-theme "tashrifsanil/emacs-acai-theme")
+(hoarder:register-theme "tashrifsanil/vital-dark-theme")
 (hoarder:register-theme "cs14095/civic-theme.el")
 (hoarder:register-theme "nuncostans/sexy-monochrome-theme")
 (hoarder:register-theme "kootenpv/emacs-kooten-theme")

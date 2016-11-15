@@ -4151,6 +4151,38 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["linux" "dashboard" "monitoring"]))
 (hoarder:fetch "timakin/ts"
   '(:tag ["news" "rss"]))
+(hoarder:fetch "josephyzhou/github-trending"
+  '(:tag ["github"]))
+(hoarder:fetch "Qix-/color"
+  '(:tag ["javascript" "color" "rgb" "hsl"]))
+(hoarder:fetch "kadena-io/pact"
+  '(:tag ["haskell" "lisp" "language"]))
+(hoarder:fetch "foxmask/django-th"
+  '(:tag ["python" "ifttt" "django"]))
+(hoarder:fetch "rstacruz/flatdoc"
+  '(:tag ["markdown" "html" "github"]))
+(hoarder:fetch "FreshRSS/FreshRSS"
+  '(:tag ["rss" "ttrss" "server"]))
+(hoarder:fetch "Skarafaz/mercury"
+  '(:tag ["ssh" "android"]))
+(hoarder:fetch "Skarafaz/mercury.wiki"
+  '(:tag ["ssh" "android"]))
+(hoarder:fetch "sindresorhus/random-obj-prop"
+  '(:tag ["random" "javascript"]))
+(hoarder:fetch "clonos/cp-installer"
+  '(:tag ["freebsd"]))
+(hoarder:fetch "sindresorhus/subsume"
+  '(:tag ["javascript"]))
+(hoarder:fetch "haasn/hsbooru"
+  '(:tag ["booru" "haskell"]))
+(hoarder:fetch "haasn/random_haskell_stuff"
+  '(:tag ["haskell"]))
+(hoarder:fetch "arathnim/parmesan"
+  '(:tag ["common_lisp" "parser"]))
+(hoarder:fetch "ZedPea/ls-clone"
+  '(:tag ["haskell" "ls"]))
+(hoarder:fetch "ZedPea/rule34-paheal-downloader"
+  '(:tag ["haskell" "rule34"]))
 
 ;;; end
 
