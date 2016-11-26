@@ -32,11 +32,11 @@
   (fset 'evil-visual-update-x-selection 'ignore)
 
   (cl-locally
-      (enable-option evil-want-C-u-scroll)
-    (when evil-want-C-u-scroll
-      (add-global-key "M-u" #'universal-argument)
-      (after 'evil
-          (add-key evil-normal-state-map "M-u" #'universal-argument)))))
+   (enable-option evil-want-C-u-scroll)
+   (when evil-want-C-u-scroll
+     (add-global-key "M-u" #'universal-argument)
+     (after 'evil
+       (add-key evil-normal-state-map "M-u" #'universal-argument)))))
 
 
 (cl-defun muki:init-evil-mode-mappings ()
@@ -67,11 +67,11 @@
   ;; [[http://stackoverflow.com/questions/8483182/evil-mode-best-practice]]
   (seq-each
    (pcase-lambda (`(,key . ,fun))
-       (seq-each
-        (clambda (m)
-            (add-key m key fun))
-        (list evil-insert-state-map
-              evil-motion-state-map)))
+     (seq-each
+      (clambda (m)
+        (add-key m key fun))
+      (list evil-insert-state-map
+            evil-motion-state-map)))
    '(("C-e" . evil-end-of-line)
      ("C-n" . evil-next-line)
      ("C-p" . evil-previous-line)
@@ -124,30 +124,30 @@
 (cl-defun muki:init-evil-mode-multiple-cursors ()
   ;; multiple-cursors
   (after 'multiple-cursors
-      (setq mc/cmds-to-run-for-all
-       '(evil-append-line
-         evil-backward-WORD-begin
-         evil-backward-word-begin
-         evil-delete-char
-         evil-delete-line
-         evil-digit-argument-or-evil-beginning-of-line
-         evil-emacs-state
-         evil-end-of-line
-         evil-force-normal-state
-         evil-forward-WORD-begin
-         evil-forward-WORD-end
-         evil-forward-word-begin
-         evil-forward-word-end
-         evil-insert
-         evil-next-line
-         evil-normal-state
-         evil-previous-line))))
+    (setq mc/cmds-to-run-for-all
+          '(evil-append-line
+            evil-backward-WORD-begin
+            evil-backward-word-begin
+            evil-delete-char
+            evil-delete-line
+            evil-digit-argument-or-evil-beginning-of-line
+            evil-emacs-state
+            evil-end-of-line
+            evil-force-normal-state
+            evil-forward-WORD-begin
+            evil-forward-WORD-end
+            evil-forward-word-begin
+            evil-forward-word-end
+            evil-insert
+            evil-next-line
+            evil-normal-state
+            evil-previous-line))))
 
 (cl-defun muki:init-evil-mode-elisp-slime-nav ()
   ;; elisp-slime-nav
   (after 'elisp-slime-nav
-      (evil-define-key 'normal emacs-lisp-mode-map (kbd "K")
-                       #'elisp-slime-nav-describe-elisp-thing-at-point)))
+    (evil-define-key 'normal emacs-lisp-mode-map (kbd "K")
+      #'elisp-slime-nav-describe-elisp-thing-at-point)))
 
 (cl-defun muki:init-evil-mode-skk ()
   (liby 'skk
@@ -168,20 +168,20 @@ is a kind of temporary one which is not confirmed yet."
 
 (cl-defun muki:init-evil-initial-state ()
   (cl-loop for (mode . state)
-        in '((git-commit-mode . insert)
-             (git-rebase-mode . emacs)
-             (ebib-entry-mode              . emacs)
-             (ebib-index-mode              . emacs)
-             (ebib-log-mode                . emacs)
-             (elfeed-show-mode             . emacs)
-             (elfeed-search-mode           . emacs)
-             (navi2ch-message-mode           . emacs)
-             (navi2ch-board-mode           . emacs)
-             (navi2ch-article-mode           . emacs)
-             (navi2ch-bookmark-mode           . emacs)
-             (navi2ch-list-mode           . emacs)
-             (dired-mode . emacs))
-        do (evil-set-initial-state mode state)))
+           in '((git-commit-mode . insert)
+                (git-rebase-mode . emacs)
+                (ebib-entry-mode              . emacs)
+                (ebib-index-mode              . emacs)
+                (ebib-log-mode                . emacs)
+                (elfeed-show-mode             . emacs)
+                (elfeed-search-mode           . emacs)
+                (navi2ch-message-mode           . emacs)
+                (navi2ch-board-mode           . emacs)
+                (navi2ch-article-mode           . emacs)
+                (navi2ch-bookmark-mode           . emacs)
+                (navi2ch-list-mode           . emacs)
+                (dired-mode . emacs))
+           do (evil-set-initial-state mode state)))
 
 (cl-defun muki:reset-initial-states ()
   ;; Since evil-default-state defaults to normal, you can simply clear the other mode lists. If you want to be more explicit, you can do this before clearing them.
@@ -200,8 +200,8 @@ is a kind of temporary one which is not confirmed yet."
 (cl-defun muki:init-evil-leave-insert-mode-on-focus-out ()
   " original code by @justbur "
   (cl-labels ((insert-to-normal ()
-                (when (evil-insert-state-p)
-                  (evil-normal-state))))
+                                (when (evil-insert-state-p)
+                                  (evil-normal-state))))
     (add-hook 'focus-out-hook #'insert-to-normal)
     (run-with-idle-timer 10 t #'insert-to-normal)))
 

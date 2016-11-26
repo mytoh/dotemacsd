@@ -166,6 +166,8 @@
   '(:tag ["youtube"]))
 (hoarder:register "emacsorphanage/helm-ls-svn"
   '(:tag ["svn"]))
+(hoarder:register "ShingoFukuyama/helm-recentd"
+  '(:tag ["helm"]))
 
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]
@@ -1287,7 +1289,7 @@
   '(:tag ["paredit" "smartparens"]))
 (hoarder:register "ikazuhiro/emoji-display"
   '(:tag ["emoji"]))
-(hoarder:register "NicolasPetton/seq.el")
+;; (hoarder:register "NicolasPetton/seq.el")
 (hoarder:register "mbunkus/simple-rtm"
   '(:tag ["org" "remember_the_milk"]
     :load-path "lisp"))
@@ -1840,6 +1842,14 @@
 (hoarder:register "Fuco1/ETable"
   '(:tag ["jtable" "table" "mvc"]))
 (hoarder:register "iqbalansari/restart-emacs")
+(hoarder:register "jtbm37/all-the-icons-dired")
+(hoarder:register "zweifisch/enlive")
+(hoarder:register "emacsmirror/ucs-cmds"
+  '(:tag ["unicode"]))
+(hoarder:register "andreasjansson/language-detection.el"
+  '(:tag ["language" "eww"]))
+(hoarder:register "tarao/tab-group-el")
+(hoarder:register "mrkkrp/typit")
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
@@ -1881,6 +1891,16 @@
   '(:tag ["emacs" "awesome_list"]))
 (hoarder:fetch "sefakilic/awesome-emacs"
   '(:tag ["emacs" "awesome_list"]))
-
+(hoarder:fetch "incandescentman/Emacs-Settings"
+  '(:tag ["emacs" "configuration"]
+    :memo "[[https://www.youtube.com/watch?v=FtieBc3KptU][Emacs For Writers - YouTube]]"))
+(hoarder:fetch "vkazanov/toy-orgfuse"
+  '(:tag ["python" "fuse" "org-mode"]))
+(hoarder:fetch "argentum47/everm"
+  '(:tag ["emacs"]))
+(hoarder:fetch "p-gen/smenu")
+(hoarder:fetch "Kagami/webm.py")
+(hoarder:fetch "https://gist.github.com/mpasternacki/974e29d1e3865e940c53.git"
+  '(:tag ["freebsd" "macbook"]))
 
 ;;; init.el ends here

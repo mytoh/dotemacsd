@@ -15,6 +15,16 @@
       (muki:evil-surround-replace-pairs '(?\) . ("(" . ")")) '(?\) . ("( " . " )")))
       (muki:evil-surround-replace-pairs '(?\[ . ("[" . "]")) '(?\[ . ("[ " . " ]")))
       (muki:evil-surround-replace-pairs '(?\] . ("[" . "]")) '(?\] . ("[ " . " ]"))))
+    (after 'evil-paredit
+      (add-to-list 'evil-surround-operator-alist
+                   '(evil-paredit-change . change))
+      (add-to-list 'evil-surround-operator-alist
+                   '(evil-paredit-delete . delete)))
+    (after 'evil-cleverparens
+      (add-to-list 'evil-surround-operator-alist
+                   '(evil-cp-change . change))
+      (add-to-list 'evil-surround-operator-alist
+                   '(evil-cp-delete . delete)))
     (hook 'emacs-lisp-mode-hook #'muki:evil-surround-replace-all-pairs)
     (hook 'org-mode-hook #'muki:evil-surround-replace-all-pairs)
     ))

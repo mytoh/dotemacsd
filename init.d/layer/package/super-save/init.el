@@ -4,7 +4,12 @@
 
 ;;; Code:
 
-(req 'super-save
-  (super-save-mode))
+(use-package super-save
+  :defer 5
+  :init
+  (setq super-save-auto-save-when-idle t)
+  (setq auto-save-default nil)
+  :config
+  (super-save-mode +1))
 
 ;;; init.el ends here

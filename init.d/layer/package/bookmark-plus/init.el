@@ -4,7 +4,6 @@
 
 ;;; Code:
 
-(after 'evil
-  (req 'evil-opener))
+(use-package bookmark+)
 
 ;;; init.el ends here

@@ -4,7 +4,7 @@
 
 ;;; Code:
 
-(after 'evil
-  (req 'evil-opener))
+(use-package ucs-cmds
+  :commands (ucsc-insert))
 
 ;;; init.el ends here

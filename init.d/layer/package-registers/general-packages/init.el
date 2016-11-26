@@ -600,7 +600,8 @@
   '(:tag ["4chan" "chan" "bbs"]
     :site "https://uchan.plebco.de/"))
 (hoarder:fetch "get-iplayer/get_iplayer"
-  '(:tag ["radio" "bbc"]))
+  '(:tag ["radio" "bbc"]
+    :memo "[[http://raspi.tv/2016/get_iplayer-on-raspberry-pi-update-november-2016][403 Forbidden]]"))
 (hoarder:fetch "fanglingsu/vimb"
   '(:tag ["web" "browser" "vim" "webkit"]))
 (hoarder:fetch "storax/emaci"
@@ -1475,10 +1476,8 @@
   '(:download nil)) 
 (hoarder:fetch "moul/awesome-ssh"
   '(:download nil)) 
-(hoarder:fetch "mps-youtube/mps-youtube"
-  '(:download nil)) 
-(hoarder:fetch "mps-youtube/pafy"
-  '(:download nil)) 
+(hoarder:fetch "mps-youtube/mps-youtube") 
+(hoarder:fetch "mps-youtube/pafy") 
 (hoarder:fetch "mpv-player/mpv"
   ) 
 (hoarder:fetch "mrowa44/emojify"
@@ -3479,7 +3478,7 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "BurntSushi/ripgrep"
   '(:tag ["rust" "grep" "ag" "ack"]))
 (hoarder:fetch "rust-lang/rust"
-  '(:download nil))
+  '(:download t))
 (hoarder:fetch "jamespic/pwgen"
   '(:tag ["password" "html"]))
 (hoarder:fetch "ocornut/imgui"
@@ -3645,6 +3644,9 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "skr0tm/themes"
   '(:tag ["configuration" "theme" "desktop" "rice" ]
     :memo "[[https://www.reddit.com/r/unixporn/comments/55oxoa/2bwm_themes/][Too Many Requests]]"))
+(hoarder:fetch "skr0tm/dotfiles"
+  '(:tag ["2bwm" "lemonbar" "admiral" "configuration" "theme" "desktop" "rice" ]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5e9lbp/2bwm_comfort_bonsai/][{2bwm} comfort bonsai : unixporn]]"))
 (hoarder:fetch "halfwit/dotfiles"
   '(:memo " [[https://www.reddit.com/r/unixporn/comments/55otxh/general_searching_github_from_dmenupangoimlib/][Too Many Requests]]
 [[https://github.com/halfwit/dotfiles/blob/master/share/dsearch/gh][dotfiles/gh at master · halfwit/dotfiles · GitHub]]"))
@@ -4053,7 +4055,7 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["kindle" "elixir"]))
 (hoarder:fetch "lubien/bookmarker"
   '(:tag ["google_chrome" "markdown" "bookmark"]))
-(hoarder:fetch "cosmicpuppet/cosmicpuppet.github.io"
+(hoarder:fetch "https://gitla.in/cosmicpuppet/blog.git"
   '(:tag ["lainchan"]))
 (hoarder:fetch "the-little-prover/j-bob"
   '(:site "http://the-little-prover.github.io/"
@@ -4143,6 +4145,9 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "anilogia/animedb"
   '(:tag ["anime" "database"]
     :download nil))
+(hoarder:fetch "woxtu/animedb-json"
+  '(:tag ["anime" "database"]
+    :download nil))
 (hoarder:fetch "fln/addrwatch"
   '(:tag ["network" "monitoring"]))
 (hoarder:fetch "lesspass/lesspass"
@@ -4183,6 +4188,121 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["haskell" "ls"]))
 (hoarder:fetch "ZedPea/rule34-paheal-downloader"
   '(:tag ["haskell" "rule34"]))
+(hoarder:fetch "jmgimeno/okasaki-clojure"
+  '(:memo "[[http://phaendal.hatenablog.com/entry/2016/11/13/212328][ClojureでのImmutable Data Structureについてメモ - レガシーコード生産ガイド]]"))
+(hoarder:fetch "interagent/prmd"
+  '(:tag ["markdown" "json_scheme"]))
+(hoarder:fetch "commoncrawl/commoncrawl"
+  '(:tag ["crawler" "data" "common_search" "warc"]
+    :site "http://www.commoncrawl.org/"))
+(hoarder:fetch "commonsearch/cosr-back"
+  '(:tag ["crawler" "data" "common_crawl" "wikidata" "dmoz" "warc"]
+    :site  "https://about.commonsearch.org/"
+    :memo "[[http://dsi.ut-capitole.fr/blacklists/index_en.php][Blacklists UT1]]
+[[http://www.dmoz.org/][DMOZ - The Directory of the Web]]"))
+(hoarder:fetch "mgsnova/feature"
+  '(:tag ["ruby" ]))
+(hoarder:fetch "schnitz81/beings"
+  '(:memo "[[https://www.youtube.com/watch?v=rXTbAWzp6o4][beings, AI walking or \"scaleable multibeings simulator with individual AI\" - YouTube]]"))
+(hoarder:fetch "schnitz81/textmode-lifestyle"
+  '(:memo "[[https://www.youtube.com/watch?v=CF7x0vJgypw][textmode-lifestyle, Text mode lifestyle - YouTube]]"))
+(hoarder:fetch "nvzqz/RandomKit"
+  '(:tag ["random" "swift"]))
+(hoarder:fetch "Code-Hex/Neo-cowsay"
+  '(:tag ["golang" "cowsay"]))
+(hoarder:fetch "datproject/dat"
+  '(:tag ["p2p" "node" "javascript"]))
+(hoarder:fetch "shriphani/pegasus"
+  '(:tag ["clojure" "web" "crawler"]
+    :memo "[[http://blog.shriphani.com/2016/11/16/a-clojure-dsl-for-web-crawling/][A Clojure DSL for Web-Crawling]]"))
+(hoarder:fetch "rchipka/node-osmosis"
+  '(:tag ["node" "crawler" "scraper"]))
+(hoarder:fetch "xsc/invariant"
+  '(:tag ["clojure" "spec"]))
+(hoarder:fetch "https://go.googlesource.com/image"
+  '(:type :git
+    :tag ["golang" "font"]))
+(hoarder:fetch "wireapp/wire-android"
+  '(:tag ["chat" "messanger"]
+    :download nil))
+(hoarder:fetch "substack/git-dat"
+  '(:tag ["git" "p2p" "datjs"]))
+(hoarder:fetch "nfs-ganesha/nfs-ganesha"
+  '(:tag ["nfs"]))
+(hoarder:fetch "mntmn/interim"
+  '(:tag ["lisp_machine" "os"]))
+(hoarder:fetch "carloscuesta/gitmoji"
+  '(:tag ["github" "emoji" "node"]))
+(hoarder:fetch "welcoMattic/gitmoji-commit-hook"
+  '(:tag ["github" "emoji" "node" "git"]))
+(hoarder:fetch "chenxsan/Privoxy"
+  '(:tag ["privoxy" "proxy"]))
+(hoarder:fetch "https://gist.github.com/sx2008/2766874.git"
+  '(:tag ["privoxy" ]))
+(hoarder:fetch "rakanalh/grawler"
+  '(:tag ["crawler" "scraping" "galang"]))
+(hoarder:fetch "yoshuawuyts/knowledge"
+  '(:tag ["knowledge" "information"]))
+(hoarder:fetch "vicfryzel/xmonad-config"
+  '(:tag ["xmonad" "configuration"]))
+(hoarder:fetch "scvalencia/Coddie"
+  '(:tag ["scheme" "python" "database"]))
+(hoarder:fetch "ctford/V"
+  '(:tag ["clojure" "test" "validation"]))
+(hoarder:fetch "DoG-peer/electric-yp"
+  '(:tag ["peercast" "coffeescript" "electron"]))
+(hoarder:fetch "anmonteiro/lumo"
+  '(:tag ["clojurescript" "repl" "planck"]))
+(hoarder:fetch "azer/notebook"
+  '(:tag ["knowledge" "information"]))
+(hoarder:fetch "askucher/ftjs"
+  '(:tag ["javascript" "type"]))
+(hoarder:fetch "cosmos72/twin"
+  '(:tag ["desktop" "window_manager"]))
+(hoarder:fetch "Developer-Y/cs-video-courses"
+  '(:tag ["video" "mooc" "computer_science" "lecture"]))
+(hoarder:fetch "spantaleev/sftpman"
+  '(:tag ["sshfs" "sftpman" "python"]))
+(hoarder:fetch "drduh/pwd.sh"
+  '(:tag ["password"]))
+(hoarder:fetch "mfrelink/OpenFLIXR.Wizard"
+  '(:tag ["plex"]))
+(hoarder:fetch "gaubert/gmvault"
+  '(:tag ["python" "gmail"]))
+(hoarder:fetch "tony/tmuxp"
+  '(:tag ["tmux" "python"]))
+(hoarder:fetch "tony/vcspull"
+  '(:tag ["python" "git" "vcs"]))
+(hoarder:fetch "benbernard/RecordStream"
+  '(:tag ["perl" "json" "csv"]))
+(hoarder:fetch "skavanagh/KeyBox"
+  '(:tag ["ssh" ]))
+(hoarder:fetch "https://git.yoctoproject.org/git/matchbox-desktop-2"
+  '(:type :git
+    :tag ["desktop" "window_manager"]))
+(hoarder:fetch "RadicalMilitantLibrary/www"
+  '(:tag ["library" "tor"]))
+(hoarder:fetch "kidd/redditfs.lua"
+  '(:tag ["reddit" "lua"]))
+(hoarder:fetch "todylu/monaco.ttf"
+  '(:tag ["font"]))
+(hoarder:fetch "PedoHunter/pizzagate")
+(hoarder:fetch "davehodg/perlcolour"
+  '(:tag ["perl" "color" "terminal"]))
+(hoarder:fetch "Jasonette/Jasonpedia"
+  '(:tag ["json" "ios"]))
+(hoarder:fetch "benrady/shinatra"
+  '(:tag ["shell" "server"]))
+(hoarder:fetch "chbrown/rfc6902"
+  '(:tag ["json" "rfc" "json_patch"]))
+(hoarder:fetch "bartekrutkowski/iocell"
+  '(:tag ["freebsd" "iocage" "jail"]))
+(hoarder:fetch "escherize/tracks"
+  '(:tag ["clojure"]))
+(hoarder:fetch "kkinnear/zprint"
+  '(:tag ["clojure"]))
+(hoarder:fetch "ekg2/ekg2"
+  '(:tag ["messanger" "irc"]))
 
 ;;; end
 

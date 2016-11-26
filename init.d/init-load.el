@@ -80,7 +80,7 @@
     ;; no-littering
     migemo
     cmigemo
-    dashboard
+    ;; dashboard
     ssh-config-mode
     emacs-refactor
     ;; artbollocks-mode
@@ -154,6 +154,7 @@
     fish-mode
     debug-print
     bookmark-extensions
+    bookmark-plus
     lehtifile-mode
     rebuildfm
     sos
@@ -163,6 +164,7 @@
     itail
     quickrun
     web-mode
+    ;; js2-mode
     go-mode
     lua-mode
     bm
@@ -197,7 +199,6 @@
     pt
     ;; undohist
     image-archive
-    js2-mode
     ;; ace-link
     phi-grep
     fill-column-indicator
@@ -217,8 +218,10 @@
     itunes-bgm
     ;; imagex
     browse-at-remote
-    ;; super-save
-    auto-save-buffers-enhanced
+
+    super-save
+    ;; auto-save-buffers-enhanced
+
     compilation-highlight
     conkeror-minor-mode
     mpv
@@ -365,7 +368,6 @@
     sauron
     hide-comnt
     insert-shebang
-    dired-icon
     aggressive-fill-paragraph-mode
     scala-mode
     highlight-escape-sequences
@@ -377,6 +379,13 @@
     clippy
     restart-emacs
     visible-mark
+    language-detection
+    ucs-cmds
+    avy
+
+    all-the-icons-dired
+    ;; dired-icon
+
     ;; aggressive-indent
     ;; parinfer
 
@@ -587,7 +596,7 @@
     company
     company-shell
     company-statistics
-    company-ngram
+    ;; company-ngram
     company-emoji
     ;; company-quickhelp
     ;; company-org-headings
@@ -625,7 +634,7 @@
     eww
     newsticker
     rcirc
-    tramp
+    ;; tramp
     recentf
     font ; this cause slow displaying
 
