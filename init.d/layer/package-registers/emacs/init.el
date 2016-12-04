@@ -1850,6 +1850,19 @@
   '(:tag ["language" "eww"]))
 (hoarder:register "tarao/tab-group-el")
 (hoarder:register "mrkkrp/typit")
+(hoarder:register "https://bitbucket.org/gvol/emacs-achievements"
+  '(:type :hg))
+(hoarder:register "xuchunyang/grab-x-link")
+(hoarder:register "git://repo.or.cz/anything-config.git"
+  '(:tag ["helm" "completion"]))
+(hoarder:register "ksjogo/proportional"
+  '(:tag ["font"]))
+(hoarder:register "earlyjohn/company-org-headings")
+(hoarder:register "cmpitg/wand"
+  '(:tag ["acme" "xiki"]))
+(hoarder:register "Fanael/highlight-quoted"
+  '(:desc "Highlight Lisp quotes and quoted symbols"
+    :tag ["highlight"]))
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
@@ -1902,5 +1915,11 @@
 (hoarder:fetch "Kagami/webm.py")
 (hoarder:fetch "https://gist.github.com/mpasternacki/974e29d1e3865e940c53.git"
   '(:tag ["freebsd" "macbook"]))
+(hoarder:fetch "mwolson/emacs-shared"
+  '(:tag ["configuration" "emacs"]))
+(hoarder:fetch "https://gist.github.com/introom/f4cafe18fbe365a9dd29098aeaba1e03.git"
+  '(:name "e-.fish"
+    :tag ["emacs" "fish" "pipe"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/5fbpir/how_to_stop_emacsclient_eval_output_to_stdout/][How to stop \"emacsclient --eval\" output to stdout? : emacs]]"))
 
 ;;; init.el ends here

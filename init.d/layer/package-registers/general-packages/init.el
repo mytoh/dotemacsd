@@ -664,8 +664,9 @@
 (hoarder:fetch "jjk-jacky/donnatella")
 (hoarder:fetch "https://git.lysator.liu.se/nettle/nettle.git"
   '(:tag ["gnutls" "crypto" "security"]))
-(hoarder:fetch "emacs-mirror/emacs"
-  '(:branch "master"))
+;; (hoarder:fetch "emacs-mirror/emacs"
+;;   '(:branch "master"))
+(hoarder:fetch "git://git.sv.gnu.org/emacs.git")
 (hoarder:fetch "kentaro/cinnamon")
 (hoarder:fetch "aharris88/awesome-cli-apps")
 (hoarder:fetch "zythum/mama2"
@@ -1316,8 +1317,7 @@
   '(:download nil)) 
 (hoarder:fetch "heyalexej/awesome-images"
   '(:download nil)) 
-(hoarder:fetch "hishamhm/htop"
-  '(:download nil)) 
+(hoarder:fetch "hishamhm/htop") 
 (hoarder:fetch "holman/dotfiles"
   '(:download nil)) 
 (hoarder:fetch "huyz/less.vim"
@@ -4128,7 +4128,11 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
     :site "https://www.reddit.com/r/bur/"))
 (hoarder:fetch "https://bitbucket.org/tux_/rssparser.lisp"
   '(:type :hg
-    :tag ["common_lisp" "rss" "web" "dom" "xml"]))
+    :tag ["common_lisp" "rss" "web" "dom" "xml"]
+    :memo "[[https://www.reddit.com/r/Common_Lisp/comments/5cl5y1/a_webtorss_parser_in_common_lisp/][Too Many Requests]]"))
+(hoarder:fetch "death/gnusdumps"
+  '(:tag ["common_lisp" "rss" "gnus" "html"]
+    :memo "[[https://www.reddit.com/r/Common_Lisp/comments/5cl5y1/a_webtorss_parser_in_common_lisp/][Too Many Requests]]"))
 (hoarder:fetch "Shinmera/random-state"
   '(:tag ["common_lisp" "random" "generator"]))
 (hoarder:fetch "RichardLitt/standard-readme"
@@ -4209,7 +4213,8 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "Code-Hex/Neo-cowsay"
   '(:tag ["golang" "cowsay"]))
 (hoarder:fetch "datproject/dat"
-  '(:tag ["p2p" "node" "javascript"]))
+  '(:tag ["p2p" "node" "javascript"]
+    :memo "[[https://www.youtube.com/watch?v=0Ra9bXbtJJY][DAT Project - DAppHack Berlin 2016 - YouTube]]"))
 (hoarder:fetch "shriphani/pegasus"
   '(:tag ["clojure" "web" "crawler"]
     :memo "[[http://blog.shriphani.com/2016/11/16/a-clojure-dsl-for-web-crawling/][A Clojure DSL for Web-Crawling]]"))
@@ -4231,8 +4236,7 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["lisp_machine" "os"]))
 (hoarder:fetch "carloscuesta/gitmoji"
   '(:tag ["github" "emoji" "node"]))
-(hoarder:fetch "welcoMattic/gitmoji-commit-hook"
-  '(:tag ["github" "emoji" "node" "git"]))
+(hoarder:fetch "carloscuesta/gitmoji-cli")
 (hoarder:fetch "chenxsan/Privoxy"
   '(:tag ["privoxy" "proxy"]))
 (hoarder:fetch "https://gist.github.com/sx2008/2766874.git"
@@ -4284,7 +4288,7 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["reddit" "lua"]))
 (hoarder:fetch "todylu/monaco.ttf"
   '(:tag ["font"]))
-(hoarder:fetch "PedoHunter/pizzagate")
+;; (hoarder:fetch "PedoHunter/pizzagate")
 (hoarder:fetch "davehodg/perlcolour"
   '(:tag ["perl" "color" "terminal"]))
 (hoarder:fetch "Jasonette/Jasonpedia"
@@ -4301,6 +4305,191 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["clojure"]))
 (hoarder:fetch "ekg2/ekg2"
   '(:tag ["messanger" "irc"]))
+(hoarder:fetch "poppinss/co-compose"
+  '(:tag ["javascript" "async" "generator" "koa" "adnisjs"]))
+(hoarder:fetch "thysultan/wam.js"
+  '(:tag ["javascript" "koa" "nextjs"]))
+(hoarder:fetch "masatoi/wiz-util"
+  '(:tag ["common_lisp" "utility" "uiop"]
+    :memo "[[https://github.com/masatoi/wiz-util/blob/master/scripting.lisp][wiz-util/scripting.lisp at master · masatoi/wiz-util · GitHub]]"))
+(hoarder:fetch "tweekmonster/nmux"
+  '(:tag ["nvim"]))
+(hoarder:fetch "inondle/YDLTracker"
+  '(:tag ["youtube" "youtube-dl"]))
+(hoarder:fetch "herbstluftwm/herbstluftwm")
+(hoarder:fetch "ps3mediaserver/ps3mediaserver")
+(hoarder:fetch "gizak/termui"
+  '(:tag ["golang" "terminal"]))
+(hoarder:fetch "huydx/hget"
+  '(:tag ["golang" "downloader"]))
+(hoarder:fetch "attic-labs/noms"
+  '(:tag ["golang" "database"]))
+(hoarder:fetch "astaxie/bat"
+  '(:tag ["golang" "curl"]))
+(hoarder:fetch "Sirupsen/logrus"
+  '(:tag ["golang" "logging"]))
+(hoarder:fetch "daboth/pagan"
+  '(:tag ["python" "icon" "pixel_art"]))
+(hoarder:fetch "reorx/httpstat"
+  '(:tag ["http" "curl" "python"]))
+(hoarder:fetch "lk-geimfari/elizabeth"
+  '(:tag ["python" "generator" "random"]))
+(hoarder:fetch "nicolaiarocci/cerberus"
+  '(:tag ["python" "validation"]))
+(hoarder:fetch "gerhard/deliver"
+  '(:tag ["bash" "deployment"]))
+(hoarder:fetch "junegunn/redis-stat"
+  '(:tag ["ruby" "redis"]))
+(hoarder:fetch "simeji/jid"
+  '(:tag ["json" "jq" "cli"]))
+(hoarder:fetch "jgthms/css-reference"
+  '(:tag ["css" "reference" "document"]))
+(hoarder:fetch "mail-in-a-box/mailinabox"
+  '(:tag ["mail" "roundcube" "selfhost"]))
+(hoarder:fetch "adtac/climate"
+  '(:tag ["linux" "cli" "shell"]))
+(hoarder:fetch "lukehaas/RegexHub"
+  '(:tag ["regex"]))
+(hoarder:fetch "skx/bookmarks.public"
+  '(:tag ["bookmark" "selfhost"]))
+(hoarder:fetch "drduh/macOS-Security-and-Privacy-Guide"
+  '(:tag ["macos" "security" "privacy" "dnscrypt"]))
+(hoarder:fetch "drduh/Debian-Privacy-Server-Guide"
+  '(:tag ["dnscypt" "linux" "server" "privoxy"]))
+(hoarder:fetch "wellsjo/JSON-Splora"
+  '(:tag ["json" "electron" "visualization" "editor"]))
+(hoarder:fetch "mirror/jdownloader"
+  '(:tag ["downloader" "java"]
+    :download nil))
+(hoarder:fetch "xdavidhu/mitmAP"
+  '(:tag ["mitmproxy" "wireshark"]))
+(hoarder:fetch "shimmerproject/Greybird"
+  '(:tag ["gtk" "theme"]))
+(hoarder:fetch "ix/etc"
+  '(:memo "[[https://www.reddit.com/r/unixporn/comments/5f1ugt/hlwmemacs_boring/][Too Many Requests]]"))
+(hoarder:fetch "sn0rlax/dotfiles"
+  '(:memo "[[https://www.reddit.com/r/unixporn/comments/5f7vsz/hlwm_snow_on_mars/][{hlwm} Snow on Mars : unixporn]]"))
+(hoarder:fetch "brightflash64/MOFO-Linux"
+  '(:site "http://mofolinux.com"
+    :memo "[[https://www.youtube.com/watch?v=EdsVXt5fT0M][MOFO Linux 5 - YouTube]]"))
+(hoarder:fetch "https://anonscm.debian.org/git/reproducible/reproducible-website.git"
+  '(:site "https://reproducible-builds.org/"))
+(hoarder:fetch "k0kubun/xkremap"
+  '(:tag ["linux" "ruby" "keymap"]
+    :memo "[[http://k0kubun.hatenablog.com/entry/xkremap][Linux向けの最強のキーリマッパーを作った - k0kubun's blog]]"))
+(hoarder:fetch "k0kubun/Nocturn"
+  '(:tag ["twitter" "electron" "react" "redux"]))
+(hoarder:fetch "ExpediaInceCommercePlatform/cyclotron"
+  '(:tag ["javascript" "mongodb" "dashboard"]))
+(hoarder:fetch "git://git.sv.gnu.org/artanis.git"
+  '(:tag ["gnu" "guile" "web" "waf"]))
+(hoarder:fetch "sdqali/hackervision"
+  '(:tag ["firefox" "colorscheme"]))
+(hoarder:fetch "gchq/CyberChef"
+  '(:tag ["web" "hash" "base64"]))
+(hoarder:fetch "landonf/swift-freebsd"
+  '(:tag ["swift" "freebsd"]))
+(hoarder:fetch "respectpal/google_news_scrape"
+  '(:memo "[[http://tech.respect-pal.jp/totsuzen_programmer/][突然プログラマになって社内ファイルサーバ検索システムを作った話 | 東北ギーク]]"
+    :tag ["google_news" "scraping"]))
+(hoarder:fetch "ongaeshi/honyomi"
+  '(:tag ["pdf" "ruby" "document"]))
+(hoarder:fetch "jneen/parsimmon"
+  '(:tag ["javascript" "parser"]))
+(hoarder:fetch "OpenHMD/OpenHMD"
+  '(:tag ["VR" "linux"]))
+(hoarder:fetch "yoshihiro503/ocamltter"
+  '(:tag ["ocaml" "twitter"]
+    :memo "[[http://proofcafe.org/wiki/ocamltter][ProofCafe - ocamltter]]"))
+(hoarder:fetch "LeonGr/urxvt-snazzy"
+  '(:tag ["urxvt" "colorscheme"]))
+(hoarder:fetch "qqx/crawllib"
+  '(:tag ["golang" "crawler"]))
+(hoarder:fetch "sue445/rubicure"
+  '(:tag ["ruby" "precure"]
+    :memo "[[http://qiita.com/sue445/items/ba577b5dc805e2a1ddef][プリキュアのRuby実装「rubicure」 - Qiita]]
+[[http://www.slideshare.net/tadsan/rubicure][Rubicureに学ぶメタプログラミング]]"))
+(hoarder:fetch "igrep/unite-precure"
+  '(:tag ["vim" "unite.vim" "precure"]
+    :memo "[[http://the.igreque.info/posts/2014-12-25-unite-precure.vim.html][igreque : Info -> ユナイトプリキュア！このあとVim！ #cure_advent]]"))
+(hoarder:fetch "kan/p5-acme-prettycure"
+  '(:tag ["perl" "precure"]))
+(hoarder:fetch "oti/slack-reaction-decomoji"
+  '(:tag ["ruby" "decomji" "emoji"]))
+(hoarder:fetch "mpdairy/posh"
+  '(:tag ["clojure" "datascript" "reagent"]))
+(hoarder:fetch "avli/img-crawler"
+  '(:tag ["clojure" "crawler"]
+    :memo "[[https://www.livecoding.tv/minus_void/videos/AekbL-simple-web-crawler-in-clojure-5][Simple web crawler in Clojure - Livecoding.tv]]"))
+(hoarder:fetch "tudurom/windowchef"
+  '(:tag ["wm" "desktop"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5flsj9/windowchef_stairs/][{windowchef} Stairs : unixporn]]"))
+(hoarder:fetch "tudurom/dotfiles"
+  '(:tag ["wm" "confiugration" "windowchef"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5flsj9/windowchef_stairs/][{windowchef} Stairs : unixporn]]"))
+(hoarder:fetch "dcat/xplot"
+  '(:desc "plotting on X root window"
+    :tag ["x11" "plotting"]))
+(hoarder:fetch "dcat/tplot"
+  '(:desc "terminal plotter using braille characters"
+    :tag ["terminal" "braille" "plotting"]))
+(hoarder:fetch "tudurom/textual"
+  '(:desc "Simple ASCII Art interface library in JavaScript"
+    :tag ["javascript" "ascii_art"]))
+(hoarder:fetch "tudurom/cloudy-gtk"
+  '(:desc "Gtk theme generated with oomox using my terminal color scheme, cloudy"
+    :tag ["gtk" "theme"]))
+(hoarder:fetch "smison/yukari"
+  '(:desc "縁ちゃんやる気出す"
+    :site "https://smison.github.io/yukari/"
+    :memo "[[http://www.adventar.org/calendars/1440][ゆゆ式 Advent Calendar 2016 - Adventar]]"))
+(hoarder:fetch "KMR-zoar/name_samples"
+  '(:memo "[[http://qiita.com/k_zoar/items/1ec296d4eb8e82985619][JA:Name sample の情報を楽に使えるようにするかもしれないやつ - Qiita]]"
+    :tag ["openstreetmap"])) 
+(hoarder:fetch "scrapy-plugins/scrapy-splash"
+  '(:desc "Scrapy+Splash for JavaScript integration"
+    :memo "[[http://amacbee.hatenablog.com/entry/2016/12/01/210436][scrapy-splashを使ってJavaScript利用ページを簡単スクレイピング - amacbee's blog]]"
+    :tag ["python" "scraping" "crawler" "scrapy" "javascript"]))
+(hoarder:fetch "hamano/ame.sh"
+  '(:desc "東京ame.sh"
+    :tag ["sixel" "terminal"]
+    :memo "[[http://www.cuspy.org/diary/2016-12-02-amesh/][ターミナルに雨雲を表示する - cuspy diary]]
+[[http://qiita.com/advent-calendar/2016/shell-script][Shell Script Advent Calendar 2016 - Qiita]]"))
+(hoarder:fetch "vuvuzela/vuvuzela"
+  '(:desc "Private messaging system that hides metadata"
+    :tag ["mesaging" "privacy" "security" "golang"]))
+(hoarder:fetch "sassy/hashire"
+  '(:desc "play \"走れ!\" video in command line."
+    :tag ["electron" "momoiro_clover_z" "youtube"]
+    :memo "[[http://qiita.com/sassy_watson/items/7d0b35fd791221875e28][hashireというコマンドをelectronで作りました。 - Qiita]]"))
+(hoarder:fetch "kuy/sc-repeat-playlist"
+  '(:desc "A Chrome Extension providing \"Repeat Playlist\" feature to SoundCloud."
+    :tag ["chrome" "soundcloud"]
+    :memo "[[http://qiita.com/kuy/items/7047228392e205276f17][SoundCloudでプレイリストのリピートを実現するChrome拡張を作ったよ - Qiita]]"))
+(hoarder:fetch "neologd/mecab-ipadic-neologd"
+  '(:desc "Neologism dictionary based on the language resources on the Web for mecab-ipadic"
+    :tag ["ipa" "dictionary" "kuromoji" "mecab" "japanese"]
+    :memo "[[https://github.com/neologd/mecab-ipadic-neologd][GitHub - neologd/mecab-ipadic-neologd: Neologism dictionary based on the language resources on the Web for mecab-ipadic]]"))
+(hoarder:fetch "fukamachi/envy"
+  '(:desc "Configuration switcher by an environment variable inspired by Config::ENV."
+    :tag ["common_lisp"]))
+(hoarder:fetch "jj1bdx/dbskkd-cdb"
+  '(:desc "SKK dictionary server based on cdb"
+    :tag ["skk" "cdb"]
+    :memo "[[http://www.corpit.ru/mjt/tinycdb.html][TinyCDB - a Constant DataBase]]"))
+(hoarder:fetch "https://gist.github.com/masatoi/47fa4e3889af518dd003a515de9554dd.git"
+  '(:name "merges-skkdic.sh"
+    :tag ["skk"]))
+(hoarder:fetch "dflemstr/rq"
+  '(:desc "Record Query - A tool for doing record analysis and transformation"
+    :tag ["jq" "record" "avro"]))
+(hoarder:fetch "pimterry/notes"
+  '(:desc ":pencil: Simple delightful note taking, with more unix and less lock-in."
+    :tag ["shell" "note_taking"]))
+(hoarder:fetch "akira-hamada/GitHopper"
+  '(:desc "GitHub Repositories Viewer Application"
+    :tag ["electron" "github"]
+    :memo "[[http://qiita.com/akira-hamada/items/02b6ec3fff42ca3e904a][GitHopperというGithub レポジトリのビュアーアプリをelectronで作った - Qiita]]"))
 
 ;;; end
 
