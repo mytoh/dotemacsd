@@ -9,7 +9,9 @@
   (add-hook 'scheme-mode-hook #'highlight-sexp-mode)
   (set-option hl-sexp-foreground-color nil)
   (set-option hl-sexp-background-color
-              (color-darken-name (face-background 'default)
-                                 40)))
+              (color-lighten-name (face-background 'default)
+                                  7))
+  (set-face-attribute 'hl-sexp-face nil
+                      :slant 'normal))
 
 ;;; init.el ends here

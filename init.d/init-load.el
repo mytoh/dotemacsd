@@ -49,6 +49,7 @@
     ;; diminish
     ;; dim
     delight
+    hoarder
     ))
 
 (muki-layer:load-layers 'org
@@ -370,7 +371,6 @@
     insert-shebang
     aggressive-fill-paragraph-mode
     scala-mode
-    highlight-escape-sequences
     make-color
     tile
     projectile
@@ -382,6 +382,8 @@
     language-detection
     ucs-cmds
     avy
+    grab-x-link
+    anything
 
     all-the-icons-dired
     ;; dired-icon
@@ -453,6 +455,8 @@
     volatile-highlights
     highlight-defined
     highlight-leading-spaces
+    highlight-escape-sequences
+    highlight-quoted
     ;; highlight-indentation
     ;; hl-todo
     ;; highlight-unique-symbol
@@ -461,8 +465,8 @@
     ;; highlight-parentheses
     ;; mic-paren
     ;; flash-paren
-    ;; paren
-    ;; highlight-sexp
+    paren
+    highlight-sexp
     ;; highlight-tail
     ;; auto-highlight-symbol
     ;; highlight-stages
@@ -599,7 +603,7 @@
     ;; company-ngram
     company-emoji
     ;; company-quickhelp
-    ;; company-org-headings
+    company-org-headings
     ;; company-dict
     ;; company-web
     ;; company-flx

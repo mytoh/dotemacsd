@@ -6,7 +6,7 @@
 
 (use-package avy
   :defer t
-  :commands (avy-pop-mark)
+  :commands (avy-pop-mark avy-goto-char avy-goto-line)
   :preface
   (progn
     (defun muki:avy-goto-hoarder-register()
@@ -15,7 +15,7 @@
     )
   :init
   (progn
-    (setq avy-all-windows 'all-frames)
+    (setq avy-all-windows nil)
     (setq avy-background t)
     ;; for dvorak
     (setq-default avy-keys '(?a ?o ?e ?u ?h ?t ?n ?s))))

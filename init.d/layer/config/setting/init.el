@@ -290,7 +290,7 @@
      (cl-pushnew dir Info-additional-directory-list))
    (seq-filter
     (lambda (dir) (and (file-directory-p dir)
-                (file-exists-p dir)))
+                       (file-exists-p dir)))
     (directory-files (muki:expand-path-huone "komero/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
@@ -478,5 +478,8 @@
 (add-hook 'prog-mode-hook 'goto-address-prog-mode)
 ;; Highlight and follow bug references in comments and strings
 (add-hook 'prog-mode-hook 'bug-reference-prog-mode)
+
+;; [[http://lists.gnu.org/archive/html/bug-gnu-emacs/2016-11/msg00395.html][bug#24918: 25.1; Fonts can make Emacs grind to a halt]]
+(setq inhibit-compacting-font-caches t)
 
 ;;; config-setting.el ends here
