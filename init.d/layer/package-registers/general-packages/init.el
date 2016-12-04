@@ -408,8 +408,6 @@
 (hoarder:fetch "wasamasa/xbm-life")
 (hoarder:fetch "bodil/microkanrens"
   '(:tag ["logic" "kanren"]))
-(hoarder:fetch "emacs-pe/cookiecutter-emacs"
-  '(:tag ["cookiecutter" "template"]))
 (hoarder:fetch "edrx/eev"
   '(:site "http://angg.twu.net/#eev"))
 (hoarder:fetch "laynor/smotitah"
