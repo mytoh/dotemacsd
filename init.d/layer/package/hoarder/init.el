@@ -52,6 +52,21 @@
                                                           'utf-8)))
                                 (format
                                  "(hoarder:register \"%s\") "
-                                 (seq-subseq url 19)))))))))))
+                                 (seq-subseq url 19))))))))))
+  :config
+  (progn
+    (add-hook 'emacs-lisp-mode-hook
+              (lambda ()
+                (font-lock-add-keywords nil
+                                        `((,(rx (char ?\()
+                                                (0+ (any " "))
+                                                "hoarder:"
+                                                (or "fetch"
+                                                   "register")
+                                                (1+ (any " "))
+                                                (group-n 2 (syntax string-delimiter)
+                                                         (1+ (not (syntax string-delimiter)))
+                                                         (syntax string-delimiter)))
+                                           2 'font-lock-warning-face)))))))
 
 ;;; init.el ends here

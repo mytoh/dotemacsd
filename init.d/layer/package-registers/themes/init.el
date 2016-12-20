@@ -223,5 +223,8 @@
 (hoarder:register-theme "emacsfodder/emacs-deep-thought-theme")
 (hoarder:register-theme "jimeh/birds-of-paradise-plus-theme.el")
 (hoarder:register-theme "FelixFortis/emacs-darkane-theme")
+(hoarder:register-theme "https://gitlab.com/ghostey/emacs-doomsday-theme.git")
+(hoarder:register-theme "stealthycoin/xmas-theme"
+  '(:desc "Christmas emacs theme."))
 
 ;;; init.el ends here

@@ -12,11 +12,11 @@
            "helm-muki")
 
   (after 'helm-muki
-      (validate-setq helm-muki-directory-list
-       `(("sarjakuva" . ,(muki:expand-path-huone "kuvat/sarjakuva"))
-         ("paketti" . ,(locate-user-emacs-file "init.d/paketit"))
-         ("hoarder" . ,(locate-user-emacs-file "vendor"))
-         ("elpa" . ,(locate-user-emacs-file "elpa"))))
+    (validate-setq helm-muki-directory-list
+                   `(("sarjakuva" . ,(muki:expand-path-huone "kuvat/sarjakuva"))
+                     ("paketti" . ,(locate-user-emacs-file "init.d/paketit"))
+                     ("hoarder" . ,(locate-user-emacs-file "vendor"))
+                     ("elpa" . ,(locate-user-emacs-file "elpa"))))
     (helm-muki-directory-add-subdirectories (muki:expand-path-huone "ateljee/"))
     (helm-muki-directory-add-subdirectories (muki:expand-path-huone "kuvat/sivusto"))
     (helm-muki-directory-add-subdirectories (getenv "HUONE"))
@@ -36,7 +36,9 @@
                      "xombrero"
                      "lxappearance"
                      "corebird"
-                     "turpial"))
+                     "turpial"
+                     "midori"
+                     "vimb"))
     ;; remove bookmark source temporally
     ;; (cl-delete 'helm-source-bookmarks helm-muki-sources)
 
@@ -52,7 +54,9 @@
                      "Crea"
                      "The Elder Scrolls V: Skyrim"
                      "Stardew Valley"
-                     "Banished"))
+                     "Banished"
+                     "IRL"
+                     "StarBound"))
     )
 
   (add-global-key "C-c h" #'helm-muki)

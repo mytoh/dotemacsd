@@ -38,3 +38,5 @@
 (add-hook 'ruby-mode-hook #'subword-mode)
 ;; enable for all programming modes
 (add-hook 'prog-mode-hook #'subword-mode)
+
+;; (add-hook 'focus-in-hook #'redraw-display)

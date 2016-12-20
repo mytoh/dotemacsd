@@ -95,6 +95,10 @@
   ;; "⋱" "…", ▼, 
   (set-option org-ellipsis  " ▼")
 
+  (setq org-fontify-whole-heading-line t
+        org-fontify-done-headline t
+        org-fontify-quote-and-verse-blocks t)
+
   )
 
 (cl-defun muki:org-babel-options ()

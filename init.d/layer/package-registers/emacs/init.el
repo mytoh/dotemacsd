@@ -1117,8 +1117,6 @@
 (hoarder:register "kbauer/subemacs"
   '(:tag ["emacs_lisp"]
     :desc "Evaluating expressions in a fresh Emacs subprocess"))
-(hoarder:register "gabesoft/emc"
-  '(:tag ["evil" "multiple-cursor"]))
 (hoarder:register "Malabarba/Nameless")
 (hoarder:register "xuchunyang/eshell-did-you-mean"
   '(:tag ["eshell"]))
@@ -1634,7 +1632,9 @@
   '(:tag ["web" "activitypub" "jsonld"]))
 (hoarder:register "hrs/engine-mode"
   '(:tag ["google" "search_engine" "web"]))
-(hoarder:register "leoliu/id3")
+(hoarder:register "leoliu/id3"
+  '(:tag ["mp3" "tag" "id3" "music" "parser"]
+    :memo "[[https://lars.ingebrigtsen.no/2015/04/22/emacs-and-id3/][Emacs and id3 – Random Thoughts]]"))
 (hoarder:fetch "flycheck/emacs-travis"
   '(:tag ["travis-ci" "emacs"]))
 (hoarder:register "Malabarba/speed-of-thought-lisp")
@@ -1750,6 +1750,10 @@
 (hoarder:register "talwrii/bho")
 (hoarder:register "marcowahl/org-section-numbers")
 (hoarder:register "tarsius/org-elisp-help")
+(hoarder:register "caiorss/org-wiki"
+  '(:desc "Wiki for Emacs org-mode built on top of Emacs org-mode."))
+(hoarder:register "stardiviner/org-seek.el"
+  '(:desc "Searching Org-mode files with search engines."))
 
 ;;;;; general packages
 
@@ -1863,6 +1867,67 @@
 (hoarder:register "Fanael/highlight-quoted"
   '(:desc "Highlight Lisp quotes and quoted symbols"
     :tag ["highlight"]))
+(hoarder:register "vic/color-theme-buffer-local"
+  '(:desc "Set emacs color themes by buffer."))
+(hoarder:register "cpitclaudel/easy-escape"
+  '(:desc "Improve readability of escape characters in Emac Lisp regular expressions"
+    :tag ["prettify" "escape_sequnce"]))
+(hoarder:register "myTerminal/emacs-sounds"
+  '(:desc "Sound effects for Emacs"))
+(hoarder:register "TheBB/tripoli"
+  '(:tag ["python" "emacs"])) 
+(hoarder:register "zonuexe/untitled-new-buffer.el"
+  '(:desc "Open untitled new buffer like other text editors in Emacs"))
+(hoarder:register "sabof/mview-image-and-emms-cover"
+  '(:desc "A simple image viewer based on ImageMagick"
+    :memo "[[https://gist.github.com/sabof/5264829][emms-opts.el · GitHub]]
+[[https://www.reddit.com/r/emacs/comments/1b673h/tips_for_setting_up_emms_especially_getting_cover/c943g6c/][Too Many Requests]]"
+:tag ["emms" "music"]))
+(hoarder:register "sabof/emms-mobile-remote"
+  '(:desc "Control EMMS using your mobile"
+    :tag ["emms" "mobile"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/1almo4/emmsmobileremote/][emms-mobile-remote : emacs]]"))
+(hoarder:register "fnwiya/meigen-bot"
+  '(:tag ["tips" "fortune"]
+    :memo "[[http://fnwiya.hatenablog.com/entry/2015/12/01/012858][emacs起動時にランダムに名言をミニバッファに表示するmeigen-botリリースしました。 - fnwiyaBlog]]")) 
+(hoarder:register "joddie/pcre2el"
+  '(:desc "convert between PCRE, Emacs and rx regexp syntax"
+    :memo "[[http://emacs.rubikitch.com/pcre2el/][pcre2el.el : Emacs正規表現の呪いを解け！Emacs/PCRE(Perlの正規表現)/rx相互変換・解説！PCRE対応re-builder！！]]"))
+(hoarder:register "sanryuu/tips"
+  '(:desc "emacs-tips"
+    :tag ["tips" "emacs" "qiita" "article" "melpa"]
+    :memo "[[http://qiita.com/sanryuu/items/de42bbd5651a0c1f7c37][Emacsで人気・新着の機能を紹介するtips.el作りました - Qiita]]"))
+(hoarder:register "dgtized/list-environment.el"
+  '(:desc "A tabulated process environment editor"))
+(hoarder:register "Yevgnen/ivy-rich"
+  '(:tag ["ivy" "counsel"])) 
+(hoarder:register "Wilfred/ag.el"
+  '(:desc "An Emacs frontend to ag, (\"the silver searcher\" ack replacement)"))
+(hoarder:register "xuchunyang/sl.el"
+  '(:desc "Emacs clone of sl(1)"))
+(hoarder:register "daichirata/emacs-get-wild"
+  '(:tag ["getwild" "emacs"]
+    :memo "[[http://qiita.com/daich/items/a3d4dd174bcaea7e517a][GetWild駆動開発の生産性を8倍に高めるget-wild.el - Qiita]]")) 
+(hoarder:register "rubikitch/all-ext"
+  '(:memo "http://d.hatena.ne.jp/rubikitch/20130202/all"
+    :dependency ["emacsmirror/all"])) 
+(hoarder:register "DarthFennec/highlight-indent-guides"
+  '(:desc "Emacs minor mode to highlight indentation"
+    :tag ["highlight" "indentation"]))
+(hoarder:register "rubikitch/open-junk-file"
+  '(:memo "[[http://qiita.com/akisute3@github/items/1d143b0b69e9aaf252ca][Emacs で使い捨てファイルを開く - Qiita]]")) 
+(hoarder:register "sebastiansturm/autothemer"
+  '(:desc "Conveniently create Emacs themes"
+    :tag ["emacs" "theme"]))
+(hoarder:register "marcIhm/org-index"
+  '(:desc "A personal adaptive index for org."
+    :tag ["org-mode" "index"]
+    :memo "[[http://2484.de/org-index.html]]
+  The latest published version of this file can always be found at:
+   http://orgmode.org/w/?p=org-mode.git;a=blob_plain;f=contrib/lisp/org-index.el;hb=HEAD "))
+(hoarder:fetch "collarchoke/ovpn-mode"
+  '(:desc "An openvpn management mode for emacs"
+    :tag ["openvpn"]))
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
@@ -1921,5 +1986,39 @@
   '(:name "e-.fish"
     :tag ["emacs" "fish" "pipe"]
     :memo "[[https://www.reddit.com/r/emacs/comments/5fbpir/how_to_stop_emacsclient_eval_output_to_stdout/][How to stop \"emacsclient --eval\" output to stdout? : emacs]]"))
+(hoarder:fetch "ellisadigvom/rig.el"
+  '(:desc "emacs config manager"
+    :tag ["configuration" "emacs"]))
+(hoarder:fetch "BooksThere/ox-novel"
+  '(:desc "Org-mode で小説を書くと 1 コマンドで A5 サイズ縦書き二段組の PDF が生成できる。"
+    :memo "[[http://qiita.com/BooksThere/items/ff46ee6a5dc796df1e78][Org-mode で書いたファイルから A5 縦書き二段組の PDF を生成するツール - Qiita]]"
+    :tag ["orgmode" "novel" "pdf" "latex"]))
+(hoarder:fetch "https://gitlab.com/chaseadamsio/scratch.git"
+  '(:tag ["emacs" "i3"]
+    :memo "[[https://gitlab.com/chaseadamsio/scratch/blob/master/dotfiles/configs/emacs.d.syml/init.org][dotfiles/configs/emacs.d.syml/init.org · master · Chase Adams / scratch · GitLab]]"))
+(hoarder:fetch "https://gist.github.com/kiwanami/5820978.git"
+  '(:tag ["ctable" "emacs"]
+    :name "ctable-0.1.2b-demo.el"))
+(hoarder:fetch "tarsius/git-elisp-overview"
+  '(:desc "Git-related Emacs packages "
+    :tag ["git"]))
+(hoarder:fetch "timoc/emacs-tyrant"
+  '(:desc "Emacs tyrant is a literate (using orgmode) config mechanism that has served me well, that i'm releasing into the public. This is in part a response to https://www.reddit.com/r/emacs/comments/3utwfr/literate_emacs_configuration_file/, and a way of recording my last known good before i gut it and move on to the next level of emacs yak-shaving. "
+    :tag ["emacs" "configuration"]))
+(hoarder:fetch "novoid/dot-emacs"
+  '(:desc "My GNU/Emacs configuration"
+    :tag ["org-mode" "configuration" "yankpad"]
+    :memo "https://github.com/novoid/dot-emacs/blob/master/main.el
+[[http://karl-voit.at/2016/12/18/org-depend/][Advanced Usage of Dependencies Between Tasks Using Org-mode]]"))
+(hoarder:fetch "sri/harlem-shake.el"
+  '(:desc "Harlem Shake in Emacs"
+    :Tag ["emacs"]))
+(hoarder:fetch "nordlow/elisp"
+  '(:desc "My life-long work of Emacs extensions"
+    :tag ["emacs"]
+    :download nil))
+(hoarder:fetch "raxod502/radian"
+  '(:desc "Elegant but practical configurations for Emacs, Zsh, Tmux, Leiningen, and Git"
+    :tag ["dotfiles" "configuration" "emacs" "use-package" "zsh" "tmux" "clojure"]))
 
 ;;; init.el ends here

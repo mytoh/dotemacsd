@@ -16,6 +16,7 @@
                         (helm-apropos-history . "helm-apropos-history")))
                 (kill-ring . "kill-ring.el")
                 (kill-ring-yank-pointer . "kill-ring-yank-pointer.el")
+                (minibuffer-history . "minibuffer-history")
                 (register-alist . "register-alist.el")
                 (org-tags-history . "org-tags-history.el")
                 (eww-hisotry . "eww-history.el")

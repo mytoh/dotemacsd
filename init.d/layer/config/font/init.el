@@ -15,21 +15,21 @@
 (cl-defun set-ascii-font ()
   (cond ((null window-system) nil)
         ((font-exists-p "Comic Sans MS")
-         (set-fontset-font nil 'ascii (font-spec :name  "Comic Sans MS" )))
+         (set-fontset-font t 'ascii (font-spec :name  "Comic Sans MS" )))
         ((font-exists-p "-Comic Neue Angular")
-         (set-fontset-font nil 'ascii (font-spec :name  "Comic Neue Angular"  :weight 'regular)))
+         (set-fontset-font t 'ascii (font-spec :name  "Comic Neue Angular"  :weight 'regular)))
         ((font-exists-p "Fira Mono")
-         (set-fontset-font nil 'ascii (font-spec :name "Fira Mono" :weight 'normal)))
+         (set-fontset-font t 'ascii (font-spec :name "Fira Mono" :weight 'normal)))
         ((font-exists-p "Ricty Diminished")
-         (set-fontset-font nil 'ascii (font-spec :name "Ricty Diminished" :size 10 :weight 'regular)))
+         (set-fontset-font t 'ascii (font-spec :name "Ricty Diminished" :size 10 :weight 'regular)))
         ((font-exists-p "Liberation Mono")
-         (set-fontset-font nil 'ascii (font-spec :name "Liberation Mono")))
+         (set-fontset-font t 'ascii (font-spec :name "Liberation Mono")))
         ((font-exists-p "CosmicSansNeueMono")
-         (set-fontset-font nil 'ascii (font-spec :name "CosmicSansNeueMono")))
+         (set-fontset-font t 'ascii (font-spec :name "CosmicSansNeueMono")))
         ((font-exists-p "Inconsolata")
-         (set-fontset-font nil 'ascii (font-spec :name "Inconsolata")))
+         (set-fontset-font t 'ascii (font-spec :name "Inconsolata")))
         ((font-exists-p "Fantasque Sans Mono")
-         (set-fontset-font nil 'ascii (font-spec :name  "Fantasque Sans Mono")))
+         (set-fontset-font t 'ascii (font-spec :name  "Fantasque Sans Mono")))
         ((font-exists-p "Droid Sans Mono")
          (set-face-attribute 'ascii nil :height 80 :font "Droid Sans Mono"))
         ((font-exists-p "Source Code Pro")
@@ -54,35 +54,35 @@
 (cl-defun set-japanese-font ()
   (cond ((null window-system) nil)
         ((font-exists-p "Source Han Code JP")
-         (set-fontset-font nil 'japanese-jisx0208
+         (set-fontset-font t 'japanese-jisx0208
                            (font-spec :name  "Source Han Code JP" :size 9 :weight 'normal))
-         (set-fontset-font nil 'han
+         (set-fontset-font t 'han
                            (font-spec :name  "Source Han Code JP" :size 9 :weight 'light)))
         ((font-exists-p "Ricty Diminished")
-         (set-fontset-font nil 'japanese-jisx0208
+         (set-fontset-font t 'japanese-jisx0208
                            (font-spec :name "Ricty Diminished" )))
         ((font-exists-p "Hiragino Mincho Pro")
-         (set-fontset-font nil 'japanese-jisx0208
+         (set-fontset-font t 'japanese-jisx0208
                            (font-spec :name "Hiragino Mincho Pro")))
         ((font-exists-p "IPAGothic")
-         (set-fontset-font nil 'japanese-jisx0208
+         (set-fontset-font t 'japanese-jisx0208
                            '("IPAGothic" . "unicode-bmp"))
-         (set-fontset-font  nil 'kana (font-spec :name "IPAGothic" :size 10 :weight 'normal))
-         (set-fontset-font nil 'han (font-spec :name "IPAGothic" :size 10 :weight 'normal)))
+         (set-fontset-font  t 'kana (font-spec :name "IPAGothic" :size 10 :weight 'normal))
+         (set-fontset-font t 'han (font-spec :name "IPAGothic" :size 10 :weight 'normal)))
         ((font-exists-p "Sazanami Gothic")
-         (set-fontset-font nil 'japanese-jisx0208
+         (set-fontset-font t 'japanese-jisx0208
                            (font-spec :family "Sazanami Gothic")))))
 
 (cl-defun set-symbol-font ()
   (if (font-exists-p "Symbola")
-      (set-fontset-font nil 'symbol (font-spec :name "Symbola" :size 11))))
+      (set-fontset-font t 'symbol (font-spec :name "Symbola" :size 11))))
 
 (cl-defun set-cyrillic-font ()
   (cond ((font-exists-p "PT Mono")
-         (set-fontset-font nil 'cyrillic
+         (set-fontset-font t 'cyrillic
                            (font-spec :name "PT Mono")))
         ((font-exists-p "CosmicSansNeueMono")
-         (set-fontset-font nil 'cyrillic (font-spec :name "CosmicSansNeueMono")))))
+         (set-fontset-font t 'cyrillic (font-spec :name "CosmicSansNeueMono")))))
 
 (cl-defun set-mplus-font ()
   "[[http://mplus-fonts.osdn.jp/mplus-bitmap-fonts/download/]]"
@@ -222,7 +222,7 @@
      nil
      "naga10")
 
-    (cl-flet ((set (script font) (set-fontset-font fontset script font)))
+    (cl-flet ((set (script font) (set-fontset-font t script font)))
       (set 'ascii       neep)
       (set 'latin       neep)
       (set 'japanese-jisx0208 k10)

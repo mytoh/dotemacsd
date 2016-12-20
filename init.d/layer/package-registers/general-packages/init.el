@@ -1893,7 +1893,8 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
   '(:tag ["common_lisp" "egison"]))
 (hoarder:fetch "https://bitbucket.org/luisangelsm/yacreader"
   '(:tag ["comic" "image_viewer"]
-    :type :hg))
+    :type :hg
+    :download nil))
 (hoarder:fetch "davide-romanini/comictagger"
   '(:tag ["comic" "tag" "comic_vine"]
     :desc "fork of original
@@ -1902,7 +1903,8 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
   '(:tag ["comic_vine" "api" "comicrack"]))
 (hoarder:fetch "http://hg.code.sf.net/p/quivi/code"
   '(:tag ["comic" "viewer"]
-    :type :hg))
+    :type :hg
+    :download nil))
 (hoarder:fetch "davide-romanini/comicapi"
   '(:tag ["comictagger" "comic" "comic_vine" "comic_book_info" "api"
           "metadata"]))
@@ -2294,7 +2296,8 @@ https://www.reddit.com/r/unixporn/comments/4jkw3a/cwm_i_hate/ "
     :depth nil
     :tag ["hls" "http_live_streaming" "download" "ios"]))
 (hoarder:fetch "Usuka/Dotfiles-Ricing"
-  '(:tag ["rice" "firefox" "dotfiles" "4chan" "desktop"]))
+  '(:tag ["rice" "firefox" "dotfiles" "4chan" "desktop"]
+    :memo "[[https://lainchan.org/tech/res/32046.html#32177][tech - Desktops]]"))
 (hoarder:fetch "joewing/jwm"
   '(:tag ["wm"]))
 (hoarder:fetch "i3/i3"
@@ -2526,7 +2529,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["assembler"]))
 (hoarder:fetch "https://bitbucket.org/multicoreware/x265"
   '(:type :hg
-    :tag ["multimedia" "video" "codec" "h265" "hevc"]))
+    :tag ["multimedia" "video" "codec" "h265" "hevc"]
+    :download nil))
 (hoarder:fetch "NixOS/patchelf"
   '(:tag ["elf" "binary" "library" "rpath" "ldconfig" "homebrew" "ld_library_path"]))
 (hoarder:fetch "neeasade/xst"
@@ -3232,7 +3236,8 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["clojure" "overtone" "repl_electric"]
     :memo "https://twitter.com/josephwilk/status/769271489594068996"))
 (hoarder:fetch "thejameskyle/itsy-bitsy-data-structures"
-  '(:tag ["data_structure" "algorithm" "javascript"]))
+  '(:tag ["data_structure" "algorithm" "javascript"]
+    :memo "[[https://www.youtube.com/watch?v=bM5Wfmh9i5k][James Kyle: From Zero To Binary Search Tree - JSConf.Asia 2016 - YouTube]]"))
 (hoarder:fetch "golang/crypto"
   '(:tag ["ssh" "golang"]
     :memo "https://github.com/golang/crypto/tree/master/ssh"))
@@ -3873,7 +3878,10 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "Qqwy/elixir_fun_land"
   '(:tag ["elixir" "monad" "fantasyland"]))
 (hoarder:fetch "rmies/monad"
-  '(:tag ["elixir" "monad"]))
+  '(:tag ["elixir" "monad"]
+    :memo "[[http://qiita.com/nunulk/items/fac581c14e95325d569a][ドメイン駆動設計と関数プログラミングをElixirで - Qiita]]
+[[http://www.zohaib.me/monads-in-elixir-2/][Monads in Elixir]]
+[[https://github.com/zabirauf/monad][GitHub - zabirauf/monad: Monads and do-syntax for Elixir]]"))
 (hoarder:fetch "malcolmstill/ulubis"
   '(:tag ["common_lisp" "wayland" "composition"]))
 (hoarder:fetch "motersen/pot"
@@ -3963,8 +3971,6 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["python" "monad"]))
 (hoarder:fetch "tobgu/pyrsistent"
   '(:tag ["python" "persistent" "data_structure"]))
-(hoarder:fetch "https://notabug.org/void0/pinky-bar.git"
-  '(:tag ["bar" "panel" "desktop"]))
 (hoarder:fetch "VoLuong/Begin-Latex-in-minutes"
   '(:tag ["latex"]))
 (hoarder:fetch "GNOME/sushi")
@@ -4408,7 +4414,8 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 (hoarder:fetch "sue445/rubicure"
   '(:tag ["ruby" "precure"]
     :memo "[[http://qiita.com/sue445/items/ba577b5dc805e2a1ddef][プリキュアのRuby実装「rubicure」 - Qiita]]
-[[http://www.slideshare.net/tadsan/rubicure][Rubicureに学ぶメタプログラミング]]"))
+[[http://www.slideshare.net/tadsan/rubicure][Rubicureに学ぶメタプログラミング]]
+[[http://sue445.hatenablog.com/entry/2016/12/16/000000][rubicureのこれまでとこれから - くりにっき]]"))
 (hoarder:fetch "igrep/unite-precure"
   '(:tag ["vim" "unite.vim" "precure"]
     :memo "[[http://the.igreque.info/posts/2014-12-25-unite-precure.vim.html][igreque : Info -> ユナイトプリキュア！このあとVim！ #cure_advent]]"))
@@ -4416,6 +4423,10 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["perl" "precure"]))
 (hoarder:fetch "oti/slack-reaction-decomoji"
   '(:tag ["ruby" "decomji" "emoji"]))
+(hoarder:fetch "mottox2/emoji-generator"
+  '(:memo "[[http://qiita.com/mottox2/items/f5f1aefdf363d3b5a644][CLIだけでSlackで使える日本語Reaction emojiをつくる - Qiita]]
+[[http://qiita.com/advent-calendar/2016/emoji][絵文字 / Emoji Advent Calendar 2016 - Qiita]]"
+:tag ["emoji"])) 
 (hoarder:fetch "mpdairy/posh"
   '(:tag ["clojure" "datascript" "reagent"]))
 (hoarder:fetch "avli/img-crawler"
@@ -4490,6 +4501,322 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:desc "GitHub Repositories Viewer Application"
     :tag ["electron" "github"]
     :memo "[[http://qiita.com/akira-hamada/items/02b6ec3fff42ca3e904a][GitHopperというGithub レポジトリのビュアーアプリをelectronで作った - Qiita]]"))
+(hoarder:fetch "tesseract-ocr/tesseract"
+  '(:desc "Tesseract Open Source OCR Engine (main repository)"
+    :tag ["ocr" "document" "image"]))
+(hoarder:fetch "eslint/eslint"
+  '(:desc "A fully pluggable tool for identifying and reporting on patterns in JavaScript."
+    :tag ["javascript" "linter" "test" "plugin"]
+    :memo "[[http://qiita.com/moomooya/items/8f463bdfe13387ffbbe6][Node.jsでプラグインの仕組みを作る方法 - Qiita]]
+[[https://github.com/eslint/eslint/blob/master/lib/load-rules.js][eslint/load-rules.js at master · eslint/eslint · GitHub]]"))
+(hoarder:fetch "sue445/goprecure"
+  '(:desc "goprecure is golang implementation of \"Go! Princess PreCure\""
+    :tag ["golang" "precure"]
+    :memo "[[http://sue445.hatenablog.com/entry/2015/12/07/000000][GoがGoでGo!プリンセスプリキュアを作った #gocon #cure_advent - くりにっき]]
+[[http://qiita.com/sue445/items/5d19b0bc3293371a85e2][Go!プリンセスプリキュアのGo言語実装「GoPrecure」 - Qiita]]"))
+(hoarder:fetch "soprano1125/radiko-noa"
+  '(:desc "radiko.jp NOW ON AIR tweet"
+    :tag ["radio" "radiko" "perl"]
+    :memo "[[http://qiita.com/soprano1125/items/8ec1fefb932acc354e41][ラジオの「(非公式な)オンエア曲 BOT」を気が向いて作った話 - Qiita]]"))
+(hoarder:fetch "lakshaykalbhor/MusicRepair"
+  '(:desc ":musical_score: Fixes music metadata and adds album art."
+    :tag ["music" "tags" "mp3"]))
+(hoarder:fetch "ptol/oczor"
+  '(:desc "Oczor is a simple statically typed language that compiles to JavaScript, Lua, Ruby and Emacs Lisp"
+    :tag ["haskell" "ruby" "lua" "javascript" "emacs-lisp"]))
+(hoarder:fetch "cy-takeuchi/kintone-fun"
+  '(:tag ["shell" "terminal" "escape_sequnce"]
+    :memo "[[http://qiita.com/YoshihikoTakeuchi/items/c9b4fa4458bba301279c][エスケープシーケンスを使ってロゴを動かす - Qiita]]")) 
+(hoarder:fetch "becolomochi/dam_emoji"
+  '(:tag ["emoji" "slack" "dam"]
+    :memo "[[http://becolomochi.hatenablog.com/entry/slack-custom-emoji-dam][SlackのCustom Emojiをつくる - べこのツボ]]
+[[http://qiita.com/advent-calendar/2016/emoji][絵文字 / Emoji Advent Calendar 2016 - Qiita]]")) 
+(hoarder:fetch "mapbox/mapping"
+  '(:desc "OpenStreetMap contributions from the data team at Mapbox"
+    :tag ["openstreetmap" "wikidata"]
+    :memo "[[http://qiita.com/nyampire/items/6f85deb519c826dd9d8c][OSM and Wikidata - Qiita]]
+[[https://github.com/mapbox/mapping/issues/242#issue-185579165][Joining Wikidata IDs to OSM · Issue #242 · mapbox/mapping · GitHub]]"))
+(hoarder:fetch "jonathanstowe/Term-Screen"
+  '(:desc "High level terminal handling access via termcap for Perl"
+    :tag ["terminal" "termcap" "perl"]))
+(hoarder:fetch "dai-shi/es-beautifier"
+  '(:desc "ECMAScript beautifier based on eslint"
+    :tag ["eslint" "beautifier" "javascript"]))
+(hoarder:fetch "teitei-tk/tawawa-bot"
+  '(:desc "Deliver Happiness to Melancholy of Monday on LineBot."
+    :tag ["golang" "line" "bot"]
+    :memo "[[http://qiita.com/teitei_tk/items/c313a02e78e3045fdf5f][LINEBOT SDK GOを使って月曜日のたわわBOTを作った。 - Qiita]]"))
+(hoarder:fetch "skeeto/showerthoughts"
+  '(:desc "/r/Showerthoughts fortune file generator"
+    :tag ["fortune" "reddit" "showerthoughts"]
+    :memo "[[http://nullprogram.com/blog/2016/12/01/][A Showerthoughts Fortune File « null program]]
+[[https://www.reddit.com/r/Showerthoughts/][Too Many Requests]]"))
+(hoarder:fetch "yu3mars/syobocalFilter"
+  '(:desc "しょぼいカレンダーのフィルタリング用プログラム"
+    :tag ["syoboi_calendar" "anime"]
+    :memo "[[http://yu3mars.hatenablog.com/entry/2016/12/07/190000][アニメ系新番組や単発番組の情報をカレンダーにするプログラム「しょぼかるフィルター」を作った - yu3mars’ diary]]
+[[http://www.adventar.org/calendars/1444][KMC Advent Calendar 2016 - Adventar]]
+[[http://cal.syoboi.jp/][しょぼいカレンダー]]"))
+(hoarder:fetch "erikbern/git-of-theseus"
+  '(:desc "Analyze how a Git repo grows over time"
+    :tag ["git" "graph" "analytics" "plotting"]))
+(hoarder:fetch "qgriffith/OpenEats"
+  '(:desc "Recipe Management Site created in Django"
+    :tag ["recipe"]
+    :site "http://www.openeats.org/"))
+(hoarder:fetch "DTVD/rainbowstream"
+  '(:desc "A smart and nice Twitter client on terminal written in Python."
+    :tag ["twitter" "python" "terminal"]))
+(hoarder:fetch "rn10950/FVWM95-Updated"
+  '(:desc "An updated version of FVWM95 that compiles on Debian Jessie"
+    :tag ["fvwm"]))
+(hoarder:fetch "bcicen/vim-vice"
+  '(:desc "Dark and vibrant colorscheme for vim"
+    :tag ["vim" "colorscheme"]))
+(hoarder:fetch "Capuno/Lander"
+  '(:desc "CLI Top-Down Space Shooter"
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5gn64l/i3gapspolybar_dark_and_simple/][Too Many Requests]]"))
+(hoarder:fetch "iagor0ger/dotfiles"
+  '(:desc "my dotfiles"
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5h7pw5/bspwm_arch/][Too Many Requests]]"))
+(hoarder:fetch "yuroyoro/gommit-m"
+  '(:desc "gommit-m - Command Line Client for commit-m (http://commit-m.minamijoyo.com)"
+    :memo "[[http://yuroyoro.hatenablog.com/entry/2015/11/10/132620][「commit-m: GitHubコミットメッセージの文例が検索できるサービス」がとても便利だったのでcliから使えるコマンド書いた - ( ꒪⌓꒪) ゆるよろ日記]]"
+    :tag ["git" "commit-m" "commit_message"]))
+(hoarder:fetch "massa142/hngo"
+  '(:desc "Command Line Client for Hacker News (https://news.ycombinator.com/)"
+    :tag ["hackernewes" "golang"]
+    :memo "[[http://qiita.com/massa142/items/df181fc77a4d67e0f2a4][Hacker Newsを一覧表示してくれるCLIツールを書いた - Qiita]]"))
+(hoarder:fetch "massa142/gotebu"
+  '(:desc "Command Line Client for Hatena Bookmark HotEntry"
+    :tag ["hatena_bookmark" "golang"]))
+(hoarder:fetch "shibe97/worc"
+  '(:desc "A quiet twitter client made by Electron"
+    :memo "[[http://shibe97.hatenablog.com/entry/2016/12/09/093939][仕事中に閲覧できるTwitterクライアント「Worc」を作った - The future starts today]]"))
+(hoarder:fetch "fand/irasutoya"
+  '(:desc "いらすとや検索コマンド"
+    :tag ["javascript" "irasutoya"]))
+(hoarder:fetch "Arboreta/arboreta-core"
+  '(:desc "Common lisp environment with cairo and pango"
+    :tag ["commo_lisp" "ide" "editor" "lisp_machine"]))
+(hoarder:fetch "benjamin-glitsos/vim-writers-max-dotfiles"
+  '(:desc "Maximalist Vim dotfiles for writing in Pandoc Markdown."
+    :tag ["configuration" "vim"]))
+(hoarder:fetch "skaji/cpm"
+  '(:desc "fast CPAN module installer"
+    :memo "[[https://superbob.github.io/clicker-heroes-1.0-hsoptimizer/#!/#%2F][Clicker Heroes 1.0 HS Optimizer]]"))
+(hoarder:fetch "apprenticeharper/DeDRM_tools"
+  '(:desc "DeDRM tools for ebooks"
+    :tag ["amazon" "ebook" "kindle" "drm" "epub" "calibre"]
+    :memo "[[http://qiita.com/mgoldchild/items/165f63bc2e006c81bf58][Kindle本をGoogle Booksに移動させたときのメモ - Qiita]]
+[[https://www.quora.com/How-can-I-convert-azw-to-pdf-or-epub-for-free][How to convert .azw to .pdf or .epub for free - Quora]]
+[[https://ja.wikipedia.org/wiki/Calibrea][Calibrea - Wikipedia]]
+[[https://github.com/kovidgoyal/calibre][GitHub - kovidgoyal/calibre: The official source code repository for the calibre ebook manager]]
+[[https://github.com/apprenticeharper/DeDRM_tools][GitHub - apprenticeharper/DeDRM_tools: DeDRM tools for ebooks]]
+[[https://apprenticealf.wordpress.com/2012/09/10/calibre-plugins-the-simplest-option-for-removing-most-ebook-drm/][DeDRM plugin for calibre: the simplest option for removing DRM from most ebooks | Apprentice Alf’s Blog]]
+[[http://jp.epubor.com/guide/kindleコンテンツazwazw3とmobiの違い/][KindleコンテンツAZW、AZW3とMobiの違い » Epubor-Sony、Kobo、Kindle電子書籍のDRM解除とフォーマット変換]]
+[[http://jp.epubor.com/guide/mobiファイルを閲覧する方法/][Mobiファイルを閲覧する方法 » Epubor-Sony、Kobo、Kindle電子書籍のDRM解除とフォーマット変換]]
+[[http://www.mobileread.com/forums/showthread.php?t=108856][Location of Calibre Library - MobileRead Forums]]
+[[http://k-airyuu.hatenablog.com/entry/2014/03/07/152655][電子書籍づくり実践（書誌情報を書く） - 本好きに送る「電子書籍のつくり方」講座]] "))
+(hoarder:fetch "deadpixi/deadpixi-dwm"
+  '(:desc "Deadpixi fork of the suckless dwm window manager"
+    :tag ["dwm"]))
+(hoarder:fetch "https://notabug.org/Heckyel/LibreVideoJS.git"
+  '(:tag ["librejs" "videojs" "html5"]))
+(hoarder:fetch "driusan/dsh"
+  '(:desc "A UNIX shell written in a literate programming style, using Go and markdown."
+    :tag ["golang" "shell" "literate_programming"]))
+(hoarder:fetch "DrabWeb/Booru-chan"
+  '(:desc "A Booru browser for macOS"
+    :tag ["booru" "macos"]))
+(hoarder:fetch "bjarneo/Pytify"
+  '(:desc "Use this cli application as a Spotify remote. Including search for and start songs."
+    :tag ["spotify" "python" "cli"]))
+(hoarder:fetch "kurehajime/kuzusi"
+  '(:desc "breakout for terminal"
+    :memo "[[http://qiita.com/kurehajime/items/a02eaae3f0c17750c07e][ターミナルで遊べるブロック崩しをGo言語で作る - Qiita]]"
+    :tag ["golang" "terminal" "game" "cli" "termbox"]))
+(hoarder:fetch "liuchengxu/space-vim"
+  '(:desc ":seedling: A vim configuration for spacemacs"
+    :tag ["vim" "configuration" "spacemacs"]))
+(hoarder:fetch "yyoshiki41/radigo"
+  '(:desc "Record radiko 📻"
+    :tag ["radio" "golang" "radiko"]
+    :memo "[[http://qiita.com/yyoshiki41/items/f81442d7dc2d0ddcf15b][radikoの録音ツールをGoで書いた - Qiita]]
+[[http://qiita.com/advent-calendar/2016/go3][Go (その3) Advent Calendar 2016 - Qiita]]"))
+(hoarder:fetch "greymd/cureutils"
+  '(:desc "Useful command line tool for Japanese battle heroine Pretty Cure (Precure)."
+    :memo "[[http://qiita.com/greymd/items/666a26459aa1bd4cb06c][Cureutilsを使ったプリティでキュアキュアなターミナルライフの実現 - Qiita]]
+[[http://www.adventar.org/calendars/1359][プリキュア Advent Calendar 2016 - Adventar]]"
+:tag ["precure" "ruby"]))
+(hoarder:fetch "igrep/typesafe-precure"
+  '(:desc "Type-safe transformations and purifications of PreCures (Japanese Battle Heroine)"
+    :memo "[[http://the.igreque.info/posts/2016/06-type-safe-precure.html][igreque : Info -> Haskellでプリキュアを作ってみた #cure_advent]]
+[[http://www.adventar.org/calendars/1359][プリキュア Advent Calendar 2016 - Adventar]]
+[[http://qiita.com/igrep/items/5496fa405fae00b5a737][「タイプセーフプリキュア！」を支える技術 - Qiita]]"
+:tag ["precure" "haskell"]))
+(hoarder:fetch "kaosf/clocure"
+  '(  :tag ["precure" "clojure"]
+      :memo "[[https://gist.github.com/kaosf/67639b8a7d33cd0d14ff][はじけるCommonの香り！キュアClojure！ · GitHub]]
+[[http://www.adventar.org/calendars/328][プリキュア Advent Calendar 2014 - Adventar]]
+[[http://qiita.com/sue445/items/b41a4f5bdca46f1736c3][プリキュアの各言語での実装まとめ - Qiita]]")) 
+(hoarder:fetch "stibear/precure"
+  '(:desc "Japanese Anime Precure (Pretty Cure) Library"
+    :memo "[[http://stibear.tumblr.com/post/71830168190/stibearprecure][stibear/precure]]
+[[http://qiita.com/sue445/items/b41a4f5bdca46f1736c3][プリキュアの各言語での実装まとめ - Qiita]]"))
+(hoarder:fetch "o1egl/govatar"
+  '(:desc "Avatar generator library for GO language"
+    :tag ["golang" "avatar" "icon"]))
+(hoarder:fetch "https://bitbucket.org/eeeickythump/defstar.git"
+  '(:tag ["common_lisp" "type"]))
+(hoarder:fetch "TOYOZUMIKouichi/L4S"
+  '(:desc "Common Lispで最適化されたコードを作るときのためのユーティリティ集"
+    :tag ["common_lisp"]))
+(hoarder:fetch "TOYOZUMIKouichi/com.filmassembler.labs.commonlisp.utilities"
+  '(:desc "よくある汎用ユーティリティ集"
+    :tag ["common_lisp" "utility"]))
+(hoarder:fetch "g000001/mbe"
+  '(:desc "Scheme Macros for Common Lisp"
+    :tag ["common_lisp" "scheme" "macro" "hygienic_macro"]))
+(hoarder:fetch "kanreisa/reichat"
+  '(:desc "A lovely paint chat application like a PaintChatApp built with Node."
+    :tag ["node" "javascript" "chat" "paint" "drawing"]))
+(hoarder:fetch "cloudson/gitql"
+  '(:desc "A git query language"
+    :tag ["git" "query" "information"]))
+(hoarder:fetch "piroor/emoji-editor-html"
+  '(:desc "Simple WYSWIG Emoji Editor"
+    :tag ["emoji"]
+    :memo "[[http://qiita.com/piroor/items/68f028c8524620c46a00][絵文字✨とTwitter Bot🤖と私👤とEmoji Editor📝 - Qiita]]"))
+(hoarder:fetch "HeavyHorst/remco"
+  '(:desc "remco is a lightweight configuration management tool"
+    :tag ["golang" "configuration" "etcd" "consul"]
+    :site "https://heavyhorst.github.io/remco/plugins/consul-plugin-example/"))
+(hoarder:fetch "nogahighland/beautiful-log"
+  '(:tag ["ruby" "rails" "logging"]
+    :memo "[[http://in.fablic.co.jp/entry/2016/12/15/150234][Railsログを美しく Beautiful::Log - inFablic]]")) 
+(hoarder:fetch "http://hg.code.sf.net/p/graphicsmagick/code"
+  '(:type :hg
+    :name "gm"
+    :download nil))
+(hoarder:fetch "in0rdr/diary"
+  '(:desc "Simple CLI diary"
+    :tag ["terminal" "cli" "diary"]))
+(hoarder:fetch "kzar/davemail"
+  '(:desc "My email configuration, using mbsync, notmuch, msmtp, msmtpq, pgp, emacs and gnus-alias"
+    :tag ["mail" "notmuch" "emacs"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/5iievm/nice_email_configuration_using_emacs_mbsync/][Nice email configuration using Emacs, mbsync, notmuch, msmtp, msmtpq, pgp, and gnus-alias : emacs]]"))
+(hoarder:fetch "mightybyte/map-syntax"
+  '(:desc "Syntax sugar and explicit semantics for statically defined maps"
+    :memo "[[https://www.reddit.com/r/haskell/comments/5i7ust/composition_operator_in_datamap/][Too Many Requests]]"
+    :tag ["maps" "haskell"]))
+(hoarder:fetch "fumieval/extensible"
+  '(:desc "Extensible data types and pattern matching, effects, tangles"
+    :tag ["haskell" "record"]
+    :memo "[[https://www.schoolofhaskell.com/user/fumieval/extensible-records][Extensible Records Explained - School of Haskell | School of Haskell]]
+[[https://hackage.haskell.org/package/extensible][extensible: Extensible, efficient, optics-friendly data types]]
+[[https://www.reddit.com/r/haskell/comments/5i2sas/extensible_records_explained_school_of_haskell/][Extensible Records Explained - School of Haskell : haskell]]"))
+(hoarder:fetch "https://www.mercurial-scm.org/repo/hg"
+  '(:type :hg
+    :tag ["scm" "vcs"]))
+(hoarder:fetch "kyokomi/xcrawl"
+  '(:desc "Tools to crawl html and read in xpath."
+    :tag ["golang" "xpath" "crawler" "scraping"]
+    :memo "[[http://kyokomi.hatenablog.com/entry/2016/12/15/211743][Webラジオのm3u8をdownloadしてffmpegでmp3に変換するツールをGoで書いた - きょこみのーと]]
+[[http://www.animatetimes.com/radio/details.php?id=gn&a=10&m=a][「ガーリッシュ ナンバー」CUTE GIRLS RADIO（略して「クズらじ」） | アニメイトタイムズ]]
+#+begin_src shell
+$ xcrawl -c config.yaml \
+-i 'http://sp.animatetimes.com/radio/details.php?id=gn&a=10&m=a' \ 
+-x '//*[@id="main-contents"]/ul[1]/li[3]/div/div[1]/div/a[1]/@href' \
+| xargs m3u8go -i \
+| xargs ffmpego -o kuzu3.mp3 -i
+#+end_src "))
+(hoarder:fetch "kyokomi/m3u8go"
+  '(:desc "It is a tool to read the m3u8 file of Master Playlist."
+    :tag ["golang" "m3u8" "playlist" "media"]
+    :memo "[[http://kyokomi.hatenablog.com/entry/2016/12/15/211743][Webラジオのm3u8をdownloadしてffmpegでmp3に変換するツールをGoで書いた - きょこみのーと]]"))
+(hoarder:fetch "kyokomi/ffmpego"
+  '(:desc "ffmpego is ffmpeg wrapper for m3u8 bulkdownload decode mp3"
+    :tag ["golang" "ffmpeg" "m3u8" "mp3"]
+    :memo "[[http://kyokomi.hatenablog.com/entry/2016/12/15/211743][Webラジオのm3u8をdownloadしてffmpegでmp3に変換するツールをGoで書いた - きょこみのーと]]"))
+(hoarder:fetch "watilde/emoji-cli"
+  '(:desc "Emoji searcher"
+    :tag ["emoji" "javascript"]
+    :memo "[[http://qiita.com/watilde/items/37f49304dfcd05d40cec][emoji コマンドで簡単絵文字検索 :mag: - Qiita]]"))
+(hoarder:fetch "ueokande/shvm"
+  '(:desc "A Version Manager for Shells"
+    :tag ["shell" "version_manager" "fish" "bash" "zsh" "tcsh" ]
+    :memo "[[https://i-beam.org/2016/12/16/shvm/][シェルのバージョンマネージャを作りました - Folioscope]]"))
+(hoarder:fetch "sergiotapia/candysubs"
+  '(:desc "Command-line program to download subtitles for all of your media."
+    :tag ["elixir" "cli" "subtitle" "movie"]))
+(hoarder:fetch "ValeriyKr/sfb"
+  '(:desc "Flappy Bird clone, written in GNU sed"
+    :tag ["sed" "game" "flappy_bird"]))
+(hoarder:fetch "rxon/cross-platform-yu-gothic"
+  '(:desc "Cross-platform 游ゴシック"
+    :tag ["css" "npm" "font" "yu-gothic"]
+    :memo "[[https://rxon.now.sh/crossPlatformYu.md][MAKE游ゴシッククロスプラットフォームAGAIN | note - rxon.now.sh]]"))
+(hoarder:fetch "sindresorhus/clipboardy"
+  '(:desc "Access the system clipboard (copy/paste)"
+    :tag ["clipboard" "javascript"]))
+(hoarder:fetch "rhysd/vim-color-spring-night"
+  '(:desc "Calm spring color scheme for Vim"
+    :tag ["vim" "colorscheme"]))
+(hoarder:fetch "https://bitbucket.org/jonforums/uru.git"
+  '(:tag ["ruby" "rvm"]))
+(hoarder:fetch "sue445/zatsu_monitor"
+  '(:desc "simple url monitoring tool"
+    :memo "[[http://qiita.com/sue445/items/df2c1838cb44f4e75d66][雑にURL監視する「zatsu_monitor」 - Qiita]]"))
+(hoarder:fetch "osamingo/jsonrpc"
+  '(:desc "The jsonrpc package helps implement of JSON-RPC 2.0"
+    :tag ["golang" "json-rpc"]))
+(hoarder:fetch "k0sukey/Rec"
+  '(:desc "Desktop screen recording app."
+    :tag ["screencast" "recording" "electron" "node"]
+    :memo "[[http://qiita.com/k0sukey/items/f43ef59c6dc54721be27][デスクトップを録画するアプリを書き直した - Qiita]]"))
+(hoarder:fetch "https://gitlab.com/jbienaime/inspi.git"
+  '(:tag ["cli" "bookmark"]))
+(hoarder:fetch "uBlock-user/uBO-Personal-Filters"
+  '(:desc "A filterlist with additional filters for uBlock Origin to block third-party, tracking, annoyances and all other unwarranted resources from loading."
+    :tag ["ublock_origin" "adblock" "filter"]))
+(hoarder:fetch "uBlock-user/uMatrix-Hosts-List"
+  '(:desc "A perpetuated list of all blacklisted host-names intended to block ads, tracking, malware, spyware, clickbait, bloatware etc."
+    :tag ["adblock" "filter" "umatrix"]))
+(hoarder:fetch "haskell-foundation/foundation"
+  '(:desc "a new hope"
+    :tag ["haskell" "prelude"]
+    :memo "https://github.com/haskell-foundation/foundation/blob/master/Foundation/Collection/Sequential.hs"))
+(hoarder:fetch "SynedraAcus/camp"
+  '(:desc "Roguelike prototype"
+    :tag ["python" "roguelike" "game"]
+    :memo "[[https://www.reddit.com/r/roguelikes/comments/5itn3e/a_rogueliketowerdef_hybrid_early_prototype/][A roguelike/towerdef hybrid, early prototype : roguelikes]]"))
+(hoarder:fetch "nightfly19/cl-arrows"
+  '(:desc "Common Lisp implementation of Clojure's threading macros"
+    :tag ["common_lisp" "clojure" "threading_macro"]))
+(hoarder:fetch "rfkm/baum"
+  '(:desc "Extensible EDSL in EDN for building self-contained configuration files"
+    :tag ["clojure" "dsl" "edn" "configuration"]
+    :memo "[[http://qiita.com/rfkm/items/0e38a0d81325f17e7653][設定ファイル用 DSL Baum の紹介 - Qiita]]"))
+(hoarder:fetch "mecab/emspect"
+  '(:desc "Emspect - EMoji inSPECTor"
+    :tag ["emoji" "node" "javascript"]
+    :memo "[[https://blog.misosi.ru/2016/12/20/released-emspect/][Emoji に関する詳細情報を表示するコマンド、emspect をリリースしていた。]]"))
+(hoarder:fetch "gabesoft/trans"
+  '(:desc "Object transformer"
+    :tag ["javascript"]))
+(hoarder:fetch "nothings/single_file_libs"
+  '(:desc "List of single-file C/C++ libraries."
+    :tag ["c" "c++"]))
+(hoarder:fetch "allinurl/goaccess"
+  '(:desc "GoAccess is a real-time web log analyzer and interactive viewer that runs in a terminal in *nix systems or through your browser."
+    :tag ["golang" "terminal" "log" "analyzer"]))
+(hoarder:fetch "255kb/stack-on-a-budget"
+  '(:desc "A collection of services with great free tiers for developers on a budget"
+    :tag ["web" "webservice"]))
+(hoarder:fetch "janestreet/base"
+  '(:desc "Standard library for OCaml"
+    :tag ["ocaml" "prelude"]))
 
 ;;; end
 
@@ -4513,5 +4840,6 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
 
 ;; TODO svn support
 ;; svn checkout svn://svn.code.sf.net/p/porg/code/ porg-code
+;; svn checkout http://svn.apache.org/repos/asf/pdfbox/trunk/
 
 ;;; init.el ends here

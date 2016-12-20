@@ -74,6 +74,7 @@
     org-tree-slide
     org-section-numbers
     org-elisp-help
+    org-seek
     ))
 
 (muki-layer:load-layers 'package
@@ -94,7 +95,7 @@
     url-preview
     dircmp
     ;; sx ; error loading
-    smeargle
+    ;; smeargle
     stumpwm-mode
     context-coloring
     dircmp
@@ -375,7 +376,7 @@
     tile
     projectile
     proced
-    indicate-change
+    ;;   indicate-change
     clippy
     restart-emacs
     visible-mark
@@ -384,6 +385,14 @@
     avy
     grab-x-link
     anything
+    color-theme-buffer-local
+    untitled-new-buffer
+    pcre2el
+    list-environment
+    ag
+    open-junk-file
+    ;; all-ext                               
+    ;; easy-escape
 
     all-the-icons-dired
     ;; dired-icon
@@ -454,19 +463,22 @@
 
     volatile-highlights
     highlight-defined
-    highlight-leading-spaces
-    highlight-escape-sequences
+    highlight-escape-sequences ; easy-escape
     highlight-quoted
-    ;; highlight-indentation
     ;; hl-todo
     ;; highlight-unique-symbol
+
+    highlight-leading-spaces
+    ;; highlight-indentation
+    ;; highlight-indent-guides
     ;; hl-indent
     ;; indent-guide
-    ;; highlight-parentheses
+
+    highlight-parentheses
     ;; mic-paren
     ;; flash-paren
     paren
-    highlight-sexp
+    ;; highlight-sexp
     ;; highlight-tail
     ;; auto-highlight-symbol
     ;; highlight-stages
@@ -489,7 +501,7 @@
     evil-visualstar
     ;; evil-search-highlight-persist
     evil-textobj-between
-    ;; evil-extra-operator
+    evil-extra-operator
 
     evil-escape
     evil-easymotion
@@ -592,6 +604,7 @@
     helm-hunks
     helm-ls-svn
     helm-youtube
+    bho
     ;; helm-delicious
     ))
 
@@ -642,7 +655,7 @@
     recentf
     font ; this cause slow displaying
 
-    autorevert
+    ;; autorevert
 
     ;;clipboard
     ;; erc
@@ -679,7 +692,9 @@
     ;; moe-theme
     myth
     base16-theme
-    birds-of-paradise-plus-theme))
+    birds-of-paradise-plus-theme
+    doom-themes
+    doomsday))
 
 ;;;;; el-get
 ;; (require 'init-el-get)
