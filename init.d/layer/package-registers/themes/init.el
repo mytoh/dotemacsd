@@ -89,7 +89,7 @@
 (hoarder:register-theme "vurmux/crazyfruits-color-theme")
 (hoarder:register-theme "purcell/color-theme-sanityinc-tomorrow")
 (hoarder:register-theme "purcell/color-theme-sanityinc-solarized")
-(hoarder:register-theme "bbatsov/solarized-emacs")
+;; (hoarder:register-theme "bbatsov/solarized-emacs")
 (hoarder:register-theme "matteobanerjee/orpheus-theme")
 (hoarder:register-theme "yveszoundi/emacs-rimero-theme")
 (hoarder:register-theme "holomorph/emacs-zenburn")
@@ -226,5 +226,10 @@
 (hoarder:register-theme "https://gitlab.com/ghostey/emacs-doomsday-theme.git")
 (hoarder:register-theme "stealthycoin/xmas-theme"
   '(:desc "Christmas emacs theme."))
+(hoarder:register-theme "vic/rebecca-theme"
+  '(:desc "The purple turtle theme for Spacemacs"))
+(hoarder:register-theme "zk-phi/chillized-theme"
+  '(:desc "[Emacs] A solarized-based dark chill theme with few low-contrast colors"
+    :dependency [ "sellout/emacs-color-theme-solarized"]))
 
 ;;; init.el ends here

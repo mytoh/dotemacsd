@@ -243,7 +243,7 @@
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
 ;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson, noctilux, erosiond, material
-(defvar muki:x-theme 'doom-one)
+(defvar muki:x-theme 'rebecca)
 (defvar muki:term-theme 'flatland)
 (defconst muki:favorite-themes
   '(comidia planet monokai molokai firebelly
@@ -256,10 +256,11 @@
             hamburg omtose-phellack base16-harmonic16-dark
             Motoko motoko-night base16-oceanicnext-dark
             hyperplane iceberg myth forest-blue soria metalheart
-            zweilight oceanic redbelly doom-one firewatch
+            zweilight oceanic redbelly doom-one doom-molokai firewatch
             base16-ashes base16-atelier-cave base16-atelier-lakeside
             base16-ocean-brian acai sourcerer creamsody
-            doomsday-dark))
+            doomsday-dark solarized-grey solarized-dark
+            rebecca darktooth))
 
 ;; (enable-option select-enable-clipboard
 ;;                select-enable-primary)

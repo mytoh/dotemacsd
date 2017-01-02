@@ -926,11 +926,11 @@
   '(:tag ["project" "template"]))
 (hoarder:register "bmag/emacs-purpose"
   '(:tag ["window" "layout"]))
-(hoarder:register "git://git.savannah.gnu.org/tramp.git"
-  '(:tag ["tramp" "ssh"]
-    :build ["autoconf" "./configure" "gmake"]
-    :load-path ["lisp"]
-    :info "info"))
+;; (hoarder:register "git://git.savannah.gnu.org/tramp.git"
+;;   '(:tag ["tramp" "ssh"]
+;;     :build ["autoconf" "./configure" "gmake"]
+;;     :load-path ["lisp"]
+;;     :info "info"))
 (hoarder:register "ataka/emacs-wget"
   '(:tag ["wget"]))
 (hoarder:register "rmuslimov/browse-at-remote"
@@ -1925,9 +1925,25 @@
     :memo "[[http://2484.de/org-index.html]]
   The latest published version of this file can always be found at:
    http://orgmode.org/w/?p=org-mode.git;a=blob_plain;f=contrib/lisp/org-index.el;hb=HEAD "))
-(hoarder:fetch "collarchoke/ovpn-mode"
+(hoarder:register "collarchoke/ovpn-mode"
   '(:desc "An openvpn management mode for emacs"
     :tag ["openvpn"]))
+(hoarder:register "hagleitn/stock-ticker"
+  '(:desc "Emacs minor mode to show stock information in mode line."
+    :tag ["stock" "mode-line"]
+    :memo "[[http://qiita.com/takaxp/items/253f2f54893d8d399ca3][日経平均やダウ平均の状況をモードラインに表示する - Qiita]]"))
+(hoarder:register "syohex/emacs-zoom-window"
+  '(:desc "Zoom and Unzoom window"
+    :memo "[[http://syohex.hatenablog.com/entry/20130914/1379166283][Emacsで tmuxの zoom, unzoomを実現する zoom-window.el書きました - syohex’s diary]]
+[[http://emacs.rubikitch.com/zoom-window/][zoom-window:C-x 1を復元可能にする7つのメリット]]"))
+(hoarder:register "xiongtx/eros"
+  '(:desc "Evaluation Result OverlayS for Emacs Lisp."))
+(hoarder:register "cute-jumper/evil-embrace.el"
+  '(:desc "Evil integration of embrace.el"
+    :dependency ["cute-jumper/embrace.el"]))
+(hoarder:register "dochang/mb-url"
+  '(:desc "Multiple Backends for Emacs URL package"
+    :tag ["curl" "url" "http"]))
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
@@ -1993,9 +2009,9 @@
   '(:desc "Org-mode で小説を書くと 1 コマンドで A5 サイズ縦書き二段組の PDF が生成できる。"
     :memo "[[http://qiita.com/BooksThere/items/ff46ee6a5dc796df1e78][Org-mode で書いたファイルから A5 縦書き二段組の PDF を生成するツール - Qiita]]"
     :tag ["orgmode" "novel" "pdf" "latex"]))
-(hoarder:fetch "https://gitlab.com/chaseadamsio/scratch.git"
+(hoarder:fetch "https://gitlab.com/chaseadamsio/dotfiles.git"
   '(:tag ["emacs" "i3"]
-    :memo "[[https://gitlab.com/chaseadamsio/scratch/blob/master/dotfiles/configs/emacs.d.syml/init.org][dotfiles/configs/emacs.d.syml/init.org · master · Chase Adams / scratch · GitLab]]"))
+    :memo "[[https://gitlab.com/chaseadamsio/dotfiles/blob/master/emacs.org][emacs.org · master · Chase Adams / dotfiles · GitLab]]"))
 (hoarder:fetch "https://gist.github.com/kiwanami/5820978.git"
   '(:tag ["ctable" "emacs"]
     :name "ctable-0.1.2b-demo.el"))
@@ -2020,5 +2036,17 @@
 (hoarder:fetch "raxod502/radian"
   '(:desc "Elegant but practical configurations for Emacs, Zsh, Tmux, Leiningen, and Git"
     :tag ["dotfiles" "configuration" "emacs" "use-package" "zsh" "tmux" "clojure"]))
+(hoarder:fetch "emacsmirror/eoops"
+  '(:desc "An Object Oriented Programming System in Elisp"
+    :tag ["emacs" "oop" "smalltalk"]
+    :memo "[[https://www.emacswiki.org/emacs/EmacsObjectOrientedProgrammingSystem][EmacsWiki: Emacs Object Oriented Programming System]]"))
+(hoarder:fetch "IvanMalison/dotfiles"
+  '(:desc "configuration files for xmonad, emacs,  zsh, git, linux, osx and more."
+    :tag ["dotfiles" "emacs" "use-package"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5l15gg/how_do_you_share_your_dotfiles_on_github_while/][Too Many Requests]]"))
+(hoarder:fetch "https://gist.github.com/dc8fe61af6f2599c8e948035fbf66c13.git"
+  '(:tag ["emacs" "game"]
+    :name "xmas-tree.el"
+    :memo "[[http://gongo.hatenablog.com/entry/2016/12/25/004550][🎄 Merry Christmas in Emacs 🎄 - Thanks Driven Life]]"))
 
 ;;; init.el ends here

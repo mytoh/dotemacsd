@@ -10,6 +10,12 @@
 (add-to-list 'load-path (expand-file-name
                          "huone/ateljee/emacs-muki/lisp"
                          (getenv "HOME")))
+(add-to-list 'load-path (expand-file-name
+                         "huone/ateljee/emacs-glof/lisp"
+                         (getenv "HOME")))
+(add-to-list 'load-path (expand-file-name
+                         "huone/ateljee/emacs-colle/lisp"
+                         (getenv "HOME")))
 (require 'muki)
 (add-subdirs-to-load-path (locate-user-emacs-file "init.d"))
 (add-subdirs-to-load-path (locate-user-emacs-file "init.d/elisp"))
@@ -391,6 +397,8 @@
     list-environment
     ag
     open-junk-file
+    zoom-window
+    eros
     ;; all-ext                               
     ;; easy-escape
 
@@ -694,7 +702,9 @@
     base16-theme
     birds-of-paradise-plus-theme
     doom-themes
-    doomsday))
+    doomsday
+    ;; chillized-theme
+    ))
 
 ;;;;; el-get
 ;; (require 'init-el-get)

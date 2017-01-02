@@ -56,8 +56,9 @@
                      "Stardew Valley"
                      "Banished"
                      "IRL"
-                     "StarBound"))
-    )
+                     "StarBound"
+                     "Construction Simulator 2015"
+                     "Astroneer")))
 
   (add-global-key "C-c h" #'helm-muki)
 

@@ -99,6 +99,8 @@
         org-fontify-done-headline t
         org-fontify-quote-and-verse-blocks t)
 
+  ;; [[https://github.com/syl20bnr/spacemacs/blob/master/layers/%2Bemacs/org/local/org-async-init.el][spacemacs/org-async-init.el at master · syl20bnr/spacemacs · GitHub]]
+  (setq org-export-in-background nil)
   )
 
 (cl-defun muki:org-babel-options ()
@@ -269,11 +271,11 @@
   (org-element-map (org-element-parse-buffer 'element) 'headline
     (lambda (h)
       (and (org-element-map h 'drawer
-           (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
-           nil t 'headline)
-         (let ((begin (org-element-property :begin h)))
-           (message "Entry with erroneous properties drawer at %d" begin)
-           begin)))))
+             (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
+             nil t 'headline)
+           (let ((begin (org-element-property :begin h)))
+             (message "Entry with erroneous properties drawer at %d" begin)
+             begin)))))
 
 (cl-defun muki:org-open-link-mpv ()
   (interactive)
@@ -345,9 +347,9 @@
                            (looking-at "^[ \t]*#\\+begin_src[ \t]+[^ \f\t\n\r\v]+[ \t]*"))))
       ;; Test if we moved out of a block.
       (when (or (and rasmus/org-at-src-begin
-                  (not at-src-block))
-               ;; File was just opened.
-               (eq rasmus/org-at-src-begin -1))
+                   (not at-src-block))
+                ;; File was just opened.
+                (eq rasmus/org-at-src-begin -1))
         (rasmus/org-prettify-src--update))
       ;; Remove composition if at line; doesn't work properly.
       ;; (when at-src-block
