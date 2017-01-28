@@ -109,6 +109,7 @@
     (bind-map-set-keys my-base-leader-quit-map
       "r" #'restart-emacs
       "R" (lambda ()
+            (interactive)
             (let ((current-prefix-arg '(4)))
               (call-interactively #'restart-emacs)))))
 

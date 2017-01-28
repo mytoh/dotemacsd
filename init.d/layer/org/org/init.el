@@ -9,7 +9,7 @@
   (set-face-attribute 'org-block-begin-line nil :background "#202e31")
   (set-face-attribute 'org-block-end-line nil :background "#202e31")
   (setq org-src-block-faces
-        `(("emacs-lisp" (:background ,(muki:color-hsl->hex 300 20 30)))
+        `( ;("emacs-lisp" (:background ,(muki:color-hsl->hex 300 20 30)))
           ("lisp" (:background ,(muki:color-hsl->hex 190 20 30)))
           ("python" (:background ,(muki:color-hsl->hex 230 20 29)))
           ("shell" (:background ,(muki:color-hsl->hex 140 20 20))))))
@@ -96,7 +96,7 @@
   (set-option org-ellipsis  " ▼")
 
   (setq org-fontify-whole-heading-line t
-        org-fontify-done-headline t
+        ;; org-fontify-done-headline t
         org-fontify-quote-and-verse-blocks t)
 
   ;; [[https://github.com/syl20bnr/spacemacs/blob/master/layers/%2Bemacs/org/local/org-async-init.el][spacemacs/org-async-init.el at master · syl20bnr/spacemacs · GitHub]]

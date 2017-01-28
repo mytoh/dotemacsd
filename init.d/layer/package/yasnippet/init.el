@@ -14,6 +14,11 @@
                  hoarder-directory)))
     (when (file-exists-p sd)
       (add-to-list 'yas-snippet-dirs sd)))
-  (yas-global-mode 1))
+
+;; (yas-reload-all)
+;; (add-hook 'prog-mode-hook #'yas-minor-mode)
+
+  (yas-global-mode 1)
+)
 
 ;;; init.el ends here

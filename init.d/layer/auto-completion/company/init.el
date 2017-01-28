@@ -1,5 +1,3 @@
-
-
 (use-package company
   :commands (global-company-mode)
   :init
@@ -72,4 +70,3 @@
 ;;                 (lambda ()
 ;;                   (set (make-local-variable 'company-backends)
 ;;                        (cl-pushnew 'company-yasnippet company-backends))))))
-

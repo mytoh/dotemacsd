@@ -5,10 +5,10 @@
            "helm-yplistener")
 
   (after 'helm-yplistener
-      ;; (set-option helm-yplistener-local-address "localhost:7144")
-      (validate-setq helm-yplistener-local-address
-       '(:host "peca2.koti"
-         :port 7144))
+    ;; (set-option helm-yplistener-local-address "localhost:7144")
+    (validate-setq helm-yplistener-local-address
+                   '(:host "peca2.koti"
+                     :port 7144))
     (when (file-exists-p (locate-user-emacs-file "helm-yplistener/yp"))
       (load-file (locate-user-emacs-file "helm-yplistener/yp")))
     
@@ -22,6 +22,7 @@
                      (oekaki "oekakiyp.appspot.com")
                      (event "eventyp.xrea.jp")
                      ;; (message "peercast.takami98.net/message-yp")
+                     (twitchjp "gerogugu.web.fc2.com/tjyp")
                      ))
 
     (validate-setq helm-yplistener-player-type :mpv)

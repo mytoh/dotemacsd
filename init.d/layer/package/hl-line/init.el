@@ -18,15 +18,16 @@
 
   (add-hook 'emacs-startup-hook #'muki:set-hl-line-face)
 
-  ;; [[http://rubikitch.com/2015/05/14/global-hl-line-mode-timer/]]
-
+  ;; [[http://emacs.rubikitch.com/global-hl-line-mode-timer/][<2016-11-09 Wed>更新【高速化】Emacsのカーソル移動が重い？現在行ハイライトhl-line-modeに原因があるかも…]]
+;;; hl-lineを無効にするメジャーモードを指定する
+  (defvar global-hl-line-timer-exclude-modes '(todotxt-mode))
   (defun global-hl-line-timer-function ()
-    (unless (eq major-mode 'eshell-mode)
+    (unless (memq major-mode global-hl-line-timer-exclude-modes)
       (global-hl-line-unhighlight-all)
       (let ((global-hl-line-mode t))
         (global-hl-line-highlight))))
   (setq global-hl-line-timer
-        (run-with-idle-timer 0.03 t 'global-hl-line-timer-function))
+        (run-with-idle-timer 0.04 t 'global-hl-line-timer-function))
   ;; (cancel-timer global-hl-line-timer)
 
 

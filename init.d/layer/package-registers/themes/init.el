@@ -223,7 +223,6 @@
 (hoarder:register-theme "emacsfodder/emacs-deep-thought-theme")
 (hoarder:register-theme "jimeh/birds-of-paradise-plus-theme.el")
 (hoarder:register-theme "FelixFortis/emacs-darkane-theme")
-(hoarder:register-theme "https://gitlab.com/ghostey/emacs-doomsday-theme.git")
 (hoarder:register-theme "stealthycoin/xmas-theme"
   '(:desc "Christmas emacs theme."))
 (hoarder:register-theme "vic/rebecca-theme"
@@ -231,5 +230,9 @@
 (hoarder:register-theme "zk-phi/chillized-theme"
   '(:desc "[Emacs] A solarized-based dark chill theme with few low-contrast colors"
     :dependency [ "sellout/emacs-color-theme-solarized"]))
+(hoarder:register-theme "windsorschmidt/betamax-theme"
+  '(:desc "Emacs theme based on http://dotshare.it/dots/1200/ by https://github.com/svbtext"))
+(hoarder:register-theme "zk-phi/monojelly-theme"
+  '(:desc "[Emacs] a solarized-based nearly-monochrome theme with jellybeans colors"))
 
 ;;; init.el ends here

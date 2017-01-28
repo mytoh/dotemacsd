@@ -236,6 +236,40 @@ Otherwise goto the end of minibuffer."
       #'muki:helm-ff-open-external)
 
     )
+
+  (after 'evil
+    ;; [[http://www.cachestocaches.com/2016/12/vim-within-emacs-anecdotal-guide/][Vim Within Emacs: An Anecdotal Guide]]
+    (define-key evil-ex-map "b " #'helm-mini)
+    (define-key evil-ex-map "e" #'helm-find-files))
+
+  ;; [[http://www.cachestocaches.com/2016/12/vim-within-emacs-anecdotal-guide/][Vim Within Emacs: An Anecdotal Guide]]
+  ;; [[https://github.com/syl20bnr/spacemacs/blob/522366bbd179bc332a863efeb523daa09c603458/layers/%2Bdistribution/spacemacs-base/packages.el#L681-L685][spacemacs/packages.el at 522366bbd179bc332a863efeb523daa09c603458 · syl20bnr/spacemacs · GitHub]]
+  ;; Fix visual cursor glitch for Helm lisp
+  (defun spacemacs//hide-cursor-in-helm-buffer ()
+    "Hide the cursor in helm buffers."
+    (with-helm-buffer
+      (setq cursor-in-non-selected-windows nil)))
+  (add-hook 'helm-after-initialize-hook 
+            #'spacemacs//hide-cursor-in-helm-buffer)
+
+  ;; [[http://www.cachestocaches.com/2016/12/vim-within-emacs-anecdotal-guide/][Vim Within Emacs: An Anecdotal Guide]]
+  ;; [[https://github.com/syl20bnr/spacemacs/blob/522366bbd179bc332a863efeb523daa09c603458/layers/+distribution/spacemacs-base/packages.el#L787-L795][spacemacs/packages.el at 522366bbd179bc332a863efeb523daa09c603458 · syl20bnr/spacemacs · GitHub]]
+  ;; Add vim-like movement to Helm lisp
+  (define-key helm-map (kbd "C-j") #'helm-next-line)
+  (define-key helm-map (kbd "C-k") #'helm-previous-line)
+  ;; (define-key helm-map (kbd "C-h") #'helm-next-source)
+  (define-key helm-map (kbd "C-S-h") #'describe-key)
+  ;; (define-key helm-map (kbd "C-l") (kbd "RET"))
+  (define-key helm-map [escape] #'helm-keyboard-quit)
+  (dolist (keymap (list helm-find-files-map helm-read-file-map))
+    ;; (define-key keymap (kbd "C-l") #'helm-execute-persistent-action)
+    ;; (define-key keymap (kbd "C-h") #'helm-find-files-up-one-level)
+    (define-key keymap (kbd "C-S-h") #'describe-key))
+
+  ;; [[http://www.cachestocaches.com/2016/12/vim-within-emacs-anecdotal-guide/][Vim Within Emacs: An Anecdotal Guide]]
+  ;; [[https://emacs.stackexchange.com/questions/4062/evil-mode-make-helm-quit-with-the-escape-key/4064#4064][evil mode - make helm quit with the escape key - Emacs Stack Exchange]]
+  (define-key helm-map (kbd "ESC") #'helm-keyboard-quit)
+
   )
 
 ;; helm-themes

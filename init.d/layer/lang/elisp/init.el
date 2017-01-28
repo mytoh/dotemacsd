@@ -209,10 +209,6 @@
 (add-key emacs-lisp-mode-map "C-m" #'newline-and-indent)
 
 
-;;; flycheck
-(liby 'flycheck
-  (add-hook 'emacs-lisp-mode-hook #'flycheck-mode))
-
 
 ;;; fix indentation
 ;; [[http://emacs.stackexchange.com/questions/10230/how-to-indent-keywords-aligned][elisp - How to indent keywords aligned? - Emacs Stack Exchange]]

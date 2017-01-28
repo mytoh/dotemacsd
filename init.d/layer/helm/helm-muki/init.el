@@ -58,7 +58,9 @@
                      "IRL"
                      "StarBound"
                      "Construction Simulator 2015"
-                     "Astroneer")))
+                     "Astroneer"
+                     "Dwarf Fortress"
+                     "Subnautica")))
 
   (add-global-key "C-c h" #'helm-muki)
 

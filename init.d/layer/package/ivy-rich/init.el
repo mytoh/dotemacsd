@@ -4,6 +4,9 @@
 
 ;;; Code:
 
-(use-package ivy-rich)
+(use-package ivy-rich
+  :config
+  (after 'ivy
+    (ivy-set-display-transformer 'ivy-switch-buffer 'ivy-rich-switch-buffer-transformer)))
 
 ;;; init.el ends here

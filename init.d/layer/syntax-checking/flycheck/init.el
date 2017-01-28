@@ -10,10 +10,15 @@
   (add-hook 'flycheck-mode-hook
             (lambda ()
               (set-face-background 'flycheck-warning
-                                   (color-lighten-name (face-background 'default) 15)))))
+                                   (color-lighten-name (face-background 'default) 15))))
+
+  ;; (add-hook 'emacs-lisp-mode-hook #'flycheck-mode)
+  ;; (remove-hook 'emacs-lisp-mode-hook #'flycheck-mode)
+
+  )
 
 (liby 'flycheck-pos-tip
   (when (display-graphic-p (selected-frame))
     (after 'flycheck
-        (req 'flycheck-pos-tip
-          (setq flycheck-display-errors-function #'flycheck-pos-tip-error-messages)))))
+      (req 'flycheck-pos-tip
+        (setq flycheck-display-errors-function #'flycheck-pos-tip-error-messages)))))

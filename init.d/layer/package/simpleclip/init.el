@@ -4,8 +4,6 @@
 
 ;;; Code:
 
-(use-package bho
-  :commands (bho-search-root
-             bho-search-subtree))
+(use-package simpleclip)
 
 ;;; init.el ends here

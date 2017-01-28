@@ -243,7 +243,7 @@
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
 ;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson, noctilux, erosiond, material
-(defvar muki:x-theme 'rebecca)
+(defvar muki:x-theme 'doom-one)
 (defvar muki:term-theme 'flatland)
 (defconst muki:favorite-themes
   '(comidia planet monokai molokai firebelly
@@ -260,7 +260,7 @@
             base16-ashes base16-atelier-cave base16-atelier-lakeside
             base16-ocean-brian acai sourcerer creamsody
             doomsday-dark solarized-grey solarized-dark
-            rebecca darktooth))
+            rebecca darktooth sirthias))
 
 ;; (enable-option select-enable-clipboard
 ;;                select-enable-primary)
@@ -330,8 +330,9 @@
 (req 'checkdoc)
 
 ;;;;; uniquify
-(req 'uniquify
-  (set-option uniquify-buffer-name-style 'post-forward-angle-brackets))
+(liby 'uniquify
+  (set-option uniquify-buffer-name-style 'post-forward-angle-brackets)
+  (set-option uniquify-separator "::"))
 
 ;;;;; term/bobcat
 (load "term/bobcat")
@@ -446,6 +447,9 @@
 
 ;; disable cursor in non selected windows
 (disable-option cursor-in-non-selected-windows)
+
+;; disable blinking for cursor
+(blink-cursor-mode -1)
 
 ;; change quoting style
 (set-option text-quoting-style 'grave)

@@ -174,13 +174,19 @@
 ;;                    :dependency ["michael-heerdegen/iterators.el"]))
 
 ;;;;; evil
-(hoarder:register "https://bitbucket.org/lyro/evil"
+;; (hoarder:register "https://bitbucket.org/lyro/evil"
+;;   '(:build ["gmake clean doc all"]
+;;     :info "doc"
+;;     :dependency ["emacsmirror/goto-chg"
+;;                  "http://www.dr-qubit.org/git/undo-tree.git"]
+;;     :tag "evil"
+;;     :type :hg))
+(hoarder:register "emacs-evil/evil"
   '(:build ["gmake clean doc all"]
     :info "doc"
     :dependency ["emacsmirror/goto-chg"
                  "http://www.dr-qubit.org/git/undo-tree.git"]
-    :tag "evil"
-    :type :hg))
+    :tag ["evil"]))
 (hoarder:register "cofi/evil-leader"
   '(:tag "evil"))
 (hoarder:register "timcharper/evil-surround"
@@ -293,6 +299,8 @@
 (hoarder:register "wbolster/evil-swap-keys")
 (hoarder:register "0robustus1/opener.el"
   '(:dependency ["tkf/emacs-request"]))
+(hoarder:register "noctuid/targets.el"
+  '(:desc "Extension of evil text objects"))
 
 ;;;;;  general packages
 (hoarder:register "magnars/s.el")
@@ -606,6 +614,8 @@
   '(:tag "vim"
     :desc " Vim-like empty line indicator at end of files for Emacs. "))
 (hoarder:register "Fanael/highlight-defined")
+(hoarder:register "emacsmirror/hl-defined"
+  '(:desc "Highlight defined or undefined symbols in Emacs-Lisp"))
 (hoarder:register "Bruce-Connor/conkeror-minor-mode")
 (hoarder:register "larsmagne/movie.el"
   '(:dependency ["larsmagne/pvr.el"
@@ -1658,6 +1668,14 @@
   '(:tag ["org-mode" "android"]))
 (hoarder:register "justbur/evil-ediff"
   '(:tag ["ediff" "evil" "diff" "keybinding"]))
+(hoarder:register "liangzan/frame-tag.el"
+  '(:desc "binds M-1 to M-9 to the emacs frame to allow fast switching"
+    :tag ["frame"]))
+(hoarder:register "llvilanova/info-buffer"
+  '(:desc "Display info topics on separate buffers"
+    :tag ["info"]))
+(hoarder:register "andschwa/fortune-cookie"
+  '(:desc "Print a fortune in your Emacs scratch buffer"))
 
 ;;;;; org
 (hoarder:register "git://orgmode.org/org-mode.git"
@@ -1747,13 +1765,17 @@
 (hoarder:register "takaxp/org-tree-slide")
 (hoarder:register "unhammer/org-random-todo"
   '(:tag ["orgmode" "agenda" "todo"]))
-(hoarder:register "talwrii/bho")
+(hoarder:register "talwrii/orgnav"
+  '(:desc "Quickly navigate and search your emacs org trees; use this navigation to capture and organize. Built with the help of helm."))
 (hoarder:register "marcowahl/org-section-numbers")
 (hoarder:register "tarsius/org-elisp-help")
 (hoarder:register "caiorss/org-wiki"
   '(:desc "Wiki for Emacs org-mode built on top of Emacs org-mode."))
 (hoarder:register "stardiviner/org-seek.el"
   '(:desc "Searching Org-mode files with search engines."))
+(hoarder:register "IvanMalison/org-projectile"
+  '(:desc "Manage org-mode TODOs for your projectile projects"
+    :tag ["todo" "project" "org-mode" "projectile"]))
 
 ;;;;; general packages
 
@@ -1944,6 +1966,51 @@
 (hoarder:register "dochang/mb-url"
   '(:desc "Multiple Backends for Emacs URL package"
     :tag ["curl" "url" "http"]))
+(hoarder:register "zonuexe/untitled-new-buffer.el"
+  '(:desc "Open untitled new buffer like other text editors in Emacs"))
+(hoarder:register "rolandwalker/simpleclip"
+  '(:desc "Simplified access to the system clipboard in Emacs."
+    :tag ["clipboard"]))
+(hoarder:register "Fanael/rainbow-identifiers"
+  '(:desc "Rainbow identifier highlighting for Emacs"))
+(hoarder:register "takaishi/babel-loader.el"
+  '(:desc "org-modeのbabelというシステムを使って書かれた設定ファイルをinit-loaderでロードするためのラッパです"
+    :memo "[[http://futurismo.biz/archives/6057][babel-loader:org-mode で init.el を管理する方法 | Futurismo]]"))
+(hoarder:register "abrochard/emacs-habitica"
+  '(:desc "Emacs Extension for Habitica"
+    :tag ["habitica" "todo"]))
+(hoarder:register "mallt/eshell-fixed-prompt-mode"
+  '(:desc "Emacs minor mode to restrict eshell to a single fixed prompt"
+    :tag ["eshell"]))
+(hoarder:register "squiter/ivy-youtube"
+  '(:tag ["ivy" "youtube"])) 
+(hoarder:register "zk-phi/ac-last-session"
+  '(:desc "[emacs] auto complete source to complete words-in-same-mode-buffers in the last session"
+    :tag ["auto-complete"]))
+(hoarder:register "riscy/shx-for-emacs"
+  '(:desc "An Emacs shell-mode extension that enables displaying small plots and graphics and lets users write shell commands in Emacs Lisp."
+    :tag ["shell" "graph"]))
+(hoarder:register "pjones/eldoro"
+  '(:desc "A pomodoro timer/tracker that works with org-mode."
+    :tag ["org-mode" "pomodoro"]))
+(hoarder:register "kuanyui/fm-bookmarks.el"
+  '(:desc "Access existed File Managers' bookmarks (e.g. Dolphin, Nautilus, PCManFM) in Dired."
+    :tag ["bookmark"]))
+(hoarder:register "desvox/q4"
+  '(:desc "Browse and archive 4chan in GNU Emacs."
+    :tag ["4chan"]
+    :memo "[[https://boards.4chan.org/g/thread/58524074][/g/ - /dpt/ - Daily Programming Thread - Technology - 4chan]]"))
+(hoarder:register "kaushalmodi/todoist.el"
+  '(:desc "Elisp library to interface with Todoist API"
+    :tag ["todo" "todoist"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/5oyml2/any_todoist_user_interested_in_collaborating_on/][Too Many Requests]]"))
+(hoarder:register "ttakamura/org-todoist"
+  '(:desc "Sync TODOs between emacs org-mode files and Todoist"
+    :tag ["todo" "todoist" "org-mode"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/5oyml2/any_todoist_user_interested_in_collaborating_on/][Too Many Requests]]"))
+(hoarder:register "emacsmirror/col-highlight"
+  '(:desc "Highlight the current column"
+    :dependency ["emacsmirror/vline"]))
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
@@ -2048,5 +2115,23 @@
   '(:tag ["emacs" "game"]
     :name "xmas-tree.el"
     :memo "[[http://gongo.hatenablog.com/entry/2016/12/25/004550][🎄 Merry Christmas in Emacs 🎄 - Thanks Driven Life]]"))
+(hoarder:fetch "thapakazi/.emacs.d"
+  '(:desc "Mai emacs configuration"
+    :tag ["emacs" "configuration" "org-mode"]
+    :memo "[[https://github.com/thapakazi/.emacs.d/blob/master/config.org][.emacs.d/config.org at master · thapakazi/.emacs.d · GitHub]]"))
+(hoarder:fetch "nobulin/elisp"
+  '(:desc "My tiny emacs lisp code."
+    :tag ["thread" "task"]
+    :memo "[[https://github.com/nobulin/elisp/blob/master/thread-script.el][elisp/thread-script.el at master · nobulin/elisp · GitHub]]"))
+(hoarder:fetch "geekerzp/kitten-emacs"
+  '(:desc "Convention over Configuration for emacs"
+    :tag ["configuration" "emacs"]))
+(hoarder:fetch "keenerd/albumbler"
+  '(:desc "A simple psychic playlist generator for a wide variety of music players."
+    :site "http://kmkeen.com/albumbler/"
+    :tag ["python" "music" "emms" "emacs"]))
+
+;; TODO emacswiki support
+;; "http://www.emacswiki.org/emacs/hl-spotlight.el"
 
 ;;; init.el ends here

@@ -75,12 +75,14 @@
     ;;ox-pandoc                 
     org-hlc
     ob-browser
-    org-breadcrumbs
+    ;; org-breadcrumbs
     org-bookmark-heading
     org-tree-slide
     org-section-numbers
     org-elisp-help
     org-seek
+    orgnav
+    org-projectile
     ))
 
 (muki-layer:load-layers 'package
@@ -277,7 +279,7 @@
     erefactor
     elm-mode
     unkillable-scratch
-    ;; mode-icons
+    mode-icons
     char-menu
     link-hint
     tldr
@@ -399,6 +401,11 @@
     open-junk-file
     zoom-window
     eros
+    rainbow-identifiers
+    simpleclip
+    eshell-fixed-prompt-mode
+    ivy-youtube
+    ivy-rich
     ;; all-ext                               
     ;; easy-escape
 
@@ -466,6 +473,7 @@
 (muki-layer:load-layers 'package
   '(
     hl-line
+    ;; col-highlight
     ;; highlight-symbol
     highlight-thing
 
@@ -534,6 +542,7 @@
     evil-org-mode
     evil-ediff
     opener
+    ;; targets
     ;; org-evil
     
     ;; pure-evil
@@ -612,7 +621,6 @@
     helm-hunks
     helm-ls-svn
     helm-youtube
-    bho
     ;; helm-delicious
     ))
 
