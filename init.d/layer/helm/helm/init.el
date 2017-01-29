@@ -268,7 +268,7 @@ Otherwise goto the end of minibuffer."
 
   ;; [[http://www.cachestocaches.com/2016/12/vim-within-emacs-anecdotal-guide/][Vim Within Emacs: An Anecdotal Guide]]
   ;; [[https://emacs.stackexchange.com/questions/4062/evil-mode-make-helm-quit-with-the-escape-key/4064#4064][evil mode - make helm quit with the escape key - Emacs Stack Exchange]]
-  (define-key helm-map (kbd "ESC") #'helm-keyboard-quit)
+  ;; (define-key helm-map (kbd "ESC") #'helm-keyboard-quit)
 
   )
 
