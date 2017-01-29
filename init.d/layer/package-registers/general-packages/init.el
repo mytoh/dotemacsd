@@ -741,8 +741,8 @@
   '(:tag ["firefox" "theme" "addon" "css"]))
 (hoarder:fetch "yjh0502/comic"
   '(:tag ["image" "viewer" "comic" "archive"]))
-(hoarder:fetch "lucy/af"
-  '(:tag ["ag" "grep"]))
+;; (hoarder:fetch "lucy/af"
+;;   '(:tag ["ag" "grep"]))
 (hoarder:fetch "tsudoko/pixivrss"
   '(:tag ["pixiv" "rss"]))
 (hoarder:fetch "Hamuko/nyaamagnet"
@@ -5421,6 +5421,13 @@ case for pi zero and camera: http://www.thingiverse.com/thing:1639568 "))
     :tag ["torrent" "elixir"]
     :memo "[[https://news.ycombinator.com/item?id=13505226][Show HN: Open-source, self-hosted torrent search engine written in Elixir | Hacker News]]
 [[https://www.reddit.com/r/elixir/comments/5qmlcb/opensource_selfhosted_torrent_search_engine/][Too Many Requests]]"))
+(hoarder:fetch "veggiedefender/terminal-waifu"
+  '(:desc "http://jli.host/terminal-waifu/"
+    :site "http://jli.host/terminal-waifu/"
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5qkhwr/oc_i_made_a_small_website_to_generate_a_custom/][{OC} I made a small website to generate a custom waifu using your terminal config! : unixporn]]"))
+(hoarder:fetch "lucy/lsc"
+  '(:desc "faster ls with pointless colours"
+    :tag ["ls" "ls--"]))
 
 ;;; end
 
