@@ -13,7 +13,15 @@
 ;;(add-hook 'after-save-hook
 ;;      #'muki:after-save-hook)
 
-
+;;; [[http://munepi.hatenablog.jp/entry/20101209/emacs][ファイル保存時に notify-send で通知 - I'm Just Another TeXnician.]]
+(defun notify-send-after-save-hook ()
+  (notifications-notify :title "Emacs" :body
+    (cl-letf ((curbuf (current-buffer)))
+      (if-let ((filename (buffer-file-name curbuf)))
+          (format "Saved <b>%s</b> in %s" (buffer-name curbuf)
+                  (file-name-directory filename))
+        (format "Saved %s" (buffer-name (current-buffer)))))))
+(add-hook 'after-save-hook 'notify-send-after-save-hook)
 
 ;; make read only when file under certain directory
 ;; (add-hook 'find-file-hook
