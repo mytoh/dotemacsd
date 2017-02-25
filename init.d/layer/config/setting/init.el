@@ -243,7 +243,7 @@
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
 ;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson, noctilux, erosiond, material
-(defvar muki:x-theme 'doom-one)
+(defvar muki:x-theme 'green-screen)
 (defvar muki:term-theme 'flatland)
 (defconst muki:favorite-themes
   '(comidia planet monokai molokai firebelly
@@ -260,7 +260,7 @@
             base16-ashes base16-atelier-cave base16-atelier-lakeside
             base16-ocean-brian acai sourcerer creamsody
             doomsday-dark solarized-grey solarized-dark
-            rebecca darktooth sirthias))
+            rebecca darktooth sirthias nord))
 
 ;; (enable-option select-enable-clipboard
 ;;                select-enable-primary)
@@ -292,7 +292,7 @@
      (cl-pushnew dir Info-additional-directory-list))
    (seq-filter
     (lambda (dir) (and (file-directory-p dir)
-                (file-exists-p dir)))
+                       (file-exists-p dir)))
     (directory-files (muki:expand-path-huone "komero/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise

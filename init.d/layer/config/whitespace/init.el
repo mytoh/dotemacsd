@@ -46,4 +46,5 @@
                                                      30))))
 
 ;; デフォルトで視覚化を有効にする。
-(global-whitespace-mode 1)
+(add-hook 'prog-mode-hook #'whitespace-mode)
+;; (global-whitespace-mode 1)

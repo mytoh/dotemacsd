@@ -15,7 +15,7 @@
 (cl-defun muki:emacs-lisp-test-open-alternate-file ()
   "spacemacs/alternate-buffer"
   (interactive)
-  (if-let ((root (vc-root-dir)))
+  (if-let* ((root (vc-root-dir)))
       (cl-labels ((test-file-p (name)
                                (and (string-equal (file-name-nondirectory
                                                  (directory-file-name

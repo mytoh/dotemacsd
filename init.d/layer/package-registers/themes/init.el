@@ -109,7 +109,7 @@
 (hoarder:register-theme "eglaysher/dark-forest-theme")
 (hoarder:register-theme "waymondo/apropospriate-theme")
 (hoarder:register-theme "john2x/plan9-theme.el")
-(hoarder:register-theme "TheQZ/emerald-emacs")
+;; (hoarder:register-theme "TheQZ/emerald-emacs")
 (hoarder:register-theme "ZehCnaS34/zonokai-emacs")
 (hoarder:register-theme "whitlockjc/atom-dark-theme-emacs")
 (hoarder:register-theme "zovt/pretty-emacs")
@@ -234,5 +234,23 @@
   '(:desc "Emacs theme based on http://dotshare.it/dots/1200/ by https://github.com/svbtext"))
 (hoarder:register-theme "zk-phi/monojelly-theme"
   '(:desc "[Emacs] a solarized-based nearly-monochrome theme with jellybeans colors"))
+(hoarder:register-theme "adamgraham/polykai"
+  '(:desc "A dark color scheme inspired by Wimer Hazenberg's Monokai theme."
+    :load-path "Emacs"))
+(hoarder:register-theme "geoffmacintosh/offworlders-theme"
+  '(:desc "A totes minimal dark theme for Emacs"))
+(hoarder:register-theme "thblt/eziam-theme-emacs"
+  '(:desc "A mostly grayscale theme for Emacs, inspired by Tao and Leuven."))
+(hoarder:register-theme "rbanffy/green-screen-emacs"
+  '(:desc "A nice color theme for those who miss green CRTs"))
+(hoarder:register-theme "apierz/nord-emacs"
+  '(:desc "Potential Addition to the Nord Theme Family"))
+(hoarder:register-theme "madhat2r/madhat2r-theme"
+  '(:desc "Dark theme for (spac[e]macs) that supports GUI and terminal"))
+(hoarder:register-theme "prassee/prassee-emacs-theme"
+  '(:desc "dark theme for Emacs based on Doom Theme (https://github.com/hlissner/emacs-doom-theme)"))
+
+;; (hoarder:register-theme "bobbypriambodo/nord-spacemacs"
+;;     '(:desc "Unofficial port of Nord color palette for Spacemacs."))
 
 ;;; init.el ends here

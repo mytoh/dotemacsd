@@ -23,9 +23,10 @@ ref: [[https://github.com/syl20bnr/spacemacs/blob/develop/layers/+completion/hel
   :config
   (validate-setq helm-ag-insert-at-point 'symbol)
 
-  (when (executable-find "hw")
-    (validate-setq helm-ag-base-command
-                   "hw --no-group --no-color")))
+  ;; (when (executable-find "hw")
+  ;;   (validate-setq helm-ag-base-command
+  ;;                  "hw --no-group --no-color"))
+  )
 
 
 ;; Local Variables:

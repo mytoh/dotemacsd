@@ -12,14 +12,14 @@
     ("l" text-scale-decrease "out"))
 
   (after 'org
-      (defhydra muki:hydra-org (org-mode-map "C-c")
-        "move between headings"
-        ("C-n" org-next-visible-heading "NextHeading")
-        ("C-p" org-previous-visible-heading "NextHeading")))
+    (defhydra muki:hydra-org (org-mode-map "C-c")
+      "move between headings"
+      ("C-n" org-next-visible-heading "NextHeading")
+      ("C-p" org-previous-visible-heading "NextHeading")))
 
   (after 'outline
-      (defhydra muki:hydra-outline-minor (outline-minor-mode-map "M-#")
-        "
+    (defhydra muki:hydra-outline-minor (outline-minor-mode-map "M-#")
+      "
 ^Hide^             ^Show^           ^Move
 ^^^^^^------------------------------------------------------
 _q_: sublevels     _a_: all         _u_: up
@@ -30,27 +30,48 @@ _l_: leaves        _s_: subtree     _b_: backward same level
 _d_: subtree
 
 "
-        ;; Hide
-        ("q" hide-sublevels)    ; Hide everything but the top-level headings
-        ("t" hide-body)         ; Hide everything but headings (all body lines)
-        ("o" hide-other)        ; Hide other branches
-        ("c" hide-entry)        ; Hide this entry's body
-        ("l" hide-leaves)       ; Hide body lines in this entry and sub-entries
-        ("d" hide-subtree)      ; Hide everything in this entry and sub-entries
-        ;; Show
-        ("a" show-all)          ; Show (expand) everything
-        ("e" show-entry)        ; Show this heading's body
-        ("i" show-children)     ; Show this heading's immediate child sub-headings
-        ("k" show-branches)     ; Show all sub-headings under this heading
-        ("s" show-subtree)      ; Show (expand) everything in this heading & below
-        ;; Move
-        ("u" outline-up-heading)                ; Up
-        ("n" outline-next-visible-heading)      ; Next
-        ("p" outline-previous-visible-heading)  ; Previous
-        ("f" outline-forward-same-level)        ; Forward - same level
-        ("b" outline-backward-same-level)       ; Backward - same level
-        ("z" nil "leave")
-        ))
+      ;; Hide
+      ("q" hide-sublevels)    ; Hide everything but the top-level headings
+      ("t" hide-body)         ; Hide everything but headings (all body lines)
+      ("o" hide-other)        ; Hide other branches
+      ("c" hide-entry)        ; Hide this entry's body
+      ("l" hide-leaves)       ; Hide body lines in this entry and sub-entries
+      ("d" hide-subtree)      ; Hide everything in this entry and sub-entries
+      ;; Show
+      ("a" show-all)          ; Show (expand) everything
+      ("e" show-entry)        ; Show this heading's body
+      ("i" show-children)     ; Show this heading's immediate child sub-headings
+      ("k" show-branches)     ; Show all sub-headings under this heading
+      ("s" show-subtree)      ; Show (expand) everything in this heading & below
+      ;; Move
+      ("u" outline-up-heading)                ; Up
+      ("n" outline-next-visible-heading)      ; Next
+      ("p" outline-previous-visible-heading)  ; Previous
+      ("f" outline-forward-same-level)        ; Forward - same level
+      ("b" outline-backward-same-level)       ; Backward - same level
+      ("z" nil "leave")
+      ))
+
+  ;;; [[https://www.reddit.com/r/emacs/comments/5rnpsm/nice_hydra_to_set_frame_transparency/][Nice hydra to set frame transparency ]]
+  (defun my--set-transparency (inc)
+    "Increase or decrease the selected frame transparency"
+    (let* ((alpha (frame-parameter (selected-frame) 'alpha))
+           (next-alpha (cond ((not alpha) 100)
+                             ((> (- alpha inc) 100) 100)
+                             ((< (- alpha inc) 0) 0)
+                             (t (- alpha inc)))))
+      (set-frame-parameter (selected-frame) 'alpha next-alpha)))
+
+  (defhydra hydra-transparency (:columns 2)
+    "
+ALPHA : [ %(frame-parameter nil 'alpha) ]
+"
+    ("j" (lambda () (interactive) (my--set-transparency +1)) "+ more")
+    ("k" (lambda () (interactive) (my--set-transparency -1)) "- less")
+    ("J" (lambda () (interactive) (my--set-transparency +10)) "++ more")
+    ("K" (lambda () (interactive) (my--set-transparency -10)) "-- less")
+    ("=" (lambda (value) (interactive "nTransparency Value 0 - 100 opaque:")
+           (set-frame-parameter (selected-frame) 'alpha value)) "Set to ?" :color blue))
   )
 
 ;;; init.el ends here

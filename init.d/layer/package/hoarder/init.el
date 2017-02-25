@@ -69,4 +69,5 @@
                                                          (syntax string-delimiter)))
                                            2 'font-lock-warning-face)))))))
 
+
 ;;; init.el ends here

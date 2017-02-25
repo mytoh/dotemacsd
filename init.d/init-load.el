@@ -38,7 +38,10 @@
 
 (muki-layer:load-layers 'package-registers
   '(register
+    helm
+    org
     emacs
+    vim
     local
     themes
     general-packages))
@@ -83,6 +86,9 @@
     org-seek
     orgnav
     org-projectile
+    ob-async
+    org-table-sticky-header
+    org-writers-room
     ))
 
 (muki-layer:load-layers 'package
@@ -247,6 +253,7 @@
     ;; autobookmarks
     focus
     soundcloud
+    soundklaus
     longlines-jp
     ssh-modes
     csv-mode
@@ -354,7 +361,7 @@
     neotree
     adaptive-wrap
     org-easy-img-insert
-    ;; magithub
+    magithub
     ids-edit
     visual-fill-column
     engine-mode
@@ -365,7 +372,7 @@
     podcaster
     ;; lisp-extra-font-lock
     treemacs
-    japanese-holidays
+    ;;japanese-holidays
     undo-tree
     help-mode
     auto-compile
@@ -406,6 +413,15 @@
     eshell-fixed-prompt-mode
     ivy-youtube
     ivy-rich
+    cheatsheet
+    ;; eldoc-overlay-mode
+    pcmpl-git
+    guess-language
+    drawille
+    paperless
+    runner
+    unify-opening
+    ;; elint
     ;; all-ext                               
     ;; easy-escape
 
@@ -481,6 +497,8 @@
     highlight-defined
     highlight-escape-sequences ; easy-escape
     highlight-quoted
+    highlight-refontification
+    ;; highlight-numbers
     ;; hl-todo
     ;; highlight-unique-symbol
 
@@ -542,6 +560,8 @@
     evil-org-mode
     evil-ediff
     opener
+    evil-adjust
+    evil-indent-plus
     ;; targets
     ;; org-evil
     
@@ -621,6 +641,8 @@
     helm-hunks
     helm-ls-svn
     helm-youtube
+    helm-tramp
+    ;; helm-ext
     ;; helm-delicious
     ))
 
@@ -706,7 +728,7 @@
     color-theme-sanityinc-solarized
     apropospriate
     ;; moe-theme
-    myth
+    ;; myth
     base16-theme
     birds-of-paradise-plus-theme
     doom-themes

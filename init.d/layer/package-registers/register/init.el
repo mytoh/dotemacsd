@@ -5,7 +5,7 @@
 ;; (setq max-lisp-eval-depth 8000)
 
 
-
+(setq hoarder:*packages* [])
 
 
 

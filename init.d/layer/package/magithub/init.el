@@ -4,7 +4,8 @@
 
 ;;; Code:
 
-(liby 'magithub
-  (command (magithub-create magithub-browse) "magithub"))
+(use-package magithub
+  :after magit
+  :config (magithub-feature-autoinject t))
 
 ;;; init.el ends here

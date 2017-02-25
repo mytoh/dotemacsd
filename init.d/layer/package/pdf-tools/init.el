@@ -11,6 +11,11 @@
   (progn
     (pdf-tools-install)
     (add-hook 'pdf-view-mode-hook
-              #'pdf-view-midnight-minor-mode)))
+              #'pdf-view-midnight-minor-mode)
+    (add-hook 'pdf-view-mode-hook
+              #'pdf-view-dark-minor-mode)
+    (add-hook 'pdf-view-mode-hook
+              #'pdf-view-fit-height-to-window)
+    ))
 
 ;;; init.el ends here

@@ -86,7 +86,7 @@
 (hoarder:fetch "jhamrick/emacs")
 (hoarder:fetch "joedicastro/dotfiles")
 (hoarder:fetch "emacs-tw/awesome-emacs")
-(hoarder:fetch "11111000000/emacs-d")
+;; (hoarder:fetch "11111000000/emacs-d")
 (hoarder:fetch "Shougo/neobundle.vim"
   '(:tag ["vim" "plugin_manager"]))
 (hoarder:fetch "Shougo/vimshell.vim"
@@ -227,11 +227,12 @@
 (hoarder:fetch "ghoseb/dotemacs")
 (hoarder:fetch "meteor1113/dotemacs")
 (hoarder:fetch "bzg/dotemacs")
-(hoarder:fetch "CestDiego/spacemacs_conf")
+;; (hoarder:fetch "CestDiego/spacemacs_conf")
 (hoarder:fetch "waymondo/hemacs")
 (hoarder:fetch "davidvilla/emacs-pills")
 (hoarder:fetch "cdlm/vitamined-mode-line")
-(hoarder:fetch "wasamasa/dotemacs")
+(hoarder:fetch "wasamasa/dotemacs"
+  '(:memo "[[https://github.com/wasamasa/dotemacs][GitHub - wasamasa/dotemacs: Literate Emacs configuration]]"))
 (hoarder:fetch "fniessen/orgmk"
   '(:tag ["org"]))
 (hoarder:fetch "fniessen/org-macros"
@@ -259,8 +260,8 @@
   '(:tag ["configuration"]))
 (hoarder:fetch "tonini/owl.el"
   '(:tag ["documentation"]))
-(hoarder:fetch "JarrodCTaylor/monster"
-  '(:tag ["evil"]))
+;; (hoarder:fetch "JarrodCTaylor/monster"
+;;   '(:tag ["evil"]))
 (hoarder:fetch "git://git.code.sf.net/p/cedet/git"
   '(:name "cedet"
     :tag ["eieio" "cedet"]))
@@ -1034,7 +1035,7 @@
 (hoarder:fetch "OpenBazaar/OpenBazaar"
   '(:download nil)) 
 (hoarder:fetch "Pewpews/happypanda"
-  '(:download nil)) 
+  '(:desc "A cross platform manga/doujinshi manager with namespace & tag support"))
 (hoarder:fetch "PopcornTimeCE/popcorntimece"
   '(:download nil)) 
 (hoarder:fetch "Rabrennie/anything.js"
@@ -1519,6 +1520,9 @@
   '(:download nil)) 
 (hoarder:fetch "pannon/iocage"
   '(:download nil)) 
+(hoarder:fetch "iocage/iocage"
+  '(:desc "A FreeBSD jail manager written in Python"
+    :tag ["freebsd" "jail" "python"]))
 (hoarder:fetch "parro-it/awesome-microlibs"
   '(:download nil)) 
 (hoarder:fetch "pasky/speedread"
@@ -2592,7 +2596,8 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "Homebrew/homebrew-core"
   '(:tag ["macOS" "package" "package_manager"]))
 (hoarder:fetch "Linuxbrew/homebrew-core"
-  '(:tag ["package" "package_manager" "homebrew" "linux"]))
+  '(:tag ["package" "package_manager" "homebrew" "linux"]
+    :memo "[[http://qiita.com/thermes/items/926b478ff6e3758ecfea][Linuxbrew のススメ - Qiita]]"))
 (hoarder:fetch "vitalif/grive2"
   '(:tag ["google_drive" "grive"]))
 (hoarder:fetch "koroshiya/batoto-downloader-py"
@@ -2632,7 +2637,7 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
   '(:tag ["game" "lua" "löve"]))
 (hoarder:fetch "https://gitgud.io/KonaKona/nettool.git"
   '(:tag ["network" "linux"]))
-(hoarder:fetch "https://gitgud.io/Apogate/saguaro.git")
+;; (hoarder:fetch "https://gitgud.io/Apogate/saguaro.git")
 (hoarder:fetch "spootTheLousy/saguaro"
   '(:tag ["imageboard"]
     :memo "[[http://saguaroimgboard.tk/][Saguaro Imageboard Software]]"))
@@ -2979,7 +2984,8 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["unicode" "character" "font"]))
 (hoarder:fetch "mochi-player/mochi-player"
   '(:tag ["mpv" "qt" "qml" "qt5"]
-    :branch "qml"))
+    :branch "qml"
+    :depth nil))
 (hoarder:fetch "KingSann/CLD"
   '(:tag ["common_lisp" "database"]))
 (hoarder:fetch "SamSkulls/cl-searx"
@@ -3052,7 +3058,8 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tag ["google" "wikipedia" "openstreetmap" "yacy" "search" "search_engine"]
     :site "https://search.jesuislibre.net/"))
 (hoarder:fetch "Librevault/librevault"
-  '(:tag ["p2p" "sync"]))
+  '(:tag ["p2p" "sync"]
+    :memo "[[https://news.ycombinator.com/item?id=12261409][Librevault: Open source zero-knowledge peer-to-peer file sync | Hacker News]]"))
 (hoarder:fetch "andreberg/Meslo-Font"
   '(:tag ["font" "menlo"]))
 (hoarder:fetch "jimmay5469/vim-spacemacs"
@@ -3606,7 +3613,9 @@ https://www.reddit.com/r/unixporn/comments/51v0pg/herbstluftwm_leaves_n_stuff/")
   '(:tag ["presentation" "haskell" "markdown" "pandoc"]))
 (hoarder:fetch "faissaloo/Yukko"
   '(:tag ["terminal" "python" "nntpchan" "bbs"]
-    :memo "[[https://www.reddit.com/r/coolgithubprojects/comments/55ht55/a_textbased_client_for_a_decentralised_imageboard/][Too Many Requests]]"))
+    :memo "[[https://www.reddit.com/r/coolgithubprojects/comments/55ht55/a_textbased_client_for_a_decentralised_imageboard/][Too Many Requests]]
+[[https://8ch.net/tech/res/661345.html][/tech/ - NNTPchan client &amp; ASCIIpunk general]]
+                                               [[http://hollaforums.com/thread/661345/technology/nntpchan-client-asciipunk-general.html][Error 406 - Not Acceptable]]"))
 (hoarder:fetch "pickhardt/betty"
   '(:tag ["cli" "ruby"]))
 (hoarder:fetch "SimonAlfie/fabricate"
@@ -4856,8 +4865,8 @@ $ xcrawl -c config.yaml \
     :memo "[[http://arc680.hatenablog.jp/entry/2016/12/21/013819][mikutter plugin manager を作った - あーく・りなっくす]]")) 
 (hoarder:fetch "marteinn/The-Big-Username-Blacklist"
   '(:desc "This is a opinionated blacklist of words that you might not like to see used as usernames in your service."))
-(hoarder:fetch "https://gitla.in/cosmicpuppet/lainchan.rb.git"
-  '(:memo "[[https://lainchan.org/%CE%BB/res/19446.html][λ - What personal projects have you done lately, /lam/?]]"))
+;; (hoarder:fetch "https://gitla.in/cosmicpuppet/lainchan.rb.git"
+;;   '(:memo "[[https://lainchan.org/%CE%BB/res/19446.html][λ - What personal projects have you done lately, /lam/?]]"))
 (hoarder:fetch "Saladus/epch"
   '(:desc "A script that helps me choose an episode of my favorite cartoons to watch"
     :memo "[[https://lainchan.org/%CE%BB/res/19446.html][λ - What personal projects have you done lately, /lam/?]]"))
@@ -5016,6 +5025,7 @@ $ xcrawl -c config.yaml \
 (hoarder:fetch "CleverRaven/Cataclysm-DDA"
   '(:desc "Cataclysm - Dark Days Ahead. A fork/variant of Cataclysm Roguelike by Whales."
     :tag ["roguelike" "game"]
+    :download nil
     :memo "[[http://qiita.com/otakuto/items/13536fcc2e6baa2acbb5][クリスマスncursesアプリ特集2016 - Qiita]]"))
 (hoarder:fetch "DiSiqueira/Gorganizer"
   '(:desc "Organize your folders into a beautiful classified folder structure with this perfect tool"
@@ -5409,7 +5419,8 @@ case for pi zero and camera: http://www.thingiverse.com/thing:1639568 "))
   '(:desc "Open-source productivity booster with a brain"
     :tag ["launcher" "electron"]))
 (hoarder:fetch "https://neetcode.org/chibi/napalm.git"
-  '(:tag ["terminal" "ncurses"]))
+  '(:tag ["terminal" "ncurses"]
+    :depth nil))
 (hoarder:fetch "sciurius/comics"
   '(:desc "A comics aggregator in the style of Gotblah."
     :tag ["comic" "downloader"]
@@ -5428,6 +5439,420 @@ case for pi zero and camera: http://www.thingiverse.com/thing:1639568 "))
 (hoarder:fetch "lucy/lsc"
   '(:desc "faster ls with pointless colours"
     :tag ["ls" "ls--"]))
+(hoarder:fetch "oh-my-neovim/oh-my-neovim"
+  '(:desc "Oh My Neovim is an open source for managing your neovim configuration."
+    :tag ["neovim"]
+    :memo "[[https://www.reddit.com/r/neovim/comments/5q2cgd/oh_my_neovim/][Too Many Requests]]"))
+(hoarder:fetch "mehcode/config-rs"
+  '(:desc "Layered configuration system for Rust applications (with strong support for 12-factor applications)."
+    :tag ["rust" "configuration"]))
+(hoarder:fetch "nicokosi/hubstats"
+  '(:desc "GitHub statistics"
+    :tag ["github" "clojure"]
+    :memo "[[https://nicokosi.github.io/discover-github-apis-with-clojure-en.html][Discovering GitHub APIs while learning Clojure]]"))
+(hoarder:fetch "stianeikeland/emojinius"
+  '(:desc "Write clojure code using emoji"
+    :tag ["clojure" "emoji"]))
+(hoarder:fetch "evil-icons/evil-icons"
+  '(:desc "Simple and clean SVG icon pack with the code to support Rails, Sprockets, Node.js, Gulp, Grunt and CDN"
+    :site "http://evil-icons.io/"
+    :tag ["icon" "svg"]))
+(hoarder:fetch "frenchbeard/feednix"
+  '(:desc "Feedly client for Linux"
+    :tag ["rss" "feedly" "ncurses"]))
+(hoarder:fetch "sindresorhus/filenamify"
+  '(:desc "Convert a string to a valid safe filename"
+    :tag ["javascript" "path"]))
+(hoarder:fetch "WhatCD/Gazelle"
+  '(:tag ["whatcd" "torrent" "tracker"])) 
+(hoarder:fetch "budkin/jam"
+  '(:desc "Google Play Music console player"
+    :tag ["google_play_music" "cli"]))
+(hoarder:fetch "christianrondeau/vimcastle"
+  '(:desc "A vim plug-in of adventure, fighting and wonder! "
+    :tag ["vim" "game" "text_adventure"]))
+(hoarder:fetch "dariober/ASCIIGenome"
+  '(:desc "Text Only Genome Viewer! Docs:"
+    :tag ["ascii" "genome"]))
+(hoarder:fetch "foobnix/foobnix"
+  '(:desc "Foobnix Music Player for Linux (GPL v3)"
+    :tag ["music" "linux" "python" "gtk"]))
+(hoarder:fetch "harpribot/awesome-information-retrieval"
+  '(:desc "A curated list of awesome information retrieval resources"
+    :tag ["awesome_list"]))
+(hoarder:fetch "r888888888/danbooru"
+  '(:desc "Danbooru is a taggable image board written in Rails 4."
+    :tag ["danbooru" "rail"]))
+(hoarder:fetch "remigiusz-suwalski/programming-cheatsheets"
+  '(:desc "Programming cheatsheets (Python, Bash, Haskell...)"
+    :tag ["programming" "cheatsheet" "python" "bash" "haskell"]))
+(hoarder:fetch "tagspaces/tagspaces"
+  '(:desc "Developers resources for TagSpaces"
+    :tag ["tag" "file_management"]))
+(hoarder:fetch "wayneashleyberry/awesome-podcasts"
+  '(:desc "A curated list of awesome podcasts related to programming, technology and business."
+    :tag ["awesome_list" "podcast"]))
+(hoarder:fetch "wonga00/astronaut"
+  '(:desc "A feed of the present"
+    :tag ["youtube"]
+    :site "http://astronaut.io/"
+    :memo "[[https://news.ycombinator.com/item?id=13413225][Astronaut – YouTube videos with almost zero previous views | Hacker News]]"))
+(hoarder:fetch "feedcast/house"
+  '(:desc "💊 The Podcast RSS Reader and Diagnostician"
+    :tag ["library" "parser" "parsing" "podcast" "podcast-reader" "rss" "ruby" "xml"]))
+(hoarder:fetch "rodrigogs/easyvpn"
+  '(:desc "Easily connect to a VPN in a country of your choice."
+    :tag ["vpn"]))
+(hoarder:fetch "woodruffw/ruby-mpv"
+  '(:desc "A Ruby library for controlling mpv processes."
+    :tag ["ruby" "mpv"]))
+(hoarder:fetch "muzak-project/muzak"
+  '(:desc "[WIP] a metamusic player"
+    :tag ["ruby"]))
+(hoarder:fetch "skidding/illustrated-algorithms"
+  '(:desc "Algorithm → AST → CSS"
+    :tag ["algorithm" "css"]))
+(hoarder:fetch "oduwsdl/ipwb"
+  '(:desc "A distributed and persistent archive replay system using IPFS"
+    :tag ["ipfs" "wayback_machine"]))
+(hoarder:fetch "ircd-hybrid/ircd-hybrid"
+  '(:desc "A lightweight, high-performance internet relay chat daemon."
+    :tag ["irc"]))
+(hoarder:fetch "Koruri/Koruri"
+  '(:desc "Japanese TrueType font obtained by mixing M+ FONTS and Open Sans."
+    :tag ["font" "japanese"]
+    :download nil))
+(hoarder:fetch "https://git.teknik.io/abrax/lizard.git"
+  '(:tag ["git" "8chan" "cli"]
+    :memo "[[http://straw-berry.net/tech/res/703632.html][/tech/ - lizard, the 8ch monitor]]"))
+(hoarder:fetch "Fakerr/git-recall"
+  '(:desc "Simple and handy tool to easily recall what you've done"
+    :tag ["git"]))
+(hoarder:fetch "juxt/mach"
+  '(:desc "A remake of make (in ClojureScript)"
+    :tag ["clojure" "make"]
+    :memo "mentioned in [[https://skillsmatter.com/skillscasts/9532-yada-2-0-45-minutes#video][yada 2.0 (~45 minutes) | SkillsCast | 7th February 2017]]"))
+(hoarder:fetch "josuah/miniwi"
+  '(:desc "A 8x4 bitmap font with box-drawing and drawille support"
+    :tag ["font"]))
+(hoarder:fetch "icymind/NeoSolarized"
+  '(:desc "NeoSolarized: A fixed solarized colorscheme for better truecolor support."
+    :tag ["solarized" "vim"]))
+(hoarder:fetch "alecmuffett/onion-sites-that-dont-suck"
+  '(:desc "Onion Sites That Don't Suck"
+    :tag ["tor"]))
+(hoarder:fetch "tiagoamaro/pickpocket"
+  '(:desc "Selects a random article from your Pocket (former Read It Later)"
+    :tag ["ruby" "pocket"]))
+(hoarder:fetch "myplaceonline/posixcube"
+  '(:desc "posixcube.sh is a POSIX compliant, shell script-based server automation framework."
+    :tag ["shellscript" "server" "automation"]))
+(hoarder:fetch "m13253/danmaku2ass"
+  '(:desc "Convert comments from Niconico/AcFun/bilibili to ASS format"
+    :tag ["mpv" "niconico" "comment"]))
+(hoarder:fetch "aadddddd/shit"
+  '(:tag ["4chan"]
+    :memo "[[https://boards.4chan.org/g/thread/58770625#p58770740][/g/ - /dpt/ - Daily Programming Thread - Technology - 4chan]]")) 
+(hoarder:fetch "orsonteodoro/psdoom-ng"
+  '(:desc "psdoom-ng is a First Person Shooter operating system process killer based on psDooM and Chocolate Doom."
+    :tag ["game" "doom"]))
+(hoarder:fetch "antonio-malcolm/satin"
+  '(:desc "A two-tone GTK+ theme with soft, subtle gradients and easy contrast. Also supports Openbox, Kupfer, Firefox and Chrome."
+    :tag ["desktop" "theme" "void_linux" "theme" "gtk"]
+    :memo "[[https://forum.voidlinux.eu/t/offical-desktop-screenshot-thread/30/49][{Offical} Desktop Screenshot Thread - Applications & Desktop Environments - Void Linux Forum]]"))
+(hoarder:fetch "subuser-security/subuser"
+  '(:desc "Run programs on linux with selectively restricted permissions."
+    :tag ["subgraph" "docker" "jail" "sandbox"]))
+(hoarder:fetch "asciimoo/wuzz"
+  '(:desc "Interactive cli tool for HTTP inspection"
+    :tag ["cli" "http"]))
+(hoarder:fetch "pipeseroni/pipesX.sh"
+  '(:desc "Animated pipes terminal screensaver at an angle."))
+(hoarder:fetch "pipeseroni/pipes.sh"
+  '(:desc "Animated pipes terminal screensaver"))
+(hoarder:fetch "cyring/CoreFreq"
+  '(:desc " CoreFreq is a CPU monitoring software designed for the 64-bits Processors."
+    :tag ["linux" "monitoring"]))
+(hoarder:fetch "AlessandroYorba/Monrovia"
+  '(:desc "< = > Colorscheme"
+    :tag ["vim" "colorscheme"]))
+(hoarder:fetch "AlessandroYorba/Sidonia"
+  '(:desc "< = > Colorscheme"
+    :tag ["vim" "colorscheme"]))
+(hoarder:fetch "J3n50m4t/getpocketDarkTheme"
+  '(:desc "Dark Theme for pocket "
+    :tag ["css" "firefox" "pocket"]))
+(hoarder:fetch "clipland/video-bookmarks"
+  '(:desc "Proposed player independent standard for attaching textual metadata to certain timecode positions within a video file"
+    :tag ["video" "libav"]))
+(hoarder:fetch "anhari/octocat.vim"
+  '(:desc ":octocat: Vim colorscheme resembling GitHub's syntax highlighting"
+    :tag ["vim" "colorscheme" "github"]))
+(hoarder:fetch "datashaman/putio-automator"
+  '(:desc "A suite of commands for managing torrents, transfers and files on put.io. Works well with SickRage, Sonarr, etc."
+    :tag ["torrent" "put.io"]))
+(hoarder:fetch "rapidloop/rtop"
+  '(:desc "rtop is an interactive, remote system monitoring tool based on SSH"))
+(hoarder:fetch "EdSchouten/herrie"
+  '(:desc "Herrie: a minimalistic music player"))
+(hoarder:fetch "ztellman/potemkin"
+  '(:desc "some ideas which are almost good"
+    :tag ["clojure" "namespace"]
+    :memo "mentioned in [[https://skillsmatter.com/skillscasts/9532-yada-2-0-45-minutes#video][yada 2.0 (~45 minutes) | SkillsCast | 7th February 2017]] "))
+(hoarder:fetch "okraits/rofi-tools"
+  '(:desc "Tools for and with rofi (https://github.com/DaveDavenport/rofi)"
+    :tag ["rofi" "dmenu"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5szr7t/i3_arc_dark_blue/ddj3fs7/][Too Many Requests]]
+[[https://github.com/okraits/rofi-tools/blob/master/rofi-power][rofi-tools/rofi-power at master · okraits/rofi-tools · GitHub]]"))
+(hoarder:fetch "B00merang-Project/Redmond-Themes"
+  '(:desc "Home of the B00merang Redmond Collection themes for Linux"
+    :tag ["desktop" "gtk" "linux" "theme" "windows"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5swivh/looking_for_oldschoollooking_apps_themes_icons/][Too Many Requests]]"))
+(hoarder:fetch "NARKOZ/gitlab"
+  '(:desc "Ruby wrapper and CLI for GitLab REST API"
+    :tag ["ruby" "gitlab" "cli"]))
+(hoarder:fetch "eliukblau/pixterm"
+  '(:desc "Draw images in your ANSI terminal with true color"
+    :tag ["ansi" "bmp" "color" "gif" "go" "golang" "image" "jpeg" "png" "terminal" "tiff" "true" "webp"]))
+(hoarder:fetch "r7kamura/syoboi_calendar"
+  '(:desc "An API Client library for http://cal.syoboi.jp/ written in Ruby."
+    :tag ["ruby" "syoboi_calandar"]
+    :memo "[[https://nippo.wikihub.io/@r7kamura/20170130190750][2017-01-30 r7kamura - 日報]]"))
+(hoarder:fetch "stark/Color-Scripts"
+  '(:desc "User contributed color scripts "
+    :tag ["shellscript"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5thmfs/i3gaps_when_people_ask_why_i_use_a_tiling_wm/][Too Many Requests]]"))
+(hoarder:fetch "Blezzing/blezz"
+  '(:desc "Keystroke Launcher"
+    :tag ["launcher"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5tcs3x/oc_i_created_a_application_launcher_in_c_with_xcb/][Too Many Requests]]"))
+(hoarder:fetch "davae1an/dotfiles-i3wmArch"
+  '(:tag ["dotfiles" "i3wm" "arch_linux"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5tczra/i3gaps_cut_me/][Too Many Requests]]")) 
+(hoarder:fetch "edanchenkov/MenuTube"
+  '(:desc "Catch YouTube into your macOS menu bar!"
+    :tag ["mac" "youtube"]
+    :site "https://edanchenkov.github.io/MenuTube/"))
+(hoarder:fetch "RobinBressan/json-git"
+  '(:desc "A pure JS local Git to versionize any JSON"
+    :tag ["json" "git"]
+    :memo "[[https://lecomtoisduweb.com/blog/2017/02/13/json-git-un-git-en-javascript-pour-le-front.html][JSON-Git, un Git en javascript pour les applications frontend]]
+[[https://www.reddit.com/r/javascript/comments/5ts8z9/jsongit_un_git_en_javascript_pour_les/][Too Many Requests]]"))
+(hoarder:fetch "jgpws/jgd-black"
+  '(:desc "JGD-Black theme collection"
+    :tag ["gtk" "theme"]))
+(hoarder:fetch "google/material-design-icons"
+  '(:desc "Material Design icons by Google"
+    :tag ["icon"]))
+(hoarder:fetch "khinsen/monads-in-clojure"
+  '(:desc "Konrad Hinsen's OnClojure.com tutorial "
+    :tag ["monad" "clojure"]))
+(hoarder:fetch "sandangel/sand-lxqt-theme"
+  '(:desc "Interesting in LXQt desktop with Kwin window manager? This theme is for you."
+    :tag ["lxqt" "theme"]))
+(hoarder:fetch "solus-project/solus-icon-theme"
+  '(:desc "Solus Icon Theme"
+    :tag ["icon"]))
+(hoarder:fetch "xroche/httrack"
+  '(:desc "HTTrack Website Copier, copy websites to your computer (Official repository)"))
+(hoarder:fetch "hboisgibault/unicontent"
+  '(:desc "Python module to extract structured metadata from URL, ISBN or DOI"
+    :tag ["python" "isbn" "doi"]))
+(hoarder:fetch "LucasSimpson/ConcurrentFloodScraper"
+  '(:tag ["scraping" "crawler" "python"])) 
+(hoarder:fetch "dahlia/wikidata"
+  '(:desc "Wikidata client library for Python"
+    :tag ["wikidata" "python"]))
+(hoarder:fetch "cometaj2/huckle"
+  '(:desc "A generic CLI that can be used with any API that abides by the standard hypertext command line interface (HCLI) semantics."
+    :tag ["cli" "hypertext" "alps" "microformats"]))
+(hoarder:fetch "https://bitbucket.org/sjl/t"
+  '(:type :hg
+    :tag ["todo" "cli" "python"]))
+(hoarder:fetch "FreeRDP/Remmina"
+  '(:desc "The GTK+ Remmina Remote Desktop Client"
+    :tag ["gtk" "rdp" "vnc"]))
+(hoarder:fetch "milohr/babe-qt"
+  '(:desc "Tiny Qt Babe Music Player"
+    :tag ["qt" "music"]))
+(hoarder:fetch "phanan/koel"
+  '(:desc "A personal music streaming server that works."
+    :tag ["music" "streaming" "vue"]))
+(hoarder:fetch "tmurph/todo-sync"
+  '(:tag ["orgmode" "todo" "python" "emacs"])) 
+(hoarder:fetch "sudaning/PytLab-Neko"
+  '(:desc "for fun"
+    :tag ["python" "script"]))
+(hoarder:fetch "manojkarthick/git-trend"
+  '(:desc "A Python CLI tool for getting the trending github repositories and developers"
+    :tag ["python" "cli" "github"]))
+(hoarder:fetch "kshramt/buildpy"
+  '(:desc "Make in Python"
+    :tag ["python" "make" "build_tool"]))
+(hoarder:fetch "lethe3000/ctable"
+  '(:desc "Print colorful(256) tables for terminal with built-in themes"
+    :tag ["color" "python" "terminal"]))
+(hoarder:fetch "hackjutsu/Lepton"
+  '(:desc "💻  Open-source GitHub Gist client built for macOS, Windows and Linux."
+    :tag ["gist"]))
+(hoarder:fetch "baumgarr/nixnote2"
+  '(:desc "Nixnote - A clone of Evernote for Linux"
+    :tag ["evernote" "linux"]))
+(hoarder:fetch "meshbird/meshbird"
+  '(:desc "Distributed private networking"
+    :tag ["golang" "vpn"]))
+(hoarder:fetch "bag-man/dotfiles"
+  '(:desc "Dotfiles for my Xmonad desktop"
+    :tag ["vim" "xmonad" "dotfiles"]
+    :memo "[[http://owen.cymru/hjkl-all-the-things/][HJKL all the things!]]"))
+(hoarder:fetch "examachine/pisi"
+  '(:desc "PISI package manager of Pardus linux written in Python. The original development branch by the original author."
+    :tag ["package_manager" "pardus" "python"]))
+(hoarder:fetch "QuickBox/QuickBox"
+  '(:desc "QuickBox is much more than a 'seedbox installer script'... it is a simplistic approach to achieving easy seedbox and services management from a beautifully designed dashboard. Allowing users the ability to interact with their seedbox and server on a professional grade level. With the click of a button users can install packages like Plex, SickRage, BTSync and many more... all this in a seedbox script without spending a dime!"))
+(hoarder:fetch "fabiofalci/sconsify"
+  '(:desc "A spotify console application"
+    :tag ["spotify" "cli"]))
+(hoarder:fetch "coleifer/dot-theme"
+  '(:desc "dotfile templating tools"
+    :tag ["dotfiles"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5tqklb/misc_sharing_my_dotfile_templating_tools/][Too Many Requests]]"))
+(hoarder:fetch "RookieGameDevs/revived"
+  '(:desc "A redux-inspired predictable state container for python"
+    :tag ["python"]))
+(hoarder:fetch "https://bitbucket.org/andreya/adblock2privoxy.git"
+  '(:tag ["adblock" "privoxy"]))
+(hoarder:fetch "vikstrous/pirate-get"
+  '(:desc "A command line interface for The Pirate Bay"
+    :tag ["python" "pirate_bay"]))
+(hoarder:fetch "hubsmoke/bro"
+  '(:desc "A CLI to interact with bropages.org"
+    :tag ["ruby" "manual"]
+    :site "http://bropages.org/"))
+(hoarder:fetch "sindresorhus/promise-fun"
+  '(:desc "Promise packages, patterns, chat, and tutorials"
+    :tag ["promise" "javascript"]))
+(hoarder:fetch "deadpixi/mtm"
+  '(:desc "Perhaps the smallest useful terminal multiplexer in the world."
+    :tag ["terminal" "multi_plexer" "tmux"]))
+(hoarder:fetch "teeuwen/btdwm"
+  '(:desc "Bastiaan Teeuwen's dynamic window manager"
+    :tag ["dwm"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5uyvpb/btdwm_a_fork_of_dwm_tailored_to_my_own_likings/][Too Many Requests]]"))
+(hoarder:fetch "tizonia/tizonia-openmax-il"
+  '(:desc "Command-line music player for Linux with Spotify, Google Play Music, YouTube, SoundCloud and Dirble support."
+    :memo "[[https://hackernoon.com/macbook-my-command-line-utilities-f8a121c3b019#.flyah4ws5][302 Found]]"))
+(hoarder:fetch "mptre/yank"
+  '(:desc "Yank terminal output to clipboard"
+    :memo "[[https://hackernoon.com/macbook-my-command-line-utilities-f8a121c3b019#.flyah4ws5][302 Found]]"))
+(hoarder:fetch "tstack/lnav"
+  '(:desc "Log file navigator"
+    :memo "[[https://hackernoon.com/macbook-my-command-line-utilities-f8a121c3b019#.flyah4ws5][302 Found]]"))
+(hoarder:fetch "lra/mackup"
+  '(:desc "Keep your application settings in sync (OS X/Linux)"
+    :memo "[[https://hackernoon.com/macbook-my-command-line-utilities-f8a121c3b019#.flyah4ws5][302 Found]]"))
+(hoarder:fetch "SickGear/SickGear"
+  '(:desc "SickGear is SickBeard evolved. Automate your TV enjoyment with innovation, proven stability and reliability."
+    :tag ["usenet"]))
+(hoarder:fetch "k4m4/terminals-are-sexy"
+  '(:desc "💥 A curated list of Terminal frameworks, plugins & resources for CLI lovers."
+    :tag ["terminal" "awesome_list"]))
+(hoarder:fetch "molovo/zvm"
+  '(:desc "The ZSH version manager "
+    :tag ["zsh"]))
+(hoarder:fetch "conversis/varstack"
+  '(:desc "A tool to create stacked configuration structures"
+    :tag ["yaml" "configuration"]))
+(hoarder:fetch "MoserMichael/cstuff"
+  '(:desc "My C projects"
+    :memo "[[https://github.com/MoserMichael/cstuff/blob/master/img-archive/img-archive.pl][cstuff/img-archive.pl at master · MoserMichael/cstuff · GitHub]]"))
+(hoarder:fetch "ivanwills/App-VTide"
+  '(:desc "An IDE(ish) environment built on Tmux and Vim (or another editor if desired)"
+    :tag ["tmux" "vim"]))
+(hoarder:fetch "chuanconggao/html2json"
+  '(:desc "Convert a HTML webpage to JSON data using a template defined in JSON."
+    :tag ["html" "json"]))
+(hoarder:fetch "guyskk/watch-rsync"
+  '(:desc "Watch PATH and rsync to DEST"
+    :tag ["rsync"]))
+(hoarder:fetch "tebelorg/TA.Gui"
+  '(:desc "Tool for non-developers and business users to automate web apps"
+    :tag ["web" "casperjs" "phantomjs"]))
+(hoarder:fetch "pynayzr/livestream-frame-capture"
+  '(:desc "Capture, grabbing, fetching livestream frame as image, including YouTube, Twitch, Dailymotion...etc"
+    :tag ["youtube" "dailymotion" "twitch" "ffmpeg"]))
+(hoarder:fetch "mwheregroup/swag"
+  '(:desc "Color your shell output with escape code magic."
+    :tag ["terminal" "color" "python"]))
+(hoarder:fetch "pstreck/django-videokit"
+  '(:desc "Video storage and processing for Django"
+    :tag ["python" "video" "ffmpeg" "mediainfo"]))
+(hoarder:fetch "christopher-dG/pmcli"
+  '(:desc "A lightweight, customizable TUI client for the Google Play Music streaming service."
+    :tag ["music" "cli" "google_play_music"]))
+(hoarder:fetch "bayi/qdmenu"
+  '(:desc "QML dmenu replacement"
+    :tag ["qt" "qml" "dmenu" "launcher"]))
+(hoarder:fetch "Huluti/Coulr"
+  '(:desc "Coulr - Color box to help developers and designers"
+    :tag ["color" "python" "color_picker"]))
+(hoarder:fetch "ankitjain28may/getit"
+  '(:desc "A cross platform CLI downloader tool written in python"
+    :tag ["python" "cli" "downloader"]))
+(hoarder:fetch "Spotweb/Spotweb"
+  '(:desc "Decentralized community"
+    :tag ["usenet"]
+    :memo "[[https://www.reddit.com/r/usenet/comments/4e92t6/theres_such_a_thing_as_free_indexer/][Theres such a thing as free indexer? : usenet]]"))
+(hoarder:fetch "nZEDb/nZEDb"
+  '(:desc "nZEDb - a fork of nnplus(2011) | NNTP / Usenet / Newsgroup indexer."
+    :tag ["usenet"]
+    :memo "[[https://www.reddit.com/r/usenet/comments/4e92t6/theres_such_a_thing_as_free_indexer/][Theres such a thing as free indexer? : usenet]]"))
+(hoarder:fetch "nihlaeth/user_config"
+  '(:desc "manage user configuration for python projects"
+    :tag ["configuration" "python"]))
+(hoarder:fetch "nicoulaj/broom"
+  '(:desc "A disk cleaning utility for developers."
+    :tag ["cleaning" "git"]))
+(hoarder:fetch "nicoulaj/rainbow"
+  '(:desc "Colorize commands output or STDIN using patterns."
+    :tag ["color" "cli"]))
+(hoarder:fetch "green-project/green-recorder"
+  '(:desc "A simple yet functional desktop recorder for Linux systems."
+    :tag ["screen_capture" "desktop"]))
+(hoarder:fetch "QTodoTxt/QTodoTxt"
+  '(:desc "Cross Platform todo.txt GUI "
+    :tag ["todo.txt" "qt"]))
+(hoarder:fetch "m3atatarian/dots"
+  '(:tag ["dotfiles" "clipmenu" "dmenu" "windowchef"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5v1u4c/wchf_damask/][{wchf} Damask : unixporn]]")) 
+(hoarder:fetch "hydandata/dmenu3"
+  '(:desc "Dynamic menu for X with history, fuzzy matching and stuff"
+    :tag ["dmenu"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5v1u4c/wchf_damask/][{wchf} Damask : unixporn]]"))
+(hoarder:fetch "cdown/clipmenu"
+  '(:desc "Clipboard management using dmenu"
+    :tag ["dmenu" "clipboard"]))
+(hoarder:fetch "kanishka-linux/kawaii-player"
+  '(:desc "Audio/Video manager, multimedia player and portable media server, based on python3 and pyqt5."
+    :tag ["qt" "mpv" "media_player" "multimedia" "streaming"]
+    :memo "[[https://www.reddit.com/r/opensource/comments/5v9pyg/kawaiiplayer_multimedia_player_with_builtin/][Too Many Requests]]"))
+(hoarder:fetch "dennishafemann/tmux-cssh"
+  '(:desc "TMUX with a \"ClusterSSH\"-like behaviour."
+    :tag ["tmux" "ssh" "cluster_ssh"]))
+(hoarder:fetch "cute-jumper/plasma-rss-indicator"
+  '(:desc "RSS indicator for Plasma 5"
+    :tag ["plasma" "kde" "qt" "rss"]))
+(hoarder:fetch "gardaud/hack-exe"
+  '(:desc "An animated terminal application that pretends to be hacking a website, just like in the movies"))
+(hoarder:fetch "ivanilves/xiringuito"
+  '(:desc "SSH-based \"VPN for poors\""
+    :tag ["ssh" "vpn" "tuntup"]))
+(hoarder:fetch "nitipit/shelfdb"
+  '(:desc "Python dict/json Database done right, for efficiency and simplicity."
+    :tag ["database" "json" "python"]))
+(hoarder:fetch "https://gitlab.com/tottokotkd/hinapedia.git"
+  '(:tag ["idol_master" "wiki"]))
+
 
 ;;; end
 

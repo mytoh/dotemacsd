@@ -4,7 +4,10 @@
 
 ;;; Code:
 
-(req 'evil-visual-replace
-  (evil-visual-replace-visual-bindings))
+(use-package evil-visual-replace
+  :after evil
+  :config
+  (progn
+    (evil-visual-replace-visual-bindings)))
 
 ;;; init.el ends here
