@@ -8,7 +8,7 @@
   :preface
   (progn
     (cl-labels ((escape (str)
-                        (prin1-to-string str)))
+                        (cl-prin1-to-string str)))
       (defun hoarder:github->fetch (url)
         (interactive "sUrl: ")
         (request (concat "https://api.github.com/repos/"
@@ -68,6 +68,7 @@
                                                          (1+ (not (syntax string-delimiter)))
                                                          (syntax string-delimiter)))
                                            2 'font-lock-warning-face)))))))
+
 
 
 ;;; init.el ends here
