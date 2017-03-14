@@ -2,11 +2,11 @@
 
 ;;; Code:
 
-(cl-defun muki:init-volatile-highlights ()
-  (defery 'volatile-highlights)
-  (after 'volatile-highlights
-      (enable-mode volatile-highlights-mode)))
-
-(muki:init-volatile-highlights)
+(use-package volatile-highlights
+  :commands (volatile-highlights-mode)
+  :init
+  (progn
+    (add-hook 'emacs-lisp-mode-hook
+              #'volatile-highlights-mode)))
 
 ;;; init.el ends here

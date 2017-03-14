@@ -232,8 +232,8 @@
     :dependency [ "sellout/emacs-color-theme-solarized"]))
 (hoarder:register-theme "windsorschmidt/betamax-theme"
   '(:desc "Emacs theme based on http://dotshare.it/dots/1200/ by https://github.com/svbtext"))
-(hoarder:register-theme "zk-phi/monojelly-theme"
-  '(:desc "[Emacs] a solarized-based nearly-monochrome theme with jellybeans colors"))
+;; (hoarder:register-theme "zk-phi/monojelly-theme"
+;;   '(:desc "[Emacs] a solarized-based nearly-monochrome theme with jellybeans colors"))
 (hoarder:register-theme "adamgraham/polykai"
   '(:desc "A dark color scheme inspired by Wimer Hazenberg's Monokai theme."
     :load-path "Emacs"))
@@ -249,6 +249,12 @@
   '(:desc "Dark theme for (spac[e]macs) that supports GUI and terminal"))
 (hoarder:register-theme "prassee/prassee-emacs-theme"
   '(:desc "dark theme for Emacs based on Doom Theme (https://github.com/hlissner/emacs-doom-theme)"))
+(hoarder:register-theme "0rdy/kaolin-theme"
+  '(:desc "A dark jade Emacs theme inspired by Sierra.vim"))
+(hoarder:register-theme "tokenrove/pink-bliss-theme"
+  '(:desc "Alex Schroeder's Pink Bliss emacs theme updated for emacs24"))
+(hoarder:register-theme "choppsv1/emacs-mandm-theme"
+  '(:desc "M&Ms (the candy) color zenburn derivative "))
 
 ;; (hoarder:register-theme "bobbypriambodo/nord-spacemacs"
 ;;     '(:desc "Unofficial port of Nord color palette for Spacemacs."))

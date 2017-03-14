@@ -12,8 +12,8 @@
   :after helm
   :config
   (progn
-    (helm-ff-ext-skipping-dots-recenter t)
-    (helm-ff-ext-enable-skipping-dots t)
+    ;; (helm-ff-ext-skipping-dots-recenter t)
+    ;; (helm-ff-ext-enable-skipping-dots t)
     (helm-ff-ext-enable-zsh-path-expansion t)
     (helm-ff-ext-enable-auto-path-expansion t)))
 

@@ -115,5 +115,17 @@
   '(:desc "An Emacs minor mode for writers who use org-mode"))
 (hoarder:register "https://bitbucket.org/zck/org-parser.el"
   '(:type :hg))
+(hoarder:register "https://gitlab.com/to1ne/org-gitlab.git"
+  '(:tag ["gitlab" "todo"]
+    :depth nil
+    :memo "[[https://www.reddit.com/r/emacs/comments/5vkyug/what_packages_are_you_working_on/][Too Many Requests]]"))
+(hoarder:register "ofosos/org-epub"
+  '(:desc "Org mode epub export"
+    :tag ["epub" "org-mode"]))
+(hoarder:register "tuhdo/org-recipes"
+  '(:desc "A code snippet manager with Org and Helm "
+    :tag ["org-mode" "helm" "snippet"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/5yzga2/a_code_snippet_navigator_and_collector_with_org/][Too Many Requests]]"))
+
 
 ;;; init.el ends here

@@ -157,6 +157,9 @@
     
     (add-to-list 'default-frame-alist `(font . ,fontset))
     (set-face-font 'default fontset)
+    (set-face-attribute 'variable-pitch nil
+                        :family "Fira Sans"
+                        :weight 'regular)
     ))
 
 
@@ -636,27 +639,27 @@
 
 
 (cl-defun muki:set-font (type)
-  (cond
-   ((cl-equalp type 'bitmap)
-    ;; (set-ascii-font)
-    ;; (set-yuki-font)
-    (set-naga10-font)
-    ;; (set-naga10-font-fix)
-    ;; (set-neep-font)
-    ;; (set-symbol-font)
-    ;; (set-cyrillic-font)
-    ;; (set-japanese-font)
-    )
-   ((cl-equalp type 'antialias)
-    (set-ascii-font)
-    ;; (set-naga10-font)
-    (set-symbol-font)
-    (set-cyrillic-font)
-    (set-japanese-font))))
+  (pcase type
+    (:bitmap
+     ;; (set-ascii-font)
+     ;; (set-yuki-font)
+     (set-naga10-font)
+     ;; (set-naga10-font-fix)
+     ;; (set-neep-font)
+     ;; (set-symbol-font)
+     ;; (set-cyrillic-font)
+     ;; (set-japanese-font)
+     )
+    (:antialias
+     (set-ascii-font)
+     ;; (set-naga10-font)
+     (set-symbol-font)
+     (set-cyrillic-font)
+     (set-japanese-font))))
 
 (if (display-graphic-p)
     ;; (set-default-font-size)
-    (muki:set-font 'bitmap)
+    (muki:set-font :bitmap)
   ;; (set-ricty-font)
   ;; (set-ricty-diminished-font)
   ;; (set-myrica-font)

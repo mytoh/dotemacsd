@@ -260,7 +260,7 @@
             base16-ashes base16-atelier-cave base16-atelier-lakeside
             base16-ocean-brian acai sourcerer creamsody
             doomsday-dark solarized-grey solarized-dark
-            rebecca darktooth sirthias nord))
+            rebecca darktooth sirthias nord kaolin))
 
 ;; (enable-option select-enable-clipboard
 ;;                select-enable-primary)
@@ -292,7 +292,7 @@
      (cl-pushnew dir Info-additional-directory-list))
    (seq-filter
     (lambda (dir) (and (file-directory-p dir)
-                       (file-exists-p dir)))
+                (file-exists-p dir)))
     (directory-files (muki:expand-path-huone "komero/info") 'full "^[^.]+"))))
 
 ;;;; file type and external program list used for helm and sunrise
@@ -479,11 +479,8 @@
 ;; Emacs session.
 ;; (setq inhibit-compacting-font-caches t)
 
-;; Highlight and allow to open http link at point in programming buffers
-;; goto-address-prog-mode only highlights links in strings and comments
-(add-hook 'prog-mode-hook 'goto-address-prog-mode)
 ;; Highlight and follow bug references in comments and strings
-(add-hook 'prog-mode-hook 'bug-reference-prog-mode)
+(add-hook 'prog-mode-hook #'bug-reference-prog-mode)
 
 ;; [[http://lists.gnu.org/archive/html/bug-gnu-emacs/2016-11/msg00395.html][bug#24918: 25.1; Fonts can make Emacs grind to a halt]]
 (setq inhibit-compacting-font-caches t)

@@ -64,7 +64,7 @@
 (muki-layer:load-layers 'org
   '(outshine
     ;; navi
-    org-autolist
+    ;; org-autolist
     org
     org-pretty-table
     ;;orgit
@@ -421,6 +421,8 @@
     paperless
     runner
     unify-opening
+    remember-last-theme
+    ;; goto-addr
     ;; elint
     ;; all-ext                               
     ;; easy-escape
@@ -642,7 +644,7 @@
     helm-ls-svn
     helm-youtube
     helm-tramp
-    ;; helm-ext
+    helm-ext
     ;; helm-delicious
     ))
 
@@ -654,7 +656,7 @@
     ;; company-ngram
     company-emoji
     ;; company-quickhelp
-    company-org-headings
+    ;; company-org-headings
     ;; company-dict
     ;; company-web
     ;; company-flx

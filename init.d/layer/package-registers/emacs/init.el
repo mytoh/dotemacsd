@@ -631,8 +631,8 @@
   '(:tag ["mpd" "music"]))
 (hoarder:register "osanai3/eshell-tree"
   '(:tag ["eshell"]))
-(hoarder:register "nobrowser/dig-browser"
-  '(:tag ["dig" "dns"]))
+;; (hoarder:register "nobrowser/dig-browser"
+;;   '(:tag ["dig" "dns"]))
 (hoarder:register "hagleitn/unicode-emoticons"
   '(:tag ["unicode" "emoticon"]))
 (hoarder:register "ryuslash/kaarvok"
@@ -1671,6 +1671,24 @@
 (hoarder:register "https://bitbucket.org/zck/2048.el"
   '(:type :hg
     :tag ["game" "2048"]))
+(hoarder:register "jixiuf/golden-ratio-scroll-screen"
+  '(:desc "scrolling  screen  in Emacs"))
+(hoarder:register "thiefuniverse/blog-minimal"
+  '(:desc "a simple static site generator based on org mode"
+    :tag ["org-mode" "blog" "website"]))
+(hoarder:register "vermiculus/apiwrap.el"
+  '(:desc "Generate wrappers for your API endpoints!"
+    :tag ["api" "web"]))
+(hoarder:register "AdamNiederer/elquery"
+  '(:desc "Read and manipulate HTML in emacs"
+    :tag ["html" "dom" "jquery"]))
+;; (hoarder:register "https://git.systemreboot.net/exiftool.el"
+;;   '(:depth nil
+;;     :type :git
+;;     :tag ["exif" "jpeg"]))
+(hoarder:register "anler/remember-last-theme"
+  '(:desc "Remember the last used theme between Emacs' sessions."
+    :tag ["theme"]))
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
@@ -1803,7 +1821,9 @@
     :desc "Script to send standard input into the emacs kill ring or a register"
     :memo "[[https://www.reddit.com/r/emacs/comments/5sn67f/script_to_send_standard_input_into_the_emacs_kill/][Script to send standard input into the emacs kill ring or a register : emacs]]"))
 (hoarder:fetch "lujun9972/MyLisp") 
-
+(hoarder:fetch "0rdy/emacs.d"
+  '(:tag ["emacs" "dotfiles" "general.el"]
+    :memo "[[https://github.com/0rdy/emacs.d/blob/master/env/env-maps.el][emacs.d/env-maps.el at master · 0rdy/emacs.d · GitHub]]")) 
 
 ;; TODO emacswiki support
 ;; "http://www.emacswiki.org/emacs/hl-spotlight.el"

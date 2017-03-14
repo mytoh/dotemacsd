@@ -9,11 +9,11 @@
   (set-face-attribute 'org-block-begin-line nil :background "#202e31")
   (set-face-attribute 'org-block-end-line nil :background "#202e31")
   (when (display-graphic-p)
-  (setq org-src-block-faces
-        `( ;("emacs-lisp" (:background ,(muki:color-hsl->hex 300 20 30)))
-          ("lisp" (:background ,(muki:color-hsl->hex 190 20 30)))
-          ("python" (:background ,(muki:color-hsl->hex 230 20 29)))
-          ("shell" (:background ,(muki:color-hsl->hex 140 20 20))))))
+    (setq org-src-block-faces
+          `( ;("emacs-lisp" (:background ,(muki:color-hsl->hex 300 20 30)))
+            ("lisp" (:background ,(muki:color-hsl->hex 190 20 30)))
+            ("python" (:background ,(muki:color-hsl->hex 230 20 29)))
+            ("shell" (:background ,(muki:color-hsl->hex 140 20 20))))))
   )
 
 ;; give us some hint we are running
@@ -273,22 +273,29 @@
   (org-element-map (org-element-parse-buffer 'element) 'headline
     (lambda (h)
       (and (org-element-map h 'drawer
-             (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
-             nil t 'headline)
-           (let ((begin (org-element-property :begin h)))
-             (message "Entry with erroneous properties drawer at %d" begin)
-             begin)))))
+           (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
+           nil t 'headline)
+         (let ((begin (org-element-property :begin h)))
+           (message "Entry with erroneous properties drawer at %d" begin)
+           begin)))))
 
 (cl-defun muki:org-open-link-mpv ()
   (interactive)
-  (cl-letf ((link (glof:lookup  :raw-link
-                    (cadr (org-element-context)))))
+  (pcase-let* (((and context
+                   `(,type . ,_))
+                (org-element-context))
+               (link (pcase type
+                       (`headline
+                        (glof:lookup :raw-value
+                          (cadr context)))
+                       (`link
+                        (glof:lookup :raw-link
+                          (cadr context))))))
     (pcase link
       (`[:just ,l]
        (muki:play-mpv l))
       (`[:nothing]
-       (message "can't find any link!")))
-    ))
+       (message "can't find any link!")))))
 
 
 
@@ -349,9 +356,9 @@
                            (looking-at "^[ \t]*#\\+begin_src[ \t]+[^ \f\t\n\r\v]+[ \t]*"))))
       ;; Test if we moved out of a block.
       (when (or (and rasmus/org-at-src-begin
-                   (not at-src-block))
-                ;; File was just opened.
-                (eq rasmus/org-at-src-begin -1))
+                  (not at-src-block))
+               ;; File was just opened.
+               (eq rasmus/org-at-src-begin -1))
         (rasmus/org-prettify-src--update))
       ;; Remove composition if at line; doesn't work properly.
       ;; (when at-src-block
