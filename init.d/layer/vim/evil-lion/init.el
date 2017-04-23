@@ -4,8 +4,9 @@
 
 ;;; Code:
 
-;; helm-git-grep
-(use-package helm-git-grep
-  :commands (helm-git-grep))
+(use-package evil-lion
+    :commands (evil-lion-mode)
+  :config
+  (evil-lion-mode))
 
 ;;; init.el ends here

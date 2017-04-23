@@ -41,7 +41,7 @@
 (setq skk-look-recursive-search t)
 
 ;;;; 変換時に注釈 (annotation) を表示する
-(setq skk-show-annotation t)
+(setq skk-show-annotation nil) ; this makes skk slow
 
 ;;;; 変換候補一覧と注釈 (annotation) を GUI ぽく表示する
 ;; (setq skk-show-tooltip t)

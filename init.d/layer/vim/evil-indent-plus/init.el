@@ -7,7 +7,7 @@
 (use-package evil-indent-plus
   :commands (evil-indent-plus-default-bindings)
   :after evil
-  :config
+  :init
   (evil-indent-plus-default-bindings))
 
 ;;; init.el ends here

@@ -243,8 +243,8 @@
   '(:desc "A mostly grayscale theme for Emacs, inspired by Tao and Leuven."))
 (hoarder:register-theme "rbanffy/green-screen-emacs"
   '(:desc "A nice color theme for those who miss green CRTs"))
-(hoarder:register-theme "apierz/nord-emacs"
-  '(:desc "Potential Addition to the Nord Theme Family"))
+(hoarder:register-theme "arcticicestudio/nord-emacs"
+  '(:desc "An arctic, north-bluish clean and elegant Emacs theme."))
 (hoarder:register-theme "madhat2r/madhat2r-theme"
   '(:desc "Dark theme for (spac[e]macs) that supports GUI and terminal"))
 (hoarder:register-theme "prassee/prassee-emacs-theme"
@@ -255,6 +255,14 @@
   '(:desc "Alex Schroeder's Pink Bliss emacs theme updated for emacs24"))
 (hoarder:register-theme "choppsv1/emacs-mandm-theme"
   '(:desc "M&Ms (the candy) color zenburn derivative "))
+(hoarder:register-theme "m-cat/nimbus-theme"
+  '(:desc "The best dark theme for Emacs"))
+(hoarder:register-theme "dawidof/emacs-monokai-theme"
+  '(:desc "Monokai theme for emacs"))
+(hoarder:register-theme "MaxSt/challenger-deep"
+  '(:desc "Emacs Theme"))
+(hoarder:register-theme "gorauskas/darkburn-theme"
+  '(:desc "Dark Burn Theme for Emacs 24"))
 
 ;; (hoarder:register-theme "bobbypriambodo/nord-spacemacs"
 ;;     '(:desc "Unofficial port of Nord color palette for Spacemacs."))

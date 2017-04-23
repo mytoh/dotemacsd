@@ -4,8 +4,9 @@
 
 ;;; Code:
 
-;; helm-git-grep
-(use-package helm-git-grep
-  :commands (helm-git-grep))
+(use-package org-recent-headings
+  :commands (org-recent-headings-mode)
+  :init
+  (org-recent-headings-mode))
 
 ;;; init.el ends here

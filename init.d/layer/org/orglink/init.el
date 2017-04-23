@@ -7,6 +7,6 @@
   :init
   (hook 'emacs-lisp-mode-hook #'orglink-mode)
   :config
-  (validate-setq  orglink-activate-links '(bracket)))
+  (validate-setq  orglink-activate-links '(bracket angle plain)))
 
 ;;; init.el ends here

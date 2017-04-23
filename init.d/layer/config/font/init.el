@@ -127,22 +127,22 @@
 
     (set-frame-font a10)
 
-    (cl-flet ((set (script font) (set-fontset-font fontset script font)))
-      (set 'ascii       a10)
-      (set 'latin       a10)
-      (set 'japanese-jisx0208 k10)
-      (set 'katakana-jisx0201       r10)
-      (set 'kana k10)
-      (set 'cjk-misc misc-iso)
-      (set 'han k10)
-      (set 'katakana-jisx0201 kana10) ; 半角カナ
-      (set  '(#x0080 . #x024F) a10)    ; 分音符付きラテン
-      (set '(#x0370 . #x03FF) a10)    ; ギリシャ文字
+    (cl-labels((setfont (script font) (set-fontset-font fontset script font nil 'prepend)))
+      (setfont 'ascii       a10)
+      (setfont 'latin       a10)
+      (setfont 'japanese-jisx0208 k10)
+      (setfont 'katakana-jisx0201       r10)
+      (setfont 'kana k10)
+      (setfont 'cjk-misc misc-iso)
+      (setfont 'han k10)
+      (setfont 'katakana-jisx0201 kana10) ; 半角カナ
+      (setfont  '(#x0080 . #x024F) a10)    ; 分音符付きラテン
+      (setfont '(#x0370 . #x03FF) a10)    ; ギリシャ文字
 
-      ;; (set 'symbol mplus)
-      (set 'symbol symbola)
-      ;; (set 'symbol notoemoji)
-      ;;(set 'symbol emojione)
+      ;; (setfont 'symbol mplus)
+      (setfont 'symbol symbola)
+      ;; (setfont 'symbol notoemoji)
+      ;;(setfont 'symbol emojione)
       )
 
 

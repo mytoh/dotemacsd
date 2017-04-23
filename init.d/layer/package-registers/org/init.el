@@ -14,15 +14,15 @@
     :tag "org"))
 (hoarder:register "tj64/org-hlc")
 
-(hoarder:register "tj64/outorg" '(:compile nil
-                            :branch "trunk"
-                            :tag ["org" "outline"]))
-(hoarder:register "tj64/outshine" '(:compile nil
-                              :branch "trunk"
-                              :tag ["org" "outline"]
-                              :dependency ["tj64/outorg"]))
+(hoarder:register "alphapapa/outorg"
+  '(:compile nil
+    :tag ["org" "outline"]))
+(hoarder:register "alphapapa/outshine"
+  '(:compile nil
+    :tag ["org" "outline"]
+    :dependency ["alphapapa/outorg"]))
 ;; (hoarder:register "jleechpe/outorg-export")
-(hoarder:register "tj64/navi"
+(hoarder:register "alphapapa/navi"
   '(:tag ["org" "outline"]))
 
 (hoarder:register "tj64/outline-magic"
@@ -75,6 +75,9 @@
   '(:tag ["org" "clipboard"]))
 (hoarder:register "tarsius/orglink"
   '(:tag ["org"]))
+(hoarder:register "seanohalpin/org-link-minor-mode"
+  '(:desc "Enable org-mode bracket links in non-org modes"
+    :tag ["org"]))
 (hoarder:register "snosov1/toc-org"
   '(:tag ["org" "toc"]))
 (hoarder:register "mattduck/org-query"
@@ -126,6 +129,13 @@
   '(:desc "A code snippet manager with Org and Helm "
     :tag ["org-mode" "helm" "snippet"]
     :memo "[[https://www.reddit.com/r/emacs/comments/5yzga2/a_code_snippet_navigator_and_collector_with_org/][Too Many Requests]]"))
-
+(hoarder:register "alphapapa/org-sticky-header"
+  '(:desc "Show off-screen Org heading at top of window"))
+(hoarder:register "alphapapa/org-recent-headings"
+  '(:desc "Go to recently used Org headings"))
+(hoarder:register "alphapapa/org-quick-peek"
+  '(:desc "Quick inline peeks at agenda items and linked nodes in Org-mode"
+    :tag ["org-mode" "quick-peek"]
+    :dependency ["cpitclaudel/quick-peek"]))
 
 ;;; init.el ends here

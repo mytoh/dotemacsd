@@ -243,7 +243,7 @@
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
 ;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson, noctilux, erosiond, material
-(defvar muki:x-theme 'green-screen)
+(defvar muki:x-theme 'nord)
 (defvar muki:term-theme 'flatland)
 (defconst muki:favorite-themes
   '(comidia planet monokai molokai firebelly
@@ -260,7 +260,8 @@
             base16-ashes base16-atelier-cave base16-atelier-lakeside
             base16-ocean-brian acai sourcerer creamsody
             doomsday-dark solarized-grey solarized-dark
-            rebecca darktooth sirthias nord kaolin))
+            rebecca darktooth sirthias nord kaolin
+            tao-yin))
 
 ;; (enable-option select-enable-clipboard
 ;;                select-enable-primary)
@@ -372,10 +373,10 @@
 ;; decrease gc cycle
 ;; (set-option gc-cons-threshold (* 10 gc-cons-threshold))
 
-(add-hook 'after-init-hook
-          (lambda () 
-            (set-option gc-cons-threshold (/ gc-cons-threshold 5))
-            (set-option garbage-collection-messages t)))
+;; (add-hook 'after-init-hook
+;;           (lambda () 
+;;             (set-option gc-cons-threshold (/ gc-cons-threshold 5))
+;;             (set-option garbage-collection-messages t)))
 
 ;; message log line counts
 (set-option message-log-max 10000)
@@ -484,5 +485,9 @@
 
 ;; [[http://lists.gnu.org/archive/html/bug-gnu-emacs/2016-11/msg00395.html][bug#24918: 25.1; Fonts can make Emacs grind to a halt]]
 (setq inhibit-compacting-font-caches t)
+
+;; [[http://sachachua.com/blog/2017/04/emacs-pasting-with-the-mouse-without-moving-the-point-mouse-yank-at-point/][Emacs: Pasting with the mouse without moving the point – mouse-yank-at-point –]]
+(setq mouse-yank-at-point t)
+
 
 ;;; config-setting.el ends here

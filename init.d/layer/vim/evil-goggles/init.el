@@ -4,8 +4,9 @@
 
 ;;; Code:
 
-;; helm-git-grep
-(use-package helm-git-grep
-  :commands (helm-git-grep))
+(use-package evil-goggles
+  :after evil
+  :config
+  (evil-goggles-mode))
 
 ;;; init.el ends here

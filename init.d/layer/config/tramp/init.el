@@ -53,4 +53,7 @@
   :config
   (progn
     (setq tramp-default-method "scp")
-    (setq tramp-auto-save-directory "/tmp")))
+    (setq tramp-auto-save-directory "/tmp")
+
+    ;; mysteriously this solves loading issue on freebsd
+    (setq tramp-debug-buffer t)))

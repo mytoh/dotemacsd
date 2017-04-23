@@ -4,8 +4,6 @@
 
 ;;; Code:
 
-;; helm-git-grep
-(use-package helm-git-grep
-  :commands (helm-git-grep))
+(use-package org-quick-peek)
 
 ;;; init.el ends here

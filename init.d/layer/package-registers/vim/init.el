@@ -145,5 +145,11 @@
   '(:tag ["evil" "magit"]))
 (hoarder:register "shnarazk/evil-insert-emacs"
   '(:desc "Another insert mode with more emacs features for Evil"))
+(hoarder:register "edkolev/evil-lion"
+  '(:desc "Evil align operator"
+    :tag ["evil" "align"]))
+(hoarder:register "edkolev/evil-goggles"
+  '(:desc "Display visual hint on evil edit operations"
+    :tag ["evil" "highlight"]))
 
 ;;; init.el ends here

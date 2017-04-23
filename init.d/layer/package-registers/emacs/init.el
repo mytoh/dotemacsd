@@ -7,13 +7,13 @@
 
 ;;;;  register packages
 
-;;;;;  general packages
 (hoarder:register "magnars/s.el")
 ;; (hoarder:register "jonathanchu/emacs-powerline")
-(hoarder:register "raugturi/powerline-evil"
-  '(:tag ["evil" "mode-line"]))
-(hoarder:register "milkypostman/powerline"
-  '(:tag ["mode-line"]))
+;; (hoarder:register "raugturi/powerline-evil"
+;;   '(:tag ["evil" "mode-line"]))
+;; (hoarder:register "milkypostman/powerline"
+;;   '(:tag ["mode-line"]))
+(hoarder:register "Dewdrops/powerline")
 (hoarder:register "TeMPOraL/nyan-mode")
 (hoarder:register "daimrod/highlight-sexp")
 (hoarder:register "m2ym/undohist-el")
@@ -1303,7 +1303,9 @@
   '(:type :git
     :tag ["gitlab"]))
 (hoarder:register "bddean/emacs-ereader"
-  '(:tag ["epub" "ebook" "org-mode"]))
+  '(:desc "Epub reader for emacs with org-mode integration"
+    :tag ["epub" "ebook" "org-mode"] 
+    :dependency ["bddean/xml-plus"] ))
 (hoarder:register "mrhmouse/rc-mode.el"
   '(:tag ["shell" "syntax" "plan9" "rc"]))
 (hoarder:register "tarsius/dim-autoload")
@@ -1388,8 +1390,6 @@
   '(:desc "Emacs pcomplete for git"
     :tag ["git" "pcomplete"]))
 
-
-;;;;; general packages
 
 (hoarder:register "rejeep/commander.el"
   '(:tag ["cli" "command" "option" "parse"]))
@@ -1516,7 +1516,7 @@
   '(:desc "A simple image viewer based on ImageMagick"
     :memo "[[https://gist.github.com/sabof/5264829][emms-opts.el · GitHub]]
 [[https://www.reddit.com/r/emacs/comments/1b673h/tips_for_setting_up_emms_especially_getting_cover/c943g6c/][Too Many Requests]]"
-:tag ["emms" "music"]))
+    :tag ["emms" "music"]))
 (hoarder:register "sabof/emms-mobile-remote"
   '(:desc "Control EMMS using your mobile"
     :tag ["emms" "mobile"]
@@ -1689,6 +1689,54 @@
 (hoarder:register "anler/remember-last-theme"
   '(:desc "Remember the last used theme between Emacs' sessions."
     :tag ["theme"]))
+(hoarder:register "skeeto/elisp-fakespace"
+  '(:desc "Emacs Lisp namespaces (defpackage)"
+    :memo "[[http://nullprogram.com/blog/2011/08/18/][Fake Emacs Namespaces « null program]]"))
+(hoarder:register "lujun9972/pocket-api.el"
+  '(:desc "Another pocket api which is rewriten from el-pocket."))
+(hoarder:register "lujun9972/pocket-mode"
+  '(:desc "Manage your pocket"
+    :tag ["pocket"]))
+(hoarder:register "narendraj9/quoted-scratch"
+  '(:desc "Beautiful quotes for your Emacs *scratch* buffer"
+    :tag ["quotes" "fortune"]))
+(hoarder:register "thisirs/scratch-message"
+  '(:desc "Changing message in your scratch buffer"))
+(hoarder:register "zonuexe/auto-read-only.el"
+  '(:desc "Automatically make the buffer to read-only"))
+(hoarder:register "cute-jumper/emacs-word-of-the-day"
+  '(:desc "Show \"Word of the Day\" from 15 online sources in Emacs"
+    :tag ["fortune"]))
+(hoarder:register "skeeto/elisp-json-rpc"
+  '(:desc "JSON-RPC library for Emacs Lisp"
+    :tag ["json-rpc" "api"]))
+(hoarder:register "wolray/symbol-overlay"
+  '(:desc "Highlighting symbols with keymap-enabled overlays"))
+(hoarder:register "https://bitbucket.org/dvalchuk/waf-mode.git"
+  '(:tag ["python" "waf"]))
+(hoarder:register "h/find-file-in-repository"
+  '(:desc "Emacs: Quickly find files in a git, mercurial or other type of repository"))
+(hoarder:register "lujun9972/html2org.el"
+  '(:desc "Convert html to org format text"
+    :tag ["html" "org-mode" "pandoc"]))
+(hoarder:register "AdrieanKhisbe/omni-quotes.el"
+  '(:desc "Random quotes displayer for Emacs"
+    :dependency ["AdrieanKhisbe/omni-log.el"]))
+(hoarder:register "DamienCassou/hierarchy"
+  '(:desc "Emacs library to create, query, navigate and display hierarchy structures"))
+(hoarder:register "domtronn/spaceline-all-the-icons.el"
+  '(:desc "A Spaceline Mode Line theme using All The Icons for Emacs"
+    :tag ["spacemacs" "mode-line" "icon"]))
+(hoarder:register "dacap/keyfreq"
+  '(:desc "Track Emacs commands frequency"))
+(hoarder:register "rejeep/git.el"
+  '(:desc "An Elisp API for programmatically using Git"
+    :tag ["git" "api"]))
+(hoarder:register "AdrieanKhisbe/cask-package-toolset.el"
+  '(:desc "Toolsettize your emacs package!"
+    :tag ["cask"]))
+(hoarder:register "zk-phi/include-anywhere"
+  '(:desc "[Emacs] include from anywhere"))
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
@@ -1824,6 +1872,14 @@
 (hoarder:fetch "0rdy/emacs.d"
   '(:tag ["emacs" "dotfiles" "general.el"]
     :memo "[[https://github.com/0rdy/emacs.d/blob/master/env/env-maps.el][emacs.d/env-maps.el at master · 0rdy/emacs.d · GitHub]]")) 
+(hoarder:fetch "sachac/emacs-notes"
+  '(:desc "Emacs / Org Mode tutorials and other organized notes"
+    :tag ["emacs" "org-mode"]))
+(hoarder:fetch "thefrontside/frontmacs"
+  '(:desc "A package-based, web-centric, customizable, awesome-by-default, acceptance-tested Emacs distribution curated by your friends at Frontside."
+    :tag ["web" "emacs" "configuration"]))
+(hoarder:fetch "hlissner/emacs.d"
+  '(:tag ["emacs" "dotfiles" "evil"]))
 
 ;; TODO emacswiki support
 ;; "http://www.emacswiki.org/emacs/hl-spotlight.el"

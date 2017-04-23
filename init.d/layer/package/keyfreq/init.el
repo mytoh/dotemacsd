@@ -4,8 +4,11 @@
 
 ;;; Code:
 
-;; helm-git-grep
-(use-package helm-git-grep
-  :commands (helm-git-grep))
+(use-package keyfreq
+  :config
+  (progn
+    (keyfreq-mode 1)
+    (keyfreq-autosave-mode 1)))
+
 
 ;;; init.el ends here

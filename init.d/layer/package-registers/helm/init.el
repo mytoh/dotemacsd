@@ -16,7 +16,8 @@
 (hoarder:register "yuutayamada/helm-ag-r"
   '(:tag ["helm" "ag"]))
 (hoarder:register "yasuyk/helm-git-grep"
-  '(:tag ["helm" "git"]))
+  '(:tag ["helm" "git"]
+    :dependency ["emacs-helm/helm-elscreen"]))
 ;; (hoarder:register "emacs-helm/helm-migemo"
 ;;                   '(:tag ("helm" "migemo")))
 (hoarder:register "emacs-helm/helm-ls-git"
@@ -172,6 +173,13 @@
     :tag ["tramp"]))
 (hoarder:register "cute-jumper/helm-ext"
   '(:desc "Extensions to helm (dirty hacks)"))
+(hoarder:register "grugrut/helm-books"
+  '(:desc "Book search interface for emacs helm."
+    :tag ["helm" "book" "google_books"]
+    :memo "[[http://grugrut.hatenablog.jp/entry/2017/03/15/222729][本の情報を取得するためのHelm拡張を作ってみた(途中) - ぐるっとぐりっど]]"))
+(hoarder:register "emacs-helm/helm-navi"
+  '(:desc "Navigate headings and keywords provided by outshine and navi-mode using Helm"
+    :tag ["helm" "outshine"]))
 
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]

@@ -4,8 +4,6 @@
 
 ;;; Code:
 
-;; helm-git-grep
-(use-package helm-git-grep
-  :commands (helm-git-grep))
+(use-package pocket-mode)
 
 ;;; init.el ends here

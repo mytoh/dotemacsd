@@ -6,15 +6,17 @@
   (command (nameless-mode) "nameless")
   (add-hook 'emacs-lisp-mode-hook #'nameless-mode)
   (after 'nameless
-      (set-option nameless-prefix "¦")
+    (set-option nameless-prefix "¦")
     (set-option nameless-separator ":")
     (cl-labels ((add-alias (icon name)
-                  (add-to-list 'nameless-global-aliases
-                               (cons icon name))))
+                           (add-to-list 'nameless-global-aliases
+                                        (cons icon name))))
       (add-alias "👭" "sis") ; "⚢" 
       (add-alias "☠"  "hoarder")
       (add-alias "🥛" "muki") 
       (add-alias "🍱" "colle")
-      (add-alias "👚" "mesh"))))
+      (add-alias "👚" "mesh")
+      ;; (add-alias "🧤" "glof")
+      )))
 
 ;;; init.el ends here

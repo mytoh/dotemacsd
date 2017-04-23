@@ -4,8 +4,6 @@
 
 ;;; Code:
 
-;; helm-git-grep
-(use-package helm-git-grep
-  :commands (helm-git-grep))
+(use-package find-file-in-repository)
 
 ;;; init.el ends here

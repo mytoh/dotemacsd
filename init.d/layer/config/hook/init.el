@@ -30,7 +30,8 @@
           ((not ignorep)
            (notifications-notify :title "Emacs" :body
              (format "Saved %s" bufname))))))
-(add-hook 'after-save-hook 'notify-send-after-save-hook)
+;; (add-hook 'after-save-hook 'notify-send-after-save-hook)
+;; (remove-hook 'after-save-hook 'notify-send-after-save-hook)
 
 ;; make read only when file under certain directory
 ;; (add-hook 'find-file-hook

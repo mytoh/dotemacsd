@@ -28,8 +28,8 @@
 
 (muki-layer:load-layers 'config
   '(
-    setting
-    ))
+                        setting
+                        ))
 
 (muki-layer:load-layers 'package-manager
   '(boot
@@ -51,15 +51,14 @@
 
 ;; essential
 (muki-layer:load-layers 'package
-  '(
-    use-package
-    validate
+  '(use-package
+     validate
 
-    ;; diminish
-    ;; dim
-    delight
-    hoarder
-    ))
+     ;; diminish
+     ;; dim
+     delight
+     hoarder
+     ))
 
 (muki-layer:load-layers 'org
   '(outshine
@@ -89,13 +88,15 @@
     ob-async
     org-table-sticky-header
     org-writers-room
+    org-quick-peek
+    ;; org-sticky-header
+    ;; org-recent-headings
     ))
 
 (muki-layer:load-layers 'package
-  '(
+  '(migemo
     ;; no-littering
-    migemo
-    cmigemo
+    ;;cmigemo
     ;; dashboard
     ssh-config-mode
     emacs-refactor
@@ -309,7 +310,10 @@
     edit-color-stamp
     hydra
     vc
-    hardhat
+
+    ;; hardhat
+    auto-read-only
+
     ignoramus
     validate
     niceify-info
@@ -325,7 +329,7 @@
     ;; random-idle-quote
     tron
     ;; mini-header-line
-    spu
+    ;; spu // cause recent emacs fail?
     sshman
     emacs-reaction-sounds
     hyperbole
@@ -341,7 +345,7 @@
     interaction-log
     escr
     vdiff
-    pokemon-emacs
+    ;; pokemon-emacs
     so-long
     vs-comment
     toml-mode
@@ -422,6 +426,15 @@
     runner
     unify-opening
     remember-last-theme
+    pocket-mode
+    uimage
+    waf-mode
+    ereader
+    find-file-in-repository
+    omni-quotes
+    keyfreq
+    include-anywhere
+    ;; quoted-scratch
     ;; goto-addr
     ;; elint
     ;; all-ext                               
@@ -489,10 +502,10 @@
 
 ;;;; highlight
 (muki-layer:load-layers 'package
-  '(
-    hl-line
+  '(hl-line
     ;; col-highlight
     ;; highlight-symbol
+    symbol-overlay
     highlight-thing
 
     volatile-highlights
@@ -523,15 +536,14 @@
 
 ;;;;; package
 (muki-layer:load-layers 'vim
-  '(
-    evil
+  '(evil
 
     evil-commentary
     ;; evil-nerd-commenter
     ;; evil-operator-comment
 
     evil-surround
-    evil-linewise
+    ;; evil-linewise
     evil-matchit
     evil-exchange
     evil-visualstar
@@ -552,7 +564,10 @@
     evil-multiedit
     ;; evil-iedit-state
     ;; evil-mc
-    evil-quickscope
+
+    ;; evil-quickscope
+    evil-goggles
+
     evil-lisp-state
     evil-magit
     syndicate
@@ -564,6 +579,7 @@
     opener
     evil-adjust
     evil-indent-plus
+    evil-lion
     ;; targets
     ;; org-evil
     
@@ -578,8 +594,7 @@
     vimrc-mode))
 
 (muki-layer:load-layers 'vim
-  '(
-    eww-mode
+  '(eww-mode
     image-mode
     paradox-mode
     emms-mode
@@ -644,13 +659,13 @@
     helm-ls-svn
     helm-youtube
     helm-tramp
-    helm-ext
+    helm-navi
+    ;; helm-ext
     ;; helm-delicious
     ))
 
 (muki-layer:load-layers 'auto-completion
-  '(
-    company
+  '(company
     company-shell
     company-statistics
     ;; company-ngram
@@ -679,8 +694,7 @@
 
 ;;;;; config
 (muki-layer:load-layers 'config
-  '(
-    key
+  '(key
     hook
     path
     face

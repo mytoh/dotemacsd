@@ -4,8 +4,7 @@
 
 ;;; Code:
 
-;; helm-git-grep
-(use-package helm-git-grep
-  :commands (helm-git-grep))
+(use-package helm-navi
+  :commands (helm-navi helm-navi-headings))
 
 ;;; init.el ends here

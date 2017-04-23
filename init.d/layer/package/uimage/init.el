@@ -4,8 +4,10 @@
 
 ;;; Code:
 
-;; helm-git-grep
-(use-package helm-git-grep
-  :commands (helm-git-grep))
+(use-package uimage
+  :commands (uimage-mode)
+  :init
+  (progn
+    (add-hook 'info-mode-hook #'uimage-mode)))
 
 ;;; init.el ends here
