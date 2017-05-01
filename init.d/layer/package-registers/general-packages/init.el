@@ -6357,7 +6357,84 @@ case for pi zero and camera: http://www.thingiverse.com/thing:1639568 "))
   '(:desc "electron製peercastチャンネルビューア"
     :tag ["peercast" "electron"]))
 (hoarder:fetch "captn3m0/spectrumyzer"
-  '(:desc "Spectrum analyzer"))
+  '(:desc "Spectrum analyzer"
+    :memo "[[https://github.com/captn3m0/spectrumyzer/tree/water][GitHub - captn3m0/spectrumyzer at water]]"))
+(hoarder:fetch "dry-rb/dry-container"
+  '(:desc "A simple, configurable container implemented in Ruby"
+    :tag ["dry-rb" "ioc" "ioc-container" "ruby"]
+    :memo "[[https://www.youtube.com/watch?v=zwo7ZTHS8Wg][RubyConf 2016 - Composition by James Dabbs - YouTube]]"))
+(hoarder:fetch "pzol/deterministic"
+  '(:desc "Functional - deterministic - Ruby made fun"
+    :tag ["ruby"]
+    :memo "[[https://www.youtube.com/watch?v=zwo7ZTHS8Wg][RubyConf 2016 - Composition by James Dabbs - YouTube]]"))
+(hoarder:fetch "OpenIB/OpenIB"
+  '(:desc "An infinity fork focused on security."
+    :tag ["8chan" "infinity" "bbs"]))
+(hoarder:fetch "tootcafe/blocked-instances"
+  '(:desc "List of Mastodon instances blocked by toot.cafe"
+    :tag ["mastodon"]))
+(hoarder:fetch "ssbc/patchwork"
+  '(:desc "A decentralized messaging and sharing app built on top of Secure Scuttlebutt (SSB)."
+    :tag ["crypto" "decent" "decentralized" "offline" "scuttlebutt" "social" "social-network" "ssb" "subjectivity"]))
+(hoarder:fetch "Gigoteur/PX8"
+  '(:desc "Open source Fantasy Console in Rust (with Python and Lua)"
+    :tag ["cartridge" "console" "emscripten" "emulator" "fantasy" "lua" "opensource" "python" "rust" "sdl2"]))
+(hoarder:fetch "cpbotha/nvpy"
+  '(:tag ["python" "notional_velocity" "note"]))
+(hoarder:fetch "https://gitgud.io/m712/blazechan.git"
+  '(:tag ["chan" "bbs"]))
+(hoarder:fetch "solus-project/3rd-party"
+  '(:desc "Extra 3rd party packages "
+    :tag ["solus" "package" "font" "mscorefonts"]
+    :memo "[[https://www.youtube.com/watch?v=FdXrdsobk_E][Setting Up MS Core Fonts in Solus - Made Easy - YouTube]]
+[[http://www.fosslinux.com/1387/how-to-install-microsoft-true-type-fonts-in-solus.htm][How to install Microsoft True Type Fonts in Solus | FOSS Linux]]"))
+(hoarder:fetch "https://gitlab.com/dto/xelf.git"
+  '(:tag ["common_lisp" "game" "gui" "widget"]
+    :site "http://xelf.me"
+    :memo "[[https://www.youtube.com/channel/UCKfZ9JfFgg7cxa2hYfC5O0A][dto-games - YouTube]]"))
+(hoarder:fetch "atomashpolskiy/bt"
+  '(:desc "Java BitTorrent Done Right!"
+    :tag ["bittorrent" "dht" "library" "p2p" "torrent" "java"]))
+(hoarder:fetch "MrKepzie/Natron"
+  '(:desc "Open-source compositing software. Node-graph based. Similar in functionalities to Adobe After Effects and Nuke by The Foundry."
+    :tag ["c-plus-plus" "cross-platform" "openfx" "vfx" "linux"]))
+(hoarder:fetch "decentraland/web"
+  '(:desc "decentraland.org"
+    :tag ["p2p" "bittorrent" "blockchain"]
+    :memo "[[https://www.youtube.com/watch?v=xxmPJ0DFRPI][Decentraland: P2P Virtual Reality - YouTube]]"))
+(hoarder:fetch "IrosTheBeggar/mStream"
+  '(:desc "Music Streaming Server With FLAC Support"
+    :tag ["beets" "flac" "flac-streaming" "javascript" "mstream" "music" "music-streaming" "music-streaming-server"]))
+(hoarder:fetch "mmontone/clavier"
+  '(:desc "General purpose validation library for Common Lisp"
+    :tag ["common-lisp" "lisp" "utilities" "validation"]))
+(hoarder:fetch "coleifer/huey"
+  '(:desc "a little task queue for python"
+    :tag ["python" "queue" "redis" "task-queue"]))
+(hoarder:fetch "psifidotos/Latte-Dock"
+  '(:desc "Latte is a dock based on plasma frameworks that provides an elegant and intuitive experience for your tasks and plasmoids"
+    :tag ["dock" "linux"]))
+(hoarder:fetch "varlesh/video-wallpaper-linux"
+  '(:desc "Little tool for set video wallpaper on Linux"
+    :tag ["wallpaper" "video" "linux" "mpv"]))
+(hoarder:fetch "varlesh/elementary-add"
+  '(:desc "elementary OS style icon theme"
+    :tag ["icon" "elementary"]))
+(hoarder:fetch "https://bitbucket.org/medoc/recoll"
+  '(:type :hg
+    :tag ["search" "index"]))
+(hoarder:fetch "Mechasparrow/Emojielog"
+  '(:desc "A nice little diary for emoji logs."
+    :tag ["emoji" "javascript" "log"]))
+(hoarder:fetch "slashrsm/rasstaggregator"
+  '(:desc "Feed aggregator written in Elixir."
+    :tag ["elixir" "rss"]))
+(hoarder:fetch "alpaca-lang/alpaca"
+  '(:desc "Functional programming inspired by ML for the Erlang VM"
+    :tag ["alpaca" "erlang" "erlang-vm" "hindley-milner" "ml" "statically-typed"]))
+(hoarder:fetch "jordanadams/imgur-elixir"
+  '(:desc ":camera: The missing Imgur client for Elixir"
+    :tag ["api-client" "elxir" "imgur"]))
 
 ;;; end
 

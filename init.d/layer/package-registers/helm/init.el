@@ -180,6 +180,9 @@
 (hoarder:register "emacs-helm/helm-navi"
   '(:desc "Navigate headings and keywords provided by outshine and navi-mode using Helm"
     :tag ["helm" "outshine"]))
+(hoarder:register "brotzeitmacher/helm-xref"
+  '(:desc "Helm interface for xref results"
+    :tag ["helm" "xref"]))
 
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]
