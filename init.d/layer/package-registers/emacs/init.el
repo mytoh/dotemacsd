@@ -1638,7 +1638,8 @@
 (hoarder:register "tmalsburg/guess-language.el"
   '(:desc "Emacs mode that detects the language of what you're typing. Automatically switches spell checker. Supports multiple languages per document."))
 (hoarder:register "Fanael/highlight-numbers"
-  '(:desc "Highlight numbers in source code"))
+  '(:desc "Highlight numbers in source code"
+    :dependency ["Fanael/parent-mode"]))
 (hoarder:register "atgreen/paperless"
   '(:desc "Emacs assisted PDF document filing"
     :tag ["pdf" "document"]
