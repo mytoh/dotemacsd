@@ -9,7 +9,7 @@
 (hoarder:register "emacs-helm/helm"
   '(:build ["gmake"]
     :dependency ["jwiegley/emacs-async"]
-    :tag "helm"))
+    :tag ["helm"]))
 (hoarder:fetch "emacs-helm/helm.wiki"
   '(:tag ["helm" "wiki"]))
 (hoarder:register "thierryvolpiatto/pcomplete-extension")
@@ -74,25 +74,25 @@
                  ("emacs-helm/helm"
                   (:build ["gmake"]
                    :dependency ["jwiegley/emacs-async"]
-                   :tag "helm"))]))
+                   :tag ["helm"]))]))
 (hoarder:register "pronobis/helm-words"
   '(:dependency [("emacs-helm/helm"
                   (:build ["gmake"]
                    :dependency ["jwiegley/emacs-async"]
-                   :tag "helm"))]
+                   :tag ["helm"]))]
     :tag ["helm" "dictionary"]))
 (hoarder:register "emacs-jp/helm-orgcard"
   '(:tag ["helm" "org"]
     :dependency [("emacs-helm/helm"
                   (:build ["gmake"]
                    :dependency ["jwiegley/emacs-async"]
-                   :tag "helm"))]))
+                   :tag ["helm"]))]))
 (hoarder:register "lins05/helm-org-files"
   '(:tag ["helm" "org"]
     :dependency [("emacs-helm/helm"
                   (:build ["gmake"]
                    :dependency ["jwiegley/emacs-async"]
-                   :tag "helm"))]))
+                   :tag ["helm"]))]))
 (hoarder:register "abo-abo/helm-org-wiki"
   '(:tag ["helm" "org"]))
 (hoarder:register "yuutayamada/helm-shell-history"
@@ -141,9 +141,9 @@
 (hoarder:register "emacs-jp/helm-migemo"
   '(:tag ["migemo" "japanese"]))
 (hoarder:register "EphramPerdition/helm-fuzzier"
-  '(:tag "fuzzy_matching"))
+  '(:tag ["fuzzy_matching"]))
 ;; (hoarder:register "PythonNut/helm-flx"
-;;  '(:tag "fuzzy_matching"
+;;  '(:tag ["fuzzy_matching"]
 ;;    :dependency ["lewang/flx"]))
 (hoarder:register "syohex/emacs-helm-japanese-weather")
 (hoarder:register "syohex/emacs-helm-kaomoji")

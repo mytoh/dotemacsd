@@ -11,7 +11,7 @@
 ;;     :info "doc"
 ;;     :dependency ["emacsmirror/goto-chg"
 ;;                  "http://www.dr-qubit.org/git/undo-tree.git"]
-;;     :tag "evil"
+;;     :tag ["evil"]
 ;;     :type :hg))
 (hoarder:register "emacs-evil/evil"
   '(:build ["gmake clean doc all"]
@@ -20,65 +20,65 @@
                  "http://www.dr-qubit.org/git/undo-tree.git"]
     :tag ["evil"]))
 (hoarder:register "cofi/evil-leader"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 (hoarder:register "timcharper/evil-surround"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 (hoarder:register "redguardtoo/evil-nerd-commenter"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 (hoarder:register "redguardtoo/evil-matchit"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 (hoarder:register "Dewdrops/evil-exchange"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 (hoarder:register "bling/evil-visualstar"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 (hoarder:register "tarao/evil-plugins"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 (hoarder:register "tarleb/evil-rebellion"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 (hoarder:register "AshleyMoni/evil-sneak"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 (hoarder:register "juanjux/evil-search-highlight-persist"
-  '(:tag "evil"
+  '(:tag ["evil"]
     :dependency ["emacsmirror/highlight"]))
 (hoarder:register "sunesimonsen/evil-walk-on-the-edge"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 (hoarder:register "roman/evil-paredit"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 (hoarder:register "Dewdrops/evil-extra-operator"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 (hoarder:register "cofi/evil-indent-textobject"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 (hoarder:register "linktohack/evil-space"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 ;; (hoarder:register "jschaf/evil-smartparens"
-;;                  '(:tag "evil"))
+;;                  '(:tag ["evil"]))
 (hoarder:register "expez/evil-smartparens"
   '(:tag ["evil" "smartparens"]))
 (hoarder:register "nadavspi/evil-linewise"
   '(:dependency ["emacsmirror/move-text"]
-    :tag "evil"))
+    :tag ["evil"]))
 (hoarder:register "TheBB/evil-paragraph-textobject"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 (hoarder:register "syl20bnr/evil-lisp-state"
   '(:dependency ["Fuco1/smartparens"
                  "justbur/emacs-bind-map"]
     :compile nil
-    :tag "evil"))
+    :tag ["evil"]))
 (hoarder:register "syl20bnr/evil-escape"
-  '(:tag "evil"
+  '(:tag ["evil"]
     :dependency ["emacsmirror/key-chord"]))
 (hoarder:register "gridaphobe/evil-god-state"
-  '(:tag "evil"
+  '(:tag ["evil"]
     :dependency ["chrisdone/god-mode"]))
 (hoarder:register "tarleb/evil-scout")
 (hoarder:register "PythonNut/evil-easymotion"
-  '(:tag "evil"
+  '(:tag ["evil"]
     :dependency ["abo-abo/avy"
                  "nicferrier/emacs-noflet"]))
 (hoarder:register "hlissner/evil-snipe"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 (hoarder:register "linktohack/evil-commentary"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 (hoarder:register "syl20bnr/evil-tutor"
   '(:tag ["evil" "tutorial"]))
 (hoarder:register "roman/evil-visual-mark-mode"
@@ -121,7 +121,7 @@
 (hoarder:register "KNX32542/syndicate"
   '(:tag ["evil" "org"]))
 (hoarder:register "edwtjo/evil-org-mode"
-  '(:tag "evil"))
+  '(:tag ["evil"]))
 ;; (hoarder:register "Somelauw/evil-org-improved"
 ;;   '(:tag ["evil" "orgmode"])) 
 (hoarder:register "GuiltyDolphin/org-evil"

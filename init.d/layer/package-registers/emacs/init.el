@@ -24,11 +24,11 @@
 (hoarder:register "kazu-yamamoto/Mew")
 (hoarder:register "ober/zone-matrix")
 (hoarder:register "wwwjfy/emacs-fish"
-  '(:tag "fish"))
+  '(:tag ["fish"]))
 (hoarder:register "jramnani/fish-mode"
-  '(:tag "fish"))
+  '(:tag ["fish"]))
 (hoarder:register "d12frosted/fish-mode"
-  '(:tag "fish"))
+  '(:tag ["fish"]))
 (hoarder:register "thierryvolpiatto/emacs-bmk-ext")
 (hoarder:register "kawabata/aozora-view")
 (hoarder:register "tomoya/fuzzyjump.el")
@@ -37,9 +37,9 @@
 (hoarder:register "git://git.sv.gnu.org/emms.git"
   '(:name "emms" :load-path "lisp"
     :build ["gmake lisp docs emms-print-metadata"]
-    :tag "emms"))
+    :tag ["emms"]))
 (hoarder:register "fgallina/emms-info-mediainfo"
-  '(:tag "emms"))
+  '(:tag ["emms"]))
 (hoarder:register "osener/emms-soundcloud"
   '(:tag ["emms" "soundcloud"]))
 (hoarder:register "vapniks/emms-mark-ext"
@@ -55,10 +55,10 @@
   '(:dependency [("magnars/dash.el" ( :compile nil))
                  "magnars/s.el"
                  "kiwanami/emacs-deferred"]
-    :tag "soundcloud"))
+    :tag ["soundcloud"]))
 
 (hoarder:register "magit/git-modes"
-  '(:tag "git"))
+  '(:tag ["git"]))
 (hoarder:register "magit/magit"
   '(:build ["gmake clean lisp docs"]
     :info "Documentation"
@@ -66,7 +66,7 @@
     :dependency [("magnars/dash.el" ( :compile nil))
                  "jwiegley/emacs-async"
                  "magit/with-editor"]
-    :tag "git"))
+    :tag ["git"]))
 (hoarder:register "magit/orgit"
   '(:tag ["git" "org" "magit"]))
 (hoarder:register "mickesv/magit-overview"
@@ -80,16 +80,16 @@
 (hoarder:register "YoungFrog/git-overview"
   '(:tag ["git" "org"]))
 (hoarder:register "company-mode/company-mode"
-  '(:tag "company"))
+  '(:tag ["company"]))
 (hoarder:register "proofit404/company-edbi"
-  '(:tag "company"
+  '(:tag ["company"]
     :dependency ["company-mode/company-mode"]))
 (hoarder:register "vspinu/company-math"
-  '(:tag "company"
+  '(:tag ["company"]
     :dependency ["company-mode/company-mode"
                  "vspinu/symbols.el"]))
 (hoarder:register "iquiw/company-restclient"
-  '(:tag "company"
+  '(:tag ["company"]
     :dependency ["company-mode/company-mode"
                  ("for-GET/know-your-http-well"
                   (:load-path "emacs"))]))
@@ -118,7 +118,7 @@
 (hoarder:register "zargener/company-web-mode"
   '(:tag ["company" "web"]))
 (hoarder:register "syohex/emacs-git-gutter"
-  '(:tag "git"))
+  '(:tag ["git"]))
 (hoarder:register "syohex/emacs-git-gutter-fringe"
   '(:tag ["git"]
     :dependency ["syohex/emacs-git-gutter"
@@ -128,7 +128,7 @@
     :dependency ["nonsequitur/git-gutter-plus"
                  "nschum/fringe-helper.el"]))
 (hoarder:register "syohex/emacs-rebuildfm"
-  '(:tag "radio"))
+  '(:tag ["radio"]))
 (hoarder:register "syohex/emacs-anzu" '(:compile nil))
 (hoarder:register "syohex/emacs-evil-anzu"
   '(:tag ["evil" "anzu"]
@@ -140,11 +140,11 @@
 (hoarder:register "knu/mc-extras.el"
   '(:tag ["multiple-cursors"]))
 (hoarder:register "haskell/haskell-mode"
-  '(:tag "haskell"
+  '(:tag ["haskell"]
     :compile nil
     :build ["gmake clean all"]))
 (hoarder:register "nilcons/hi2"
-  '(:tag "haskell"))
+  '(:tag ["haskell"]))
 (hoarder:register "kazu-yamamoto/ghc-mod"
   '(:tag ["ghc" "haskell"]
     :load-path "elisp"))
@@ -157,7 +157,7 @@
 (hoarder:register "Bruce-Connor/rich-minority")
 (hoarder:register "steckerhalter/google-el")
 (hoarder:register "daemianmack/magit-cheatsheet"
-  '(:tag "magit"))
+  '(:tag ["magit"]))
 (hoarder:register "re5et/itail")
 (hoarder:register "syohex/emacs-quickrun")
 (hoarder:register "fxbois/web-mode" '(:compile nil))
@@ -165,7 +165,7 @@
 (hoarder:register "nschum/highlight-symbol.el")
 (hoarder:register "emacsmirror/rainbow-mode")
 (hoarder:register "skeeto/elfeed"
-  '(:tag "rss"))
+  '(:tag ["rss"]))
 (hoarder:register "remyhonig/elfeed-org"
   '(:dependency ["skeeto/elfeed"]
     :tag ["org" "rss"]))
@@ -288,11 +288,11 @@
   '(:dependency ["psanford/emacs-oauth"
                  "git://jblevins.org/git/markdown-mode.git"
                  "emacsmirror/htmlize"]
-    :tag "tumblr"))
+    :tag ["tumblr"]))
 (hoarder:register "thomblake/js3-mode"
-  '(:tag "javascript"))
+  '(:tag ["javascript"]))
 (hoarder:register "mooz/js2-mode"
-  '(:tag "javascript"))
+  '(:tag ["javascript"]))
 (hoarder:register "jd/google-maps.el")
 (hoarder:register "atykhonov/google-translate")
 (hoarder:register "lateau/charmap")
@@ -303,18 +303,18 @@
 ;; (hoarder:register "emacsmirror/diminish")
 (hoarder:register "myrjola/diminish.el")
 (hoarder:register "ShingoFukuyama/emacs-emoji-cheat-sheet"
-  '(:tag "emoji"))
+  '(:tag ["emoji"]))
 (hoarder:register "syl20bnr/emacs-emoji-cheat-sheet-plus"
-  '(:tag "emoji"))
+  '(:tag ["emoji"]))
 (hoarder:register "antonj/Highlight-Indentation-for-Emacs")
-(hoarder:register "mcandre/vimrc-mode" '(:tag "vim"))
+(hoarder:register "mcandre/vimrc-mode" '(:tag ["vim"]))
 (hoarder:register "tsdh/iedit")
 (hoarder:register "gaudecker/mip-mode")
 (hoarder:register "mugijiru/cat-mode")
 (hoarder:register "syl20bnr/vi-tilde-fringe"
-  '(:tag "vi"))
+  '(:tag ["vi"]))
 (hoarder:register "jmickelin/vim-empty-lines-mode"
-  '(:tag "vim"
+  '(:tag ["vim"]
     :desc " Vim-like empty line indicator at end of files for Emacs. "))
 (hoarder:register "Fanael/highlight-defined")
 (hoarder:register "emacsmirror/hl-defined"
@@ -340,14 +340,14 @@
 (hoarder:register "https://gitlab.com/ukaszg/aria2.git"
   '(:tag ["aria2"]))
 (hoarder:register "m00natic/eww-lnum"
-  '(:tag "eww"))
+  '(:tag ["eww"]))
 (hoarder:register "yoshiki/yaml-mode")
 (hoarder:register "ijp/mbe.el")
 (hoarder:register "emacsmirror/info-plus" )
 (hoarder:register "hiddenlotus/eshell-prompt-extras"
-  '(:tag "eshell"))
+  '(:tag ["eshell"]))
 (hoarder:register "yuutayamada/eshell-better-prompt"
-  '(:tag "eshell"))
+  '(:tag ["eshell"]))
 (hoarder:register "syohex/emacs-eshellutil"
   '(:tag ["eshell"]))
 (hoarder:register "syohex/emacs-smeargle"
@@ -365,7 +365,7 @@
   '(:load-path ["dist"]
     :build ["gmake"]
     :info "dist"
-    :tag "eshell"))
+    :tag ["eshell"]))
 (hoarder:register "jschaf/esup")
 (hoarder:register "vermiculus/sx.el"
   '(:dependency ["git://jblevins.org/git/markdown-mode.git"]))
@@ -427,13 +427,13 @@
 (hoarder:register "capitaomorte/darkroom"
   '(:tag ["writing" "distraction free"]))
 (hoarder:register "vspinu/image-transform"
-  '(:tag "image"
+  '(:tag ["image"]
     :compile nil))
 (hoarder:register "gongo/json-reformat"
-  '(:tag "json"
+  '(:tag ["json"]
     :dependency ["sviridov/undercover.el"]))
 (hoarder:register "joshwnj/json-mode"
-  '(:tag "json"
+  '(:tag ["json"]
     :dependency ["Sterlingg/json-snatcher"
                  "gongo/json-reformat"]))
 (hoarder:register "hchbaw/bqlist-lock.el")
@@ -464,19 +464,19 @@
 (hoarder:register "emacsmirror/emoticons")
 (hoarder:register "zonuexe/pixiv-novel-mode.el")
 (hoarder:register "jhgorrell/ssh-config-mode-el"
-  '(:tag "ssh"))
+  '(:tag ["ssh"]))
 (hoarder:register "dtaht/comics-el"
   '(:tag ["comic"]))
 (hoarder:register "kljohann/clang-format.el"
-  '(:tag "clang"))
+  '(:tag ["clang"]))
 (hoarder:register "saintaardvark/meleme"
   '(:tag ["mode-line"]))
 (hoarder:register "10sr/shell-split-string-el"
-  '(:tag "shell"))
+  '(:tag ["shell"]))
 (hoarder:register "kiwanami/emacs-kovlive"
   '(:dependency ["kiwanami/emacs-deferred"]))
 (hoarder:register "ieure/ssh-el"
-  '(:tag "ssh"))
+  '(:tag ["ssh"]))
 (hoarder:register "tarsius/hl-todo"
   '(:tag ["highlight" "font-lock"]))
 (hoarder:register "ifree/emacs-code-playground")
@@ -486,7 +486,7 @@
 (hoarder:register "ahyatt/emacs-websocket"
   '(:tag ["websocket"]))
 (hoarder:register "syohex/emacs-realtime-markdown-viewer"
-  '(:tag "markdown"))
+  '(:tag ["markdown"]))
 (hoarder:register "jscheid/kite")
 (hoarder:register "wasamasa/form-feed")
 (hoarder:register "emacsmirror/aumix-mode"
@@ -666,7 +666,7 @@
                     :compile nil
                     :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
                     :info "doc"
-                    :tag "org"))]))
+                    :tag ["org"]))]))
 (hoarder:register "danielsz/Palimpsest")
 (hoarder:register "rolandwalker/ignoramus")
 (hoarder:register "anler/centered-window-mode"

@@ -97,11 +97,11 @@
 (hoarder:fetch "kamichidu/vim-hariti"
   '(:tag ["vim" "plugin_manager"]))
 (hoarder:fetch "gmarik/Vundle.vim"
-  '(:tag "vim"))
+  '(:tag ["vim"]))
 (hoarder:fetch "guns/vim-sexp"
-  '(:tag "vim"))
+  '(:tag ["vim"]))
 (hoarder:fetch "tpope/vim-sexp-mappings-for-regular-people"
-  '(:tag "vim"))
+  '(:tag ["vim"]))
 (hoarder:fetch "kovisoft/paredit"
   '(:tag ["vim" "paredit"]))
 (hoarder:fetch "goldfeld/vim-seek"
@@ -129,7 +129,7 @@
 (hoarder:fetch "gridaphobe/dotfiles"
   '(:tag ["evil" "dotifles"]))
 (hoarder:fetch "takaishi/.emacs.d"
-  '(:tag "dotfiles"))
+  '(:tag ["dotfiles"]))
 (hoarder:fetch "nanasess/dot.emacs")
 (hoarder:fetch "technomancy/better-defaults")
 (hoarder:fetch "chrismccord/dot_emacs"
@@ -168,7 +168,7 @@
 
 (hoarder:fetch "gabriel-laddel/masamune")
 (hoarder:fetch "Fanael/init.el"
-  '(:tag "dotfiles"))
+  '(:tag ["dotfiles"]))
 (hoarder:fetch "deftsp/.emacs.d"
   '(:tag ["dotfiles" "evil"]))
 (hoarder:fetch "zhen-qin/.emacs.d"
@@ -277,7 +277,7 @@
 (hoarder:fetch "holtzermann17/metaca"
   '(:tag ["automata"]))
 (hoarder:fetch "Prismatic/plumbing"
-  '(:tag "clojure"))
+  '(:tag ["clojure"]))
 (hoarder:fetch "jkitchin/org-ref"
   '(:tag ["org" "bibtex"]))
 (hoarder:fetch "emacsmirror/eoops"
@@ -293,9 +293,9 @@
   '(:tag ["org"]))
 (hoarder:fetch "abedra/emacs.d")
 (hoarder:fetch "emacsmirror/xclip"
-  '(:tag "clipboard"))
+  '(:tag ["clipboard"]))
 ;;(hoarder:fetch "emacsmirror/uni-confusables"
-;;              '(:tag "unicode"))
+;;              '(:tag ["unicode"]))
 (hoarder:fetch "funcool/cats"
   '(:tag ["clojure" "monad"]))
 (hoarder:fetch "jonnay/emagicians-starter-kit"

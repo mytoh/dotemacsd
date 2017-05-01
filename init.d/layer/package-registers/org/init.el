@@ -11,7 +11,7 @@
     :compile nil
     :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
     :info "doc"
-    :tag "org"))
+    :tag ["org"]))
 (hoarder:register "tj64/org-hlc")
 
 (hoarder:register "alphapapa/outorg"
@@ -28,16 +28,16 @@
 (hoarder:register "tj64/outline-magic"
   '(:tag ["org" "outline"]))
 (hoarder:register "omouse/org-doing"
-  '(:tag "org"))
+  '(:tag ["org"]))
 (hoarder:register "Fuco1/org-pretty-table"
-  '(:compile nil :tag "org"))
+  '(:compile nil :tag ["org"]))
 (hoarder:register "rlister/org-present"
   '(:dependency [("git://orgmode.org/org-mode.git"
                   (:load-path ["lisp" "contrib/lisp"]
                    :compile nil
                    :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
                    :info "doc"
-                   :tag "org"))]))
+                   :tag ["org"]))]))
 (hoarder:register "kawabata/ox-pandoc"
   '(:dependency ["Wilfred/ht.el"
                  "magnars/dash.el"]
