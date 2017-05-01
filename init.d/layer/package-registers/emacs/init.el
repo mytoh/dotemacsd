@@ -1737,6 +1737,9 @@
     :tag ["cask"]))
 (hoarder:register "zk-phi/include-anywhere"
   '(:desc "[Emacs] include from anywhere"))
+(hoarder:register "skeeto/markov-text"
+  '(:desc "Markov chain text generation in Emacs Lisp"
+    :tag ["language"]))
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
