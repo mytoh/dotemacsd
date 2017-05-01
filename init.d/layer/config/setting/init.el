@@ -261,7 +261,7 @@
             base16-ocean-brian acai sourcerer creamsody
             doomsday-dark solarized-grey solarized-dark
             rebecca darktooth sirthias nord kaolin
-            tao-yin))
+            tao-yin challenger-deep))
 
 ;; (enable-option select-enable-clipboard
 ;;                select-enable-primary)
@@ -474,6 +474,7 @@
 ;; variable to nil to disable the new behavior and get back the old
 ;; behavior.
 (setq use-default-font-for-symbols t)
+
 ;;; ** New variable 'inhibit-compacting-font-caches'.
 ;; Set this variable to a non-nil value to speed up display of characters
 ;; using large fonts, at the price of a larger memory footprint of the
