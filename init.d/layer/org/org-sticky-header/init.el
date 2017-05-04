@@ -5,8 +5,8 @@
 ;;; Code:
 
 (use-package org-sticky-header
-  :commands (org-table-sticky-header-mode)
+  :commands (org-sticky-header-mode)
   :init
-  (add-hook 'org-mode-hook #'org-table-sticky-header-mode))
+  (add-hook 'org-mode-hook #'org-sticky-header-mode))
 
 ;;; init.el ends here
