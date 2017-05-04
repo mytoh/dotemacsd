@@ -6435,6 +6435,20 @@ case for pi zero and camera: http://www.thingiverse.com/thing:1639568 "))
 (hoarder:fetch "jordanadams/imgur-elixir"
   '(:desc ":camera: The missing Imgur client for Elixir"
     :tag ["api-client" "elxir" "imgur"]))
+(hoarder:fetch "system76/pop-gtk-theme"
+  '(:desc "System76 Pop GTK+ Theme"
+    :tag ["gtk" "theme" "linux"]
+    :memo "[[https://www.youtube.com/watch?v=fKCo7yuvHGk][New \"Pop\" GTK Theme by System76 - YouTube]]"))
+(hoarder:fetch "system76/pop-icon-theme"
+  '(:desc "System76 Pop icon theme for Linux"
+    :tag ["icon" "theme" "linux"]))
+(hoarder:fetch "ewhal/nyaa")
+(hoarder:fetch "ipfs-search/ipfs-search"
+  '(:desc "Search engine for the Interplanetary Filesystem."
+    :tag ["ipfs"]))
+(hoarder:fetch "webtorrent/magnet-uri"
+  '(:desc "Parse a magnet URI and return an object of keys/values"
+    :tag ["bittorrent" "browser" "browserify" "javascript" "magnet-link" "magnet-uri" "nodejs" "parse" "torrent" "webtorrent"]))
 
 ;;; end
 

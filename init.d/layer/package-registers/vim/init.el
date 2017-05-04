@@ -129,7 +129,6 @@
     :dependency ["GuiltyDolphin/monitor"
                  ("magnars/dash.el" ( :compile nil))]))
 (hoarder:register "Dewdrops/evil-ReplaceWithRegister")
-(hoarder:register "troyp/evil-visual-replace")
 (hoarder:register "wbolster/evil-swap-keys")
 (hoarder:register "0robustus1/opener.el"
   '(:dependency ["tkf/emacs-request"]))
@@ -151,5 +150,9 @@
 (hoarder:register "edkolev/evil-goggles"
   '(:desc "Display visual hint on evil edit operations"
     :tag ["evil" "highlight"]))
+(hoarder:register "troyp/evil-visual-replace"
+  '(:desc "Search and replace within Emacs evil-mode's visual blocks (rectangle selections)"
+    :tag ["emacs" "evil" "rectangle" "visual-state"]
+    :dependency ["joddie/pcre2el"]))
 
 ;;; init.el ends here

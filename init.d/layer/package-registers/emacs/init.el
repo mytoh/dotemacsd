@@ -1884,6 +1884,9 @@
     :tag ["web" "emacs" "configuration"]))
 (hoarder:fetch "hlissner/emacs.d"
   '(:tag ["emacs" "dotfiles" "evil"]))
+(hoarder:fetch "kaushalmodi/eless"
+  '(:desc "A better 'less' - Combination of bash script and a minimal emacs view-mode config"
+    :tag ["bash-script" "emacs" "emacs-lisp" "less"]))
 
 ;; TODO emacswiki support
 ;; "http://www.emacswiki.org/emacs/hl-spotlight.el"
