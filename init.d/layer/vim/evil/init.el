@@ -158,8 +158,8 @@
       "Inhibit search pattern update during `skk-henkan-mode'.
 This is reasonable since inserted text during `skk-henkan-mode'
 is a kind of temporary one which is not confirmed yet."
-      (unless (bound-and-true-p skk-henkan-mode)
-        ad-do-it))
+        (unless (bound-and-true-p skk-henkan-mode)
+          ad-do-it))
 
     (if (bound-and-true-p skk-mode)
         (defun-add-hook muki:evil-disable-skk (evil-normal-state-entry-hook)
@@ -205,6 +205,11 @@ is a kind of temporary one which is not confirmed yet."
     (add-hook 'focus-out-hook #'insert-to-normal)
     (run-with-idle-timer 10 t #'insert-to-normal)))
 
+(defun muki:evil-fix-paste ()
+  "[[http://layzie.hatenablog.com/entry/20160118/1453074670][Spacemacsの設定の話 - Life goes on]]
+[[https://github.com/syl20bnr/spacemacs/issues/2032][{Mac} Visual mode ignores system clipboard · Issue #2032 · syl20bnr/spacemacs · GitHub]]"
+       (fset 'evil-visual-update-x-selection 'ignore))
+
 (liby 'evil
   (req 'goto-chg)
 
@@ -237,6 +242,8 @@ is a kind of temporary one which is not confirmed yet."
     (evil-scroll-line-to-center nil))
 
   (advice-add 'evil-search-next :after #'my-center-line)
+
+  (muki:evil-fix-paste)
 
   )
 
