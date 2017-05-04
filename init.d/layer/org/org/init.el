@@ -11,9 +11,16 @@
   (when (display-graphic-p)
     (setq org-src-block-faces
           `( ;("emacs-lisp" (:background ,(muki:color-hsl->hex 300 20 30)))
-            ("lisp" (:background ,(muki:color-hsl->hex 190 20 30)))
-            ("python" (:background ,(muki:color-hsl->hex 230 20 29)))
-            ("shell" (:background ,(muki:color-hsl->hex 140 20 20))))))
+          ("lisp" (:background ,(muki:color-hsl->hex 190 20 30)))
+          ("python" (:background ,(muki:color-hsl->hex 230 20 29)))
+          ("shell" (:background ,(muki:color-hsl->hex 140 20 20))))))
+
+  ;; face for headings
+  ;; [[https://www.reddit.com/r/emacs/comments/66w75c/monospace_font_for_calendar_in_orgmode/dglrjnv/][Too Many Requests]]
+  ;; (cl-dotimes (i 8)
+  ;;   (cl-letf* ((num (1+ i))
+  ;;              (face (intern(concat "org-level-" (number-to-string num)))))
+  ;;     (set-face-attribute face nil :inherit 'variable-pitch)))
   )
 
 ;; give us some hint we are running
@@ -273,11 +280,11 @@
   (org-element-map (org-element-parse-buffer 'element) 'headline
     (lambda (h)
       (and (org-element-map h 'drawer
-           (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
-           nil t 'headline)
-         (let ((begin (org-element-property :begin h)))
-           (message "Entry with erroneous properties drawer at %d" begin)
-           begin)))))
+             (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
+             nil t 'headline)
+           (let ((begin (org-element-property :begin h)))
+             (message "Entry with erroneous properties drawer at %d" begin)
+             begin)))))
 
 (cl-defun muki:org-open-link-mpv ()
   (interactive)
@@ -350,23 +357,23 @@
 
   `prettify-symbols-mode' is used because it has uncollpasing. It's
   may not be efficient."
-    (let* ((case-fold-search t)
-           (at-src-block (save-mark-and-excursion
-                           (beginning-of-line)
-                           (looking-at "^[ \t]*#\\+begin_src[ \t]+[^ \f\t\n\r\v]+[ \t]*"))))
-      ;; Test if we moved out of a block.
-      (when (or (and rasmus/org-at-src-begin
-                  (not at-src-block))
-               ;; File was just opened.
-               (eq rasmus/org-at-src-begin -1))
-        (rasmus/org-prettify-src--update))
-      ;; Remove composition if at line; doesn't work properly.
-      ;; (when at-src-block
-      ;;   (with-silent-modifications
-      ;;     (remove-text-properties (match-end 0)
-      ;;                             (1+ (line-end-position))
-      ;;                             '(composition))))
-      (setq rasmus/org-at-src-begin at-src-block)))
+         (let* ((case-fold-search t)
+                (at-src-block (save-mark-and-excursion
+                                (beginning-of-line)
+                                (looking-at "^[ \t]*#\\+begin_src[ \t]+[^ \f\t\n\r\v]+[ \t]*"))))
+           ;; Test if we moved out of a block.
+           (when (or (and rasmus/org-at-src-begin
+                        (not at-src-block))
+                     ;; File was just opened.
+                     (eq rasmus/org-at-src-begin -1))
+             (rasmus/org-prettify-src--update))
+           ;; Remove composition if at line; doesn't work properly.
+           ;; (when at-src-block
+           ;;   (with-silent-modifications
+           ;;     (remove-text-properties (match-end 0)
+           ;;                             (1+ (line-end-position))
+           ;;                             '(composition))))
+           (setq rasmus/org-at-src-begin at-src-block)))
 
   (defun rasmus/org-prettify-symbols ()
     (mapc (apply-partially 'add-to-list 'prettify-symbols-alist)
