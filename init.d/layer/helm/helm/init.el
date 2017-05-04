@@ -40,10 +40,10 @@
     "Select the 2nd action for the currently selected candidate.
 This happen when point is at the end of minibuffer.
 Otherwise goto the end of minibuffer."
-    (interactive)
-    (if (eolp)
-        (helm-select-nth-action 1)
-      (end-of-line)))
+         (interactive)
+         (if (eolp)
+             (helm-select-nth-action 1)
+           (end-of-line)))
 
   (after 'helm
     ;; bind C-1 to C-9 to actions
@@ -56,6 +56,7 @@ Otherwise goto the end of minibuffer."
   ;; (define-key helm-map (kbd "C-j") #'helm-next-line)
   ;; (define-key helm-map (kbd "C-k") #'helm-previous-line)
   (define-key helm-map (kbd "C-c C-l") #'delete-minibuffer-contents)
+  (define-key helm-map (kbd "C-u") #'helm-delete-minibuffer-contents)
 
   ;; global mappings for helm commands
   (add-global-key "M-x" #'helm-M-x
