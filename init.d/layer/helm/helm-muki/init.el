@@ -61,7 +61,9 @@
                      "Astroneer"
                      "Dwarf Fortress"
                      "Subnautica"
-                     "ReCore")))
+                     "ReCore"
+                     "The Hunter"
+                     "Sailing Simulator")))
 
   (add-global-key "C-c h" #'helm-muki)
 
