@@ -89,7 +89,7 @@
     org-table-sticky-header
     org-writers-room
     org-quick-peek
-    ;; org-sticky-header
+    org-sticky-header
     ;; org-recent-headings
     ))
 
@@ -434,6 +434,7 @@
     omni-quotes
     keyfreq
     include-anywhere
+    semantic-refactor
     ;; quoted-scratch
     ;; goto-addr
     ;; elint
@@ -513,7 +514,7 @@
     highlight-escape-sequences ; easy-escape
     highlight-quoted
     highlight-refontification
-    ;; highlight-numbers
+    highlight-numbers
     ;; hl-todo
     ;; highlight-unique-symbol
 
@@ -580,6 +581,7 @@
     evil-adjust
     evil-indent-plus
     evil-lion
+    evil-visual-replace
     ;; targets
     ;; org-evil
     
@@ -660,6 +662,7 @@
     helm-youtube
     helm-tramp
     helm-navi
+    helm-xref
     ;; helm-ext
     ;; helm-delicious
     ))
