@@ -6442,13 +6442,43 @@ case for pi zero and camera: http://www.thingiverse.com/thing:1639568 "))
 (hoarder:fetch "system76/pop-icon-theme"
   '(:desc "System76 Pop icon theme for Linux"
     :tag ["icon" "theme" "linux"]))
-(hoarder:fetch "ewhal/nyaa")
+(hoarder:fetch "ewhal/nyaa"
+  '(:tag ["golang" "torrent"]))
+(hoarder:fetch "l3oncoder/nyaa"
+  '(:tag ["torrent" "php"]))
 (hoarder:fetch "ipfs-search/ipfs-search"
   '(:desc "Search engine for the Interplanetary Filesystem."
     :tag ["ipfs"]))
 (hoarder:fetch "webtorrent/magnet-uri"
   '(:desc "Parse a magnet URI and return an object of keys/values"
     :tag ["bittorrent" "browser" "browserify" "javascript" "magnet-link" "magnet-uri" "nodejs" "parse" "torrent" "webtorrent"]))
+(hoarder:fetch "Genshin/PhantomOpenEmoji"
+  '(:desc "POE has been discontinued. Please use emojidex."
+    :tag ["font" "emoji"]))
+(hoarder:fetch "emojidex/emojidex-vectors"
+  '(:desc "Vector [SVG] emoji assets for emojidex"
+    :tag ["emoji"]))
+(hoarder:fetch "eriknstr/bsd-tar-prefixhack"
+  '(:desc "Create non-exploding archive files using BSD tar without first moving or copying files."
+    :tag ["bsd" "freebsd" "tar" "archive"]))
+(hoarder:fetch "AlphaReign/scraper"
+  '(:desc "AlphaReigns DHT Scraper, includes peer updater and categorizer"
+    :tag ["p2p" "dht" "javascript"]))
+(hoarder:fetch "TUSF/ip-nyaa"
+  '(:desc "Interplanetary Nyaa"
+    :tag ["ipfs" "nyaa"]
+    :memo "[[https://boards.4chan.org/g/thread/60214464#p60214464][/g/ - Nyaa General Thread - Technology - 4chan]]"))
+(hoarder:fetch "lmatteis/torrent-net"
+  '(:desc "Distributed search engines using BitTorrent and SQLite"
+    :tag ["torrent"]))
+(hoarder:fetch "kenCode-de/c-ipfs"
+  '(:desc "IPFS implementation in C, (not just an API client library). Why C? Think BlockPay, routers, kiosks, IoT, vending machines, Blackphones, RasPi's, old pc's and more..."
+    :tag ["ipfs"]))
+(hoarder:fetch "xvw/scope"
+  '(:desc "Scope is a small module that provides two macros to facilitate function overload and local import/aliases execution."
+    :tag ["elixir" "local" "macros" "module" "overloading" "scope"]
+    :memo "[[https://www.reddit.com/r/elixir/comments/6949gg/scope_local_import_of_modules/][Too Many Requests]]"))
+
 
 ;;; end
 
@@ -6475,5 +6505,6 @@ case for pi zero and camera: http://www.thingiverse.com/thing:1639568 "))
 ;; svn checkout http://svn.apache.org/repos/asf/pdfbox/trunk/
 ;; svn checkout svn://svn.code.sf.net/p/ychan/code/ ychan-code
 ;; http://pulkomandy.tk/projects/GrafX2/downloads?order=version&desc=1, https://www.reddit.com/r/unixporn/comments/5wheoc/using_fzf_as_app_launcher_bspwm/
+;; https://gnunet.org/svn/gnunet/
 
 ;;; init.el ends here

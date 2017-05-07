@@ -1233,7 +1233,8 @@
   '(:tag ["toml"]))
 (hoarder:register "domtronn/all-the-icons.el"
   '(:tag ["icon" "font"]
-    :dependency ["emacsmirror/font-lock-plus"]))
+    :dependency ["emacsmirror/font-lock-plus"
+                 "skeeto/emacs-memoize"]))
 (hoarder:fetch"domtronn/all-the-icons.el.wiki"
   '(:tag ["emacs" "icon" "font"]))
 (hoarder:register "mutbuerger/ert-flash-modeline"
@@ -1741,6 +1742,14 @@
 (hoarder:register "skeeto/markov-text"
   '(:desc "Markov chain text generation in Emacs Lisp"
     :tag ["language"]))
+(hoarder:register "rolandwalker/nav-flash"
+  '(:desc "Briefly highlight the current line in Emacs"
+    :tag ["beacon" "flush" "pulse"]))
+(hoarder:register "k1LoW/emacs-historyf"
+  '(:desc "file history library like browser"
+    :tag ["file" "history"]))
+(hoarder:register "wxjeacen/novel-speaker-mode"
+  '(:tag ["novel" "tts" "google_tts"])) 
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
