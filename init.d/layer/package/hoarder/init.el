@@ -16,11 +16,25 @@
                                            (topics (assoc-default 'topics data)))
                                    (insert
                                     (pcase `[,desc ,topics]
-                                      (`[nil nil]
+                                      (`[nil []]
                                        (format
                                         "(%s \"%s\") "
                                         fname
-                                        (seq-subseq 19)))
+                                        (seq-subseq url 19)))
+                                      (`[nil ,_]
+                                       (format
+                                        "(%s \"%s\"
+    '(:tag %s))"
+                                        fname
+                                        (seq-subseq url 19)
+                                        (colle:map (lambda (topic) (concat "\"" topic "\"" )) topics)))
+                                      (`[,_ []]
+                                       (format
+                                        "(%s \"%s\"
+    '(:desc %s))"
+                                        fname
+                                        (seq-subseq url 19)
+                                        (escape (decode-coding-string desc 'utf-8))))
                                       (`[,_ ,_]
                                        (format
                                         "(%s \"%s\"
