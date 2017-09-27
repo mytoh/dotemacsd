@@ -9,154 +9,154 @@
 ;; (hoarder:register "https://bitbucket.org/lyro/evil"
 ;;   '(:build ["gmake clean doc all"]
 ;;     :info "doc"
-;;     :dependency ["emacsmirror/goto-chg"
+;;     :dependencies ["emacsmirror/goto-chg"
 ;;                  "http://www.dr-qubit.org/git/undo-tree.git"]
-;;     :tag ["evil"]
+;;     :tags ["evil"]
 ;;     :type :hg))
 (hoarder:register "emacs-evil/evil"
   '(:build ["gmake clean doc all"]
     :info "doc"
-    :dependency ["emacs-evil/goto-chg"
-                 "http://www.dr-qubit.org/git/undo-tree.git"]
-    :tag ["evil"]))
+    :dependencies ["emacs-evil/goto-chg"
+                   "http://www.dr-qubit.org/git/undo-tree.git"]
+    :tags ["evil"]))
 (hoarder:register "cofi/evil-leader"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "emacs-evil/evil-surround"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "redguardtoo/evil-nerd-commenter"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "redguardtoo/evil-matchit"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "Dewdrops/evil-exchange"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "bling/evil-visualstar"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "tarao/evil-plugins"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "tarleb/evil-rebellion"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "AshleyMoni/evil-sneak"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "juanjux/evil-search-highlight-persist"
-  '(:tag ["evil"]
-    :dependency ["emacsmirror/highlight"]))
+  '(:tags ["evil"]
+    :dependencies ["emacsmirror/highlight"]))
 (hoarder:register "sunesimonsen/evil-walk-on-the-edge"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "roman/evil-paredit"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "Dewdrops/evil-extra-operator"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "cofi/evil-indent-textobject"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "linktohack/evil-space"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 ;; (hoarder:register "jschaf/evil-smartparens"
-;;                  '(:tag ["evil"]))
+;;                  '(:tags ["evil"]))
 (hoarder:register "expez/evil-smartparens"
-  '(:tag ["evil" "smartparens"]))
+  '(:tags ["evil" "smartparens"]))
 (hoarder:register "nadavspi/evil-linewise"
-  '(:dependency ["emacsmirror/move-text"]
-    :tag ["evil"]))
+  '(:dependencies ["emacsmirror/move-text"]
+    :tags ["evil"]))
 (hoarder:register "TheBB/evil-paragraph-textobject"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "syl20bnr/evil-lisp-state"
-  '(:dependency ["Fuco1/smartparens"
-                 "justbur/emacs-bind-map"]
+  '(:dependencies ["Fuco1/smartparens"
+                   "justbur/emacs-bind-map"]
     :compile nil
-    :tag ["evil"]))
+    :tags ["evil"]))
 (hoarder:register "syl20bnr/evil-escape"
-  '(:tag ["evil"]
-    :dependency ["emacsmirror/key-chord"]))
+  '(:tags ["evil"]
+    :dependencies ["emacsmirror/key-chord"]))
 (hoarder:register "gridaphobe/evil-god-state"
-  '(:tag ["evil"]
-    :dependency ["chrisdone/god-mode"]))
+  '(:tags ["evil"]
+    :dependencies ["chrisdone/god-mode"]))
 (hoarder:register "tarleb/evil-scout")
 (hoarder:register "PythonNut/evil-easymotion"
-  '(:tag ["evil"]
-    :dependency ["abo-abo/avy"
-                 "nicferrier/emacs-noflet"]))
+  '(:tags ["evil"]
+    :dependencies ["abo-abo/avy"
+                   "nicferrier/emacs-noflet"]))
 (hoarder:register "hlissner/evil-snipe"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "linktohack/evil-commentary"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "syl20bnr/evil-tutor"
-  '(:tag ["evil" "tutorial"]))
+  '(:tags ["evil" "tutorial"]))
 (hoarder:register "roman/evil-visual-mark-mode"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "bcarrell/evil-lispy"
-  '(:tag ["evil" "lispy"]
-    :dependency [("abo-abo/lispy"
-                  (:dependency ["sviridov/undercover.el"]))]))
+  '(:tags ["evil" "lispy"]
+    :dependencies [("abo-abo/lispy"
+                    (:dependencies ["sviridov/undercover.el"]))]))
 (hoarder:register "linktohack/evil-rsi")
 (hoarder:register "luxbock/evil-cleverparens"
-  '(:dependency ["rejeep/drag-stuff.el"
-                 "http://mumble.net/~campbell/git/paredit.git"
-                 "Fuco1/smartparens"]))
+  '(:dependencies ["rejeep/drag-stuff.el"
+                   "http://mumble.net/~campbell/git/paredit.git"
+                   "Fuco1/smartparens"]))
 ;; (hoarder:register "lotabout/evil-mc"
-;;                   '(:tag ["evil" "multiple-cursor"]))
+;;                   '(:tags ["evil" "multiple-cursor"]))
 (hoarder:register "gabesoft/evil-mc"
-  '(:tag ["evil" "multiple-cursor"]))
+  '(:tags ["evil" "multiple-cursor"]))
 (hoarder:register "willghatch/emacs-on-parens"
-  '(:tag ["evil" "smartparens"]
-    :dependency ["Fuco1/smartparens"
-                 "magnars/dash.el"]))
+  '(:tags ["evil" "smartparens"]
+    :dependencies ["Fuco1/smartparens"
+                   "magnars/dash.el"]))
 (hoarder:register "syl20bnr/evil-iedit-multiple-cursors"
-  '(:tag ["evil" "multiple-cursors"]))
+  '(:tags ["evil" "multiple-cursors"]))
 (hoarder:register "blorbx/evil-quickscope"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 (hoarder:register "louy2/evil-avy"
-  '(:tag ["evil" "avy"]))
+  '(:tags ["evil" "avy"]))
 (hoarder:register "noctuid/evil-textobj-anyblock"
-  '(:tag ["evil" "textobj"]))
+  '(:tags ["evil" "textobj"]))
 (hoarder:register "syl20bnr/evil-iedit-state"
-  '(:tag ["evil" "iedit"]
-    :dependency ["tsdh/iedit"]))
+  '(:tags ["evil" "iedit"]
+    :dependencies ["tsdh/iedit"]))
 (hoarder:register "justbur/emacs-bind-map"
-  '(:tag ["evil" "key_binding"]))
+  '(:tags ["evil" "key_binding"]))
 (hoarder:register "justbur/pure-evil"
-  '(:tag ["evil" "key_binding"]))
+  '(:tags ["evil" "key_binding"]))
 (hoarder:register "hlissner/evil-multiedit"
-  '(:tag ["evil" "multiple-cursors"]
-    :dependency ["tsdh/iedit"]))
+  '(:tags ["evil" "multiple-cursors"]
+    :dependencies ["tsdh/iedit"]))
 (hoarder:register "KNX32542/syndicate"
-  '(:tag ["evil" "org"]))
+  '(:tags ["evil" "org"]))
 (hoarder:register "edwtjo/evil-org-mode"
-  '(:tag ["evil"]))
+  '(:tags ["evil"]))
 ;; (hoarder:register "Somelauw/evil-org-improved"
-;;   '(:tag ["evil" "orgmode"])) 
+;;   '(:tags ["evil" "orgmode"])) 
 (hoarder:register "GuiltyDolphin/org-evil"
-  '(:tag ["evil" "org-mode"]
-    :dependency ["GuiltyDolphin/monitor"
-                 ("magnars/dash.el" ( :compile nil))]))
+  '(:tags ["evil" "org-mode"]
+    :dependencies ["GuiltyDolphin/monitor"
+                   ("magnars/dash.el" ( :compile nil))]))
 (hoarder:register "Dewdrops/evil-ReplaceWithRegister")
 (hoarder:register "wbolster/evil-swap-keys")
 (hoarder:register "0robustus1/opener.el"
-  '(:dependency ["tkf/emacs-request"]))
+  '(:dependencies ["tkf/emacs-request"]))
 (hoarder:register "noctuid/targets.el"
-  '(:desc "Extension of evil text objects"))
+  '(:description "Extension of evil text objects"))
 (hoarder:register "troyp/evil-adjust"
-  '(:desc "Adjustments for Emacs end-of-line commands in evil's normal state."))
+  '(:description "Adjustments for Emacs end-of-line commands in evil's normal state."))
 (hoarder:register "TheBB/evil-indent-plus"
-  '(:desc "Better indent textobjects for evil"))
+  '(:description "Better indent textobjects for evil"))
 (hoarder:register "emacs-evil/evil-ediff"
-  '(:tag ["ediff" "evil" "diff" "keybinding"]))
+  '(:tags ["ediff" "evil" "diff" "keybinding"]))
 (hoarder:register "emacs-evil/evil-magit"
-  '(:tag ["evil" "magit"]))
+  '(:tags ["evil" "magit"]))
 (hoarder:register "shnarazk/evil-insert-emacs"
-  '(:desc "Another insert mode with more emacs features for Evil"))
+  '(:description "Another insert mode with more emacs features for Evil"))
 (hoarder:register "edkolev/evil-lion"
-  '(:desc "Evil align operator"
-    :tag ["evil" "align"]))
+  '(:description "Evil align operator"
+    :tags ["evil" "align"]))
 (hoarder:register "edkolev/evil-goggles"
-  '(:desc "Display visual hint on evil edit operations"
-    :tag ["evil" "highlight"]))
+  '(:description "Display visual hint on evil edit operations"
+    :tags ["evil" "highlight"]))
 (hoarder:register "troyp/evil-visual-replace"
-  '(:desc "Search and replace within Emacs evil-mode's visual blocks (rectangle selections)"
-    :tag ["emacs" "evil" "rectangle" "visual-state"]
-    :dependency ["joddie/pcre2el"]))
+  '(:description "Search and replace within Emacs evil-mode's visual blocks (rectangle selections)"
+    :tags ["emacs" "evil" "rectangle" "visual-state"]
+    :dependencies ["joddie/pcre2el"]))
 (hoarder:register "jojojames/evil-integrations"
-  '(:desc "Provides a sane set of defaults for use with Evil Mode."))
+  '(:description "Provides a sane set of defaults for use with Evil Mode."))
 (hoarder:register "edkolev/evil-expat"
-  '(:desc "Extra evil ex commands"))
+  '(:description "Extra evil ex commands"))
 
 ;;; init.el ends here

@@ -98,7 +98,7 @@
 (hoarder:register-theme "yveszoundi/emacs-rimero-theme")
 (hoarder:register-theme "darrik/erosiond-theme")
 (hoarder:register-theme "zk-phi/lenlen-theme"
-  '(:dependency ["sellout/emacs-color-theme-solarized"]))
+  '(:dependencies ["sellout/emacs-color-theme-solarized"]))
 (hoarder:register-theme "emacsfodder/emacs-theme-darktooth")
 (hoarder:register-theme "melisgl/color-theme-mgl")
 (hoarder:register-theme "BrianHicks/emacs-themes")
@@ -128,7 +128,7 @@
 (hoarder:register-theme "NicolasPetton/zerodark-theme")
 (hoarder:register-theme "credmp/arjen-grey")
 (hoarder:register-theme "warreq/xres-theme"
-  '(:tag ["xresources"]))
+  '(:tags ["xresources"]))
 (hoarder:register-theme "jonathanchu/atom-one-dark-theme")
 (hoarder:register-theme "vjohansen/dark-nature-theme")
 (hoarder:register-theme "zenmacs/leuven-solarized")
@@ -184,7 +184,7 @@
 (hoarder:register-theme "fade/deepsky-theme")
 (hoarder:register-theme "sjahl/emacs-theme-afterglow")
 (hoarder:register-theme "hlissner/emacs-doom-theme"
-  '(:dependency ["hlissner/emacs-solaire-mode"]))
+  '(:dependencies ["hlissner/emacs-solaire-mode"]))
 (hoarder:register-theme "olkinn/forest-blue-emacs")
 (hoarder:register-theme "shafayetkhan/materialistic-seti")
 (hoarder:register-theme "mssola/soria")
@@ -223,70 +223,70 @@
 (hoarder:register-theme "jimeh/birds-of-paradise-plus-theme.el")
 (hoarder:register-theme "FelixFortis/emacs-darkane-theme")
 (hoarder:register-theme "stealthycoin/xmas-theme"
-  '(:desc "Christmas emacs theme."))
+  '(:description "Christmas emacs theme."))
 (hoarder:register-theme "vic/rebecca-theme"
-  '(:desc "The purple turtle theme for Spacemacs"))
+  '(:description "The purple turtle theme for Spacemacs"))
 (hoarder:register-theme "zk-phi/chillized-theme"
-  '(:desc "[Emacs] A solarized-based dark chill theme with few low-contrast colors"
-    :dependency [ "sellout/emacs-color-theme-solarized"]))
+  '(:description "[Emacs] A solarized-based dark chill theme with few low-contrast colors"
+    :dependencies [ "sellout/emacs-color-theme-solarized"]))
 (hoarder:register-theme "windsorschmidt/betamax-theme"
-  '(:desc "Emacs theme based on http://dotshare.it/dots/1200/ by https://github.com/svbtext"))
+  '(:description "Emacs theme based on http://dotshare.it/dots/1200/ by https://github.com/svbtext"))
 ;; (hoarder:register-theme "zk-phi/monojelly-theme"
-;;   '(:desc "[Emacs] a solarized-based nearly-monochrome theme with jellybeans colors"))
+;;   '(:description "[Emacs] a solarized-based nearly-monochrome theme with jellybeans colors"))
 (hoarder:register-theme "adamgraham/polykai"
-  '(:desc "A dark color scheme inspired by Wimer Hazenberg's Monokai theme."
+  '(:description "A dark color scheme inspired by Wimer Hazenberg's Monokai theme."
     :load-path "Emacs"))
 (hoarder:register-theme "geoffmacintosh/offworlders-theme"
-  '(:desc "A totes minimal dark theme for Emacs"))
+  '(:description "A totes minimal dark theme for Emacs"))
 (hoarder:register-theme "thblt/eziam-theme-emacs"
-  '(:desc "A mostly grayscale theme for Emacs, inspired by Tao and Leuven."))
+  '(:description "A mostly grayscale theme for Emacs, inspired by Tao and Leuven."))
 (hoarder:register-theme "rbanffy/green-screen-emacs"
-  '(:desc "A nice color theme for those who miss green CRTs"))
+  '(:description "A nice color theme for those who miss green CRTs"))
 (hoarder:register-theme "arcticicestudio/nord-emacs"
-  '(:desc "An arctic, north-bluish clean and elegant Emacs theme."))
+  '(:description "An arctic, north-bluish clean and elegant Emacs theme."))
 (hoarder:register-theme "madhat2r/madhat2r-theme"
-  '(:desc "Dark theme for (spac[e]macs) that supports GUI and terminal"))
+  '(:description "Dark theme for (spac[e]macs) that supports GUI and terminal"))
 (hoarder:register-theme "prassee/prassee-emacs-theme"
-  '(:desc "dark theme for Emacs based on Doom Theme (https://github.com/hlissner/emacs-doom-theme)"))
+  '(:description "dark theme for Emacs based on Doom Theme (https://github.com/hlissner/emacs-doom-theme)"))
 (hoarder:register-theme "0rdy/kaolin-theme"
-  '(:desc "A dark jade Emacs theme inspired by Sierra.vim"))
+  '(:description "A dark jade Emacs theme inspired by Sierra.vim"))
 (hoarder:register-theme "tokenrove/pink-bliss-theme"
-  '(:desc "Alex Schroeder's Pink Bliss emacs theme updated for emacs24"))
+  '(:description "Alex Schroeder's Pink Bliss emacs theme updated for emacs24"))
 (hoarder:register-theme "choppsv1/emacs-mandm-theme"
-  '(:desc "M&Ms (the candy) color zenburn derivative "))
+  '(:description "M&Ms (the candy) color zenburn derivative "))
 (hoarder:register-theme "m-cat/nimbus-theme"
-  '(:desc "The best dark theme for Emacs"))
+  '(:description "The best dark theme for Emacs"))
 (hoarder:register-theme "dawidof/emacs-monokai-theme"
-  '(:desc "Monokai theme for emacs"))
+  '(:description "Monokai theme for emacs"))
 (hoarder:register-theme "MaxSt/challenger-deep"
-  '(:desc "Emacs Theme"))
+  '(:description "Emacs Theme"))
 (hoarder:register-theme "gorauskas/darkburn-theme"
-  '(:desc "Dark Burn Theme for Emacs 24"))
+  '(:description "Dark Burn Theme for Emacs 24"))
 (hoarder:register-theme "darrik/tronlight-theme"
-  '(:desc "Emacs port of Dayle Rees and Tim Heckman's TronLight Sublime Text / Textmate theme."))
+  '(:description "Emacs port of Dayle Rees and Tim Heckman's TronLight Sublime Text / Textmate theme."))
 (hoarder:register-theme "martijnat/nubox") 
 (hoarder:register-theme "shaunvxc/dark-mint-theme")
 (hoarder:register-theme "zk-phi/monoplanet-theme"
-  '(:dependency ["sellout/emacs-color-theme-solarized"]))
+  '(:dependencies ["sellout/emacs-color-theme-solarized"]))
 (hoarder:register-theme "dcjohnson/inverse-acme-theme"
-  '(:desc "I forked it because it had a complete listing of all the colors and did most of the lifting for me. "))
+  '(:description "I forked it because it had a complete listing of all the colors and did most of the lifting for me. "))
 (hoarder:register-theme "d11wtq/subatomic256"
-  '(:desc "Emacs color theme"))
+  '(:description "Emacs color theme"))
 (hoarder:register-theme "azer/emacs-jungle-theme"
-  '(:desc "My personal Emacs theme. It may change occasionally."))
+  '(:description "My personal Emacs theme. It may change occasionally."))
 (hoarder:register-theme "jbharat/exotica-theme"
-  '(:desc "Emacs Theme"))
+  '(:description "Emacs Theme"))
 (hoarder:register-theme "mortezaipo/lop-theme"
-  '(:desc "Emacs LOP Theme"
-    :tag ["emacs" "theme"]))
+  '(:description "Emacs LOP Theme"
+    :tags ["emacs" "theme"]))
 (hoarder:register-theme "GuidoSchmidt/emacs-hemera-theme"
-  '(:desc "Light theme for Emacs"
-    :tag ["emacs" "emacs-themes" "light-theme" "theme" "themes"]))
+  '(:description "Light theme for Emacs"
+    :tags ["emacs" "emacs-themes" "light-theme" "theme" "themes"]))
 (hoarder:register-theme "GuidoSchmidt/emacs-nyx-theme"
-  '(:desc "Dark theme for Emacs"
-    :tag ["dark-theme" "emacs" "emacs-theme" "emacs-themes" "theme"]))
+  '(:description "Dark theme for Emacs"
+    :tags ["dark-theme" "emacs" "emacs-theme" "emacs-themes" "theme"]))
 
 ;; (hoarder:register-theme "bobbypriambodo/nord-spacemacs"
-;;     '(:desc "Unofficial port of Nord color palette for Spacemacs."))
+;;     '(:description "Unofficial port of Nord color palette for Spacemacs."))
 
 ;;; init.el ends here
