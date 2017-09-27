@@ -11,11 +11,12 @@
 ;;; OPTIONAL
     ;; brighter source buffers
     ;; (add-hook 'find-file-hook 'doom-buffer-mode)
-    ;; brighter minibuffer when active
-    (add-hook 'minibuffer-setup-hook 'doom-brighten-minibuffer)
-    (require 'doom-neotree)
+    ;; (require 'doom-neotree)
     (setq doom-enable-bold nil)
     (setq doom-enable-italic nil)
+
+    ;; ;; Enable custom neotree theme
+    ;; (doom-themes-neotree-config)  ; all-the-icons fonts must be installed!
     ))
 
 ;;; init.el ends here

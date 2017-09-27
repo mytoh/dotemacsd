@@ -4,10 +4,13 @@
 
 ;;; Code:
 
-(command (highlight-leading-spaces-mode) "highlight-leading-spaces")
-(add-hook 'emacs-lisp-mode-hook #'highlight-leading-spaces-mode)
-(after 'highlight-leading-spaces
-    (set-face-foreground 'highlight-leading-spaces
-     (color-lighten-name (face-background 'default) 12)))
+(use-package highlight-leading-spaces 
+    :commands (highlight-leading-spaces-mode) 
+    :init
+    (add-hook 'emacs-lisp-mode-hook #'highlight-leading-spaces-mode)
+    :config
+    ;; (set-face-foreground 'highlight-leading-spaces
+    ;;                      (color-lighten-name (face-background 'default) 12))
+)
 
 ;;; init.el ends here

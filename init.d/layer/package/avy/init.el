@@ -18,7 +18,8 @@
     (setq avy-all-windows nil)
     (setq avy-background t)
     ;; for dvorak
-    (setq-default avy-keys '(?a ?o ?e ?u ?h ?t ?n ?s)))
+    ;; (setq-default avy-keys '(?a ?o ?e ?u ?h ?t ?n ?s))
+    )
   :config
   (progn
     (set-face-background 'avy-lead-face

@@ -3,11 +3,11 @@
 ;;; Code:
 
 ;;;;; markdown
-(liby 'markdown-mode
-  (command (gfm-mode markdown-mode) "markdown-mode")
-  (mode "\\.md\\'" 'gfm-mode)
-  (mode "\\.markdown\\'" 'gfm-mode)
-  (mode "README\\.md\\'"  'gfm-mode))
+(use-package markdown-mode
+  :commands (gfm-mode markdown-mode)
+  :mode (("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode)
+         ("README\\.md\\'" . gfm-mode)))
 
 
 ;;; init.el ends here

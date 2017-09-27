@@ -4,46 +4,25 @@
 
 ;;; Code:
 
-(after 'evil
-    (req 'evil-multiedit
+(use-package evil-multiedit
+  :after evil
+  :config
 
-      ;; Highlights all matches of the selection in the buffer.
-      (define-key evil-visual-state-map "R" #'evil-multiedit-match-all)
+  (let ((map evil-visual-state-map))
+    (define-key map (kbd "M-d")   #'evil-multiedit-match-and-next)
+    (define-key map (kbd "M-D")   #'evil-multiedit-match-and-prev)
+    (define-key map (kbd "C-M-d") #'evil-multiedit-restore)
+    (define-key map (kbd "R")     #'evil-multiedit-match-all))
 
-      ;; Match the word under cursor (i.e. make it an edit region). Consecutive presses will
-      ;; incrementally add the next unmatched match.
-      ;; (define-key evil-normal-state-map (kbd "M-d") #'evil-multiedit-match-and-next)
-      (define-key evil-normal-state-map (kbd "C->") #'evil-multiedit-match-and-next)
-      ;; Match selected region.
-      ;; (define-key evil-visual-state-map (kbd "M-d") #'evil-multiedit-match-and-next)
-      (define-key evil-visual-state-map (kbd "C->") #'evil-multiedit-match-and-next)
+  (let ((me-map  evil-multiedit-state-map)
+        (mei-map evil-multiedit-insert-state-map))
+    (define-key me-map (kbd "M-d") #'evil-multiedit-match-and-next)
+    (define-key me-map (kbd "M-D") #'evil-multiedit-match-and-prev)
+    (define-key me-map (kbd "RET") #'evil-multiedit-toggle-or-restrict-region)
 
-      ;; Same as M-d but in reverse.
-      ;; (define-key evil-normal-state-map (kbd "M-D") #'evil-multiedit-match-and-prev)
-      ;; (define-key evil-visual-state-map (kbd "M-D") #'evil-multiedit-match-and-prev)
-      (define-key evil-normal-state-map (kbd "C-<") #'evil-multiedit-match-and-prev)
-      (define-key evil-visual-state-map (kbd "C-<") #'evil-multiedit-match-and-prev)
-
-      ;; OPTIONAL: If you prefer to grab symbols rather than words, use
-      ;; `evil-multiedit-match-symbol-and-next` (or prev).
-
-      ;; Restore the last group of multiedit regions.
-      (define-key evil-visual-state-map (kbd "C-M-D") #'evil-multiedit-restore)
-
-      ;; RET will toggle the region under the cursor
-      (define-key evil-multiedit-state-map (kbd "RET") #'evil-multiedit-toggle-or-restrict-region)
-
-      ;; ...and in visual mode, RET will disable all fields outside the selected region
-      (define-key evil-visual-state-map (kbd "RET") #'evil-multiedit-toggle-or-restrict-region)
-
-      ;; For moving between edit regions
-      (define-key evil-multiedit-state-map (kbd "C-n") #'evil-multiedit-next)
-      (define-key evil-multiedit-state-map (kbd "C-p") #'evil-multiedit-prev)
-      (define-key evil-multiedit-insert-state-map (kbd "C-n") #'evil-multiedit-next)
-      (define-key evil-multiedit-insert-state-map (kbd "C-p") #'evil-multiedit-prev)
-
-      ;; Ex command that allows you to invoke evil-multiedit with a regular expression, e.g.
-      (evil-ex-define-cmd "ie[dit]" #'evil-multiedit-ex-match)
-      ))
+    (dolist (map (list me-map mei-map))
+      (define-key map (kbd "C-n") #'evil-multiedit-next)
+      (define-key map (kbd "C-p") #'evil-multiedit-prev)))
+  )
 
 ;;; init.el ends here

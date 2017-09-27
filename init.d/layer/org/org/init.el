@@ -11,9 +11,14 @@
   (when (display-graphic-p)
     (setq org-src-block-faces
           `( ;("emacs-lisp" (:background ,(muki:color-hsl->hex 300 20 30)))
-          ("lisp" (:background ,(muki:color-hsl->hex 190 20 30)))
-          ("python" (:background ,(muki:color-hsl->hex 230 20 29)))
-          ("shell" (:background ,(muki:color-hsl->hex 140 20 20))))))
+            ("lisp" (:background ,(muki:color-hsl->hex 190 20 30)))
+            ("python" (:background ,(muki:color-hsl->hex 230 20 29)))
+            ("shell" (:background ,(muki:color-hsl->hex 140 20 20))))))
+
+  ;;;; [[https://emacs.stackexchange.com/questions/33064/fontify-broken-links-in-org-mode][syntax highlighting - Fontify broken links in org-mode - Emacs Stack Exchange]]
+  (org-link-set-parameters
+   "file"
+   :face (lambda (path) (if (file-exists-p path) 'org-link 'org-warning)))
 
   ;; face for headings
   ;; [[https://www.reddit.com/r/emacs/comments/66w75c/monospace_font_for_calendar_in_orgmode/dglrjnv/][Too Many Requests]]
@@ -280,11 +285,11 @@
   (org-element-map (org-element-parse-buffer 'element) 'headline
     (lambda (h)
       (and (org-element-map h 'drawer
-             (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
-             nil t 'headline)
-           (let ((begin (org-element-property :begin h)))
-             (message "Entry with erroneous properties drawer at %d" begin)
-             begin)))))
+           (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
+           nil t 'headline)
+         (let ((begin (org-element-property :begin h)))
+           (message "Entry with erroneous properties drawer at %d" begin)
+           begin)))))
 
 (cl-defun muki:org-open-link-mpv ()
   (interactive)
@@ -294,16 +299,24 @@
                (link (pcase type
                        (`headline
                         (glof:lookup :raw-value
-                          (cadr context)))
+                         (cadr context)))
                        (`link
                         (glof:lookup :raw-link
-                          (cadr context))))))
+                         (cadr context))))))
     (pcase link
       (`[:just ,l]
        (muki:play-mpv l))
       (`[:nothing]
        (message "can't find any link!")))))
 
+;; [[http://emacs.rubikitch.com/org-sparse-tree-indirect-buffer/][Emacs org-modeの検索機能を16倍パワーアップする方法]]
+(defun org-sparse-tree-indirect-buffer (arg)
+  (interactive "P")
+  (let ((ibuf (switch-to-buffer (org-get-indirect-buffer))))
+    (condition-case _
+        (org-sparse-tree arg)
+      (quit (kill-buffer ibuf)))))
+;; (define-key org-mode-map (kbd "C-c /") 'org-sparse-tree-indirect-buffer)
 
 
 
@@ -312,6 +325,12 @@
 ;; (req 'org-eldoc)
 
 ;; (add-hook 'org-mode-hook #'turn-off-auto-fill)
+
+;;; [[https://fuco1.github.io/2017-05-25-Fontify-done-checkbox-items-in-org-mode.html][Fontify done checkbox items in org-mode]]
+;; (font-lock-add-keywords
+;;  'org-mode
+;;  `(("^[ \t]*\\(?:[-+*]\\|[0-9]+[).]\\)[ \t]+\\(\\(?:\\[@\\(?:start:\\)?[0-9]+\\][ \t]*\\)?\\[\\(?:X\\|\\([0-9]+\\)/\\2\\)\\][^\n]*\n\\)" 1 'org-headline-done prepend))
+;;  'append)
 
 
 ;;; [[https://pank.eu/blog/pretty-babel-src-blocks.html]]
@@ -357,23 +376,23 @@
 
   `prettify-symbols-mode' is used because it has uncollpasing. It's
   may not be efficient."
-         (let* ((case-fold-search t)
-                (at-src-block (save-mark-and-excursion
-                                (beginning-of-line)
-                                (looking-at "^[ \t]*#\\+begin_src[ \t]+[^ \f\t\n\r\v]+[ \t]*"))))
-           ;; Test if we moved out of a block.
-           (when (or (and rasmus/org-at-src-begin
-                        (not at-src-block))
-                     ;; File was just opened.
-                     (eq rasmus/org-at-src-begin -1))
-             (rasmus/org-prettify-src--update))
-           ;; Remove composition if at line; doesn't work properly.
-           ;; (when at-src-block
-           ;;   (with-silent-modifications
-           ;;     (remove-text-properties (match-end 0)
-           ;;                             (1+ (line-end-position))
-           ;;                             '(composition))))
-           (setq rasmus/org-at-src-begin at-src-block)))
+    (let* ((case-fold-search t)
+           (at-src-block (save-mark-and-excursion
+                           (beginning-of-line)
+                           (looking-at "^[ \t]*#\\+begin_src[ \t]+[^ \f\t\n\r\v]+[ \t]*"))))
+      ;; Test if we moved out of a block.
+      (when (or (and rasmus/org-at-src-begin
+                  (not at-src-block))
+               ;; File was just opened.
+               (eq rasmus/org-at-src-begin -1))
+        (rasmus/org-prettify-src--update))
+      ;; Remove composition if at line; doesn't work properly.
+      ;; (when at-src-block
+      ;;   (with-silent-modifications
+      ;;     (remove-text-properties (match-end 0)
+      ;;                             (1+ (line-end-position))
+      ;;                             '(composition))))
+      (setq rasmus/org-at-src-begin at-src-block)))
 
   (defun rasmus/org-prettify-symbols ()
     (mapc (apply-partially 'add-to-list 'prettify-symbols-alist)

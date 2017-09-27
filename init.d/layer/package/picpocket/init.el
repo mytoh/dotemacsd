@@ -2,7 +2,7 @@
 
 ;;; Code:
 
-(liby 'picpocket
-  (command (picpocket picp-dired) "picpocket"))
+(use-package picpocket
+  :commands (picpocket picpocket-dired))
 
 ;;; init.el ends here

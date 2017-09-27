@@ -3,7 +3,8 @@
 ;;; Code:
 
 ;;;;; ace-link
-(req 'ace-link
+(use-package ace-link
+  :config
   (ace-link-setup-default))
 
 

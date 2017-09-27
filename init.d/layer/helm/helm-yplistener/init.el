@@ -19,10 +19,10 @@
                      ;; (dp  "dp.prgrssv.net")
                      (hktv "games.himitsukichi.com/hktv")
                      ;; (turf-page "peercast.takami98.net/turf-page")
-                     (oekaki "oekakiyp.appspot.com")
-                     (event "eventyp.xrea.jp")
+                     ;; (oekaki "oekakiyp.appspot.com")
+                     ;; (event "eventyp.xrea.jp")
                      ;; (message "peercast.takami98.net/message-yp")
-                     ;; (twitchjp "gerogugu.web.fc2.com/tjyp")
+                     (twitchjp "gerogugu.web.fc2.com/tjyp")
                      ))
 
     (validate-setq helm-yplistener-player-type :mpv)

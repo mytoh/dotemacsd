@@ -10,12 +10,11 @@
   (require 'helm-config)
 
 
-  ;; (req 'dired-async
-  ;;   ;; enable dired-async
-  ;;   (enable-mode dired-async-mode))
+  (req 'dired-async
+    ;; enable dired-async
+    (enable-mode dired-async-mode))
 
   (enable-mode helm-mode)
-  (enable-mode helm-push-mark-mode)
 
   (enable-mode helm-autoresize-mode)
   (after 'migemo
@@ -31,7 +30,7 @@
       (when (display-graphic-p)
         (set-face-attribute 'helm-selection nil
                             :background
-          (color-lighten-name background percent)))))
+                            (color-lighten-name background percent)))))
 
   (after 'helm
     (hook 'helm-after-update-hook #'muki:helm-set-face))
@@ -40,10 +39,10 @@
     "Select the 2nd action for the currently selected candidate.
 This happen when point is at the end of minibuffer.
 Otherwise goto the end of minibuffer."
-         (interactive)
-         (if (eolp)
-             (helm-select-nth-action 1)
-           (end-of-line)))
+    (interactive)
+    (if (eolp)
+        (helm-select-nth-action 1)
+      (end-of-line)))
 
   (after 'helm
     ;; bind C-1 to C-9 to actions
@@ -192,7 +191,7 @@ Otherwise goto the end of minibuffer."
     (add-to-list 'helm-find-files-actions
                  '("EWW" . eww-open-file) 'append)
 
-    ;; insert a candidate
+    ;;;; insert a candidate
     (cl-defmethod helm-setup-user-source ((source helm-source-ffiles))
       (helm-source-add-action-to-source-if
        "Insert"
@@ -203,13 +202,15 @@ Otherwise goto the end of minibuffer."
     ;;;; remove current and parent directory from find-files source
     (cl-defmethod helm-setup-user-source ((source helm-source-ffiles))
       (eieio-oset source 'candidate-transformer
-                  (lambda (candidates)
-                    (pcase (seq-length candidates)
-                      (2 candidates)
-                      (_
-                       (colle:remove
-                        #'helm-ff-dot-file-p
-                        candidates))))))
+                  (append (eieio-oref source 'candidate-transformer)
+                          (list
+                           (lambda (candidates)
+                             (pcase (seq-length candidates)
+                               (2 candidates)
+                               (_
+                                (colle:remove
+                                 #'helm-ff-dot-file-p
+                                 candidates))))))))
 
     
     ;;;; fix for external program 

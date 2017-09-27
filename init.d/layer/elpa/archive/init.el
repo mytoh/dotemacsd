@@ -12,6 +12,8 @@
   ;; [[https://user42.tuxfamily.org/elpa/index.html][ELPA Archive]]
   (add-to-list 'package-archives
                '("user42" . "https://download.tuxfamily.org/user42/elpa/packages/"))
+  ;; [[http://blog.davep.org/delpa/][delpa — davep’s emacs lisp package archive | delpa]]
+  (add-to-list 'package-archives '("delpa" . "http://blog.davep.org/delpa/"))
   ;; (add-to-list 'package-archives '("SC" . "http://joseito.republika.pl/sunrise-commander/") 'append)
 
   (setq package-archive-priorities

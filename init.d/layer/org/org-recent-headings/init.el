@@ -5,8 +5,7 @@
 ;;; Code:
 
 (use-package org-recent-headings
-  :commands (org-recent-headings-mode)
-  :init
+  :config
   (org-recent-headings-mode))
 
 ;;; init.el ends here

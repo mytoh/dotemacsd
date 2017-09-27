@@ -63,7 +63,16 @@
                      "Subnautica"
                      "ReCore"
                      "The Hunter"
-                     "Sailing Simulator")))
+                     "Sailing Simulator"
+                     "Age of Empires II: The Conquerors"
+                     "Kingdoms and Castles"
+                     "Splatoon 2"
+                     "Autonauts"
+                     "No Man's Sky"
+                     "Meadow"
+                     "The First Tree"
+                     "Dear Esther"
+                     "Elona - Eternal League of Nefia")))
 
   (add-global-key "C-c h" #'helm-muki)
 

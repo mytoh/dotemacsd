@@ -4,7 +4,8 @@
 
 ;;; Code:
 
-(req 'adaptive-wrap
+(use-package adaptive-wrap
+  :config
   (adaptive-wrap-prefix-mode))
 
 ;;; init.el ends here

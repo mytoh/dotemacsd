@@ -4,24 +4,19 @@
 
 ;;; Code:
 
-(use-package helm-find-files-ext
-  :commands (helm-ff-ext-skipping-dots-recenter
-             helm-ff-ext-enable-skipping-dots
-             helm-ff-ext-enable-zsh-path-expansion
-             helm-ff-ext-enable-auto-path-expansion)
+(use-package helm-ext
+  :commands (helm-ext-ff-enable-skipping-dots
+             helm-ext-ff-enable-zsh-path-expansion 
+             helm-ext-ff-enable-auto-path-expansion
+             helm-ext-minibuffer-enable-header-line-maybe)
   :after helm
   :config
   (progn
-    ;; (helm-ff-ext-skipping-dots-recenter t)
-    ;; (helm-ff-ext-enable-skipping-dots t)
-    (helm-ff-ext-enable-zsh-path-expansion t)
-    (helm-ff-ext-enable-auto-path-expansion t)))
+    (helm-ext-ff-enable-skipping-dots t)
+    (setq helm-ext-ff-skipping-dots-recenter t)
+    (helm-ext-ff-enable-zsh-path-expansion t)
+    (helm-ext-ff-enable-auto-path-expansion t)
+    (helm-ext-minibuffer-enable-header-line-maybe t)))
 
-(use-package helm-minibuffer-ext
-  :after helm
-  :config
-  (progn
-    (helm-minibuffer-ext-enable-header-line-maybe t)
-    ))
 
 ;;; init.el ends here

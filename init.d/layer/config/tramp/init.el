@@ -19,6 +19,7 @@
   ;;               tramp-file-name-regexp))
 
   ;; tramp
+  ;; [[http://qiita.com/miyakou1982/items/d05e1ce07ad632c94720][TRAMPを使ってリモートのファイルを弄る - Qiita]]
   ;; (add-to-list 'tramp-default-proxies-alist
   ;;              '(nil "\\`root\\'" "/ssh:%h:"))
   ;; (add-to-list 'tramp-default-proxies-alist

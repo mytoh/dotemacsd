@@ -15,12 +15,12 @@
                                                      muki:evil-leader-key
                                                    "SPC")))
                                 (glof:update args
-                                             :evil-keys
-                                  (lambda (keys)
-                                    (colle:map
-                                     (lambda (key)
-                                       (concat prefix " " key))
-                                     keys)))))
+                                           :evil-keys
+                                           (lambda (keys)
+                                             (colle:map
+                                              (lambda (key)
+                                                (concat prefix " " key))
+                                              keys)))))
       `(bind-map ,mapname ,@args)))
 
   (bind-map my-base-leader-map
@@ -276,6 +276,10 @@
   (liby 'helm-swoop
     (bind-map-set-keys my-base-leader-search-map
       "i" #'helm-swoop-without-pre-input))
+
+  ;; (liby 'helm-swish
+  ;;   (bind-map-set-keys my-base-leader-search-map
+  ;;     "i" #'helm-swish))
   
   (liby 'emms
     (bind-map-set-keys my-base-leader-emms-map
@@ -353,6 +357,12 @@
       "jJ" 'evil-avy-goto-char-2
       "jl" 'evil-avy-goto-line
       "jw" 'evil-avy-goto-word-or-subword-1))
+
+  (liby 'dumb-jump
+    (bind-map-set-keys my-base-leader-map
+      ;; https://github.com/syl20bnr/spacemacs/blob/bd7ef98e4c35fd87538dd2a81356cc83f5fd02f3/layers/%2Bspacemacs/spacemacs-misc/packages.el
+      "jq" #'dumb-jump-quick-look))
+  
 
   )
 

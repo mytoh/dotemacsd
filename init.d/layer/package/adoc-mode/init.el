@@ -2,8 +2,8 @@
 
 ;;; Code:
 
-(liby 'adoc-mode
-  (command (adoc-mode) "adoc-mode")
-  (mode "\\.adoc\\'" #'adoc-mode))
+(use-package adoc-mode
+  :commands (adoc-mode)
+  :mode ("\\.adoc\\'" . adoc-mode))
 
 ;;; init.el ends here

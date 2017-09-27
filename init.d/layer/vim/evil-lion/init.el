@@ -5,7 +5,6 @@
 ;;; Code:
 
 (use-package evil-lion
-    :commands (evil-lion-mode)
   :config
   (evil-lion-mode))
 

@@ -28,8 +28,8 @@
 
 (muki-layer:load-layers 'config
   '(
-                        setting
-                        ))
+    setting
+    ))
 
 (muki-layer:load-layers 'package-manager
   '(boot
@@ -90,7 +90,7 @@
     org-writers-room
     org-quick-peek
     org-sticky-header
-    ;; org-recent-headings
+    org-recent-headings
     ))
 
 (muki-layer:load-layers 'package
@@ -127,10 +127,19 @@
     olivetti
     rainbow-mode
     tumblesocks
-    flatline
     git-gutter
 
-    ;; emms
+    ;; flatline
+    ;; smart-mode-line
+    spaceline
+    spaceline-all-the-icons
+    ;; spaceline
+    ;; telephone-line
+
+    emms
+    emms-mobile-remote
+    emms-mode-line-cycle
+    emms-queue
     ;; emms-info
     ;; emms-state
     ;; emms-mpd
@@ -171,7 +180,7 @@
     fish-mode
     debug-print
     bookmark-extensions
-    bookmark-plus
+    ;; bookmark-plus
     lehtifile-mode
     rebuildfm
     sos
@@ -197,7 +206,7 @@
 
     ;; guide-key
     ;; guide-key-tip
-    which-key
+    ;; which-key
 
     clojure-mode
     clojure-cheatsheet
@@ -238,6 +247,7 @@
 
     super-save
     ;; auto-save-buffers-enhanced
+    ;; focus-autosave-mode
 
     compilation-highlight
     conkeror-minor-mode
@@ -284,6 +294,7 @@
     github-notifier
     region-state
     prettify-symbols
+    prettify-utils
     erefactor
     elm-mode
     unkillable-scratch
@@ -329,7 +340,10 @@
     ;; random-idle-quote
     tron
     ;; mini-header-line
+
     ;; spu // cause recent emacs fail?
+    auto-package-update
+
     sshman
     emacs-reaction-sounds
     hyperbole
@@ -361,11 +375,12 @@
     digit-groups
     dim-autoload    
     all-the-icons
+    all-the-icons-ivy
     netspeak
     neotree
     adaptive-wrap
     org-easy-img-insert
-    magithub
+    ;; magithub
     ids-edit
     visual-fill-column
     engine-mode
@@ -402,6 +417,7 @@
     language-detection
     ucs-cmds
     avy
+    ;; avy-migemo
     grab-x-link
     anything
     color-theme-buffer-local
@@ -431,10 +447,59 @@
     waf-mode
     ereader
     find-file-in-repository
-    omni-quotes
-    keyfreq
+    bpr
+    term-run
+    web-search
+    ;; omni-quotes
+    ;; keyfreq
     include-anywhere
     semantic-refactor
+    icons-in-terminal
+    ;;sidebar
+    helpful
+    auto-minor-mode
+    json-mode
+    ;;password-vault-plus
+    http
+    ;; org-link-minor-mode ; orglink
+    container
+    emacs-home
+    keyinfo
+    ;; vc-msg
+    commit-msg-prefix
+    peval
+    face-explorer
+    makefile-executor
+    hentaigana
+    frame-bufs
+    dad-joke
+    zen-mode
+    git-complete
+    pair-mode
+    shrink-whitespace
+    unfill
+    with-simulated-input
+    iqa
+    outline-toc
+    expando
+    look-mode
+    imgix
+    background
+    solaire-mode
+    copy-file-on-save
+    Sakurahasi
+    ido-completing-read-plus
+    amx
+    re-builder
+    nov
+    syntactic-close
+    ;;circadian
+    dumb-jump
+    bonjourmadame
+    ;; drill-instructor
+    ;; mixed-pitch
+    ;; togetter
+
     ;; quoted-scratch
     ;; goto-addr
     ;; elint
@@ -464,7 +529,7 @@
     ;; smart-newline
     ;; random-splash-image
     ;; hl-sentence
-    ;; centered-window-mode
+    centered-window-mode
     ;; real-auto-save
     ;; bqlist-lock
     ;; eshell-alias
@@ -507,7 +572,7 @@
     ;; col-highlight
     ;; highlight-symbol
     symbol-overlay
-    highlight-thing
+    ;; highlight-thing
 
     volatile-highlights
     highlight-defined
@@ -525,6 +590,7 @@
     ;; indent-guide
 
     highlight-parentheses
+    highlight-function-calls
     ;; mic-paren
     ;; flash-paren
     paren
@@ -575,13 +641,15 @@
     evil-ReplaceWithRegister
     evil-visual-replace
 
-    evil-org-mode
+    ;; evil-org-mode
     evil-ediff
     opener
     evil-adjust
     evil-indent-plus
     evil-lion
     evil-visual-replace
+    ;; evil-integrations
+    evil-expat
     ;; targets
     ;; org-evil
     
@@ -631,7 +699,7 @@
     helm-pages
     helm-xmms2
     helm-recoll
-    helm-lobste.rs
+    helm-lobsters
     helm-hackernews
     helm-ls-git
     helm-pt
@@ -663,9 +731,12 @@
     helm-tramp
     helm-navi
     helm-xref
+    helm-directory
+    helm-swish
+    ;; helm-frame
     ;; helm-ext
     ;; helm-delicious
-    ))
+    )) 
 
 (muki-layer:load-layers 'auto-completion
   '(company
@@ -673,6 +744,7 @@
     company-statistics
     ;; company-ngram
     company-emoji
+    company-fontawesome
     ;; company-quickhelp
     ;; company-org-headings
     ;; company-dict
@@ -752,6 +824,7 @@
     birds-of-paradise-plus-theme
     doom-themes
     doomsday
+    spacemacs-theme
     ;; chillized-theme
     ))
 

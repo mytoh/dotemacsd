@@ -3,7 +3,7 @@
 ;;; Code:
 
 (use-package ace-jump-helm-line
-  :defer 30
+  :after helm
   :commands (ace-jump-helm-line)
   :init
   (use-package helm

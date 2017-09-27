@@ -14,9 +14,10 @@
       (add-alias "👭" "sis") ; "⚢" 
       (add-alias "☠"  "hoarder")
       (add-alias "🥛" "muki") 
+      ;; (add-alias "☕" "muki") 
       (add-alias "🍱" "colle")
       (add-alias "👚" "mesh")
-      ;; (add-alias "🧤" "glof")
+      (add-alias "🧤" "glof")
       )))
 
 ;;; init.el ends here

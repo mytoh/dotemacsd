@@ -219,6 +219,7 @@
 
 ")
 
+
 ;;;; load newer file, .el or .elc
 (enable-option load-prefer-newer)
 
@@ -243,7 +244,7 @@
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
 ;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson, noctilux, erosiond, material
-(defvar muki:x-theme 'nord)
+(defvar muki:x-theme 'exotica)
 (defvar muki:term-theme 'flatland)
 (defconst muki:favorite-themes
   '(comidia planet monokai molokai firebelly
@@ -256,12 +257,14 @@
             hamburg omtose-phellack base16-harmonic16-dark
             Motoko motoko-night base16-oceanicnext-dark
             hyperplane iceberg myth forest-blue soria metalheart
-            zweilight oceanic redbelly doom-one doom-molokai firewatch
+            zweilight oceanic redbelly doom-one doom-molokai
+            doom-nova doom-tomorrow-night doom-vibrant firewatch
             base16-ashes base16-atelier-cave base16-atelier-lakeside
             base16-ocean-brian acai sourcerer creamsody
             doomsday-dark solarized-grey solarized-dark
             rebecca darktooth sirthias nord kaolin
-            tao-yin challenger-deep))
+            tao-yin challenger-deep obsidian
+            exotica lop tronesque))
 
 ;; (enable-option select-enable-clipboard
 ;;                select-enable-primary)
@@ -284,7 +287,7 @@
 ;;                       :background "#3b272d"))
 
 ;;;; proxy
-;; (set-option url-proxy-services '(("http" . "192.168.1.22:8080")))
+;; (set-option url-proxy-services '(("http" . "192.168.3.22:8080")))
 
 ;;;; info
 (after 'info
@@ -490,5 +493,10 @@
 ;; [[http://sachachua.com/blog/2017/04/emacs-pasting-with-the-mouse-without-moving-the-point-mouse-yank-at-point/][Emacs: Pasting with the mouse without moving the point – mouse-yank-at-point –]]
 (setq mouse-yank-at-point t)
 
+;; [[https://github.com/syl20bnr/spacemacs/issues/3623#issuecomment-284534269]["evil-search-forward" freezes emacs sometime in org-mode · Issue #3623 · syl20bnr/spacemacs · GitHub]]
+(setq-default search-invisible t)
+
+
+(setq select-active-regions 'only)
 
 ;;; config-setting.el ends here

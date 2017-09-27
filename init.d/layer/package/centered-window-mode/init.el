@@ -2,7 +2,9 @@
 
 ;;; Code:
 
-(liby 'centered-window-mode
-  (command (centered-window-mode) "centered-window-mode"))
+(use-package centered-window-mode
+  :commands (centered-window-mode)
+  :init
+  (setq cwm-centered-window-width 200))
 
 ;;; init.el ends here

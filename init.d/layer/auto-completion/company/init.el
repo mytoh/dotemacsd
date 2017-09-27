@@ -3,7 +3,8 @@
   :init
   (progn
     (add-hook 'after-init-hook #'global-company-mode)
-    (setq company-require-match 'never))
+    ;; (setq company-require-match 'never)
+    )
   :config
   (progn
     (bind-key "C-j" #'company-select-next
