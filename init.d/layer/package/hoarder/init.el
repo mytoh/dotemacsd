@@ -24,22 +24,22 @@
                                       (`[nil ,_]
                                        (format
                                         "(%s \"%s\"
-    '(:tag %s))\n"
+    '(:tags %s))\n"
                                         fname
                                         (seq-subseq url 19)
                                         (colle:map (lambda (topic) (concat "\"" topic "\"" )) topics)))
                                       (`[,_ []]
                                        (format
                                         "(%s \"%s\"
-    '(:desc %s))\n"
+    '(:description %s))\n"
                                         fname
                                         (seq-subseq url 19)
                                         (escape (decode-coding-string desc 'utf-8))))
                                       (`[,_ ,_]
                                        (format
                                         "(%s \"%s\"
-    '(:desc %s
-      :tag %s))\n"
+    '(:description %s
+      :tags %s))\n"
                                         fname
                                         (seq-subseq url 19)
                                         (escape (decode-coding-string desc 'utf-8))
@@ -81,8 +81,8 @@
                               (taglist (assoc-default 'tag_list data)))
                       (insert
                        (format "(hoarder:register \"%s\"
-'(:desc \"%s\"
-:tag %s))\n"
+'(:description \"%s\"
+:tags %s))\n"
                                (pcase url ((and u
                                           (rx ".git"))
                                        u)
@@ -108,8 +108,8 @@
                               (taglist (assoc-default 'tag_list data)))
                       (insert
                        (format "(hoarder:fetch \"%s\"
-'(:desc \"%s\"
-:tag %s))\n"
+'(:description \"%s\"
+:tags %s))\n"
                                (pcase url ((and u
                                           (rx ".git"))
                                        u)
