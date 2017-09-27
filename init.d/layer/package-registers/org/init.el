@@ -12,6 +12,12 @@
     :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
     :info "doc"
     :tag ["org"]))
+;; (hoarder:register "git://repo.or.cz/org-mode.git"
+;;   '(:load-path ["lisp" "contrib/lisp"]
+;;     :compile nil
+;;     :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
+;;     :info "doc"
+;;     :tag ["org"]))
 (hoarder:register "tj64/org-hlc")
 
 (hoarder:register "alphapapa/outorg"
@@ -132,10 +138,27 @@
 (hoarder:register "alphapapa/org-sticky-header"
   '(:desc "Show off-screen Org heading at top of window"))
 (hoarder:register "alphapapa/org-recent-headings"
-  '(:desc "Go to recently used Org headings"))
+  '(:desc "Go to recently used Org headings"
+    :dependency [("alphapapa/frecency.el"
+                  :dependency ["plexus/a.el"])]))
 (hoarder:register "alphapapa/org-quick-peek"
   '(:desc "Quick inline peeks at agenda items and linked nodes in Org-mode"
     :tag ["org-mode" "quick-peek"]
     :dependency ["cpitclaudel/quick-peek"]))
+(hoarder:register "alphapapa/org-super-agenda"
+  '(:desc "Supercharge your Org daily/weekly agenda by dividing it into sections"))
+(hoarder:register "alphapapa/org-web-tools"
+  '(:desc "Commands and functions for retrieving web page content and processing it into and displaying it as Org-mode content."))
+(hoarder:register "tumashu/org2web"
+  '(:desc "A static site generator based on org-mode                "))
+(hoarder:register "alphapapa/org-pocket"
+  '(:desc "Tools to use Pocket with Org-mode"
+    :memo "[[https://www.reddit.com/r/emacs/comments/6ugm7y/cft_capture_items_from_pocket_reading_list_to_org/][{CFT} Capture items from Pocket reading list to Org mode : emacs]]"))
+(hoarder:register "claviclaws/org-mac-protocol"
+  '(:desc "A suite of AppleScripts and elisp to allow annotation of Emacs org-mode files from other OS X applications"))
+
+(hoarder:fetch "akicho8/org_tp"
+  '(:desc "OrgTp shows text table like emacs org-table for easy reading."
+    :tag ["emacs" "formatter" "org-table" "ruby" "table"]))
 
 ;;; init.el ends here

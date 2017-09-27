@@ -164,7 +164,7 @@
 (hoarder:register "torgeir/helm-hunks.el")
 (hoarder:register "maximus12793/helm-youtube"
   '(:tag ["youtube"]))
-(hoarder:register "emacsorphanage/helm-ls-svn"
+(hoarder:register "xuchunyang/helm-ls-svn"
   '(:tag ["svn"]))
 (hoarder:register "ShingoFukuyama/helm-recentd"
   '(:tag ["helm"]))
@@ -183,6 +183,20 @@
 (hoarder:register "brotzeitmacher/helm-xref"
   '(:desc "Helm interface for xref results"
     :tag ["helm" "xref"]))
+(hoarder:register "https://gitlab.com/cryptomaniac/helm-librarian"
+  '(:type :git))
+(hoarder:register "masasam/emacs-helm-directory"
+  '(:desc "Select directory with helm and select the file in this directory with helm interface."
+    :tag ["emacs" "emacs-lisp" "helm"]))
+(hoarder:register "iory/emacs-helm-ghs"
+  '(:dependency ["sonatard/ghs"])) 
+(hoarder:register "chee/helm-frame"
+  '(:desc "open helm buffers in a dedicated frame"))
+(hoarder:register "xuchunyang/helm-lastpass"
+  '(:desc "Helm interface of LastPass"
+    :dependency ["https://gitlab.com/u11/csv.el.git"]))
+(hoarder:register "alphapapa/helm-swish"
+  '(:desc "Like helm-swoop, but a little bit faster"))
 
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tag ["helm"]

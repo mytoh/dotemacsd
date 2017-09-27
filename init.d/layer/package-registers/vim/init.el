@@ -16,12 +16,12 @@
 (hoarder:register "emacs-evil/evil"
   '(:build ["gmake clean doc all"]
     :info "doc"
-    :dependency ["emacsmirror/goto-chg"
+    :dependency ["emacs-evil/goto-chg"
                  "http://www.dr-qubit.org/git/undo-tree.git"]
     :tag ["evil"]))
 (hoarder:register "cofi/evil-leader"
   '(:tag ["evil"]))
-(hoarder:register "timcharper/evil-surround"
+(hoarder:register "emacs-evil/evil-surround"
   '(:tag ["evil"]))
 (hoarder:register "redguardtoo/evil-nerd-commenter"
   '(:tag ["evil"]))
@@ -154,5 +154,9 @@
   '(:desc "Search and replace within Emacs evil-mode's visual blocks (rectangle selections)"
     :tag ["emacs" "evil" "rectangle" "visual-state"]
     :dependency ["joddie/pcre2el"]))
+(hoarder:register "jojojames/evil-integrations"
+  '(:desc "Provides a sane set of defaults for use with Evil Mode."))
+(hoarder:register "edkolev/evil-expat"
+  '(:desc "Extra evil ex commands"))
 
 ;;; init.el ends here

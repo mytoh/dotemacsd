@@ -48,7 +48,6 @@
 ;; (hoarder:register-theme "xzerocode/aurora-theme")
 (hoarder:register-theme "purcell/hipster-theme")
 (hoarder:register-theme "purcell/aurora-theme")
-(hoarder:register-theme "fommil/darcula-theme-emacs")
 (hoarder:register-theme "emacsfodder/emacs-waher-theme")
 (hoarder:register-theme "emacsfodder/emacs-purple-haze-theme")
 (hoarder:register-theme "emacsfodder/emacs-clues-theme")
@@ -145,7 +144,7 @@
 (hoarder:register-theme "waymondo/apropospriate-theme")
 (hoarder:register-theme "https://gitlab.com/franksn/majapahit-theme.git")
 (hoarder:register-theme "jmdeldin/underwater-theme.el")
-(hoarder:register-theme "ysz/hhazure")
+(hoarder:register-theme "yakovzaytsev/hhazure") 
 (hoarder:register-theme "bkruczyk/badwolf-emacs")
 (hoarder:register-theme "fourier/idea-darkula-theme")
 (hoarder:register-theme "uemurax/japanese-theme"
@@ -184,7 +183,8 @@
 (hoarder:register-theme "0x414A/glacier-theme")
 (hoarder:register-theme "fade/deepsky-theme")
 (hoarder:register-theme "sjahl/emacs-theme-afterglow")
-(hoarder:register-theme "hlissner/emacs-doom-theme")
+(hoarder:register-theme "hlissner/emacs-doom-theme"
+  '(:dependency ["hlissner/emacs-solaire-mode"]))
 (hoarder:register-theme "olkinn/forest-blue-emacs")
 (hoarder:register-theme "shafayetkhan/materialistic-seti")
 (hoarder:register-theme "mssola/soria")
@@ -196,7 +196,6 @@
 (hoarder:register-theme "mattly/emacs-farmhouse-theme")
 (hoarder:register-theme "JayZar21/orangespacs")
 (hoarder:register-theme "terry3/oceanic-theme")
-(hoarder:register-theme "vyp/redbelly")
 (hoarder:register-theme "franksn/ambience-theme"
   '(:load-path ["variants"]))
 (hoarder:register-theme "11111000000/tao-theme-emacs")
@@ -263,6 +262,29 @@
   '(:desc "Emacs Theme"))
 (hoarder:register-theme "gorauskas/darkburn-theme"
   '(:desc "Dark Burn Theme for Emacs 24"))
+(hoarder:register-theme "darrik/tronlight-theme"
+  '(:desc "Emacs port of Dayle Rees and Tim Heckman's TronLight Sublime Text / Textmate theme."))
+(hoarder:register-theme "martijnat/nubox") 
+(hoarder:register-theme "shaunvxc/dark-mint-theme")
+(hoarder:register-theme "zk-phi/monoplanet-theme"
+  '(:dependency ["sellout/emacs-color-theme-solarized"]))
+(hoarder:register-theme "dcjohnson/inverse-acme-theme"
+  '(:desc "I forked it because it had a complete listing of all the colors and did most of the lifting for me. "))
+(hoarder:register-theme "d11wtq/subatomic256"
+  '(:desc "Emacs color theme"))
+(hoarder:register-theme "azer/emacs-jungle-theme"
+  '(:desc "My personal Emacs theme. It may change occasionally."))
+(hoarder:register-theme "jbharat/exotica-theme"
+  '(:desc "Emacs Theme"))
+(hoarder:register-theme "mortezaipo/lop-theme"
+  '(:desc "Emacs LOP Theme"
+    :tag ["emacs" "theme"]))
+(hoarder:register-theme "GuidoSchmidt/emacs-hemera-theme"
+  '(:desc "Light theme for Emacs"
+    :tag ["emacs" "emacs-themes" "light-theme" "theme" "themes"]))
+(hoarder:register-theme "GuidoSchmidt/emacs-nyx-theme"
+  '(:desc "Dark theme for Emacs"
+    :tag ["dark-theme" "emacs" "emacs-theme" "emacs-themes" "theme"]))
 
 ;; (hoarder:register-theme "bobbypriambodo/nord-spacemacs"
 ;;     '(:desc "Unofficial port of Nord color palette for Spacemacs."))

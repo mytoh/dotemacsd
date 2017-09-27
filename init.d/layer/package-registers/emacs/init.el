@@ -11,9 +11,9 @@
 ;; (hoarder:register "jonathanchu/emacs-powerline")
 ;; (hoarder:register "raugturi/powerline-evil"
 ;;   '(:tag ["evil" "mode-line"]))
-;; (hoarder:register "milkypostman/powerline"
-;;   '(:tag ["mode-line"]))
-(hoarder:register "Dewdrops/powerline")
+(hoarder:register "milkypostman/powerline"
+  '(:tag ["mode-line"]))
+;; (hoarder:register "Dewdrops/powerline")
 (hoarder:register "TeMPOraL/nyan-mode")
 (hoarder:register "daimrod/highlight-sexp")
 (hoarder:register "m2ym/undohist-el")
@@ -117,6 +117,9 @@
   '(:tag ["company" "dictionary" "english"]))
 (hoarder:register "zargener/company-web-mode"
   '(:tag ["company" "web"]))
+(hoarder:register "ameuret/company-fontawesome"
+  '(:desc "A company-mode backend for autocompletion of Font Awesome class names, with previews !"
+    :tag ["emacs-mode" "font-awesome" "productivity"]))
 (hoarder:register "syohex/emacs-git-gutter"
   '(:tag ["git"]))
 (hoarder:register "syohex/emacs-git-gutter-fringe"
@@ -286,7 +289,7 @@
 (hoarder:register "purcell/elisp-slime-nav")
 (hoarder:register "gcr/tumblesocks"
   '(:dependency ["psanford/emacs-oauth"
-                 "git://jblevins.org/git/markdown-mode.git"
+                 "jrblevin/markdown-mode"
                  "emacsmirror/htmlize"]
     :tag ["tumblr"]))
 (hoarder:register "thomblake/js3-mode"
@@ -368,7 +371,7 @@
     :tag ["eshell"]))
 (hoarder:register "jschaf/esup")
 (hoarder:register "vermiculus/sx.el"
-  '(:dependency ["git://jblevins.org/git/markdown-mode.git"]))
+  '(:dependency ["jrblevin/markdown-mode"]))
 (hoarder:register "nlamirault/emacs-travis"
   '(:dependency ["magnars/s.el"
                  ("magnars/dash.el" ( :compile nil))
@@ -453,7 +456,7 @@
                                 ("magnars/dash.el" (:compile nil))
                                 ("lunaryorn/pkg-info.el"
                                  (:dependency ["cask/epl"]))]))
-                 "emacsmirror/redshank"
+                 "emacsattic/redshank"
                  "magnars/s.el"]))
 (hoarder:register "rakete/pixel-mode"
   '(:tag ["pixel_art"]))
@@ -719,7 +722,7 @@
   '(:tag ["unicode" "mode-line"]))
 (hoarder:register "tuhdo/semantic-refactor"
   '(:tag ["refactoring" "format"]))
-(hoarder:register "momomo5717/emms-player-mpv-jp-radio-settings"
+(hoarder:register "momomo5717/emms-player-mpv-jp-radios"
   '(:tag ["radio" "emms" "mpv"]))
 (hoarder:register "momomo5717/emms-player-simple-mpv"
   '(:tag ["emms" "mpv"]))
@@ -731,7 +734,8 @@
 (hoarder:register "tsdh/highlight-parentheses.el")
 (hoarder:register "jordonbiondo/column-enforce-mode")
 (hoarder:register "wasamasa/svg-2048"
-  '(:dependency ["tali713/esxml"]))
+  '(:dependency [("tali713/esxml"
+                  :memo "[[http://emacsninja.com/posts/parsing-the-hard-way.html][Emacs Ninja - Parsing the Hard Way]]")]))
 (hoarder:register "abo-abo/avy")
 (hoarder:register "marcowahl/emacsshot"
   '(:tag ["screenshot"]))
@@ -886,6 +890,8 @@
   '(:tag ["region"]))
 (hoarder:register "xuchunyang/eshell-z"
   '(:tag ["eshell" "z"]))
+;; (hoarder:register "travisjeffery/eshell-z.el"
+;;   '(:tag ["eshell" "z" "autojump"]))
 (hoarder:register "tom-tan/esh-buf-stack"
   '(:tag ["eshell" "zsh"]))
 (hoarder:register "Simplify/flycheck-css-colorguard"
@@ -966,14 +972,15 @@
   '(:tag ["ascii_art" ]))
 (hoarder:register "ryuslash/eshell-fringe-status"
   '(:tag ["eshell"]))
-(hoarder:register "emacsmirror/mic-paren"
-  '(:tag ["parentheses"]))
+(hoarder:register "emacsattic/mic-paren"
+  '(:desc "Advanced highlighting of matching parentheses"))
 (hoarder:register "skyer9/ac-kill-ring"
   '(:tag ["auto-complete" "kill-ring"]))
 (hoarder:register "ocaml/tuareg"
   '(:tag ["ocaml"]))
-(hoarder:register "NixOS/nix"
-  '(:load-path "misc/emacs"))
+(hoarder:register "nixos/nix-mode"
+  '(:desc "An Emacs major mode for editing Nix expressions."
+    :tag ["emacs" "major-mode" "nix" "nixpkgs" "syntax-highlighting"]))
 (hoarder:register "ralesi/ranger.el")
 (hoarder:register "https://bitbucket.org/inigoserna/per-buffer-theme.el"
   '(:type :hg))
@@ -1001,9 +1008,6 @@
 (hoarder:register "ikazuhiro/emoji-display"
   '(:tag ["emoji"]))
 ;; (hoarder:register "NicolasPetton/seq.el")
-(hoarder:register "mbunkus/simple-rtm"
-  '(:tag ["org" "remember_the_milk"]
-    :load-path "lisp"))
 (hoarder:register "rolandwalker/hardhat")
 (hoarder:register "aaron-em/niceify-info.el"
   '(:tag ["info"]))
@@ -1103,7 +1107,8 @@
   '(:tag ["header-line"]))
 (hoarder:register "tarsius/no-littering")
 (hoarder:register "davep/festival.el"
-  '(:tag ["festival" "audio" "synthesis"]))
+  '(:tag ["festival" "audio" "synthesis"]
+    :memo "[[https://www.emacswiki.org/emacs/festival.el][EmacsWiki: festival.el]]"))
 (hoarder:register "aaronbieber/tiny-menu.el")
 (hoarder:register "rlupton20/sshman"
   '(:tag ["ssh" "term"]))
@@ -1118,8 +1123,6 @@
   '(:tag ["sound"]))
 (hoarder:register "syohex/emacs-octicons"
   '(:tag ["emoji" "github" "octicon" "unicode" "icon"]))
-(hoarder:register "mutbuerger/twitch-streamer"
-  '(:tag ["twitch" "livestreamer"]))
 (hoarder:register "akatov/pretty-mode"
   '(:tag ["unicode" "prettify" "symbol"]))
 (hoarder:register "purcell/disable-mouse"
@@ -1200,8 +1203,6 @@
   '(:tag ["eshell" "clojure" "leiningen"]))
 (hoarder:register "tom-tan/esh-help"
   '(:tag ["eshell"]))
-(hoarder:fetch "travisjeffery/eshell-z.el"
-  '(:tag ["eshell" "z" "autojump"]))
 (hoarder:register "akicho8/ecd"
   '(:tag ["eshell"]))
 (hoarder:register "emacsattic/em-zle"
@@ -1237,8 +1238,6 @@
                  "skeeto/emacs-memoize"]))
 (hoarder:fetch"domtronn/all-the-icons.el.wiki"
   '(:tag ["emacs" "icon" "font"]))
-(hoarder:register "mutbuerger/ert-flash-modeline"
-  '(:tag ["ert" "modeline"]))
 (hoarder:register "emacs-pe/lyrics.el"
   '(:tag ["music" "lyric"]))
 (hoarder:register "Fuco1/blablabla"
@@ -1264,7 +1263,6 @@
   '(:desc "elo: simple project scripting for emacs"))
 (hoarder:register "nlamirault/emacs-gitlab"
   '(:tag ["gitlab"]))
-(hoarder:fetch "skeeto/emacs-torrent")
 (hoarder:fetch "sverrejoh/emacs-torrent ")
 (hoarder:register "ieure/uuid-el"
   '(:tag ["uuid" "id"]))
@@ -1316,8 +1314,6 @@
   '(:tag ["remember_the_milk"]))
 (hoarder:register "xuchunyang/gitter.el"
   '(:tag ["gitter"]))
-(hoarder:register "mutbuerger/twitch-streamer"
-  '(:tag ["twitch" "livestreamer"]))
 (hoarder:register "emacsmirror/flash-paren"
   '(:tag ["parenthesis" "highlghit"]))
 (hoarder:register "atykhonov/emacs-netspeak"
@@ -1336,10 +1332,11 @@
   '(:tag ["file" "browser"]))
 (hoarder:register "emacsmirror/adaptive-wrap")
 (hoarder:register "luque/emacs-giphy")
-(hoarder:register "cdddr/ewm")
 (hoarder:register "deepadhurka/idutils")
 (hoarder:register "vermiculus/magithub"
-  '(:tag ["magit" "git" "github"]))
+  '(:tag ["magit" "git" "github"]
+    :dependency ["tarsius/ghub"
+                 "vermiculus/ghub-plus"]))
 (hoarder:register "jml/direnv-el"
   '(:tag ["direnv" "dotenv" "enviroment_variable" "configuration" "shell"]))
 (hoarder:register "coldnew/pangu-spacing"
@@ -1366,7 +1363,13 @@
 (hoarder:register "lujun9972/podcaster"
   '(:tag ["podcast" "rss" "feed"]))
 (hoarder:register "Alexander-Miller/treemacs"
-  '(:tag ["neotree"]))
+  '(:tag ["neotree"]
+    :dependency ["Alexander-Miller/pfuture"
+                 ("magnars/dash.el" ( :compile nil))
+                 "rejeep/f.el"
+                 "magnars/s.el"
+                 "abo-abo/ace-window"
+                 "deb0ch/emacs-winum"]))
 (hoarder:register "emacs-jp/japanese-holidays"
   '(:tag ["calendar"]))
 (hoarder:register "emacsfodder/html-entities-helper")
@@ -1401,7 +1404,8 @@
 (hoarder:register "fukamachi/kindly-mode"
   '(:tag ["kindle"]))
 (hoarder:register "TheBB/spaceline"
-  '(:tag ["mode-line" "spacemacs" "powerline"]))
+  '(:tag ["mode-line" "spacemacs" "powerline"]
+    :dependency ["milkypostman/powerline"]))
 (hoarder:register "tarsius/auto-compile"
   '(:tag ["compile"]))
 (hoarder:register "swannodette/clojure-snippets"
@@ -1750,7 +1754,236 @@
     :tag ["file" "history"]))
 (hoarder:register "wxjeacen/novel-speaker-mode"
   '(:tag ["novel" "tts" "google_tts"])) 
-
+(hoarder:register "stardiviner/major-mode-icons"
+  '(:desc "Show major-mode with icons on mode-line."
+    :tag ["icons" "major-mode" "mode-line"]))
+(hoarder:register "asok/all-the-icons-ivy"
+  '(:desc "all-the-icons.el for Ivy/Counsel"
+    :tag ["icon" "ivy" "counsel"]
+    :dependency ["abo-abo/swiper"]))
+(hoarder:register "Ilazki/prettify-utils.el"
+  '(:desc "Helper functions for emacs' prettify-symbols-mode"
+    :tag ["unicode" "prettify"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/6bbe7r/whats_the_most_useful_plugin_you_couldnt_live/dhlpi9l/][Too Many Requests]]"))
+(hoarder:register "xuchunyang/shr-tag-pre-highlight.el"
+  '(:desc "Syntax highlighting code block in HTML for shr/eww"))
+(hoarder:register "angrybacon/mdi"
+  '(:memo "[[https://www.reddit.com/r/emacs/comments/6d2jwf/spacemacs_like_modeling_with_spaceline_without/dhzqxe2/][TheFrenchPoulp comments on Spacemacs like modeling with spaceline without evil mode]]")) 
+(hoarder:register "raxod502/straight.el"
+  '(:desc "The straightforward package manager for Emacs."
+    :tag ["emacs" "package-manager" "version-control"]))
+(hoarder:register "sebastiencs/sidebar.el"
+  '(:desc "A customizable file explorer with git integration for emacs"
+    :dependency [("sebastiencs/icons-in-terminal"
+                  (:desc "Use any fonts in the terminal without replacing or patching "
+                   :load-path "build"))]))
+(hoarder:register "joecannatti/soji-emacs"
+  '(:desc "Mindfulness Based Workday Tool in ELisp"
+    :dependency [("lolownia/org-pomodoro")]))
+(hoarder:fetch "kaihaosw/eshell-prompt-extras")
+(hoarder:register "joewreschnig/auto-minor-mode"
+  '(:desc "Enable Emacs minor modes by buffer name and contents"))
+(hoarder:register "DamienCassou/json-navigator"
+  '(:desc "View and navigate JSON structures"
+    :dependency ["DamienCassou/hierarchy"]))
+(hoarder:register "Wilfred/helpful"
+  '(:desc "A better Emacs *help* buffer"
+    :tag ["emacs" "help"]))
+(hoarder:register "Alexander-Miller/atomic-container"
+  '(:desc "A simple atomic container for emacs lisp"
+    :tag ["threads"]))
+(hoarder:register "djcb/mu"
+  '(:load-path "mu4e"))
+(hoarder:register "skeeto/cat-safe"
+  '(:desc "Detect cats wandering in your buffer."
+    :memo "[[http://nullprogram.com/blog/2010/03/31/][Emacs cat-safe « null program]]"))
+(hoarder:register "https://bitbucket.org/ellisvelo/multi-project"
+  '(:type :hg))
+(hoarder:register "gongo/qiita-el"
+  '(:desc "Qiita API Library for emacs"))
+(hoarder:register "emacs-pe/http.el"
+  '(:desc "An HTTP client for Emacs"
+    :dependency ["Fanael/edit-indirect"]))
+(hoarder:register "emacs-pe/password-vault-"
+  '(:desc "Keep your passwords in emacs. Access them through helm."))
+(hoarder:register "notetiene/emacs-lisp-container"
+  '(:desc "😶 Avoid side-effects when executing Emacs Lisp"
+    :tag ["container" "emacs-lisp" "side-effects"]))
+(hoarder:register "seanohalpin/org-link-minor-mode"
+  '(:desc "Enable org-mode bracket links in non-org modes"))
+(hoarder:register "spebern/www-synonyms"
+  '(:desc "get synonyms for many different languages in emacs"
+    :tag ["english"]))
+(hoarder:register "myTerminal/emacs-home"
+  '(:desc "A home-screen for Emacs"
+    :tag ["emacs" "home-screen"]))
+(hoarder:register "tj64/keyinfo"
+  '(:desc "Emacs library for printing a human-readable mode-map as well as unbound keys in an Org file"))
+(hoarder:register "redguardtoo/vc-msg"
+  '(:desc "Show commit message of current line in Emacs"
+    :memo "[[https://www.reddit.com/r/emacs/comments/6kn2w1/vcsmsg_show_commit_message_of_current_line/][Too Many Requests]]"))
+(hoarder:register "kidd/commit-msg-prefix"
+  '(:desc "Insert a piece of earlier vcs commits in your current commit message"
+    :memo "[[http://puntoblogspot.blogspot.jp/2017/07/announcing-commit-msg-prefix.html][puntoblogspot: Announcing commit-msg-prefix.]]"))
+(hoarder:register "Vifon/focus-autosave-mode.el"
+  '(:desc "A global minor mode for Emacs saving the modified files when the Emacs frame loses its focus"
+    :memo "[[https://www.reddit.com/r/emacs/comments/6knlbx/recommended_upgrades_to_emacs_autosave/][Too Many Requests]]"))
+(hoarder:fetch "wilfred/peval"
+  '(:desc "partial evaluator for elisp"
+    :tag ["emacs-lisp" "partial-evaluators"]))
+(hoarder:register "plexus/a.el"
+  '(:desc "Emacs Lisp functions for dealing with association lists and hash tables. Inspired by Clojure."))
+(hoarder:register "haxney/unbound")
+(hoarder:register "emacsmirror/help-fns-plus")
+(hoarder:register "girzel/ebdb"
+  '(:desc "An EIEIO port of BBDB, Emacs' contact-management package"
+    :tag ["address-book" "emacs-lisp" "object-oriented"]
+    :memo "[[https://ericabrahamsen.net/tech/2016/feb/bbdb-eieio-object-oriented-elisp.html][BBDB on EIEIO &#x2013; An Introduction to Object-Oriented Emacs Lisp]]"))
+(hoarder:register "Lindydancer/face-explorer"
+  '(:desc "Library and tools for faces and text properties"))
+(hoarder:register "thiderman/makefile-executor.el"
+  '(:desc "Emacs helpers to run things from makefiles"
+    :tag ["emacs" "makefile"]))
+(hoarder:register "https://gitlab.com/marcowahl/go-up.git")
+(hoarder:register "marcowahl/herald-the-mode-line"
+  '(:desc "Herald the mode-line"))
+(hoarder:register "kawabata/hentaigana"
+  '(:desc "Hentaigana Editing Tools and Input Method for Emacs."))
+(hoarder:register "sabof/emms-mobile-remote"
+  '(:desc "Control EMMS using your mobile"))
+(hoarder:register "momomo5717/emms-mode-line-cycle"
+  '(:desc "Display the emms mode line as a ticker"))
+(hoarder:register "https://gitlab.com/cshclm/emms-queue.git"
+  '(:tag ["emms"]))
+(hoarder:register "alpaker/Frame-Bufs"
+  '(:desc "An Emacs minor mode for frame-relative buffer lists. "))
+(hoarder:register "davep/dad-joke.el"
+  '(:desc "Get/show dad jokes in Emacs"
+    :tag ["dad-jokes" "elisp" "emacs" "gnu" "humor" "lisp"]))
+(hoarder:register "aki237/zen-mode") 
+(hoarder:register "zk-phi/git-complete"
+  '(:desc "[Emacs] Yet another completion engine powered by \"git grep\""))
+(hoarder:register "jcinnamond/pair-mode"
+  '(:desc "emacs mode for pair programming"
+    :memo "[[https://www.reddit.com/r/emacs/comments/6nn93r/what_are_some_useful_potentially_unknown/][What are some useful, potentially unknown libraries that you use? : emacs]]"))
+(hoarder:register "jcpetkovich/shrink-whitespace.el"
+  '(:desc "Whitespace removal DWIM key for emacs."
+    :memo "[[https://www.reddit.com/r/emacs/comments/6nn93r/what_are_some_useful_potentially_unknown/][What are some useful, potentially unknown libraries that you use? : emacs]]"))
+(hoarder:register "purcell/unfill"
+  '(:desc "Functions providing the inverse of Emacs' fill-paragraph and fill-region"
+    :memo "[[https://www.reddit.com/r/emacs/comments/6nn93r/what_are_some_useful_potentially_unknown/][What are some useful, potentially unknown libraries that you use? : emacs]]"))
+(hoarder:register "gongo/togetter.el"
+  '(:desc "Togetter を Emacs から覗きましょう"))
+(hoarder:register "therockmandolinist/org-wiki-search"
+  '(:memo "[[https://www.reddit.com/r/emacs/comments/6nuhws/using_pandoc_to_import_a_wikipedia_page_to_org/][Using pandoc to import a Wikipedia page to org mode : emacs]]")) 
+(hoarder:register "nicferrier/eimp"
+  '(:desc "Rather good Emacs Image Manipulation library. This is not mine, I am just adopting it for a few reasons."
+    :memo "[[https://www.emacswiki.org/emacs/eimp.el][EmacsWiki: eimp.el]]"))
+(hoarder:register "Malabarba/smart-mode-line"
+  '(:desc "A powerful and beautiful mode-line for Emacs."))
+(hoarder:register "jabranham/mixed-pitch"
+  '(:desc "Mix fixed-pitch and variable-pitch fonts in Emacs"))
+(hoarder:register "DarwinAwardWinner/with-simulated-input") 
+(hoarder:register "volrath/treepy.el"
+  '(:desc "Generic tree traversing tools for Emacs Lisp"
+    :memo "[[https://www.reddit.com/r/emacs/comments/6oue4n/generic_tree_traversal_tools_for_emacs_lisp/][Too Many Requests]]"))
+(hoarder:register "a13/iqa.el"
+  '(:desc "(Emacs) Init file(and directory) Quick Access."
+    :tag ["emacs" "emacs-lisp" "emacs-packages" "red-panda"]))
+(hoarder:register "abingham/outline-toc.el"
+  '(:desc "Table-of-contents sidebar for Emacs."
+    :tag ["markdown" "org" "outline-mode" "toc"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/6peer1/outlinetocel_a_tableofcontents_sidebar_for/][Too Many Requests]]"))
+(hoarder:register "davep/expando.el"
+  '(:desc "Quickly expand macros for easy reading/checking in Emacs"))
+(hoarder:register "emacsorphanage/look-mode"
+  '(:desc "Quick file viewer for image and text file browsing"))
+(hoarder:register "imgix/imgix-emacs"
+  '(:desc "An emacs major-mode for editing images via imgix."))
+(hoarder:register "emacsmirror/background"
+  '(:desc "Background jobs in GNU Emacs"))
+(hoarder:register "TLINDEN/autoscratch"
+  '(:desc "Automatically switch major mode from *scratch*"
+    :memo "[[https://www.reddit.com/r/emacs/comments/6qahdz/what_are_you_currently_developing_in_emacs_lisp/][What Are You Currently Developing in Emacs Lisp? : emacs]]"))
+(hoarder:register "kadinparker/youtube.el"
+  '(:memo "[[https://www.reddit.com/r/emacs/comments/6qahdz/what_are_you_currently_developing_in_emacs_lisp/][What Are You Currently Developing in Emacs Lisp? : emacs]]")) 
+(hoarder:register "lifelike/decide-mode"
+  '(:desc "Random decisions for emacs, with functions and a minor mode. Roll various types of dice etc."
+    :memo "[[https://www.reddit.com/r/emacs/comments/6qahdz/what_are_you_currently_developing_in_emacs_lisp/][What Are You Currently Developing in Emacs Lisp? : emacs]]"))
+(hoarder:register "collarchoke/ovpn-mode"
+  '(:desc "An openvpn management mode for emacs"
+    :memo "[[https://github.com/alphapapa/emacs-package-dev-handbook][GitHub - alphapapa/emacs-package-dev-handbook: An Emacs package development handbook. Built with Emacs, by Emacs pack...]]"))
+(hoarder:register "hlissner/emacs-solaire-mode"
+  '(:desc "If only certain buffers could be so grossly incandescent."
+    :tag ["emacs" "emacs-packages" "melpa"]))
+(hoarder:register "alphapapa/highlight-function-calls"
+  '(:desc "Highlight function/macro calls in Emacs"))
+(hoarder:register "DarwinAwardWinner/amx"
+  '(:desc "An alternative M-x interface for Emacs."
+    :tag ["completion" "emacs"]))
+(hoarder:register "zonuexe/emacs-auto-deployment"
+  '(:desc "Automatic syncronize when file saved."))
+(hoarder:register "idaisukee/Sakurahasi") 
+(hoarder:register "DarwinAwardWinner/ido-completing-read-plus"
+  '(:desc "Fancy completion all over Emacs, not just for buffers and files."
+    :tag ["emacs" "emacs-completion" "ido"]))
+(hoarder:register "https://gitlab.com/bennya/shrink-path.el.git"
+  '(:tag ["eshell"]))
+(hoarder:register "10sr/term-run-el"
+  '(:desc "Run Arbitrary Command in Terminal Buffer"))
+(hoarder:register "xuchunyang/web-search.el"
+  '(:desc "Web search from Emacs and the terminal"))
+(hoarder:register "k1LoW/emacs-drill-instructor"
+  '(:desc "Enforce key-bind of Emacs. a.k.a 鬼軍曹.el"))
+(hoarder:register "wachikun/mvc"
+  '(:desc "ELISP for Mercurial/Git/Subversion/Bazaar(like a psvn.el)"
+    :memo "[[http://umiushi.org/%7Ewac/mvc/][wac's webpage./mvc.el]]"))
+(hoarder:register "momomo5717/avy-migemo"
+  '(:desc "avy with migemo"))
+(hoarder:register "TakesxiSximada/mastodon-mode.el"
+  '(:desc "Play mastodon on Emacs"
+    :memo "[[https://slideship.com/users/@sximada/presentations/2017/08/NwfdMr4rrtxFPQ2ZQVg6qq/][Mastodon × Emacs - slideship.com]]"))
+;; (hoarder:register "https://gitlab.com/mbunkus/simple-rtm.git"
+;;   '(:tag ["remember_the_milk"]))
+(hoarder:register "jacktasia/dumb-jump"
+  '(:desc "an Emacs \"jump to definition\" package"
+    :tag ["ag" "developer-tools" "emacs" "emacs-lisp" "emacs-modules" "melpa" "ripgrep" "silver-searcher" "spacemacs"]))
+(hoarder:register "szermatt/emacs-bash-completion"
+  '(:desc "Add programmable bash completion to Emacs shell-mode"
+    :tag ["bash-completion" "emacs" "emacs-lisp" "eshell"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/6y3q4k/yes_eshell_is_my_main_shell/dml9asq/][Too Many Requests]]
+[[https://github.com/szermatt/emacs-bash-completion/issues/13][Extend to work in sh-mode · Issue #13 · szermatt/emacs-bash-completion · GitHub]]"))
+(hoarder:register "wasamasa/nov.el"
+  '(:desc "Major mode for reading EPUBs in Emacs"
+    :dependency ["tali713/esxml"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/6ygecr/novel_major_mode_for_reading_epubs_in_emacs/][Too Many Requests]]"))
+(hoarder:register "clojure-emacs/cider"
+  '(:desc "The Clojure Interactive Development Environment that Rocks for Emacs"
+    :tag ["cider" "clojure" "clojure-development" "emacs" "emacs-lisp"]))
+(hoarder:register "kaushalmodi/todoist.el"
+  '(:desc "Elisp library to interface with Todoist API"))
+(hoarder:register "https://git.sergiodj.net/relddit.git"
+  '(:tag ["reddit"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/6zza4f/relddit_01_released_almost/][Too Many Requests]]"))
+(hoarder:register "plandes/buffer-manage"
+  '(:desc "Provides support to manage buffers of any kind."))
+(hoarder:register "rranelli/auto-package-update.el"
+  '(:desc "Automatically update Emacs packages."))
+(hoarder:register "simenheg/rdf-prefix"
+  '(:desc "Prefix lookup for RDF in Emacs"))
+(hoarder:register "simenheg/restclient-test.el"
+  '(:desc "Turn your restclient.el documents into interactive test suites"))
+(hoarder:register "emacs-berlin/syntactic-close"
+  '(:desc "Insert closing delimiter"
+    :memo "[[http://manuel-uberti.github.io/emacs/2017/09/17/syntactic-close/][Taming closing delimiters in my s-expressions – Manuel Uberti]]"))
+(hoarder:register "GuidoSchmidt/circadian.el"
+  '(:desc "Theme-switching for emacs based on daytime"
+    :tag ["circadian" "daytime" "emacs" "emacs-conf" "emacs-configuration" "emacs-lisp" "theme" "themes"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/70npz2/my_first_emacs_package_circadian_themeswitching/][Too Many Requests]]"))
+(hoarder:register "flexibeast/dkl"
+  '(:desc "An ASCII-art representation of a keyboard layout, within an Emacs buffer."))
+(hoarder:register "leabravo/tomatohead"
+  '(:desc "Leverage the Emacs header line's secret power and mix it with Pomodoro sauce!"))
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tag ["org" "bongo" "music"]
 ;;                    :dependency ["dbrock/bongo"]
@@ -1808,7 +2041,7 @@
   '(:name "e-.fish"
     :tag ["emacs" "fish" "pipe"]
     :memo "[[https://www.reddit.com/r/emacs/comments/5fbpir/how_to_stop_emacsclient_eval_output_to_stdout/][How to stop \"emacsclient --eval\" output to stdout? : emacs]]"))
-(hoarder:fetch "ellisadigvom/rig.el"
+(hoarder:fetch "ahyatt/rig.el"
   '(:desc "emacs config manager"
     :tag ["configuration" "emacs"]))
 (hoarder:fetch "BooksThere/ox-novel"
@@ -1864,7 +2097,8 @@
     :memo "[[https://github.com/nobulin/elisp/blob/master/thread-script.el][elisp/thread-script.el at master · nobulin/elisp · GitHub]]"))
 (hoarder:fetch "geekerzp/kitten-emacs"
   '(:desc "Convention over Configuration for emacs"
-    :tag ["configuration" "emacs"]))
+    :tag ["configuration" "emacs"]
+    :download nil))
 (hoarder:fetch "keenerd/albumbler"
   '(:desc "A simple psychic playlist generator for a wide variety of music players."
     :site "http://kmkeen.com/albumbler/"
@@ -1896,6 +2130,107 @@
 (hoarder:fetch "kaushalmodi/eless"
   '(:desc "A better 'less' - Combination of bash script and a minimal emacs view-mode config"
     :tag ["bash-script" "emacs" "emacs-lisp" "less"]))
+(hoarder:fetch "ekaschalk/dotfiles"
+  '(:desc "My spacemacs configuration."
+    :tag ["emacs" "spacemacs" "eshell"]
+    :memo "https://www.reddit.com/r/emacs/comments/6f0rkz/my_fancy_eshell_prompt/dieyn1j/
+[[https://github.com/ekaschalk/dotfiles/blob/master/.spacemacs][dotfiles/.spacemacs at master · ekaschalk/dotfiles · GitHub]]"))
+
+(hoarder:fetch "otijhuis/emacs.d"
+  '(:desc "My Emacs configuration (Mostly for Clojure and ClojureScript development)"
+    :tag ["hydra"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/6ha2ir/some_interesting_hydras/][Too Many Requests]]
+https://github.com/otijhuis/emacs.d/blob/master/config/hydra-settings.el"))
+(hoarder:fetch "VincentToups/emacs-utils"
+  '(:desc "Some of my emacs-utilities"
+    :tag ["monad"]))
+(hoarder:fetch "ekaschalk/dotspacemacs"
+  '(:desc "My spacemacs configuration."
+    :memo "[[https://ekaschalk.github.io/post/outline-ivy/][Managing code with Outlines | Modern Emacs]]"
+    :tag ["emacs" "spacemacs" "eshell" "magit" "ivy" "outline"]))
+(hoarder:fetch "dhamaniasad/HeadlessBrowsers"
+  '(:desc "A list of (almost) all headless web browsers in existence"
+    :site "http://www.asad.pw/HeadlessBrowsers/"
+    :tag ["automation" "browser" "headless-browsers" "testing"]))
+(hoarder:fetch "omaciel/super-emacs"
+  '(:desc "An out-of-the-box Emacs configuration with super powers"))
+(hoarder:fetch "emacs-pe/emacs-modules"
+  '(:desc "List of resources for Emacs modules"))
+(hoarder:fetch "argentum47/everm"
+  '(:desc "Emacs Version Manager"
+    :tag ["emacs"]))
+(hoarder:fetch "https://gist.github.com/49c7480e1df42405a36b7ab09fe87f3d.git"
+  '(:name "IosevkaConfigGen.hs"
+    :desc " Render Iosevka ligatures to Private Use Area glyphs, for Emacs "
+    :tag ["font" "ligature" "iosevka"]))
+(hoarder:fetch "hzenginx/spacelite"
+  '(:desc "Lightweight evil configuration for Emacs"
+    :memo "[[https://www.reddit.com/r/emacs/comments/6oismi/my_minimal_spacemacs_like_evil_emacs/][My minimal Spacemacs like evil + emacs configuration. I have limited emacs/lisp experience so any feedback is highly ...]]"))
+(hoarder:fetch "gilbertw1/bmacs"
+  '(:desc "bryan's emacs"
+    :memo "[[https://www.reddit.com/r/unixporn/comments/6p9dy5/xmonad_doom_or_compulsive_theming_disorder/][Too Many Requests]]
+[[https://github.com/xero/dotfiles/blob/master/fun/bin/metroid][dotfiles/metroid at master · xero/dotfiles · GitHub]]"))
+(hoarder:fetch "https://gist.github.com/alphapapa/2d141b60ccbe92f1b90000debde2ddd2.git"
+  '(:memo "[[https://www.reddit.com/r/emacs/comments/6pc0ts/sanitize_buffer_by_replacing_words_with_random/][Too Many Requests]]"))
+(hoarder:fetch "tumashu/cnfonts"
+  '(:desc "emacs中文字体配置工具。可以快速方便的的实现中文字体和英文字体等宽（也就是常说的中英文对齐）。"))
+(hoarder:fetch "lepisma/rogue"
+  '(:desc "Personal Emacs config"
+    :tag ["dotfiles" "emacs" "spacemacs"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/6px7f3/stumpwm_shades_of_gray_with_little_reddish_accent/][Too Many Requests]]"))
+(hoarder:fetch "https://gist.github.com/cvcore/760008a4dfb2eadf42afdc9cf01ef979.git"
+  '(:name "org-fragment-auto-preview.el"
+    :memo "[[https://www.youtube.com/watch?v=TeZa0nvFdEo&app=desktop][How to automatically toggle LaTeX and Image Link Preview in Emacs org-mode - YouTube]]"))
+(hoarder:fetch "emacsDojo/emacsdojo.github.io"
+  '(:desc "webpage for emacsdojo"
+    :site "https://emacsdojo.github.io/"))
+(hoarder:fetch "https://gitlab.com/to1ne/temacco.git"
+  '(:tag ["emacs" ]))
+(hoarder:fetch "alphapapa/emacs-package-dev-handbook"
+  '(:desc "An Emacs package development handbook. Built with Emacs, by Emacs package developers, for Emacs package developers."
+    :tag ["emacs" "emacs-lisp"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/6rdqgy/the_emacs_package_developers_handbook/][Too Many Requests]]"))
+(hoarder:fetch "VincentToups/emacs-utils"
+  '(:desc "Some of my emacs-utilities"
+    :tag ["clojure" "emacs_lisp" "pattern_matching"]
+    :memo "https://github.com/VincentToups/emacs-utils/blob/master/defn-readme.md"))
+(hoarder:fetch "git://git.savannah.gnu.org/emacs-tiny-tools.git"
+  '(:memo "[[http://www.nongnu.org/emacs-tiny-tools/elisp-coding/index-body.html][Emacs Lisp coding thoughts]]"))
+(hoarder:fetch "slewsys/emacs-cli-front-end"
+  '(:desc "A script to runs emacs(1) and/or emacsclient(1) as appropriate per given command-line arguments."
+    :memo "[[https://www.reddit.com/r/emacs/comments/6vsdf3/a_script_to_runs_emacs_andor_emacsclient_as/][Too Many Requests]]"))
+(hoarder:fetch "https://gist.github.com/mrkuc/7915851.git"
+  '(:name "script.el"))
+(hoarder:fetch "https://gist.github.com/mrkuc/7915775.git"
+  '(:name "escript"))
+(hoarder:fetch "Ambrevar/dotfiles"
+  '(:tag ["archlinux" "emacs" "eshell" "exwm" "freebsd" "gentoo" "helm" "keymap" "mu4e" "posix-sh" "shell-scripts" "unix"]
+    :memo "[[https://github.com/Ambrevar/dotfiles/blob/master/.emacs.d/lisp/init-eshell.el][dotfiles/init-eshell.el at master · Ambrevar/dotfiles · GitHub]]
+[[https://github.com/szermatt/emacs-bash-completion/issues/13#issuecomment-326832005][Extend to work in sh-mode · Issue #13 · szermatt/emacs-bash-completion · GitHub]]
+[[https://www.reddit.com/r/emacs/comments/6y3q4k/yes_eshell_is_my_main_shell/dml9asq/][Too Many Requests]]"))
+(hoarder:fetch "https://gist.github.com/alphapapa/9df7093dc1ea83fbc4c8ef5d31b3bc57.git"
+  '(:name "org-books.el"
+    :memo "[[https://www.reddit.com/r/emacs/comments/6ytkuu/fetch_book_data_from_amazon_and_insert_as_org/][Too Many Requests]]"))
+(hoarder:fetch "Danesprite/todoist-org-mode"
+  '(:desc "Transform Todoist projects into Emacs Org-mode files"
+    :tag ["emacs" "org-mode" "python" "todoist" "todoist-api"]))
+(hoarder:fetch "ttakamura/org-todoist"
+  '(:desc "Sync TODOs between emacs org-mode files and Todoist"))
+(hoarder:fetch "kiwanami/emacs-anything-books"
+  '(:tag ["anything" "book"]
+    :memo "[[http://d.hatena.ne.jp/kiwanami/touch/20101117/1290015869][anything��PDF�ե������ץ�ӥ塼���ʤ����®�����Ӥ��� - ����������kiwanami]]"))
+(hoarder:fetch "vxid/dotfiles"
+  '(:desc "Emacs and things I cannot do in Emacs."
+    :tag ["dotfiles" "emacs" "i3wm" "polybar" "zsh"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/72dqrt/i3emacs_fall/][Too Many Requests]]"))
+(hoarder:fetch "zk-phi/git-context-switch"
+  '(:desc "[git] context switch for git"
+    :memo "[[https://qiita.com/zk_phi/items/656733c9eecf83ab9a4c][Git にコンテキストスイッチを実装した - Qiita]]"))
+(hoarder:fetch "DarthSim/imgproxy"
+  '(:desc "Fast and secure standalone server for resizing and converting remote images"
+    :tag ["crop-image" "docker" "image" "jpeg" "libvips" "microservice" "png" "resize-images"]
+    :memo "[[https://evilmartians.com/chronicles/introducing-imgproxy][imgproxy: Resize your images instantly and securely — Martian Chronicles, Evil Martians’ team blog]]"))
+
 
 ;; TODO emacswiki support
 ;; "http://www.emacswiki.org/emacs/hl-spotlight.el"
