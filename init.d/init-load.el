@@ -285,7 +285,7 @@
     wordnut
     erlang
     sml-mode
-    ;; beacon 
+    beacon 
     clipmon
     font-lock-studio
     emojify
@@ -496,6 +496,7 @@
     ;;circadian
     dumb-jump
     bonjourmadame
+    eshell-bookmark
     ;; drill-instructor
     ;; mixed-pitch
     ;; togetter
