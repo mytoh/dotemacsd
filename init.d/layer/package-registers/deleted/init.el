@@ -99,4 +99,10 @@
   '(:desc "Create non-exploding archive files using BSD tar without first moving or copying files."
     :tag ["bsd" "freebsd" "tar" "archive"]))
 
+(hoarder:fetch "https://gitgud.io/drylemon/bitslut.git"
+  '(:tags ["torrent" "libtorrent"]))
+
+(hoarder:fetch "KingSann/CLD"
+  '(:tags ["common_lisp" "database"]))
+
 ;;; init.el ends here

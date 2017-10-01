@@ -819,8 +819,6 @@
   '(:tags ["git" "auto_commit"]))
 (hoarder:register "dnaumov/midje-mode"
   '(:tags ["clojure" "test"]))
-(hoarder:register "cadadr/forecast.el"
-  '(:tags ["weather" "forecast"]))
 (hoarder:register "emacsattic/cparen"
   '(:tags ["scheme"]))
 (hoarder:register "steventlamb/yatt.el"
@@ -1984,6 +1982,13 @@
   '(:description "An ASCII-art representation of a keyboard layout, within an Emacs buffer."))
 (hoarder:register "leabravo/tomatohead"
   '(:description "Leverage the Emacs header line's secret power and mix it with Pomodoro sauce!"))
+(hoarder:register "Fuco1/eshell-bookmark"
+  '(:description "Eshell and bookmark.el integration"))
+(hoarder:register "pterygota/el-pocket"
+  '(:description "el-pocket :: emacs -> getpocket.com"
+    :dependencies ["nicferrier/emacs-web"]))
+
+
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tags ["org" "bongo" "music"]
 ;;                    :dependencies ["dbrock/bongo"]

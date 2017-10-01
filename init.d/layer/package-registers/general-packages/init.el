@@ -662,7 +662,8 @@
 ;; (hoarder:fetch "emacs-mirror/emacs"
 ;;   '(:branch "master"))
 (hoarder:fetch "git://git.sv.gnu.org/emacs.git"
-  '(:branch "emacs-26"))
+  ;; '(:branch "emacs-26")
+  )
 (hoarder:fetch "kentaro/cinnamon")
 (hoarder:fetch "aharris88/awesome-cli-apps")
 (hoarder:fetch "zythum/mama2"
@@ -2635,8 +2636,6 @@ https://github.com/RizonRice/rizonrice.github.io/blob/master/resources.md"))
 (hoarder:fetch "https://gitgud.io/jangoknight7/uranium-browser.git"
   '(:tags ["browser" "chromium"]
     :download nil))
-(hoarder:fetch "https://gitgud.io/drylemon/bitslut.git"
-  '(:tags ["torrent" "libtorrent"]))
 (hoarder:fetch "https://gitgud.io/sn0w75/MMP.git"
   '(:tags ["MMD" "MikuMikuDance" "linux" "PMX" "VMD"]))
 (hoarder:fetch "https://gitgud.io/fbt/sx-open.git"
@@ -2987,8 +2986,6 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
 (hoarder:fetch "mochi-player/mochi-player"
   '(:tags ["mpv" "qt" "qml" "qt5"]
     :depth nil))
-(hoarder:fetch "KingSann/CLD"
-  '(:tags ["common_lisp" "database"]))
 (hoarder:fetch "SamSkulls/cl-searx"
   '(:tags ["searx" "common_lisp"]
     :site "searx.me"))
@@ -8790,6 +8787,26 @@ Currently a work in progress, but quite usable. Initial focus is on FT991(A) Tra
     :tags ["memoized-selectors" "redux"]))
 (hoarder:fetch "thezerobit/monads"
   '(:description "Monads: A Common Lisp Monad Library"))
+(hoarder:fetch "Engelberg/instaparse"
+  '(:memo "[[https://www.youtube.com/watch?v=b2AUW6psVcE&app=desktop][Mark Engelberg - Instaparse - YouTube]]")) 
+(hoarder:fetch "andrewrk/libsoundio"
+  '(:description "C library for cross-platform real-time audio input and output"))
+(hoarder:fetch "https://git.taler.net/gnurl.git"
+  '(:tags ["curl" "gnu" "taler"]))
+(hoarder:fetch "keptan/superCuteGrab"
+  '(:description "Booru image tag-fetching and ranking with Microsoft TRUESKILL and ELO "
+    :memo "[[https://boards.4chan.org/g/thread/62679160][/g/ - /dpt/ - Daily Programming Thread - Technology - 4chan]]"))
+(hoarder:fetch "bitwarden/core"
+  '(:description "The core infrastructure backend (API, database, etc)."
+    :tags ["api" "aspnet" "aspnetcore" "bitwarden" "csharp" "docker" "dotnet" "dotnet-core" "sql" "sql-server" "lastpass"]
+    :memo "[[https://bitwarden.com/][Free Open Source Password Manager | bitwarden]]"))
+(hoarder:fetch "emonkak/feedpon"
+  '(:description "A feed reader which was developed for me"
+    :memo "[[http://emonkak.hatenablog.com/entry/2017/09/29/232320][LDRに代わる新しいRSSリーダーFeedponを開発した - emonkak's Blog]]"
+    :tags ["feedly" "firefox" "rss"]))
+(hoarder:fetch "https://gitgud.io/drylemon/buka.git"
+  '(:description "Download manga from buka.cn"
+    :tags []))
 
 ;;; end
 
