@@ -12,10 +12,9 @@
                 (gen-callback (fname url)
                               (cl-function
                                (lambda (&key data &allow-other-keys)
-                                 (cl-letf ((desc (assoc-default 'description data))
-                                           (topics (assoc-default 'topics data)))
+                                 (let-alist data
                                    (insert
-                                    (pcase `[,desc ,topics]
+                                    (pcase (vector .description .topics)
                                       (`[nil []]
                                        (format
                                         "(%s \"%s\") "
@@ -28,14 +27,14 @@
                                         fname
                                         (seq-subseq url 19)
                                         (colle:map (lambda (topic) (concat "\"" topic "\"" )) topics)))
-                                      (`[,_ []]
+                                      (`[,desc  []]
                                        (format
                                         "(%s \"%s\"
     '(:description %s))\n"
                                         fname
                                         (seq-subseq url 19)
                                         (escape (decode-coding-string desc 'utf-8))))
-                                      (`[,_ ,_]
+                                      (`[,desc ,topics]
                                        (format
                                         "(%s \"%s\"
     '(:description %s
@@ -61,8 +60,7 @@
                  :success
                  (cl-function
                   (lambda (&key data &allow-other-keys)
-                    (cl-letf ((desc (assoc-default 'description data))
-                              (taglist (assoc-default 'tag_list data)))
+                    (let-alist data
                       (insert
                        (format "(hoarder:%s \"%s\"
     '(:description \"%s\"
@@ -73,8 +71,8 @@
                                            u)
                                   (u
                                    (concat u ".git")))
-                               desc
-                               (colle:map (lambda (tag) (concat "\"" tag "\"")) taglist))))))))
+                               .description
+                               (colle:map (lambda (tag) (concat "\"" tag "\"")) .tag_list))))))))
       (defun hoarder:insert-helper-gitlab (command url)
         (hoarder:insert-gitlab-internal
          command
