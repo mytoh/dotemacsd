@@ -165,7 +165,11 @@
         '(("t" "Todo" entry (file+headline "~/.org/gtd.org" "Tasks")
            "* TODO %?\n  %i\n  %a")
           ("i" "Inbox" entry (file "~/.org/inbox.org")
-           "* %?\n%U"))))
+           "* %?\n%U")
+          ("k" "Kuvitus" entry (file+headline "~/.org/kuvitus.org" "kuvitus")
+           "** \n*** %?\n")
+          ("l" "Sites" entry (file+headline "~/.org/sivusto/sivusto.org" "other")
+           "** %?\n"))))
 
 (cl-defun muki:org-better-list-bullets ()
   ;; [[http://www.howardism.org/Technical/Emacs/orgmode-wordprocessor.html][Org as a Word Processor]]
@@ -285,11 +289,11 @@
   (org-element-map (org-element-parse-buffer 'element) 'headline
     (lambda (h)
       (and (org-element-map h 'drawer
-           (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
-           nil t 'headline)
-         (let ((begin (org-element-property :begin h)))
-           (message "Entry with erroneous properties drawer at %d" begin)
-           begin)))))
+             (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
+             nil t 'headline)
+           (let ((begin (org-element-property :begin h)))
+             (message "Entry with erroneous properties drawer at %d" begin)
+             begin)))))
 
 (cl-defun muki:org-open-link-mpv ()
   (interactive)
@@ -382,9 +386,9 @@
                            (looking-at "^[ \t]*#\\+begin_src[ \t]+[^ \f\t\n\r\v]+[ \t]*"))))
       ;; Test if we moved out of a block.
       (when (or (and rasmus/org-at-src-begin
-                  (not at-src-block))
-               ;; File was just opened.
-               (eq rasmus/org-at-src-begin -1))
+                   (not at-src-block))
+                ;; File was just opened.
+                (eq rasmus/org-at-src-begin -1))
         (rasmus/org-prettify-src--update))
       ;; Remove composition if at line; doesn't work properly.
       ;; (when at-src-block
