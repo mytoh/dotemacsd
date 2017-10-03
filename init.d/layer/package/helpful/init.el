@@ -6,6 +6,10 @@
 
 (use-package helpful
   :commands (helpful-at-point)
+  :preface
+  (defun muki:helpful-at-point ()
+    (interactive)
+    (helpful-symbol (symbol-at-point)))
   :config
   (after 'shackle
     (setq shackle-rules

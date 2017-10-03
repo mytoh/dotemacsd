@@ -79,7 +79,7 @@
 
 (cond ((locate-library "helpful")
        (bind-map-set-keys my-elisp-leader-map
-         "hh" #'helpful-at-point))
+         "hh" #'muki:helpful-at-point))
       ((locate-library "elisp-slime-nav")
        (bind-map-set-keys my-elisp-leader-map
          "hh" #'elisp-slime-nav-describe-elisp-thing-at-point)))
