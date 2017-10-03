@@ -500,6 +500,7 @@
     let-alist
     persistent-scratch
     google-maps
+    request
     ;; drill-instructor
     ;; mixed-pitch
     ;; togetter
