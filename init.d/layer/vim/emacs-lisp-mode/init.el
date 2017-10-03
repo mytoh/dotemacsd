@@ -18,11 +18,11 @@
   (if-let* ((root (vc-root-dir)))
       (cl-labels ((test-file-p (name)
                                (and (string-equal (file-name-nondirectory
-                                                 (directory-file-name
-                                                  (file-name-directory
-                                                   (buffer-file-name))))
-                                                "test")
-                                  (string-match-p "-tests.el\\'" name))))
+                                                   (directory-file-name
+                                                    (file-name-directory
+                                                     (buffer-file-name))))
+                                                  "test")
+                                    (string-match-p "-tests.el\\'" name))))
         (pcase (buffer-file-name)
           ((pred test-file-p)
            (cl-letf* ((buffers (buffer-list))
@@ -70,13 +70,19 @@
   "tq" #'ert
 
   "gg" #'xref-find-definitions-other-window
-  "hh" #'elisp-slime-nav-describe-elisp-thing-at-point
 
   "=b" #'srefactor-lisp-format-buffer
   "=d" #'srefactor-lisp-format-defun
   "=o" #'srefactor-lisp-one-line
   "=s" #'srefactor-lisp-format-sexp
   )
+
+(cond ((locate-library "helpful")
+       (bind-map-set-keys my-elisp-leader-map
+         "hh" #'helpful-at-point))
+      ((locate-library "elisp-slime-nav")
+       (bind-map-set-keys my-elisp-leader-map
+         "hh" #'elisp-slime-nav-describe-elisp-thing-at-point)))
 
 (liby 'macrostep
   (bind-map-set-keys my-elisp-leader-map
