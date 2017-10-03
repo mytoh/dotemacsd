@@ -1987,6 +1987,8 @@
 (hoarder:register "pterygota/el-pocket"
   '(:description "el-pocket :: emacs -> getpocket.com"
     :dependencies ["nicferrier/emacs-web"]))
+(hoarder:register "Fanael/persistent-scratch"
+  '(:description "Preserve the scratch buffer across Emacs sessions"))
 
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"

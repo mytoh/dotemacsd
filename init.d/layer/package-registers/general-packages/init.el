@@ -1991,7 +1991,8 @@
   '(:tags ["gnome" "radio" "streaming"]
     :download nil))
 (hoarder:fetch "xenlism/Xdwaita"
-  '(:tags ["x11" "desktop" "theme"]))
+  '(:tags ["x11" "desktop" "theme"]
+    :download nil))
 (hoarder:fetch "MartinBriza/adwaita-qt"
   '(:tags ["x11" "kde" "theme" "qt" "gnome"]))
 (hoarder:fetch "axxapy/Adwaita-dark-gtk2"
@@ -5509,6 +5510,7 @@ case for pi zero and camera: http://www.thingiverse.com/thing:1639568 "))
 (hoarder:fetch "wonga00/astronaut"
   '(:description "A feed of the present"
     :tags ["youtube"]
+    :download nil
     :site "http://astronaut.io/"
     :memo "[[https://news.ycombinator.com/item?id=13413225][Astronaut – YouTube videos with almost zero previous views | Hacker News]]"))
 (hoarder:fetch "feedcast/house"
@@ -5881,6 +5883,7 @@ case for pi zero and camera: http://www.thingiverse.com/thing:1639568 "))
     :tags ["cli" "javascript"]))
 (hoarder:fetch "lhc70000/iina"
   '(:description "The modern video player for macOS."
+    :download nil
     :tags ["macos" "mpv"]))
 (hoarder:fetch "Mikerah/FakeDataGenerator"
   '(:tags ["python" "data" "generator"])) 
@@ -7731,6 +7734,7 @@ https://www.reddit.com/r/DataHoarder/comments/2vlkix/comic_organizing/ " ))
     :tags ["clojure" "erlang"]))
 (hoarder:fetch "BestImageViewer/geeqie"
   '(:description "claiming to be the best image viewer / photo collection browser"
+    :download nil
     :tags ["image-viewer" "images" "photo-browser" "photo-manager" "photography" "picture-gallery"]
     :memo "[[http://karl-voit.at/managing-digital-photographs/][Managing Digital Files (Like Photographs) in Files and Folders]]"))
 (hoarder:fetch "https://gist.github.com/substack/5eb32c57fb320bc3a2b13425aded3c31.git"
@@ -7753,6 +7757,7 @@ https://www.reddit.com/r/DataHoarder/comments/2vlkix/comic_organizing/ " ))
     :memo "[[https://hydrusnetwork.github.io/hydrus/help/ipfs.html][ipfs]]"))
 (hoarder:fetch "clangen/musikcube"
   '(:description "a terminal-based cross-platform music player, audio engine, metadata indexer, and server in c++"
+    :download nil
     :tags ["alsa" "audio-engine" "audio-player" "coreaudio" "cross-platform" "curses" "directsound" "music-player" "pulseaudio" "terminal" "wasapi"]))
 (hoarder:fetch " git://git.savannah.gnu.org/xforms.git"
   '(:tags ["gui" "toolkit"]))
@@ -8153,6 +8158,7 @@ https://www.reddit.com/r/DataHoarder/comments/2vlkix/comic_organizing/ " ))
     :tags ["awesome" "community" "groups"]))
 (hoarder:fetch "sindresorhus/file-type"
   '(:description "Detect the file type of a Buffer/Uint8Array"
+    :download nil
     :tags ["buffer" "detect" "file" "file-types" "javascript" "magic" "magic-numbers" "nodejs" "uint8array"]))
 (hoarder:fetch "fhanau/Efficient-Compression-Tool"
   '(:memo "[[https://lainchan.org/%CE%A9/res/570.html][/Ω/ - Data compression]]")) 
@@ -8283,10 +8289,12 @@ Currently a work in progress, but quite usable. Initial focus is on FT991(A) Tra
     :tags ["rdp" "remote_desktop"]))
 (hoarder:fetch "w3c/wcag"
   '(:description "Web Content Accessibility Guidelines"
+    :download nil
     :memo "[[https://www.youtube.com/watch?v=yut-b2bxhOs][2017 Standards für barrierefreie Webseiten - YouTube]]"))
 (hoarder:fetch "mapnik/mapnik"
   '(:description "Mapnik is an open source toolkit for developing mapping applications"
     :tags ["c-plus-plus" "cartography" "gis" "mapnik" "mapping" "python" "wiki"]
+    :download nil
     :memo "[[https://www.youtube.com/watch?v=61Z9BwgOvJM][2017 Rendering map data with Mapnik and Python - YouTube]]"))
 (hoarder:fetch "Katello/katello"
   '(:description "Katello integrates open source systems management tools into a single solution for controlling the lifecycle of your machines."
@@ -8807,6 +8815,10 @@ Currently a work in progress, but quite usable. Initial focus is on FT991(A) Tra
 (hoarder:fetch "https://gitgud.io/drylemon/buka.git"
   '(:description "Download manga from buka.cn"
     :tags []))
+(hoarder:fetch "seanpringle/simpleswitcher"
+  '(:tags ["launcher" "dmenu" "superswitcher"])) 
+(hoarder:fetch "subgraph/sgos_handbook"
+  '(:description "Subgraph OS Handbook"))
 
 ;;; end
 
