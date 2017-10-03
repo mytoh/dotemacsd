@@ -497,6 +497,9 @@
     dumb-jump
     bonjourmadame
     eshell-bookmark
+    let-alist
+    persistent-scratch
+    google-maps
     ;; drill-instructor
     ;; mixed-pitch
     ;; togetter
