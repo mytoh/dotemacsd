@@ -499,4 +499,6 @@
 
 (setq select-active-regions 'only)
 
+(setq x-stretch-cursor t) 
+
 ;;; config-setting.el ends here
