@@ -501,4 +501,7 @@
 
 (setq x-stretch-cursor t) 
 
+;; double bffering display
+(add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
+
 ;;; config-setting.el ends here
