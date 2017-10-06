@@ -206,7 +206,7 @@
 
     ;; guide-key
     ;; guide-key-tip
-    ;; which-key
+    which-key
 
     clojure-mode
     clojure-cheatsheet
@@ -498,9 +498,10 @@
     bonjourmadame
     eshell-bookmark
     let-alist
-    persistent-scratch
+    ;; persistent-scratch
     google-maps
     request
+    pocket-reader
     ;; drill-instructor
     ;; mixed-pitch
     ;; togetter
