@@ -662,7 +662,7 @@
 ;; (hoarder:fetch "emacs-mirror/emacs"
 ;;   '(:branch "master"))
 (hoarder:fetch "git://git.sv.gnu.org/emacs.git"
-  ;; '(:branch "emacs-26")
+  '(:branch "emacs-26")
   )
 (hoarder:fetch "kentaro/cinnamon")
 (hoarder:fetch "aharris88/awesome-cli-apps")
@@ -875,7 +875,6 @@
 (hoarder:fetch "git://git.sourceforge.jp/gitroot/ninix-aya/master.git") 
 (hoarder:fetch "git://git.suckless.org/sprop") 
 (hoarder:fetch "git://git.suckless.org/st") 
-(hoarder:fetch "git://git.suckless.org/sup") 
 (hoarder:fetch "git://git.suckless.org/surf") 
 (hoarder:fetch "git://git.sv.gnu.org/erbot.git") 
 (hoarder:fetch "git://git.sv.gnu.org/guile.git") 
@@ -6762,9 +6761,6 @@ case for pi zero and camera: http://www.thingiverse.com/thing:1639568 "))
 (hoarder:fetch "acrisci/playerctl"
   '(:description "mpris command-line controller and library for spotify, vlc, audacious, bmp, xmms2, and others."
     :memo "[[https://www.reddit.com/r/unixporn/comments/6euh6x/spotify_with_automatic_color_changing_audio/][Spotify with automatic color changing audio visualizer : unixporn]]"))
-(hoarder:fetch "thodg/facts"
-  '(:description "In-memory graph database for Common Lisp"
-    :memo "[[https://www.reddit.com/r/Common_Lisp/comments/69mxkr/facts_small_inmemory_graph_database_for_common/][Too Many Requests]]"))
 (hoarder:fetch "eugeneia/erlangen"
   '(:description "Distributed, asychronous message passing system for Clozure Common Lisp"
     :tags ["actors" "common-lisp" "distributed" "message-passing" "supervision"]))
@@ -8740,11 +8736,6 @@ Currently a work in progress, but quite usable. Initial focus is on FT991(A) Tra
   '(:description "Applicative option parser"
     :tags ["applicative" "haskell" "option-parser"]
     :memo "[[https://www.youtube.com/watch?v=v9QGWbGppis][Functional Programming Patterns for Mere Mortals - Daniel Chambers - YouTube]]"))
-(hoarder:fetch "vsrch/dots"
-  '(:description "system configuration files"
-    :tags ["dotfiles" "rice" "unix"]
-    :memo "[[https://github.com/vsrch/dots/blob/master/scripts/watup.sh][dots/watup.sh at master · vsrch/dots · GitHub]]
-[[https://www.reddit.com/r/unixporn/comments/71trg8/openbox_rose/][Too Many Requests]]"))
 (hoarder:fetch "nathanbuchar/atom-one-dark-terminal"
   '(:description "A Terminal theme that mimics the One Dark theme made by the Atom team."
     :tags ["atom" "iterm" "one-dark" "terminal" "theme" "zsh"]))
@@ -8819,6 +8810,65 @@ Currently a work in progress, but quite usable. Initial focus is on FT991(A) Tra
   '(:tags ["launcher" "dmenu" "superswitcher"])) 
 (hoarder:fetch "subgraph/sgos_handbook"
   '(:description "Subgraph OS Handbook"))
+(hoarder:fetch "https://gmplib.org/repo/gmp"
+  '(:type :hg))
+(hoarder:fetch "https://gist.github.com/f2052d4174f592e0083f.git"
+  '(:name "dnscrypt-proxy"
+    :tags ["dnscrypt" "unbound"]))
+(hoarder:fetch "tesk9/elm-html-a11y"
+  '(:description "view helpers enforcing accessible practices"
+    :tags ["accessibility" "elm" "elm-lang"]
+    :memo "[[https://www.youtube.com/watch?v=G_TNRuoF3FE][\"Accessibility with Elm\" by Tessa Kelly - YouTube]]"))
+(hoarder:fetch "tesk9/elm-html-a11y-examples"
+  '(:description "Use examples for https://github.com/tesk9/elm-html-a11y"
+    :tags ["accessibility" "elm" "elm-lang"]
+    :memo "[[https://www.youtube.com/watch?v=G_TNRuoF3FE][\"Accessibility with Elm\" by Tessa Kelly - YouTube]]"))
+(hoarder:fetch "tesk9/accessible-html"
+  '(:description "view helpers enforcing accessible practices"
+    :memo "[[https://www.youtube.com/watch?v=G_TNRuoF3FE][\"Accessibility with Elm\" by Tessa Kelly - YouTube]]"))
+(hoarder:fetch "w0rm/elm-mogee"
+  '(:description "A WebGL platformer that fits into 64x64px screen"
+    :tags ["elm" "game" "webgl"]
+    :memo "[[https://www.youtube.com/watch?v=NRXTMaXO15I][\"Mogee or how we fit Elm in a 64×64 grid\" by Andrey Kuzmin - YouTube]]"))
+(hoarder:fetch "orbitdb/orbit-db"
+  '(:description "Distributed peer-to-peer database for the decentralized web"
+    :tags ["crdt" "database" "decentralized" "distributed" "ipfs" "p2p" "peer-to-peer"]))
+(hoarder:fetch "przemyslawpluta/node-youtube-dl"
+  '(:description "youtube-dl driver for node"
+    :tags ["node" "video-downloader" "youtube" "youtube-downloader"]))
+(hoarder:fetch "arisu-dev/arisuchan"
+  '(:description "the version of vichan running on arisuchan"
+    :tags ["board" "image"]
+    :site "[[https://arisuchan.jp/][arisuchan — cyberpunk imageboard]]"))
+(hoarder:fetch "https://gitla.in/Doc0160/kikipedo.git"
+  '(:description " a fine lightweight wikipedia clone "
+    :tags []))
+(hoarder:fetch "illinoisjackson/better-ls"
+  '(:description "ls with customizable icons and colors. Uses nerd-fonts."
+    :tags ["font" "ls" "python" "shell"]))
+(hoarder:fetch "illinoisjackson/even-better-ls"
+  '(:description "LS + Icons + Formatting"
+    :memo "[[https://www.reddit.com/r/unixporn/comments/74cd7i/evenbetterls_fork_that_works_kinda_with/][Even-better-ls fork that works (kinda) with coreutils-8.28 : unixporn]]"))
+(hoarder:fetch "https://gitla.in/zannix/zousho.git"
+  '(:description ""
+    :tags []))
+(hoarder:fetch "https://gitla.in/zannix/gakusei.git"
+  '(:description ""
+    :tags []))
+(hoarder:fetch "https://notabug.org/cage/dote.git")
+(hoarder:fetch "tsuru/gandalf"
+  '(:description "Gandalf is an HTTP API for managing Git repositories."
+    :tags ["git" "go"]))
+(hoarder:fetch "unfoldingWord-dev/android-gogs-client"
+  '(:description "A client library for interacting with the Gogs REST api."))
+(hoarder:fetch "AdamNiederer/base100"
+  '(:description "base💯 - Encode your data into emoji"
+    :tags ["base64" "codec" "emoji" "memescale"]
+    :memo "[[https://www.reddit.com/r/rust/comments/74dinl/announcing_base_encode_your_data_into_emoji_twice/][Too Many Requests]]"))
+(hoarder:fetch "openssl/openssl"
+  '(:description "TLS/SSL and crypto library"
+    :tags ["cryptography" "decryption" "encryption" "openssl" "ssl" "tls"]))
+(hoarder:fetch "https://git.devuan.org/jaromil/sup.git")
 
 ;;; end
 

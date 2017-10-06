@@ -1989,6 +1989,8 @@
     :dependencies ["nicferrier/emacs-web"]))
 (hoarder:register "Fanael/persistent-scratch"
   '(:description "Preserve the scratch buffer across Emacs sessions"))
+(hoarder:register "alphapapa/pocket-lib.el"
+  '(:description "A library to access the getpocket.com API in Emacs"))
 
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"

@@ -105,4 +105,12 @@
 (hoarder:fetch "KingSann/CLD"
   '(:tags ["common_lisp" "database"]))
 
+(hoarder:fetch "vsrch/dots"
+  '(:description "system configuration files"
+    :tags ["dotfiles" "rice" "unix"]
+    :memo "[[https://github.com/vsrch/dots/blob/master/scripts/watup.sh][dots/watup.sh at master · vsrch/dots · GitHub]]
+[[https://www.reddit.com/r/unixporn/comments/71trg8/openbox_rose/][Too Many Requests]]"))
+(hoarder:fetch "thodg/facts"
+  '(:description "In-memory graph database for Common Lisp"
+    :memo "[[https://www.reddit.com/r/Common_Lisp/comments/69mxkr/facts_small_inmemory_graph_database_for_common/][Too Many Requests]]"))
 ;;; init.el ends here
