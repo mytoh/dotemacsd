@@ -71,8 +71,8 @@
                                            u)
                                   (u
                                    (concat u ".git")))
-                               .description
-                               (colle:map (lambda (tag) (concat "\"" tag "\"")) .tag_list))))))))
+                               (if .description .description "")
+                               (colle:map (lambda (tag) (concat "\"" tag "\"")) (if .tag_list .tag_list [])))))))))
       (defun hoarder:insert-helper-gitlab (command url)
         (hoarder:insert-gitlab-internal
          command
@@ -91,6 +91,17 @@
                                                     0 -4))
                                        (u
                                         (subseq u 18)))))))
+      (defun hoarder:insert-helper-gitlain (command url)
+        (hoarder:insert-gitlab-internal
+         command
+         url
+         (concat "https://gitla.in/api/v4/projects/"
+                 (url-hexify-string (pcase url ((and u
+                                               (rx ".git"))
+                                            (subseq (subseq u 17)
+                                                    0 -4))
+                                       (u
+                                        (subseq u 17)))))))
       (defun hoarder:insert-helper-register (url)
         (interactive "sUrl: ")
         (pcase url
@@ -99,7 +110,9 @@
           ((rx "github.com")
            (hoarder:insert-helper-github "register" url))
           ((rx "gitlab.com")
-           (hoarder:insert-helper-gitlab "register" url))))
+           (hoarder:insert-helper-gitlab "register" url))
+          ((rx "gitla.in")
+           (hoarder:insert-helper-gitlain "fetch" url))))
       (defun hoarder:insert-helper-fetch (url)
         (interactive "sUrl: ")
         (pcase url
@@ -108,7 +121,9 @@
           ((rx "github.com")
            (hoarder:insert-helper-github "fetch" url))
           ((rx "gitlab.com")
-           (hoarder:insert-helper-gitlab "fetch" url))))
+           (hoarder:insert-helper-gitlab "fetch" url))
+          ((rx "gitla.in")
+           (hoarder:insert-helper-gitlain "fetch" url))))
       ))
   :config
   (progn

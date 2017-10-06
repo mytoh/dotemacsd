@@ -5,7 +5,7 @@
 ;;; Code:
 
 (use-package helpful
-  :commands (helpful-at-point)
+  :commands (helpful-at-point helpful-symbol)
   :preface
   (defun muki:helpful-at-point ()
     (interactive)
