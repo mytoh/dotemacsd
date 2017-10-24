@@ -70,7 +70,6 @@
 (hoarder:register "gridaphobe/evil-god-state"
   '(:tags ["evil"]
     :dependencies ["chrisdone/god-mode"]))
-(hoarder:register "tarleb/evil-scout")
 (hoarder:register "PythonNut/evil-easymotion"
   '(:tags ["evil"]
     :dependencies ["abo-abo/avy"

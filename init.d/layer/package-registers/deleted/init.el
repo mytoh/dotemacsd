@@ -142,4 +142,5 @@
     :tags []))
 (hoarder:fetch "mfrelink/OpenFLIXR.Wizard"
   '(:tags ["plex"]))
+(hoarder:register "tarleb/evil-scout")
 ;;; init.el ends here
