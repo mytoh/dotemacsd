@@ -248,8 +248,9 @@
   '(:description "Dark theme for (spac[e]macs) that supports GUI and terminal"))
 (hoarder:register-theme "prassee/prassee-emacs-theme"
   '(:description "dark theme for Emacs based on Doom Theme (https://github.com/hlissner/emacs-doom-theme)"))
-(hoarder:register-theme "0rdy/kaolin-theme"
-  '(:description "A dark jade Emacs theme inspired by Sierra.vim"))
+(hoarder:register-theme "ogdenwebb/emacs-kaolin-themes"
+  '(:description "Set of eye pleasing themes for GNU Emacs."
+    :tags ["colorscheme" "emacs" "emacs-theme" "theme"]))
 (hoarder:register-theme "tokenrove/pink-bliss-theme"
   '(:description "Alex Schroeder's Pink Bliss emacs theme updated for emacs24"))
 (hoarder:register-theme "choppsv1/emacs-mandm-theme"
@@ -285,6 +286,11 @@
 (hoarder:register-theme "GuidoSchmidt/emacs-nyx-theme"
   '(:description "Dark theme for Emacs"
     :tags ["dark-theme" "emacs" "emacs-theme" "emacs-themes" "theme"]))
+(hoarder:register-theme "m00natic/anti-zenburn-theme"
+  '(:description "Low contrast grayish Emacs theme, Zenburn palette complemented."))
+(hoarder:register-theme "mvarela/Sunburn-Theme"
+  '(:description "Sunburn — a low-contrast theme for Emacs and iTerm2"
+    :memo "[[https://www.reddit.com/r/emacs/comments/75c8k2/sunburn_a_new_lowcontrast_theme/][Sunburn — a new low-contrast theme : emacs]]"))
 
 ;; (hoarder:register-theme "bobbypriambodo/nord-spacemacs"
 ;;     '(:description "Unofficial port of Nord color palette for Spacemacs."))

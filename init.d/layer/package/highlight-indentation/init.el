@@ -6,9 +6,9 @@
   (command (highlight-indentation-current-column-mode)
            "highlight-indentation")
   (after 'highlight-indentation
-      (set-face-background 'highlight-indentation-face
-       (color-lighten-name (face-background 'default)
-                           25))
+    (set-face-background 'highlight-indentation-face
+                         (color-lighten-name (face-background 'default)
+                                             25))
     (set-face-background 'highlight-indentation-current-column-face
                          (color-lighten-name (face-background 'default)
                                              25)))

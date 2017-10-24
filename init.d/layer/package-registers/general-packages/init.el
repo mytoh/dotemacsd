@@ -825,8 +825,6 @@
   '(:ag ["mpv" "android"]))
 (hoarder:fetch "gwkkwg/metabang-bind"
   '(:tags ["common-lisp" "macro" "let" "binding"]))
-(hoarder:fetch "https://gitla.in/nano/Craft.git"
-  '(:tags ["minecraft"]))
 (hoarder:fetch "morishitter/stylefmt"
   '(:tags ["css" "formatter" "web"]))
 (hoarder:fetch "alphapapa/reddit-emacs-css"
@@ -985,7 +983,8 @@
 
 (hoarder:fetch "EZ3CHI3L/Eternity"
   '(:download nil)) 
-(hoarder:fetch "FFmpeg/FFmpeg") 
+(hoarder:fetch "FFmpeg/FFmpeg"
+  '(:download nil)) 
 (hoarder:fetch "FLIF-hub/FLIF"
   '(:download nil)) 
 (hoarder:fetch "FooSoft/homemaker"
@@ -1465,8 +1464,7 @@
 (hoarder:fetch "mitchellh/colorstring"
   '(:download nil)) 
 (hoarder:fetch "mitmproxy/mitmproxy") 
-(hoarder:fetch "miyagawa/cpanminus"
-  '(:download nil)) 
+(hoarder:fetch "miyagawa/cpanminus") 
 (hoarder:fetch "mo-ya/tmux-agent"
   '(:download nil)) 
 (hoarder:fetch "mobile-shell/mosh") 
@@ -1698,12 +1696,9 @@
   '(:download nil)) 
 (hoarder:fetch "trapd00r/configs"
   '(:download nil)) 
-(hoarder:fetch "trapd00r/ls--"
-  '(:download nil)) 
-(hoarder:fetch "trapd00r/utils"
-  '(:download nil)) 
-(hoarder:fetch "trapd00r/zsh-syntax-highlighting-filetypes"
-  '(:download nil)) 
+(hoarder:fetch "trapd00r/ls--") 
+(hoarder:fetch "trapd00r/utils") 
+(hoarder:fetch "trapd00r/zsh-syntax-highlighting-filetypes") 
 (hoarder:fetch "travitch/taffybar"
   '(:download nil)) 
 (hoarder:fetch "trizen/youtube-viewer"
@@ -2056,8 +2051,6 @@
   '(:tags ["zsh" "powerline"]))
 (hoarder:fetch "gabrielelana/awesome-terminal-fonts"
   '(:tags ["terminal" "powerline" "font" "icon"]))
-(hoarder:fetch "Lokaltog/powerline-fonts"
-  '(:tags ["powerline" "font" "icon"]))
 (hoarder:fetch "Mayccoll/Gogh"
   '(:tags ["colorscheme" "gnome" "elementaryos" "terminal"]))
 (hoarder:fetch "supermarin/YosemiteSanFranciscoFont"
@@ -3171,10 +3164,6 @@ https://www.reddit.com/r/unixporn/comments/4ugrqt/oc_ive_been_doing_some_testing
   '(:tags ["common_lisp" "quickcheck" "test"]))
 (hoarder:fetch "cbaggers/pathology"
   '(:tags ["path" "common_lisp"]))
-(hoarder:fetch "https://gitla.in/zannix/neews.git"
-  '(:tags ["common_lisp" "feed"]))
-(hoarder:fetch "https://gitla.in/nilesrogoff/lain-ipfs-scraper.git"
-  '(:tags ["python" "scraping" "lainchan"]))
 (hoarder:fetch "shamazmazum/image-downloader"
   '(:tags ["common_lisp" "4chan"]))
 (hoarder:fetch "chancejs/chancejs"
@@ -4080,8 +4069,6 @@ kitsu.io api https://raw.githubusercontent.com/metakirby5/scripts/master/anichk 
   '(:tags ["kindle" "elixir"]))
 (hoarder:fetch "lubien/bookmarker"
   '(:tags ["google_chrome" "markdown" "bookmark"]))
-;; (hoarder:fetch "https://gitla.in/cosmicpuppet/blog.git"
-;;   '(:tags ["lainchan"]))
 (hoarder:fetch "the-little-prover/j-bob"
   '(:site "http://the-little-prover.github.io/"
     :tags ["scheme" "logic_programming" "proof_assistant"]))
@@ -4288,8 +4275,6 @@ kitsu.io api https://raw.githubusercontent.com/metakirby5/scripts/master/anichk 
   '(:tags ["sshfs" "sftpman" "python"]))
 (hoarder:fetch "drduh/pwd.sh"
   '(:tags ["password"]))
-(hoarder:fetch "mfrelink/OpenFLIXR.Wizard"
-  '(:tags ["plex"]))
 (hoarder:fetch "gaubert/gmvault"
   '(:tags ["python" "gmail"]))
 (hoarder:fetch "tony/tmuxp"
@@ -4874,8 +4859,6 @@ $ xcrawl -c config.yaml \
     :memo "[[http://arc680.hatenablog.jp/entry/2016/12/21/013819][mikutter plugin manager を作った - あーく・りなっくす]]")) 
 (hoarder:fetch "marteinn/The-Big-Username-Blacklist"
   '(:description "This is a opinionated blacklist of words that you might not like to see used as usernames in your service."))
-;; (hoarder:fetch "https://gitla.in/cosmicpuppet/lainchan.rb.git"
-;;   '(:memo "[[https://lainchan.org/%CE%BB/res/19446.html][λ - What personal projects have you done lately, /lam/?]]"))
 ;; (hoarder:fetch "Saladus/epch"
 ;;   '(:description "A script that helps me choose an episode of my favorite cartoons to watch"
 ;;     :memo "[[https://lainchan.org/%CE%BB/res/19446.html][λ - What personal projects have you done lately, /lam/?]]"))
@@ -6286,9 +6269,6 @@ case for pi zero and camera: http://www.thingiverse.com/thing:1639568 "))
     :tags ["skk" "dictionary" "idol_master"]))
 (hoarder:fetch "https://gitlab.com/napoleon-blue/hinaserver.git"
   '(:tags ["idol_master"]))
-(hoarder:fetch "https://gitla.in/nymphet/Haskell-Common-Lisp.git"
-  '(:depth nil
-    :tags ["common_lisp" "haskell"]))
 (hoarder:fetch "https://bitbucket.org/cfyzium/bearlibterminal"
   '(:type :hg
     :tags ["terminal" "cui" "python" "c++" "c" "lua"]))
@@ -7596,8 +7576,6 @@ https://www.reddit.com/r/DataHoarder/comments/2vlkix/comic_organizing/ " ))
 (hoarder:fetch "go-functional/core"
   '(:description "Core utilities for functional Programming in Go"
     :memo "[[https://www.reddit.com/r/coolgithubprojects/comments/6od9ni/one_of_my_colleagues_is_crazy_enough_to_build_out/][Too Many Requests]]"))
-(hoarder:fetch "merkoba/hue"
-  '(:description "Chat room with dynamic image/background and internet radio."))
 (hoarder:fetch "amirouche/forward.scm"
   '(:description "Scheme frontend framework"
     :tags ["biwascheme" "frontend" "model-view-controller" "scheme" "virtual-dom"]
@@ -8840,21 +8818,12 @@ Currently a work in progress, but quite usable. Initial focus is on FT991(A) Tra
   '(:description "the version of vichan running on arisuchan"
     :tags ["board" "image"]
     :site "[[https://arisuchan.jp/][arisuchan — cyberpunk imageboard]]"))
-(hoarder:fetch "https://gitla.in/Doc0160/kikipedo.git"
-  '(:description " a fine lightweight wikipedia clone "
-    :tags []))
 (hoarder:fetch "illinoisjackson/better-ls"
   '(:description "ls with customizable icons and colors. Uses nerd-fonts."
     :tags ["font" "ls" "python" "shell"]))
 (hoarder:fetch "illinoisjackson/even-better-ls"
   '(:description "LS + Icons + Formatting"
     :memo "[[https://www.reddit.com/r/unixporn/comments/74cd7i/evenbetterls_fork_that_works_kinda_with/][Even-better-ls fork that works (kinda) with coreutils-8.28 : unixporn]]"))
-(hoarder:fetch "https://gitla.in/zannix/zousho.git"
-  '(:description ""
-    :tags []))
-(hoarder:fetch "https://gitla.in/zannix/gakusei.git"
-  '(:description ""
-    :tags []))
 (hoarder:fetch "https://notabug.org/cage/dote.git")
 (hoarder:fetch "tsuru/gandalf"
   '(:description "Gandalf is an HTTP API for managing Git repositories."
@@ -8869,6 +8838,217 @@ Currently a work in progress, but quite usable. Initial focus is on FT991(A) Tra
   '(:description "TLS/SSL and crypto library"
     :tags ["cryptography" "decryption" "encryption" "openssl" "ssl" "tls"]))
 (hoarder:fetch "https://git.devuan.org/jaromil/sup.git")
+
+(hoarder:fetch "DarthSim/imgproxy"
+  '(:description "Fast and secure standalone server for resizing and converting remote images"
+    :tags ["crop-image" "docker" "image" "jpeg" "libvips" "microservice" "png" "resize-images"]
+    :memo "[[https://evilmartians.com/chronicles/introducing-imgproxy][imgproxy: Resize your images instantly and securely — Martian Chronicles, Evil Martians’ team blog]]"))
+(hoarder:fetch "https://git.code.sf.net/p/trousers/trousers")
+(hoarder:fetch "https://git.savannah.gnu.org/git/libtasn1.git")
+(hoarder:fetch "vain/xiate"
+  '(:description "xiate is a terminal emulator"
+    :tags ["terminal-emulator"]))
+(hoarder:fetch "vain/multipass"
+  '(:description "Broadcast X11 key events to multiple windows"
+    :tags ["usability" "x11"]))
+(hoarder:fetch "sharkdp/fd"
+  '(:description "A simple, fast and user-friendly alternative to find."
+    :tags ["command-line" "filesystem" "regex" "rust" "search" "tool"]))
+(hoarder:fetch "powerline/fonts"
+  '(:description "Patched fonts for Powerline users."
+    :tags ["powerline" "font" "icon"]))
+(hoarder:fetch "asweigart/pyautogui"
+  '(:description "A cross-platform GUI automation Python module for human beings. Used to programmatically control the mouse & keyboard."))
+(hoarder:fetch "szorfein/dotfiles"
+  '(:description "Configuration files for unix (bspwm, privoxy, mutt, and more...)"
+    :tags ["bspwm" "desktop" "gnupg" "herbstluftwm" "i3-gaps" "lemonbar" "music" "mutt" "ncmpcpp" "ranger" "termite" "weechat" "zsh"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/758kdo/i3gaps_galactic/][{i3-gaps} Galactic : unixporn]]"))
+(hoarder:fetch "a-schaefers/dotfiles"
+  '(:tag ["freebsd" "emacs"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/755y56/openbox_unix_minimalism/][{Openbox} Unix Minimalism : unixporn]]")) 
+(hoarder:fetch "kakwa/kakwafont"
+  '(:description "Kakwafont, a 12px monospace bitmap font based on Terminus"
+    :tags ["bitmap" "font"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/752hsa/herbstluftwm_splat/][Too Many Requests]]"))
+(hoarder:fetch "lepisma/cfg"
+  '(:description "Config files"
+    :tags ["dotfiles" "fish-configuration" "stumpwm"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/73vwpa/stumpwm_light_colors_with_purple_accent/][Too Many Requests]]"))
+(hoarder:fetch "Druanae/better-progress-bar"
+  '(:description "A script written in bash that displays the percentage of the song completed in lemonbar by recolouring the characters in the name."
+    :memo "[[https://www.reddit.com/r/unixporn/comments/74fb24/better_progress_bar_a_music_progress_script_for/][Too Many Requests]]"))
+(hoarder:fetch "Nymphet/sexinsex-crawler"
+  '(:description "Simple Discuz forums crawler"))
+(hoarder:fetch "Nymphet/t66y-spider"
+  '(:description "crawler for t66y"))
+(hoarder:fetch "acgotaku/BaiduExporter"
+  '(:description "Assistant for Baidu to export download links to aria2/aria2-rpc"))
+(hoarder:fetch "Nymphet/acgnz-spider"
+  '(:description "Crawler for wordpress sites with acgnz theme"))
+(hoarder:fetch "miiton/Cica"
+  '(:description "プログラミング用日本語等幅フォント Cica(シカ)"
+    :tags ["font" "japanese" "programming-font"]
+    :memo "[[https://tmnm.tech/2017/10/09/cica-v-2/]]
+[[https://tmnm.tech/2017/10/11/vim-setting-with-cica/]]"))
+(hoarder:fetch "susmithHCK/torghost"
+  '(:description "Tor anonimizer"))
+(hoarder:fetch "SystemSpace/Compendium"
+  '(:description "SystemSpace Compendium"
+    :site "https://boards.systemspace.link/"
+    :memo "https://systemspace.network/"))
+(hoarder:fetch "SystemSpace/Synapsian"
+  '(:description "A repository for the study of the Synapsian language"))
+(hoarder:fetch "nineohthree/seczine"
+  '(:description "A security zine."
+    :memo "[[https://lainchan.org/r/res/5312.html][/r/ - Back in February, a thread was made on applechan by a user with the alias of "clippng" regarding the start of a...]]"))
+(hoarder:fetch "dustinkirkland/byobu"
+  '(:description "git mirror of upstream bzr at http://launchpad.net/byobu"
+    :site "http://www.byobu.co/source.html"))
+(hoarder:fetch "python/cpython"
+  '(:description "The Python programming language"
+    :download nil))
+(hoarder:fetch "Antergos/whither"
+  '(:description "Universal Linux Application SDK - Create once. Run everywhere."
+    :tags ["app-sdk" "desktop-application-sdk" "es6" "framework" "gtk3" "html5" "python" "qt5" "sdk"]))
+(hoarder:fetch "chrissnell/weather-bar"
+  '(:description "Pull live weather reports from gopherwx for use in desktop tool like polybar"
+    :memo "[[https://www.reddit.com/r/unixporn/comments/76o0ij/i3gaps_polybar_weatherbar_live_weather_from_the/][{i3-gaps + Polybar + weather-bar} Live weather from the station in my backyard, displayed on Polybar : unixporn]]"))
+(hoarder:fetch "Wyatt915/fireplace"
+  '(:description "A cozy fireplace in your terminal"
+    :tags ["cli" "fireplace" "fun" "terminal" "terminal-based"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/76fbaa/oc_i_created_a_nice_fireplace_to_keep_your/][Too Many Requests]]"))
+(hoarder:fetch "re-ops/re-mote"
+  '(:description "REPL driven environment for remote operations"
+    :tags ["clojure" "live" "management" "remote" "repl" "ssh" "zeromq"]
+    :memo "[[https://www.youtube.com/watch?v=iopuirQuK-s][Compose :: Melbourne 2017 - Ronen Narkis - Re-ops, a Functional Live-Infrastructure as Code - YouTube]]"))
+(hoarder:fetch "GNOME/librsvg"
+  '(:description "librsvg"))
+(hoarder:fetch "http://git.savannah.nongnu.org/cgit/m17n/m17n-lib.git")
+(hoarder:fetch "lovell/sharp"
+  '(:description "High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP and TIFF images. Uses the libvips library."
+    :tags ["crop" "exif" "icc" "image" "image-processing" "javascript" "jpeg" "libvips" "nodejs" "overlay" "performance" "png" "resize" "svg" "tiff" "webp"]))
+(hoarder:fetch "volumio/Volumio2"
+  '(:description "Volumio 2 - Audiophile Music Player"
+    :tags ["music-player" "nodejs" "raspberry-pi" "volumio"]
+    :memo "[[https://www.youtube.com/watch?v=TRyCpZh9-pI&feature=youtu.be][Review: Volumio for Raspberry Pi version 2 - YouTube]]
+[[https://www.youtube.com/watch?v=2fX7NSaAKYU][An introduction to Raspberry Pi hi-fi - YouTube]]"))
+(hoarder:fetch "gugod/App-perlbrew"
+  '(:description "Manage perl installations in your $HOME"))
+(hoarder:fetch "tokuhirom/plenv"
+  '(:description "Perl binary manager"))
+(hoarder:fetch "tokuhirom/perl-build") 
+(hoarder:fetch "miyagawa/plenv-contrib") 
+(hoarder:fetch "miyagawa/web-scraper"
+  '(:description "Perl web scraping toolkit"))
+(hoarder:fetch "miyagawa/remedie"
+  '(:description "perl based pluggable media center application"))
+(hoarder:fetch "aki2o/plsense"
+  '(:description "Omni completion tool for Perl"))
+(hoarder:fetch "athreef/WebService-NextEpisode"
+  '(:description "Fetch air date from next-episode.net"
+    :tags ["perl"]
+    :site "https://next-episode.net/"
+    :memo "[[http://perltricks.com/article/what-s-new-on-cpan---september-2017/][What's new on CPAN - September 2017]]"))
+(hoarder:fetch "http://git.ieval.ro/git/webservice-vichan.git"
+  '(:memo "[[http://perltricks.com/article/what-s-new-on-cpan---september-2017/][What's new on CPAN - September 2017]]"
+    :tags ["perl" "vichan"]))
+(hoarder:fetch "dagolden/Path-Tiny"
+  '(:description "File path utility"
+    :tags ["perl"]))
+(hoarder:fetch "garu/Data-Printer"
+  '(:description "colored pretty-print of Perl data structures and objects"
+    :tags ["perl"]))
+(hoarder:fetch "msokalski/ascii-patrol"
+  '(:description "Ascii Patrol is an ASCII game project. It was mainly inspired by \"Moon Patrol\", my favourite arcade game at the times I was a child."
+    :memo "[[https://www.youtube.com/watch?v=_0uLnKCaAU8][AsciiPatrol - Text-only \"Moon Patrol\" in your Terminal - YouTube]]"))
+(hoarder:fetch "https://perl5.git.perl.org/perl.git"
+  '(:download nil))
+(hoarder:fetch "EnlightenedPerlOrganisation/task-kensho"
+  '(:description "A Glimpse at an Enlightned Perl Distribution"))
+(hoarder:fetch "Code-Hex/Text-Shirasu"
+  '(:description "Wrapped Text::MeCab in Perl"
+    :tag ["perl" "mecab"]
+    :memo "[[https://qiita.com/Kei-Kamikawa/items/3b104f84876304e73f06][Perlで綺麗に形態素解析をやる - Qiita]]"))
+(hoarder:fetch "briandfoy/PerlPowerTools"
+  '(:description "Perl Power Tools"
+    :tags ["perl" "powertools"]
+    :memo "[[https://rawgit.com/neilb/cpantoberfest/master/index.html][CPANtoberfest: CPAN distributions to hack on for Hacktoberfest]]"))
+(hoarder:fetch "RexOps/Rex"
+  '(:description "A framework for server orchestration and to simplify system administration"
+    :tags ["perl"]
+    :memo "[[https://rawgit.com/neilb/cpantoberfest/master/index.html][CPANtoberfest: CPAN distributions to hack on for Hacktoberfest]]"))
+(hoarder:fetch "tobyink/p5-perlx-maybe"
+  '(:tags ["perl"]
+    :memo "[[https://www.reddit.com/r/perl/comments/73gmeb/whats_your_favorite_obscure_perl_trick/][Too Many Requests]]")) 
+(hoarder:fetch "houseabsolute/perl-code-tidyall"
+  '(:description "Engine for tidyall, your all-in-one code tidier and validator"
+    :memo "[[http://niceperl.blogspot.jp/2017/09/clii-cpan-great-modules-released-last.html][# where we turn Perl inside out: (clii) CPAN great modules released last week]]"))
+(hoarder:fetch "duckduckgo/p5-app-duckpan"
+  '(:description "DuckDuckHack OpenSource Development Application"
+    :tags ["duckpan" "instant-answers" "perl"]
+    :memo "[[https://www.youtube.com/watch?v=RW5OS3lg1gs][David Farrell - \"What's New on CPAN\" - YouTube]]"))
+(hoarder:fetch "p5h/2017"
+  '(:tags ["perl" "p5p"]
+    :memo "[[https://www.nntp.perl.org/group/perl.perl5.porters/2017/10/msg246796.html][BBC canary - nntp.perl.org]]
+[[https://github.com/p5h/2017/wiki/What-Do-We-Want-and-Need-from-Smoke-Testing%3F][What Do We Want and Need from Smoke Testing? · p5h/2017 Wiki · GitHub]]
+[[https://github.com/perlbot/perlbuut/blob/master/cpanfile][perlbuut/cpanfile at master · perlbot/perlbuut · GitHub]]
+[[https://github.com/perlbot/perlblead-ci][GitHub - perlbot/perlblead-ci: Code to rebuild perl blead and run it through a series of tests for the perlbot eval s...]]")) 
+(hoarder:fetch "perlbot/perlbuut"
+  '(:description "new version of perlbot, based on buubot"
+    :tags ["perl" "p5p"]
+    :memo "[[https://www.nntp.perl.org/group/perl.perl5.porters/2017/10/msg246796.html][BBC canary - nntp.perl.org]]
+[[https://github.com/p5h/2017/wiki/What-Do-We-Want-and-Need-from-Smoke-Testing%3F][What Do We Want and Need from Smoke Testing? · p5h/2017 Wiki · GitHub]]
+[[https://github.com/perlbot/perlbuut/blob/master/cpanfile][perlbuut/cpanfile at master · perlbot/perlbuut · GitHub]]
+[[https://github.com/perlbot/perlblead-ci][GitHub - perlbot/perlblead-ci: Code to rebuild perl blead and run it through a series of tests for the perlbot eval s...]]"))
+(hoarder:fetch "perlbot/perlblead-ci"
+  '(:description "Code to rebuild perl blead and run it through a series of tests for the perlbot eval server"
+    :tags ["perl" "p5p"]
+    :memo "[[https://www.nntp.perl.org/group/perl.perl5.porters/2017/10/msg246796.html][BBC canary - nntp.perl.org]]
+[[https://github.com/p5h/2017/wiki/What-Do-We-Want-and-Need-from-Smoke-Testing%3F][What Do We Want and Need from Smoke Testing? · p5h/2017 Wiki · GitHub]]
+[[https://github.com/perlbot/perlbuut/blob/master/cpanfile][perlbuut/cpanfile at master · perlbot/perlbuut · GitHub]]
+[[https://github.com/perlbot/perlblead-ci][GitHub - perlbot/perlblead-ci: Code to rebuild perl blead and run it through a series of tests for the perlbot eval s...]]" ))
+(hoarder:fetch "mogilefs/MogileFS-Server"
+  '(:memo "[[http://b.hatena.ne.jp/entry/neta.ywcafe.net/000774.html][はてなブックマーク - 画像もDBに格納して管理する －扱いがめんどうなLOB(ラージオブジェクト)は使わない方法も含め]]")) 
+(hoarder:fetch "netdisco/netdisco"
+  '(:memo "[[https://qiita.com/Bentham3314/items/f5e5827c5f353b015c0c][【ツール紹介】netdisco - Qiita]]")) 
+(hoarder:fetch "https://gist.github.com/whitebell/a7d991e3083cd319abe337cfa5a63b2c.git"
+  '(:tags ["perl" "pdic" "esperanto"]
+    :description "http://www.vastalto.com/jpn/#e-Dic pejv181uからpdic用csvに変換（ざっくりと） "
+    :memo "[[https://qiita.com/whitebell/items/c82df807052831e70aa4][PDIC用エスペラント辞書、または私は如何にして心配するのをやめてことのはアムリラートを愛するようになったか - Qiita]]"))
+(hoarder:fetch "tokuhirom/Furl"
+  '(:description "pretty fast http client library for perl5"
+    :memo "[[https://metacpan.org/source/TOKUHIROM/Furl-3.11/lib/Furl/HTTP.pm#L41][lib/Furl/HTTP.pm - metacpan.org]]
+[[https://qiita.com/ymko/items/913bac65b283984a08b4][ググって調べにくいdefined-or演算子(//)を使ってみる - Qiita]]"))
+(hoarder:fetch "lordmauve/chopsticks"
+  '(:description "Chopsticks is an orchestration library: it lets you execute Python code on remote hosts over SSH."
+    :tags ["orchestration" "python" "ssh"]
+    :memo "[[https://www.youtube.com/watch?v=f7yGOq2zyRs][Daniel Pope - Scripting across hosts with Chopsticks - YouTube]]"))
+(hoarder:fetch "https://gist.github.com/afair/2402068.git"
+  '(:name "perl-ceheat-sheet"
+    :description " Perl References for Kittens"))
+(hoarder:fetch "b4b4r07/emoji-cli"
+  '(:description ":scream: Emoji completion on the command line"))
+(hoarder:fetch "stevan/p5-Moxie"
+  '(:description "..."
+    :tags ["perl" "moose" "oop"]))
+(hoarder:fetch "shlomif/perl-XML-LibXML"
+  '(:description "The XML-LibXML CPAN Distribution for Processing XML using the libxml2 library"
+    :tags ["perl" "xml"]))
+(hoarder:fetch "ashaindlin/git-fem"
+  '(:description "change your `master` branch to `mistress`"
+    :memo "[[https://boards.4chan.org/g/thread/63017734][/g/ - Ruby package "FactoryGirl" renamed because of "Girl"; shit breaks - Technology - 4chan]]"))
+(hoarder:fetch "xenzil/Finding-Nigger-Faggot-s-Way"
+  '(:description "To group mates, with love"
+    :memo "[[https://boards.4chan.org/g/thread/63017734][/g/ - Ruby package "FactoryGirl" renamed because of "Girl"; shit breaks - Technology - 4chan]]"))
+(hoarder:fetch "pseudonymous/better-better-booru"
+  '(:description "Various tweaks to make Danbooru better."
+    :memo "[[https://github.com/pseudonymous/better-better-booru/issues/82][Censored posts fixed on danbooru · Issue #82 · pseudonymous/better-better-booru · GitHub]]
+[[https://userstyles.org/styles/141949/adfree-gelbooru-w-dark-theme][Adfree Gelbooru w/ Dark Theme | Userstyles.org]]
+[[https://pastebin.com/MNA8jndR][{Python} Rajeesh Pajeetson - Pastebin.com]]
+[[https://boards.4chan.org/g/thread/63015203][/g/ - Danbooru patched the API bug which allowed basic a - Technology - 4chan]]"))
+(hoarder:fetch "streamlink/streamlink"
+  '(:description "CLI for extracting streams from various websites to a video player of your choosing"
+    :tags ["cli" "livestream" "python" "streaming" "streaming-services" "streamlink" "twitch" "vlc"]))
 
 ;;; end
 

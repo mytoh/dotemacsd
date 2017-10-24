@@ -965,7 +965,8 @@
 (hoarder:register "xuchunyang/eshell-git-prompt"
   '(:tags ["eshell" "prompt" "git"]))
 (hoarder:register "noctuid/general.el"
-  '(:tags ["keybinding" "evil"]))
+  '(:tags ["keybinding" "evil"]
+    :branch "buttercup"))
 (hoarder:register "zonuexe/aa-edit-mode"
   '(:tags ["ascii_art" ]))
 (hoarder:register "ryuslash/eshell-fringe-status"
@@ -1991,7 +1992,40 @@
   '(:description "Preserve the scratch buffer across Emacs sessions"))
 (hoarder:register "alphapapa/pocket-lib.el"
   '(:description "A library to access the getpocket.com API in Emacs"))
-
+(hoarder:register "alphapapa/pocket-reader.el"
+  '(:description "A library to access the getpocket.com API in Emacs"))
+(hoarder:register "alphapapa/pocket-reader.el"
+  '(:description "Emacs client for Pocket reading list (getpocket.com)"
+    :dependencies [ "alphapapa/pocket-reader.el"]))
+(hoarder:register "cyrus-and/zoom"
+  '(:description "Fixed and automatic balanced window layout for Emacs"
+    :tags ["emacs" "emacs-customizations" "emacs-lisp" "emacs-mode"]))
+(hoarder:register "kaz-yos/eval-in-repl"
+  '(:description "Consistent ESS-like eval interface for various REPLs"
+    :tags ["emacs" "emacs-lisp" "repl"]))
+(hoarder:register "jdenen/mastodon.el"
+  '(:description "Emacs client for Mastodon"
+    :tags ["emacs" "mastodon" "ostatus"]
+    :load-path ["lisp"]))
+(hoarder:register "mickeynp/discover.el"
+  '(:description "Discover more of emacs with context menus!"
+    :dependencies ["mickeynp/makey"]))
+(hoarder:register "kentaro/perlbrew.el"
+  '(:description "A perlbrew wrapper for Emacs"))
+(hoarder:register "zakame/cpanfile-mode"
+  '(:description "Edit CPANfiles in Emacs"))
+(hoarder:register "CeleritasCelery/company-plsense"
+  '(:description "company backend for plsense"))
+(hoarder:register "jrockway/cperl-mode"
+  '(:description "cperl-mode with 5.10 fixes, mx-declare support, perl6 support, etc."))
+(hoarder:register "emacsmirror/perltidy"
+  '(:description "Tidy perl code"))
+(hoarder:register "emacsmirror/perlcritic"
+  '(:description "Call perlcritic in Emacs"))
+(hoarder:register "renormalist/emacs-pod-mode"
+  '(:description "Emacs syntax highlighting for Perl POD"))
+(hoarder:register "mattfidler/tabbar-ruler.el"
+  '(:description "Tabbar Ruler Mode"))
 
 ;; (hoarder:register "https://bitbucket.org/eeeickythump/org-player"
 ;;                  '(:tags ["org" "bongo" "music"]
@@ -2213,10 +2247,12 @@ https://github.com/otijhuis/emacs.d/blob/master/config/hydra-settings.el"))
 (hoarder:fetch "https://gist.github.com/mrkuc/7915775.git"
   '(:name "escript"))
 (hoarder:fetch "Ambrevar/dotfiles"
-  '(:tags ["archlinux" "emacs" "eshell" "exwm" "freebsd" "gentoo" "helm" "keymap" "mu4e" "posix-sh" "shell-scripts" "unix"]
+  '(:tags ["archlinux" "emacs" "eshell" "exwm" "freebsd" "gentoo" "helm" "keymap" "mu4e" "posix-sh" "shell-scripts" "unix" "emms"]
     :memo "[[https://github.com/Ambrevar/dotfiles/blob/master/.emacs.d/lisp/init-eshell.el][dotfiles/init-eshell.el at master · Ambrevar/dotfiles · GitHub]]
 [[https://github.com/szermatt/emacs-bash-completion/issues/13#issuecomment-326832005][Extend to work in sh-mode · Issue #13 · szermatt/emacs-bash-completion · GitHub]]
-[[https://www.reddit.com/r/emacs/comments/6y3q4k/yes_eshell_is_my_main_shell/dml9asq/][Too Many Requests]]"))
+[[https://www.reddit.com/r/emacs/comments/6y3q4k/yes_eshell_is_my_main_shell/dml9asq/][Too Many Requests]]
+[[https://www.reddit.com/r/emacs/comments/74hetz/emacs_everywhere/][Emacs Everywhere : emacs]]
+[[https://www.reddit.com/r/emacs/comments/74hetz/emacs_everywhere/][Too Many Requests]]"))
 (hoarder:fetch "https://gist.github.com/alphapapa/9df7093dc1ea83fbc4c8ef5d31b3bc57.git"
   '(:name "org-books.el"
     :memo "[[https://www.reddit.com/r/emacs/comments/6ytkuu/fetch_book_data_from_amazon_and_insert_as_org/][Too Many Requests]]"))
@@ -2235,11 +2271,25 @@ https://github.com/otijhuis/emacs.d/blob/master/config/hydra-settings.el"))
 (hoarder:fetch "zk-phi/git-context-switch"
   '(:description "[git] context switch for git"
     :memo "[[https://qiita.com/zk_phi/items/656733c9eecf83ab9a4c][Git にコンテキストスイッチを実装した - Qiita]]"))
-(hoarder:fetch "DarthSim/imgproxy"
-  '(:description "Fast and secure standalone server for resizing and converting remote images"
-    :tags ["crop-image" "docker" "image" "jpeg" "libvips" "microservice" "png" "resize-images"]
-    :memo "[[https://evilmartians.com/chronicles/introducing-imgproxy][imgproxy: Resize your images instantly and securely — Martian Chronicles, Evil Martians’ team blog]]"))
-
+(hoarder:fetch "algernon/emacs.d"
+  '(:description "My Emacs configuration"
+    :tags ["emacs" "emacs-configuration" "spacemacs" "eshell"]
+    :memo "[[https://github.com/algernon/emacs.d/blob/master/layers/%2Bapps/algernon-eshell/funcs.el#L121][emacs.d/funcs.el at master · algernon/emacs.d · GitHub]]
+[[https://www.reddit.com/r/emacs/comments/6y3q4k/yes_eshell_is_my_main_shell/dml8lbk/][Too Many Requests]]"))
+(hoarder:fetch "eccentricayman/dotfiles"
+  '(:description "emacs // osx apps // vim // zsh"
+    :memo "[[https://www.reddit.com/r/unixporn/comments/755idj/emacs_think_spacemacs_but_minimalist_untainted_by/][{Emacs} Think Spacemacs, but minimalist + untainted by vim : unixporn]]"))
+(hoarder:fetch "Alexander-Miller/dotfiles"
+  '(:tags ["emacs" "shakle"]
+    :memo "[[https://github.com/Alexander-Miller/dotfiles/blob/master/.config/spacemacs/user-config.org#shackle][dotfiles/user-config.org at master · Alexander-Miller/dotfiles · GitHub]]
+[[https://www.reddit.com/r/emacs/comments/76f0sm/configure_window_layout_purpose_mode/dodlrs0/][Too Many Requests]]")) 
+(hoarder:fetch "genehack/emacs"
+  '(:description "emacs configuration files and libraries"
+    :memo "[[https://github.com/genehack/emacs/blob/master/etc/perl.el][emacs/perl.el at master · genehack/emacs · GitHub]]
+[[https://www.reddit.com/r/perl/comments/2876nc/write_perl_in_emacs_any_suggestion/][Write perl in Emacs, any suggestion？ : perl]]"))
+(hoarder:fetch "https://gist.github.com/am0c/960214.git"
+  '(:tags ["eshell" "perlbrew"]
+    :name "perlbrew-on-eshell"))
 
 ;; TODO emacswiki support
 ;; "http://www.emacswiki.org/emacs/hl-spotlight.el"

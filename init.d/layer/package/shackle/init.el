@@ -5,9 +5,12 @@
 (liby 'shackle
   (defery 'shackle)
   (after 'shackle
+    ;; [[https://github.com/Alexander-Miller/dotfiles/blob/master/.config/spacemacs/user-config.org#shackle][dotfiles/user-config.org at master · Alexander-Miller/dotfiles · GitHub]]
     (set-option shackle-rules
                 '(;; *compilation*は下部に2割の大きさで表示
                   (compilation-mode :align below :ratio 0.2)
+                  (helpful-mode             :select t   :align right :size 0.5)
+                  (inferior-emacs-lisp-mode             :select t   :align right :size 0.5)
                   ;; let helm handle help buffer
                   ("*Help*" :select t)
                   ;; 補完バッファは下部に3割の大きさで表示

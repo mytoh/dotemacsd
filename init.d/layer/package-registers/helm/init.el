@@ -197,6 +197,8 @@
     :dependencies ["https://gitlab.com/u11/csv.el.git"]))
 (hoarder:register "alphapapa/helm-swish"
   '(:description "Like helm-swoop, but a little bit faster"))
+(hoarder:register "syohex/emacs-helm-perldoc"
+  '(:description "perlpod with helm interface"))
 
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tags ["helm"]

@@ -1,3 +1,4 @@
+;;; init-load.el  -*- lexical-binding: t -*-
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -10,7 +11,7 @@
 
 (require 'cl-lib)
 
-(cl-letf ((file-name-handler-alist nil)) 
+(let ((file-name-handler-alist nil)) 
   (add-to-list 'load-path (concat user-emacs-directory "init.d"))
   (require 'init-load)
   (put 'downcase-region 'disabled nil)

@@ -12,7 +12,8 @@
 
   (req 'dired-async
     ;; enable dired-async
-    (enable-mode dired-async-mode))
+    ;; (enable-mode dired-async-mode)
+    )
 
   (enable-mode helm-mode)
 
@@ -27,10 +28,9 @@
     (cl-letf ((background
                (face-background 'default))
               (percent 20))
-      (when (display-graphic-p)
-        (set-face-attribute 'helm-selection nil
-                            :background
-                            (color-lighten-name background percent)))))
+      (set-face-attribute 'helm-selection nil
+                          :background
+                          (color-lighten-name background percent))))
 
   (after 'helm
     (hook 'helm-after-update-hook #'muki:helm-set-face))

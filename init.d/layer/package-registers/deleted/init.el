@@ -113,4 +113,33 @@
 (hoarder:fetch "thodg/facts"
   '(:description "In-memory graph database for Common Lisp"
     :memo "[[https://www.reddit.com/r/Common_Lisp/comments/69mxkr/facts_small_inmemory_graph_database_for_common/][Too Many Requests]]"))
+(hoarder:fetch "merkoba/hue"
+  '(:description "Chat room with dynamic image/background and internet radio."))
+
+;; gitla.in
+
+(hoarder:fetch "https://gitla.in/nano/Craft.git"
+  '(:tags ["minecraft"]))
+(hoarder:fetch "https://gitla.in/zannix/neews.git"
+  '(:tags ["common_lisp" "feed"]))
+(hoarder:fetch "https://gitla.in/nilesrogoff/lain-ipfs-scraper.git"
+  '(:tags ["python" "scraping" "lainchan"]))
+;; (hoarder:fetch "https://gitla.in/cosmicpuppet/blog.git"
+;;   '(:tags ["lainchan"]))
+;; (hoarder:fetch "https://gitla.in/cosmicpuppet/lainchan.rb.git"
+;;   '(:memo "[[https://lainchan.org/%CE%BB/res/19446.html][λ - What personal projects have you done lately, /lam/?]]"))
+(hoarder:fetch "https://gitla.in/nymphet/Haskell-Common-Lisp.git"
+  '(:depth nil
+    :tags ["common_lisp" "haskell"]))
+(hoarder:fetch "https://gitla.in/Doc0160/kikipedo.git"
+  '(:description " a fine lightweight wikipedia clone "
+    :tags []))
+(hoarder:fetch "https://gitla.in/zannix/zousho.git"
+  '(:description ""
+    :tags []))
+(hoarder:fetch "https://gitla.in/zannix/gakusei.git"
+  '(:description ""
+    :tags []))
+(hoarder:fetch "mfrelink/OpenFLIXR.Wizard"
+  '(:tags ["plex"]))
 ;;; init.el ends here

@@ -244,7 +244,7 @@
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
 ;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson, noctilux, erosiond, material
-(defvar muki:x-theme 'exotica)
+(defvar muki:x-theme 'nord)
 (defvar muki:term-theme 'flatland)
 (defconst muki:favorite-themes
   '(comidia planet monokai molokai firebelly
@@ -264,7 +264,7 @@
             doomsday-dark solarized-grey solarized-dark
             rebecca darktooth sirthias nord kaolin
             tao-yin challenger-deep obsidian
-            exotica lop tronesque))
+            exotica lop tronesque base16-harmonic-dark))
 
 ;; (enable-option select-enable-clipboard
 ;;                select-enable-primary)
@@ -503,5 +503,7 @@
 
 ;; double bffering display
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
+
+(pixel-scroll-mode)
 
 ;;; config-setting.el ends here

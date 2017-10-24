@@ -453,20 +453,20 @@
 (cl-defun muki:font-set-rescale-alist ()
   " [[https://skalldan.wordpress.com/2011/08/05/mac-os-x-%E3%81%A7%E3%81%AE-emacs-2/]]
 [[http://www.emacswiki.org/emacs/FontSets]] "
-(colle:map
- (pcase-lambda (`(,font . ,ratio))
-   (add-to-list 'face-font-rescale-alist
-                (cons
-                 (rx-to-string `(: (* anything) ,font (* anything)))
-                 ratio)))
- '(("Hiragino Kaku Gothic ProN" . 1.2)
-   ("LiHei Pro" . 1.2)
-   ("Heiti SC" . 1.2)
-   ("Arial Unicode MS" . 1.2)
-   ("Devanagari MT" . 1.3)
-   ("Kailasa" . 1.4)
-   ("Symbola" . 1.7)
-   )))
+  (colle:map
+   (pcase-lambda (`(,font . ,ratio))
+     (add-to-list 'face-font-rescale-alist
+                  (cons
+                   (rx-to-string `(: (* anything) ,font (* anything)))
+                   ratio)))
+   '(("Hiragino Kaku Gothic ProN" . 1.2)
+     ("LiHei Pro" . 1.2)
+     ("Heiti SC" . 1.2)
+     ("Arial Unicode MS" . 1.2)
+     ("Devanagari MT" . 1.3)
+     ("Kailasa" . 1.4)
+     ("Symbola" . 1.7)
+     )))
 
 (cl-defun muki:setup-fira-code-symbol ()
   ;;  [[https://github.com/tonsky/FiraCode/wiki/Setting-up-Emacs][Setting up Emacs · tonsky/FiraCode Wiki · GitHub]]
@@ -673,3 +673,13 @@
 ;; (font-info "Symbola)
 
 ;; [[http://nya-0.hatenablog.com/entry/2014/03/17/174309]]
+
+
+;; disable italic
+;; [[https://www.reddit.com/r/emacs/comments/74peef/lisp_function_to_prevent_text_from_resizing/][Too Many Requests]]
+(add-hook 'after-init-hook
+          (lambda ()
+            (mapc (lambda (face)
+                    (set-face-attribute face nil  :slant 'normal))
+                  (face-list))
+            t))

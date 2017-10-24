@@ -158,5 +158,13 @@
   '(:description "Provides a sane set of defaults for use with Evil Mode."))
 (hoarder:register "edkolev/evil-expat"
   '(:description "Extra evil ex commands"))
+(hoarder:register "Ambrevar/evil-special-modes"
+  '(:description "Make Emacs official special modes more Evil"
+    :tags ["emacs" "evil"]))
+(hoarder:register "7696122/evil-terminal-cursor-changer"
+  '(:description ":smiling_imp: Chagning cursor by mode for evil on terminal."))
+(hoarder:register "zmaas/evil-unimpaired"
+  '(:description "Port of evil-unimpaired code from spacemacs, for general evil use."))
+
 
 ;;; init.el ends here

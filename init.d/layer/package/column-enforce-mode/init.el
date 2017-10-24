@@ -9,8 +9,11 @@
     (set-face-attribute 'column-enforce-face nil
                         :inherit 'default
                         :foreground (face-attribute 'default :foreground)
-                        :background (color-saturate-name
-                                     (face-attribute 'default :background)
-                                     20))))
+                        :background
+                        (if (display-graphic-p)
+                            (color-saturate-name
+                             (face-attribute 'default :background)
+                             20)
+                          (face-attribute 'default :background)))))
 
 ;;; init.el ends here

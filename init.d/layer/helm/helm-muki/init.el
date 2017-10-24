@@ -8,7 +8,8 @@
             helm-muki-vihko
             helm-muki-ääliö
             helm-muki-layer
-            helm-muki-twitch)
+            helm-muki-twitch
+            helm-muki-pocket)
            "helm-muki")
 
   (after 'helm-muki
@@ -72,7 +73,9 @@
                      "Meadow"
                      "The First Tree"
                      "Dear Esther"
-                     "Elona - Eternal League of Nefia")))
+                     "Elona - Eternal League of Nefia"
+                     "VRChat"
+                     "My Summer Car")))
 
   (add-global-key "C-c h" #'helm-muki)
 

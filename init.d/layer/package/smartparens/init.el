@@ -105,6 +105,7 @@
     ;; (smartparens-global-mode)
     (add-hook 'emacs-lisp-mode-hook
               #'smartparens-mode)
+
     )
   ;; (smartparens-global-strict-mode t)
   ;; highlights matching pairs

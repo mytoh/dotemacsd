@@ -4,10 +4,6 @@
 
 ;;; Code:
 
-(use-package sidebar
-  
-  ;; :config
-  ;; (global-set-key (kbd "C-x C-f") 'sidebar-open)
-  )
+(use-package cpanfile-mode)
 
 ;;; init.el ends here

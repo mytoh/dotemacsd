@@ -4,7 +4,7 @@
 
 ;;;; utf-8
 ;; this line should put on last
-(setq skk-jisyo-code 'utf-8)
+;; (setq skk-jisyo-code 'utf-8)
 
 
 ;;;; large dict
@@ -24,11 +24,11 @@
 ;; (setq skk-large-jisyo (cons
 ;;                        (locate-user-emacs-file "ddskk/dic/npiiii4skk/npiiii.l.euc")
 ;;                        'euc))
-;; (setq skk-large-jisyo "/usr/local/share/skk/SKK-JISYO.L")
-;;;;; cdb
-(setq skk-cdb-large-jisyo (cons (expand-file-name "ddskk/dic/SKK-JISYO.L.cdb"
-                                                  user-emacs-directory)
-                                'euc))
+(setq skk-large-jisyo "/usr/local/share/skk/SKK-JISYO.L")
+
+;; (setq skk-cdb-large-jisyo (cons (expand-file-name "ddskk/dic/SKK-JISYO.L.cdb"
+;;                                                   user-emacs-directory)
+;;                                 'euc))
 
 ;;;; use act for dvorak
 (setq skk-use-act t)
@@ -37,11 +37,11 @@
 ;; (setq skk-dcomp-activate t)
 
 ;;;; 英単語補完
-(setq skk-use-look t)
-(setq skk-look-recursive-search t)
+;; (setq skk-use-look t)
+;; (setq skk-look-recursive-search t)
 
 ;;;; 変換時に注釈 (annotation) を表示する
-(setq skk-show-annotation nil) ; this makes skk slow
+;; (setq skk-show-annotation nil) ; this makes skk slow
 
 ;;;; 変換候補一覧と注釈 (annotation) を GUI ぽく表示する
 ;; (setq skk-show-tooltip t)
@@ -53,10 +53,10 @@
 ;; (setq skk-dcomp-multiple-activate t)
 
 ;;;; icon
-(setq skk-show-icon t)
+;; (setq skk-show-icon t)
 
 ;;;; show input mode
-(setq skk-show-mode-show t)
+;; (setq skk-show-mode-show t)
 
 ;;;; face
 (defface muki:skk-tooltip
@@ -65,11 +65,11 @@
         :bold nil)))
   "face for skk tooltip"
   :group 'skk-tooltip)
-(setq skk-tooltip-face 'muki:skk-tooltip)
+;; (setq skk-tooltip-face 'muki:skk-tooltip)
 
 ;;;; kakasi
-(when (executable-find "kakasi")
-  (setq skk-use-kakasi t))
+;; (when (executable-find "kakasi")
+;;   (setq skk-use-kakasi t))
 
 ;; (let ((euc 'euc))
 ;;   (modify-coding-system-alist 'process
@@ -101,20 +101,20 @@
            (cl-pushnew elem skk-extra-jisyo-file-list))))
      dicts)))
 
-(muki:add-skk-jisyo
- '(
-   ("SKK-JISYO.itaiji" . euc-jp)
-   ("SKK-JISYO.assoc" . euc-jp)
-   ("SKK-JISYO.edict" . euc-jp)
-   ;;    ;; ("SKK-JISYO.emoji.utf8" . utf8)
-   ("SKK-JISYO.fullname" . euc-jp)
-   ("SKK-JISYO.geo" . euc-jp)
-   ("SKK-JISYO.jinmei" . euc-jp)
-   ("SKK-JISYO.law" . euc-jp)
-   ("SKK-JISYO.okinawa" . euc-jp)
-   ("SKK-JISYO.propernoun" . euc-jp)
-   ;;    ;; "SKK-JISYO.station"
-   ))
+;; (muki:add-skk-jisyo
+;;  '(
+;;    ("SKK-JISYO.itaiji" . euc-jp)
+;;    ("SKK-JISYO.assoc" . euc-jp)
+;;    ("SKK-JISYO.edict" . euc-jp)
+;;    ;;    ;; ("SKK-JISYO.emoji.utf8" . utf8)
+;;    ("SKK-JISYO.fullname" . euc-jp)
+;;    ("SKK-JISYO.geo" . euc-jp)
+;;    ("SKK-JISYO.jinmei" . euc-jp)
+;;    ("SKK-JISYO.law" . euc-jp)
+;;    ("SKK-JISYO.okinawa" . euc-jp)
+;;    ("SKK-JISYO.propernoun" . euc-jp)
+;;    ;;    ;; "SKK-JISYO.station"
+;;    ))
 
 ;; (muki:add-skk-jisyo
 ;;  '("SKK-JISYO.jinmei"
@@ -125,26 +125,26 @@
 
 ;;;; itaiji
 
-(cl-letf ((jisyoutf8 (expand-file-name "ddskk/dic/SKK-JISYO.itaiji.utf8"
-                                       user-emacs-directory))
-          (jisyoeuc (expand-file-name "ddskk/dic/SKK-JISYO.itaiji"
-                                      user-emacs-directory)))
-  (pcase (file-exists-p jisyoutf8)
-    (`nil
-     (setq skk-itaiji-jisyo jisyoeuc))
-    (_
-     (setq skk-itaiji-jisyo jisyoutf8))))
+;; (cl-letf ((jisyoutf8 (expand-file-name "ddskk/dic/SKK-JISYO.itaiji.utf8"
+;;                                        user-emacs-directory))
+;;           (jisyoeuc (expand-file-name "ddskk/dic/SKK-JISYO.itaiji"
+;;                                       user-emacs-directory)))
+;;   (pcase (file-exists-p jisyoutf8)
+;;     (`nil
+;;      (setq skk-itaiji-jisyo jisyoeuc))
+;;     (_
+;;      (setq skk-itaiji-jisyo jisyoutf8))))
 
 ;;;; github emoji
 
 ;; o 補完
-(cl-letf ((jisyo-path (expand-file-name
-                       "github.com/tkita/SKK-JISYO/SKK-JISYO.GitHub-emojis"
-                       hoarder-directory)))
-  (setq skk-extra-jisyo-file-list
-        (cons `(,jisyo-path . utf-8)
-              skk-extra-jisyo-file-list))
-  ;; o 変換
-  (setq skk-completion-prog-list
-        (cons `(skk-comp-from-jisyo '(,jisyo-path . utf-8))
-              skk-completion-prog-list)))
+;; (cl-letf ((jisyo-path (expand-file-name
+;;                        "github.com/tkita/SKK-JISYO/SKK-JISYO.GitHub-emojis"
+;;                        hoarder-directory)))
+;;   (setq skk-extra-jisyo-file-list
+;;         (cons `(,jisyo-path . utf-8)
+;;               skk-extra-jisyo-file-list))
+;;   ;; o 変換
+;;   (setq skk-completion-prog-list
+;;         (cons `(skk-comp-from-jisyo '(,jisyo-path . utf-8))
+;;               skk-completion-prog-list)))

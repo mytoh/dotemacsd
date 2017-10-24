@@ -133,7 +133,6 @@
     ;; smart-mode-line
     spaceline
     spaceline-all-the-icons
-    ;; spaceline
     ;; telephone-line
 
     emms
@@ -377,7 +376,6 @@
     all-the-icons
     all-the-icons-ivy
     netspeak
-    neotree
     adaptive-wrap
     org-easy-img-insert
     ;; magithub
@@ -390,7 +388,6 @@
     elisp-refs
     podcaster
     ;; lisp-extra-font-lock
-    treemacs
     ;;japanese-holidays
     undo-tree
     help-mode
@@ -408,7 +405,7 @@
     scala-mode
     make-color
     tile
-    projectile
+    ;; projectile ; this makes emacs slow, lagging
     proced
     ;;   indicate-change
     clippy
@@ -455,7 +452,6 @@
     include-anywhere
     semantic-refactor
     icons-in-terminal
-    ;;sidebar
     helpful
     auto-minor-mode
     json-mode
@@ -502,6 +498,15 @@
     google-maps
     request
     pocket-reader
+    zoom
+    mastodon
+    discover
+    perlbrew
+    cpanfile-mode
+    cperl-mode
+    perltidy
+    perlcritic
+    pod-mode
     ;; drill-instructor
     ;; mixed-pitch
     ;; togetter
@@ -656,6 +661,8 @@
     evil-visual-replace
     ;; evil-integrations
     evil-expat
+    evil-terminal-cursor-changer
+    evil-unimpaired
     ;; targets
     ;; org-evil
     
@@ -739,6 +746,7 @@
     helm-xref
     helm-directory
     helm-swish
+    helm-perldoc
     ;; helm-frame
     ;; helm-ext
     ;; helm-delicious
@@ -751,6 +759,7 @@
     ;; company-ngram
     company-emoji
     company-fontawesome
+    company-plsense
     ;; company-quickhelp
     ;; company-org-headings
     ;; company-dict
@@ -772,6 +781,11 @@
 (muki-layer:load-layers 'source-control
   '(github-browse-file))
 
+(muki-layer:load-layers 'filetree
+  '(
+    neotree
+    treemacs
+    sidebar))
 
 ;;;;; config
 (muki-layer:load-layers 'config
