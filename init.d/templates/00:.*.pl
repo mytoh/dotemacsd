@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 use utf8;
-use feature qw(say signatures);
-use experimental qw(signatures);
+use feature ":5.28";
+use experimental qw(smartmatch signatures);
 
 $0
