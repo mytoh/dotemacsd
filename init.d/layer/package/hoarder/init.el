@@ -20,7 +20,7 @@
                                         "(%s \"%s\") "
                                         fname
                                         (seq-subseq url 19)))
-                                      (`[nil ,_]
+                                      (`[nil ,topics]
                                        (format
                                         "(%s \"%s\"
     '(:tags %s))\n"
