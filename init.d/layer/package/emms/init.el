@@ -4,6 +4,9 @@
   :init
   (set-option emms-source-file-default-directory
               (muki:expand-path-huone "musiikki"))
+  ;; [[https://www.reddit.com/r/emacs/comments/7j0yjp/emms_with_dynamic_cover_thumbnails/][Too Many Requests]]
+  (setq emms-browser-covers 'emms-browser-cache-thumbnail)
+
   
   :config
   (emms-all)

@@ -44,7 +44,9 @@
     vim
     local
     themes
-    general-packages))
+    general-packages
+    perl
+    ))
 
 (muki-layer:load-layers 'elpa
   '(archive))
@@ -62,11 +64,8 @@
 
 (muki-layer:load-layers 'org
   '(outshine
-    ;; navi
-    ;; org-autolist
     org
     org-pretty-table
-    ;;orgit
     org-download
     outline-magic
     org-cliplink
@@ -74,10 +73,8 @@
     toc-org
     org-query
     org-bullets
-    ;;ox-pandoc                 
     org-hlc
     ob-browser
-    ;; org-breadcrumbs
     org-bookmark-heading
     org-tree-slide
     org-section-numbers
@@ -90,7 +87,16 @@
     org-writers-room
     org-quick-peek
     org-sticky-header
-    org-recent-headings
+    org-noter
+    org-send-ebook
+    org-tempo
+
+    ;; navi
+    ;; org-autolist
+    ;;orgit
+    ;;ox-pandoc
+    ;; org-breadcrumbs
+    ;;    org-recent-headings
     ))
 
 (muki-layer:load-layers 'package
@@ -134,6 +140,7 @@
     spaceline
     spaceline-all-the-icons
     ;; telephone-line
+    ;; doom-modeline
 
     emms
     emms-mobile-remote
@@ -142,13 +149,14 @@
     ;; emms-info
     ;; emms-state
     ;; emms-mpd
-    ;; emms-player-mpv
     ;; emms-player-mpv-volume
 
     navi2ch
     navi2ch-file-mode
     magit
     magit-overview
+    magit-todos
+    ;; magit-svn
     ;; magit-idle-breadcrumbs
     git-modes
     skk
@@ -205,18 +213,18 @@
 
     ;; guide-key
     ;; guide-key-tip
-    which-key
+    ;; which-key
 
     clojure-mode
     clojure-cheatsheet
-    cider
+    ;; cider
     lorem-ipsum
     emacs-color-themes
     sly
     ;; sly-repl-ansi-color
     twittering-mode
     coffee-mode
-    color-theme-approximate
+    ;; color-theme-approximate
     google-this
     nssh
     markdown-mode
@@ -259,7 +267,7 @@
     firestarter
     hnr
     theme-looper
-    column-enforce-mode
+    ;; column-enforce-mode
     ;; autobookmarks
     focus
     soundcloud
@@ -329,7 +337,6 @@
     niceify-info
     yankpad
     saveplace
-    perl6
     right-click-context
     ;; annotate-depth
     xref-js2
@@ -341,7 +348,7 @@
     ;; mini-header-line
 
     ;; spu // cause recent emacs fail?
-    auto-package-update
+    ;; auto-package-update
 
     sshman
     emacs-reaction-sounds
@@ -389,13 +396,13 @@
     podcaster
     ;; lisp-extra-font-lock
     ;;japanese-holidays
-    undo-tree
+    ;;undo-tree
     help-mode
     auto-compile
     with-editor
     pcap-mode
     window-numbering
-    vlfi
+    ;; vlfi
     copyit
     pdf-tools
     sauron
@@ -417,7 +424,7 @@
     ;; avy-migemo
     grab-x-link
     anything
-    color-theme-buffer-local
+    ;; color-theme-buffer-local
     untitled-new-buffer
     pcre2el
     list-environment
@@ -438,7 +445,7 @@
     paperless
     runner
     unify-opening
-    remember-last-theme
+    ;; remember-last-theme
     pocket-mode
     uimage
     waf-mode
@@ -462,7 +469,7 @@
     emacs-home
     keyinfo
     ;; vc-msg
-    commit-msg-prefix
+    git-msg-prefix
     peval
     face-explorer
     makefile-executor
@@ -489,7 +496,7 @@
     re-builder
     nov
     syntactic-close
-    ;;circadian
+    ;; circadian
     dumb-jump
     bonjourmadame
     eshell-bookmark
@@ -501,12 +508,16 @@
     zoom
     mastodon
     discover
-    perlbrew
-    cpanfile-mode
-    cperl-mode
-    perltidy
-    perlcritic
-    pod-mode
+    ini-mode
+    auto-sudoedit
+    interactive-align
+    minimal-fringes
+    commoji
+    ;;spot4e
+    md4rd
+    ;;  texfrag
+
+    
     ;; drill-instructor
     ;; mixed-pitch
     ;; togetter
@@ -531,7 +542,7 @@
     ;; ert-modeline ; cause yatemplate error
     ;; ert-flash-modeline
     ;; handoff
-    ;; pretty-mode
+    pretty-mode
     ;; keep-temp-buffers
     
     ;; letcheck ; not work with pcase's let pattern
@@ -575,7 +586,8 @@
   '(flycheck-status-emoji
     flycheck-package
     flychck-css-colorguard
-    flycheck))
+    flycheck
+    attrap))
 
 ;;;; highlight
 (muki-layer:load-layers 'package
@@ -591,17 +603,18 @@
     highlight-quoted
     highlight-refontification
     highlight-numbers
+    highlight-operators
     ;; hl-todo
     ;; highlight-unique-symbol
 
-    highlight-leading-spaces
+    ;; highlight-leading-spaces
     ;; highlight-indentation
-    ;; highlight-indent-guides
+    highlight-indent-guides
     ;; hl-indent
     ;; indent-guide
 
     highlight-parentheses
-    highlight-function-calls
+    ;; highlight-function-calls
     ;; mic-paren
     ;; flash-paren
     paren
@@ -615,6 +628,7 @@
 ;;;;; package
 (muki-layer:load-layers 'vim
   '(evil
+    ;; evil-collection
 
     evil-commentary
     ;; evil-nerd-commenter
@@ -647,7 +661,7 @@
     evil-goggles
 
     evil-lisp-state
-    evil-magit
+    ;; evil-magit
     syndicate
     evil-ReplaceWithRegister
     evil-visual-replace
@@ -663,6 +677,7 @@
     evil-expat
     evil-terminal-cursor-changer
     evil-unimpaired
+    evil-args
     ;; targets
     ;; org-evil
     
@@ -730,12 +745,12 @@
     helm-describe-modes
     helm-gitignore
     helm-proc
-    f3
+    ;; f3
     helm-browse
     helm-org-rifle
     helm-descbinds
     helm-smex
-    helm-company
+    ;; helm-company
     helm-git-grep
     helm-rage
     helm-hunks
@@ -753,13 +768,15 @@
     )) 
 
 (muki-layer:load-layers 'auto-completion
-  '(company
-    company-shell
-    company-statistics
+  '(
+    ;; company
+    ;; company-shell
+    ;; company-statistics
+    ;; company-emoji
+    ;; company-fontawesome
+
     ;; company-ngram
-    company-emoji
-    company-fontawesome
-    company-plsense
+    ;; company-plsense
     ;; company-quickhelp
     ;; company-org-headings
     ;; company-dict
@@ -769,7 +786,7 @@
     ;; company-org-headings
     ;; sly-company
 
-    ;; auto-complete
+    auto-complete
     ;; ac-capf
     ;; ac-emoji
     ;; ac-skk
@@ -835,8 +852,8 @@
 
 ;;;;; theme
 (muki-layer:load-layers 'theme
-  '(color-theme-sanityinc-tomorrow
-    color-theme-sanityinc-solarized
+  '(;;color-theme-sanityinc-tomorrow
+    ;;color-theme-sanityinc-solarized
     apropospriate
     ;; moe-theme
     ;; myth
@@ -846,6 +863,22 @@
     doomsday
     spacemacs-theme
     ;; chillized-theme
+    ))
+
+(muki-layer:load-layers 'perl
+  '(perlbrew
+    cpanfile-mode
+    cperl-mode
+    ;; perltidy
+    perlcritic
+    pod-mode
+    perl6
+    lang-refactor-perl
+    kolon-mode
+    perl-completion
+    plsense
+    ;; tx-mode
+    ;; xslate-mode
     ))
 
 ;;;;; el-get

@@ -6,8 +6,9 @@
 
 
 ;;;;; org
-(hoarder:register "git://orgmode.org/org-mode.git"
+(hoarder:register "https://code.orgmode.org/bzg/org-mode.git"
   '(:load-path ["lisp" "contrib/lisp"]
+    :depth nil
     :compile nil
     :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
     :info "doc"
@@ -38,7 +39,7 @@
 (hoarder:register "Fuco1/org-pretty-table"
   '(:compile nil :tags ["org"]))
 (hoarder:register "rlister/org-present"
-  '(:dependencies [("git://orgmode.org/org-mode.git"
+  '(:dependencies [("https://code.orgmode.org/bzg/org-mode.git"
                     (:load-path ["lisp" "contrib/lisp"]
                      :compile nil
                      :build ["gmake cleanall" "gmake" "gmake autoloads" "gmake doc"]
@@ -104,7 +105,7 @@
   '(:tags ["orgmode" "agenda" "todo"]))
 ;; (hoarder:register "talwrii/orgnav"
 ;;   '(:description "Quickly navigate and search your emacs org trees; use this navigation to capture and organize. Built with the help of helm."))
-(hoarder:fetch "facetframer/orgnav"
+(hoarder:register "facetframer/orgnav"
   '(:description " Quickly navigate and search your emacs org trees; use this navigation to capture and organize. Built with the help of helm."))
 (hoarder:register "marcowahl/org-section-numbers")
 (hoarder:register "tarsius/org-elisp-help")
@@ -124,7 +125,7 @@
   '(:description "An Emacs minor mode for writers who use org-mode"))
 (hoarder:register "https://bitbucket.org/zck/org-parser.el"
   '(:type :hg))
-(hoarder:register "https://gitlab.com/to1ne/org-gitlab.git"
+(hoarder:register "gitlab:to1ne/org-gitlab"
   '(:tags ["gitlab" "todo"]
     :depth nil
     :memo "[[https://www.reddit.com/r/emacs/comments/5vkyug/what_packages_are_you_working_on/][Too Many Requests]]"))
@@ -160,5 +161,43 @@
 (hoarder:fetch "akicho8/org_tp"
   '(:description "OrgTp shows text table like emacs org-table for easy reading."
     :tags ["emacs" "formatter" "org-table" "ruby" "table"]))
+(hoarder:register "mwfogleman/org-randomnote"
+  '(:description "Find a random note in your Org-Mode files"
+    :tags ["emacs lisp"]))
+(hoarder:fetch "chenla/saltmine"
+  '(:description "Graph Database for Emacs OrgMode"
+    :tags ["emacs lisp"]))
+(hoarder:fetch "mikae/org-wikinyan"
+  '(:description "Some useless package for wiki handling."
+    :tags ["emacs lisp"]))
+(hoarder:fetch "Kungsgeten/org-brain"
+  '(:description "Org-mode wiki + concept-mapping"
+    :tags ["emacs lisp" "concept-map" "emacs" "org-mode" "wiki"]))
+(hoarder:register "yantar92/org-autosort"
+  '(:description "Sort entries in org files automatically"
+    :tags ["emacs lisp"]))
+(hoarder:register "weirdNox/org-noter"
+  '(:description "Emacs document annotator, using Org-mode"
+    :tags ["emacs lisp" "annotate" "convenience" "documents" "elisp" "emacs" "interleaved" "notes" "org-mode" "pdf" "sync"]))
+(hoarder:register "stardiviner/org-send-ebook"
+  '(:description "Send org-mode ebook file: link to external devices with corresponding formats."
+    :tags ["emacs lisp" "ebook" "epub" "kindle" "link" "org-mode" "send"]))
+(hoarder:register "akhramov/org-wild-notifier.el"
+  '(:description "Alert notifications for org-agenda"
+    :tags ["emacs lisp" "emacs" "emacs-lisp" "notifications" "org-agenda" "org-mode"]))
+(hoarder:register "alphapapa/org-agenda-ng"
+  '(:tags ["emacs lisp"]))
+(hoarder:register "markus1189/org-pdfview"
+  '(:description "org-link support for pdf-view-mode"
+    :tags ["emacs lisp"]))
+(hoarder:register "rails-to-cosmos/org-bookmark"
+  '(:description "Emacs bookmark management on top of org-links"
+    :tags ["emacs lisp"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/7ql4c4/what_packages_did_you_write_for_yourself_but/][Too Many Requests]]"))
+(hoarder:register "gizmomogwai/org-kanban"
+  '(:tags ["org-mode" "kanban" "pomodoro"]))
+(hoarder:register "hagmonk/org-kanban"
+  '(:description "Simple approach to kanban with emacs' org-mode"
+    :tags ["emacs lisp" "elisp" "emacs" "org-mode"]))
 
 ;;; init.el ends here

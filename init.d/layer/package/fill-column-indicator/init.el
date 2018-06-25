@@ -2,9 +2,9 @@
 
 ;;; Code:
 
-(liby 'fill-column-indicator
-  (command (fci-mode) "fill-column-indicator")
-  (add-hook 'prog-mode-hook #'fci-mode)
+(use-package fill-column-indicator
+  :commands (fci-mode)
+  ;; (add-hook 'prog-mode-hook #'fci-mode)
   ;; (add-hook 'text-mode-hook #'fci-mode)
   )
 

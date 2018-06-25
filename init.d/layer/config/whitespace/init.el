@@ -46,5 +46,6 @@
                                                      30))))
 
 ;; デフォルトで視覚化を有効にする。
-(add-hook 'prog-mode-hook #'whitespace-mode)
+(add-hook 'emacs-lisp-mode-hook #'whitespace-mode)
+(add-hook 'cperl-mode-hook #'whitespace-mode)
 ;; (global-whitespace-mode 1)

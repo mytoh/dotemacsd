@@ -362,8 +362,11 @@
     (bind-map-set-keys my-base-leader-map
       ;; https://github.com/syl20bnr/spacemacs/blob/bd7ef98e4c35fd87538dd2a81356cc83f5fd02f3/layers/%2Bspacemacs/spacemacs-misc/packages.el
       "jq" #'dumb-jump-quick-look))
-  
 
+  (bind-map-set-keys my-base-leader-map
+    "ihf" #'hoarder:insert-helper-fetch
+    "ihr" #'hoarder:insert-helper-register
+    "ihR" #'hoarder:insert-helper-record)
   )
 
 ;;; init.el ends here

@@ -6,15 +6,14 @@
 
 
 (use-package auto-read-only
- :defer t 
-:config 
-(progn
-  (auto-read-only-mode 1)
+  :config 
+  (progn
+    (auto-read-only-mode 1)
 
-  ;; Customize
+    ;; Customize
 
-  ;; Third party codes are installed in vendor/ directory.
-  (add-to-list 'auto-read-only-file-regexps "/vendor/")))
+    ;; Third party codes are installed in vendor/ directory.
+    (add-to-list 'auto-read-only-file-regexps "/vendor/")))
 
 
 

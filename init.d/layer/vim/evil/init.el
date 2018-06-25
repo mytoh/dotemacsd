@@ -113,7 +113,14 @@
     "<<" #'org-shiftmetaleft
     ">>" #'org-shiftmetaright
     "<[[" #'org-metaleft
-    ">]]" #'org-metaright))
+    ">]]" #'org-metaright)
+
+  ;; disable auto indent
+  (add-hook 'org-mode-hook
+            (lambda ()
+              (setq-local evil-auto-indent nil))
+            nil
+            ))
 
 (cl-defun muki:init-evil-mode-eww ()
   ;; eww
@@ -158,8 +165,8 @@
       "Inhibit search pattern update during `skk-henkan-mode'.
 This is reasonable since inserted text during `skk-henkan-mode'
 is a kind of temporary one which is not confirmed yet."
-        (unless (bound-and-true-p skk-henkan-mode)
-          ad-do-it))
+      (unless (bound-and-true-p skk-henkan-mode)
+        ad-do-it))
 
     (if (bound-and-true-p skk-mode)
         (defun-add-hook muki:evil-disable-skk (evil-normal-state-entry-hook)
@@ -208,7 +215,7 @@ is a kind of temporary one which is not confirmed yet."
 (defun muki:evil-fix-paste ()
   "[[http://layzie.hatenablog.com/entry/20160118/1453074670][Spacemacsの設定の話 - Life goes on]]
 [[https://github.com/syl20bnr/spacemacs/issues/2032][{Mac} Visual mode ignores system clipboard · Issue #2032 · syl20bnr/spacemacs · GitHub]]"
-       (fset 'evil-visual-update-x-selection 'ignore))
+  (fset 'evil-visual-update-x-selection 'ignore))
 
 (liby 'evil
   (req 'goto-chg)

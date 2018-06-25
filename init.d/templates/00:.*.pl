@@ -1,9 +1,20 @@
 #!/usr/bin/env perl
 
-use strict;
-use warnings;
+use v5.28;
 use utf8;
-use feature ":5.28";
-use experimental qw(signatures);
+use strictures 2;
+use experimental qw<signatures re_strict refaliasing declared_refs script_run alpha_assertions regex_sets const_attr>;
+use autodie ':all';
+use utf8::all;
+use open qw<:std :encoding(UTF-8)>;
+use re 'strict';
+use Acme::LookOfDisapproval qw<ಠ_ಠ>;
+no indirect 'fatal';
+no bareword::filehandles;
+no autovivification;
 
-$0
+my sub main ($args) {
+  $0
+}
+
+main(\@ARGV);

@@ -75,7 +75,14 @@
                      "Dear Esther"
                      "Elona - Eternal League of Nefia"
                      "VRChat"
-                     "My Summer Car")))
+                     "My Summer Car"
+                     "They Are Billions"
+                     "Farm Together"
+                     "Farming Simulator 17"
+                     "Pixark"
+                     "Monster Hunter World‎"
+                     "EVE Online"
+                     "Hellblade")))
 
   (add-global-key "C-c h" #'helm-muki)
 

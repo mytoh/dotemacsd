@@ -92,8 +92,8 @@ Otherwise goto the end of minibuffer."
   ;; disable helm for find-file
   (cl-pushnew '(find-file . nil) helm-completing-read-handlers-alist)
 
-  (set-option helm-boring-file-regexp-list
-              '("/\\.git\\'" "\\.hg\\'" "\\.svn\\'" "\\.CVS\\'" "\\._darcs\\'" "\\.la\\'" "\\.o\\'" "\\.i\\'"))
+  ;; (set-option helm-boring-file-regexp-list
+  ;;             '("/\\.git\\'" "\\.hg\\'" "\\.svn\\'" "\\.CVS\\'" "\\._darcs\\'" "\\.la\\'" "\\.o\\'" "\\.i\\'"))
 
   (cl-pushnew "\\.git/COMMIT_EDITMSG\\'" helm-boring-file-regexp-list)
 

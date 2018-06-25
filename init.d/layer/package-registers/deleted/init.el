@@ -143,4 +143,51 @@
 (hoarder:fetch "mfrelink/OpenFLIXR.Wizard"
   '(:tags ["plex"]))
 (hoarder:register "tarleb/evil-scout")
+(hoarder:fetch "syythe/tangerine"
+  '(:tags ["artwiz" "lemon" "font" "bitmap"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/4iuseu/2bwm_nuthatch/d31snhx/][Too Many Requests]]
+[[https://www.reddit.com/r/unixporn/comments/4iuseu/2bwm_nuthatch/d31snhx/][Too Many Requests]]"))
+(hoarder:fetch "https://gitlab.com/ScriptJunky/ariascrape.git"
+  '(:tags ["8chan" "4chan" "aria2"]))
+(hoarder:fetch "sxthe/yuki"
+  '(:tags ["bitmap" "font"]))
+(hoarder:register-theme "matteobanerjee/orpheus-theme")
+(hoarder:fetch "QuickBox/QuickBox"
+  '(:description "QuickBox is much more than a 'seedbox installer script'... it is a simplistic approach to achieving easy seedbox and services management from a beautifully designed dashboard. Allowing users the ability to interact with their seedbox and server on a professional grade level. With the click of a button users can install packages like Plex, SickRage, BTSync and many more... all this in a seedbox script without spending a dime!"
+    :tags ["rutorrent" "torent"]))
+(hoarder:fetch "project-fifo/r-vmadm"
+  '(:description "vmadm for freebsd jails"
+    :tags ["freebsd" "freebsd-jail-manager" "freebsd-jails" "jails" "solaris"]))
+(hoarder:register-theme "yuttie/hydrangea-theme")
+(hoarder:register-theme "yakovzaytsev/hhazure") 
+(hoarder:register-theme "rogermolas/boracay-dark.el")
+(hoarder:fetch "sixsixfive/Glare") 
+(hoarder:fetch "sora-chan/mpdhanyuu"
+  '(:description "An MPD client that learns your tastes in music."
+    :tags ["mpd"]))
+(hoarder:register "emacsattic/elite"
+  '(:tags ["elite" "game"]))
+(hoarder:register "mutbuerger/not-from-scratch"
+  '(:tags ["scratch"]))
+(hoarder:register-theme "d125q/gruvbox-dark-emacs")
+(hoarder:register "manuel-uberti/helm-company"
+  '(:dependencies ["rejeep/f.el"]
+    :tags ["helm" "company"]))
+(hoarder:register "emacsmirror/flash-paren"
+  '(:tags ["parenthesis" "highlghit"]))
+(hoarder:register "uemurax/uzbl-manager.el"
+  '(:tags ["uzbl" "browser"]))
+(hoarder:register "Alexander-Miller/atomic-container"
+  '(:description "A simple atomic container for emacs lisp"
+    :tags ["threads"]))
+(hoarder:register "SebastianRose/org-osm"
+  '(:tags ["org-mode" "osm" "map"]))
+(hoarder:register-theme "thomasschimper/violet-dream-theme")
+(hoarder:register "bashrc/gnu-social-mode"
+  '(:tags ["gnu_social" "twitter" "quitter.se" "gnu" "sns"]))
+(hoarder:register "gitlab:cryptomaniac/helm-librarian"
+  '(:type :git))
+(hoarder:register "jakecoble/org-gamify"
+  '(:tags ["emacs lisp"]))
+
 ;;; init.el ends here

@@ -80,12 +80,12 @@
   "=s" #'srefactor-lisp-format-sexp
   )
 
-(cond ((locate-library "helpful")
-       (bind-map-set-keys my-elisp-leader-map
-         "hh" #'muki:helpful-at-point))
-      ((locate-library "elisp-slime-nav")
-       (bind-map-set-keys my-elisp-leader-map
-         "hh" #'elisp-slime-nav-describe-elisp-thing-at-point)))
+(cond ;; ((locate-library "helpful")
+ ;;  (bind-map-set-keys my-elisp-leader-map
+ ;;    "hh" #'muki:helpful-at-point))
+ ((locate-library "elisp-slime-nav")
+  (bind-map-set-keys my-elisp-leader-map
+    "hh" #'elisp-slime-nav-describe-elisp-thing-at-point)))
 
 (liby 'macrostep
   (bind-map-set-keys my-elisp-leader-map

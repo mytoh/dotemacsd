@@ -28,7 +28,7 @@
   '(:tags ["helm"]))
 (hoarder:register "ShingoFukuyama/helm-swoop"
   '(:tags ["helm"]))
-(hoarder:register "steckerhalter/helm-google"
+(hoarder:register "https://framagit.org/steckerhalter/helm-google.git"
   '(:tags ["helm" "google"]))
 (hoarder:register "syohex/emacs-helm-ag"
   '(:tags ["helm" "ag"]))
@@ -51,9 +51,6 @@
   '(:tags ["helm" "flycheck"]))
 (hoarder:register "emacs-helm/helm-descbinds"
   '(:tags ["helm"]))
-(hoarder:register "manuel-uberti/helm-company"
-  '(:dependencies ["rejeep/f.el"]
-    :tags ["helm" "company"]))
 (hoarder:register "emacs-helm/helm-dictionary"
   '(:tags ["helm"]))
 (hoarder:register "emacs-helm/helm-recoll"
@@ -183,8 +180,9 @@
 (hoarder:register "brotzeitmacher/helm-xref"
   '(:description "Helm interface for xref results"
     :tags ["helm" "xref"]))
-(hoarder:register "https://gitlab.com/cryptomaniac/helm-librarian"
-  '(:type :git))
+(hoarder:register "sivakov512/helm-librarian"
+  '(:description "Helm UI for searching in library sources."
+    :tags ["emacs lisp" "code-search" "elisp" "emacs" "emacs-lisp" "emacs-plugin" "navigation" "plugin"]))
 (hoarder:register "masasam/emacs-helm-directory"
   '(:description "Select directory with helm and select the file in this directory with helm interface."
     :tags ["emacs" "emacs-lisp" "helm"]))
@@ -194,11 +192,17 @@
   '(:description "open helm buffers in a dedicated frame"))
 (hoarder:register "xuchunyang/helm-lastpass"
   '(:description "Helm interface of LastPass"
-    :dependencies ["https://gitlab.com/u11/csv.el.git"]))
+    :dependencies ["gitlab:u11/csv.el"]))
 (hoarder:register "alphapapa/helm-swish"
   '(:description "Like helm-swoop, but a little bit faster"))
 (hoarder:register "syohex/emacs-helm-perldoc"
   '(:description "perlpod with helm interface"))
+(hoarder:fetch "wandersoncferreira/helm-spotify-plus"
+  '(:description "New version of Emacs package Helm-spotify"
+    :tags ["emacs lisp"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/7yz1k2/using_emacs_43_music_with_mpd/][Too Many Requests]]"))
+(hoarder:register "tumashu/helm-posframe"
+  '(:tags ["emacs lisp"]))
 
 ;; (hoarder:register "michael-heerdegen/helm-browse"
 ;;                  '(:tags ["helm"]

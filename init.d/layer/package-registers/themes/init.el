@@ -73,7 +73,7 @@
 (hoarder:register-theme "jd/naquadah-theme")
 (hoarder:register-theme "rexim/gruber-darker-theme")
 (hoarder:register-theme "developernotes/twilight-theme")
-(hoarder:register-theme "steckerhalter/grandshell-theme")
+(hoarder:register-theme "https://framagit.org/steckerhalter/grandshell-theme.git")
 (hoarder:register-theme "CQQL/xresources-theme")
 (hoarder:register-theme "apnsngr/iceberg-emacs")
 (hoarder:register-theme "4lex1v/sirthias-theme")
@@ -89,7 +89,6 @@
 (hoarder:register-theme "purcell/color-theme-sanityinc-tomorrow")
 (hoarder:register-theme "purcell/color-theme-sanityinc-solarized")
 ;; (hoarder:register-theme "bbatsov/solarized-emacs")
-(hoarder:register-theme "matteobanerjee/orpheus-theme")
 (hoarder:register-theme "yveszoundi/emacs-rimero-theme")
 (hoarder:register-theme "holomorph/emacs-zenburn")
 (hoarder:register-theme "darrik/zenesque-theme")
@@ -137,14 +136,12 @@
 (hoarder:register-theme "mattly/emacs-farmhouse-theme")
 (hoarder:register-theme "edliaw/bubblegum-theme")
 (hoarder:register-theme "jonathanchu/atom-one-dark-theme")
-(hoarder:register-theme "yuttie/hydrangea-theme")
 (hoarder:register-theme "bmastenbrook/termbright-theme-el")
 (hoarder:register-theme "dracula/emacs")
 (hoarder:register-theme "rdallasgray/graphene-meta-theme")
 (hoarder:register-theme "waymondo/apropospriate-theme")
-(hoarder:register-theme "https://gitlab.com/franksn/majapahit-theme.git")
+(hoarder:register-theme "gitlab:franksn/majapahit-theme")
 (hoarder:register-theme "jmdeldin/underwater-theme.el")
-(hoarder:register-theme "yakovzaytsev/hhazure") 
 (hoarder:register-theme "bkruczyk/badwolf-emacs")
 (hoarder:register-theme "fourier/idea-darkula-theme")
 (hoarder:register-theme "uemurax/japanese-theme"
@@ -158,8 +155,6 @@
 (hoarder:register-theme "TheSuspiciousWombat/suscolors-emacs")
 (hoarder:register-theme "franksn/omtose-phellack-theme")
 (hoarder:register-theme "rost/emacs-lesser-theme")
-(hoarder:register-theme "d125q/gruvbox-dark-emacs")
-(hoarder:register-theme "rogermolas/boracay-dark.el")
 (hoarder:register-theme "mswift42/silkworm-theme")
 (hoarder:register-theme "mswift42/foggy-night-theme")
 (hoarder:register-theme "shaunvxc/dark-mint-theme")
@@ -205,8 +200,8 @@
 (hoarder:register-theme "sjahl/emacs-theme-firewatch")
 (hoarder:register-theme "habamax/kosmos-theme")
 (hoarder:register-theme "rxse/emacs-rin-theme")
-(hoarder:register-theme "thomasschimper/violet-dream-theme")
-(hoarder:register "belak/base16-emacs")
+(hoarder:register-theme "belak/base16-emacs"
+  '(:load-path ["build"]))
 (hoarder:register-theme "protonpopsicle/arise-theme")
 (hoarder:register-theme "mswift42/breezy-fall-theme")
 (hoarder:register-theme "avkoval/avk-emacs-themes")
@@ -250,7 +245,8 @@
   '(:description "dark theme for Emacs based on Doom Theme (https://github.com/hlissner/emacs-doom-theme)"))
 (hoarder:register-theme "ogdenwebb/emacs-kaolin-themes"
   '(:description "Set of eye pleasing themes for GNU Emacs."
-    :tags ["colorscheme" "emacs" "emacs-theme" "theme"]))
+    :tags ["colorscheme" "emacs" "emacs-theme" "theme"]
+    :load-path ["." "themes"]))
 (hoarder:register-theme "tokenrove/pink-bliss-theme"
   '(:description "Alex Schroeder's Pink Bliss emacs theme updated for emacs24"))
 (hoarder:register-theme "choppsv1/emacs-mandm-theme"
@@ -291,6 +287,51 @@
 (hoarder:register-theme "mvarela/Sunburn-Theme"
   '(:description "Sunburn — a low-contrast theme for Emacs and iTerm2"
     :memo "[[https://www.reddit.com/r/emacs/comments/75c8k2/sunburn_a_new_lowcontrast_theme/][Sunburn — a new low-contrast theme : emacs]]"))
+(hoarder:register-theme "fuxialexander/modern-light-theme"
+  '(:description "Modified from spacemacs-light"
+    :tags ["emacs lisp"]))
+(hoarder:register-theme "idaisukee/Nakahamatiyau"
+  '(:description "color sheme at 82235"
+    :tags ["emacs lisp"]))
+(hoarder:register-theme "kostafey/elite-theme"
+  '(:description "Dark color theme for Emacs named in honor of the great Elite game."
+    :tags ["emacs lisp"]))
+(hoarder:register-theme "fgeller/basic-theme.el"
+  '(:description "Minimal color theme for Emacs using base16 colors."
+    :tags ["emacs lisp" "emacs" "emacs-lisp" "theme"]))
+(hoarder:register-theme "metamode/base16-oneburn-emacs"
+  '(:tags ["emacs lisp"]))
+(hoarder:register-theme "halvorgb/base16-halvorgb"
+  '(:description "modified base16-eighties color theme for emacs"
+    :tags ["emacs lisp"]))
+(hoarder:register-theme "jamiecollinson/emacs-panda-theme"
+  '(:description "A superminimal, dark syntax theme for emacs"
+    :tags ["emacs lisp" "colorscheme" "colortheme" "emacs" "emacs-theme" "gnu" "gui" "spacemacs" "theme" "ui"]))
+(hoarder:register-theme "Baransu/emacs-snazzy"
+  '(:description "Elegant Emacs theme with bright colors, based on https://github.com/sindresorhus/hyper-snazzy"
+    :tags ["emacs lisp" "bright-colors" "elegant" "emacs" "emacs-theme" "snazzy" "theme"]))
+(hoarder:register-theme "weijiangan/emacs-snazzy"
+  '(:description "Elegant Emacs theme with bright colors"
+    :tags ["emacs lisp" "bright-colors" "emacs" "emacs-theme" "melpa" "theme"]))
+(hoarder:register-theme "manuel-uberti/doneburn-theme"
+  '(:description "A light theme for Emacs based on Zenburn"
+    :tags ["emacs lisp" "emacs" "emacs-theme" "light-theme"]))
+(hoarder:register-theme "philiparvidsson/GitHub-Modern-Theme-for-Emacs"
+  '(:description "Syntax highlighting color theme mimicking the new and updated look of GitHub's code viewer."
+    :tags ["emacs lisp" "elisp" "emacs" "emacs-theme" "github" "github-theme" "syntax-highlighting" "theme"]
+    :memo "[[https://www.reddit.com/r/emacs/comments/8d4uyy/doneburn_a_new_light_theme/][Too Many Requests]]"))
+(hoarder:register-theme "chrisdone/zenburn"
+  '(:description "Fork of Zenburn theme for emacs"
+    :tags ["emacs lisp"]))
+(hoarder:register-theme "WJCFerguson/emacs-faff-theme"
+  '(:description "Emacs Faff Theme - a light theme based on the Emacs default, extensively tweaked."
+    :tags ["emacs lisp"]))
+(hoarder:register-theme "balajisivaraman/emacs-one-themes"
+  '(:description "A port of the Vim/Atom One Dark and Light themes to Emacs"
+    :tags ["emacs lisp" "colorscheme" "emacs" "emacs-color-theme" "one-dark" "one-light"]))
+(hoarder:register-theme "habamax/habamax-theme"
+  '(:description "Emacs theme with boring white background color that gets the job done."
+    :tags ["emacs lisp"]))
 
 ;; (hoarder:register-theme "bobbypriambodo/nord-spacemacs"
 ;;     '(:description "Unofficial port of Nord color palette for Spacemacs."))

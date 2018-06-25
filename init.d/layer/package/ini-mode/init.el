@@ -4,6 +4,7 @@
 
 ;;; Code:
 
-(use-package perltidy)
+(use-package ini-mode
+  :mode (("\\.ini\\'" . ini-mode)))
 
 ;;; init.el ends here

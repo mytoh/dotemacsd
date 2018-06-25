@@ -4,6 +4,6 @@
 
 ;;; Code:
 
-(use-package pertcritic)
+(use-package minimal-fringes)
 
 ;;; init.el ends here

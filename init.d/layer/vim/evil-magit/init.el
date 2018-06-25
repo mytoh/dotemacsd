@@ -4,8 +4,6 @@
 
 ;;; Code:
 
-(after 'magit
-    (setq evil-magit-state 'motion)
-  (req 'evil-magit))
+(use-package evil-magit)
 
 ;;; init.el ends here

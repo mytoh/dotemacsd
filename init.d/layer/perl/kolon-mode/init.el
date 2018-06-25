@@ -4,6 +4,7 @@
 
 ;;; Code:
 
-(use-package commit-msg-prefix)
+(use-package kolon-mode
+  :mode ("\\.tx\\'" .  kolon-mode))
 
 ;;; init.el ends here

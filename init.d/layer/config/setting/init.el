@@ -244,7 +244,7 @@
 ;;;; theme
 ;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
 ;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson, noctilux, erosiond, material
-(defvar muki:x-theme 'nord)
+(defvar muki:x-theme 'base16-material-palenight)
 (defvar muki:term-theme 'flatland)
 (defconst muki:favorite-themes
   '(comidia planet monokai molokai firebelly
@@ -262,9 +262,11 @@
             base16-ashes base16-atelier-cave base16-atelier-lakeside
             base16-ocean-brian acai sourcerer creamsody
             doomsday-dark solarized-grey solarized-dark
-            rebecca darktooth sirthias nord kaolin
+            rebecca darktooth sirthias nord
             tao-yin challenger-deep obsidian
-            exotica lop tronesque base16-harmonic-dark))
+            exotica lop tronesque base16-harmonic-dark
+            kaolin-dark kaolin-eclipse kaolin-ocean kaolin-galaxy
+            darkokai base16-material-palenight))
 
 ;; (enable-option select-enable-clipboard
 ;;                select-enable-primary)
@@ -421,10 +423,10 @@
 
 ;; [[http://writequit.org/org/settings.html]]
 ;; Allow font-lock-mode to do background parsing
-;; (setq jit-lock-stealth-time 1
-;;       jit-lock-stealth-load 100
-;;       jit-lock-chunk-size 1000
-;;       jit-lock-defer-time 0.01)
+(setq jit-lock-stealth-time 1
+      jit-lock-stealth-load 100
+      jit-lock-chunk-size 1000
+      jit-lock-defer-time 0.01)
 
 ;;; automatically make script executable
 (add-hook 'after-save-hook

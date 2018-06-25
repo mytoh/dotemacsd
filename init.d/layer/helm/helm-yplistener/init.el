@@ -9,15 +9,11 @@
     (validate-setq helm-yplistener-local-address
                    '(:host "peca2.koti"
                      :port 7144))
-    (when (file-exists-p (locate-user-emacs-file "helm-yplistener/yp"))
-      (load-file (locate-user-emacs-file "helm-yplistener/yp")))
-    
-
     (validate-setq helm-yplistener-yp-urls
                    '((sp  "bayonet.ddo.jp/sp")
                      (tp  "temp.orz.hm/yp")
                      ;; (dp  "dp.prgrssv.net")
-                     ;; (hktv "games.himitsukichi.com/hktv")
+                     (hktv "games.himitsukichi.com/hktv")
                      (turf-page "peercast.takami98.net/turf-page")
                      (oekaki "oekakiyp.appspot.com")
                      (event "eventyp.xrea.jp")
@@ -26,8 +22,12 @@
                      ))
 
     (validate-setq helm-yplistener-player-type :mpv)
-    (validate-setq helm-yplistener-default-protocol "mmshttp"))
+    (validate-setq helm-yplistener-default-protocol "mmshttp")
+  (when (file-exists-p (locate-user-emacs-file "helm-yplistener/yp"))
+    (load-file (locate-user-emacs-file "helm-yplistener/yp")))
+)
 
+  
   ;; (helm-migemize-command 'helm-yplistener)
   )
 

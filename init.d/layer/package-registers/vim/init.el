@@ -39,7 +39,7 @@
   '(:tags ["evil"]))
 (hoarder:register "juanjux/evil-search-highlight-persist"
   '(:tags ["evil"]
-    :dependencies ["emacsmirror/highlight"]))
+    :dependencies ["https://framagit.org/steckerhalter/highlight.el.git"]))
 (hoarder:register "sunesimonsen/evil-walk-on-the-edge"
   '(:tags ["evil"]))
 (hoarder:register "roman/evil-paredit"
@@ -141,8 +141,9 @@
   '(:tags ["ediff" "evil" "diff" "keybinding"]))
 (hoarder:register "emacs-evil/evil-magit"
   '(:tags ["evil" "magit"]))
-(hoarder:register "shnarazk/evil-insert-emacs"
-  '(:description "Another insert mode with more emacs features for Evil"))
+(hoarder:register "gitlab:shnarazk/emacs/evil-insert-emacs"
+  '(:description "Another insert mode with more emacs features for Evil"
+    :tags ["emacs" "evil"]))
 (hoarder:register "edkolev/evil-lion"
   '(:description "Evil align operator"
     :tags ["evil" "align"]))
@@ -164,6 +165,18 @@
   '(:description ":smiling_imp: Chagning cursor by mode for evil on terminal."))
 (hoarder:register "zmaas/evil-unimpaired"
   '(:description "Port of evil-unimpaired code from spacemacs, for general evil use."))
+(hoarder:register "terlar/evil-stateful"
+  '(:description "Attach functions to evil state changes"
+    :tags ["emacs lisp"]))
+(hoarder:register "emacs-evil/evil-collection"
+  '(:description "A set of keybindings for evil-mode"
+    :tags ["emacs lisp" "bindings" "emacs" "evil" "evil-mode"]))
+(hoarder:register "wcsmith/evil-args"
+  '(:description "Motions and text objects for delimited arguments in Evil."
+    :tags ["emacs lisp"]))
+(hoarder:register "Andrew-William-Smith/evil-fringe-mark"
+  '(:description "Display evil-mode markers in the Emacs fringe"
+    :tags ["emacs lisp"]))
 
 
 ;;; init.el ends here

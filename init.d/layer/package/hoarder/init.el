@@ -7,49 +7,63 @@
 (use-package hoarder
   :preface
   (progn
+    (require 'rx)
     (cl-labels ((escape (str)
                         (cl-prin1-to-string str))
-                (gen-callback (fname url)
+                (add-tag (tag lst)
+                         (if (colle:find (lambda (x) (equalp x tag))
+                                      lst)
+                             lst
+                           (colle:cons tag lst)))
+                (gen-callback (fname path)
                               (cl-function
                                (lambda (&key data &allow-other-keys)
                                  (let-alist data
-                                   (insert
-                                    (pcase (vector .description .topics)
-                                      (`[nil []]
-                                       (format
-                                        "(%s \"%s\") "
-                                        fname
-                                        (seq-subseq url 19)))
-                                      (`[nil ,topics]
-                                       (format
-                                        "(%s \"%s\"
+                                   (cl-letf ((topics-and-lang
+                                              (if .language
+                                                  (add-tag (downcase .language) .topics)
+                                                .topics)))
+                                     (insert
+                                      (pcase (vector .description topics-and-lang)
+                                        (`[nil []]
+                                         (format
+                                          "(%s \"%s\") "
+                                          fname
+                                          path))
+                                        (`[nil ,topics]
+                                         (format
+                                          "(%s \"%s\"
     '(:tags %s))\n"
-                                        fname
-                                        (seq-subseq url 19)
-                                        (colle:map (lambda (topic) (concat "\"" topic "\"" )) topics)))
-                                      (`[,desc  []]
-                                       (format
-                                        "(%s \"%s\"
+                                          fname
+                                          path
+                                          (colle:map (lambda (topic) (concat "\"" topic "\"" )) topics)))
+                                        (`[,desc  []]
+                                         (format
+                                          "(%s \"%s\"
     '(:description %s))\n"
-                                        fname
-                                        (seq-subseq url 19)
-                                        (escape (decode-coding-string desc 'utf-8))))
-                                      (`[,desc ,topics]
-                                       (format
-                                        "(%s \"%s\"
+                                          fname
+                                          path
+                                          (escape (decode-coding-string desc 'utf-8))))
+                                        (`[,desc ,topics]
+                                         (format
+                                          "(%s \"%s\"
     '(:description %s
       :tags %s))\n"
-                                        fname
-                                        (seq-subseq url 19)
-                                        (escape (decode-coding-string desc 'utf-8))
-                                        (colle:map (lambda (topic) (concat "\"" topic "\"" )) topics))))))))))
+                                          fname
+                                          path
+                                          (escape (decode-coding-string desc 'utf-8))
+                                          (colle:map (lambda (topic) (concat "\"" topic "\"" )) topics)))))))))))
       (defun hoarder:insert-helper-github (command url)
-        (request (concat "https://api.github.com/repos/"
-                         (seq-subseq url 19))
-                 :headers '(("Accept" . "application/vnd.github.mercy-preview+json"))
-                 :parser 'json-read
-                 :sync t
-                 :success (gen-callback (concat "hoarder:" command) url)))
+        (cl-letf* ((split-url (split-string  url "/"))
+                   (user (seq-elt split-url 3))
+                   (proj (seq-elt split-url 4))
+                   (path (concat user "/" proj)))
+          (request (concat "https://api.github.com/repos/"
+                           path)
+                   :headers '(("Accept" . "application/vnd.github.mercy-preview+json"))
+                   :parser 'json-read
+                   :sync t
+                   :success (gen-callback (concat "hoarder:" command) path))))
 
       ;;  #; curl 'https://gitgud.io/api/v4/projects/nixx%2Fuguu'
       ;; {"id":3206,"description":"it's uguu.se but in Go","default_branch":"master","tag_list":[],"ssh_url_to_repo":"git@ssh.gitgud.io:nixx/uguu.git","http_url_to_repo":"https://gitgud.io/nixx/uguu.git","web_url":"https://gitgud.io/nixx/uguu","name":"uguu","name_with_namespace":"nixx / uguu","path":"uguu","path_with_namespace":"nixx/uguu","star_count":0,"forks_count":1,"created_at":"2016-12-20T11:18:11.452Z","last_activity_at":"2017-01-17T20:20:53.274Z"}~/.emacs.d/vendor/git.sv.gnu.org/emacs.git  emacs-26
@@ -124,6 +138,17 @@
            (hoarder:insert-helper-gitlab "fetch" url))
           ((rx "gitla.in")
            (hoarder:insert-helper-gitlain "fetch" url))))
+      (defun hoarder:insert-helper-record (url)
+        (interactive "sUrl: ")
+        (pcase url
+          ((rx "gitgud.io")
+           (hoarder:insert-helper-gitgud "record" url))
+          ((rx "github.com")
+           (hoarder:insert-helper-github "record" url))
+          ((rx "gitlab.com")
+           (hoarder:insert-helper-gitlab "record" url))
+          ((rx "gitla.in")
+           (hoarder:insert-helper-gitlain "record" url))))
       ))
   :config
   (progn

@@ -52,4 +52,6 @@
 
 (hook 'emacs-lisp-mode-hook #'muki:emacs-lisp-add-prettify-symbols)
 
+
+
 ;;; init.el ends here

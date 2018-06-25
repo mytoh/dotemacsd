@@ -15,6 +15,8 @@
   (mode "\\.html?\\'"  #'web-mode)
   (mode "\\.json\\'"  #'web-mode)
   (mode "\\.js\\'"  #'web-mode)
+  (mode "\\.ep\\'"  #'web-mode)
+  ;; (mode "\\.tx\\'"  #'web-mode) ; use kolon-mode
   ;; (mode "\\.css\\'" #'web-mode)
   )
 

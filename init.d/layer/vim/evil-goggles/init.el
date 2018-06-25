@@ -9,6 +9,7 @@
   :config
   (evil-goggles-mode)
   (setq evil-goggles-duration 0.7)
-  (setq evil-goggles-pulse nil))
+  (setq evil-goggles-pulse nil)
+  (evil-goggles-use-diff-faces))
 
 ;;; init.el ends here

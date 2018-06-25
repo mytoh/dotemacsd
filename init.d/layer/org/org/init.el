@@ -77,25 +77,7 @@
               '("~/.org/todo.org"))
   (cl-pushnew  '("\\.pdf\\'" . "qpdfview %s")
                org-file-apps)
-  ;; < s TAB
-  (set-option org-structure-template-alist
-              '(("s" "#+begin_src ?\n\n#+end_src")
-                ("q" "#+begin_quote\n?\n#+end_quote")
-                ;; ("e" "#+begin_example\n?\n#+end_example")
-                ;; ("v" "#+begin_verse\n?\n#+end_verse")
-                ;; ("v" "#+begin_verbatim\n?\n#+end_verbatim")
-                ;; ("c" "#+begin_center\n?\n#+end_center")
-                ;; ("l" "#+begin_latex\n?\n#+end_latex")
-                ;; ("l" "#+latex: ")
-                ;; ("h" "#+begin_html\n?\n#+end_html")
-                ;; ("h" "#+html: ")
-                ;; ("a" "#+begin_ascii\n?\n#+end_ascii")
-                ;; ("a" "#+ascii: ")
-                ;; ("i" "#+index: ?")
-                ;; ("i" "#+include: %file ?")
-                ;; ("el" "#+begin_src emacs-lisp\n?\n#+end_src" "<src lang=\"emacs-lisp\">\n?\n</src>")
-                ;; ("sh" "#+begin_src sh\n?\n#+end_src" "<src lang=\"shell\">\n?\n</src>")
-                ))
+
   (disable-mode whitespace-mode)
   ;; http://qiita.com/takaxp/items/f583dbf89cc217b0c41c
   ;; this option needed to resize images in org buffer.
@@ -189,7 +171,7 @@
   (add-hook 'org-mode-hook
             (lambda ()
               (add-hook 'before-save-hook
-                        #'muki:org-mode-before-save-hook))))
+                        #'muki:org-mode-before-save-hook nil :local))))
 
 (after 'org
   (muki:org-mode-hook-function))
@@ -289,11 +271,11 @@
   (org-element-map (org-element-parse-buffer 'element) 'headline
     (lambda (h)
       (and (org-element-map h 'drawer
-             (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
-             nil t 'headline)
-           (let ((begin (org-element-property :begin h)))
-             (message "Entry with erroneous properties drawer at %d" begin)
-             begin)))))
+           (lambda (d) (equal (org-element-property :name d) "PROPERTIES"))
+           nil t 'headline)
+         (let ((begin (org-element-property :begin h)))
+           (message "Entry with erroneous properties drawer at %d" begin)
+           begin)))))
 
 (cl-defun muki:org-open-link-mpv ()
   (interactive)
@@ -386,9 +368,9 @@
                            (looking-at "^[ \t]*#\\+begin_src[ \t]+[^ \f\t\n\r\v]+[ \t]*"))))
       ;; Test if we moved out of a block.
       (when (or (and rasmus/org-at-src-begin
-                   (not at-src-block))
-                ;; File was just opened.
-                (eq rasmus/org-at-src-begin -1))
+                  (not at-src-block))
+               ;; File was just opened.
+               (eq rasmus/org-at-src-begin -1))
         (rasmus/org-prettify-src--update))
       ;; Remove composition if at line; doesn't work properly.
       ;; (when at-src-block

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: sub
+# key: sub
+# --
+my sub $1 ($2) {
+  $3
+}

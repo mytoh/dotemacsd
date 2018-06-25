@@ -14,9 +14,14 @@
                         (helm-grep-history . "helm-grep-history.el")
                         (helm-M-x-input-history . "helm-M-x-input-history")
                         (helm-apropos-history . "helm-apropos-history")))
+
+                (psession--save-buffers-alist . "psession-save-buffers-alist.el")
+                (regexp-search-ring . "regexp-search-ring.el")
+                (search-ring . "search-ring.el")
+                (psession--winconf-alist . "psession-winconf-alist.el")
+                (file-name-history . "file-name-history.el")
                 (kill-ring . "kill-ring.el")
                 (kill-ring-yank-pointer . "kill-ring-yank-pointer.el")
-                (minibuffer-history . "minibuffer-history")
                 (register-alist . "register-alist.el")
                 (org-tags-history . "org-tags-history.el")
                 (eww-hisotry . "eww-history.el")
@@ -30,6 +35,8 @@
           (remove-hook 'emacs-startup-hook 'psession--restore-some-buffers)
           (remove-hook 'kill-emacs-hook 'psession-save-last-winconf)
           (remove-hook 'emacs-startup-hook 'psession-restore-last-winconf)))
-  (enable-mode psession-mode))
+  (enable-mode psession-mode)
+  (enable-mode psession-savehist-mode)
+  )
 
 ;;; init.el ends here

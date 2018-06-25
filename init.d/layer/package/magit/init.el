@@ -26,7 +26,7 @@
 (cl-defun muki:magit-setup ()
   (after 'magit
     (validate-setq magit-diff-refine-hunk 'all)
-    (validate-setq magit-repository-directories `(,(muki:expand-path-huone "ateljee")))
+    (validate-setq magit-repository-directories `((,(muki:expand-path-huone "ateljee") . 1)))
     (validate-setq magit-revision-show-gravatars
                    '("^Author:     " . "^Commit:     "))
     (validate-setq magit-commit-add-log-insert-function

@@ -4,6 +4,6 @@
 
 ;;; Code:
 
-(use-package cpanfile-mode)
+(use-package texfrag)
 
 ;;; init.el ends here

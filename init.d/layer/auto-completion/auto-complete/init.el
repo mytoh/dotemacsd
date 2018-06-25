@@ -4,9 +4,9 @@
 
 ;;; Code:
 
-(req 'auto-complete-config
 
-  (require 'auto-complete-config)
+(use-package auto-complete-config
+  :config
   (add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/github.com/auto-complete/auto-complete/dict")
   (validate-setq ac-auto-start 3
                  ac-delay 0.2
@@ -29,7 +29,8 @@
   (add-hook 'ruby-mode-hook 'ac-ruby-mode-setup)
   (add-hook 'css-mode-hook 'ac-css-mode-setup)
   (add-hook 'auto-complete-mode-hook 'ac-common-setup)
-  (global-auto-complete-mode t)
+  ;; (global-auto-complete-mode t)
   )
+
 
 ;;; init.el ends here

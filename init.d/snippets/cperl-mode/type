@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: type
+# key: type
+# --
+state $c = compile($1); $c->(@_);

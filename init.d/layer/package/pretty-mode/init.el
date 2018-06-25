@@ -4,11 +4,16 @@
 
 ;;; Code:
 
-(req 'pretty-mode
-  ;; if you want to set it globally
-  (global-pretty-mode t))
+;; (req 'pretty-mode
+;;   if you want to set it globally
+;;   (global-pretty-mode t)
+;;   )
 ;; if you want to set it only for a specific mode
 ;; (add-hook 'my-pretty-language-hook 'turn-on-pretty-mode)
+
+(use-package pretty-mode
+  :commands (turn-on-pretty-mode)
+  )
 
 
 
