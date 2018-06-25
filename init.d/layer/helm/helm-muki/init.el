@@ -39,7 +39,8 @@
                      "corebird"
                      "turpial"
                      "midori"
-                     "vimb"))
+                     "vimb"
+                     "ptkyp.pl"))
     ;; remove bookmark source temporally
     ;; (cl-delete 'helm-source-bookmarks helm-muki-sources)
 
