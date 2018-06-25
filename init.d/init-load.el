@@ -661,7 +661,7 @@
     evil-goggles
 
     evil-lisp-state
-    ;; evil-magit
+    evil-magit
     syndicate
     evil-ReplaceWithRegister
     evil-visual-replace
