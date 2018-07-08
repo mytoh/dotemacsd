@@ -83,7 +83,9 @@
                      "Pixark"
                      "Monster Hunter World‎"
                      "EVE Online"
-                     "Hellblade")))
+                     "Hellblade"
+                     "Fishing Planet"
+                     "Deep Rock Galactic")))
 
   (add-global-key "C-c h" #'helm-muki)
 

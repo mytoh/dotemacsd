@@ -32,7 +32,7 @@
 (hoarder:record "garu/Data-Printer"
   '(:description "colored pretty-print of Perl data structures and objects"
     :tags ["perl"]))
-(hoarder:fetch "https://perl5.git.perl.org/perl.git")
+(hoarder:record "https://perl5.git.perl.org/perl.git")
 (hoarder:record "EnlightenedPerlOrganisation/task-kensho"
   '(:description "A Glimpse at an Enlightned Perl Distribution"))
 (hoarder:record "Code-Hex/Text-Shirasu"
@@ -5613,7 +5613,8 @@ The README branch contains some info (no README.md in the original SVN). "
   '(:tags ["perl"]))
 (hoarder:record "book/App-Wallflower"
   '(:description "Sorry I can't dance, I'm holding on to my friend's purse"
-    :tags ["perl"]))
+    :tags ["perl"]
+    :memo "[[http://blogs.perl.org/users/book/2018/07/wallflower-improvements-and-issues.html][Wallflower improvements and issues | BooK {blogs.perl.org}]]"))
 (hoarder:record "hitode909/Plack-Middleware-Bootstrap"
   '(:description "A Plack Middleware to prettify simple HTML with Botstrap design template"
     :tags ["perl"]))
@@ -10196,5 +10197,22 @@ The README branch contains some info (no README.md in the original SVN). "
   '(:description "A implementation of monads in Perl 5."
     :tags ["perl"]
     :memo "[[https://www.youtube.com/watch?v=tMvod3-fSFY][Masahiro Honma - Monads in Perl - YouTube]]"))
+(hoarder:record "timj/perl-Astro-Catalog"
+  '(:description "The repository for the Astro::Catalog CPAN module"
+    :tags ["astronomy" "catalog" "perl"]))
+(hoarder:record "tobyink/p5-moox-classattribute"
+  '(:tags ["perl"]))
+(hoarder:record "oetiker/SmokePing"
+  '(:description "The Active Monitoring System"
+    :tags ["perl"]))
+(hoarder:record "skirmess/App-ReportPrereqs"
+  '(:description "Report prerequisite versions"
+    :tags ["perl"]))
+(hoarder:record "gryphonshafer/MojoX-ConfigAppStart"
+  '(:description "Start a Mojolicious application with Config::App"
+    :tags ["perl"]))
+(hoarder:record "gryphonshafer/Config-App"
+  '(:description "Cascading merged application configuration"
+    :tags ["perl"]))
 
 ;; init.el ends here

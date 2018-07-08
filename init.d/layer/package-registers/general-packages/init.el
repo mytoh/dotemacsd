@@ -5437,7 +5437,7 @@ case for pi zero and camera: http://www.thingiverse.com/thing:1639568 "))
 (hoarder:record "cyring/CoreFreq"
   '(:description " CoreFreq is a CPU monitoring software designed for the 64-bits Processors."
     :tags ["linux" "monitoring"]))
-(hoarder:record "J3n50m4t/getpocketDarkTheme"
+(hoarder:fetch "J3n50m4t/getpocketDarkTheme"
   '(:description "Dark Theme for pocket "
     :tags ["css" "firefox" "pocket"]))
 (hoarder:record "clipland/video-bookmarks"
@@ -5465,7 +5465,8 @@ case for pi zero and camera: http://www.thingiverse.com/thing:1639568 "))
 (hoarder:record "B00merang-Project/Redmond-Themes"
   '(:description "Home of the B00merang Redmond Collection themes for Linux"
     :tags ["desktop" "gtk" "linux" "theme" "windows"]
-    :memo "[[https://www.reddit.com/r/unixporn/comments/5swivh/looking_for_oldschoollooking_apps_themes_icons/][Too Many Requests]]"))
+    :memo "[[https://www.reddit.com/r/unixporn/comments/5swivh/looking_for_oldschoollooking_apps_themes_icons/][Too Many Requests]]
+[[https://www.reddit.com/r/unixporn/comments/8tp2c4/lxqt_an_update_on_the_win95_aesthetic_with_new/][Too Many Requests]]"))
 (hoarder:record "NARKOZ/gitlab"
   '(:description "Ruby wrapper and CLI for GitLab REST API"
     :tags ["ruby" "gitlab" "cli"]))
@@ -9388,7 +9389,7 @@ Currently a work in progress, but quite usable. Initial focus is on FT991(A) Tra
 (hoarder:record "PipeWire/pipewire"
   '(:description "Multimedia processing graphs"
     :tags ["c" "audio" "daemon" "framework" "multimedia" "video"]))
-(hoarder:record "tcsh-org/tcsh"
+(hoarder:fetch "tcsh-org/tcsh"
   '(:description "This is a read-only mirror of the tcsh code repository."
     :tags ["c"]))
 (hoarder:record "chanorange/chanorange.github.io"
@@ -9720,7 +9721,8 @@ Currently a work in progress, but quite usable. Initial focus is on FT991(A) Tra
     :memo "[[https://github.com/AmmarkoV/MyScripts/blob/master/Tools/4chanleech][MyScripts/4chanleech at master · AmmarkoV/MyScripts · GitHub]]"))
 (hoarder:record "SuperGouge/ChanThreadWatch"
   '(:description "Fork of the original discontinued ChanThreadWatch."
-    :tags ["c#" "4chan"]))
+    :tags ["c#" "4chan"]
+    :memo "[[https://boards.4chan.org/h/thread/5022165][/h/ - Collection Management, Hentai Resources, General Assistance, & Relevant News - Hentai - 4chan]]"))
 (hoarder:record "jonragnarsson/wm-background-title-color"
   '(:description "A simple hack to change WM window title colors when background image changes "
     :tags ["python" "linux-desktop-user" "python3"]
@@ -11820,6 +11822,162 @@ https://github.com/derrickcope/bin/blob/master/catcherrb.rb"))
 (hoarder:record "icarus-consulting/Yaapii.Atoms"
   '(:description "Object-Oriented .Net primitives. A port of cactoos library by Yegor Bugayenko, author of the \"Elegant Objects\" books. "
     :tags ["c#" "atoms" "cactoos" "elegantobjects" "encapsulate-objects" "primitives" "yaapii"]))
+(hoarder:record "mjturt/distroprompt-zsh"
+  '(:description "Minimal ZSH prompt that shows OS icon"
+    :tags ["shell" "zsh" "zsh-theme"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/8tlpdz/console_usable_even_without_x11_just_a_linux/][Too Many Requests]]"))
+(hoarder:record "cjbassi/gotop"
+  '(:description "A terminal based graphical activity monitor inspired by gtop and vtop"
+    :tags ["go" "golang" "linux" "mouse" "osx" "terminal" "tui"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/8tlpdz/console_usable_even_without_x11_just_a_linux/][Too Many Requests]]"))
+(hoarder:record "pavanjadhaw/etc"
+  '(:description "🍁 dotfiles || plain text configuration files for my linux system"
+    :tags ["shell" "dotfiles" "rice" "unix"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/8ticbw/2bwm_let_me_drown/][Too Many Requests]]"))
+(hoarder:record "nayuki/Nayuki-web-published-code"
+  '(:description "Complete collection of code files (*.java/js/py/cpp/etc.) published on Project Nayuki web site."
+    :tags ["algorithm" "c" "c-plus-plus" "c-sharp" "data-structure" "java" "javascript" "library" "python"]
+    :site "https://www.nayuki.io/"
+    :memo "[[https://boards.4chan.org/e/thread/2162379][/e/ - So I have a question, what's the best and most eff - Ecchi - 4chan]]"))
+(hoarder:record "softashell/iqdb_tagger"
+  '(:description "Search IQDB from CLI"
+    :tags ["python"]
+    :memo "[[https://boards.4chan.org/e/thread/2162379][/e/ - So I have a question, what's the best and most eff - Ecchi - 4chan]]"))
+(hoarder:record "mjturt/dotfiles"
+  '(:description "Yet another dotfiles repository. Vim, zsh, tmux, mutt, urxvt, i3, gentoo etc."
+    :tags ["perl" "dotfiles" "tmux-configuration" "urxvt-configuration" "vim-configuration" "zsh-configuration"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/8tlpdz/console_usable_even_without_x11_just_a_linux/][Too Many Requests]]"))
+(hoarder:record "vichan-devel/vichan-API"
+  '(:description "Documentation for 4chan's read-only JSON API."))
+(hoarder:record "takeutch-kemeco/jfbterm-0.4.7.1"
+  '(:description "This is a bug fix jfbterm 0.4.7. Without permission personally."
+    :tags ["c"]))
+(hoarder:record "bibanon/BASC-Archiver"
+  '(:description "Python-based Imageboard (4chan) complete thread archiver."
+    :tags ["python"]
+    :memo "[[https://boards.4chan.org/h/thread/5022165][/h/ - Collection Management, Hentai Resources, General Assistance, & Relevant News - Hentai - 4chan]]"))
+(hoarder:record "mrfreeze/ThreadWatcher"
+  '(:description "OS X application to download and dump images to 4chan threads"
+    :tags ["objective-c"]
+    :memo "[[https://boards.4chan.org/h/thread/5022165][/h/ - Collection Management, Hentai Resources, General Assistance, & Relevant News - Hentai - 4chan]]"))
+(hoarder:record "sparklemotion/mechanize"
+  '(:description "Mechanize is a ruby library that makes automated web interaction easy."
+    :tags ["ruby"]))
+(hoarder:record "prakashdanish/vim-zen"
+  '(:description ":seedling: Barebones Vim Plugin Manager."
+    :tags ["vim script"]))
+(hoarder:record "freedv/codec2"
+  '(:description "Next-Generation Digital Voice for Two-Way Radio (mirror of SourceForge Subversion)"
+    :tags ["c"]))
+(hoarder:record "lattera/articles"
+  '(:description "Various articles I've written"
+    :tags ["bsd" "hardenedbsd" "mail" "tor" "mta"]
+    :memo "[[https://github.com/lattera/articles/blob/master/opsec/2018-05-08_torified_mta/article.md][articles/article.md at master · lattera/articles · GitHub]]
+[[https://www.youtube.com/watch?v=NVa64ZnizOo][Goes to 11.2 | BSD Now 252 - YouTube]]"))
+(hoarder:record "OpenDUNE/OpenDUNE"
+  '(:description "DUNE, REINVENTED"
+    :tags ["c" "openbsd" "freebsd" "game"]
+    :memo "[[https://www.reddit.com/r/openbsd_gaming/comments/8o0h4e/opendune_open_source_recreation_of_dune_ii/][Too Many Requests]]"))
+(hoarder:record "desuarchive/asagi"
+  '(:description "Asagi imageboard dumper"
+    :tags ["java"]))
+(hoarder:record "eksopl/fuuka"
+  '(:description "Fuuka Imageboard Archiver"
+    :tags ["perl"]
+    :memo "[[https://github.com/eksopl/fuuka/wiki/Sphinx-Search-Backend#gory-details][Sphinx Search Backend · eksopl/fuuka Wiki · GitHub]]"))
+(hoarder:record "urlogic/collab-web-dev"
+  '(:description "all pull requests merged :^)"
+    :tags ["html"]))
+(hoarder:record "20c/vaping"
+  '(:description "vaping is a healthy alternative to SmokePing!"
+    :tags ["python"]
+    :memo "[[https://www.youtube.com/watch?v=3jPN-z2CMdI][Vaping - A healthy alternative to SmokePing - YouTube]]"))
+(hoarder:record "paritosh16/whisperdb"
+  '(:description "A npm module for performing CRUD operations on the whisper rrd database."
+    :tags ["python"]
+    :memo "[[https://www.youtube.com/watch?v=3jPN-z2CMdI][Vaping - A healthy alternative to SmokePing - YouTube]]"))
+(hoarder:record "jezhiggins/eliza.py"
+  '(:description "A cheesy little Eliza knock-off"
+    :tags ["python"]
+    :memo "[[https://www.youtube.com/watch?v=qaPzlIJ57dk][Russell Keith-Magee - Building a cross-platform native app with BeeWare - PyCon 2018 - YouTube]]"))
+(hoarder:record "krypt-n/bar"
+  '(:description "bar ain't recursive - A lightweight xcb based bar. This is a fork that supports fontconfig"
+    :tags ["c"]))
+(hoarder:record "omnesia0rg/got"
+  '(:description "Bash wrapper for git to get a quick overview of your local repositories"
+    :tags ["shell"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/8vix1z/oc_simple_wrapper_for_git_status_to_keep/][{OC} Simple wrapper for `git status` to keep everything up to date. : unixporn]]"))
+(hoarder:record "yesfire/yesfire"
+  '(:description "Best minimalistic multicolumn file manager in the world."
+    :tags ["c"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/8vedze/oc_i_forked_and_slightly_upgraded_noice_so_it/][Too Many Requests]]"))
+(hoarder:record "DrBoolean/patterns_talk"
+  '(:description "code from fluent talk"
+    :tags ["javascript"]
+    :memo "[[https://www.youtube.com/watch?v=AvgwKjTPMmM][Functional programming patterns for the non-mathematician (cut) - YouTube]]"))
+(hoarder:record "google/xi-win"
+  '(:tags ["rust" "gui" "flutter" "entity-component-system" "android"]
+    :memo "[[https://www.youtube.com/watch?v=4YTfxresvS8][Data Oriented GUI in Rust by Raph Levien - Bay Area Rust Meetup - YouTube]]"))
+(hoarder:record "soutaro/steep"
+  '(:description "Gradual Typing for Ruby"
+    :tags ["gradual-typing" "ruby" "typechecker"]
+    :memo "[[https://www.youtube.com/watch?v=QK_v0XN8kXc][{EN} Ruby Programming with Type Checking / Soutaro Matsumoto @soutaro - YouTube]]"))
+(hoarder:record "harrinp/WalledIn"
+  '(:description "Small command-line game of not touching the walls"
+    :tags ["c" "command-line" "game" "retrogaming"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/8vupvt/oc_i_made_a_new_retrolooking_unix_command_line/][Too Many Requests]]"))
+(hoarder:record "zzzeyez/Pollen"
+  '(:description "keyboard-driven start page for web browser"
+    :tags ["css" "startpage"]
+    :memo "[[https://www.reddit.com/r/unixporn/comments/8vxrtt/importing_pywals_generated_css_into_userstyle_css/][Too Many Requests]]"))
+(hoarder:record "deeppomf/DeepLearningAnimePapers"
+  '(:description "A list of papers and other resources on deep learning with anime style images."
+    :tags ["anime" "deep-learning" "neural-networks"]))
+(hoarder:record "armandg/picol"
+  '(:tags ["python"]
+    :memo "[[https://new.reddit.com/r/unixporn/comments/8w7q52/oc_i_made_a_script_to_get_colors_from_images/]]"))
+(hoarder:record "ujjwal96/pywal-web"
+  '(:description "Web interface for pywal"
+    :tags ["html" "pywal" "terminal-colors" "terminal-theme"]
+    :site "https://pywal.herokuapp.com/"
+    :memo "[[https://www.reddit.com/r/unixporn/comments/8us047/pywal_web/][Too Many Requests]]"))
+(hoarder:record "MayhemYDG/archives.json"
+  '(:description "4chan archives"))
+(hoarder:record "dhtech/swboot"
+  '(:description "On-demand switch configuration system"
+    :tags ["python"]
+    :memo "[[https://www.youtube.com/watch?v=WXt2gD4fS_k][World's Fastest Internet - 1.6 TERABITS per Second - YouTube]]"))
+(hoarder:record "https://gitlab.com/yayaka/Yayaka.git"
+  '(:description "Yayaka Protocol is a protocol for highly distributed social networking."
+    :tags []
+    :memo "[[https://www.yayaka.org/][Yayaka Network Organization]]"))
+(hoarder:record "Netsukuku/netsukuku"
+  '(:description "Revived C-code "
+    :tags ["c"]
+    :memo "[[https://www.yayaka.org/][Yayaka Network Organization]]"))
+(hoarder:record "https://git.open-mesh.org/batman-adv.git"
+  '(:tags ["mesh" "p2p" "batman"]
+    :site "https://www.open-mesh.org/projects/batman-adv/wiki"
+    :memo "[[https://www.yayaka.org/][Yayaka Network Organization]]"))
+(hoarder:record "https://git.fuwafuwa.moe/mananapr/python-scripts.git"
+  '(:tags ["chan" "python"]
+    :memo "[[https://lainchan.org/%CE%BB/res/13.html][/λ/ - Python 3 Thread]]"))
+(hoarder:record "Driftwood2D/Driftwood"
+  '(:description "Driftwood 2D Tiling Game Engine and Development Suite"
+    :tags ["2d-game" "driftwood-2d" "game" "game-engine" "gamedev" "json" "pysdl2" "python" "python3" "python35" "scriptable" "sdl" "sdl2" "tile" "tile-engine" "tiled"]
+    :memo "[[https://lainchan.org/%CE%BB/res/13.html][/λ/ - Python 3 Thread]]"))
+(hoarder:record "Appleman1234/safeandsound"
+  '(:description "Backup script"
+    :tags ["python"]
+    :memo "[[https://lainchan.org/%CE%BB/res/13.html][/λ/ - Python 3 Thread]]"))
+(hoarder:record "Appleman1234/arisu"
+  '(:description "Errbot plugins for Arisu"
+    :tags ["python"]
+    :memo "[[https://lainchan.org/%CE%BB/res/13.html][/λ/ - Python 3 Thread]]"))
+(hoarder:record "kennymalac/wikify"
+  '(:description "Turns a mess of tabs into a somewhat organized org-mode file"
+    :tags ["emacs lisp"]
+    :memo "[[https://lainchan.org/%CE%BB/res/4793.html][/λ/ - Lisp General: (EVAL (READ it))]]"))
 
 ;;; end
 

@@ -103,7 +103,8 @@
   (defun muki:cperl-font-lock-general ()
     (font-lock-add-keywords nil
                             '(("\\_<say\\_>" . cperl-nonoverridable-face)
-                              ("->\\_<\\([a-z_]+\\)\\_>" 1 font-lock-function-name-face nil 'laxmatch)
+                              ;; method name
+                              ("->\\_<\\([a-zA-Z_]+\\)\\_>" 1 font-lock-function-name-face nil 'laxmatch)
                               ("\\_<\\(?:use\\|package\\)\\_>\\s-+"
                                ("\\([a-zA-Z0-9]+\\)\\(?:::\\)?"
                                 (let ((maybe-end-of-compile-sub

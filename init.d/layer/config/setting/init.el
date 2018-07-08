@@ -242,9 +242,7 @@
 (enable-option find-file-visit-truename)
 
 ;;;; theme
-;; comidia, planet, monokai, molokai, subatomic256, birds-of-paradise-plus, firebelly, zen-and-art, gruvbox, base16-tomorrow
-;; spolsky, odersky, jazz, purple-haze, warm-night, brin, gotham, soothe, spolsky, wilson, noctilux, erosiond, material
-(defvar muki:x-theme 'base16-material-palenight)
+(defvar muki:x-theme 'doom-nord)
 (defvar muki:term-theme 'flatland)
 (defconst muki:favorite-themes
   '(comidia planet monokai molokai firebelly
@@ -258,7 +256,7 @@
             Motoko motoko-night base16-oceanicnext-dark
             hyperplane iceberg myth forest-blue soria metalheart
             zweilight oceanic redbelly doom-one doom-molokai
-            doom-nova doom-tomorrow-night doom-vibrant firewatch
+            doom-nova doom-tomorrow-night doom-vibrant doom-nord firewatch
             base16-ashes base16-atelier-cave base16-atelier-lakeside
             base16-ocean-brian acai sourcerer creamsody
             doomsday-dark solarized-grey solarized-dark
